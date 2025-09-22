@@ -12,15 +12,12 @@ export async function GET() {
   const baseUrl = 'https://www.meuddd.com.br';
   
   try {
-    console.log('Iniciando geração do sitemap...');
-    
     // Buscar todos os estados
     const states = await db.state.findMany({
       orderBy: {
         name: 'asc'
       }
     });
-    console.log(`Estados encontrados: ${states.length}`);
 
     // Buscar algumas cidades principais para incluir no sitemap
     const cities = await db.city.findMany({
@@ -32,7 +29,6 @@ export async function GET() {
       },
       take: 100 // Limitar para não sobrecarregar o sitemap
     });
-    console.log(`Cidades encontradas: ${cities.length}`);
 
     const urls: SitemapUrl[] = [
       // Página principal
@@ -85,8 +81,6 @@ export async function GET() {
       });
     });
 
-    console.log(`Total de URLs geradas: ${urls.length}`);
-
     // Gerar o XML do sitemap
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -108,7 +102,6 @@ export async function GET() {
 
   } catch (error) {
     console.error('Erro ao gerar sitemap:', error);
-    console.error('Stack trace:', error.stack);
     
     // Retornar um sitemap básico em caso de erro
     const basicSitemap = `<?xml version="1.0" encoding="UTF-8"?>
