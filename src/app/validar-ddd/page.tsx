@@ -81,25 +81,6 @@ export default function ValidarDDDPage() {
       <BreadcrumbStructuredData items={breadcrumbItems} />
       
       <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-8 w-8 text-blue-600" />
-                <div>
-                  <h1 className="text-2xl font-bold text-gray-900">MEU DDD</h1>
-                  <p className="text-sm text-gray-600">Encontre códigos de área telefônica por estado e cidade</p>
-                </div>
-              </div>
-              <nav className="flex space-x-4">
-                <Link href="/" className="text-gray-600 hover:text-gray-900">Home</Link>
-                <Link href="/sobre" className="text-gray-600 hover:text-gray-900">Sobre</Link>
-                <Link href="/contato" className="text-gray-600 hover:text-gray-900">Contato</Link>
-              </nav>
-            </div>
-          </div>
-        </header>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Breadcrumb className="mb-6">
             <BreadcrumbList>
