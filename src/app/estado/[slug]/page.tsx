@@ -1,17 +1,20 @@
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { StateCard } from '@/components/ddd/StateCard';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { MapPin, Users, Phone, Building, Globe } from 'lucide-react';
+import { MapPin, Users, Phone, Building, Globe, ArrowLeft } from 'lucide-react';
 import { db } from '@/lib/db';
 import { StateStructuredData } from '@/components/seo/StateStructuredData';
 import { BreadcrumbStructuredData } from '@/components/seo/BreadcrumbStructuredData';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
 import { SEOContent } from '@/components/seo/SEOContent';
+import { CityList } from '@/components/estado/CityList';
+import { StateInfo } from '@/components/estado/StateInfo';
+import { TelephonyInfo } from '@/components/estado/TelephonyInfo';
 import Link from 'next/link';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface StatePageProps {
   params: Promise<{
@@ -35,7 +38,10 @@ async function getState(slug: string) {
           orderBy: {
             name: 'asc'
           },
-          take: 20 // Limitar para não sobrecarregar a página
+          include: {
+            dddCodes: true
+          }
+          // Removido o limite para buscar todas as cidades
         }
       }
     });
@@ -64,21 +70,22 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
     }
 
     const dddCodes = state.dddCodes.map(ddd => ddd.code).join(', ');
+    const cityCount = state.cities.length;
     
     return {
-      title: `DDD de ${state.name} - Códigos Telefônicos (${state.dddCodes.length} DDDs)`,
-      description: `Buscando pelo DDD de ${state.name}? Encontre todos os códigos DDD do estado: ${dddCodes}. Lista completa e atualizada para fazer ligações telefônicas.`,
-      keywords: `DDD de ${state.name}, DDD ${state.name}, código DDD ${state.name}, DDD ${state.code}, telefonia ${state.name}, códigos DDD ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
+      title: `DDD de ${state.name} - ${cityCount} Cidades com Códigos Telefônicos`,
+      description: `Lista completa de ${cityCount} cidades de ${state.name} com seus respectivos códigos DDD: ${dddCodes}. Encontre o telefone de qualquer cidade do estado. Guia completo de telefonia.`,
+      keywords: `DDD de ${state.name}, cidades de ${state.name}, código DDD ${state.name}, telefonia ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}, lista cidades ${state.name}, telefone ${state.name}`,
       openGraph: {
-        title: `DDD de ${state.name} - Códigos Telefônicos Completo`,
-        description: `Descubra todos os códigos DDD de ${state.name}: ${dddCodes}. Informações atualizadas para suas ligações.`,
+        title: `DDD de ${state.name} - Guia Completo com ${cityCount} Cidades`,
+        description: `Descubra todos os códigos DDD de ${state.name} para ${cityCount} cidades. Lista completa e atualizada com informações de telefonia.`,
         type: 'website',
         locale: 'pt_BR'
       },
       twitter: {
         card: 'summary_large_image',
-        title: `DDD de ${state.name} - Códigos Telefônicos`,
-        description: `Lista completa de códigos DDD de ${state.name} para suas ligações.`
+        title: `DDD de ${state.name} - ${cityCount} Cidades`,
+        description: `Lista completa de cidades de ${state.name} com códigos DDD para suas ligações.`
       },
       alternates: {
         canonical: `https://meuddd.vercel.app/estado/${state.slug}`
@@ -174,27 +181,31 @@ export default async function StatePage({ params }: StatePageProps) {
           <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
-                <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                  DDD de {state.name} - Códigos Telefônicos
+                <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                  DDD de {state.name} - Guia Completo
                 </h1>
-                <div className="flex items-center gap-4 text-gray-600">
+                <div className="flex items-center gap-4 text-gray-600 mb-2">
                   <div className="flex items-center gap-1">
                     <MapPin className="h-4 w-4" />
                     <span>{state.region}</span>
                   </div>
                   <Badge variant="secondary">{state.code}</Badge>
                 </div>
+                <p className="text-lg text-gray-600">
+                  {state.cities.length} cidades • {state.dddCodes.length} códigos DDD • {formatNumber(state.population)} habitantes
+                </p>
               </div>
               <div className="mt-4 md:mt-0">
                 <Link href="/">
-                  <Button variant="outline">
+                  <Button variant="outline" size="lg">
+                    <ArrowLeft className="h-4 w-4 mr-2" />
                     Voltar para todos os estados
                   </Button>
                 </Link>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex items-center gap-3">
                 <Users className="h-8 w-8 text-blue-600" />
                 <div>
@@ -217,6 +228,15 @@ export default async function StatePage({ params }: StatePageProps) {
                 <Building className="h-8 w-8 text-purple-600" />
                 <div>
                   <div className="text-2xl font-bold text-gray-900">
+                    {state.cities.length}
+                  </div>
+                  <div className="text-sm text-gray-600">Cidades</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-8 w-8 text-red-600" />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
                     {state.dddCodes.length}
                   </div>
                   <div className="text-sm text-gray-600">Códigos DDD</div>
@@ -225,113 +245,154 @@ export default async function StatePage({ params }: StatePageProps) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Main Content */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* DDD Codes Section */}
-              <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Lista de Códigos DDD de {state.name}
-                </h2>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {state.dddCodes.map((dddCode) => (
-                    <Card key={dddCode.id} className="hover:shadow-md transition-shadow">
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-xl font-bold text-blue-600">
-                          DDD {dddCode.code}
-                        </CardTitle>
+          {/* Main Content with Tabs */}
+          <Tabs defaultValue="cidades" className="space-y-8">
+            <TabsList className="grid w-full grid-cols-4 lg:w-auto lg:inline-flex">
+              <TabsTrigger value="cidades" className="text-sm">
+                Cidades ({state.cities.length})
+              </TabsTrigger>
+              <TabsTrigger value="informacoes" className="text-sm">
+                Informações
+              </TabsTrigger>
+              <TabsTrigger value="telefonia" className="text-sm">
+                Telefonia
+              </TabsTrigger>
+              <TabsTrigger value="faq" className="text-sm">
+                Dúvidas
+              </TabsTrigger>
+            </TabsList>
+
+            {/* Cities Tab */}
+            <TabsContent value="cidades" className="space-y-6">
+              <CityList 
+                cities={state.cities}
+                stateName={state.name}
+                stateSlug={state.slug}
+                itemsPerPage={60}
+              />
+            </TabsContent>
+
+            {/* State Information Tab */}
+            <TabsContent value="informacoes" className="space-y-6">
+              <StateInfo state={state} />
+            </TabsContent>
+
+            {/* Telephony Information Tab */}
+            <TabsContent value="telefonia" className="space-y-6">
+              <TelephonyInfo state={state} />
+            </TabsContent>
+
+            {/* FAQ Tab */}
+            <TabsContent value="faq" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">
+                    Perguntas Frequentes sobre DDD de {state.name}
+                  </CardTitle>
+                  <CardDescription>
+                    Tire suas dúvidas sobre códigos DDD e telefonia em {state.name}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Quantos códigos DDD existem em {state.name}?</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <CardDescription className="text-sm">
-                          {dddCode.description || `Código DDD para região de ${state.name}`}
-                        </CardDescription>
+                        <p className="text-gray-600">
+                          {state.name} possui {state.dddCodes.length} códigos DDD: {state.dddCodes.map(d => d.code).join(', ')}. 
+                          Cada código atende a uma região específica do estado, cobrindo todas as {state.cities.length} cidades 
+                          e garantindo cobertura telefônica completa para toda a população de {formatNumber(state.population)} habitantes.
+                        </p>
                       </CardContent>
                     </Card>
-                  ))}
-                </div>
-              </section>
 
-              {/* Main Cities Section */}
-              <section>
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    Principais Cidades com DDD em {state.name}
-                  </h2>
-                  <Button variant="outline" size="sm">
-                    Ver todas as cidades
-                  </Button>
-                </div>
-                
-                <div className="bg-white rounded-lg shadow-sm">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-                    {state.cities.map((city) => (
-                      <div key={city.id} className="flex items-center justify-between p-3 border rounded-lg hover:bg-gray-50">
-                        <div>
-                          <div className="font-medium">{city.name}</div>
-                          {city.isCapital && (
-                            <Badge variant="secondary" className="text-xs mt-1">
-                              Capital
-                            </Badge>
-                          )}
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Qual é o principal código DDD de {state.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          O principal código DDD de {state.name} é geralmente o da região metropolitana 
+                          ou da capital {state.capital}, que é {state.dddCodes[0]?.code || 'consulte a lista acima'}.
+                          Este é o código mais utilizado para ligações telefônicas na região, atendendo à maior 
+                          concentração populacional do estado.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Como saber qual DDD usar para ligar para {state.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          Para saber qual DDD usar para fazer ligações para {state.name}, você precisa conhecer a cidade ou região específica 
+                          para onde deseja ligar. Utilize nossa lista completa de cidades acima para encontrar o código DDD correto. 
+                          Você também pode usar nossa ferramenta de busca rápida digitando o nome da cidade desejada.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Quantas cidades têm em {state.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          {state.name} possui um total de {state.cities.length} cidades oficialmente registradas. 
+                          Destas, {state.capital ? '1 é capital' : 'nenhuma é capital'} e todas são atendidas pelos {state.dddCodes.length} códigos DDD do estado. 
+                          Nossa lista completa acima mostra todas as cidades com seus respectivos códigos DDD para facilitar 
+                          suas ligações telefônicas.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Como fazer ligações para {state.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-3">
+                          Para fazer ligações para {state.name}, siga o formato correto:
+                        </p>
+                        <div className="space-y-2 text-sm">
+                          <div><strong>Ligações locais dentro do estado:</strong> 0 + código DDD + número do telefone</div>
+                          <div><strong>Ligações de outros estados:</strong> 0 + código da operadora + código DDD + número do telefone</div>
+                          <div><strong>Ligações para celulares:</strong> 0 + código da operadora + código DDD + 9 + número do celular</div>
                         </div>
-                        <div className="text-sm text-gray-600">
-                          {formatNumber(city.population)}
-                        </div>
-                      </div>
-                    ))}
+                        <p className="text-gray-600 mt-3">
+                          Os principais códigos de operadora são: 15 (TIM), 21 (Claro), 41 (Vivo), 14 (Oi).
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">O que fazer se não encontrar o DDD de uma cidade?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          Se você não encontrar o DDD de uma cidade específica de {state.name} em nossa lista, 
+                          verifique se o nome da cidade está digitado corretamente ou utilize nossa ferramenta de busca. 
+                          Caso ainda não encontre, entre em contato conosco para que possamos atualizar nossa base de dados 
+                          com as informações mais recentes sobre os códigos DDD de {state.name}.
+                        </p>
+                      </CardContent>
+                    </Card>
                   </div>
-                </div>
-              </section>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
 
-              {/* FAQ Section */}
-              <section>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Perguntas Frequentes sobre DDD de {state.name}
-                </h2>
-                
-                <div className="space-y-4">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Quantos códigos DDD existem em {state.name}?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600">
-                        {state.name} possui {state.dddCodes.length} códigos DDD: {state.dddCodes.map(d => d.code).join(', ')}. 
-                        Cada código atende a uma região específica do estado para facilitar suas ligações telefônicas.
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Qual é o principal código DDD de {state.name}?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600">
-                        O principal código DDD de {state.name} é geralmente o da região metropolitana 
-                        ou da capital, que é {state.dddCodes[0]?.code || 'consulte a lista acima'}.
-                        Este é o código mais utilizado para ligações telefônicas na região.
-                      </p>
-                    </CardContent>
-                  </Card>
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle className="text-lg">Como saber qual DDD usar para ligar para {state.name}?</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600">
-                        Para saber qual DDD usar para fazer ligações para {state.name}, você precisa conhecer a cidade ou região específica 
-                        para onde deseja ligar. Consulte nossa lista acima ou utilize nossa ferramenta de busca para encontrar o código DDD correto.
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </section>
+          {/* Sidebar */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mt-8">
+            <div className="lg:col-span-3">
+              {/* Additional content can be added here */}
             </div>
-
-            {/* Sidebar */}
+            
             <div className="space-y-6">
               {/* Related Links */}
               <RelatedLinks 
@@ -347,122 +408,42 @@ export default async function StatePage({ params }: StatePageProps) {
                 contentType="faq"
               />
 
-              {/* Additional Tools */}
+              {/* Quick Stats */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg">Ferramentas Úteis</CardTitle>
+                  <CardTitle className="text-lg">Estatísticas Rápidas</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <Link href="/validar-ddd" className="block">
-                    <div className="p-3 border rounded-lg hover:bg-gray-50 text-center">
-                      <div className="font-medium text-sm">Validar DDD</div>
-                      <div className="text-xs text-gray-600">Verifique códigos DDD</div>
-                    </div>
-                  </Link>
-                  
-                  <Link href="/gerador-numeros" className="block">
-                    <div className="p-3 border rounded-lg hover:bg-gray-50 text-center">
-                      <div className="font-medium text-sm">Gerar Números</div>
-                      <div className="text-xs text-gray-600">Crie números para testes</div>
-                    </div>
-                  </Link>
-                  
-                  <Link href="/busca-por-voz" className="block">
-                    <div className="p-3 border rounded-lg hover:bg-gray-50 text-center">
-                      <div className="font-medium text-sm">Busca por Voz</div>
-                      <div className="text-xs text-gray-600">Use comandos de voz</div>
-                    </div>
-                  </Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-
-          {/* Additional Information */}
-          <section className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Informações sobre {state.name}
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Sobre a Telefonia em {state.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">
-                    {state.name} possui {state.dddCodes.length} códigos DDD diferentes, 
-                    atendendo a diversas regiões do estado. Cada código DDD corresponde a 
-                    uma área geográfica específica, facilitando a identificação da origem 
-                    das chamadas telefônicas.
-                  </p>
-                  <p className="text-gray-600">
-                    Os códigos DDD são essenciais para o sistema de telefonia brasileiro, 
-                    permitindo a realização de chamadas de longa distância dentro do estado 
-                    e para outras regiões do país.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Como usar os códigos DDD</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    <div>
-                      <h4 className="font-medium mb-1">Chamadas dentro do estado:</h4>
-                      <p className="text-sm text-gray-600">
-                        0 + código DDD + número do telefone
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-1">Chamadas para outros estados:</h4>
-                      <p className="text-sm text-gray-600">
-                        0 + código da operadora + código DDD + número do telefone
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-medium mb-1">Chamadas para celulares:</h4>
-                      <p className="text-sm text-gray-600">
-                        0 + código da operadora + código DDD + número do celular
-                      </p>
-                    </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">População:</span>
+                    <span className="text-sm font-medium">{formatNumber(state.population)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Área:</span>
+                    <span className="text-sm font-medium">{formatArea(state.area)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Cidades:</span>
+                    <span className="text-sm font-medium">{state.cities.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Códigos DDD:</span>
+                    <span className="text-sm font-medium">{state.dddCodes.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Região:</span>
+                    <span className="text-sm font-medium">{state.region}</span>
                   </div>
                 </CardContent>
               </Card>
             </div>
-          </section>
-
-          {/* Related States */}
-          <section className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Outros estados da {state.region}
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* This would be populated with related states from the same region */}
-              <div className="text-center text-gray-500 py-8">
-                Em breve: outros estados da mesma região
-              </div>
-            </div>
-          </section>
+          </div>
         </div>
       </div>
     </>
   );
   } catch (error) {
     console.error('Error in StatePage:', error);
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Erro ao carregar página</h1>
-          <p className="text-gray-600 mb-6">Ocorreu um erro ao carregar as informações do estado. Por favor, tente novamente mais tarde.</p>
-          <Link href="/">
-            <Button>Voltar para a página inicial</Button>
-          </Link>
-        </div>
-      </div>
-    );
+    notFound();
   }
 }

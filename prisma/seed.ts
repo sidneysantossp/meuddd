@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { generateCitiesForState } from './cities-data';
 
 const prisma = new PrismaClient();
 
@@ -385,11 +386,57 @@ async function main() {
     });
 
     // Inserir códigos DDD
+    const createdDddCodes = [];
     for (const dddCode of dddCodes) {
-      await prisma.dddCode.create({
+      const createdDddCode = await prisma.dddCode.create({
         data: {
           ...dddCode,
           stateId: createdState.id
+        }
+      });
+      createdDddCodes.push(createdDddCode);
+    }
+
+    // Inserir cidades
+    const cities = generateCitiesForState(state.name, dddCodes.map(d => d.code));
+    const usedCityNames = new Set();
+    
+    for (const cityData of cities) {
+      // Garantir nome único para a cidade
+      let cityName = cityData.name;
+      let counter = 1;
+      
+      while (usedCityNames.has(cityName)) {
+        cityName = cityData.name + ' ' + counter;
+        counter++;
+      }
+      
+      usedCityNames.add(cityName);
+      
+      // Gerar slug para a cidade
+      const slug = cityName.toLowerCase()
+        .normalize('NFD')
+        .replace(/[\\u0300-\\u036f]/g, '')
+        .replace(/[^a-z0-9\\s-]/g, '')
+        .replace(/\\s+/g, '-')
+        .replace(/-+/g, '-')
+        .trim();
+
+      // Encontrar os códigos DDD para esta cidade
+      const cityDddCodes = createdDddCodes.filter(dddCode => 
+        cityData.dddCodes.includes(dddCode.code)
+      );
+
+      await prisma.city.create({
+        data: {
+          name: cityName,
+          slug: slug,
+          population: cityData.population,
+          isCapital: cityData.isCapital,
+          stateId: createdState.id,
+          dddCodes: {
+            connect: cityDddCodes.map(dddCode => ({ id: dddCode.id }))
+          }
         }
       });
     }
@@ -398,6 +445,10 @@ async function main() {
   console.log('Seed concluído com sucesso!');
   console.log(`Estados criados: ${statesData.length}`);
   console.log('Códigos DDD criados:', statesData.reduce((acc, state) => acc + state.dddCodes.length, 0));
+  
+  // Contar total de cidades criadas
+  const totalCities = await prisma.city.count();
+  console.log('Cidades criadas:', totalCities);
 }
 
 main()
