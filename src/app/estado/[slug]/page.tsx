@@ -66,22 +66,22 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
     const dddCodes = state.dddCodes.map(ddd => ddd.code).join(', ');
     
     return {
-      title: `Códigos DDD ${state.name} (${state.code}) - Lista Completa`,
-      description: `Encontre todos os códigos DDD de ${state.name}. Códigos: ${dddCodes}. Informações atualizadas sobre telefonia fixa e móvel.`,
-      keywords: `DDD ${state.name}, DDD ${state.code}, códigos DDD ${state.name}, telefonia ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
+      title: `DDD de ${state.name} - Códigos Telefônicos (${state.dddCodes.length} DDDs)`,
+      description: `Buscando pelo DDD de ${state.name}? Encontre todos os códigos DDD do estado: ${dddCodes}. Lista completa e atualizada para fazer ligações telefônicas.`,
+      keywords: `DDD de ${state.name}, DDD ${state.name}, código DDD ${state.name}, DDD ${state.code}, telefonia ${state.name}, códigos DDD ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
       openGraph: {
-        title: `Códigos DDD ${state.name} (${state.code})`,
-        description: `Lista completa de códigos DDD de ${state.name} - ${dddCodes}`,
+        title: `DDD de ${state.name} - Códigos Telefônicos Completo`,
+        description: `Descubra todos os códigos DDD de ${state.name}: ${dddCodes}. Informações atualizadas para suas ligações.`,
         type: 'website',
         locale: 'pt_BR'
       },
       twitter: {
         card: 'summary_large_image',
-        title: `Códigos DDD ${state.name} (${state.code})`,
-        description: `Lista completa de códigos DDD de ${state.name}`
+        title: `DDD de ${state.name} - Códigos Telefônicos`,
+        description: `Lista completa de códigos DDD de ${state.name} para suas ligações.`
       },
       alternates: {
-        canonical: `https://meuddd.com.br/estado/${state.slug}`
+        canonical: `https://meuddd.vercel.app/estado/${state.slug}`
       },
       other: {
         'geo.region': state.code,
@@ -175,7 +175,7 @@ export default async function StatePage({ params }: StatePageProps) {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                  {state.name}
+                  DDD de {state.name} - Códigos Telefônicos
                 </h1>
                 <div className="flex items-center gap-4 text-gray-600">
                   <div className="flex items-center gap-1">
@@ -231,7 +231,7 @@ export default async function StatePage({ params }: StatePageProps) {
               {/* DDD Codes Section */}
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Códigos DDD de {state.name}
+                  Lista de Códigos DDD de {state.name}
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -256,7 +256,7 @@ export default async function StatePage({ params }: StatePageProps) {
               <section>
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-gray-900">
-                    Principais Cidades de {state.name}
+                    Principais Cidades com DDD em {state.name}
                   </h2>
                   <Button variant="outline" size="sm">
                     Ver todas as cidades
@@ -287,7 +287,7 @@ export default async function StatePage({ params }: StatePageProps) {
               {/* FAQ Section */}
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Perguntas Frequentes sobre DDD em {state.name}
+                  Perguntas Frequentes sobre DDD de {state.name}
                 </h2>
                 
                 <div className="space-y-4">
@@ -298,7 +298,7 @@ export default async function StatePage({ params }: StatePageProps) {
                     <CardContent>
                       <p className="text-gray-600">
                         {state.name} possui {state.dddCodes.length} códigos DDD: {state.dddCodes.map(d => d.code).join(', ')}. 
-                        Cada código atende a uma região específica do estado.
+                        Cada código atende a uma região específica do estado para facilitar suas ligações telefônicas.
                       </p>
                     </CardContent>
                   </Card>
@@ -311,6 +311,7 @@ export default async function StatePage({ params }: StatePageProps) {
                       <p className="text-gray-600">
                         O principal código DDD de {state.name} é geralmente o da região metropolitana 
                         ou da capital, que é {state.dddCodes[0]?.code || 'consulte a lista acima'}.
+                        Este é o código mais utilizado para ligações telefônicas na região.
                       </p>
                     </CardContent>
                   </Card>
@@ -321,9 +322,8 @@ export default async function StatePage({ params }: StatePageProps) {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600">
-                        Para saber qual DDD usar, você precisa conhecer a cidade ou região específica 
-                        de {state.name} para onde deseja ligar. Consulte nossa lista acima ou 
-                        utilize nossa ferramenta de busca para encontrar o código DDD correto.
+                        Para saber qual DDD usar para fazer ligações para {state.name}, você precisa conhecer a cidade ou região específica 
+                        para onde deseja ligar. Consulte nossa lista acima ou utilize nossa ferramenta de busca para encontrar o código DDD correto.
                       </p>
                     </CardContent>
                   </Card>

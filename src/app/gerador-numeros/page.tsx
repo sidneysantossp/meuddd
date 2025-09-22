@@ -192,8 +192,8 @@ export default function GeradorNumerosPage() {
           </Breadcrumb>
 
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Gerador de Números Telefônicos</h1>
-            <p className="text-lg text-gray-600">Gere números de telefone válidos para testes e demonstrações</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Gerador de Números Telefônicos - Crie Números para Testes</h1>
+            <p className="text-lg text-gray-600">Buscando gerar números telefônicos? Use nossa ferramenta online para criar números de telefone válidos para testes e demonstrações</p>
           </div>
 
           <Tabs defaultValue="selective" className="w-full">

@@ -59,8 +59,8 @@ export default function BuscaPorVozPage() {
           </Breadcrumb>
 
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Busca por Voz Inteligente</h1>
-            <p className="text-xl text-gray-600 mb-8">Use linguagem natural para encontrar códigos DDD, estados e cidades</p>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Busca por Voz - Encontre DDDs com Comandos de Voz</h1>
+            <p className="text-xl text-gray-600 mb-8">Buscando encontrar códigos DDD por voz? Use nossa ferramenta com inteligência artificial para encontrar DDDs, estados e cidades usando linguagem natural</p>
             <VoiceSearch />
           </div>
 

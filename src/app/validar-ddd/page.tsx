@@ -114,8 +114,8 @@ export default function ValidarDDDPage() {
           </Breadcrumb>
 
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Validador de Código DDD</h1>
-            <p className="text-lg text-gray-600">Verifique se um código DDD é válido e descubra informações sobre a região atendida</p>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Validar DDD - Verifique se um Código DDD é Válido</h1>
+            <p className="text-lg text-gray-600">Buscando validar um código DDD? Use nossa ferramenta online para verificar se um código DDD é válido e descubra informações sobre a região atendida</p>
           </div>
 
           <Card className="mb-8">

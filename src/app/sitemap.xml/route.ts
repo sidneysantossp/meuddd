@@ -51,6 +51,13 @@ export async function GET() {
         lastmod: new Date().toISOString(),
         changefreq: 'weekly',
         priority: 0.8
+      },
+      // Página de busca por voz
+      {
+        loc: `${baseUrl}/busca-por-voz`,
+        lastmod: new Date().toISOString(),
+        changefreq: 'weekly',
+        priority: 0.8
       }
     ];
 

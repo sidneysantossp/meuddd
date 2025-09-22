@@ -62,22 +62,22 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     const dddCodes = city.dddCodes.map(ddd => ddd.code).join(', ');
     
     return {
-      title: `DDD ${city.name} - ${city.state.name} (${city.state.code})`,
-      description: `Código DDD de ${city.name}, ${city.state.name}. Códigos: ${dddCodes}. Informações telefônicas atualizadas.`,
-      keywords: `DDD ${city.name}, ${city.name} ${city.state.name}, código DDD ${city.name}, telefonia ${city.name}, ${city.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
+      title: `DDD de ${city.name} - Código Telefônico (${dddCodes})`,
+      description: `Buscando pelo DDD de ${city.name}? Descubra o código DDD de ${city.name}, ${city.state.name}: ${dddCodes}. Informações completas para fazer ligações telefônicas.`,
+      keywords: `DDD de ${city.name}, DDD ${city.name}, código DDD ${city.name}, ${city.name} ${city.state.name}, telefonia ${city.name}, ${city.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
       openGraph: {
-        title: `DDD ${city.name} - ${city.state.name}`,
-        description: `Código DDD de ${city.name}, ${city.state.name} - ${dddCodes}`,
+        title: `DDD de ${city.name} - Código Telefônico Completo`,
+        description: `Código DDD de ${city.name}, ${city.state.name}: ${dddCodes}. Saiba como ligar para ${city.name} do Brasil e do exterior.`,
         type: 'website',
         locale: 'pt_BR'
       },
       twitter: {
         card: 'summary_large_image',
-        title: `DDD ${city.name} - ${city.state.name}`,
-        description: `Código DDD de ${city.name}, ${city.state.name}`
+        title: `DDD de ${city.name} - Código Telefônico`,
+        description: `Descubra o código DDD de ${city.name} e saiba como fazer ligações telefônicas.`
       },
       alternates: {
-        canonical: `https://meuddd.com.br/estado/${city.state.slug}/cidade/${city.slug}`
+        canonical: `https://meuddd.vercel.app/estado/${city.state.slug}/cidade/${city.slug}`
       },
       other: {
         'geo.region': city.state.code,
@@ -178,7 +178,7 @@ export default async function CityPage({ params }: CityPageProps) {
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
               <div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                  {city.name}
+                  DDD de {city.name} - Código Telefônico
                 </h1>
                 <div className="flex items-center gap-4 text-gray-600">
                   <div className="flex items-center gap-1">
@@ -237,7 +237,7 @@ export default async function CityPage({ params }: CityPageProps) {
           {/* DDD Codes Section */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Códigos DDD de {city.name}
+              Códigos DDD de {city.name} para Ligações
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -261,7 +261,7 @@ export default async function CityPage({ params }: CityPageProps) {
           {/* How to Use Section */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Como usar o código DDD de {city.name}
+              Como Fazer Ligações para {city.name} usando o DDD
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -317,7 +317,7 @@ export default async function CityPage({ params }: CityPageProps) {
           {/* FAQ Section */}
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Perguntas Frequentes sobre {city.name}
+              Perguntas Frequentes sobre DDD de {city.name}
             </h2>
             
             <div className="space-y-4">
@@ -328,7 +328,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 <CardContent>
                   <p className="text-gray-600">
                     O código DDD de {city.name} é {city.dddCodes.map(d => d.code).join(' ou ')}.
-                    {city.dddCodes.length > 1 && ' A cidade possui mais de um código DDD para atender diferentes regiões.'}
+                    {city.dddCodes.length > 1 && ' A cidade possui mais de um código DDD para atender diferentes regiões e facilitar suas ligações telefônicas.'}
                   </p>
                 </CardContent>
               </Card>
@@ -340,7 +340,7 @@ export default async function CityPage({ params }: CityPageProps) {
                 <CardContent>
                   <p className="text-gray-600">
                     {city.isCapital 
-                      ? `Sim, ${city.name} é a capital do estado de ${city.state.name}.`
+                      ? `Sim, ${city.name} é a capital do estado de ${city.state.name} e concentra o principal código DDD da região.`
                       : `Não, ${city.name} não é a capital do estado de ${city.state.name}. A capital é ${city.state.capital}.`
                     }
                   </p>

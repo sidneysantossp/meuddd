@@ -131,14 +131,14 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
+        {/* Hero Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Encontre o Código DDD que Você Precisa
-          </h2>
+          </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Busque por estado, cidade ou código DDD. Temos informações de todos os 27 estados brasileiros.
+            Busque por estado, cidade ou código DDD. Temos informações de todos os 27 estados brasileiros com códigos telefônicos atualizados.
           </p>
           <DDDSearch />
         </div>
@@ -183,10 +183,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Estados Brasileiros
+              Consulte o DDD de Todos os Estados Brasileiros
             </h2>
             <p className="text-lg text-gray-600">
-              Clique em um estado para ver detalhes dos códigos DDD e cidades
+              Clique em um estado para ver detalhes dos códigos DDD e cidades. Encontre o código telefônico que você precisa para fazer suas ligações.
             </p>
           </div>
 

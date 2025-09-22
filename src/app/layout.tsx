@@ -14,21 +14,60 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: {
+    default: "MEU DDD - Consulta Completa de Códigos DDD do Brasil",
+    template: "%s | MEU DDD"
+  },
+  description: "Encontre o código DDD de qualquer cidade ou estado do Brasil. Consulta completa e atualizada de todos os códigos de área telefônica para ligações locais e de longa distância.",
+  keywords: [
+    "DDD", "código DDD", "consulta DDD", "DDD Brasil", "códigos telefônicos", 
+    "área telefônica", "ligação DDD", "telefone Brasil", "DDD por cidade", 
+    "DDD por estado", "lista DDD", "busca DDD"
+  ],
+  authors: [{ name: "MEU DDD" }],
+  creator: "MEU DDD",
+  publisher: "MEU DDD",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://meuddd.vercel.app'),
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "MEU DDD - Consulta Completa de Códigos DDD do Brasil",
+    description: "Encontre o código DDD de qualquer cidade ou estado do Brasil. Consulta completa e atualizada de todos os códigos de área telefônica.",
+    url: 'https://meuddd.vercel.app',
+    siteName: "MEU DDD",
+    locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'MEU DDD - Consulta de Códigos DDD'
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "MEU DDD - Consulta Completa de Códigos DDD do Brasil",
+    description: "Encontre o código DDD de qualquer cidade ou estado do Brasil.",
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://meuddd.vercel.app',
   },
 };
 
@@ -38,7 +77,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="theme-color" content="#2563eb" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
