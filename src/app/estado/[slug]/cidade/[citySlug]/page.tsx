@@ -49,7 +49,7 @@ async function getCity(stateSlug: string, citySlug: string) {
   }
 }
 
-async function getNearbyCities(stateId: number, currentCityId: number, limit: number = 5) {
+async function getNearbyCities(stateId: string, currentCityId: string, limit: number = 5) {
   try {
     const nearbyCities = await db.city.findMany({
       where: {

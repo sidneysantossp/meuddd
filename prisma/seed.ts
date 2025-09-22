@@ -386,7 +386,7 @@ async function main() {
     });
 
     // Inserir códigos DDD
-    const createdDddCodes = [];
+    const createdDddCodes: any[] = [];
     for (const dddCode of dddCodes) {
       const createdDddCode = await prisma.dddCode.create({
         data: {

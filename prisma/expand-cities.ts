@@ -228,7 +228,7 @@ async function main() {
         addedCount++;
 
       } catch (error) {
-        console.error(`❌ Erro ao adicionar ${cityData.name}:`, error.message);
+        console.error(`❌ Erro ao adicionar ${cityData.name}:`, error instanceof Error ? error.message : String(error));
       }
     }
 

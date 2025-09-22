@@ -37,6 +37,8 @@ model City {
   slug        String   // URL-friendly name
   population  Int?     // População da cidade
   area        Float?   // Área em km²
+  latitude    Float?   // Latitude para coordenadas geográficas
+  longitude   Float?   // Longitude para coordenadas geográficas
   isCapital   Boolean  @default(false) // Se é capital
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
