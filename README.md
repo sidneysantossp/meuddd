@@ -1,141 +1,198 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# Plataforma de Consulta DDD Brasil
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+Uma plataforma completa para consulta de códigos DDD do Brasil, desenvolvida com Next.js, TypeScript e Prisma.
 
-## ✨ Technology Stack
+## 🚀 Funcionalidades
 
-This scaffold provides a robust foundation built with:
+- **Consulta DDD**: Busca rápida por código DDD ou cidade
+- **Informações Detalhadas**: Dados completos sobre estados e cidades
+- **Validação de DDD**: Ferramenta para validar números de telefone
+- **Gerador de Números**: Geração aleatória de números de telefone
+- **Busca por Voz**: Pesquisa usando comandos de voz
+- **SEO Otimizado**: Dados estruturados Schema.org para melhor visibilidade
+- **Design Responsivo**: Interface moderna e adaptável
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+## 🛠️ Tecnologias
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Styling**: Tailwind CSS, shadcn/ui
+- **Banco de Dados**: Prisma ORM com SQLite
+- **SEO**: Schema.org structured data, sitemap.xml
+- **Deploy**: Vercel
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
-
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
-
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
-
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
-
-## 🚀 Quick Start
+## 📦 Instalação Local
 
 ```bash
-# Install dependencies
+# Clonar o repositório
+git clone https://github.com/sidneysantossp/meuddd.git
+cd meuddd
+
+# Instalar dependências
 npm install
 
-# Start development server
+# Configurar banco de dados
+npm run db:push
+npm run db:seed
+
+# Iniciar servidor de desenvolvimento
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+Acesse http://localhost:3000 para ver a aplicação.
 
-## 🤖 Powered by Z.ai
+## 🚀 Implantação na Vercel
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+### 1. Conectar com GitHub
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+1. Faça login na [Vercel](https://vercel.com)
+2. Clique em "New Project"
+3. Selecione o repositório `meuddd` do GitHub
+4. Clique em "Import"
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+### 2. Configurar Variáveis de Ambiente
 
-## 📁 Project Structure
+Adicione as seguintes variáveis de ambiente nas configurações do projeto:
 
+```env
+# Database
+DATABASE_URL=file:./dev.db
+
+# NextAuth (se necessário)
+NEXTAUTH_SECRET=your-secret-here
+NEXTAUTH_URL=https://your-app.vercel.app
+
+# Z-AI SDK (opcional)
+ZAI_API_KEY=your-zai-api-key-here
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+
+### 3. Configurar Build Command
+
+No painel de configurações do projeto Vercel:
+
+- **Build Command**: `npm run vercel-build`
+- **Output Directory**: `.next`
+- **Install Command**: `npm install`
+
+### 4. Configurar Script de Build
+
+Crie um arquivo `vercel.json` na raiz do projeto:
+
+```json
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": ".next"
+}
 ```
 
-## 🎨 Available Features & Components
+### 5. Deploy
 
-This scaffold includes a comprehensive set of modern web development tools:
+Clique em "Deploy" para iniciar a implantação. A Vercel irá:
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+1. Instalar as dependências
+2. Gerar o cliente Prisma
+3. Configurar o banco de dados
+4. Construir a aplicação Next.js
+5. Implantar na Vercel Edge Network
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## 🔧 Configurações Adicionais
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+### Banco de Dados
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+Para produção, considere usar um banco de dados mais robusto:
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+```env
+# PostgreSQL (recomendado para produção)
+DATABASE_URL="postgresql://user:password@host:port/database?schema=public"
 
-## 🤝 Get Started with Z.ai
+# MySQL
+DATABASE_URL="mysql://user:password@host:port/database"
+```
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+### Domínio Personalizado
+
+1. Após o deploy, vá para as configurações do projeto
+2. Clique em "Domains"
+3. Adicione seu domínio personalizado
+4. Configure as configurações de DNS conforme as instruções
+
+### SSL e HTTPS
+
+A Vercel fornece certificado SSL automaticamente para todos os domínios.
+
+## 📊 Monitoramento
+
+A Vercel oferece:
+
+- **Analytics**: Monitoramento de tráfego e performance
+- **Logs**: Visualização de erros e atividades
+- **Webhooks**: Notificações de deploy
+- **Preview Deployments**: Testes em ambientes de staging
+
+## 🔄 CI/CD
+
+O projeto está configurado para implantação contínua:
+
+- **Push para main**: Deploy automático em produção
+- **Pull Requests**: Deploy automático em preview
+- **Branches**: Deploy automático para cada branch
+
+## 🐛 Troubleshooting
+
+### Problemas Comuns
+
+1. **Erro de build do Prisma**:
+   ```bash
+   npm run db:generate
+   npm run build
+   ```
+
+2. **Erro de conexão com banco de dados**:
+   - Verifique as variáveis de ambiente
+   - Execute `npm run db:push` para atualizar o schema
+
+3. **Erro de permissões**:
+   - Verifique as permissões do arquivo de banco de dados
+   - Execute `chmod 644 prisma/dev.db`
+
+### Logs de Erro
+
+Acesse os logs na Vercel:
+1. Vá para o projeto no painel da Vercel
+2. Clique na aba "Logs"
+3. Selecione o ambiente (production/preview)
+
+## 📈 Performance
+
+A plataforma está otimizada para:
+
+- **Carregamento rápido**: Next.js com SSG/SSR
+- **SEO**: Meta tags e dados estruturados
+- **Imagens otimizadas**: Next.js Image component
+- **Cache**: Estratégias de cache eficientes
+
+## 🤝 Contribuição
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature
+3. Faça commit das suas mudanças
+4. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 📞 Suporte
+
+Para dúvidas ou suporte:
+- Abra uma issue no GitHub
+- Envie um email para o mantenedor
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**Desenvolvido com ❤️ para a comunidade brasileira**

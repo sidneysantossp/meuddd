@@ -4,12 +4,12 @@ interface StateStructuredDataProps {
     code: string;
     slug: string;
     region: string;
-    population?: number;
-    area?: number;
-    capital?: string;
+    population?: number | null;
+    area?: number | null;
+    capital?: string | null;
     dddCodes: Array<{
       code: string;
-      description?: string;
+      description?: string | null;
     }>;
   };
   url: string;

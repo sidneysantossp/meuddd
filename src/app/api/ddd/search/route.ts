@@ -24,8 +24,8 @@ export async function GET(request: NextRequest) {
     const states = await db.state.findMany({
       where: {
         OR: [
-          { name: { contains: query, mode: 'insensitive' } },
-          { code: { contains: query, mode: 'insensitive' } }
+          { name: { contains: query } },
+          { code: { contains: query } }
         ]
       },
       include: {
@@ -67,7 +67,7 @@ export async function GET(request: NextRequest) {
     // Busca por cidade
     const cities = await db.city.findMany({
       where: {
-        name: { contains: query, mode: 'insensitive' }
+        name: { contains: query }
       },
       include: {
         state: true,

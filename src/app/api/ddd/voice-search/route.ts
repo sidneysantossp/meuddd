@@ -55,7 +55,7 @@ const extractSearchPatterns = (query: string): {
   );
   
   // Extrair ações/intenções
-  const actions = [];
+  const actions: string[] = [];
   if (normalized.includes('qual') || normalized.includes('codigo')) actions.push('find_code');
   if (normalized.includes('como') || normalized.includes('ligar')) actions.push('how_to_call');
   if (normalized.includes('onde') || normalized.includes('estado')) actions.push('find_state');
@@ -156,8 +156,8 @@ export async function POST(request: NextRequest) {
         const stateResults = await db.state.findMany({
           where: {
             OR: [
-              { name: { contains: stateName, mode: 'insensitive' } },
-              { slug: { contains: stateName, mode: 'insensitive' } }
+              { name: { contains: stateName } },
+              { slug: { contains: stateName } }
             ]
           },
           include: {
@@ -185,7 +185,7 @@ export async function POST(request: NextRequest) {
       for (const cityName of patterns.cityNames) {
         const cityResults = await db.city.findMany({
           where: {
-            name: { contains: cityName, mode: 'insensitive' }
+            name: { contains: cityName }
           },
           include: {
             state: true,

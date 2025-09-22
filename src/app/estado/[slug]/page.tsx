@@ -14,9 +14,9 @@ import { SEOContent } from '@/components/seo/SEOContent';
 import Link from 'next/link';
 
 interface StatePageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 async function getState(slug: string) {
@@ -47,7 +47,8 @@ async function getState(slug: string) {
 }
 
 export async function generateMetadata({ params }: StatePageProps): Promise<Metadata> {
-  const state = await getState(params.slug);
+  const { slug } = await params;
+  const state = await getState(slug);
   
   if (!state) {
     return {
@@ -84,18 +85,19 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
 }
 
 export default async function StatePage({ params }: StatePageProps) {
-  const state = await getState(params.slug);
+  const { slug } = await params;
+  const state = await getState(slug);
 
   if (!state) {
     notFound();
   }
 
-  const formatNumber = (num?: number) => {
+  const formatNumber = (num?: number | null) => {
     if (!num) return '';
     return num.toLocaleString('pt-BR');
   };
 
-  const formatArea = (area?: number) => {
+  const formatArea = (area?: number | null) => {
     if (!area) return '';
     return `${area.toLocaleString('pt-BR')} km²`;
   };

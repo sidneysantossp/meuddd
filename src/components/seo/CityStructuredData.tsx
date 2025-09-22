@@ -2,12 +2,12 @@ interface CityStructuredDataProps {
   city: {
     name: string;
     slug: string;
-    population?: number;
-    area?: number;
-    isCapital?: boolean;
+    population?: number | null;
+    area?: number | null;
+    isCapital?: boolean | null;
     dddCodes: Array<{
       code: string;
-      description?: string;
+      description?: string | null;
     }>;
   };
   state: {
@@ -15,6 +15,7 @@ interface CityStructuredDataProps {
     code: string;
     slug: string;
     region: string;
+    capital?: string | null;
   };
   url: string;
 }

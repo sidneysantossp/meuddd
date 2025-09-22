@@ -13,19 +13,19 @@ interface StateCardProps {
     code: string;
     slug: string;
     region: string;
-    population?: number;
-    area?: number;
-    capital?: string;
+    population?: number | null;
+    area?: number | null;
+    capital?: string | null;
     dddCodes: Array<{
       id: string;
       code: string;
-      description?: string;
+      description?: string | null;
     }>;
   };
 }
 
 export function StateCard({ state }: StateCardProps) {
-  const formatNumber = (num?: number) => {
+  const formatNumber = (num?: number | null) => {
     if (!num) return '';
     return num.toLocaleString('pt-BR');
   };

@@ -11,10 +11,10 @@ import { BreadcrumbStructuredData } from '@/components/seo/BreadcrumbStructuredD
 import Link from 'next/link';
 
 interface CityPageProps {
-  params: {
+  params: Promise<{
     slug: string;
     citySlug: string;
-  };
+  }>;
 }
 
 async function getCity(stateSlug: string, citySlug: string) {
@@ -43,7 +43,8 @@ async function getCity(stateSlug: string, citySlug: string) {
 }
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const city = await getCity(params.slug, params.citySlug);
+  const { slug, citySlug } = await params;
+  const city = await getCity(slug, citySlug);
   
   if (!city) {
     return {
@@ -80,18 +81,19 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 }
 
 export default async function CityPage({ params }: CityPageProps) {
-  const city = await getCity(params.slug, params.citySlug);
+  const { slug, citySlug } = await params;
+  const city = await getCity(slug, citySlug);
 
   if (!city) {
     notFound();
   }
 
-  const formatNumber = (num?: number) => {
+  const formatNumber = (num?: number | null) => {
     if (!num) return '';
     return num.toLocaleString('pt-BR');
   };
 
-  const formatArea = (area?: number) => {
+  const formatArea = (area?: number | null) => {
     if (!area) return '';
     return `${area.toLocaleString('pt-BR')} km²`;
   };
