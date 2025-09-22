@@ -6,9 +6,12 @@
     {
       "source": "/(.*)",
       "destination": "https://meuddd.com/:1",
-      "has": {
-        "host": "www.meuddd.com"
-      }
+      "has": [
+        {
+          "type": "host",
+          "value": "www.meuddd.com"
+        }
+      ]
     }
   ]
 }
