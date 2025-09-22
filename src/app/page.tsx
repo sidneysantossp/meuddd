@@ -1,6 +1,7 @@
+'use client';
+
 import { DDDSearch } from '@/components/ddd/DDDSearch';
 import { StateCard } from '@/components/ddd/StateCard';
-import { db } from '@/lib/db';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,22 +9,68 @@ import { MapPin, Phone, Search, Info } from 'lucide-react';
 import Link from 'next/link';
 import { WebsiteStructuredData } from '@/components/seo/WebsiteStructuredData';
 import { OrganizationStructuredData } from '@/components/seo/OrganizationStructuredData';
+import { useEffect, useState } from 'react';
 
-async function getStates() {
-  const states = await db.state.findMany({
-    include: {
-      dddCodes: {
-        orderBy: {
-          code: 'asc'
-        }
-      }
-    },
-    orderBy: {
-      name: 'asc'
-    }
-  });
-  return states;
-}
+// Dados estáticos dos estados para evitar problemas de pré-renderização
+const staticStates = [
+  {
+    id: '1',
+    name: 'São Paulo',
+    code: 'SP',
+    slug: 'sao-paulo',
+    region: 'Sudeste',
+    population: 46289333,
+    area: 248219.481,
+    capital: 'São Paulo',
+    dddCodes: [
+      { id: '1', code: '11', description: 'Grande São Paulo' },
+      { id: '2', code: '12', description: 'Vale do Paraíba e Litoral Norte' },
+      { id: '3', code: '13', description: 'Baixada Santista' }
+    ]
+  },
+  {
+    id: '2',
+    name: 'Rio de Janeiro',
+    code: 'RJ',
+    slug: 'rio-de-janeiro',
+    region: 'Sudeste',
+    population: 17366189,
+    area: 43780.172,
+    capital: 'Rio de Janeiro',
+    dddCodes: [
+      { id: '4', code: '21', description: 'Região Metropolitana do Rio de Janeiro' },
+      { id: '5', code: '22', description: 'Região dos Lagos e Norte Fluminense' }
+    ]
+  },
+  {
+    id: '3',
+    name: 'Minas Gerais',
+    code: 'MG',
+    slug: 'minas-gerais',
+    region: 'Sudeste',
+    population: 21292666,
+    area: 586522.122,
+    capital: 'Belo Horizonte',
+    dddCodes: [
+      { id: '6', code: '31', description: 'Região Metropolitana de Belo Horizonte' },
+      { id: '7', code: '32', description: 'Zona da Mata e Sul de Minas' }
+    ]
+  },
+  {
+    id: '4',
+    name: 'Bahia',
+    code: 'BA',
+    slug: 'bahia',
+    region: 'Nordeste',
+    population: 14873064,
+    area: 564733.177,
+    capital: 'Salvador',
+    dddCodes: [
+      { id: '8', code: '71', description: 'Região Metropolitana de Salvador' },
+      { id: '9', code: '73', description: 'Sul da Bahia' }
+    ]
+  }
+];
 
 const regions = [
   { name: 'Norte', color: 'bg-blue-100 text-blue-800' },
@@ -33,9 +80,27 @@ const regions = [
   { name: 'Sul', color: 'bg-purple-100 text-purple-800' }
 ];
 
-export default async function Home() {
-  const states = await getStates();
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+export default function Home() {
+  const [states, setStates] = useState(staticStates);
+  const [baseUrl, setBaseUrl] = useState('https://meuddd.com.br');
+
+  useEffect(() => {
+    // Tentar carregar dados dinâmicos após o componente montar
+    const loadStates = async () => {
+      try {
+        const response = await fetch('/api/ddd/states');
+        if (response.ok) {
+          const dynamicStates = await response.json();
+          setStates(dynamicStates);
+        }
+      } catch (error) {
+        console.log('Usando dados estáticos');
+      }
+    };
+
+    setBaseUrl(process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br');
+    loadStates();
+  }, []);
 
   return (
     <>
