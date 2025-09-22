@@ -13,12 +13,67 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model State {
+  id          String   @id @default(cuid())
+  name        String   // Nome completo do estado
+  slug        String   @unique // URL-friendly name
+  code        String   @unique // Sigla do estado (SP, RJ, MG, etc.)
+  region      String   // Região geográfica (Sudeste, Nordeste, etc.)
+  population  Int?     // População do estado
+  area        Float?   // Área em km²
+  capital     String?  // Capital do estado
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  cities      City[]
+  dddCodes    DddCode[]
+  
+  @@map("states")
+}
+
+model City {
+  id          String   @id @default(cuid())
+  name        String   // Nome da cidade
+  slug        String   // URL-friendly name
+  population  Int?     // População da cidade
+  area        Float?   // Área em km²
+  isCapital   Boolean  @default(false) // Se é capital
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  stateId     String
+  state       State    @relation(fields: [stateId], references: [id], onDelete: Cascade)
+  
+  dddCodes    DddCode[]
+  
+  @@unique([stateId, name])
+  @@map("cities")
+}
+
+model DddCode {
+  id          String   @id @default(cuid())
+  code        String   // Código DDD (11, 21, 31, etc.)
+  description String?  // Descrição da área de cobertura
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  stateId     String
+  state       State    @relation(fields: [stateId], references: [id], onDelete: Cascade)
+  
+  cities      City[]
+  
+  @@unique([stateId, code])
+  @@map("ddd_codes")
+}
+
 model User {
   id        String   @id @default(cuid())
   email     String   @unique
   name      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  
+  posts     Post[]
 }
 
 model Post {
@@ -29,4 +84,6 @@ model Post {
   authorId  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
 }
