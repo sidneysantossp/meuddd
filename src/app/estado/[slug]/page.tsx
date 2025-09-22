@@ -20,95 +20,109 @@ interface StatePageProps {
 }
 
 async function getState(slug: string) {
-  const state = await db.state.findFirst({
-    where: {
-      slug: slug
-    },
-    include: {
-      dddCodes: {
-        orderBy: {
-          code: 'asc'
-        }
+  try {
+    const state = await db.state.findFirst({
+      where: {
+        slug: slug
       },
-      cities: {
-        orderBy: {
-          name: 'asc'
+      include: {
+        dddCodes: {
+          orderBy: {
+            code: 'asc'
+          }
         },
-        take: 20 // Limitar para não sobrecarregar a página
+        cities: {
+          orderBy: {
+            name: 'asc'
+          },
+          take: 20 // Limitar para não sobrecarregar a página
+        }
       }
-    }
-  });
+    });
 
-  if (!state) {
+    if (!state) {
+      return null;
+    }
+
+    return state;
+  } catch (error) {
+    console.error('Error fetching state:', error);
     return null;
   }
-
-  return state;
 }
 
 export async function generateMetadata({ params }: StatePageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const state = await getState(slug);
-  
-  if (!state) {
+  try {
+    const { slug } = await params;
+    const state = await getState(slug);
+    
+    if (!state) {
+      return {
+        title: 'Estado não encontrado',
+        description: 'O estado solicitado não foi encontrado em nossa base de dados.'
+      };
+    }
+
+    const dddCodes = state.dddCodes.map(ddd => ddd.code).join(', ');
+    
     return {
-      title: 'Estado não encontrado',
-      description: 'O estado solicitado não foi encontrado em nossa base de dados.'
+      title: `Códigos DDD ${state.name} (${state.code}) - Lista Completa`,
+      description: `Encontre todos os códigos DDD de ${state.name}. Códigos: ${dddCodes}. Informações atualizadas sobre telefonia fixa e móvel.`,
+      keywords: `DDD ${state.name}, DDD ${state.code}, códigos DDD ${state.name}, telefonia ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
+      openGraph: {
+        title: `Códigos DDD ${state.name} (${state.code})`,
+        description: `Lista completa de códigos DDD de ${state.name} - ${dddCodes}`,
+        type: 'website',
+        locale: 'pt_BR'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `Códigos DDD ${state.name} (${state.code})`,
+        description: `Lista completa de códigos DDD de ${state.name}`
+      },
+      alternates: {
+        canonical: `https://meuddd.com.br/estado/${state.slug}`
+      },
+      other: {
+        'geo.region': state.code,
+        'geo.placename': state.name
+      }
+    };
+  } catch (error) {
+    console.error('Error generating metadata:', error);
+    return {
+      title: 'Erro ao carregar página',
+      description: 'Ocorreu um erro ao carregar as informações do estado.'
     };
   }
-
-  const dddCodes = state.dddCodes.map(ddd => ddd.code).join(', ');
-  
-  return {
-    title: `Códigos DDD ${state.name} (${state.code}) - Lista Completa`,
-    description: `Encontre todos os códigos DDD de ${state.name}. Códigos: ${dddCodes}. Informações atualizadas sobre telefonia fixa e móvel.`,
-    keywords: `DDD ${state.name}, DDD ${state.code}, códigos DDD ${state.name}, telefonia ${state.name}, ${state.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
-    openGraph: {
-      title: `Códigos DDD ${state.name} (${state.code})`,
-      description: `Lista completa de códigos DDD de ${state.name} - ${dddCodes}`,
-      type: 'website',
-      locale: 'pt_BR'
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `Códigos DDD ${state.name} (${state.code})`,
-      description: `Lista completa de códigos DDD de ${state.name}`
-    },
-    alternates: {
-      canonical: `https://meuddd.com.br/estado/${state.slug}`
-    },
-    other: {
-      'geo.region': state.code,
-      'geo.placename': state.name
-    }
-  };
 }
 
 export default async function StatePage({ params }: StatePageProps) {
-  const { slug } = await params;
-  const state = await getState(slug);
+  try {
+    const { slug } = await params;
+    const state = await getState(slug);
 
-  if (!state) {
-    notFound();
-  }
+    if (!state) {
+      notFound();
+    }
 
-  const formatNumber = (num?: number | null) => {
-    if (!num) return '';
-    return num.toLocaleString('pt-BR');
-  };
+    const formatNumber = (num?: number | null) => {
+      if (!num) return '';
+      return num.toLocaleString('pt-BR');
+    };
 
-  const formatArea = (area?: number | null) => {
-    if (!area) return '';
-    return `${area.toLocaleString('pt-BR')} km²`;
-  };
+    const formatArea = (area?: number | null) => {
+      if (!area) return '';
+      return `${area.toLocaleString('pt-BR')} km²`;
+    };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
-  const canonicalUrl = `${baseUrl}/estado/${state.slug}`;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+    const canonicalUrl = `${baseUrl}/estado/${state.slug}`;
 
-  const breadcrumbItems = [
-    { name: 'Home', url: baseUrl },
-    { name: state.name, url: canonicalUrl }
-  ];
+    const breadcrumbItems = [
+      { name: 'Home', url: baseUrl },
+      { name: state.name, url: canonicalUrl }
+    ];
 
   return (
     <>
@@ -437,4 +451,18 @@ export default async function StatePage({ params }: StatePageProps) {
       </div>
     </>
   );
+  } catch (error) {
+    console.error('Error in StatePage:', error);
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Erro ao carregar página</h1>
+          <p className="text-gray-600 mb-6">Ocorreu um erro ao carregar as informações do estado. Por favor, tente novamente mais tarde.</p>
+          <Link href="/">
+            <Button>Voltar para a página inicial</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 }

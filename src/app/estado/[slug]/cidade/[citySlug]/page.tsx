@@ -18,94 +18,108 @@ interface CityPageProps {
 }
 
 async function getCity(stateSlug: string, citySlug: string) {
-  const city = await db.city.findFirst({
-    where: {
-      slug: citySlug,
-      state: {
-        slug: stateSlug
-      }
-    },
-    include: {
-      state: {
-        include: {
-          dddCodes: true
+  try {
+    const city = await db.city.findFirst({
+      where: {
+        slug: citySlug,
+        state: {
+          slug: stateSlug
         }
       },
-      dddCodes: true
-    }
-  });
+      include: {
+        state: {
+          include: {
+            dddCodes: true
+          }
+        },
+        dddCodes: true
+      }
+    });
 
-  if (!city) {
+    if (!city) {
+      return null;
+    }
+
+    return city;
+  } catch (error) {
+    console.error('Error fetching city:', error);
     return null;
   }
-
-  return city;
 }
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const { slug, citySlug } = await params;
-  const city = await getCity(slug, citySlug);
-  
-  if (!city) {
+  try {
+    const { slug, citySlug } = await params;
+    const city = await getCity(slug, citySlug);
+    
+    if (!city) {
+      return {
+        title: 'Cidade não encontrada',
+        description: 'A cidade solicitada não foi encontrada em nossa base de dados.'
+      };
+    }
+
+    const dddCodes = city.dddCodes.map(ddd => ddd.code).join(', ');
+    
     return {
-      title: 'Cidade não encontrada',
-      description: 'A cidade solicitada não foi encontrada em nossa base de dados.'
+      title: `DDD ${city.name} - ${city.state.name} (${city.state.code})`,
+      description: `Código DDD de ${city.name}, ${city.state.name}. Códigos: ${dddCodes}. Informações telefônicas atualizadas.`,
+      keywords: `DDD ${city.name}, ${city.name} ${city.state.name}, código DDD ${city.name}, telefonia ${city.name}, ${city.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
+      openGraph: {
+        title: `DDD ${city.name} - ${city.state.name}`,
+        description: `Código DDD de ${city.name}, ${city.state.name} - ${dddCodes}`,
+        type: 'website',
+        locale: 'pt_BR'
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: `DDD ${city.name} - ${city.state.name}`,
+        description: `Código DDD de ${city.name}, ${city.state.name}`
+      },
+      alternates: {
+        canonical: `https://meuddd.com.br/estado/${city.state.slug}/cidade/${city.slug}`
+      },
+      other: {
+        'geo.region': city.state.code,
+        'geo.placename': city.name
+      }
+    };
+  } catch (error) {
+    console.error('Error generating city metadata:', error);
+    return {
+      title: 'Erro ao carregar página',
+      description: 'Ocorreu um erro ao carregar as informações da cidade.'
     };
   }
-
-  const dddCodes = city.dddCodes.map(ddd => ddd.code).join(', ');
-  
-  return {
-    title: `DDD ${city.name} - ${city.state.name} (${city.state.code})`,
-    description: `Código DDD de ${city.name}, ${city.state.name}. Códigos: ${dddCodes}. Informações telefônicas atualizadas.`,
-    keywords: `DDD ${city.name}, ${city.name} ${city.state.name}, código DDD ${city.name}, telefonia ${city.name}, ${city.dddCodes.map(d => `DDD ${d.code}`).join(', ')}`,
-    openGraph: {
-      title: `DDD ${city.name} - ${city.state.name}`,
-      description: `Código DDD de ${city.name}, ${city.state.name} - ${dddCodes}`,
-      type: 'website',
-      locale: 'pt_BR'
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `DDD ${city.name} - ${city.state.name}`,
-      description: `Código DDD de ${city.name}, ${city.state.name}`
-    },
-    alternates: {
-      canonical: `https://meuddd.com.br/estado/${city.state.slug}/cidade/${city.slug}`
-    },
-    other: {
-      'geo.region': city.state.code,
-      'geo.placename': city.name
-    }
-  };
 }
 
 export default async function CityPage({ params }: CityPageProps) {
-  const { slug, citySlug } = await params;
-  const city = await getCity(slug, citySlug);
+  try {
+    const { slug, citySlug } = await params;
+    const city = await getCity(slug, citySlug);
 
-  if (!city) {
-    notFound();
-  }
+    if (!city) {
+      notFound();
+    }
 
-  const formatNumber = (num?: number | null) => {
-    if (!num) return '';
-    return num.toLocaleString('pt-BR');
-  };
+    const formatNumber = (num?: number | null) => {
+      if (!num) return '';
+      return num.toLocaleString('pt-BR');
+    };
 
-  const formatArea = (area?: number | null) => {
-    if (!area) return '';
-    return `${area.toLocaleString('pt-BR')} km²`;
-  };
+    const formatArea = (area?: number | null) => {
+      if (!area) return '';
+      return `${area.toLocaleString('pt-BR')} km²`;
+    };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
-  const canonicalUrl = `${baseUrl}/estado/${city.state.slug}/cidade/${city.slug}`;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+    const canonicalUrl = `${baseUrl}/estado/${city.state.slug}/cidade/${city.slug}`;
 
-  const breadcrumbItems = [
-    { name: 'Home', url: baseUrl },
-    { name: city.state.name, url: `${baseUrl}/estado/${city.state.slug}` },
-    { name: city.name, url: canonicalUrl }
-  ];
+    const breadcrumbItems = [
+      { name: 'Home', url: baseUrl },
+      { name: city.state.name, url: `${baseUrl}/estado/${city.state.slug}` },
+      { name: city.name, url: canonicalUrl }
+    ];
 
   return (
     <>
@@ -412,4 +426,18 @@ export default async function CityPage({ params }: CityPageProps) {
       </div>
     </>
   );
+  } catch (error) {
+    console.error('Error in CityPage:', error);
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Erro ao carregar página</h1>
+          <p className="text-gray-600 mb-6">Ocorreu um erro ao carregar as informações da cidade. Por favor, tente novamente mais tarde.</p>
+          <Link href="/">
+            <Button>Voltar para a página inicial</Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
 }
