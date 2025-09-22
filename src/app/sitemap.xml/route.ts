@@ -19,7 +19,7 @@ export async function GET() {
       }
     });
 
-    // Buscar algumas cidades principais para incluir no sitemap
+    // Buscar cidades principais para incluir no sitemap (aumentado para 200)
     const cities = await db.city.findMany({
       include: {
         state: true
@@ -27,7 +27,7 @@ export async function GET() {
       orderBy: {
         population: 'desc'
       },
-      take: 100 // Limitar para não sobrecarregar o sitemap
+      take: 200 // Aumentado para incluir mais cidades no sitemap
     });
 
     const urls: SitemapUrl[] = [

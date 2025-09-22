@@ -136,7 +136,7 @@ export default function Home() {
           </Card>
           <Card className="text-center">
             <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">5000+</div>
+              <div className="text-3xl font-bold text-purple-600 mb-2">730+</div>
               <div className="text-sm text-gray-600">Cidades Cadastradas</div>
             </CardContent>
           </Card>
