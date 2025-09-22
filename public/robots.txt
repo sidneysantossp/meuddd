@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://codigosddd.com.br/sitemap.xml
+Sitemap: https://www.meuddd.com.br/sitemap.xml
 
 # Bloquear páginas de API e administrativas
 Disallow: /api/
