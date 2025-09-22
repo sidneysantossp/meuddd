@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.meuddd.com.br/sitemap.xml
+Sitemap: https://meuddd.com/sitemap.xml
 
 # Bloquear páginas de API e administrativas
 Disallow: /api/

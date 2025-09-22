@@ -156,7 +156,7 @@ export function CityStructuredData({ city, state, url }: CityStructuredDataProps
       "author": {
         "@type": "Organization",
         "name": "MEU DDD",
-        "url": "https://meuddd.com.br"
+        "url": "https://meuddd.com"
       }
     },
     "geo": {

@@ -33,11 +33,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://meuddd.vercel.app'),
+  metadataBase: new URL('https://meuddd.com'),
   openGraph: {
     title: "MEU DDD - Consulta Completa de Códigos DDD do Brasil",
     description: "Encontre o código DDD de qualquer cidade ou estado do Brasil. Consulta completa e atualizada de todos os códigos de área telefônica.",
-    url: 'https://meuddd.vercel.app',
+    url: 'https://meuddd.com',
     siteName: "MEU DDD",
     locale: "pt_BR",
     type: "website",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://meuddd.vercel.app',
+    canonical: 'https://meuddd.com',
   },
 };
 

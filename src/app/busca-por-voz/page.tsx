@@ -7,7 +7,7 @@ import { ToolStructuredData } from '@/components/seo/ToolStructuredData';
 import { BreadcrumbStructuredData } from '@/components/seo/BreadcrumbStructuredData';
 
 export default function BuscaPorVozPage() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com';
   const canonicalUrl = `${baseUrl}/busca-por-voz`;
 
   const breadcrumbItems = [

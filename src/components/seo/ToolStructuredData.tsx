@@ -61,12 +61,12 @@ export function ToolStructuredData({
     "author": {
       "@type": "Organization",
       "name": "MEU DDD",
-      "url": "https://meuddd.com.br"
+      "url": "https://meuddd.com"
     },
     "creator": {
       "@type": "Organization",
       "name": "MEU DDD",
-      "url": "https://meuddd.com.br"
+      "url": "https://meuddd.com"
     },
     "inLanguage": "pt-BR",
     "isAccessibleForFree": true,

@@ -133,7 +133,7 @@ export function StateStructuredData({ state, url }: StateStructuredDataProps) {
       "author": {
         "@type": "Organization",
         "name": "MEU DDD",
-        "url": "https://meuddd.com.br"
+        "url": "https://meuddd.com"
       }
     }
   };

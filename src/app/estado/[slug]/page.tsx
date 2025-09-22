@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: StatePageProps): Promise<Meta
         description: `Lista completa de cidades de ${state.name} com códigos DDD para suas ligações.`
       },
       alternates: {
-        canonical: `https://meuddd.vercel.app/estado/${state.slug}`
+        canonical: `https://meuddd.com/estado/${state.slug}`
       },
       other: {
         'geo.region': state.code,
@@ -123,7 +123,7 @@ export default async function StatePage({ params }: StatePageProps) {
       return `${area.toLocaleString('pt-BR')} km²`;
     };
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com';
     const canonicalUrl = `${baseUrl}/estado/${state.slug}`;
 
     const breadcrumbItems = [

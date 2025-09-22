@@ -9,7 +9,7 @@ interface SitemapUrl {
 }
 
 export async function GET() {
-  const baseUrl = 'https://www.meuddd.com.br';
+  const baseUrl = 'https://meuddd.com';
   
   try {
     // Buscar todos os estados

@@ -82,7 +82,7 @@ const regions = [
 
 export default function Home() {
   const [states, setStates] = useState(staticStates);
-  const [baseUrl, setBaseUrl] = useState('https://meuddd.com.br');
+  const [baseUrl, setBaseUrl] = useState('https://meuddd.com');
 
   useEffect(() => {
     // Tentar carregar dados dinâmicos após o componente montar
@@ -98,7 +98,7 @@ export default function Home() {
       }
     };
 
-    setBaseUrl(process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br');
+    setBaseUrl(process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com');
     loadStates();
   }, []);
 

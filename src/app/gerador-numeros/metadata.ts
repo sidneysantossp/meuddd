@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Ferramenta online para gerar números de telefone válidos para testes.'
   },
   alternates: {
-    canonical: 'https://meuddd.vercel.app/gerador-numeros'
+    canonical: 'https://meuddd.com/gerador-numeros'
   },
   robots: {
     index: true,

@@ -62,7 +62,7 @@ export default function ValidarDDDPage() {
     setResult(null);
   };
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com';
   const canonicalUrl = `${baseUrl}/validar-ddd`;
 
   const breadcrumbItems = [

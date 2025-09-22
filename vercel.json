@@ -1,5 +1,14 @@
 {
   "buildCommand": "npm run build:vercel",
   "devCommand": "npm run dev",
-  "installCommand": "npm install"
+  "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://meuddd.com/:1",
+      "has": {
+        "host": "www.meuddd.com"
+      }
+    }
+  ]
 }

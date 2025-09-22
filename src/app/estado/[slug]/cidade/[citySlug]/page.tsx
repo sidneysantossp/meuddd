@@ -105,7 +105,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
         description: `Descubra o código DDD de ${city.name} e saiba como fazer ligações telefônicas.`
       },
       alternates: {
-        canonical: `https://meuddd.vercel.app/estado/${city.state.slug}/cidade/${city.slug}`
+        canonical: `https://meuddd.com/estado/${city.state.slug}/cidade/${city.slug}`
       },
       other: {
         'geo.region': city.state.code,
@@ -142,7 +142,7 @@ export default async function CityPage({ params }: CityPageProps) {
       return `${area.toLocaleString('pt-BR')} km²`;
     };
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com.br';
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com';
     const canonicalUrl = `${baseUrl}/estado/${city.state.slug}/cidade/${city.slug}`;
 
     const breadcrumbItems = [

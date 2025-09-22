@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Use comandos de voz para encontrar códigos DDD de forma inteligente e rápida.'
   },
   alternates: {
-    canonical: 'https://meuddd.vercel.app/busca-por-voz'
+    canonical: 'https://meuddd.com/busca-por-voz'
   },
   robots: {
     index: true,

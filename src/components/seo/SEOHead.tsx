@@ -16,7 +16,7 @@ export function SEOHead({
   description,
   keywords,
   canonicalUrl,
-  ogImage = 'https://meuddd.com.br/og-default.jpg',
+  ogImage = 'https://meuddd.com/og-default.jpg',
   ogType = 'website',
   structuredData,
   noIndex = false

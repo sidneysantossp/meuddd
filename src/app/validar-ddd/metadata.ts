@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Ferramenta online para validar códigos DDD brasileiros.'
   },
   alternates: {
-    canonical: 'https://meuddd.vercel.app/validar-ddd'
+    canonical: 'https://meuddd.com/validar-ddd'
   },
   robots: {
     index: true,

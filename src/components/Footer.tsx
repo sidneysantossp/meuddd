@@ -244,7 +244,7 @@ export function Footer() {
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-500" />
-                <span>contato@meuddd.com.br</span>
+                <span>contato@meuddd.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-500" />
