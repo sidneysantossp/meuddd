@@ -6,6 +6,7 @@
   "installCommand": "npm install --no-cache",
   "env": {
     "NEXT_TELEMETRY_DISABLED": "1",
-    "NODE_OPTIONS": "--max-old-space-size=4096"
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "DATABASE_URL": "file:./dev.db"
   }
 }
