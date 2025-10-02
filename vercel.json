@@ -1,0 +1,31 @@
+{
+  "buildCommand": "./vercel-emergency-build.sh",
+  "functions": {
+    "app/api/**/*": {
+      "runtime": "nodejs18.x"
+    },
+    "app/**/*": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "github": {
+    "silent": true
+  },
+  "installCommand": "npm install --no-cache",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_TELEMETRY_DISABLED": "1",
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
+}
