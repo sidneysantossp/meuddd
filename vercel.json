@@ -1,5 +1,5 @@
 {
-  "buildCommand": "./vercel-emergency-build.sh",
+  "buildCommand": "npm run build",
   "github": {
     "silent": true
   },
