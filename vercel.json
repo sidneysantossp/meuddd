@@ -1,12 +1,7 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "npx next build",
   "github": {
     "silent": true
   },
-  "installCommand": "npm install --no-cache",
-  "env": {
-    "NEXT_TELEMETRY_DISABLED": "1",
-    "NODE_OPTIONS": "--max-old-space-size=4096",
-    "DATABASE_URL": "file:./dev.db"
-  }
+  "installCommand": "npm install"
 }
