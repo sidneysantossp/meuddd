@@ -2,10 +2,10 @@
   "buildCommand": "./vercel-emergency-build.sh",
   "functions": {
     "app/api/**/*": {
-      "runtime": "nodejs18.x"
+      "runtime": "@nodejs18.x"
     },
     "app/**/*": {
-      "runtime": "nodejs18.x"
+      "runtime": "@nodejs18.x"
     }
   },
   "routes": [
