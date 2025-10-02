@@ -1,19 +1,5 @@
 {
   "buildCommand": "./vercel-emergency-build.sh",
-  "functions": {
-    "app/api/**/*": {
-      "runtime": "@nodejs18.x"
-    },
-    "app/**/*": {
-      "runtime": "@nodejs18.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "github": {
     "silent": true
   },
