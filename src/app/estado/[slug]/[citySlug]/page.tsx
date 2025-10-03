@@ -1522,22 +1522,39 @@ export default function CityPage({ params }: PageProps) {
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">Acrelândia: O Coração do Desenvolvimento do Acre</h2>
                         
                         <p className="mb-4 text-gray-700 leading-relaxed">
-                          Localizada no estratégico estado do Acre, Acrelândia emerge como um dos mais importantes 
-                          polos de desenvolvimento da região Norte do Brasil. Fundada em 1992, esta cidade jovem e 
-                          vibrante tem se destacado como um centro econômico, social e cultural que representa o 
-                          espírito resiliente e empreendedor do povo acreano. Com uma população aproximada de 15.000 
-                          habitantes, Acrelândia desafia as estatísticas e se posiciona como um exemplo de como o 
-                          planejamento urbano e a iniciativa privada podem transformar uma pequena comunidade em um 
+                          Localizada no estratégico <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">estado do Acre</Link>, 
+                          Acrelândia emerge como um dos mais importantes polos de desenvolvimento da região Norte do Brasil. 
+                          Fundada em 1992, esta cidade jovem e vibrante tem se destacado como um centro econômico, social e 
+                          cultural que representa o espírito resiliente e empreendedor do povo acreano. Com uma população 
+                          aproximada de 15.000 habitantes, Acrelândia desafia as estatísticas e se posiciona como um exemplo 
+                          de como o planejamento urbano e a iniciativa privada podem transformar uma pequena comunidade em um 
                           referencial de progresso na Amazônia.
+                          <Link href="/estado/acre/cidade/rio-branco" className="text-blue-600 hover:text-blue-800 underline">Rio Branco</Link> e 
+                          <Link href="/estado/acre/cidade/cruzeiro-do-sul" className="text-blue-600 hover:text-blue-800 underline">Cruzeiro do Sul</Link> 
+                          são outras cidades importantes que também compartilham o mesmo desenvolvimento do estado.
+                          <Link href="/gerador-numeros" className="text-blue-600 hover:text-blue-800 underline">
+                            Gere números de telefone com DDD 68
+                          </Link>.
                         </p>
 
                         <p className="mb-6 text-gray-700 leading-relaxed">
-                          Situada a aproximadamente 180 quilômetros da capital Rio Branco, Acrelândia beneficia-se de 
-                          sua privilegiada localização às margens da BR-364, a principal via de escoamento da produção 
-                          e integração do Acre com o restante do Brasil. Esta posição geográfica estratégica tem sido 
-                          fundamental para o desenvolvimento da cidade, atraindo investimentos e promovendo um fluxo 
-                          constante de pessoas e mercadorias que impulsionam a economia local. O DDD 68, compartilhado 
+                          Situada a aproximadamente 180 quilômetros da capital <Link href="/estado/acre/cidade/rio-branco" className="text-blue-600 hover:text-blue-800 underline">Rio Branco</Link>, 
+                          Acrelândia beneficia-se de sua privilegiada localização às margens da BR-364, a principal via de 
+                          escoamento da produção e integração do Acre com o restante do Brasil. Esta posição geográfica 
+                          estratégica tem sido fundamental para o desenvolvimento da cidade, atraindo investimentos e promovendo 
+                          um fluxo constante de pessoas e mercadorias que impulsionam a economia local. O DDD 68, compartilhado 
                           com todo o estado, simboliza esta integração e conecta Acrelândia com o mundo.
+                          <a href="https://www.google.com/maps/search/Acrelândia,+Acre" target="_blank" rel="noopener noreferrer" 
+                             className="text-blue-600 hover:text-blue-800 underline">
+                            Veja Acrelândia no Google Maps
+                          </a>.
+                          <a href="https://www.ac.gov.br/" target="_blank" rel="noopener noreferrer" 
+                             className="text-blue-600 hover:text-blue-800 underline">
+                            Saiba mais sobre o governo do Acre
+                          </a>.
+                          <Link href="/validar-ddd" className="text-blue-600 hover:text-blue-800 underline">
+                            Valide números de telefone com DDD 68
+                          </Link>.
                         </p>
 
                         {/* Leia mais... */}
@@ -1566,6 +1583,13 @@ export default function CityPage({ params }: PageProps) {
                           muito mais antiga, ligada aos povos indígenas que habitavam a região e aos seringueiros que 
                           desbravaram a floresta durante o ciclo da borracha. A criação do município representou o 
                           reconhecimento do crescimento da comunidade e sua importância para o desenvolvimento do estado.
+                          <a href="https://pt.wikipedia.org/wiki/Acrelândia" target="_blank" rel="noopener noreferrer" 
+                             className="text-blue-600 hover:text-blue-800 underline">
+                            Conheça mais sobre a história de Acrelândia na Wikipedia
+                          </a>.
+                          <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">
+                            Saiba mais sobre o estado do Acre
+                          </Link>.
                         </p>
 
                         <p className="mb-4 text-gray-700 leading-relaxed">
@@ -1574,6 +1598,13 @@ export default function CityPage({ params }: PageProps) {
                           os desafios típicos das comunidades amazônicas: isolamento geográfico, dificuldades de 
                           acesso e limitações de infraestrutura. No entanto, a determinação de seus habitantes e a 
                           visão de lideranças comprometidas com o progresso transformaram obstáculos em oportunidades.
+                          <a href="https://www.gov.br/anatel/pt-br" target="_blank" rel="noopener noreferrer" 
+                             className="text-blue-600 hover:text-blue-800 underline">
+                            Saiba mais sobre a regulação de telecomunicações no Brasil
+                          </a>.
+                          <Link href="/busca-por-voz" className="text-blue-600 hover:text-blue-800 underline">
+                            Experimente nossa busca por voz para encontrar cidades
+                          </Link>.
                         </p>
 
                         <p className="mb-6 text-gray-700 leading-relaxed">
@@ -1582,6 +1613,12 @@ export default function CityPage({ params }: PageProps) {
                           restante do Brasil, mas também abriu novas perspectivas econômicas e sociais. A partir de 
                           então, Acrelândia começou a atrair empresas, investimentos e novos moradores, 
                           consolidando-se como um dos municípios mais dinâmicos do Acre.
+                          <Link href="/estado/acre/cidade/feijo" className="text-blue-600 hover:text-blue-800 underline">Feijó</Link> e 
+                          <Link href="/estado/acre/cidade/sena-madureira" className="text-blue-600 hover:text-blue-800 underline">Sena Madureira</Link> 
+                          são outras cidades que também se beneficiaram do desenvolvimento da região.
+                          <Link href="/estados" className="text-blue-600 hover:text-blue-800 underline">
+                            Conheça outros estados brasileiros
+                          </Link>.
                         </p>
 
                         {/* Geografia e Meio Ambiente */}
