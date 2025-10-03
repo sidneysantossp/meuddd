@@ -178,6 +178,9 @@ export default function FeijoDDDPage() {
                 para todas as suas comunicações telefônicas. Este código não é apenas uma sequência numérica, mas sim a espinha 
                 dorsal da conectividade que mantém esta cidade de aproximadamente 33.542 habitantes conectada com o resto do Brasil 
                 e o mundo.
+                <Link href="/estado/acre/cidade/cruzeiro-do-sul" className="text-blue-600 hover:text-blue-800 underline">Cruzeiro do Sul</Link> e 
+                <Link href="/estado/acre/cidade/sena-madureira" className="text-blue-600 hover:text-blue-800 underline">Sena Madureira</Link> 
+                são outras cidades importantes que também compartilham o mesmo código DDD.
               </p>
               <p className="mb-4">
                 O DDD 68 em Feijó funciona como uma identidade telefônica que distingue todas as chamadas destinadas ao estado 
@@ -190,6 +193,9 @@ export default function FeijoDDDPage() {
                 inúmeras comunidades ribeirinhas e áreas de extrativismo que dependem da cidade para acesso a serviços essenciais. 
                 Esta característica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da 
                 economia local e regional.
+                <Link href="/gerador-numeros" className="text-blue-600 hover:text-blue-800 underline">
+                  Gere números de telefone com DDD 68
+                </Link>.
               </p>
               <p className="mb-4">
                 É importante compreender que o <strong>DDD 68</strong> é compartilhado por todas as 22 cidades do Acre, criando uma 
@@ -241,6 +247,9 @@ export default function FeijoDDDPage() {
                    className="text-blue-600 hover:text-blue-800 underline">
                   Conheça mais sobre a história de Feijó na Wikipedia
                 </a>.
+                <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">
+                  Saiba mais sobre o estado do Acre
+                </Link>.
               </p>
               <p className="mb-4">
                 Durante o ciclo da borracha, Feijó tornou-se um dos principais centros de produção e comercialização deste valioso 

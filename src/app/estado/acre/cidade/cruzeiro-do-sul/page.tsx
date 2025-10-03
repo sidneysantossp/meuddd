@@ -175,6 +175,9 @@ export default function CruzeiroDoSulDDDPage() {
                 e como toda a região acreana, ela utiliza o <strong>DDD 68</strong> como seu código telefônico exclusivo. Este código não é apenas 
                 um número, mas sim a identidade telefônica de toda a população de aproximadamente 87.817 habitantes que vivem nesta cidade 
                 que serve como principal centro da região do Juruá.
+                <Link href="/estado/acre/cidade/feijo" className="text-blue-600 hover:text-blue-800 underline">Feijó</Link> e 
+                <Link href="/estado/acre/cidade/sena-madureira" className="text-blue-600 hover:text-blue-800 underline">Sena Madureira</Link> 
+                são outras cidades importantes da região que também compartilham o mesmo código DDD.
               </p>
               <p className="mb-4">
                 O DDD 68 em Cruzeiro do Sul funciona como uma ponte de comunicação essencial que conecta esta importante cidade do interior 
@@ -187,6 +190,13 @@ export default function CruzeiroDoSulDDDPage() {
                 </a>, 
                 Cruzeiro do Sul desenvolveu-se como um polo regional estratégico, e seu código DDD 68 é fundamental 
                 para manter essa conectividade que sustenta a economia e as relações sociais da região.
+                <a href="https://www.ac.gov.br/" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Saiba mais sobre o governo do Acre
+                </a>.
+                <Link href="/gerador-numeros" className="text-blue-600 hover:text-blue-800 underline">
+                  Gere números de telefone com DDD 68
+                </Link>.
               </p>
               <p className="mb-4">
                 É importante compreender que o <strong>DDD 68</strong> não é exclusivo de Cruzeiro do Sul, mas sim compartilhado por todas 
@@ -194,8 +204,12 @@ export default function CruzeiroDoSulDDDPage() {
                 memoriza o código 68, pode utilizá-lo para ligar para qualquer cidade acreana, seja 
                 <Link href="/estado/acre/rio-branco" className="text-blue-600 hover:text-blue-800 underline">Rio Branco</Link>, 
                 <Link href="/estado/acre/cidade/brasiléia" className="text-blue-600 hover:text-blue-800 underline">Brasiléia</Link>, 
-                <Link href="/estado/acre/cidade/tarauaca" className="text-blue-600 hover:text-blue-800 underline">Tarauacá</Link> ou 
-                qualquer outra localidade deste vasto estado da Amazônia Ocidental.
+                <Link href="/estado/acre/cidade/tarauaca" className="text-blue-600 hover:text-blue-800 underline">Tarauacá</Link>, 
+                <Link href="/estado/acre/cidade/feijo" className="text-blue-600 hover:text-blue-800 underline">Feijó</Link> ou 
+                <Link href="/estado/acre/cidade/sena-madureira" className="text-blue-600 hover:text-blue-800 underline">Sena Madureira</Link>.
+                <Link href="/estados" className="text-blue-600 hover:text-blue-800 underline">
+                  Conheça outros estados brasileiros
+                </Link>.
               </p>
               <p className="mb-6">
                 Para quem visita ou precisa se comunicar com Cruzeiro do Sul, o conhecimento do DDD 68 é indispensável. Seja para 
@@ -237,6 +251,9 @@ export default function CruzeiroDoSulDDDPage() {
                    className="text-blue-600 hover:text-blue-800 underline">
                   Conheça mais sobre a história de Cruzeiro do Sul na Wikipedia
                 </a>.
+                <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">
+                  Saiba mais sobre o estado do Acre
+                </Link>.
               </p>
               <p className="mb-4">
                 Durante o ciclo da borracha, Cruzeiro do Sul tornou-se um dos principais centros de comercialização e exportação deste 

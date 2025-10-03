@@ -178,6 +178,9 @@ export default function TarauacaDDDPage() {
                 para todas as suas comunicações telefônicas. Este código não é apenas uma sequência numérica, mas sim a espinha 
                 dorsal da conectividade que mantém esta cidade de aproximadamente 41.671 habitantes conectada com o resto do Brasil 
                 e o mundo.
+                <Link href="/estado/acre/cidade/cruzeiro-do-sul" className="text-blue-600 hover:text-blue-800 underline">Cruzeiro do Sul</Link> e 
+                <Link href="/estado/acre/cidade/feijo" className="text-blue-600 hover:text-blue-800 underline">Feijó</Link> 
+                são outras cidades importantes que também compartilham o mesmo código DDD.
               </p>
               <p className="mb-4">
                 O DDD 68 em Tarauacá funciona como uma identidade telefônica que distingue todas as chamadas destinadas ao estado 
@@ -190,6 +193,9 @@ export default function TarauacaDDDPage() {
                 inúmeras comunidades ribeirinhas e áreas rurais que dependem da cidade para acesso a serviços essenciais. Esta 
                 característica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da economia 
                 local e regional.
+                <Link href="/gerador-numeros" className="text-blue-600 hover:text-blue-800 underline">
+                  Gere números de telefone com DDD 68
+                </Link>.
               </p>
               <p className="mb-4">
                 É importante compreender que o <strong>DDD 68</strong> é compartilhado por todas as 22 cidades do Acre, criando uma 
