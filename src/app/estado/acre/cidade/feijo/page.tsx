@@ -172,14 +172,21 @@ export default function FeijoDDDPage() {
             <div className="prose prose-lg max-w-none">
               <p className="mb-4">
                 Quando falamos em <strong>Feijó</strong>, estamos nos referindo a uma das cidades mais importantes da região 
-                do Purus no estado do Acre, e como toda a região acreana, ela depende fundamentalmente do <strong>DDD 68</strong> 
+                do Purus no 
+                <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">estado do Acre</Link>, 
+                e como toda a região acreana, ela depende fundamentalmente do <strong>DDD 68</strong> 
                 para todas as suas comunicações telefônicas. Este código não é apenas uma sequência numérica, mas sim a espinha 
                 dorsal da conectividade que mantém esta cidade de aproximadamente 33.542 habitantes conectada com o resto do Brasil 
                 e o mundo.
               </p>
               <p className="mb-4">
                 O DDD 68 em Feijó funciona como uma identidade telefônica que distingue todas as chamadas destinadas ao estado 
-                do Acre. Localizada em uma posição estratégica na região do Purus, Feijó serve como um centro de apoio para 
+                do Acre. 
+                <a href="https://www.google.com/maps/search/Feijó,+Acre" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Localizada em uma posição estratégica na região do Purus
+                </a>, 
+                Feijó serve como um centro de apoio para 
                 inúmeras comunidades ribeirinhas e áreas de extrativismo que dependem da cidade para acesso a serviços essenciais. 
                 Esta característica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da 
                 economia local e regional.
@@ -189,12 +196,19 @@ export default function FeijoDDDPage() {
                 rede de comunicação unificada que facilita as interações dentro do estado. Para Feijó, esta padronização significa 
                 que seus residentes podem se comunicar facilmente com qualquer outra cidade acreana usando o mesmo código, 
                 simplificando as relações comerciais, familiares e institucionais que sustentam a vida na região do Purus.
+                <Link href="/estado/acre/rio-branco" className="text-blue-600 hover:text-blue-800 underline">
+                  Conecte-se com Rio Branco, a capital do estado
+                </Link>.
               </p>
               <p className="mb-6">
                 A importância do DDD 68 para Feijó vai além da simples telefonia. Ele representa a conexão desta cidade com 
                 serviços essenciais como saúde, educação, segurança e comércio. Em uma região onde as distâncias são grandes e 
                 o acesso físico a certos serviços pode ser limitado, a comunicação telefônica através do DDD 68 torna-se uma 
                 ferramenta vital para o bem-estar e o desenvolvimento da comunidade local e das populações que dependem da cidade.
+                <a href="https://www.ac.gov.br/" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Conheça os serviços do governo do Acre
+                </a>.
               </p>
               
               <ol className="list-decimal list-inside mb-6 space-y-2">
@@ -223,6 +237,10 @@ export default function FeijoDDDPage() {
                 a demanda por este produto nos mercados internacionais impulsionou a ocupação da região do Purus. O nome da cidade 
                 é uma homenagem a João Feijó, um importante seringalista que contribuiu significativamente para o desenvolvimento 
                 da área.
+                <a href="https://pt.wikipedia.org/wiki/Feijó_(Acre)" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Conheça mais sobre a história de Feijó na Wikipedia
+                </a>.
               </p>
               <p className="mb-4">
                 Durante o ciclo da borracha, Feijó tornou-se um dos principais centros de produção e comercialização deste valioso 
@@ -230,6 +248,10 @@ export default function FeijoDDDPage() {
                 da região Nordeste, que vinham em busca de melhores oportunidades de trabalho nos seringais. Este período de 
                 intensa atividade econômica deixou marcas profundas na cultura e na identidade local, que até hoje refletem esta 
                 diversidade de influências.
+                <a href="https://www.gov.br/anatel/pt-br" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Saiba mais sobre a regulação de telecomunicações no Brasil
+                </a>.
               </p>
               <p className="mb-4">
                 Com o declínio do ciclo da borracha, Feijó passou por transformações econômicas significativas. A cidade precisou 
@@ -237,6 +259,9 @@ export default function FeijoDDDPage() {
                 florestais, a agricultura de subsistência e a pesca passaram a ganhar importância na economia local. Durante este 
                 período de transição, a comunicação telefônica começou a se tornar mais essencial, permitindo que os produtores 
                 locais pudessem se conectar com mercados em outras cidades e estados.
+                <Link href="/validar-ddd" className="text-blue-600 hover:text-blue-800 underline">
+                  Valide números de telefone com DDD 68
+                </Link>.
               </p>
               <p className="mb-6">
                 Nas décadas seguintes, Feijó consolidou-se como um dos principais centros urbanos da região do Purus, 
@@ -245,6 +270,10 @@ export default function FeijoDDDPage() {
                 <strong>DDD 68</strong> foi um marco importante neste processo de desenvolvimento, pois permitiu que Feijó se 
                 integrasse melhor com o restante do estado e do país, facilitando o comércio, o acesso a serviços e as 
                 relações institucionais.
+                <a href="https://www.ac.gov.br/feijo" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Acesse o site oficial da prefeitura de Feijó
+                </a>.
               </p>
 
               <ol className="list-decimal list-inside mb-6 space-y-2">

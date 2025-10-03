@@ -170,16 +170,24 @@ export default function SenaMadureiraDDDPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">DDD 68 em Sena Madureira: O código telefônico vital</h2>
             <div className="prose prose-lg max-w-none">
               <p className="mb-4">
-                Quando falamos em <strong>Sena Madureira</strong>, estamos nos referindo a uma das cidades mais estratégicas do estado do Acre, 
+                Quando falamos em <strong>Sena Madureira</strong>, estamos nos referindo a uma das cidades mais estratégicas do 
+                <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">estado do Acre</Link>, 
                 e como toda a região acreana, ela depende fundamentalmente do <strong>DDD 68</strong> para todas as suas comunicações telefônicas. 
                 Este código não é apenas uma sequência numérica, mas sim a espinha dorsal da conectividade que mantém esta cidade de 
                 aproximadamente 45.876 habitantes conectada com o resto do Brasil e o mundo.
               </p>
               <p className="mb-4">
                 O DDD 68 em Sena Madureira funciona como uma identidade telefônica que distingue todas as chamadas destinadas ao estado do Acre. 
-                Localizada em uma posição geográfica privilegiada na BR-364, Sena Madureira serve como um ponto de parada essencial para 
-                viajantes e transporte de mercadorias entre a capital Rio Branco e a importante cidade de Cruzeiro do Sul. Esta posição 
-                estratégica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da economia local e 
+                <a href="https://www.google.com/maps/search/Sena+Madureira,+Acre" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Localizada em uma posição geográfica privilegiada na BR-364
+                </a>, 
+                Sena Madureira serve como um ponto de parada essencial para 
+                viajantes e transporte de mercadorias entre a capital 
+                <Link href="/estado/acre/rio-branco" className="text-blue-600 hover:text-blue-800 underline">Rio Branco</Link> 
+                e a importante cidade de 
+                <Link href="/estado/acre/cidade/cruzeiro-do-sul" className="text-blue-600 hover:text-blue-800 underline">Cruzeiro do Sul</Link>. 
+                Esta posição estratégica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da economia local e 
                 regional.
               </p>
               <p className="mb-4">
@@ -187,12 +195,19 @@ export default function SenaMadureiraDDDPage() {
                 de comunicação unificada que facilita as interações dentro do estado. Para Sena Madureira, esta padronização significa 
                 que seus residentes podem se comunicar facilmente com qualquer outra cidade acreana usando o mesmo código, simplificando 
                 as relações comerciais, familiares e institucionais que sustentam a vida na região.
+                <Link href="/validar-ddd" className="text-blue-600 hover:text-blue-800 underline">
+                  Valide números de telefone com DDD 68
+                </Link>.
               </p>
               <p className="mb-6">
                 A importância do DDD 68 para Sena Madureira vai além da simples telefonia. Ele representa a conexão desta cidade com 
                 serviços essenciais como saúde, educação, segurança e comércio. Em uma região onde as distâncias são grandes e o acesso 
                 físico a certos serviços pode ser limitado, a comunicação telefônica através do DDD 68 torna-se uma ferramenta vital 
                 para o bem-estar e o desenvolvimento da comunidade local.
+                <a href="https://www.ac.gov.br/" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Conheça os serviços do governo do Acre
+                </a>.
               </p>
               
               <ol className="list-decimal list-inside mb-6 space-y-2">

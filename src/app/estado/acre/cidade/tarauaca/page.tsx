@@ -172,14 +172,21 @@ export default function TarauacaDDDPage() {
             <div className="prose prose-lg max-w-none">
               <p className="mb-4">
                 Quando falamos em <strong>Tarauacá</strong>, estamos nos referindo a uma das cidades mais importantes da região 
-                do Juruá no estado do Acre, e como toda a região acreana, ela depende fundamentalmente do <strong>DDD 68</strong> 
+                do Juruá no 
+                <Link href="/estado/acre" className="text-blue-600 hover:text-blue-800 underline">estado do Acre</Link>, 
+                e como toda a região acreana, ela depende fundamentalmente do <strong>DDD 68</strong> 
                 para todas as suas comunicações telefônicas. Este código não é apenas uma sequência numérica, mas sim a espinha 
                 dorsal da conectividade que mantém esta cidade de aproximadamente 41.671 habitantes conectada com o resto do Brasil 
                 e o mundo.
               </p>
               <p className="mb-4">
                 O DDD 68 em Tarauacá funciona como uma identidade telefônica que distingue todas as chamadas destinadas ao estado 
-                do Acre. Localizada em uma posição estratégica na região do Juruá, Tarauacá serve como um centro de apoio para 
+                do Acre. 
+                <a href="https://www.google.com/maps/search/Tarauacá,+Acre" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Localizada em uma posição estratégica na região do Juruá
+                </a>, 
+                Tarauacá serve como um centro de apoio para 
                 inúmeras comunidades ribeirinhas e áreas rurais que dependem da cidade para acesso a serviços essenciais. Esta 
                 característica torna a comunicação telefônica através do DDD 68 ainda mais crucial para o funcionamento da economia 
                 local e regional.
@@ -189,12 +196,19 @@ export default function TarauacaDDDPage() {
                 rede de comunicação unificada que facilita as interações dentro do estado. Para Tarauacá, esta padronização significa 
                 que seus residentes podem se comunicar facilmente com qualquer outra cidade acreana usando o mesmo código, 
                 simplificando as relações comerciais, familiares e institucionais que sustentam a vida na região do Juruá.
+                <Link href="/estado/acre/cidade/cruzeiro-do-sul" className="text-blue-600 hover:text-blue-800 underline">
+                  Conecte-se com Cruzeiro do Sul, principal cidade da região
+                </Link>.
               </p>
               <p className="mb-6">
                 A importância do DDD 68 para Tarauacá vai além da simples telefonia. Ele representa a conexão desta cidade com 
                 serviços essenciais como saúde, educação, segurança e comércio. Em uma região onde as distâncias são grandes e 
                 o acesso físico a certos serviços pode ser limitado, a comunicação telefônica através do DDD 68 torna-se uma 
                 ferramenta vital para o bem-estar e o desenvolvimento da comunidade local e das populações que dependem da cidade.
+                <a href="https://www.ac.gov.br/" target="_blank" rel="noopener noreferrer" 
+                   className="text-blue-600 hover:text-blue-800 underline">
+                  Conheça os serviços do governo do Acre
+                </a>.
               </p>
               
               <ol className="list-decimal list-inside mb-6 space-y-2">
