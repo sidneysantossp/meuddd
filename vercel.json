@@ -1,0 +1,7 @@
+{
+  "buildCommand": "npx next build",
+  "github": {
+    "silent": true
+  },
+  "installCommand": "npm install"
+}
