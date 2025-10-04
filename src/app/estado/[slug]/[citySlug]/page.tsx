@@ -2476,10 +2476,18 @@ export default function CityPage({ params }: PageProps) {
       </footer>
 
       {/* SEO Components */}
-      <CityStructuredData city={city} />
+      <CityStructuredData city={city} url={canonicalUrl} />
       <BreadcrumbStructuredData items={breadcrumbItems} />
-      <RelatedLinks city={city} />
-      <SEOContent city={city} />
+      <RelatedLinks 
+        currentState={city.state.name} 
+        currentRegion={city.state.region} 
+        currentDDD={dddCode} 
+      />
+      <SEOContent 
+        currentState={city.state.name} 
+        currentRegion={city.state.region} 
+        contentType="faq" 
+      />
     </div>
   );
 }
