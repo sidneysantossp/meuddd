@@ -1,0 +1,660 @@
+'use client';
+
+import { notFound } from 'next/navigation';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { MapPin, Users, Phone, Building, Globe, ArrowLeft, Link as LinkIcon, Navigation, Wifi, Star, Clock, TrendingUp } from 'lucide-react';
+import { CityStructuredData } from '@/components/seo/CityStructuredData';
+import { BreadcrumbStructuredData } from '@/components/seo/BreadcrumbStructuredData';
+import { RelatedLinks } from '@/components/seo/RelatedLinks';
+import { SEOContent } from '@/components/seo/SEOContent';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+
+interface City {
+  id: string;
+  name: string;
+  slug: string;
+  population?: number | null;
+  area?: number | null;
+  latitude?: number | null;
+  longitude?: number | null;
+  isCapital: boolean;
+  state: {
+    name: string;
+    slug: string;
+    code: string;
+    region: string;
+  };
+  dddCodes: Array<{
+    id: string;
+    code: string;
+    description?: string | null;
+  }>;
+}
+
+interface PageProps {
+  params: Promise<{
+    slug: string;
+    citySlug: string;
+  }>;
+}
+
+export default function CityPage({ params }: PageProps) {
+  const [city, setCity] = useState<City | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [slug, setSlug] = useState<string>('');
+  const [citySlug, setCitySlug] = useState<string>('');
+
+  useEffect(() => {
+    const loadParams = async () => {
+      const resolvedParams = await params;
+      setSlug(resolvedParams.slug);
+      setCitySlug(resolvedParams.citySlug);
+    };
+    loadParams();
+  }, [params]);
+
+  useEffect(() => {
+    if (!slug || !citySlug) return;
+
+    const loadCity = async () => {
+      try {
+        // Buscar dados do estado
+        const stateResponse = await fetch(`/api/ddd/states`);
+        const states = await stateResponse.json();
+        
+        const foundState = states.find((s: any) => s.slug === slug);
+        
+        if (foundState) {
+          // Encontrar a cidade no estado
+          const foundCity = foundState.cities.find((c: any) => c.slug === citySlug);
+          
+          if (foundCity) {
+            setCity({
+              ...foundCity,
+              state: {
+                name: foundState.name,
+                slug: foundState.slug,
+                code: foundState.code,
+                region: foundState.region
+              }
+            });
+          } else {
+            notFound();
+          }
+        } else {
+          notFound();
+        }
+      } catch (error) {
+        console.error('Error fetching city:', error);
+        notFound();
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadCity();
+  }, [slug, citySlug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Carregando informações da cidade...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!city) {
+    notFound();
+  }
+
+  const formatNumber = (num?: number | null) => {
+    if (!num) return '';
+    return num.toLocaleString('pt-BR');
+  };
+
+  const formatArea = (area?: number | null) => {
+    if (!area) return '';
+    return `${area.toLocaleString('pt-BR')} km²`;
+  };
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://meuddd.com';
+  const canonicalUrl = `${baseUrl}/estado/${city.state.slug}/${city.slug}`;
+  const dddCode = city.dddCodes[0]?.code || "00";
+
+  const breadcrumbItems = [
+    { name: 'Home', url: baseUrl },
+    { name: city.state.name, url: `${baseUrl}/estado/${city.state.slug}` },
+    { name: city.name, url: canonicalUrl }
+  ];
+
+  return (
+    <>
+      <CityStructuredData city={city} url={canonicalUrl} />
+      <BreadcrumbStructuredData items={breadcrumbItems} />
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          {/* Breadcrumb */}
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href={`/estado/${city.state.slug}`}>{city.state.name}</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>{city.name}</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+
+          {/* City Header */}
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+              <div>
+                <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                  {city.name} - {city.state.name}
+                </h1>
+                <div className="flex items-center gap-4 text-gray-600 mb-2">
+                  <div className="flex items-center gap-1">
+                    <MapPin className="h-4 w-4" />
+                    <span>{city.state.region}</span>
+                  </div>
+                  {city.isCapital && (
+                    <Badge variant="default">Capital</Badge>
+                  )}
+                  <Badge variant="secondary">DDD {dddCode}</Badge>
+                </div>
+                <p className="text-lg text-gray-600">
+                  {formatNumber(city.population)} habitantes • {formatArea(city.area)} • {city.dddCodes.length} código{city.dddCodes.length !== 1 ? 's' : ''} DDD
+                </p>
+              </div>
+              <div className="mt-4 md:mt-0">
+                <Link href={`/estado/${city.state.slug}`}>
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="bg-black text-white border-black hover:bg-gray-800"
+                  >
+                    <ArrowLeft className="h-4 w-4 mr-2" />
+                    Voltar para {city.state.name}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              <div className="flex items-center gap-3">
+                <Users className="h-8 w-8 text-blue-600" />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {formatNumber(city.population)}
+                  </div>
+                  <div className="text-sm text-gray-600">Habitantes</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Globe className="h-8 w-8 text-green-600" />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {formatArea(city.area)}
+                  </div>
+                  <div className="text-sm text-gray-600">Área</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-8 w-8 text-red-600" />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {city.dddCodes.length}
+                  </div>
+                  <div className="text-sm text-gray-600">Códigos DDD</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Building className="h-8 w-8 text-purple-600" />
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {city.isCapital ? 'Capital' : 'Interior'}
+                  </div>
+                  <div className="text-sm text-gray-600">Tipo</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content with Tabs */}
+          <Tabs defaultValue="informacoes" className="space-y-8">
+            <TabsList className="grid w-full grid-cols-4 lg:w-auto lg:inline-flex">
+              <TabsTrigger value="informacoes" className="text-sm">
+                Informações
+              </TabsTrigger>
+              <TabsTrigger value="telefonia" className="text-sm">
+                Telefonia
+              </TabsTrigger>
+              <TabsTrigger value="mapa" className="text-sm">
+                Mapa
+              </TabsTrigger>
+              <TabsTrigger value="faq" className="text-sm">
+                Dúvidas
+              </TabsTrigger>
+            </TabsList>
+
+            {/* City Information Tab */}
+            <TabsContent value="informacoes" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <Star className="h-6 w-6 text-yellow-600" />
+                    Sobre {city.name}
+                  </CardTitle>
+                  <CardDescription>
+                    Informações completas sobre a cidade, sua geografia e características principais.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Dados Básicos</h4>
+                      <div className="space-y-3">
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Nome completo:</span>
+                          <span className="font-medium">{city.name}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Estado:</span>
+                          <span className="font-medium">{city.state.name}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Região:</span>
+                          <span className="font-medium">{city.state.region}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Status:</span>
+                          <span className="font-medium">{city.isCapital ? 'Capital' : 'Município do interior'}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Estatísticas</h4>
+                      <div className="space-y-3">
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">População:</span>
+                          <span className="font-medium">{formatNumber(city.population)}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Área total:</span>
+                          <span className="font-medium">{formatArea(city.area)}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Código DDD:</span>
+                          <span className="font-medium">{dddCode}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Códigos DDD:</span>
+                          <span className="font-medium">{city.dddCodes.length}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Descrição</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      {city.name} é um município brasileiro localizado na região {city.state.region} do estado de {city.state.name}. 
+                      Com população de aproximadamente {formatNumber(city.population)} habitantes e área de {formatArea(city.area)}, 
+                      a cidade se destaca como {city.isCapital ? 'a capital do estado' : 'um importante centro urbano'} na região.
+                    </p>
+                  </div>
+
+                  {city.latitude && city.longitude && (
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-3">Localização Geográfica</h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <div className="text-sm text-gray-600 mb-1">Latitude</div>
+                          <div className="font-mono text-sm">{city.latitude}°</div>
+                        </div>
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <div className="text-sm text-gray-600 mb-1">Longitude</div>
+                          <div className="font-mono text-sm">{city.longitude}°</div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Telephony Information Tab */}
+            <TabsContent value="telefonia" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <Phone className="h-6 w-6 text-blue-600" />
+                    Telefonia em {city.name}
+                  </CardTitle>
+                  <CardDescription>
+                    Informações sobre códigos DDD, operadoras e serviços de telefonia.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="text-center p-4 bg-blue-50 rounded-lg">
+                      <div className="text-3xl font-bold text-blue-600 mb-2">
+                        {city.dddCodes.length}
+                      </div>
+                      <div className="text-sm text-gray-600">Códigos DDD</div>
+                    </div>
+                    <div className="text-center p-4 bg-green-50 rounded-lg">
+                      <div className="text-3xl font-bold text-green-600 mb-2">
+                        {dddCode}
+                      </div>
+                      <div className="text-sm text-gray-600">DDD Principal</div>
+                    </div>
+                    <div className="text-center p-4 bg-purple-50 rounded-lg">
+                      <div className="text-3xl font-bold text-purple-600 mb-2">
+                        4
+                      </div>
+                      <div className="text-sm text-gray-600">Operadoras</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Códigos DDD</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {city.dddCodes.map((code) => (
+                        <div key={code.id} className="border rounded-lg p-4">
+                          <div className="flex items-center justify-between mb-2">
+                            <Badge variant="default" className="text-lg">
+                              DDD {code.code}
+                            </Badge>
+                            <Phone className="h-4 w-4 text-blue-600" />
+                          </div>
+                          <p className="text-sm text-gray-600">
+                            {code.description || `Código DDD para ${city.name}`}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Como Fazer Ligações</h4>
+                    <div className="space-y-3">
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-medium text-gray-900 mb-1">Ligações locais</h5>
+                        <p className="text-sm text-gray-600">
+                          Para ligações dentro de {city.name}: 0 + {dddCode} + número do telefone
+                        </p>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-medium text-gray-900 mb-1">Ligações para celulares</h5>
+                        <p className="text-sm text-gray-600">
+                          Para celulares: 0 + {dddCode} + 9 + número do celular
+                        </p>
+                      </div>
+                      <div className="bg-gray-50 p-4 rounded-lg">
+                        <h5 className="font-medium text-gray-900 mb-1">Do exterior</h5>
+                        <p className="text-sm text-gray-600">
+                          Do exterior: +55 + {dddCode} + número do telefone
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* Map Tab */}
+            <TabsContent value="mapa" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center gap-2">
+                    <Navigation className="h-6 w-6 text-green-600" />
+                    Localização de {city.name}
+                  </CardTitle>
+                  <CardDescription>
+                    Mapa e informações geográficas da cidade.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {city.latitude && city.longitude ? (
+                    <div className="space-y-4">
+                      <div className="bg-gray-100 h-96 rounded-lg flex items-center justify-center">
+                        <div className="text-center">
+                          <Navigation className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                          <h3 className="text-lg font-semibold text-gray-700 mb-2">Mapa Interativo</h3>
+                          <p className="text-gray-600 mb-4">
+                            Coordenadas: {city.latitude}°, {city.longitude}°
+                          </p>
+                          <div className="space-y-2">
+                            <Button variant="outline" size="sm">
+                              <Navigation className="h-4 w-4 mr-2" />
+                              Abrir no Google Maps
+                            </Button>
+                            <Button variant="outline" size="sm" className="ml-2">
+                              <Wifi className="h-4 w-4 mr-2" />
+                              Ver Street View
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg">Coordenadas</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Latitude:</span>
+                                <span className="font-mono">{city.latitude}°</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Longitude:</span>
+                                <span className="font-mono">{city.longitude}°</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Formato:</span>
+                                <span className="font-medium">Decimal</span>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="text-lg">Informações</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Fuso horário:</span>
+                                <span className="font-medium">UTC-3</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Altitude média:</span>
+                                <span className="font-medium">-- m</span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-gray-600">Clima:</span>
+                                <span className="font-medium">--</span>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  ) : (
+                    <Card>
+                      <CardContent className="pt-6 text-center">
+                        <Navigation className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                        <h3 className="text-lg font-semibold mb-2">Coordenadas não disponíveis</h3>
+                        <p className="text-muted-foreground">
+                          As coordenadas geográficas para {city.name} ainda não foram cadastradas.
+                        </p>
+                      </CardContent>
+                    </Card>
+                  )}
+                </CardContent>
+              </Card>
+            </TabsContent>
+
+            {/* FAQ Tab */}
+            <TabsContent value="faq" className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">
+                    Perguntas Frequentes sobre {city.name}
+                  </CardTitle>
+                  <CardDescription>
+                    Tire suas dúvidas sobre a cidade e códigos DDD
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  <div className="space-y-4">
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Qual é o código DDD de {city.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          O código DDD de {city.name} é {dddCode}. Este código atende a toda a cidade e 
+                          deve ser utilizado para fazer ligações telefônicas locais e de longa distância.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Como fazer ligações para {city.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600 mb-3">
+                          Para fazer ligações para {city.name}, siga o formato correto:
+                        </p>
+                        <div className="space-y-2 text-sm">
+                          <div><strong>Ligações locais:</strong> 0 + {dddCode} + número do telefone</div>
+                          <div><strong>Ligações de outros estados:</strong> 0 + código da operadora + {dddCode} + número do telefone</div>
+                          <div><strong>Ligações para celulares:</strong> 0 + código da operadora + {dddCode} + 9 + número do celular</div>
+                          <div><strong>Do exterior:</strong> +55 + {dddCode} + número do telefone</div>
+                        </div>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Qual a população de {city.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          {city.name} possui aproximadamente {formatNumber(city.population)} habitantes, 
+                          sendo {city.isCapital ? 'a capital e' : 'um dos'} principais municípios do estado de {city.state.name}.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">Qual a área de {city.name}?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          A área total de {city.name} é de {formatArea(city.area)}, localizada na região {city.state.region} 
+                          do estado de {city.state.name}.
+                        </p>
+                      </CardContent>
+                    </Card>
+
+                    <Card>
+                      <CardHeader>
+                        <CardTitle className="text-lg">{city.name} é capital?</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-600">
+                          {city.isCapital 
+                            ? `Sim, ${city.name} é a capital do estado de ${city.state.name}, sendo o principal centro político, econômico e administrativo da região.`
+                            : `Não, ${city.name} não é a capital. A capital de ${city.state.name} é ${city.state.name === 'São Paulo' ? 'São Paulo' : city.state.name === 'Rio de Janeiro' ? 'Rio de Janeiro' : 'a capital do estado'}.`
+                          }
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
+
+          {/* Cards Section - Side by Side */}
+          <div className="mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Related Links */}
+              <RelatedLinks 
+                currentState={city.state.name}
+                currentRegion={city.state.region}
+                limit={6}
+              />
+
+              {/* FAQ Content */}
+              <SEOContent 
+                currentState={city.state.name}
+                currentRegion={city.state.region}
+                contentType="faq"
+              />
+
+              {/* Quick Stats */}
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-lg">Estatísticas Rápidas</CardTitle>
+                  <CardDescription>
+                    Informações essenciais sobre {city.name}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">População:</span>
+                    <span className="text-sm font-medium">{formatNumber(city.population)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Área:</span>
+                    <span className="text-sm font-medium">{formatArea(city.area)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Códigos DDD:</span>
+                    <span className="text-sm font-medium">{city.dddCodes.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">DDD Principal:</span>
+                    <span className="text-sm font-medium">{dddCode}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Status:</span>
+                    <span className="text-sm font-medium">{city.isCapital ? 'Capital' : 'Interior'}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-600">Estado:</span>
+                    <span className="text-sm font-medium">{city.state.name}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
