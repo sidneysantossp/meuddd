@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://meuddd.com/sitemap.xml
+
+# Bloquear páginas de API e administrativas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Taxa de rastreamento para evitar sobrecarga
+Crawl-delay: 1
+
+# Regras específicas para principais bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: facebookexternalhit
+Allow: /
+Crawl-delay: 0

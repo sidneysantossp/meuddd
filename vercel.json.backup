@@ -1,0 +1,8 @@
+{
+  "buildCommand": "./vercel-build.sh",
+  "functions": {
+    "app/estado/[slug]/page.tsx": {
+      "maxDuration": 30
+    }
+  }
+}

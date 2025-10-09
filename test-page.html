@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - MEU DDD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2563eb;
+            text-align: center;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background-color: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste de Conexão - MEU DDD</h1>
+        
+        <div class="status success">
+            <strong>Sucesso!</strong> O servidor Next.js está rodando corretamente.
+        </div>
+        
+        <div class="status info">
+            <strong>Informações:</strong>
+            <ul>
+                <li>Servidor: http://localhost:3000</li>
+                <li>Status: Online</li>
+                <li>Resposta HTTP: 200 OK</li>
+                <li>Última atualização: $(date)</li>
+            </ul>
+        </div>
+        
+        <h2>Links para Teste:</h2>
+        <ul>
+            <li><a href="http://localhost:3000" target="_blank">Página Principal</a></li>
+            <li><a href="http://localhost:3000/estados" target="_blank">Página de Estados</a></li>
+            <li><a href="http://localhost:3000/estado/acre/acrelandia" target="_blank">Página de Cidade (Teste)</a></li>
+        </ul>
+        
+        <h2>Instruções:</h2>
+        <ol>
+            <li>Se você está vendo esta página, o servidor está funcionando.</li>
+            <li>Clique nos links acima para testar as páginas do aplicativo.</li>
+            <li>Se as páginas aparecerem em branco, pode ser um problema de CSS ou JavaScript.</li>
+            <li>Verifique o console do navegador (F12) para erros.</li>
+        </ol>
+    </div>
+</body>
+</html>

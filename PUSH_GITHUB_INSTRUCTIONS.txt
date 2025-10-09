@@ -1,0 +1,78 @@
+================================================================
+INSTRUÇÕES PARA ENVIAR ALTERAÇÕES AO GITHUB
+================================================================
+
+📋 SITUAÇÃO ATUAL:
+- ✅ Código commitado localmente com a aba "Sobre"
+- ✅ Remote do GitHub configurado corretamente
+- ❌ Push ainda não realizado (precisa de autenticação)
+
+🚀 PASSOS A SEGUIR:
+
+1. ABRA SEU TERMINAL LOCAL E EXECUTE:
+
+cd /caminho/para/seu/projeto/meuddd
+
+2. VERIFIQUE O STATUS:
+
+git status
+
+3. FAÇA O PUSH (será solicitado credenciais):
+
+git push origin master
+
+🔐 AUTENTICAÇÃO:
+
+- Se não tiver 2FA: use seu usuário e senha do GitHub
+- Se tiver 2FA: crie um Personal Access Token e use como senha
+
+📝 CRIANDO PERSONAL ACCESS TOKEN (se necessário):
+
+1. Acesse: https://github.com/settings/tokens
+2. Clique em "Generate new token" → "Generate new token (classic)"
+3. Dê um nome (ex: "meuddd-deploy")
+4. Selecione a expiração
+5. Marque as permissões: ✅ repo
+6. Clique em "Generate token"
+7. Copie o token (ele só aparece uma vez!)
+
+🌐 APÓS O PUSH:
+
+- GitHub: https://github.com/sidneysantossp/meuddd
+- Vercel fará deploy automático em 2-3 minutos
+- Site atualizado: https://meuddd.vercel.app
+
+🔍 TESTE PÓS-DEPLOY:
+
+1. Acesse: https://meuddd.vercel.app/estado/acre/rio-branco
+2. Clique na aba "Sobre Rio Branco"
+3. Verifique se o conteúdo está carregando
+
+❌ SE O PUSH FALHAR:
+
+Tente estas alternativas:
+
+Opção 1: Com token
+git push https://SEU_TOKEN@github.com/sidneysantossp/meuddd.git master
+
+Opção 2: Configure credenciais
+git config --global user.name "Seu Nome"
+git config --global user.email "seu@email.com"
+git push origin master
+
+Opção 3: Deploy manual pela Vercel
+1. Acesse: https://vercel.com/dashboard
+2. Selecione o projeto meuddd
+3. Clique em "Redeploy"
+
+📊 RESUMO DAS ALTERAÇÕES:
+
+- Nova aba "Sobre" nas páginas de cidades
+- Componente CityAboutContent integrado
+- 3000+ palavras de conteúdo otimizado para SEO
+- Layout responsivo com índice navegável
+- Conteúdo dinâmico para cada cidade específica
+
+================================================================
+EXECUTE AGORA: git push origin master
+================================================================

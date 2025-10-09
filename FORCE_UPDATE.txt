@@ -1,0 +1,6 @@
+FORCE UPDATE - $(date)
+Latest commit: 28043fa
+Vercel build command: npm run build
+This file forces Vercel to use the latest configuration
+Previous error: Permission denied on vercel-emergency-build.sh
+Current fix: Using npm run build directly
