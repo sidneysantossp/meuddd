@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "version": 2,
   "name": "meuddd",
   "builds": [
@@ -13,4 +14,11 @@
       "dest": "/$1"
     }
   ]
+=======
+  "buildCommand": "npx next build",
+  "github": {
+    "silent": true
+  },
+  "installCommand": "npm install"
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
 }

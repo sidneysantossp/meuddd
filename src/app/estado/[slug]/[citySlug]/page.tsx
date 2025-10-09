@@ -11,7 +11,10 @@ import { CityStructuredData } from '@/components/seo/CityStructuredData';
 import { BreadcrumbStructuredData } from '@/components/seo/BreadcrumbStructuredData';
 import { RelatedLinks } from '@/components/seo/RelatedLinks';
 import { SEOContent } from '@/components/seo/SEOContent';
+<<<<<<< HEAD
 import { CityAboutContent } from '@/components/city/CityAboutContent';
+=======
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
 import InteractiveMap from '@/components/ui/InteractiveMap';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -250,7 +253,11 @@ export default function CityPage({ params }: PageProps) {
           {/* Main Content Area */}
           <div className="lg:col-span-3">
             <Tabs defaultValue="ddd" className="w-full">
+<<<<<<< HEAD
               <TabsList className="grid w-full grid-cols-7">
+=======
+              <TabsList className="grid w-full grid-cols-6">
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
                 <TabsTrigger value="ddd" className="flex items-center gap-1">
                   <Phone className="h-4 w-4" />
                   <span className="hidden sm:inline">DDD</span>
@@ -271,10 +278,13 @@ export default function CityPage({ params }: PageProps) {
                   <Camera className="h-4 w-4" />
                   <span className="hidden sm:inline">Turismo</span>
                 </TabsTrigger>
+<<<<<<< HEAD
                 <TabsTrigger value="sobre" className="flex items-center gap-1">
                   <BookOpen className="h-4 w-4" />
                   <span className="hidden sm:inline">Sobre {city.name}</span>
                 </TabsTrigger>
+=======
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
                 <TabsTrigger value="faq" className="flex items-center gap-1">
                   <HelpCircle className="h-4 w-4" />
                   <span className="hidden sm:inline">FAQ</span>
@@ -898,6 +908,7 @@ export default function CityPage({ params }: PageProps) {
                 </Card>
               </TabsContent>
 
+<<<<<<< HEAD
               {/* Sobre a Cidade Tab */}
               <TabsContent value="sobre" className="space-y-6">
                 <CityAboutContent
@@ -911,6 +922,8 @@ export default function CityPage({ params }: PageProps) {
                 />
               </TabsContent>
 
+=======
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
               {/* FAQ Tab */}
               <TabsContent value="faq" className="space-y-6">
                 <Card>
@@ -1015,6 +1028,7 @@ export default function CityPage({ params }: PageProps) {
                   </CardContent>
                 </Card>
               </TabsContent>
+<<<<<<< HEAD
 
               {/* Sobre a Cidade Tab */}
               <TabsContent value="sobre" className="space-y-6">
@@ -1619,6 +1633,8 @@ export default function CityPage({ params }: PageProps) {
                   </CardContent>
                 </Card>
               </TabsContent>
+=======
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
             </Tabs>
           </div>
         </div>
@@ -1673,4 +1689,8 @@ export default function CityPage({ params }: PageProps) {
       )}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}# Navbar removal completed
+>>>>>>> d6af773e1b6a7e90b113a68207c1ec355baf513f
