@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Block API endpoints
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow specific API endpoints for search
+Allow: /api/ddd/search
+Allow: /api/ddd/states
+
+# Sitemap
+Sitemap: https://www.meuddd.com.br/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
