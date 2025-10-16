@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: "Busca rápida e eficiente de códigos DDD brasileiros. Informações detalhadas sobre estados, cidades e códigos telefônicos de todo o território nacional.",
   keywords: ["DDD", "código DDD", "telefone", "Brasil", "estados", "cidades", "telefonia", "código telefônico"],
   authors: [{ name: "MEU DDD" }],
+  verification: {
+    google: "BA4r2fAM34nq4hOOYSHH4bpUw2r1kQFtS29VKovhvvg",
+  },
   openGraph: {
     title: "MEU DDD - Códigos DDD do Brasil",
     description: "Busca rápida e eficiente de códigos DDD brasileiros",
