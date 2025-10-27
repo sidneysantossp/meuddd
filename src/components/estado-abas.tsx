@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Ruler, Phone, History, Globe } from "lucide-react";
+import { EstadoMapa } from "./estado-mapa";
 
 interface EstadoAbasProps {
   estado: {
@@ -175,6 +176,8 @@ export function EstadoAbas({ estado }: EstadoAbasProps) {
           </TabsContent>
           
           <TabsContent value="geografia" className="space-y-6">
+            <EstadoMapa estado={estado} />
+            
             <div className="bg-muted/50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3">Geografia do {estado.nome}</h3>
               <div className="space-y-4 text-muted-foreground">
