@@ -3,6 +3,7 @@
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { MapPin, Users, Building, Phone } from 'lucide-react'
+import Link from 'next/link'
 
 interface EstadoCardProps {
   nome: string
@@ -15,52 +16,54 @@ interface EstadoCardProps {
 
 const EstadoCard = ({ nome, sigla, regiao, habitantes, capital, codigosDDD }: EstadoCardProps) => {
   return (
-    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer border-gray-200 hover:border-blue-300">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
-          <div>
-            <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-              {nome}
-            </h2>
-            <Badge variant="secondary" className="mt-2 bg-blue-100 text-blue-800 hover:bg-blue-200">
-              {sigla}
-            </Badge>
+    <Link href={`/${nome.toLowerCase()}`}>
+      <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer border-gray-200 hover:border-blue-300">
+        <CardHeader className="pb-3">
+          <div className="flex items-start justify-between">
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                {nome}
+              </h2>
+              <Badge variant="secondary" className="mt-2 bg-blue-100 text-blue-800 hover:bg-blue-200">
+                {sigla}
+              </Badge>
+            </div>
+            <MapPin className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
           </div>
-          <MapPin className="w-5 h-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
-        </div>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div>
-          <h3 className="text-sm font-semibold text-gray-700 mb-2">{regiao}</h3>
-        </div>
-        
-        <div className="space-y-3">
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-gray-500" />
-            <span className="text-sm text-gray-600">{habitantes}</span>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div>
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">{regiao}</h3>
           </div>
           
-          <div className="flex items-center gap-2">
-            <Building className="w-4 h-4 text-gray-500" />
-            <span className="text-sm text-gray-600">Capital: {capital}</span>
-          </div>
-          
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Phone className="w-4 h-4 text-gray-500" />
-              <span className="text-sm font-semibold text-gray-700">Códigos DDD:</span>
+          <div className="space-y-3">
+            <div className="flex items-center gap-2">
+              <Users className="w-4 h-4 text-gray-500" />
+              <span className="text-sm text-gray-600">{habitantes}</span>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {codigosDDD.map((ddd) => (
-                <Badge key={ddd} variant="outline" className="bg-green-50 text-green-700 border-green-200 hover:bg-green-100">
-                  {ddd}
-                </Badge>
-              ))}
+            
+            <div className="flex items-center gap-2">
+              <Building className="w-4 h-4 text-gray-500" />
+              <span className="text-sm text-gray-600">Capital: {capital}</span>
+            </div>
+            
+            <div>
+              <div className="flex items-center gap-2 mb-2">
+                <Phone className="w-4 h-4 text-gray-500" />
+                <span className="text-sm font-semibold text-gray-700">Códigos DDD:</span>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {codigosDDD.map((ddd) => (
+                  <Badge key={ddd} variant="outline" className="bg-green-50 text-green-700 border-green-200 hover:bg-green-100">
+                    {ddd}
+                  </Badge>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </Link>
   )
 }
 
