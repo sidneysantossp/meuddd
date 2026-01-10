@@ -17,8 +17,11 @@ export const usePageTracking = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Rastreia pageview quando a rota muda
-    trackPageView(location.pathname + location.search, document.title);
+    // Verifica se estamos no browser antes de acessar document
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      // Rastreia pageview quando a rota muda
+      trackPageView(location.pathname + location.search, document.title);
+    }
   }, [location]);
 };
 
@@ -35,8 +38,11 @@ export const usePageTracking = () => {
  */
 export const useScrollTracking = () => {
   useEffect(() => {
-    const cleanup = initScrollTracking();
-    return cleanup;
+    // Verifica se estamos no browser
+    if (typeof window !== 'undefined') {
+      const cleanup = initScrollTracking();
+      return cleanup;
+    }
   }, []);
 };
 
@@ -55,19 +61,22 @@ export const useTimeOnPage = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const startTime = Date.now();
+    // Verifica se estamos no browser
+    if (typeof window !== 'undefined') {
+      const startTime = Date.now();
 
-    return () => {
-      const endTime = Date.now();
-      const timeInSeconds = Math.round((endTime - startTime) / 1000);
-      
-      // Só rastreia se o usuário ficou mais de 5 segundos
-      if (timeInSeconds >= 5) {
-        import('@/utils/analytics').then(({ trackTimeOnPage }) => {
-          trackTimeOnPage(location.pathname, timeInSeconds);
-        });
-      }
-    };
+      return () => {
+        const endTime = Date.now();
+        const timeInSeconds = Math.round((endTime - startTime) / 1000);
+        
+        // Só rastreia se o usuário ficou mais de 5 segundos
+        if (timeInSeconds >= 5) {
+          import('@/utils/analytics').then(({ trackTimeOnPage }) => {
+            trackTimeOnPage(location.pathname, timeInSeconds);
+          });
+        }
+      };
+    }
   }, [location]);
 };
 
