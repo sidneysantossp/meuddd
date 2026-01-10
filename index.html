@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="MEU DDD - Códigos DDD do Brasil" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Performance Optimization: Resource Hints -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="/src/main.tsx" />
+    
+    <!-- Prefetch data chunks for faster navigation -->
+    <link rel="prefetch" as="script" href="/assets/data-states.js" />
+    <link rel="prefetch" as="script" href="/assets/data-state-details.js" />
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JBGCDM7PFC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JBGCDM7PFC', {
+        page_path: window.location.pathname,
+        send_page_view: true
+      });
+    </script>
+    <!-- End Google Analytics 4 -->
+    
+    <!-- Google Search Console Verification -->
+    <!-- Adicione a meta tag de verificação fornecida pelo Google Search Console aqui -->
+    <!-- <meta name="google-site-verification" content="SEU_CODIGO_DE_VERIFICACAO" /> -->
+    
+    <!-- Google AdSense -->
+    <meta name="google-adsense-account" content="ca-pub-3459130972339055">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459130972339055"
+     crossorigin="anonymous"></script>
+    <!-- End Google AdSense -->
+  </head>
+  <body class="dark:bg-gray-900">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "files": ["robots.txt", "sitemap.xml"],
+  "override": false,
+  "doNotInject": true,
+  "useProjectFiles": true,
+  "disablePlatformInjection": true,
+  "customSEO": true,
+  "message": "This project uses custom robots.txt and sitemap.xml. Do not inject platform defaults.",
+  "timestamp": "2025-12-23T13:30:00.000Z"
+}

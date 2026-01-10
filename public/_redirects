@@ -1,0 +1,8 @@
+# Serve static files directly
+/robots.txt /robots.txt 200
+/sitemap.xml /sitemap.xml 200
+/mapa.xml /mapa.xml 200
+/favicon.png /favicon.png 200
+
+# All other routes go to index.html for SPA routing
+/* /index.html 200

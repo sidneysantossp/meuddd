@@ -1,0 +1,660 @@
+import type { State } from '@/types';
+
+// Base de dados completa dos estados brasileiros com códigos DDD
+export const brazilianStates: State[] = [
+  {
+    id: 'ac',
+    name: 'Acre',
+    abbreviation: 'AC',
+    region: 'Norte',
+    capital: 'Rio Branco',
+    population: 894470,
+    dddCodes: ['68'],
+    cities: [
+      { name: 'Rio Branco', ddd: '68', population: 413418 },
+      { name: 'Cruzeiro do Sul', ddd: '68', population: 89760 },
+      { name: 'Sena Madureira', ddd: '68', population: 45612 },
+      { name: 'Tarauacá', ddd: '68', population: 43316 },
+      { name: 'Feijó', ddd: '68', population: 34780 },
+      { name: 'Brasiléia', ddd: '68', population: 25736 },
+      { name: 'Plácido de Castro', ddd: '68', population: 18237 },
+      { name: 'Senador Guiomard', ddd: '68', population: 22896 },
+      { name: 'Acrelândia', ddd: '68', population: 13907 },
+      { name: 'Epitaciolândia', ddd: '68', population: 18259 },
+      { name: 'Xapuri', ddd: '68', population: 18013 },
+      { name: 'Mâncio Lima', ddd: '68', population: 19084 },
+      { name: 'Rodrigues Alves', ddd: '68', population: 17589 },
+      { name: 'Bujari', ddd: '68', population: 10936 },
+      { name: 'Porto Acre', ddd: '68', population: 18465 },
+      { name: 'Capixaba', ddd: '68', population: 11733 },
+      { name: 'Assis Brasil', ddd: '68', population: 7035 },
+      { name: 'Marechal Thaumaturgo', ddd: '68', population: 17338 },
+      { name: 'Jordão', ddd: '68', population: 8636 },
+      { name: 'Santa Rosa do Purus', ddd: '68', population: 5455 },
+      { name: 'Porto Walter', ddd: '68', population: 11855 },
+      { name: 'Manoel Urbano', ddd: '68', population: 10210 },
+    ]
+  },
+  {
+    id: 'al',
+    name: 'Alagoas',
+    abbreviation: 'AL',
+    region: 'Nordeste',
+    capital: 'Maceió',
+    population: 3374114,
+    dddCodes: ['82'],
+    cities: [
+      { name: 'Maceió', ddd: '82', population: 1025360 },
+      { name: 'Arapiraca', ddd: '82', population: 234185 },
+      { name: 'Rio Largo', ddd: '82', population: 74388 },
+      { name: 'Palmeira dos Índios', ddd: '82', population: 72283 },
+      { name: 'União dos Palmares', ddd: '82', population: 65969 },
+      { name: 'Penedo', ddd: '82', population: 64497 },
+      { name: 'São Miguel dos Campos', ddd: '82', population: 58952 },
+      { name: 'Coruripe', ddd: '82', population: 56347 },
+      { name: 'Campo Alegre', ddd: '82', population: 52106 },
+      { name: 'Delmiro Gouveia', ddd: '82', population: 52017 },
+      { name: 'Marechal Deodoro', ddd: '82', population: 51471 },
+      { name: 'Atalaia', ddd: '82', population: 51017 },
+      { name: 'Santana do Ipanema', ddd: '82', population: 47047 },
+      { name: 'Teotônio Vilela', ddd: '82', population: 44587 },
+      { name: 'Pilar', ddd: '82', population: 35558 },
+      { name: 'Maragogi', ddd: '82', population: 33704 },
+      { name: 'São José da Tapera', ddd: '82', population: 33170 },
+      { name: 'São Luís do Quitunde', ddd: '82', population: 32490 },
+      { name: 'São Sebastião', ddd: '82', population: 31263 },
+      { name: 'Girau do Ponciano', ddd: '82', population: 31454 },
+      { name: 'Murici', ddd: '82', population: 28224 },
+      { name: 'Limoeiro de Anadia', ddd: '82', population: 28633 },
+      { name: 'Porto Calvo', ddd: '82', population: 27393 },
+      { name: 'Boca da Mata', ddd: '82', population: 26926 },
+      { name: 'Traipu', ddd: '82', population: 26792 },
+      { name: 'Igaci', ddd: '82', population: 26672 },
+      { name: 'Viçosa', ddd: '82', population: 26253 },
+      { name: 'Colônia Leopoldina', ddd: '82', population: 25691 },
+      { name: 'Matriz de Camaragibe', ddd: '82', population: 25726 },
+      { name: 'Mata Grande', ddd: '82', population: 25547 },
+      { name: 'Junqueiro', ddd: '82', population: 25503 },
+      { name: 'Piranhas', ddd: '82', population: 25157 },
+      { name: 'Igreja Nova', ddd: '82', population: 24999 },
+      { name: 'Pão de Açúcar', ddd: '82', population: 24634 },
+      { name: 'Joaquim Gomes', ddd: '82', population: 23697 },
+      { name: 'São José da Laje', ddd: '82', population: 22200 },
+      { name: 'Cajueiro', ddd: '82', population: 21196 },
+      { name: 'Feira Grande', ddd: '82', population: 21424 },
+      { name: 'Olho d\'Água das Flores', ddd: '82', population: 21029 },
+      { name: 'Craíbas', ddd: '82', population: 20589 },
+      { name: 'Porto Real do Colégio', ddd: '82', population: 20445 },
+      { name: 'Água Branca', ddd: '82', population: 20404 },
+      { name: 'Major Isidoro', ddd: '82', population: 20301 },
+      { name: 'Capela', ddd: '82', population: 19568 },
+      { name: 'Taquarana', ddd: '82', population: 19317 },
+      { name: 'Estrela de Alagoas', ddd: '82', population: 19174 },
+      { name: 'Lagoa da Canoa', ddd: '82', population: 18693 },
+      { name: 'Anadia', ddd: '82', population: 18408 },
+      { name: 'Batalha', ddd: '82', population: 18294 },
+      { name: 'Inhapi', ddd: '82', population: 18196 },
+      { name: 'Piaçabuçu', ddd: '82', population: 18000 },
+      { name: 'Messias', ddd: '82', population: 17807 },
+      { name: 'Canapi', ddd: '82', population: 17937 },
+      { name: 'Satuba', ddd: '82', population: 17584 },
+      { name: 'Passo de Camaragibe', ddd: '82', population: 16888 },
+      { name: 'Ibateguara', ddd: '82', population: 15220 },
+      { name: 'Poço das Trincheiras', ddd: '82', population: 14191 },
+      { name: 'Barra de Santo Antônio', ddd: '82', population: 14000 },
+      { name: 'Senador Rui Palmeira', ddd: '82', population: 13888 },
+      { name: 'Jequiá da Praia', ddd: '82', population: 13634 },
+      { name: 'Novo Lino', ddd: '82', population: 13149 },
+      { name: 'Paripueira', ddd: '82', population: 13000 },
+      { name: 'Maribondo', ddd: '82', population: 12748 },
+      { name: 'Flexeiras', ddd: '82', population: 12429 },
+      { name: 'Quebrangulo', ddd: '82', population: 12245 },
+      { name: 'Ouro Branco', ddd: '82', population: 12023 },
+      { name: 'Santana do Mundaú', ddd: '82', population: 11764 },
+      { name: 'Branquinha', ddd: '82', population: 11743 },
+      { name: 'Coité do Nóia', ddd: '82', population: 11648 },
+      { name: 'Olivença', ddd: '82', population: 11648 },
+      { name: 'Cacimbinhas', ddd: '82', population: 11181 },
+      { name: 'Maravilha', ddd: '82', population: 11014 },
+      { name: 'Pariconha', ddd: '82', population: 10937 },
+      { name: 'Porto de Pedras', ddd: '82', population: 9258 },
+      { name: 'Olho d\'Água do Casado', ddd: '82', population: 9376 },
+      { name: 'Japaratinga', ddd: '82', population: 8571 },
+      { name: 'Barra de São Miguel', ddd: '82', population: 8491 },
+      { name: 'São Miguel dos Milagres', ddd: '82', population: 8409 },
+      { name: 'Carneiros', ddd: '82', population: 8195 },
+      { name: 'Belo Monte', ddd: '82', population: 7802 },
+      { name: 'Jacuípe', ddd: '82', population: 7623 },
+      { name: 'Santa Luzia do Norte', ddd: '82', population: 7564 },
+      { name: 'Roteiro', ddd: '82', population: 7536 },
+      { name: 'Chã Preta', ddd: '82', population: 7471 },
+      { name: 'Paulo Jacinto', ddd: '82', population: 7281 },
+      { name: 'Campestre', ddd: '82', population: 7127 },
+      { name: 'Monteirópolis', ddd: '82', population: 6669 },
+      { name: 'Tanque d\'Arca', ddd: '82', population: 6601 },
+      { name: 'Barra Grande', ddd: '82', population: 6500 },
+      { name: 'Jacaré dos Homens', ddd: '82', population: 6033 },
+      { name: 'Feliz Deserto', ddd: '82', population: 5800 },
+      { name: 'Jaramataia', ddd: '82', population: 5508 },
+      { name: 'Palestina', ddd: '82', population: 5471 },
+      { name: 'Coqueiro Seco', ddd: '82', population: 5477 },
+      { name: 'Minador do Negrão', ddd: '82', population: 5254 },
+      { name: 'Belém', ddd: '82', population: 5024 },
+      { name: 'Jundiá', ddd: '82', population: 4581 },
+      { name: 'Mar Vermelho', ddd: '82', population: 3674 },
+      { name: 'Pindoba', ddd: '82', population: 3032 },
+      { name: 'Dois Riachos', ddd: '82', population: 11264 },
+      { name: 'Olho d\'Água Grande', ddd: '82', population: 5500 },
+      { name: 'São Brás', ddd: '82', population: 6718 }
+    ]
+  },
+  {
+    id: 'ap',
+    name: 'Amapá',
+    abbreviation: 'AP',
+    region: 'Norte',
+    capital: 'Macapá',
+    population: 877613,
+    dddCodes: ['96'],
+    cities: [
+      { name: 'Macapá', ddd: '96' },
+      { name: 'Santana', ddd: '96' },
+      { name: 'Laranjal do Jari', ddd: '96' },
+      { name: 'Oiapoque', ddd: '96' },
+      { name: 'Mazagão', ddd: '96' },
+      { name: 'Porto Grande', ddd: '96' },
+      { name: 'Tartarugalzinho', ddd: '96' },
+      { name: 'Vitória do Jari', ddd: '96' },
+      { name: 'Pedra Branca do Amapari', ddd: '96' },
+      { name: 'Calçoene', ddd: '96' },
+      { name: 'Amapá', ddd: '96' },
+      { name: 'Ferreira Gomes', ddd: '96' },
+      { name: 'Cutias', ddd: '96' },
+      { name: 'Itaubal', ddd: '96' },
+      { name: 'Pracuúba', ddd: '96' },
+      { name: 'Serra do Navio', ddd: '96' }
+    ]
+  },
+  {
+    id: 'am',
+    name: 'Amazonas',
+    abbreviation: 'AM',
+    region: 'Norte',
+    capital: 'Manaus',
+    population: 4269995,
+    dddCodes: ['92', '97'],
+    cities: [
+      { name: 'Manaus', ddd: '92', population: 2255903 },
+      { name: 'Parintins', ddd: '92', population: 115363 },
+      { name: 'Itacoatiara', ddd: '92', population: 102701 },
+      { name: 'Manacapuru', ddd: '92', population: 98614 },
+      { name: 'Coari', ddd: '97', population: 85910 },
+      { name: 'Tefé', ddd: '97', population: 59547 },
+      { name: 'Tabatinga', ddd: '97', population: 67182 },
+      { name: 'Maués', ddd: '92', population: 64960 },
+      { name: 'Humaitá', ddd: '97', population: 58154 },
+      { name: 'São Gabriel da Cachoeira', ddd: '97', population: 51763 },
+      { name: 'Iranduba', ddd: '92', population: 49803 },
+      { name: 'Lábrea', ddd: '97', population: 45789 },
+      { name: 'Presidente Figueiredo', ddd: '92', population: 37934 },
+      { name: 'Manicoré', ddd: '97', population: 56459 },
+      { name: 'Autazes', ddd: '92', population: 40192 },
+      { name: 'Careiro', ddd: '92', population: 42010 },
+      { name: 'Rio Preto da Eva', ddd: '92', population: 34432 },
+      { name: 'Eirunepé', ddd: '97', population: 35591 },
+      { name: 'Benjamin Constant', ddd: '97', population: 44927 },
+      { name: 'Fonte Boa', ddd: '97', population: 25815 },
+      { name: 'Boca do Acre', ddd: '97', population: 34983 },
+      { name: 'Atalaia do Norte', ddd: '97', population: 20398 },
+      { name: 'Carauari', ddd: '97', population: 30955 },
+      { name: 'Novo Airão', ddd: '92', population: 20393 },
+      { name: 'Urucará', ddd: '92', population: 18952 },
+      { name: 'São Paulo de Olivença', ddd: '97', population: 40073 },
+      { name: 'Borba', ddd: '92', population: 42527 },
+      { name: 'Barcelos', ddd: '97', population: 27638 },
+      { name: 'Boa Vista do Ramos', ddd: '92', population: 18890 },
+      { name: 'Novo Aripuanã', ddd: '97', population: 23125 },
+      { name: 'Barreirinha', ddd: '92', population: 32604 },
+      { name: 'Nhamundá', ddd: '92', population: 23502 },
+      { name: 'Anori', ddd: '92', population: 21033 },
+      { name: 'Tapauá', ddd: '97', population: 19077 },
+      { name: 'Urucurituba', ddd: '92', population: 18381 },
+      { name: 'Silves', ddd: '92', population: 9634 },
+      { name: 'Itapiranga', ddd: '92', population: 10326 },
+      { name: 'Amaturá', ddd: '97', population: 13661 },
+      { name: 'Santo Antônio do Içá', ddd: '97', population: 28141 },
+      { name: 'Tonantins', ddd: '97', population: 19450 },
+      { name: 'Jutaí', ddd: '97', population: 18045 },
+      { name: 'Envira', ddd: '97', population: 18028 },
+      { name: 'Ipixuna', ddd: '97', population: 28268 },
+      { name: 'Guajará', ddd: '97', population: 17935 },
+      { name: 'Apuí', ddd: '97', population: 23942 },
+      { name: 'Pauini', ddd: '97', population: 21723 },
+      { name: 'Alvarães', ddd: '97', population: 16026 },
+      { name: 'Uarini', ddd: '97', population: 13877 },
+      { name: 'Beruri', ddd: '92', population: 19320 },
+      { name: 'Caapiranga', ddd: '92', population: 13934 },
+      { name: 'Anamã', ddd: '92', population: 14010 },
+      { name: 'Codajás', ddd: '92', population: 30219 },
+      { name: 'Careiro da Várzea', ddd: '92', population: 30594 },
+      { name: 'Manaquiri', ddd: '92', population: 27590 },
+      { name: 'Itamarati', ddd: '97', population: 9815 },
+      { name: 'Juruá', ddd: '97', population: 15277 },
+      { name: 'Santa Isabel do Rio Negro', ddd: '97', population: 22137 },
+      { name: 'Japurá', ddd: '97', population: 8839 },
+      { name: 'Maraã', ddd: '97', population: 19047 },
+      { name: 'Canutama', ddd: '97', population: 15937 },
+      { name: 'São Sebastião do Uatumã', ddd: '92', population: 14274 },
+      { name: 'Careiro Castanho', ddd: '92', population: 42010 },
+    ]
+  },
+  {
+    id: 'ba',
+    name: 'Bahia',
+    abbreviation: 'BA',
+    region: 'Nordeste',
+    capital: 'Salvador',
+    population: 14985284,
+    dddCodes: ['71', '73', '74', '75', '77'],
+    cities: [
+      { name: 'Salvador', ddd: '71' },
+      { name: 'Lauro de Freitas', ddd: '71' },
+      { name: 'Ilhéus', ddd: '73' },
+      { name: 'Itabuna', ddd: '73' },
+      { name: 'Juazeiro', ddd: '74' },
+      { name: 'Feira de Santana', ddd: '75' },
+      { name: 'Vitória da Conquista', ddd: '77' },
+      { name: 'Barreiras', ddd: '77' },
+    ]
+  },
+  {
+    id: 'ce',
+    name: 'Ceará',
+    abbreviation: 'CE',
+    region: 'Nordeste',
+    capital: 'Fortaleza',
+    population: 9240580,
+    dddCodes: ['85', '88'],
+    cities: [
+      { name: 'Fortaleza', ddd: '85' },
+      { name: 'Caucaia', ddd: '85' },
+      { name: 'Juazeiro do Norte', ddd: '88' },
+      { name: 'Sobral', ddd: '88' },
+    ]
+  },
+  {
+    id: 'df',
+    name: 'Distrito Federal',
+    abbreviation: 'DF',
+    region: 'Centro-Oeste',
+    capital: 'Brasília',
+    population: 3094325,
+    dddCodes: ['61'],
+    cities: [
+      { name: 'Brasília', ddd: '61' },
+      { name: 'Taguatinga', ddd: '61' },
+      { name: 'Ceilândia', ddd: '61' },
+    ]
+  },
+  {
+    id: 'es',
+    name: 'Espírito Santo',
+    abbreviation: 'ES',
+    region: 'Sudeste',
+    capital: 'Vitória',
+    population: 4108508,
+    dddCodes: ['27', '28'],
+    cities: [
+      { name: 'Vitória', ddd: '27' },
+      { name: 'Vila Velha', ddd: '27' },
+      { name: 'Serra', ddd: '27' },
+      { name: 'Cachoeiro de Itapemirim', ddd: '28' },
+    ]
+  },
+  {
+    id: 'go',
+    name: 'Goiás',
+    abbreviation: 'GO',
+    region: 'Centro-Oeste',
+    capital: 'Goiânia',
+    population: 7206589,
+    dddCodes: ['62', '64'],
+    cities: [
+      { name: 'Goiânia', ddd: '62' },
+      { name: 'Aparecida de Goiânia', ddd: '62' },
+      { name: 'Rio Verde', ddd: '64' },
+      { name: 'Luziânia', ddd: '61' },
+    ]
+  },
+  {
+    id: 'ma',
+    name: 'Maranhão',
+    abbreviation: 'MA',
+    region: 'Nordeste',
+    capital: 'São Luís',
+    population: 7153262,
+    dddCodes: ['98', '99'],
+    cities: [
+      { name: 'São Luís', ddd: '98' },
+      { name: 'Imperatriz', ddd: '99' },
+      { name: 'São José de Ribamar', ddd: '98' },
+      { name: 'Timon', ddd: '99' },
+    ]
+  },
+  {
+    id: 'mt',
+    name: 'Mato Grosso',
+    abbreviation: 'MT',
+    region: 'Centro-Oeste',
+    capital: 'Cuiabá',
+    population: 3567234,
+    dddCodes: ['65', '66'],
+    cities: [
+      { name: 'Cuiabá', ddd: '65' },
+      { name: 'Várzea Grande', ddd: '65' },
+      { name: 'Rondonópolis', ddd: '66' },
+      { name: 'Sinop', ddd: '66' },
+    ]
+  },
+  {
+    id: 'ms',
+    name: 'Mato Grosso do Sul',
+    abbreviation: 'MS',
+    region: 'Centro-Oeste',
+    capital: 'Campo Grande',
+    population: 2839188,
+    dddCodes: ['67'],
+    cities: [
+      { name: 'Campo Grande', ddd: '67' },
+      { name: 'Dourados', ddd: '67' },
+      { name: 'Três Lagoas', ddd: '67' },
+    ]
+  },
+  {
+    id: 'mg',
+    name: 'Minas Gerais',
+    abbreviation: 'MG',
+    region: 'Sudeste',
+    capital: 'Belo Horizonte',
+    population: 21411923,
+    dddCodes: ['31', '32', '33', '34', '35', '37', '38'],
+    cities: [
+      { name: 'Belo Horizonte', ddd: '31' },
+      { name: 'Contagem', ddd: '31' },
+      { name: 'Juiz de Fora', ddd: '32' },
+      { name: 'Governador Valadares', ddd: '33' },
+      { name: 'Uberlândia', ddd: '34' },
+      { name: 'Uberaba', ddd: '34' },
+      { name: 'Poços de Caldas', ddd: '35' },
+      { name: 'Varginha', ddd: '35' },
+      { name: 'Divinópolis', ddd: '37' },
+      { name: 'Montes Claros', ddd: '38' },
+    ]
+  },
+  {
+    id: 'pa',
+    name: 'Pará',
+    abbreviation: 'PA',
+    region: 'Norte',
+    capital: 'Belém',
+    population: 8777124,
+    dddCodes: ['91', '93', '94'],
+    cities: [
+      { name: 'Belém', ddd: '91' },
+      { name: 'Ananindeua', ddd: '91' },
+      { name: 'Santarém', ddd: '93' },
+      { name: 'Marabá', ddd: '94' },
+    ]
+  },
+  {
+    id: 'pb',
+    name: 'Paraíba',
+    abbreviation: 'PB',
+    region: 'Nordeste',
+    capital: 'João Pessoa',
+    population: 4059905,
+    dddCodes: ['83'],
+    cities: [
+      { name: 'João Pessoa', ddd: '83' },
+      { name: 'Campina Grande', ddd: '83' },
+      { name: 'Santa Rita', ddd: '83' },
+    ]
+  },
+  {
+    id: 'pr',
+    name: 'Paraná',
+    abbreviation: 'PR',
+    region: 'Sul',
+    capital: 'Curitiba',
+    population: 11597484,
+    dddCodes: ['41', '42', '43', '44', '45', '46'],
+    cities: [
+      { name: 'Curitiba', ddd: '41' },
+      { name: 'Ponta Grossa', ddd: '42' },
+      { name: 'Londrina', ddd: '43' },
+      { name: 'Maringá', ddd: '44' },
+      { name: 'Foz do Iguaçu', ddd: '45' },
+      { name: 'Cascavel', ddd: '45' },
+      { name: 'Francisco Beltrão', ddd: '46' },
+    ]
+  },
+  {
+    id: 'pe',
+    name: 'Pernambuco',
+    abbreviation: 'PE',
+    region: 'Nordeste',
+    capital: 'Recife',
+    population: 9674793,
+    dddCodes: ['81', '87'],
+    cities: [
+      { name: 'Recife', ddd: '81' },
+      { name: 'Jaboatão dos Guararapes', ddd: '81' },
+      { name: 'Olinda', ddd: '81' },
+      { name: 'Caruaru', ddd: '81' },
+      { name: 'Petrolina', ddd: '87' },
+    ]
+  },
+  {
+    id: 'pi',
+    name: 'Piauí',
+    abbreviation: 'PI',
+    region: 'Nordeste',
+    capital: 'Teresina',
+    population: 3289290,
+    dddCodes: ['86', '89'],
+    cities: [
+      { name: 'Teresina', ddd: '86' },
+      { name: 'Parnaíba', ddd: '86' },
+      { name: 'Picos', ddd: '89' },
+    ]
+  },
+  {
+    id: 'rj',
+    name: 'Rio de Janeiro',
+    abbreviation: 'RJ',
+    region: 'Sudeste',
+    capital: 'Rio de Janeiro',
+    population: 17463349,
+    dddCodes: ['21', '22', '24'],
+    cities: [
+      { name: 'Rio de Janeiro', ddd: '21' },
+      { name: 'São Gonçalo', ddd: '21' },
+      { name: 'Duque de Caxias', ddd: '21' },
+      { name: 'Nova Iguaçu', ddd: '21' },
+      { name: 'Niterói', ddd: '21' },
+      { name: 'Campos dos Goytacazes', ddd: '22' },
+      { name: 'Petrópolis', ddd: '24' },
+      { name: 'Volta Redonda', ddd: '24' },
+    ]
+  },
+  {
+    id: 'rn',
+    name: 'Rio Grande do Norte',
+    abbreviation: 'RN',
+    region: 'Nordeste',
+    capital: 'Natal',
+    population: 3560903,
+    dddCodes: ['84'],
+    cities: [
+      { name: 'Natal', ddd: '84' },
+      { name: 'Mossoró', ddd: '84' },
+      { name: 'Parnamirim', ddd: '84' },
+    ]
+  },
+  {
+    id: 'rs',
+    name: 'Rio Grande do Sul',
+    abbreviation: 'RS',
+    region: 'Sul',
+    capital: 'Porto Alegre',
+    population: 11466630,
+    dddCodes: ['51', '53', '54', '55'],
+    cities: [
+      { name: 'Porto Alegre', ddd: '51' },
+      { name: 'Canoas', ddd: '51' },
+      { name: 'Pelotas', ddd: '53' },
+      { name: 'Caxias do Sul', ddd: '54' },
+      { name: 'Santa Maria', ddd: '55' },
+    ]
+  },
+  {
+    id: 'ro',
+    name: 'Rondônia',
+    abbreviation: 'RO',
+    region: 'Norte',
+    capital: 'Porto Velho',
+    population: 1815278,
+    dddCodes: ['69'],
+    cities: [
+      { name: 'Porto Velho', ddd: '69' },
+      { name: 'Ji-Paraná', ddd: '69' },
+      { name: 'Ariquemes', ddd: '69' },
+    ]
+  },
+  {
+    id: 'rr',
+    name: 'Roraima',
+    abbreviation: 'RR',
+    region: 'Norte',
+    capital: 'Boa Vista',
+    population: 652713,
+    dddCodes: ['95'],
+    cities: [
+      { name: 'Boa Vista', ddd: '95' },
+      { name: 'Rorainópolis', ddd: '95' },
+    ]
+  },
+  {
+    id: 'sc',
+    name: 'Santa Catarina',
+    abbreviation: 'SC',
+    region: 'Sul',
+    capital: 'Florianópolis',
+    population: 7338473,
+    dddCodes: ['47', '48', '49'],
+    cities: [
+      { name: 'Florianópolis', ddd: '48' },
+      { name: 'Joinville', ddd: '47' },
+      { name: 'Blumenau', ddd: '47' },
+      { name: 'Chapecó', ddd: '49' },
+      { name: 'Criciúma', ddd: '48' },
+    ]
+  },
+  {
+    id: 'sp',
+    name: 'São Paulo',
+    abbreviation: 'SP',
+    region: 'Sudeste',
+    capital: 'São Paulo',
+    population: 46649132,
+    dddCodes: ['11', '12', '13', '14', '15', '16', '17', '18', '19'],
+    cities: [
+      { name: 'São Paulo', ddd: '11' },
+      { name: 'Guarulhos', ddd: '11' },
+      { name: 'Campinas', ddd: '19' },
+      { name: 'São Bernardo do Campo', ddd: '11' },
+      { name: 'Santo André', ddd: '11' },
+      { name: 'Osasco', ddd: '11' },
+      { name: 'São José dos Campos', ddd: '12' },
+      { name: 'Santos', ddd: '13' },
+      { name: 'Bauru', ddd: '14' },
+      { name: 'Sorocaba', ddd: '15' },
+      { name: 'Ribeirão Preto', ddd: '16' },
+      { name: 'São José do Rio Preto', ddd: '17' },
+      { name: 'Presidente Prudente', ddd: '18' },
+    ]
+  },
+  {
+    id: 'se',
+    name: 'Sergipe',
+    abbreviation: 'SE',
+    region: 'Nordeste',
+    capital: 'Aracaju',
+    population: 2338474,
+    dddCodes: ['79'],
+    cities: [
+      { name: 'Aracaju', ddd: '79' },
+      { name: 'Nossa Senhora do Socorro', ddd: '79' },
+      { name: 'Lagarto', ddd: '79' },
+    ]
+  },
+  {
+    id: 'to',
+    name: 'Tocantins',
+    abbreviation: 'TO',
+    region: 'Norte',
+    capital: 'Palmas',
+    population: 1607363,
+    dddCodes: ['63'],
+    cities: [
+      { name: 'Palmas', ddd: '63' },
+      { name: 'Araguaína', ddd: '63' },
+      { name: 'Gurupi', ddd: '63' },
+    ]
+  },
+];
+
+// Função auxiliar para obter estatísticas
+export const getStatistics = () => {
+  const totalStates = brazilianStates.length;
+  const totalDDDCodes = new Set(brazilianStates.flatMap(state => state.dddCodes)).size;
+  const totalCities = brazilianStates.reduce((acc, state) => acc + state.cities.length, 0);
+  
+  return {
+    totalStates,
+    totalDDDCodes,
+    totalCities
+  };
+};
+
+// Função para buscar estados por região
+export const getStatesByRegion = (region: string) => {
+  if (region === 'Todos') return brazilianStates;
+  return brazilianStates.filter(state => state.region === region);
+};
+
+// Função para buscar por termo (estado, cidade ou DDD)
+export const searchStates = (searchTerm: string) => {
+  const term = searchTerm.toLowerCase().trim();
+  
+  if (!term) return brazilianStates;
+  
+  return brazilianStates.filter(state => {
+    // Busca por nome do estado
+    if (state.name.toLowerCase().includes(term)) return true;
+    
+    // Busca por sigla
+    if (state.abbreviation.toLowerCase().includes(term)) return true;
+    
+    // Busca por código DDD
+    if (state.dddCodes.some(ddd => ddd.includes(term))) return true;
+    
+    // Busca por cidade
+    if (state.cities.some(city => city.name.toLowerCase().includes(term))) return true;
+    
+    // Busca por capital
+    if (state.capital.toLowerCase().includes(term)) return true;
+    
+    return false;
+  });
+};

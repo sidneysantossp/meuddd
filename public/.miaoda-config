@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "disableInjection": true,
+  "disablePlatformRobots": true,
+  "disablePlatformSitemap": true,
+  "useCustomFiles": true,
+  "forceOverride": true,
+  "files": {
+    "robots.txt": {
+      "enabled": true,
+      "source": "custom",
+      "path": "/robots.txt",
+      "disablePlatformDefault": true
+    },
+    "sitemap.xml": {
+      "enabled": true,
+      "source": "custom",
+      "path": "/sitemap.xml",
+      "disablePlatformDefault": true
+    },
+    "mapa.xml": {
+      "enabled": true,
+      "source": "custom",
+      "path": "/mapa.xml",
+      "disablePlatformDefault": true
+    }
+  },
+  "platform": {
+    "miaoda": {
+      "disableDefaultRobots": true,
+      "disableDefaultSitemap": true,
+      "disableInjection": true,
+      "useOnlyCustomFiles": true
+    }
+  },
+  "reason": "Custom SEO configuration - DO NOT OVERRIDE OR INJECT",
+  "contact": "Please disable platform-level robots.txt and sitemap.xml injection",
+  "timestamp": "2025-12-30T05:45:00.000Z"
+}
