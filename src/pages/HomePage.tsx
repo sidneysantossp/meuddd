@@ -299,32 +299,18 @@ export default function HomePage() {
             DEBUG: Antes dos Statistics - Stats: {JSON.stringify(stats)}
           </div>
           
-          {/* Statistics */}
+          {/* Statistics - TESTE SIMPLIFICADO */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 xl:mb-16 max-w-5xl mx-auto">
+            {/* Card 1 - Simplificado */}
+            <div style={{ padding: '20px', border: '2px solid red', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '24px', marginBottom: '10px' }}>{stats.totalStates}</h3>
+              <p>Estados Brasileiros</p>
+            </div>
+            
+            {/* Card 2 - Com Card Component */}
             <Card className="shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="p-6 xl:p-8 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary/10 p-4 rounded-full">
-                    <MapPin className="h-8 w-8 xl:h-10 xl:w-10 text-primary" />
-                  </div>
-                </div>
                 <div className="text-3xl xl:text-4xl font-bold text-primary mb-2 max-sm:text-2xl">
-                  {stats.totalStates}
-                </div>
-                <div className="text-sm xl:text-base text-muted-foreground max-sm:text-xs">
-                  Estados Brasileiros
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-md hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 xl:p-8 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-secondary/10 p-4 rounded-full">
-                    <Phone className="h-8 w-8 xl:h-10 xl:w-10 text-secondary" />
-                  </div>
-                </div>
-                <div className="text-3xl xl:text-4xl font-bold text-secondary mb-2 max-sm:text-2xl">
                   {stats.totalDDDCodes}+
                 </div>
                 <div className="text-sm xl:text-base text-muted-foreground max-sm:text-xs">
@@ -332,22 +318,13 @@ export default function HomePage() {
                 </div>
               </CardContent>
             </Card>
-
-            <Card className="shadow-md hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 xl:p-8 text-center">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-accent/10 p-4 rounded-full">
-                    <Users className="h-8 w-8 xl:h-10 xl:w-10 text-accent" />
-                  </div>
-                </div>
-                <div className="text-3xl xl:text-4xl font-bold text-accent mb-2 max-sm:text-2xl">
-                  {stats.totalCities}+
-                </div>
-                <div className="text-sm xl:text-base text-muted-foreground max-sm:text-xs">
-                  Cidades Cadastradas
-                </div>
-              </CardContent>
-            </Card>
+            
+            {/* Card 3 - Com ícone para teste */}
+            <div style={{ padding: '20px', border: '2px solid green', textAlign: 'center' }}>
+              <MapPin className="h-8 w-8 text-primary" style={{ margin: '0 auto 10px' }} />
+              <h3 style={{ fontSize: '24px', marginBottom: '10px' }}>{stats.totalCities}+</h3>
+              <p>Cidades Cadastradas</p>
+            </div>
           </div>
 
           {/* Region Filters */}
