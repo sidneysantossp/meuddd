@@ -180,11 +180,6 @@ export default function HomePage() {
         {...homePageSEO}
         structuredData={generateHomePageSchema()}
       />
-      
-      {/* DEBUG: Teste simples para verificar render */}
-      <div style={{ padding: '20px', background: 'red', color: 'white', margin: '20px' }}>
-        DEBUG: HomePage está renderizando! Stats: {stats.totalStates} estados
-      </div>
       <div className="py-12 xl:py-20">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
@@ -299,6 +294,11 @@ export default function HomePage() {
             </CardContent>
           </Card>
 
+          {/* DEBUG: Teste antes dos cards */}
+          <div style={{ padding: '10px', background: 'blue', color: 'white', margin: '10px', textAlign: 'center' }}>
+            DEBUG: Antes dos Statistics - Stats: {JSON.stringify(stats)}
+          </div>
+          
           {/* Statistics */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12 xl:mb-16 max-w-5xl mx-auto">
             <Card className="shadow-md hover:shadow-lg transition-shadow">
