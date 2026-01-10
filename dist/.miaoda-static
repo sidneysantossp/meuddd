@@ -1,0 +1,13 @@
+{
+  "files": [
+    "robots.txt",
+    "sitemap.xml",
+    "mapa.xml"
+  ],
+  "override": false,
+  "disableInjection": true,
+  "disablePlatformRobots": true,
+  "disablePlatformSitemap": true,
+  "useCustomFiles": true,
+  "timestamp": "2026-01-10T23:33:08.887Z"
+}

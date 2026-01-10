@@ -1,0 +1,6 @@
+{
+  "disableInjection": true,
+  "files": ["robots.txt", "sitemap.xml"],
+  "reason": "Custom SEO configuration - do not override",
+  "timestamp": "2025-12-30T04:30:00.000Z"
+}

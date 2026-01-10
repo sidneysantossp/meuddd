@@ -134,22 +134,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
-          if (id.includes('node_modules')) {
-            if (
-              id.includes('react') ||
-              id.includes('react-dom') ||
-              id.includes('react-router')
-            ) {
-              return 'react-vendor';
-            }
-            if (id.includes('lucide-react') || id.includes('@radix-ui')) {
-              return 'ui-vendor';
-            }
-            // Other node_modules in separate chunk
-            return 'vendor';
-          }
-
           // Data chunks - split by state to enable lazy loading
           if (id.includes('src/data/states.ts')) {
             return 'data-states';

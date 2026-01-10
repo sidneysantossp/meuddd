@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap XML (para mecanismos de busca)
+Sitemap: https://www.meuddd.com.br/sitemap.xml
