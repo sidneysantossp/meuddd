@@ -58,10 +58,6 @@ export default function HomePage() {
   const [showResults, setShowResults] = useState(false);
   // PERFORMANCE: Use lite data immediately, no async loading needed for initial render
   const [stats] = useState(getStatisticsLite);
-  
-  // DEBUG: Log para verificar se os dados estão carregando
-  console.log('HomePage - stats:', stats);
-  console.log('HomePage - brazilianStatesLite:', brazilianStatesLite);
   const [blogPosts, setBlogPosts] = useState<any[]>([]);
   const [faqItems, setFaqItems] = useState<any[]>([]);
   const [isLoadingBlog, setIsLoadingBlog] = useState(true);
@@ -184,6 +180,11 @@ export default function HomePage() {
         {...homePageSEO}
         structuredData={generateHomePageSchema()}
       />
+      
+      {/* DEBUG: Teste simples para verificar render */}
+      <div style={{ padding: '20px', background: 'red', color: 'white', margin: '20px' }}>
+        DEBUG: HomePage está renderizando! Stats: {stats.totalStates} estados
+      </div>
       <div className="py-12 xl:py-20">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
