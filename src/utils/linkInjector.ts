@@ -184,7 +184,7 @@ export function injectLinksInBlogPosts(blogPosts: any[]): any[] {
       post.city.slug,
       post.state.name,
       post.state.slug,
-      'AC', // Acre abbreviation - pode ser dinâmico se necessário
+      post.state.abbreviation, // Usar a sigla correta do estado
       post.city.ddd
     );
   });
