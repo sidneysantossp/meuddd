@@ -16,6 +16,7 @@ import { useEffect, useState, useMemo, useCallback } from 'react';
 import SEOHead from '@/components/common/SEOHead';
 import { generateStateSEO as generateSEOData, statesSEOData } from '@/data/seoData';
 import { generateStatePageSchema } from '@/utils/structuredData';
+import { createCitySlug } from '@/utils/slugs';
 import type { State } from '@/types';
 
 // Lazy load heavy data modules
@@ -521,7 +522,7 @@ export default function StateDetailPage() {
                         </div>
 
                         {/* Botão Ver detalhes */}
-                        <Link to={`/cidade/${city.name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/\s+/g, '-')}`}>
+                        <Link to={`/cidade/${createCitySlug(city.name)}`}>
                           <Button className="w-full bg-foreground text-background hover:bg-foreground/90 text-xs xl:text-sm py-2">
                             Ver detalhes
                           </Button>

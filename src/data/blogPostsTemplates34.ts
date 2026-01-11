@@ -1,14 +1,5 @@
 import type { BlogPost, City, State } from '@/types';
-
-// Função auxiliar para criar slug
-function createCitySlug(cityName: string): string {
-  return cityName
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-}
+import { createCitySlug } from '@/utils/slugs';
 
 // Função para obter cidades vizinhas
 function getNeighboringCities(currentCity: string, stateCities: City[]): string[] {

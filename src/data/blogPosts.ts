@@ -1,16 +1,7 @@
 import type { BlogPost, BlogPostType, City, State } from '@/types';
 import { brazilianStates } from './states';
 import { injectLinksInBlogPosts } from '@/utils/linkInjector';
-
-// Função auxiliar para criar slug a partir do nome da cidade
-function createCitySlug(cityName: string): string {
-  return cityName
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-}
+import { createCitySlug } from '@/utils/slugs';
 
 // Função para obter cidades vizinhas (3 primeiras cidades diferentes da atual)
 function getNeighboringCities(currentCity: string, stateCities: City[]): string[] {
