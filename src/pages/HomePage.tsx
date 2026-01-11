@@ -58,6 +58,9 @@ export default function HomePage() {
   const [showResults, setShowResults] = useState(false);
   // PERFORMANCE: Use lite data immediately, no async loading needed for initial render
   const [stats] = useState(getStatisticsLite);
+  
+  // DEBUG: Verificar se está carregando
+  console.log('HomePage render - stats:', stats);
   const [blogPosts, setBlogPosts] = useState<any[]>([]);
   const [faqItems, setFaqItems] = useState<any[]>([]);
   const [isLoadingBlog, setIsLoadingBlog] = useState(true);
