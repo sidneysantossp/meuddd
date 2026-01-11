@@ -95,7 +95,15 @@ export function injectLinks(
 
   // Processar cada regra de link
   allLinks.forEach(rule => {
-    rule.keywords.forEach(keyword => {
+    const keywords = rule.keywords.filter(
+      (keyword): keyword is string => typeof keyword === 'string' && keyword.trim().length > 0
+    );
+
+    if (keywords.length === 0) {
+      return;
+    }
+
+    keywords.forEach(keyword => {
       // Criar regex para encontrar a palavra-chave (case insensitive, palavra completa)
       // Evitar substituir se já estiver dentro de um link
       const regex = new RegExp(
