@@ -99,13 +99,13 @@ export default function BlogPostPage() {
         '@type': 'ListItem',
         position: 3,
         name: post.state.name,
-        item: `https://www.meuddd.com.br/blog/${post.state.slug}`
+        item: `https://www.meuddd.com.br/estado/${post.state.slug}`
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: post.city.name,
-        item: `https://www.meuddd.com.br/blog/${post.state.slug}/${post.city.slug}`
+        item: `https://www.meuddd.com.br/cidade/${post.city.slug}`
       },
       {
         '@type': 'ListItem',

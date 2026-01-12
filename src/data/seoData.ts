@@ -85,7 +85,7 @@ export const contactPageSEO: PageSEO = {
  * SEO da Página de Validação de DDD
  */
 export const validateDDDPageSEO: PageSEO = {
-  path: '/validar-ddd',
+  path: '/validar',
   title: 'Validar Código DDD | Verificador Online Gratuito',
   description: 'Valide códigos DDD online de forma rápida e gratuita. Verifique se um código DDD é válido e descubra a qual estado e região ele pertence.',
   keywords: [
@@ -95,7 +95,7 @@ export const validateDDDPageSEO: PageSEO = {
     'checar código DDD',
     'validador DDD online',
   ],
-  canonical: 'https://www.meuddd.com.br/validar-ddd',
+  canonical: 'https://www.meuddd.com.br/validar',
   ogType: 'website',
 };
 
@@ -121,7 +121,7 @@ export const generatorPageSEO: PageSEO = {
  * SEO da Página de Busca por Voz
  */
 export const voiceSearchPageSEO: PageSEO = {
-  path: '/busca-por-voz',
+  path: '/busca-voz',
   title: 'Busca por Voz de Códigos DDD | Consulta Rápida',
   description: 'Use sua voz para consultar códigos DDD de forma rápida e prática. Tecnologia de reconhecimento de voz para facilitar sua busca.',
   keywords: [
@@ -131,7 +131,7 @@ export const voiceSearchPageSEO: PageSEO = {
     'reconhecimento voz',
     'busca falada',
   ],
-  canonical: 'https://www.meuddd.com.br/busca-por-voz',
+  canonical: 'https://www.meuddd.com.br/busca-voz',
   ogType: 'website',
 };
 
@@ -199,9 +199,10 @@ export function generateCitySEO(city: {
 }): PageSEO {
   const capitalText = city.isCapital ? 'capital de ' : '';
   const populationText = city.population ? ` com ${city.population} habitantes` : '';
+  const citySlug = city.name.toLowerCase().replace(/\s+/g, '-');
   
   return {
-    path: `/cidade/${city.stateAbbreviation.toLowerCase()}/${city.name.toLowerCase().replace(/\s+/g, '-')}`,
+    path: `/cidade/${citySlug}`,
     title: `DDD de ${city.name} - ${city.stateAbbreviation} | Código ${city.ddd}`,
     description: `Código DDD de ${city.name}, ${capitalText}${city.state}${populationText}. Consulte operadoras, cobertura e informações telefônicas completas.`,
     keywords: [
@@ -211,7 +212,7 @@ export function generateCitySEO(city: {
       `telefone ${city.name}`,
       `${city.name} ${city.stateAbbreviation}`,
     ],
-    canonical: `https://www.meuddd.com.br/cidade/${city.stateAbbreviation.toLowerCase()}/${city.name.toLowerCase().replace(/\s+/g, '-')}`,
+    canonical: `https://www.meuddd.com.br/cidade/${citySlug}`,
     ogType: 'website',
   };
 }

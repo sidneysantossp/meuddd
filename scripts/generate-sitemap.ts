@@ -9,8 +9,8 @@
  * - Posts do blog
  */
 
-import { brazilianStates } from './src/data/states';
-import { blogPosts } from './src/data/blog';
+import { brazilianStates } from '../src/data/states';
+import { allBlogPosts } from '../src/data/blogPosts';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 
@@ -54,10 +54,15 @@ const mainPages = [
   { path: '/estados', changefreq: 'weekly' as const, priority: 0.9 },
   { path: '/validar', changefreq: 'monthly' as const, priority: 0.7 },
   { path: '/busca-voz', changefreq: 'monthly' as const, priority: 0.7 },
-  { path: '/gerador', changefreq: 'monthly' as const, priority: 0.7 },
+  { path: '/gerador-numeros', changefreq: 'monthly' as const, priority: 0.7 },
   { path: '/blog', changefreq: 'weekly' as const, priority: 0.8 },
   { path: '/sobre', changefreq: 'monthly' as const, priority: 0.5 },
   { path: '/contato', changefreq: 'monthly' as const, priority: 0.5 },
+  { path: '/politicas-de-privacidade', changefreq: 'monthly' as const, priority: 0.4 },
+  { path: '/termos-de-uso', changefreq: 'monthly' as const, priority: 0.4 },
+  { path: '/politicas-de-cookies', changefreq: 'monthly' as const, priority: 0.4 },
+  { path: '/imprensa', changefreq: 'yearly' as const, priority: 0.3 },
+  { path: '/trabalhe-conosco', changefreq: 'monthly' as const, priority: 0.3 },
 ];
 
 mainPages.forEach(page => {
@@ -72,7 +77,7 @@ mainPages.forEach(page => {
 // 3. Páginas de Estados (27 estados)
 brazilianStates.forEach(state => {
   sitemapURLs.push({
-    loc: `${BASE_URL}/estado/${state.id}`,
+    loc: `${BASE_URL}/estado/${state.slug}`,
     lastmod: CURRENT_DATE,
     changefreq: 'weekly',
     priority: 0.8,
@@ -95,10 +100,10 @@ brazilianStates.forEach(state => {
 });
 
 // 5. Posts do Blog
-blogPosts.forEach(post => {
+allBlogPosts.forEach(post => {
   sitemapURLs.push({
-    loc: `${BASE_URL}/blog/${post.id}`,
-    lastmod: post.date,
+    loc: `${BASE_URL}/blog/${post.state.slug}/${post.city.slug}/${post.slug}`,
+    lastmod: post.updatedDate || post.publishedDate,
     changefreq: 'monthly',
     priority: 0.7,
   });
@@ -142,7 +147,7 @@ console.log(`   • Página inicial: 1`);
 console.log(`   • Páginas principais: ${mainPages.length}`);
 console.log(`   • Páginas de estados: ${brazilianStates.length}`);
 console.log(`   • Páginas de cidades: ${totalCities}`);
-console.log(`   • Posts do blog: ${blogPosts.length}`);
+console.log(`   • Posts do blog: ${allBlogPosts.length}`);
 console.log('');
 console.log(`📁 Arquivo salvo em: ${outputPath}`);
 console.log('');

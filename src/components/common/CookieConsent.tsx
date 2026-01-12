@@ -73,7 +73,7 @@ export default function CookieConsent() {
             <p className="text-xs text-muted-foreground leading-relaxed">
               Usamos cookies para melhorar sua experiência. Veja nossa{' '}
               <a 
-                href="/politica-privacidade" 
+                href="/politicas-de-privacidade" 
                 className="text-primary hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"

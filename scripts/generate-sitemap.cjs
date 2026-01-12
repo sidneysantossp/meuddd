@@ -72,14 +72,8 @@ const stateIdToSlug = {
   to: 'tocantins'
 };
 
-// Posts do blog
-const blogPosts = [
-  { id: 'evolucao-codigos-ddd', date: '2025-12-15' },
-  { id: 'impacto-ddd-comunicacao', date: '2025-12-10' },
-  { id: 'curiosidades-ddd-brasil', date: '2025-12-05' },
-  { id: 'ddd-revolucionou-ligacoes', date: '2025-11-28' },
-  { id: 'futuro-ddd-tecnologia', date: '2025-11-20' }
-];
+// Posts do blog (use scripts/generate-sitemap.ts para incluir todos os artigos)
+const blogPosts = [];
 
 // Função para normalizar nome de cidade para URL
 function normalizeForURL(text) {
@@ -110,12 +104,15 @@ const mainPages = [
   { path: '/estados', changefreq: 'weekly', priority: 0.9 },
   { path: '/validar', changefreq: 'monthly', priority: 0.7 },
   { path: '/busca-voz', changefreq: 'monthly', priority: 0.7 },
-  { path: '/gerador', changefreq: 'monthly', priority: 0.7 },
+  { path: '/gerador-numeros', changefreq: 'monthly', priority: 0.7 },
   { path: '/blog', changefreq: 'weekly', priority: 0.8 },
   { path: '/sobre', changefreq: 'monthly', priority: 0.5 },
   { path: '/contato', changefreq: 'monthly', priority: 0.5 },
   { path: '/politicas-de-privacidade', changefreq: 'monthly', priority: 0.4 },
   { path: '/termos-de-uso', changefreq: 'monthly', priority: 0.4 },
+  { path: '/politicas-de-cookies', changefreq: 'monthly', priority: 0.4 },
+  { path: '/imprensa', changefreq: 'yearly', priority: 0.3 },
+  { path: '/trabalhe-conosco', changefreq: 'monthly', priority: 0.3 },
 ];
 
 mainPages.forEach(page => {

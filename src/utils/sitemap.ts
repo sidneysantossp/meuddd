@@ -1,6 +1,6 @@
 // Utilitário para gerar sitemap.xml
 import { brazilianStates } from '@/data/states';
-import { blogPosts } from '@/data/blog';
+import { allBlogPosts } from '@/data/blogPosts';
 
 interface SitemapUrl {
   loc: string;
@@ -88,7 +88,7 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
 
   // 7. Página do Gerador
   urls.push({
-    loc: `${BASE_URL}/gerador`,
+    loc: `${BASE_URL}/gerador-numeros`,
     lastmod: today,
     changefreq: 'monthly',
     priority: 0.7
@@ -103,10 +103,10 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
   });
 
   // 9. Artigos do Blog
-  blogPosts.forEach(post => {
+  allBlogPosts.forEach(post => {
     urls.push({
-      loc: `${BASE_URL}/blog/${post.id}`,
-      lastmod: post.date,
+      loc: `${BASE_URL}/blog/${post.state.slug}/${post.city.slug}/${post.slug}`,
+      lastmod: post.updatedDate || post.publishedDate,
       changefreq: 'monthly',
       priority: 0.7
     });
@@ -144,6 +144,30 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
     priority: 0.4
   });
 
+  // 14. Página de Políticas de Cookies
+  urls.push({
+    loc: `${BASE_URL}/politicas-de-cookies`,
+    lastmod: today,
+    changefreq: 'monthly',
+    priority: 0.4
+  });
+
+  // 15. Página de Imprensa
+  urls.push({
+    loc: `${BASE_URL}/imprensa`,
+    lastmod: today,
+    changefreq: 'yearly',
+    priority: 0.3
+  });
+
+  // 16. Página Trabalhe Conosco
+  urls.push({
+    loc: `${BASE_URL}/trabalhe-conosco`,
+    lastmod: today,
+    changefreq: 'monthly',
+    priority: 0.3
+  });
+
   return urls;
 };
 
@@ -177,6 +201,6 @@ export const getSitemapStats = () => {
     pages: urls.filter(u => u.priority >= 0.7).length,
     states: brazilianStates.length,
     cities: brazilianStates.reduce((acc, state) => acc + state.cities.length, 0),
-    blogPosts: blogPosts.length
+    blogPosts: allBlogPosts.length
   };
 };

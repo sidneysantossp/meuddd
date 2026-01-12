@@ -35,16 +35,19 @@ export default function SitemapPage() {
     const staticPages = [
       { url: '/', title: 'Página Inicial', priority: 1.0 },
       { url: '/estados', title: 'Estados do Brasil', priority: 0.9 },
-      { url: '/validar-ddd', title: 'Validar DDD', priority: 0.8 },
-      { url: '/busca-por-voz', title: 'Busca por Voz', priority: 0.7 },
+      { url: '/validar', title: 'Validar DDD', priority: 0.8 },
+      { url: '/busca-voz', title: 'Busca por Voz', priority: 0.7 },
       { url: '/gerador-numeros', title: 'Gerador de DDD', priority: 0.7 },
       { url: '/sobre', title: 'Sobre', priority: 0.6 },
       { url: '/sobre-nos', title: 'Sobre Nós', priority: 0.6 },
       { url: '/contato', title: 'Contato', priority: 0.6 },
       { url: '/blog', title: 'Blog', priority: 0.8 },
       { url: '/mapa-do-site', title: 'Mapa do Site', priority: 0.5 },
-      { url: '/privacidade', title: 'Política de Privacidade', priority: 0.4 },
-      { url: '/termos', title: 'Termos de Uso', priority: 0.4 },
+      { url: '/politicas-de-privacidade', title: 'Políticas de Privacidade', priority: 0.4 },
+      { url: '/termos-de-uso', title: 'Termos de Uso', priority: 0.4 },
+      { url: '/politicas-de-cookies', title: 'Políticas de Cookies', priority: 0.4 },
+      { url: '/imprensa', title: 'Imprensa', priority: 0.3 },
+      { url: '/trabalhe-conosco', title: 'Trabalhe Conosco', priority: 0.3 },
     ];
 
     staticPages.forEach(page => {
@@ -88,7 +91,7 @@ export default function SitemapPage() {
     // 4. Blog posts
     allBlogPosts.forEach(post => {
       urls.push({
-        url: `/blog/${post.slug}`,
+        url: `/blog/${post.state.slug}/${post.city.slug}/${post.slug}`,
         title: post.title,
         category: 'blog',
         priority: 0.6

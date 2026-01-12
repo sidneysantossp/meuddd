@@ -20,12 +20,21 @@ const SitemapPage = lazy(() => import('./pages/SitemapPage'));
 const MapaXmlPage = lazy(() => import('./pages/MapaXmlPage'));
 const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsOfUsePage = lazy(() => import('./pages/TermsOfUsePage'));
+const CookiesPolicyPage = lazy(() => import('./pages/CookiesPolicyPage'));
+const PressPage = lazy(() => import('./pages/PressPage'));
+const CareersPage = lazy(() => import('./pages/CareersPage'));
 
 // Redirect component for /gerador -> /gerador-numeros
 const GeradorRedirect = () => <RedirectPage to="/gerador-numeros" />;
 
 // Redirect component for /sitemap -> /mapa-do-site
 const SitemapRedirect = () => <RedirectPage to="/mapa-do-site" />;
+
+// Redirect components for legacy paths
+const ValidateDDDRedirect = () => <RedirectPage to="/validar" />;
+const VoiceSearchRedirect = () => <RedirectPage to="/busca-voz" />;
+const PrivacyRedirect = () => <RedirectPage to="/politicas-de-privacidade" />;
+const TermsRedirect = () => <RedirectPage to="/termos-de-uso" />;
 
 // Redirect component for /estados/:stateId -> /estado/:stateId
 const EstadosRedirect = () => {
@@ -75,9 +84,21 @@ const routes: RouteConfig[] = [
     component: ValidateDDDPage
   },
   {
+    name: 'Validar DDD (Redirect)',
+    path: '/validar-ddd',
+    component: ValidateDDDRedirect,
+    visible: false
+  },
+  {
     name: 'Busca por Voz',
     path: '/busca-voz',
     component: VoiceSearchPage
+  },
+  {
+    name: 'Busca por Voz (Redirect)',
+    path: '/busca-por-voz',
+    component: VoiceSearchRedirect,
+    visible: false
   },
   {
     name: 'Gerador Redirect',
@@ -125,6 +146,24 @@ const routes: RouteConfig[] = [
     visible: false
   },
   {
+    name: 'Privacidade (Redirect)',
+    path: '/privacidade',
+    component: PrivacyRedirect,
+    visible: false
+  },
+  {
+    name: 'Politica de Privacidade (Redirect)',
+    path: '/politica-privacidade',
+    component: PrivacyRedirect,
+    visible: false
+  },
+  {
+    name: 'Termos (Redirect)',
+    path: '/termos',
+    component: TermsRedirect,
+    visible: false
+  },
+  {
     name: 'Mapa do Site',
     path: '/mapa-do-site',
     component: SitemapPage,
@@ -146,6 +185,24 @@ const routes: RouteConfig[] = [
     name: 'Termos de Uso',
     path: '/termos-de-uso',
     component: TermsOfUsePage,
+    visible: false
+  },
+  {
+    name: 'Políticas de Cookies',
+    path: '/politicas-de-cookies',
+    component: CookiesPolicyPage,
+    visible: false
+  },
+  {
+    name: 'Imprensa',
+    path: '/imprensa',
+    component: PressPage,
+    visible: false
+  },
+  {
+    name: 'Trabalhe Conosco',
+    path: '/trabalhe-conosco',
+    component: CareersPage,
     visible: false
   }
 ];

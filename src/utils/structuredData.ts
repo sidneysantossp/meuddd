@@ -333,7 +333,7 @@ export function generateCityPageSchema(city: {
       { name: 'Início', url: 'https://www.meuddd.com.br' },
       { name: 'Estados', url: 'https://www.meuddd.com.br/estados' },
       { name: city.state, url: `https://www.meuddd.com.br/estado/${city.stateSlug}` },
-      { name: city.name, url: `https://www.meuddd.com.br/cidade/${city.stateAbbreviation.toLowerCase()}/${city.name.toLowerCase().replace(/\s+/g, '-')}` },
+      { name: city.name, url: `https://www.meuddd.com.br/cidade/${city.name.toLowerCase().replace(/\s+/g, '-')}` },
     ])
   );
 
