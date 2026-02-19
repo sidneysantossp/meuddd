@@ -2,18 +2,26 @@ import { notFound } from "next/navigation";
 import { EstadoHero } from "@/components/estado-hero";
 import { BuscadorCidades } from "@/components/buscador-cidades";
 import { EstadoAbas } from "@/components/estado-abas";
-import { getEstadoBySlug } from "@/lib/estados-data";
+import { getEstadoBySlug, getAllEstadoSlugs } from "@/lib/estados-data";
 import { Metadata } from "next";
 
+export async function generateStaticParams() {
+  const slugs = getAllEstadoSlugs();
+  return slugs.map((slug) => ({
+    estado: slug,
+  }));
+}
+
 interface EstadoPageProps {
-  params: {
+  params: Promise<{
     estado: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: EstadoPageProps): Promise<Metadata> {
-  const estado = getEstadoBySlug(params.estado);
-  
+  const { estado: estadoSlug } = await params;
+  const estado = getEstadoBySlug(estadoSlug);
+
   if (!estado) {
     return {
       title: "Estado não encontrado",
@@ -59,14 +67,15 @@ export async function generateMetadata({ params }: EstadoPageProps): Promise<Met
       images: [`/images/ddd-${estado.ddd}-${estado.sigla.toLowerCase()}.jpg`]
     },
     alternates: {
-      canonical: `/${params.estado}`
+      canonical: `/estado/${estadoSlug}`
     }
   };
 }
 
-export default function EstadoPage({ params }: EstadoPageProps) {
-  const estado = getEstadoBySlug(params.estado);
-  
+export default async function EstadoPage({ params }: EstadoPageProps) {
+  const { estado: estadoSlug } = await params;
+  const estado = getEstadoBySlug(estadoSlug);
+
   if (!estado) {
     notFound();
   }
@@ -74,19 +83,19 @@ export default function EstadoPage({ params }: EstadoPageProps) {
   return (
     <div className="min-h-screen bg-background">
       <EstadoHero estado={estado} />
-      
+
       <div className="container mx-auto px-4 py-12 space-y-12">
         <BuscadorCidades estado={estado} />
         <EstadoAbas estado={estado} />
       </div>
-      
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": `DDD ${estado.ddd} ${estado.nome} - Guia Completo`,
+            "headline": `DDD ${estado.ddd} ${estado.nome} - Guide Completo`,
             "description": `Consulta completa do DDD ${estado.ddd} do estado ${estado.nome}. Encontre todas as cidades, informações de discagem e operadoras.`,
             "author": {
               "@type": "Organization",
@@ -104,7 +113,7 @@ export default function EstadoPage({ params }: EstadoPageProps) {
             "dateModified": new Date().toISOString(),
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://meuddd.vercel.app/${params.estado}`
+              "@id": `https://meuddd.vercel.app/estado/${estadoSlug}`
             },
             "about": {
               "@type": "Thing",

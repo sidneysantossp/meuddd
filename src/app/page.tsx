@@ -1,10 +1,8 @@
-import { Navbar } from '@/components/navbar'
 import { Hero } from '@/components/hero'
 import { EstadosSection } from '@/components/estados-section'
 import { BeneficiosSection } from '@/components/beneficios-section'
 import { HistoriaDDDSection } from '@/components/historia-ddd-section'
 import { BlogSection } from '@/components/blog-section'
-import { Footer } from '@/components/footer'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -89,7 +87,7 @@ export default function Home() {
           })
         }}
       />
-      
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -156,13 +154,11 @@ export default function Home() {
         }}
       />
 
-      <Navbar />
       <Hero />
       <EstadosSection />
       <BeneficiosSection />
       <HistoriaDDDSection />
       <BlogSection />
-      <Footer />
     </div>
   )
 }

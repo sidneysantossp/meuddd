@@ -3,7 +3,8 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Calendar, Clock, User, ArrowRight, TrendingUp, MapPin, Phone, BookOpen, Eye, MessageCircle, Share2 } from 'lucide-react'
+import { Calendar, Clock, ArrowRight, BookOpen, Eye, MessageCircle, Share2 } from 'lucide-react'
+import Image from 'next/image'
 
 interface BlogCardProps {
   title: string
@@ -23,26 +24,24 @@ const BlogCard = ({ title, excerpt, author, date, readTime, category, imageUrl, 
     <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-gray-200 overflow-hidden">
       {/* Imagem do artigo */}
       <div className="relative h-48 overflow-hidden">
-        <img
+        <Image
           src={imageUrl}
           alt={imageAlt}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-          onError={(e) => {
-            // Fallback para placeholder se a imagem falhar
-            e.currentTarget.src = `https://picsum.photos/seed/${title}/400/300.jpg`;
-          }}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        
+
         {/* Overlay gradiente */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-        
+
         {/* Badge de categoria */}
         <div className="absolute top-4 left-4">
           <Badge className="bg-white/90 text-gray-800 hover:bg-white backdrop-blur-sm">
             {category}
           </Badge>
         </div>
-        
+
         {/* Badge de tempo de leitura */}
         <div className="absolute top-4 right-4">
           <Badge variant="secondary" className="bg-black/70 text-white backdrop-blur-sm">
@@ -51,7 +50,7 @@ const BlogCard = ({ title, excerpt, author, date, readTime, category, imageUrl, 
           </Badge>
         </div>
       </div>
-      
+
       <CardHeader className="pb-3">
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-2">
           <div className="flex items-center gap-1">
@@ -59,34 +58,31 @@ const BlogCard = ({ title, excerpt, author, date, readTime, category, imageUrl, 
             <span>{date}</span>
           </div>
         </div>
-        
+
         <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
           {title}
         </h3>
       </CardHeader>
-      
+
       <CardContent className="pt-0">
         <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed">
           {excerpt}
         </p>
-        
+
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-              <img
+            <div className="relative w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+              <Image
                 src={`https://picsum.photos/seed/${author}/100/100.jpg`}
                 alt={author}
+                width={32}
+                height={32}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'flex';
-                }}
               />
-              <User className="w-4 h-4 text-gray-600" style={{ display: 'none' }} />
             </div>
             <span className="text-sm font-medium text-gray-700">{author}</span>
           </div>
-          
+
           <div className="flex items-center gap-3 text-sm text-gray-500">
             <div className="flex items-center gap-1">
               <Eye className="w-4 h-4" />
@@ -98,7 +94,7 @@ const BlogCard = ({ title, excerpt, author, date, readTime, category, imageUrl, 
             </div>
           </div>
         </div>
-        
+
         <Button className="w-full group-hover:bg-blue-600 transition-colors flex items-center gap-2">
           Ler Artigo Completo
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -158,16 +154,16 @@ export function BlogSection() {
               <BookOpen className="w-8 h-8 text-blue-600" />
             </div>
           </div>
-          
+
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Blog DDD
           </h2>
-          
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-            Artigos exclusivos sobre o sistema telefônico brasileiro, dicas de telecomunicações 
+            Artigos exclusivos sobre o sistema telefônico brasileiro, dicas de telecomunicações
             e análises detalhadas sobre códigos DDD de todo o país.
           </p>
-          
+
           {/* Categorias populares */}
           <div className="flex flex-wrap justify-center gap-3">
             <Badge variant="outline" className="px-4 py-2 hover:bg-blue-50 hover:border-blue-300 cursor-pointer">
@@ -213,10 +209,10 @@ export function BlogSection() {
             Fique por Dentro das Novidades sobre DDD
           </h3>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-            Receba nossos artigos semanais sobre telecomunicações, guias exclusivos e 
+            Receba nossos artigos semanais sobre telecomunicações, guias exclusivos e
             as últimas atualizações sobre códigos DDD diretamente no seu e-mail.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-6">
             <input
               type="email"
@@ -227,7 +223,7 @@ export function BlogSection() {
               Inscrever-se
             </Button>
           </div>
-          
+
           <div className="flex items-center justify-center gap-6 text-sm text-blue-100">
             <div className="flex items-center gap-2">
               <BookOpen className="w-4 h-4" />

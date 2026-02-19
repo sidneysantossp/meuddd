@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { LeafletCSS } from "@/components/leaflet-css";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,24 +17,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "MeuDDD - Consulta Completa de Códigos DDD do Brasil",
+  description: "Encontre informações completas sobre códigos DDD, cidades, operadoras e como ligar para qualquer lugar do Brasil. O guia definitivo da telefonia brasileira.",
+  keywords: ["DDD", "telefonia", "códigos de área", "Brasil", "operadoras", "cidades brasileiras", "como ligar"],
+  authors: [{ name: "MeuDDD Team" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.ico",
+  },
+  verification: {
+    google: "SEU_CODIGO_DE_VERIFICACAO",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "MeuDDD - Consulta Completa de Códigos DDD",
+    description: "Guia completo de DDDs, cidades e operadoras do Brasil.",
+    url: "https://meuddd.com.br",
+    siteName: "MeuDDD",
     type: "website",
+    locale: "pt_BR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "MeuDDD - Códigos DDD do Brasil",
+    description: "Guia completo de DDDs e cidades do Brasil.",
   },
 };
 
@@ -42,12 +48,50 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        {/* Google AdSense Meta */}
+        <meta name="google-adsense-account" content="ca-pub-3459130972339055" />
+        {/* Leaflet CSS */}
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossOrigin=""
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
-        <LeafletCSS />
-        {children}
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JBGCDM7PFC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JBGCDM7PFC', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3459130972339055"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
         <Toaster />
       </body>
     </html>

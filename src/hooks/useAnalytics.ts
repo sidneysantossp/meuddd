@@ -14,7 +14,12 @@ import { trackPageView, initScrollTracking } from '@/utils/analytics';
  * ```
  */
 export const usePageTracking = () => {
-  const location = useLocation();
+  let location: any = { pathname: '/', search: '' };
+  try {
+    location = useLocation();
+  } catch (e) {
+    // Silently fail if not in router context (e.g. during build)
+  }
 
   useEffect(() => {
     // Verifica se estamos no browser antes de acessar document
@@ -58,7 +63,12 @@ export const useScrollTracking = () => {
  * ```
  */
 export const useTimeOnPage = () => {
-  const location = useLocation();
+  let location: any = { pathname: '/', search: '' };
+  try {
+    location = useLocation();
+  } catch (e) {
+    // Silently fail if not in router context
+  }
 
   useEffect(() => {
     // Verifica se estamos no browser
@@ -68,7 +78,7 @@ export const useTimeOnPage = () => {
       return () => {
         const endTime = Date.now();
         const timeInSeconds = Math.round((endTime - startTime) / 1000);
-        
+
         // Só rastreia se o usuário ficou mais de 5 segundos
         if (timeInSeconds >= 5) {
           import('@/utils/analytics').then(({ trackTimeOnPage }) => {
