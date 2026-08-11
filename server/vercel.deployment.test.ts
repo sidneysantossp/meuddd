@@ -13,6 +13,8 @@ describe("configuração de publicação Vercel", () => {
     expect(config.buildCommand).toBe("pnpm run build:vercel");
     expect(config.functions["server.ts"].includeFiles).toContain("public/**");
     expect(config.functions["server.ts"].includeFiles).toContain("dist/server/**");
+    expect(serverEntry).toContain('import express from "express"');
+    expect(serverEntry).toContain("const app = express()");
     expect(serverEntry).toContain("export default app");
   });
 });

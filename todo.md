@@ -76,3 +76,4 @@
 - [x] Diagnosticar a exibição do bundle JavaScript no domínio publicado via Vercel e Cloudflare e preparar uma configuração de implantação compatível com SSR.
 - [ ] Confirmar o novo deployment da Vercel e a resposta HTTPS correta no domínio configurado pela Cloudflare.
 - [x] Evitar referências de analytics não configuradas no template HTML de publicação externa.
+- [x] Corrigir a deteção do entrypoint Express pela Vercel, que rejeitou o `server.ts` como importador de Express.
