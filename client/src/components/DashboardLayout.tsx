@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/sidebar";
 import { startLogin } from "@/const";
 import { useIsMobile } from "@/hooks/useMobile";
-import { ArrowUpRight, LogOut, PanelLeft, Search } from "lucide-react";
+import { ArrowUpRight, ClipboardCheck, LogOut, PanelLeft, Search } from "lucide-react";
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { DashboardLayoutSkeleton } from './DashboardLayoutSkeleton';
@@ -29,6 +29,7 @@ import { Button } from "./ui/button";
 
 const menuItems = [
   { icon: Search, label: "Pesquisas sem resultado", path: "/admin/pesquisas" },
+  { icon: ClipboardCheck, label: "Moderar sugestões", path: "/admin/sugestoes" },
   { icon: ArrowUpRight, label: "Voltar ao site", path: "/" },
 ];
 

@@ -47,8 +47,18 @@ export const appRouter = router({
   }),
   insights: router({
     unmatchedSearches: adminProcedure
-      .input(z.object({ limit: z.number().int().min(1).max(100).optional() }).optional())
-      .query(({ input }) => db.listUnmatchedSearches(input?.limit ?? 50)),
+      .input(z.object({
+        limit: z.number().int().min(1).max(100).optional(),
+        minVolume: z.number().int().min(1).max(10_000).optional(),
+        periodDays: z.number().int().min(1).max(365).optional(),
+      }).optional())
+      .query(({ input }) => db.listUnmatchedSearches(input)),
+    localitySuggestions: adminProcedure
+      .input(z.object({ status: z.enum(["pending", "reviewed", "approved", "dismissed"]).optional(), limit: z.number().int().min(1).max(100).optional() }).optional())
+      .query(({ input }) => db.listLocalitySuggestions(input)),
+    reviewLocalitySuggestion: adminProcedure
+      .input(z.object({ id: z.number().int().positive(), status: z.enum(["reviewed", "approved", "dismissed"]) }))
+      .mutation(({ input }) => db.reviewLocalitySuggestion(input)),
   }),
 });
 

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { trpc } from "@/lib/trpc";
 import { BarChart3, LockKeyhole, SearchX } from "lucide-react";
+import { useMemo, useState } from "react";
 
 function formatDate(value: Date | string) {
   return new Intl.DateTimeFormat("pt-BR", { dateStyle: "medium", timeStyle: "short", timeZone: "America/Sao_Paulo" }).format(new Date(value));
@@ -12,7 +13,14 @@ function formatDate(value: Date | string) {
 export default function SearchInsightsPage() {
   const { user, loading } = useAuth();
   const isAdmin = user?.role === "admin";
-  const insights = trpc.insights.unmatchedSearches.useQuery({ limit: 50 }, { enabled: isAdmin });
+  const [period, setPeriod] = useState("all");
+  const [minVolume, setMinVolume] = useState("1");
+  const queryInput = useMemo(() => ({
+    limit: 50,
+    minVolume: Number(minVolume),
+    periodDays: period === "all" ? undefined : Number(period),
+  }), [minVolume, period]);
+  const insights = trpc.insights.unmatchedSearches.useQuery(queryInput, { enabled: isAdmin });
 
   return (
     <DashboardLayout>
@@ -36,6 +44,20 @@ export default function SearchInsightsPage() {
         {isAdmin && insights.error ? <div className="rounded-2xl border border-[#e8533a]/20 bg-[#fffaf0] p-6 text-sm text-[#9c2b1a]">Não foi possível carregar os termos. Atualize a página ou verifique a sessão administrativa.</div> : null}
         {isAdmin && insights.data ? (
           <div className="grid gap-4">
+            <Card className="border-[#143d36]/10 bg-[#fffaf0] shadow-none">
+              <CardContent className="grid gap-4 p-5 sm:grid-cols-2">
+                <label className="grid gap-2 text-sm font-semibold">Período de atividade
+                  <select value={period} onChange={event => setPeriod(event.target.value)} className="h-10 rounded-lg border border-[#143d36]/15 bg-white px-3 text-sm font-normal">
+                    <option value="all">Todo o histórico</option><option value="7">Últimos 7 dias</option><option value="30">Últimos 30 dias</option><option value="90">Últimos 90 dias</option>
+                  </select>
+                </label>
+                <label className="grid gap-2 text-sm font-semibold">Volume mínimo
+                  <select value={minVolume} onChange={event => setMinVolume(event.target.value)} className="h-10 rounded-lg border border-[#143d36]/15 bg-white px-3 text-sm font-normal">
+                    <option value="1">1 ou mais ocorrências</option><option value="3">3 ou mais ocorrências</option><option value="5">5 ou mais ocorrências</option><option value="10">10 ou mais ocorrências</option>
+                  </select>
+                </label>
+              </CardContent>
+            </Card>
             <Card className="border-[#143d36]/10 bg-[#143d36] text-[#faf3e5] shadow-none">
               <CardContent className="flex items-center gap-4 p-5"><BarChart3 className="h-8 w-8 text-[#f6b08f]" /><div><p className="text-2xl font-semibold">{insights.data.length}</p><p className="text-sm text-[#faf3e5]/70">termos distintos disponíveis para priorização</p></div></CardContent>
             </Card>

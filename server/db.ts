@@ -1,4 +1,4 @@
-import { and, asc, desc, eq, like, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, gte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, localitySuggestions, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -287,10 +287,20 @@ export async function recordUnmatchedSearch(input: { query: string; uf?: string 
   return { recorded: true } as const;
 }
 
-export async function listUnmatchedSearches(limit = 50) {
+export type UnmatchedSearchFilters = { limit?: number; minVolume?: number; periodDays?: number };
+
+export async function listUnmatchedSearches(input: UnmatchedSearchFilters = {}) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
-  const safeLimit = Math.max(1, Math.min(limit, 100));
+  const safeLimit = Math.max(1, Math.min(input.limit ?? 50, 100));
+  const safeMinVolume = Math.max(1, Math.min(input.minVolume ?? 1, 10_000));
+  const safePeriodDays = input.periodDays ? Math.max(1, Math.min(input.periodDays, 365)) : undefined;
+  const conditions = [gte(unmatchedSearches.searchCount, safeMinVolume)];
+  if (safePeriodDays) {
+    const from = new Date();
+    from.setDate(from.getDate() - safePeriodDays);
+    conditions.push(gte(unmatchedSearches.lastSeenAt, from));
+  }
   return db
     .select({
       normalizedQuery: unmatchedSearches.normalizedQuery,
@@ -301,6 +311,7 @@ export async function listUnmatchedSearches(limit = 50) {
       lastSeenAt: unmatchedSearches.lastSeenAt,
     })
     .from(unmatchedSearches)
+    .where(and(...conditions))
     .orderBy(desc(unmatchedSearches.searchCount), desc(unmatchedSearches.lastSeenAt))
     .limit(safeLimit);
 }
@@ -319,6 +330,43 @@ export async function createLocalitySuggestion(input: { municipalityIbgeCode: nu
   if (!db) throw new Error("A base de dados não está disponível.");
   await db.insert(localitySuggestions).values(payload);
   return { accepted: true } as const;
+}
+
+export type LocalitySuggestionFilters = { status?: "pending" | "reviewed" | "approved" | "dismissed"; limit?: number };
+
+export async function listLocalitySuggestions(input: LocalitySuggestionFilters = {}) {
+  const db = await getDb();
+  if (!db) throw new Error("A base de dados não está disponível.");
+  const safeLimit = Math.max(1, Math.min(input.limit ?? 100, 100));
+  const statusCondition = input.status ? eq(localitySuggestions.status, input.status) : undefined;
+  return db
+    .select({
+      id: localitySuggestions.id,
+      municipalityIbgeCode: localitySuggestions.municipalityIbgeCode,
+      municipalityName: municipalities.name,
+      uf: states.uf,
+      topic: localitySuggestions.topic,
+      note: localitySuggestions.note,
+      status: localitySuggestions.status,
+      createdAt: localitySuggestions.createdAt,
+      reviewedAt: localitySuggestions.reviewedAt,
+    })
+    .from(localitySuggestions)
+    .leftJoin(municipalities, eq(localitySuggestions.municipalityIbgeCode, municipalities.ibgeCode))
+    .leftJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
+    .where(statusCondition)
+    .orderBy(asc(localitySuggestions.status), desc(localitySuggestions.createdAt))
+    .limit(safeLimit);
+}
+
+export async function reviewLocalitySuggestion(input: { id: number; status: "reviewed" | "approved" | "dismissed" }) {
+  const db = await getDb();
+  if (!db) throw new Error("A base de dados não está disponível.");
+  await db
+    .update(localitySuggestions)
+    .set({ status: input.status, reviewedAt: new Date() })
+    .where(eq(localitySuggestions.id, input.id));
+  return { updated: true } as const;
 }
 
 export async function getDddDetails(code: string) {

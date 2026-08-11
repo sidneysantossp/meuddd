@@ -35,6 +35,10 @@ O bloco local só apresenta informação quando existe uma fonte institucional v
 
 As fichas de novas capitais só devem ganhar factos históricos, nomes de equipamentos ou dados operacionais após verificação individual em fonte oficial. Atalhos para pesquisas cartográficas são identificados como pesquisas externas, não como recomendação editorial de um estabelecimento.
 
+## Confirmação da série de capitais solicitada
+
+As fichas de **Belo Horizonte, Salvador e Curitiba** já estão publicadas no catálogo local com a estrutura completa abaixo do mapa: contexto histórico atribuído, património, parques, mobilidade, serviços úteis e links de exploração no mapa. A nova verificação confirmou que os respetivos canais institucionais continuam disponíveis; qualquer detalhe que dependa de operação diária, como horários e itinerários, permanece ligado à fonte responsável.
+
 ## Fontes de apoio para todas as localidades
 
 | Tema | Entidade | URL |

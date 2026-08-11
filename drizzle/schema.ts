@@ -91,7 +91,7 @@ export const localitySuggestions = mysqlTable(
     municipalityIbgeCode: int("municipalityIbgeCode").notNull(),
     topic: mysqlEnum("topic", ["mobility", "useful_phone", "other"]).notNull(),
     note: varchar("note", { length: 600 }).notNull(),
-    status: mysqlEnum("status", ["pending", "reviewed", "dismissed"]).notNull().default("pending"),
+    status: mysqlEnum("status", ["pending", "reviewed", "approved", "dismissed"]).notNull().default("pending"),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
     reviewedAt: timestamp("reviewedAt"),
   },

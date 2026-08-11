@@ -55,3 +55,8 @@
 - [x] Criar uma interface protegida para consultar e priorizar termos de pesquisa sem resultado.
 - [x] Adicionar um botão de sugerir alteração nas páginas municipais e persistir sugestões de telefones úteis ou transportes.
 - [x] Testar fluxos, permissões, SSR, renderização visual e build da nova funcionalidade.
+- [x] Auditar o catálogo de Belo Horizonte, Salvador e Curitiba e as fontes institucionais já registadas.
+- [x] Completar as fichas locais verificadas de Belo Horizonte, Salvador e Curitiba com a estrutura rica de informações.
+- [x] Adicionar filtros de período e volume ao painel de termos de pesquisa sem resultados.
+- [x] Criar interface administrativa de moderação para aprovar ou rejeitar sugestões locais.
+- [x] Validar filtros, moderação, permissões, SSR, testes e build da expansão.

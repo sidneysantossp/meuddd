@@ -29,8 +29,9 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   path = path.replace(/\/+$/, "") || "/";
   const states = await prefetch.states();
   await seed(queryClient, getQueryKey(trpc.ddd.states, undefined, "query"), states);
-  if (path === "/admin/pesquisas") {
-    return { title: `Pesquisas sem resultado | ${site}`, description: "Área privada de análise editorial.", canonicalPath: path, noindex: true, ogType: "website" };
+  if (path === "/admin/pesquisas" || path === "/admin/sugestoes") {
+    const title = path === "/admin/pesquisas" ? "Pesquisas sem resultado" : "Moderação de sugestões";
+    return { title: `${title} | ${site}`, description: "Área privada de gestão editorial.", canonicalPath: path, noindex: true, ogType: "website" };
   }
   if (path === "/") {
     const params = new URLSearchParams(rawSearch);

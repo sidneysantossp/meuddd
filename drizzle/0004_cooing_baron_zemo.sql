@@ -1,0 +1,1 @@
+ALTER TABLE `locality_suggestions` MODIFY COLUMN `status` enum('pending','reviewed','approved','dismissed') NOT NULL DEFAULT 'pending';
