@@ -91,6 +91,8 @@ export function createApp() {
   return app;
 }
 
+export { serveStatic };
+
 async function startServer() {
   const app = createApp();
   const server = createServer(app);

@@ -81,3 +81,6 @@
 - [x] Diagnosticar e corrigir a falha `FUNCTION_INVOCATION_FAILED` da função serverless da Vercel.
 - [ ] Validar publicamente a resolução de `meuddd.com.br` e `www.meuddd.com.br` com evidência registada no projeto.
 - [ ] Confirmar o deployment da Vercel no domínio final com resposta HTTPS 200 e HTML SSR correto após a correção de DNS.
+- [x] Obter o detalhe de runtime de `FUNCTION_INVOCATION_FAILED` no deployment mais recente da Vercel e corrigir a dependência que impede o arranque.
+- [x] Registar no projeto a mensagem textual ou stack trace da função Vercel que originou o erro de runtime.
+- [ ] Validar no deployment público que a função Vercel deixou de falhar e registar uma resposta HTTP bem-sucedida.
