@@ -4,6 +4,7 @@ import { hydrateRoot } from "react-dom/client";
 import { Router } from "wouter";
 import superjson from "superjson";
 import { trpc } from "@/lib/trpc";
+import { installAnalytics } from "@/lib/analytics";
 import { COOKIE_NAME, UNAUTHED_ERR_MSG } from "@shared/const";
 import App from "./App";
 import { startLogin } from "./const";
@@ -17,4 +18,5 @@ const trpcClient = trpc.createClient({ links: [httpBatchLink({ url: "/api/trpc",
 const rawState = (window as Window & { __RQ_STATE__?: unknown }).__RQ_STATE__;
 // O servidor injeta o resultado de dehydrate() como JSON seguro; não é um payload serializado pelo SuperJSON.
 const dehydratedState = rawState as DehydratedState | undefined;
+installAnalytics(document, import.meta.env.VITE_ANALYTICS_ENDPOINT, import.meta.env.VITE_ANALYTICS_WEBSITE_ID);
 hydrateRoot(document.getElementById("root")!, <trpc.Provider client={trpcClient} queryClient={queryClient}><QueryClientProvider client={queryClient}><HydrationBoundary state={dehydratedState}><Router><App /></Router></HydrationBoundary></QueryClientProvider></trpc.Provider>);
