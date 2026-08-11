@@ -31,4 +31,13 @@ describe("pesquisa territorial normalizada", () => {
     expect(__testables.prepareUnmatchedSearch({ query: "a" })).toBeNull();
     expect(__testables.prepareUnmatchedSearch({ query: "11" })).toBeNull();
   });
+
+  it("prepara sugestões locais moderáveis sem dados de contacto", () => {
+    expect(__testables.prepareLocalitySuggestion({ municipalityIbgeCode: 3550308, topic: "mobility", note: "  O link oficial de horários foi atualizado.  " })).toEqual({
+      municipalityIbgeCode: 3550308,
+      topic: "mobility",
+      note: "O link oficial de horários foi atualizado.",
+    });
+    expect(__testables.prepareLocalitySuggestion({ municipalityIbgeCode: 3550308, topic: "mobility", note: "curta" })).toBeNull();
+  });
 });

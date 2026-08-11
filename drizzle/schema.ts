@@ -83,6 +83,25 @@ export const unmatchedSearches = mysqlTable(
   table => [index("unmatched_searches_last_seen_idx").on(table.lastSeenAt)],
 );
 
+/** Sugestões públicas de actualização, sem IP, contacto ou dados de perfil. */
+export const localitySuggestions = mysqlTable(
+  "locality_suggestions",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    municipalityIbgeCode: int("municipalityIbgeCode").notNull(),
+    topic: mysqlEnum("topic", ["mobility", "useful_phone", "other"]).notNull(),
+    note: varchar("note", { length: 600 }).notNull(),
+    status: mysqlEnum("status", ["pending", "reviewed", "dismissed"]).notNull().default("pending"),
+    createdAt: timestamp("createdAt").defaultNow().notNull(),
+    reviewedAt: timestamp("reviewedAt"),
+  },
+  table => [
+    index("locality_suggestions_municipality_idx").on(table.municipalityIbgeCode),
+    index("locality_suggestions_status_created_idx").on(table.status, table.createdAt),
+  ],
+);
+
 export type State = typeof states.$inferSelect;
 export type Municipality = typeof municipalities.$inferSelect;
 export type UnmatchedSearch = typeof unmatchedSearches.$inferSelect;
+export type LocalitySuggestion = typeof localitySuggestions.$inferSelect;

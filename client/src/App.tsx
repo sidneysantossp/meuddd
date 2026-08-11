@@ -11,6 +11,7 @@ import StatePage from "./pages/StatePage";
 import MunicipalityPage from "./pages/MunicipalityPage";
 import DddGuidePage from "./pages/DddGuidePage";
 import GuidesIndexPage from "./pages/GuidesIndexPage";
+import SearchInsightsPage from "./pages/SearchInsightsPage";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/guias" component={GuidesIndexPage} />
       <Route path="/guia/:slug" component={DddGuidePage} />
       <Route path="/ddd/:code" component={DddDetail} />
+      <Route path="/admin/pesquisas" component={SearchInsightsPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

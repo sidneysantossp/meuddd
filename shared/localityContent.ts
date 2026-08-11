@@ -96,6 +96,54 @@ const fortalezaMobility: LocalSource = {
   verifiedOn: "11 de agosto de 2026",
 };
 
+const saoPauloTourism: LocalSource = {
+  label: "Cidade de São Paulo — turismo oficial",
+  url: "https://cidadedesaopaulo.com/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const saoPauloCulture: LocalSource = {
+  label: "Secretaria Municipal de Cultura e Economia Criativa de São Paulo",
+  url: "https://prefeitura.sp.gov.br/web/cultura",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const rioTourism: LocalSource = {
+  label: "Riotur — turismo oficial do Rio de Janeiro",
+  url: "https://riotur.rio/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const rioMemory: LocalSource = {
+  label: "Aqui Tem Memória — Secretaria Municipal de Turismo do Rio",
+  url: "https://turismo.prefeitura.rio/aqui-tem-memoria/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const rioMobility: LocalSource = {
+  label: "Secretaria Municipal de Transportes do Rio de Janeiro",
+  url: "https://transportes.prefeitura.rio/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const brasiliaTourism: LocalSource = {
+  label: "Secretaria de Turismo do Distrito Federal",
+  url: "https://www.turismo.df.gov.br/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const brasiliaHeritage: LocalSource = {
+  label: "Património Cultural — Secretaria de Cultura e Economia Criativa do DF",
+  url: "https://www.cultura.df.gov.br/patrimonio-cultural",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const brasiliaMobility: LocalSource = {
+  label: "Secretaria de Transporte e Mobilidade do Distrito Federal",
+  url: "https://www.semob.df.gov.br/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
 const localityContent: Record<string, LocalityContent> = {
   "sp:barueri": {
     history: {
@@ -259,6 +307,90 @@ const localityContent: Record<string, LocalityContent> = {
     municipalServices: [
       { title: "Pontos turísticos e agenda oficial de Fortaleza", href: fortalezaTourism.url, source: fortalezaTourism },
       { title: "Gastronomia em Fortaleza: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Fortaleza CE"), source: fortalezaTourism },
+    ],
+  },
+  "sp:sao-paulo": {
+    history: {
+      body: "A Secretaria Municipal de Cultura e Economia Criativa mantém canais públicos dedicados a cultura, memória e património. Consulte a fonte institucional para aprofundar a história da cidade e confirmar a programação cultural.",
+      source: saoPauloCulture,
+    },
+    heritage: [{
+      title: "Cultura, museus e memória em São Paulo",
+      description: "Os canais oficiais de cultura e turismo reúnem percursos de cidade, museus e espaços culturais. Abra o mapa para localizar equipamentos próximos e confirme horários no canal responsável.",
+      href: mapSearchUrl("museus e centros culturais São Paulo SP"),
+      source: saoPauloCulture,
+    }],
+    parks: [{
+      title: "Parques e áreas verdes de São Paulo",
+      description: "O portal turístico oficial organiza referências para explorar a cidade. Consulte o canal público e as regras do parque escolhido antes da visita.",
+      href: mapSearchUrl("parques e áreas verdes São Paulo SP"),
+      source: saoPauloTourism,
+    }],
+    mobility: {
+      body: "A rede de transporte de São Paulo é extensa e as condições operacionais podem mudar. Utilize o portal de serviços municipal e os canais dos operadores para planear deslocações, verificar linhas e consultar acessibilidade em tempo real.",
+      href: "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      source: saoPauloTourism,
+    },
+    municipalServices: [
+      { title: "Serviços e telefones úteis de São Paulo", href: "https://sp156.prefeitura.sp.gov.br/portal/servicos", source: saoPauloTourism },
+      { title: "Roteiros e agenda oficial de São Paulo", href: saoPauloTourism.url, source: saoPauloTourism },
+      { title: "Bares e restaurantes em São Paulo: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes São Paulo SP"), source: saoPauloTourism },
+    ],
+  },
+  "rj:rio-de-janeiro": {
+    history: {
+      body: "O projecto municipal Aqui Tem Memória identifica monumentos, estátuas e pontos históricos e culturais com informação acessível. Consulte os circuitos oficiais para explorar a memória urbana e confirmar os locais disponíveis.",
+      source: rioMemory,
+    },
+    heritage: [{
+      title: "Circuitos Aqui Tem Memória",
+      description: "A Secretaria Municipal de Turismo apresenta circuitos de património em zonas como Centro, Lapa, Glória e Zona Sul. Aceda à fonte para mapas, contexto e actualizações.",
+      href: rioMemory.url,
+      source: rioMemory,
+    }],
+    parks: [{
+      title: "Parques, praias e áreas ao ar livre do Rio",
+      description: "A Riotur reúne informações oficiais para explorar atrações ao ar livre. Confirme condições de acesso e programação antes de sair.",
+      href: mapSearchUrl("parques e áreas ao ar livre Rio de Janeiro RJ"),
+      source: rioTourism,
+    }],
+    mobility: {
+      body: "A Secretaria Municipal de Transportes é o canal público para informações sobre mobilidade urbana. Consulte a fonte antes de viajar, pois linhas, horários, operação e intervenções podem mudar.",
+      href: rioMobility.url,
+      source: rioMobility,
+    },
+    municipalServices: [
+      { title: "Informações turísticas oficiais do Rio de Janeiro", href: rioTourism.url, source: rioTourism },
+      { title: "Serviços e mobilidade do Rio de Janeiro", href: rioMobility.url, source: rioMobility },
+      { title: "Bares e restaurantes no Rio: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Rio de Janeiro RJ"), source: rioTourism },
+    ],
+  },
+  "df:brasilia": {
+    history: {
+      body: "A Secretaria de Cultura do DF documenta a formação de Brasília e do Distrito Federal, incluindo referências do Conjunto Urbanístico e outras memórias do território. Consulte a fonte para aprofundar o enquadramento histórico e patrimonial.",
+      source: brasiliaHeritage,
+    },
+    heritage: [{
+      title: "Conjunto Urbanístico e património cultural de Brasília",
+      description: "A política cultural do DF apresenta referências materiais e imateriais do território, incluindo a preservação urbanística de Brasília. Aceda ao canal institucional para contexto e normas de visitação.",
+      href: brasiliaHeritage.url,
+      source: brasiliaHeritage,
+    }],
+    parks: [{
+      title: "Parques e espaços públicos de Brasília",
+      description: "O portal de turismo do Distrito Federal reúne informação para visitantes. Planeie percursos e confirme serviços, acesso e programação no canal público responsável.",
+      href: mapSearchUrl("parques e espaços públicos Brasília DF"),
+      source: brasiliaTourism,
+    }],
+    mobility: {
+      body: "A Secretaria de Transporte e Mobilidade do DF é a referência institucional para linhas, terminais, horários e serviços de mobilidade. Consulte o portal oficial para condições actualizadas antes da deslocação.",
+      href: brasiliaMobility.url,
+      source: brasiliaMobility,
+    },
+    municipalServices: [
+      { title: "Informações turísticas e roteiros oficiais de Brasília", href: brasiliaTourism.url, source: brasiliaTourism },
+      { title: "Mobilidade e serviços de transporte do Distrito Federal", href: brasiliaMobility.url, source: brasiliaMobility },
+      { title: "Bares e restaurantes em Brasília: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Brasília DF"), source: brasiliaTourism },
     ],
   },
 };

@@ -1,6 +1,6 @@
-import { and, asc, eq, like, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
+import { InsertUser, localitySuggestions, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { editorialGuides } from "../shared/editorialGuides";
 
@@ -287,6 +287,40 @@ export async function recordUnmatchedSearch(input: { query: string; uf?: string 
   return { recorded: true } as const;
 }
 
+export async function listUnmatchedSearches(limit = 50) {
+  const db = await getDb();
+  if (!db) throw new Error("A base de dados não está disponível.");
+  const safeLimit = Math.max(1, Math.min(limit, 100));
+  return db
+    .select({
+      normalizedQuery: unmatchedSearches.normalizedQuery,
+      latestQuery: unmatchedSearches.latestQuery,
+      selectedUf: unmatchedSearches.selectedUf,
+      searchCount: unmatchedSearches.searchCount,
+      firstSeenAt: unmatchedSearches.firstSeenAt,
+      lastSeenAt: unmatchedSearches.lastSeenAt,
+    })
+    .from(unmatchedSearches)
+    .orderBy(desc(unmatchedSearches.searchCount), desc(unmatchedSearches.lastSeenAt))
+    .limit(safeLimit);
+}
+
+export function prepareLocalitySuggestion(input: { municipalityIbgeCode: number; topic: "mobility" | "useful_phone" | "other"; note: string }) {
+  const municipalityIbgeCode = Number(input.municipalityIbgeCode);
+  const note = input.note.trim().replace(/\s+/g, " ").slice(0, 600);
+  if (!Number.isInteger(municipalityIbgeCode) || municipalityIbgeCode <= 0 || note.length < 12) return null;
+  return { municipalityIbgeCode, topic: input.topic, note };
+}
+
+export async function createLocalitySuggestion(input: { municipalityIbgeCode: number; topic: "mobility" | "useful_phone" | "other"; note: string }) {
+  const payload = prepareLocalitySuggestion(input);
+  if (!payload) throw new Error("A sugestão precisa identificar a localidade e descrever a alteração em pelo menos 12 caracteres.");
+  const db = await getDb();
+  if (!db) throw new Error("A base de dados não está disponível.");
+  await db.insert(localitySuggestions).values(payload);
+  return { accepted: true } as const;
+}
+
 export async function getDddDetails(code: string) {
   const municipalitiesForDdd = await selectMunicipalities({ ddd: code });
   if (!municipalitiesForDdd.length) return null;
@@ -400,4 +434,4 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch };
+export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion };

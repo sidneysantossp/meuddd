@@ -49,3 +49,9 @@
 - [x] Expandir o conteúdo local factual e atribuído para as capitais prioritárias, após pesquisa individual das respetivas fontes institucionais.
 - [x] Criar guias editoriais dedicados para os DDDs prioritários, com SSR, metadados e inclusão no sitemap.
 - [x] Adicionar cobertura automatizada explícita para a secção de guias relacionados e para o registo de pesquisas sem resultados.
+- [x] Auditar os componentes e procedimentos existentes para conteúdo local, telemetria e sugestões de utilizadores.
+- [x] Pesquisar e documentar fontes institucionais de turismo, património, parques e mobilidade para São Paulo, Rio de Janeiro e Brasília.
+- [x] Publicar conteúdo local atribuído nas páginas de São Paulo, Rio de Janeiro e Brasília abaixo do mapa.
+- [x] Criar uma interface protegida para consultar e priorizar termos de pesquisa sem resultado.
+- [x] Adicionar um botão de sugerir alteração nas páginas municipais e persistir sugestões de telefones úteis ou transportes.
+- [x] Testar fluxos, permissões, SSR, renderização visual e build da nova funcionalidade.

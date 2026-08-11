@@ -3,7 +3,7 @@ import { z } from "zod";
 import * as db from "./db";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { publicProcedure, router } from "./_core/trpc";
+import { adminProcedure, publicProcedure, router } from "./_core/trpc";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -35,6 +35,20 @@ export const appRouter = router({
       .input(z.object({ uf: z.string().length(2), slug: z.string().min(1).max(160) }))
       .query(({ input }) => db.getMunicipalityDetails(input.uf, input.slug)),
     states: publicProcedure.query(() => db.listStateSummaries()),
+  }),
+  local: router({
+    suggestUpdate: publicProcedure
+      .input(z.object({
+        municipalityIbgeCode: z.number().int().positive(),
+        topic: z.enum(["mobility", "useful_phone", "other"]),
+        note: z.string().min(12).max(600),
+      }))
+      .mutation(({ input }) => db.createLocalitySuggestion(input)),
+  }),
+  insights: router({
+    unmatchedSearches: adminProcedure
+      .input(z.object({ limit: z.number().int().min(1).max(100).optional() }).optional())
+      .query(({ input }) => db.listUnmatchedSearches(input?.limit ?? 50)),
   }),
 });
 
