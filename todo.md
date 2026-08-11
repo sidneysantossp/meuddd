@@ -34,3 +34,8 @@
 - [x] Adicionar testes automatizados ao componente de partilha para URL gerado e confirmação após cópia.
 - [x] Testar LinkedIn e X na página de DDD e registar os destinos de partilha.
 - [x] Testar WhatsApp na página municipal e registar o destino de partilha.
+- [x] Pesquisar fontes oficiais e definir a série inicial de 15 a 20 guias editoriais de telefonia.
+- [x] Publicar os guias de telefonia com metadados, JSON-LD Article e ligações internas territoriais.
+- [x] Implementar pesquisa de municípios tolerante a acentos e erros ortográficos comuns.
+- [x] Adicionar testes de hidratação SSR para a rota de guias editoriais.
+- [x] Validar testes, build, renderização SSR e pesquisa melhorada antes da entrega.

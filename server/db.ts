@@ -2,6 +2,7 @@ import { and, asc, eq, like, or } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, municipalities, states, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
+import { editorialGuides } from "../shared/editorialGuides";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -107,6 +108,76 @@ type MunicipalityRecord = {
   statePopulationReferenceYear: number | null;
 };
 
+function normalizeSearch(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function levenshteinDistance(left: string, right: string) {
+  if (left === right) return 0;
+  if (!left.length) return right.length;
+  if (!right.length) return left.length;
+  let previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+    const current = [leftIndex];
+    for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+      current[rightIndex] = Math.min(
+        current[rightIndex - 1] + 1,
+        previous[rightIndex] + 1,
+        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+    }
+    previous = current;
+  }
+  return previous[right.length];
+}
+
+function permittedTypos(length: number) {
+  if (length <= 4) return 1;
+  if (length <= 9) return 2;
+  return 3;
+}
+
+function fuzzyScore(row: MunicipalityRecord, rawQuery: string) {
+  const query = normalizeSearch(rawQuery);
+  if (!query) return 0;
+  const city = normalizeSearch(row.name);
+  const state = normalizeSearch(row.stateName);
+  const region = normalizeSearch(row.region);
+  const candidates = [
+    { value: city, boost: 1_200 },
+    { value: state, boost: 900 },
+    { value: region, boost: 700 },
+    { value: normalizeSearch(row.uf), boost: 850 },
+    { value: row.ddd, boost: 1_000 },
+  ];
+  for (const candidate of candidates) {
+    if (candidate.value === query) return candidate.boost;
+    if (candidate.value.includes(query)) return candidate.boost - 80 - candidate.value.indexOf(query);
+  }
+  if (query.length < 3 || /^\d+$/.test(query)) return 0;
+  return candidates.reduce((best, candidate) => {
+    const distance = levenshteinDistance(query, candidate.value);
+    if (distance > permittedTypos(query.length)) return best;
+    return Math.max(best, candidate.boost / 5 + 30 - distance);
+  }, 0);
+}
+
+function fuzzyFilterMunicipalities(rows: MunicipalityRecord[], query: string) {
+  const scored = rows
+    .map(row => ({ row, score: fuzzyScore(row, query) }))
+    .filter((entry): entry is { row: MunicipalityRecord; score: number } => entry.score > 0)
+    .sort((left, right) => right.score - left.score || left.row.name.localeCompare(right.row.name, "pt-BR"));
+  const threshold = Math.max((scored[0]?.score ?? 0) - 50, 1);
+  return scored
+    .filter(entry => entry.score >= threshold)
+    .map(entry => entry.row);
+}
+
 export type DddSummary = {
   code: string;
   states: { name: string; uf: string; region: string }[];
@@ -187,7 +258,9 @@ async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; 
 }
 
 export async function searchDdds(input: { query?: string; uf?: string }) {
-  return groupDddRows(await selectMunicipalities(input));
+  const query = input.query?.trim();
+  if (!query || /^\d+$/.test(query.replace(/\D/g, ""))) return groupDddRows(await selectMunicipalities(input));
+  return groupDddRows(fuzzyFilterMunicipalities(await selectMunicipalities({ uf: input.uf }), query));
 }
 
 export async function getDddDetails(code: string) {
@@ -288,7 +361,7 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
       states: stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
       ddds: dddRows.map(item => `/ddd/${item.code}`),
       citiesByUf,
-      guides: ["/", "/guia/o-que-e-ddd"],
+      guides: ["/", "/guias", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
     },
   ][0];
 }
@@ -303,4 +376,4 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { groupDddRows };
+export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities };

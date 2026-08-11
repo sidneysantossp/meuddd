@@ -3,6 +3,7 @@ import { getQueryKey } from "@trpc/react-query";
 import type { inferRouterOutputs } from "@trpc/server";
 import type { AppRouter } from "../../../server/routers";
 import { trpc } from "@/lib/trpc";
+import { editorialGuides, editorialSources, findEditorialGuide } from "@shared/editorialGuides";
 
 type Outputs = inferRouterOutputs<AppRouter>;
 export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[] };
@@ -35,8 +36,12 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     await seed(queryClient, getQueryKey(trpc.ddd.search, input, "query"), results);
     return { title: `${site} — Consulte DDDs de todo o Brasil`, description, canonicalPath: "/", ogType: "website", jsonLd: [{ "@context": "https://schema.org", "@type": "WebSite", name: site, url: "/", potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: "/?q={search_term_string}" }, "query-input": "required name=search_term_string" } }] };
   }
-  if (path === "/guia/o-que-e-ddd") {
-    return { title: `O que é DDD? Como funcionam os códigos de área | ${site}`, description: "Entenda o que é DDD, como os códigos de área funcionam no Brasil e como consultar a cidade certa.", canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "O que é DDD", item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: "O que é DDD?", description: "Guia para entender os códigos de área no Brasil.", inLanguage: "pt-BR", mainEntityOfPage: path, url: path }] };
+  if (path === "/guias") return { title: `Guias de telefonia: DDD, chamadas e direitos | ${site}`, description: "Guias práticos sobre DDD, numeração, chamadas, portabilidade e direitos do consumidor na telefonia brasileira.", canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", name: "Guias de telefonia", url: path, hasPart: editorialGuides.map(guide => ({ "@type": "Article", headline: guide.title, url: `/guia/${guide.slug}` })) }] };
+  const guideMatch = path.match(/^\/guia\/([^/]+)$/);
+  if (guideMatch) {
+    const guide = findEditorialGuide(guideMatch[1]);
+    if (!guide) return { title: "Guia não encontrado | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+    return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
   }
   const dddMatch = path.match(/^\/ddd\/(\d{2})$/);
   if (dddMatch) {

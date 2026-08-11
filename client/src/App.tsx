@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import StatePage from "./pages/StatePage";
 import MunicipalityPage from "./pages/MunicipalityPage";
 import DddGuidePage from "./pages/DddGuidePage";
+import GuidesIndexPage from "./pages/GuidesIndexPage";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -18,7 +19,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/estado/:uf" component={StatePage} />
       <Route path="/cidade/:uf/:slug" component={MunicipalityPage} />
-      <Route path="/guia/o-que-e-ddd" component={DddGuidePage} />
+      <Route path="/guias" component={GuidesIndexPage} />
+      <Route path="/guia/:slug" component={DddGuidePage} />
       <Route path="/ddd/:code" component={DddDetail} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
