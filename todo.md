@@ -19,3 +19,8 @@
 - [x] Validar marcação estruturada, metadados, resposta HTML e cobertura de rotas prioritárias.
 - [x] Definir e rever fontes editoriais por estado e município para clima e pontos de interesse antes de as publicar.
 - [x] Criar o primeiro guia informacional de telefonia, com dados estruturados e ligações para os pilares territoriais.
+- [x] Reiniciar o servidor de desenvolvimento após indisponibilidade reportada e confirmar a resposta da pré-visualização.
+- [x] Auditar a hierarquia de sitemaps XML e confirmar a descoberta de rotas por estado, DDD, cidade e conteúdos.
+- [x] Rever a marcação Schema.org de páginas territoriais e definir os limites corretos para LocalBusiness e FAQPage.
+- [x] Testar HTML, metadados, JSON-LD e navegação interna nas páginas-pilar de estado e município.
+- [x] Documentar a estratégia de indexação escalável e as recomendações para pesquisa generativa.

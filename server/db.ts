@@ -260,7 +260,14 @@ export async function listStateSummaries(): Promise<StateSummary[]> {
     .sort((left, right) => left.name.localeCompare(right.name, "pt-BR"));
 }
 
-export async function listSitemapPaths() {
+export type SitemapInventory = {
+  states: string[];
+  ddds: string[];
+  citiesByUf: Record<string, string[]>;
+  guides: string[];
+};
+
+export async function listSitemapInventory(): Promise<SitemapInventory> {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   const municipalitiesForSitemap = await db
@@ -270,12 +277,29 @@ export async function listSitemapPaths() {
     .where(and());
   const stateRows = await db.select({ uf: states.uf }).from(states);
   const dddRows = await db.selectDistinct({ code: municipalities.ddd }).from(municipalities).orderBy(asc(municipalities.ddd));
+  const citiesByUf: Record<string, string[]> = {};
+  for (const item of municipalitiesForSitemap) {
+    if (!item.slug) continue;
+    const uf = item.uf.toLowerCase();
+    citiesByUf[uf] = [...(citiesByUf[uf] ?? []), `/cidade/${uf}/${item.slug}`];
+  }
   return [
-    "/",
-    "/guia/o-que-e-ddd",
-    ...stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
-    ...dddRows.map(item => `/ddd/${item.code}`),
-    ...municipalitiesForSitemap.flatMap(item => item.slug ? [`/cidade/${item.uf.toLowerCase()}/${item.slug}`] : []),
+    {
+      states: stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
+      ddds: dddRows.map(item => `/ddd/${item.code}`),
+      citiesByUf,
+      guides: ["/", "/guia/o-que-e-ddd"],
+    },
+  ][0];
+}
+
+export async function listSitemapPaths() {
+  const inventory = await listSitemapInventory();
+  return [
+    ...inventory.guides,
+    ...inventory.states,
+    ...inventory.ddds,
+    ...Object.values(inventory.citiesByUf).flat(),
   ];
 }
 

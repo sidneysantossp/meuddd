@@ -12,7 +12,7 @@ describe("composeSsrHtml", () => {
         description: "Cidades do DDD 11.",
         canonicalPath: "/ddd/11",
         noindex: true,
-        jsonLd: [{ "@context": "https://schema.org", "@type": "DefinedTerm", name: "DDD 11" }],
+        jsonLd: [{ "@context": "https://schema.org", "@type": "DefinedTerm", "@id": "/ddd/11", name: "DDD 11" }],
       },
       "https://dddbrasil.example"
     );
@@ -21,6 +21,7 @@ describe("composeSsrHtml", () => {
     expect(html).toContain('rel="canonical" href="https://dddbrasil.example/ddd/11"');
     expect(html).toContain('name="robots" content="noindex,follow"');
     expect(html).toContain('type="application/ld+json"');
+    expect(html).toContain('"@id":"https://dddbrasil.example/ddd/11"');
     expect(html).toContain("<main>DDD 11</main>");
     expect(html).not.toContain("<!--app-head-->");
   });

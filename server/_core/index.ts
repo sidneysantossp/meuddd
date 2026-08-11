@@ -6,7 +6,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
-import { listSitemapPaths } from "../db";
+import { listSitemapInventory } from "../db";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 
@@ -38,6 +38,11 @@ function sitemapXml(paths: string[], origin: string) {
   return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</urlset>`;
 }
 
+function sitemapIndexXml(paths: string[], origin: string) {
+  const entries = paths.map(path => `<sitemap><loc>${new URL(path, origin).toString()}</loc></sitemap>`).join("");
+  return `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</sitemapindex>`;
+}
+
 async function startServer() {
   const app = express();
   const server = createServer(app);
@@ -60,24 +65,22 @@ async function startServer() {
   });
   app.get("/sitemap.xml", (req, res) => {
     const origin = requestOrigin(req);
-    const maps = ["estados", "ddds", "cidades", "guias"]
-      .map(name => `<sitemap><loc>${new URL(`/sitemaps/${name}.xml`, origin).toString()}</loc></sitemap>`)
-      .join("");
-    res.type("application/xml").send(`<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${maps}</sitemapindex>`);
+    res.type("application/xml").send(sitemapIndexXml(["/sitemaps/estados.xml", "/sitemaps/ddds.xml", "/sitemaps/cidades.xml", "/sitemaps/guias.xml"], origin));
   });
   app.get("/sitemaps/:kind.xml", async (req, res, next) => {
     try {
-      const allPaths = await listSitemapPaths();
+      const inventory = await listSitemapInventory();
       const kind = req.params.kind;
-      const selected = kind === "estados"
-        ? allPaths.filter(path => path.startsWith("/estado/"))
-        : kind === "ddds"
-          ? allPaths.filter(path => path.startsWith("/ddd/"))
-          : kind === "cidades"
-            ? allPaths.filter(path => path.startsWith("/cidade/"))
-            : kind === "guias"
-              ? allPaths.filter(path => path.startsWith("/guia/"))
-            : null;
+      if (kind === "cidades") {
+        const cityMaps = Object.keys(inventory.citiesByUf).sort().map(uf => `/sitemaps/cidades-${uf}.xml`);
+        return res.type("application/xml").send(sitemapIndexXml(cityMaps, requestOrigin(req)));
+      }
+      const cityMatch = kind.match(/^cidades-([a-z]{2})$/);
+      const selected = kind === "estados" ? inventory.states
+        : kind === "ddds" ? inventory.ddds
+          : kind === "guias" ? inventory.guides
+            : cityMatch ? inventory.citiesByUf[cityMatch[1]] ?? null
+              : null;
       if (!selected) return res.status(404).type("text/plain").send("Sitemap não encontrado.");
       res.type("application/xml").send(sitemapXml(selected, requestOrigin(req)));
     } catch (error) {

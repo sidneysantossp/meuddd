@@ -1,7 +1,15 @@
 import type { HeadMeta } from "../../client/src/ssr/prefetch";
 
-const escapeHtml = (value: string) => value.replace(/[&<>"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character] ?? character);
+const escapeHtml = (value: string) => value.replace(/[&<>\"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character] ?? character);
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
+
+const urlKeys = new Set(["@id", "item", "url", "urlTemplate", "mainEntityOfPage"]);
+function absolutizeJsonLd(value: unknown, origin: string, key?: string): unknown {
+  if (typeof value === "string") return key && urlKeys.has(key) && value.startsWith("/") ? new URL(value, origin).toString() : value;
+  if (Array.isArray(value)) return value.map(item => absolutizeJsonLd(item, origin));
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([entryKey, entryValue]) => [entryKey, absolutizeJsonLd(entryValue, origin, entryKey)]));
+  return value;
+}
 
 export function composeSsrHtml(template: string, html: string, dehydratedState: unknown, head: HeadMeta, origin: string) {
   const canonical = new URL(head.canonicalPath, origin).toString();
@@ -16,7 +24,7 @@ export function composeSsrHtml(template: string, html: string, dehydratedState: 
     `<meta property="og:locale" content="pt_BR">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     head.noindex ? `<meta name="robots" content="noindex,follow">` : "",
-    ...(head.jsonLd ?? []).map(item => `<script type="application/ld+json">${safeJson(item)}</script>`),
+    ...(head.jsonLd ?? []).map(item => `<script type="application/ld+json">${safeJson(absolutizeJsonLd(item, origin))}</script>`),
   ].join("");
   const stateScript = `<script>window.__RQ_STATE__=${safeJson(dehydratedState)}</script>`;
   return template.replace("<!--app-head-->", tags).replace("<!--app-html-->", html).replace("</body>", `${stateScript}</body>`);
