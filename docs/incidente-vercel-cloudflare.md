@@ -22,6 +22,26 @@ Além da separação entre a entrega SSR de produção (`server/_core/ssrStatic.
 
 Após reiniciar o servidor local e reproduzir a rota `/`, foi identificado que a referência de prefetch tinha de permanecer disponível durante a transformação SSR do Vite. A correção foi aplicada em `server/ssrPrefetch.ts`: `createSsrPrefetch` passou de constante-arrow para uma exportação de função explícita. A disponibilidade da factory é coberta em `server/ssrPrefetch.test.ts`. Além disso, `scripts/verify-vercel-runtime.mjs` passou a falhar explicitamente se `/` devolver HTTP 500 ou se o HTML contiver `createSsrPrefetch is not defined`; a execução limpa devolveu HTTP 200, estado de hidratação e ausência dessa exceção.
 
+A revisão `452270f` foi enviada ao branch `main` para o deployment Vercel. No primeiro acompanhamento, a Vercel apresentava a revisão em ambiente Production, ainda com estado `Queued`; após aproximadamente três minutos, o estado permanecia `Queued`, sem log de compilação ou erro adicional. A validação externa permanece pendente até ao estado final e à resposta dos domínios públicos.
+
+Na revisão pública `452270f`, anterior ao novo handler dedicado, o URL específico do deployment devolveu HTTP 500 em 11 de agosto de 2026, às 19:32 UTC-3. Os logs da Vercel registaram a mensagem exata `Cannot find module '../lightningcss.linux-x64-gnu.node'`, com a cadeia de carregamento `/var/task/node_modules/.pnpm/lightningcss@1.30.1/node_modules/lightningcss/node/index.js`, seguida de `Node.js process exited with exit status: 1`. Isto demonstra que a função publicada ainda alcançava uma dependência nativa de desenvolvimento. A correção local cria um handler serverless dedicado; a verificação `verify:vercel-runtime` bloqueia referências a `vite`, `rollup`, `lightningcss` e ao antigo módulo `server/_core/vite.ts` no handler compilado antes da próxima publicação.
+
+### Transcrição do erro de runtime da revisão 452270f
+
+```text
+Cannot find module '../lightningcss.linux-x64-gnu.node'
+
+Require stack:
+- /var/task/node_modules/.pnpm/lightningcss@1.30.1/node_modules/lightningcss/node/index.js
+
+Did you forget to add it to "dependencies" in `package.json`?
+
+Node.js process exited with exit status: 1.
+The logs above can help with debugging the issue.
+```
+
+O painel da Vercel associou esta exceção a `GET /` e `GET /favicon.ico` no host `meuddd-e4po0iyrq-admsuisso-1633s-projects.vercel.app`, ambos com HTTP 500 e código `FUNCTION_INVOCATION_FAILED`. Como a exceção não expôs frames adicionais além do `Require stack` acima, essa cadeia representa o stack trace completo disponibilizado pelo runtime.
+
 ## Referências oficiais
 
 - [Vercel — Adding & Configuring a Custom Domain](https://vercel.com/docs/domains/working-with-domains/add-a-domain): o domínio de ápice usa registo A e subdomínios usam CNAME; os valores exatos devem ser copiados do cartão de domínio da Vercel.

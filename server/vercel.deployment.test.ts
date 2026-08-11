@@ -15,9 +15,11 @@ describe("configuração de publicação Vercel", () => {
     expect(config.framework).toBe("express");
     expect(config.buildCommand).toBe("pnpm run build:vercel");
     expect(packageJson.scripts.build).toContain("--outDir ../dist/server");
+    expect(packageJson.scripts.build).toContain("esbuild server/vercel.handler.ts");
+    expect(packageJson.scripts.build).toContain("dist/vercel/handler.js");
     expect(config.functions["server.ts"].includeFiles).toBe("dist/**");
     expect(serverEntry).toContain('import express from "express"');
-    expect(serverEntry).toContain('import { createApp, serveStatic } from "./dist/index.js"');
+    expect(serverEntry).toContain('import productionHandler from "./dist/vercel/handler.js"');
     expect(serverEntry).not.toContain('"./server/_core/');
     expect(serverEntry).toContain("const app = express()");
     expect(serverEntry).toContain("export default app");
@@ -25,5 +27,6 @@ describe("configuração de publicação Vercel", () => {
     expect(coreEntry).toContain('await import("./vite")');
     expect(runtimeVerification).toContain("window.__RQ_STATE__");
     expect(runtimeVerification).toContain("homeResponse");
+    expect(runtimeVerification).toContain("dist/vercel/handler.js");
   });
 });

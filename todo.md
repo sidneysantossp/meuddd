@@ -91,3 +91,8 @@
 - [x] Corrigir a saída do build SSR, gerada em client/dist/server em vez de dist/server, para o caminho carregado pela Vercel.
 - [x] Garantir que a verificação local do runtime Vercel termina após consultar a rota SSR com dependência de base de dados.
 - [x] Adicionar uma verificação executável persistida que invoque `/` em modo SSR/Vercel e falhe por HTTP 500 ou por `createSsrPrefetch is not defined`.
+- [x] Investigar a falha HTTP 500 confirmada no URL único do deployment Vercel 452270f e capturar o stack trace de runtime correspondente.
+- [x] Impedir definitivamente que Vite, Rollup e Lightning CSS sejam incluídos ou importados pela função Vercel de produção.
+- [x] Atualizar o documento de incidente com a transcrição completa do erro da revisão 452270f, incluindo mensagem, Require stack e frames principais da Vercel.
+- [x] Fazer a verificação do handler Vercel falhar explicitamente se o bundle contiver `vite`, `rollup` ou `lightningcss`.
+- [ ] Validar uma revisão publicada após o handler dedicado com HTTP 200 e HTML SSR no URL de produção da Vercel.

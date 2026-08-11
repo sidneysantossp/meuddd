@@ -1,4 +1,13 @@
 import { createServer } from "node:http";
+import { readFile } from "node:fs/promises";
+import { resolve } from "node:path";
+
+const handlerBundle = await readFile(resolve("dist/vercel/handler.js"), "utf8");
+const forbiddenRuntimeReferences = [/\b(?:vite|rollup|lightningcss)\b/i, /server\/_core\/vite\.ts/i];
+const forbiddenReference = forbiddenRuntimeReferences.find(pattern => pattern.test(handlerBundle));
+if (forbiddenReference) {
+  throw new Error(`O bundle serverless não pode conter dependências de desenvolvimento: ${forbiddenReference}.`);
+}
 
 const { default: app } = await import(new URL("../server.ts", import.meta.url));
 const server = createServer(app);
