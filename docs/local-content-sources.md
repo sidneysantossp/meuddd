@@ -39,6 +39,14 @@ As fichas de novas capitais só devem ganhar factos históricos, nomes de equipa
 
 As fichas de **Belo Horizonte, Salvador e Curitiba** já estão publicadas no catálogo local com a estrutura completa abaixo do mapa: contexto histórico atribuído, património, parques, mobilidade, serviços úteis e links de exploração no mapa. A nova verificação confirmou que os respetivos canais institucionais continuam disponíveis; qualquer detalhe que dependa de operação diária, como horários e itinerários, permanece ligado à fonte responsável.
 
+## Manaus e Belém
+
+| Cidade | Fonte institucional | URL | Aplicação editorial permitida |
+| --- | --- | --- | --- |
+| Manaus | Prefeitura de Manaus — Parque Encontro das Águas Rosa Almeida | https://www.manaus.am.gov.br/noticia/turismo/prefeitura-implurb-obras-parqueencontrodasaguas/ | A fonte municipal descreve o parque como complexo turístico e cultural, com jardins e infraestrutura; a ficha deve remeter à fonte para o estado de obras e funcionamento. |
+| Belém | SETUR — Prefeitura de Belém | https://prefeitura.belem.pa.gov.br/secretarias/semcult-secretaria-municipal-de-cultura-e-turismo/ | A secretaria disponibiliza mapa turístico municipal e Centro de Informações Turísticas; a ficha remete aos canais oficiais para detalhes e atendimento atualizado. |
+| Goiânia | GoiâniaTur — Prefeitura de Goiânia | https://www.goiania.go.gov.br/goianiatur/ | O portal institucional disponibiliza roteiros turísticos, Art Déco, parques, mobilidade e transporte, telefones úteis e centros de atendimento ao turista; a ficha aponta para esses canais para detalhes atualizados. |
+
 ## Fontes de apoio para todas as localidades
 
 | Tema | Entidade | URL |

@@ -144,6 +144,24 @@ const brasiliaMobility: LocalSource = {
   verifiedOn: "11 de agosto de 2026",
 };
 
+const manausTourism: LocalSource = {
+  label: "Parque Encontro das Águas Rosa Almeida — Prefeitura de Manaus",
+  url: "https://www.manaus.am.gov.br/noticia/turismo/prefeitura-implurb-obras-parqueencontrodasaguas/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const belemTourism: LocalSource = {
+  label: "SETUR — Secretaria Municipal de Cultura e Turismo de Belém",
+  url: "https://prefeitura.belem.pa.gov.br/secretarias/semcult-secretaria-municipal-de-cultura-e-turismo/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
+const goianiaTourism: LocalSource = {
+  label: "GoiâniaTur — Agência Municipal de Turismo e Eventos",
+  url: "https://www.goiania.go.gov.br/goianiatur/",
+  verifiedOn: "11 de agosto de 2026",
+};
+
 const localityContent: Record<string, LocalityContent> = {
   "sp:barueri": {
     history: {
@@ -391,6 +409,87 @@ const localityContent: Record<string, LocalityContent> = {
       { title: "Informações turísticas e roteiros oficiais de Brasília", href: brasiliaTourism.url, source: brasiliaTourism },
       { title: "Mobilidade e serviços de transporte do Distrito Federal", href: brasiliaMobility.url, source: brasiliaMobility },
       { title: "Bares e restaurantes em Brasília: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Brasília DF"), source: brasiliaTourism },
+    ],
+  },
+  "am:manaus": {
+    history: {
+      body: "A Prefeitura de Manaus apresenta equipamentos e espaços públicos ligados ao encontro entre cultura, paisagem e visitação. Consulte o canal institucional para aprofundar o contexto local e confirmar condições de acesso antes de planear a visita.",
+      source: manausTourism,
+    },
+    heritage: [{
+      title: "Cultura e património em Manaus",
+      description: "Utilize o mapa para localizar museus, mercados e referências históricas da cidade. Para informações de visitação e programação, confirme sempre o canal público responsável.",
+      href: mapSearchUrl("museus e património histórico Manaus AM"),
+      source: manausTourism,
+    }],
+    parks: [{
+      title: "Parque Encontro das Águas Rosa Almeida",
+      description: "A Prefeitura descreve o equipamento como complexo turístico e cultural com jardins e infraestrutura de uso público. Consulte a fonte institucional para o estado das obras, abertura e serviços disponíveis.",
+      href: mapSearchUrl("Parque Encontro das Águas Rosa Almeida Manaus AM"),
+      source: manausTourism,
+    }],
+    mobility: {
+      body: "Os serviços e condições de mobilidade urbana podem variar. Antes de se deslocar, consulte os canais públicos de Manaus para percursos, horários e orientações atualizadas.",
+      href: "https://www.manaus.am.gov.br/",
+      source: manausTourism,
+    },
+    municipalServices: [
+      { title: "Serviços e canais da Prefeitura de Manaus", href: "https://www.manaus.am.gov.br/", source: manausTourism },
+      { title: "Bares e restaurantes em Manaus: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Manaus AM"), source: manausTourism },
+    ],
+  },
+  "pa:belem": {
+    history: {
+      body: "A Secretaria Municipal de Cultura e Turismo de Belém organiza informação turística, cultural e de apoio ao visitante. Utilize os canais institucionais para conhecer percursos, serviços e referências da cidade.",
+      source: belemTourism,
+    },
+    heritage: [{
+      title: "Cultura, mercados e património de Belém",
+      description: "A secretaria mantém recursos de orientação turística para visitantes. Abra o mapa para localizar referências culturais e confirme informações práticas nos canais públicos.",
+      href: mapSearchUrl("museus mercados e património Belém PA"),
+      source: belemTourism,
+    }],
+    parks: [{
+      title: "Parques e áreas ao ar livre em Belém",
+      description: "Explore espaços verdes e áreas públicas no mapa; confirme acesso, programação e regras junto às fontes oficiais antes da visita.",
+      href: mapSearchUrl("parques e praças Belém PA"),
+      source: belemTourism,
+    }],
+    mobility: {
+      body: "Para planeamento de deslocações, recorra aos canais públicos do município e dos operadores responsáveis. Linhas, horários e condições de circulação exigem consulta atualizada.",
+      href: "https://prefeitura.belem.pa.gov.br/",
+      source: belemTourism,
+    },
+    municipalServices: [
+      { title: "Turismo e Centro de Informações ao Turista de Belém", href: belemTourism.url, source: belemTourism },
+      { title: "Bares e restaurantes em Belém: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Belém PA"), source: belemTourism },
+    ],
+  },
+  "go:goiania": {
+    history: {
+      body: "A GoiâniaTur disponibiliza roteiros oficiais para explorar cultura, lazer, parques e a identidade Art Déco da cidade. Consulte o canal institucional para aprofundar o contexto histórico e organizar uma visita.",
+      source: goianiaTourism,
+    },
+    heritage: [{
+      title: "Roteiro Art Déco — cultura e lazer",
+      description: "A GoiâniaTur publica um roteiro dedicado a cultura e lazer com enfoque Art Déco. Abra a fonte oficial para o percurso e confirme os pontos de interesse antes de sair.",
+      href: "https://www.goiania.go.gov.br/goianiatur/caminho-dos-bougainvilles/o-percurso/roteiro-art-deco-cultura-e-lazer/",
+      source: goianiaTourism,
+    }],
+    parks: [{
+      title: "Roteiros de parques de Goiânia",
+      description: "O portal municipal apresenta roteiros entre parques, incluindo percursos que passam pelo Lago das Rosas e Jardim Botânico. Consulte a fonte para detalhes e condições de visitação.",
+      href: "https://www.goiania.go.gov.br/goianiatur/caminho-dos-bougainvilles/o-percurso/roteiro-parques-i-do-lago-das-rosas-ao-jardim-botanico-2/",
+      source: goianiaTourism,
+    }],
+    mobility: {
+      body: "A GoiâniaTur mantém uma secção institucional sobre mobilidade e transporte. Consulte o canal oficial para informação atualizada antes de escolher o percurso e o meio de deslocação.",
+      href: "https://www.goiania.go.gov.br/goianiatur/dti/mobilidade-e-transporte/",
+      source: goianiaTourism,
+    },
+    municipalServices: [
+      { title: "Centros de Atendimento ao Turista e telefones úteis de Goiânia", href: "https://www.goiania.go.gov.br/goianiatur/turismo/cats/", source: goianiaTourism },
+      { title: "Bares e restaurantes em Goiânia: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Goiânia GO"), source: goianiaTourism },
     ],
   },
 };

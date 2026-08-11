@@ -14,3 +14,7 @@ As ligações externas apresentadas permanecem atribuídas às respetivas fontes
 ## Renderização SSR
 
 Também foi inspecionado o HTML entregue por `http://localhost:3000/cidade/pe/recife` e `http://localhost:3000/cidade/ce/fortaleza`. As duas respostas incluíram o texto **“além do DDD”** antes da hidratação do cliente, confirmando que a secção de contexto local é disponibilizada pelo SSR.
+
+## Manaus, Belém e Goiânia
+
+As fichas municipais de Manaus, Belém e Goiânia foram revistas visualmente abaixo do cartão de mapa. Todas apresentaram a estrutura de história, mobilidade, parques, património, pontos turísticos, restauração, telefones úteis e ligações atribuídas. O HTML SSR de `cidade/am/manaus`, `cidade/pa/belem` e `cidade/go/goiania` também incluiu o título **“além do DDD”** antes da hidratação do cliente.

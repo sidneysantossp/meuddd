@@ -66,3 +66,7 @@
 - [x] Validar visualmente as fichas locais de Recife e Fortaleza, além de Porto Alegre.
 - [x] Acrescentar cobertura automatizada explícita para Porto Alegre, Recife e Fortaleza no catálogo local partilhado.
 - [x] Validar explicitamente o HTML SSR de Recife e Fortaleza e executar a verificação final antes do checkpoint.
+- [x] Auditar a cobertura atual do catálogo para Manaus, Belém e Goiânia.
+- [x] Pesquisar e documentar fontes institucionais de turismo, património, parques, mobilidade e serviços das três capitais.
+- [x] Publicar fichas locais verificadas de Manaus, Belém e Goiânia abaixo do mapa municipal.
+- [x] Cobrir as novas fichas com testes, verificação SSR, build e validação visual.
