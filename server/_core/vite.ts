@@ -51,7 +51,9 @@ export async function setupVite(app: Express, server: Server) {
 
 export function serveStatic(app: Express) {
   const distPath =
-    process.env.NODE_ENV === "development"
+    process.env.VERCEL
+      ? path.resolve(process.cwd(), "public")
+      : process.env.NODE_ENV === "development"
       ? path.resolve(import.meta.dirname, "../..", "dist", "public")
       : path.resolve(import.meta.dirname, "public");
   if (!fs.existsSync(distPath)) {
@@ -66,7 +68,10 @@ export function serveStatic(app: Express) {
   app.use("*", async (req, res, next) => {
     try {
       const template = await fs.promises.readFile(path.resolve(distPath, "index.html"), "utf-8");
-      const entry = pathToFileURL(path.resolve(import.meta.dirname, "server", "entry-server.js")).href;
+      const entryPath = process.env.VERCEL
+        ? path.resolve(process.cwd(), "dist", "server", "entry-server.js")
+        : path.resolve(import.meta.dirname, "server", "entry-server.js");
+      const entry = pathToFileURL(entryPath).href;
       const { render } = await import(entry);
       const rendered = await render(req.originalUrl, createSsrPrefetch());
       res.status(rendered.head.notFound ? 404 : 200).set({ "Content-Type": "text/html" }).end(composeSsrHtml(template, rendered.html, rendered.dehydratedState, rendered.head, originFor(req)));

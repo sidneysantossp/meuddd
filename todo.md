@@ -70,3 +70,8 @@
 - [x] Pesquisar e documentar fontes institucionais de turismo, património, parques, mobilidade e serviços das três capitais.
 - [x] Publicar fichas locais verificadas de Manaus, Belém e Goiânia abaixo do mapa municipal.
 - [x] Cobrir as novas fichas com testes, verificação SSR, build e validação visual.
+- [x] Validar a integração GitHub e o repositório sidneysantossp/meuddd antes da exportação.
+- [x] Enviar o checkpoint atual para o repositório GitHub confirmado.
+- [x] Confirmar a presença do commit remoto e registar a exportação concluída.
+- [x] Diagnosticar a exibição do bundle JavaScript no domínio publicado via Vercel e Cloudflare e preparar uma configuração de implantação compatível com SSR.
+- [ ] Confirmar o novo deployment da Vercel e a resposta HTTPS correta no domínio configurado pela Cloudflare.

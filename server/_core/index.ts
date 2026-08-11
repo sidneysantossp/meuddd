@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
+import { pathToFileURL } from "url";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerStorageProxy } from "./storageProxy";
@@ -43,9 +44,8 @@ function sitemapIndexXml(paths: string[], origin: string) {
   return `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</sitemapindex>`;
 }
 
-async function startServer() {
+export function createApp() {
   const app = express();
-  const server = createServer(app);
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
@@ -87,6 +87,13 @@ async function startServer() {
       next(error);
     }
   });
+  return app;
+}
+
+async function startServer() {
+  const app = createApp();
+  const server = createServer(app);
+
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);
@@ -106,4 +113,8 @@ async function startServer() {
   });
 }
 
-startServer().catch(console.error);
+const isDirectExecution = Boolean(process.argv[1]) && pathToFileURL(process.argv[1]).href === import.meta.url;
+
+if (isDirectExecution) {
+  startServer().catch(console.error);
+}
