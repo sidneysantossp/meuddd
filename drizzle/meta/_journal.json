@@ -15,6 +15,13 @@
       "when": 1786464082283,
       "tag": "0001_tearful_liz_osborn",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786472802684,
+      "tag": "0002_sloppy_squadron_sinister",
+      "breakpoints": true
     }
   ]
 }

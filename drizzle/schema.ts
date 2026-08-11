@@ -68,5 +68,21 @@ export const municipalities = mysqlTable(
   ],
 );
 
+/** Consultas que não encontraram correspondência, agregadas sem identificador pessoal. */
+export const unmatchedSearches = mysqlTable(
+  "unmatched_searches",
+  {
+    id: int("id").autoincrement().primaryKey(),
+    normalizedQuery: varchar("normalizedQuery", { length: 120 }).notNull().unique(),
+    latestQuery: varchar("latestQuery", { length: 120 }).notNull(),
+    selectedUf: varchar("selectedUf", { length: 2 }),
+    searchCount: int("searchCount").notNull().default(1),
+    firstSeenAt: timestamp("firstSeenAt").defaultNow().notNull(),
+    lastSeenAt: timestamp("lastSeenAt").defaultNow().onUpdateNow().notNull(),
+  },
+  table => [index("unmatched_searches_last_seen_idx").on(table.lastSeenAt)],
+);
+
 export type State = typeof states.$inferSelect;
 export type Municipality = typeof municipalities.$inferSelect;
+export type UnmatchedSearch = typeof unmatchedSearches.$inferSelect;

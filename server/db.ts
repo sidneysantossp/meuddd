@@ -1,6 +1,6 @@
-import { and, asc, eq, like, or } from "drizzle-orm";
+import { and, asc, eq, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, municipalities, states, users } from "../drizzle/schema";
+import { InsertUser, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { editorialGuides } from "../shared/editorialGuides";
 
@@ -263,6 +263,30 @@ export async function searchDdds(input: { query?: string; uf?: string }) {
   return groupDddRows(fuzzyFilterMunicipalities(await selectMunicipalities({ uf: input.uf }), query));
 }
 
+export function prepareUnmatchedSearch(input: { query: string; uf?: string }) {
+  const latestQuery = input.query.trim().replace(/\s+/g, " ").slice(0, 120);
+  const normalizedQuery = normalizeSearch(latestQuery).slice(0, 120);
+  const selectedUf = input.uf?.trim().toUpperCase();
+  if (normalizedQuery.length < 2 || /^\d{1,2}$/.test(normalizedQuery) || (selectedUf && !/^[A-Z]{2}$/.test(selectedUf))) return null;
+  return { normalizedQuery, latestQuery, selectedUf: selectedUf || null };
+}
+
+export async function recordUnmatchedSearch(input: { query: string; uf?: string }) {
+  const payload = prepareUnmatchedSearch(input);
+  if (!payload) return { recorded: false } as const;
+  const db = await getDb();
+  if (!db) return { recorded: false } as const;
+  await db.insert(unmatchedSearches).values(payload).onDuplicateKeyUpdate({
+    set: {
+      latestQuery: payload.latestQuery,
+      selectedUf: payload.selectedUf,
+      searchCount: sql`${unmatchedSearches.searchCount} + 1`,
+      lastSeenAt: sql`CURRENT_TIMESTAMP`,
+    },
+  });
+  return { recorded: true } as const;
+}
+
 export async function getDddDetails(code: string) {
   const municipalitiesForDdd = await selectMunicipalities({ ddd: code });
   if (!municipalitiesForDdd.length) return null;
@@ -376,4 +400,4 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities };
+export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch };

@@ -15,5 +15,6 @@ queryClient.getQueryCache().subscribe(event => { if (event.type === "updated" &&
 queryClient.getMutationCache().subscribe(event => { if (event.type === "updated" && event.action.type === "error") redirectToLoginIfUnauthorized(event.mutation.state.error); });
 const trpcClient = trpc.createClient({ links: [httpBatchLink({ url: "/api/trpc", transformer: superjson, headers() { try { const raw = sessionStorage.getItem("manus-cookie"); const pair = raw?.split(";").find(item => item.trim().startsWith(`${COOKIE_NAME}=`)); const token = pair?.trim().slice(`${COOKIE_NAME}=`.length); return token ? { Authorization: `Bearer ${token}` } : {}; } catch { return {}; } }, fetch(input, init) { return globalThis.fetch(input, { ...(init ?? {}), credentials: "include" }); } })] });
 const rawState = (window as Window & { __RQ_STATE__?: unknown }).__RQ_STATE__;
-const dehydratedState = rawState ? superjson.deserialize(rawState as Parameters<typeof superjson.deserialize>[0]) as DehydratedState : undefined;
+// O servidor injeta o resultado de dehydrate() como JSON seguro; não é um payload serializado pelo SuperJSON.
+const dehydratedState = rawState as DehydratedState | undefined;
 hydrateRoot(document.getElementById("root")!, <trpc.Provider client={trpcClient} queryClient={queryClient}><QueryClientProvider client={queryClient}><HydrationBoundary state={dehydratedState}><Router><App /></Router></HydrationBoundary></QueryClientProvider></trpc.Provider>);

@@ -393,8 +393,90 @@ export const editorialGuides: EditorialGuide[] = [
   },
 ];
 
+function createCapitalGuide(input: { slug: string; city: string; state: string; uf: string; ddd: string }) : EditorialGuide {
+  return {
+    slug: input.slug,
+    title: `Como telefonar para ${input.city}: DDD ${input.ddd}`,
+    description: `Consulte o DDD de ${input.city}, confirme a ficha municipal e navegue pela cobertura territorial do código ${input.ddd}.`,
+    eyebrow: `Cidades / ${input.city}`,
+    summary: `A ficha de ${input.city} permite confirmar o DDD ${input.ddd} no contexto da área de numeração e dos municípios relacionados.`,
+    intro: `Antes de telefonar para ${input.city}, confirme a cidade, a UF e o código de área na ficha territorial. Depois, use a página do DDD para explorar a cobertura completa.`,
+    sections: [
+      { title: `Confirme ${input.city}`, body: "Use a ficha municipal para validar o destino e evitar confundir referências territoriais semelhantes." },
+      { title: `Abra a cobertura do DDD ${input.ddd}`, body: "O código de área pode abranger outros municípios. A página de cobertura mostra a lista ligada à mesma numeração." },
+      { title: "Use o número completo", body: "Confirme se o destino é fixo ou móvel e verifique regras de cobrança e discagem com a sua prestadora." },
+    ],
+    faqs: [
+      { question: `Qual é o DDD de ${input.city}?`, answer: `A ficha territorial de ${input.city} apresenta o código de área associado à cidade.` },
+      { question: `O DDD ${input.ddd} atende só ${input.city}?`, answer: "Não necessariamente. Consulte a página de cobertura territorial do código para verificar os municípios abrangidos." },
+      { question: `Como encontro outros DDDs de ${input.state}?`, answer: `Abra o pilar de ${input.state} ou pesquise outro município pela busca do DDD Brasil.` },
+    ],
+    sources: ["numeracao"],
+    territoryLinks: [
+      { label: `Ficha: ${input.city}`, href: `/cidade/${input.uf}/${input.slug.replace("como-telefonar-para-", "")}` },
+      { label: `Cobertura do DDD ${input.ddd}`, href: `/ddd/${input.ddd}` },
+      { label: `Pilar: ${input.state}`, href: `/estado/${input.uf}` },
+    ],
+    relatedSlugs: ["ddd-de-capitais-do-brasil", "como-ligar-para-outro-estado", "como-descobrir-ddd-de-uma-cidade"],
+  };
+}
+
+function createDddGuide(input: { code: string; cities: string; state: string; uf: string; anchorCity: string; citySlug: string }) : EditorialGuide {
+  return {
+    slug: `ddd-${input.code}-cidades-e-cobertura`,
+    title: `DDD ${input.code}: cidades e cobertura da área de numeração`,
+    description: `Consulte o DDD ${input.code}, confirme cidades atendidas e navegue pela cobertura territorial ligada a ${input.anchorCity}.`,
+    eyebrow: `DDD / ${input.code}`,
+    summary: `O DDD ${input.code} organiza uma área de numeração. A página de cobertura mostra os municípios associados ao código.`,
+    intro: `A forma mais segura de confirmar o DDD ${input.code} é abrir a página de cobertura e depois verificar o município de destino. Este guia reúne os caminhos para ${input.anchorCity}, ${input.state} e a lista atual de cidades do código.`,
+    sections: [
+      { title: `Consulte o DDD ${input.code}`, body: "A página territorial do código mostra os municípios associados à área de numeração e deve ser a referência para confirmar um destino." },
+      { title: "Confirme a cidade", body: `Pesquise a cidade, especialmente se o nome for parecido com o de outra localidade. Para iniciar, consulte ${input.anchorCity}.` },
+      { title: "Complete a chamada", body: "Depois de validar o DDD, use o número completo e confirme regras de discagem e tarifação com a prestadora." },
+    ],
+    faqs: [
+      { question: `Quais cidades usam o DDD ${input.code}?`, answer: "Abra a página de cobertura do código para consultar a lista territorial atual." },
+      { question: `O DDD ${input.code} atende somente ${input.anchorCity}?`, answer: "Não. A área de numeração pode abranger outros municípios; confirme no inventário territorial da plataforma." },
+      { question: `Como encontro outros DDDs de ${input.state}?`, answer: `Abra o pilar de ${input.state} para navegar por códigos e municípios do estado.` },
+    ],
+    sources: ["numeracao"],
+    territoryLinks: [
+      { label: `Cobertura do DDD ${input.code}`, href: `/ddd/${input.code}` },
+      { label: `Ficha: ${input.anchorCity}`, href: `/cidade/${input.uf}/${input.citySlug}` },
+      { label: `Pilar: ${input.state}`, href: `/estado/${input.uf}` },
+    ],
+    relatedSlugs: [`como-telefonar-para-${input.citySlug}`, "como-ligar-para-outro-estado", "o-que-e-ddd"],
+  };
+}
+
+editorialGuides.push(
+  createCapitalGuide({ slug: "como-telefonar-para-belo-horizonte", city: "Belo Horizonte", state: "Minas Gerais", uf: "mg", ddd: "31" }),
+  createCapitalGuide({ slug: "como-telefonar-para-curitiba", city: "Curitiba", state: "Paraná", uf: "pr", ddd: "41" }),
+  createCapitalGuide({ slug: "como-telefonar-para-porto-alegre", city: "Porto Alegre", state: "Rio Grande do Sul", uf: "rs", ddd: "51" }),
+  createCapitalGuide({ slug: "como-telefonar-para-salvador", city: "Salvador", state: "Bahia", uf: "ba", ddd: "71" }),
+  createCapitalGuide({ slug: "como-telefonar-para-recife", city: "Recife", state: "Pernambuco", uf: "pe", ddd: "81" }),
+  createCapitalGuide({ slug: "como-telefonar-para-fortaleza", city: "Fortaleza", state: "Ceará", uf: "ce", ddd: "85" }),
+  createDddGuide({ code: "11", cities: "São Paulo", state: "São Paulo", uf: "sp", anchorCity: "São Paulo", citySlug: "sao-paulo" }),
+  createDddGuide({ code: "21", cities: "Rio de Janeiro", state: "Rio de Janeiro", uf: "rj", anchorCity: "Rio de Janeiro", citySlug: "rio-de-janeiro" }),
+  createDddGuide({ code: "31", cities: "Belo Horizonte", state: "Minas Gerais", uf: "mg", anchorCity: "Belo Horizonte", citySlug: "belo-horizonte" }),
+  createDddGuide({ code: "41", cities: "Curitiba", state: "Paraná", uf: "pr", anchorCity: "Curitiba", citySlug: "curitiba" }),
+  createDddGuide({ code: "51", cities: "Porto Alegre", state: "Rio Grande do Sul", uf: "rs", anchorCity: "Porto Alegre", citySlug: "porto-alegre" }),
+);
+
 export const guideSlugs = editorialGuides.map(guide => guide.slug);
 
 export function findEditorialGuide(slug: string | undefined) {
   return editorialGuides.find(guide => guide.slug === slug);
+}
+
+export function getRelatedEditorialGuides(slug: string, limit = 3) {
+  const guide = findEditorialGuide(slug);
+  if (!guide) return [];
+  const preferred = guide.relatedSlugs.length
+    ? guide.relatedSlugs
+    : editorialGuides.filter(item => item.slug !== guide.slug).map(item => item.slug);
+  return preferred
+    .map(relatedSlug => findEditorialGuide(relatedSlug))
+    .filter((item): item is EditorialGuide => item !== undefined && item.slug !== guide.slug)
+    .slice(0, limit);
 }

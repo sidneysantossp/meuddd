@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowUpRight, BookOpenText, ExternalLink, MapPin, PhoneCall, Search } from "lucide-react";
 import { Link, useRoute } from "wouter";
-import { editorialGuides, editorialSources, findEditorialGuide } from "@shared/editorialGuides";
+import { editorialSources, findEditorialGuide, getRelatedEditorialGuides } from "@shared/editorialGuides";
 import NotFound from "./NotFound";
 
 export default function DddGuidePage() {
@@ -8,9 +8,7 @@ export default function DddGuidePage() {
   const guide = findEditorialGuide(params?.slug);
   if (!guide) return <NotFound />;
 
-  const related = guide.relatedSlugs
-    .map(slug => editorialGuides.find(item => item.slug === slug))
-    .filter((item): item is NonNullable<typeof item> => Boolean(item));
+  const related = getRelatedEditorialGuides(guide.slug);
 
   return (
     <main className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">

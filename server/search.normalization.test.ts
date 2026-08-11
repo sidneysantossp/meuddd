@@ -18,4 +18,17 @@ describe("pesquisa territorial normalizada", () => {
   it("tolera uma grafia aproximada do nome do estado", () => {
     expect(__testables.fuzzyFilterMunicipalities(rows, "Baia").map(row => row.name)).toContain("Salvador");
   });
+
+  it("prepara uma pesquisa sem resultado para agregação sem dados pessoais", () => {
+    expect(__testables.prepareUnmatchedSearch({ query: "  Sao Paolo  ", uf: "sp" })).toEqual({
+      normalizedQuery: "sao paolo",
+      latestQuery: "Sao Paolo",
+      selectedUf: "SP",
+    });
+  });
+
+  it("não regista termos demasiado curtos ou apenas códigos numéricos", () => {
+    expect(__testables.prepareUnmatchedSearch({ query: "a" })).toBeNull();
+    expect(__testables.prepareUnmatchedSearch({ query: "11" })).toBeNull();
+  });
 });

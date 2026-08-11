@@ -39,3 +39,13 @@
 - [x] Implementar pesquisa de municípios tolerante a acentos e erros ortográficos comuns.
 - [x] Adicionar testes de hidratação SSR para a rota de guias editoriais.
 - [x] Validar testes, build, renderização SSR e pesquisa melhorada antes da entrega.
+- [x] Auditar as páginas municipais, dados disponíveis e arquitetura de conteúdo local para capitais e DDDs prioritários.
+- [x] Pesquisar e documentar fontes oficiais para história, turismo, parques, transporte público e telefones úteis locais.
+- [x] Inserir secção local factual imediatamente após o cartão de mapa na página municipal inicial de Barueri, com fontes institucionais e ligações verificáveis.
+- [x] Criar páginas editoriais iniciais para capitais prioritárias, com ligações internas, metadados SSR e inclusão no sitemap.
+- [x] Implementar registo de pesquisas sem resultados com proteção de privacidade e agregação por termo normalizado.
+- [x] Acrescentar guias relacionados relevantes no final de cada guia editorial.
+- [x] Cobrir as novas rotas publicadas, conteúdo local inicial e pesquisa normalizada com testes, SSR e validação visual.
+- [x] Expandir o conteúdo local factual e atribuído para as capitais prioritárias, após pesquisa individual das respetivas fontes institucionais.
+- [x] Criar guias editoriais dedicados para os DDDs prioritários, com SSR, metadados e inclusão no sitemap.
+- [x] Adicionar cobertura automatizada explícita para a secção de guias relacionados e para o registo de pesquisas sem resultados.

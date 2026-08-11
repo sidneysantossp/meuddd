@@ -1,0 +1,35 @@
+# Fontes locais verificadas — série municipal
+
+## Política de publicação
+
+O bloco local só apresenta informação quando existe uma fonte institucional verificável. Cada cartão inclui ligação para a fonte e é identificado como um atalho de planeamento, não como recomendação editorial de um estabelecimento. Bares e restaurantes não são enumerados sem uma fonte pública de turismo ou um critério editorial verificável; em vez disso, a interface aponta para uma pesquisa no mapa da localidade.
+
+## Barueri (SP)
+
+| Tema | Fonte responsável | URL | Nota de verificação |
+| --- | --- | --- | --- |
+| História e telefones úteis | Prefeitura de Barueri | https://portal.barueri.sp.gov.br/cidadao/conheca-barueri/historia-de-barueri/ | O portal municipal disponibiliza secções específicas de história e telefones úteis. Consultado em 11 de agosto de 2026. |
+| Transporte e integração ferroviária | Secretaria de Mobilidade Urbana de Barueri | https://portal.barueri.sp.gov.br/secretarias/mobilidade-urbana/transporte | A página informa que os Terminais Barueri e Jardim Silveira integram com a Linha 8-Diamante; consultado em 11 de agosto de 2026. |
+| Parques, turismo e serviços locais | Prefeitura de Barueri | https://portal.barueri.sp.gov.br/ | O portal municipal é o ponto de partida atribuído para agenda, serviços e páginas temáticas; a inclusão de atrações individualizadas exige uma fonte pública própria. |
+
+## Capitais prioritárias em preparação
+
+| Cidade | Fonte institucional | URL | Aplicação editorial permitida |
+| --- | --- | --- | --- |
+| Porto Alegre | Secretaria Municipal de Mobilidade Urbana | https://prefeitura.poa.br/smmu | A secretaria coordena políticas do Sistema Municipal de Transporte Público e de Circulação; o bloco local encaminha para a fonte e não promete horários ou itinerários. |
+| Curitiba | Prefeitura de Curitiba — BRT e parques | https://www.curitiba.pr.gov.br/noticias/do-brt-a-profusao-de-parques-legados-de-curitiba-se-espalham-pelo-brasil-e-mundo/67570 | A Prefeitura descreve corredores exclusivos, ônibus biarticulados e integração de terminais; o texto deve manter atribuição e remeter à fonte para condições atuais. |
+| Belo Horizonte | Portal Oficial de Belo Horizonte (Belotur) | https://portalbelohorizonte.com.br/ | O portal oficial organiza informação de turismo, cultura, parques, museus, gastronomia e transporte; a página municipal aponta para esses percursos sem classificar estabelecimentos. |
+| Porto Alegre | Destino POA — Portal Oficial de Turismo | https://destinopoa.com.br/ | O portal apresenta secções de cultura, ar livre, gastronomia, orla e agenda; o bloco local encaminha para a descoberta oficial e não reproduz recomendações comerciais. |
+| Salvador | Secretaria Municipal de Mobilidade (Semob) | https://mobilidade.salvador.ba.gov.br/ | O site oficial é referência para actualizações de mobilidade; a página municipal não reproduz horários, tarifas ou condições transitórias. |
+| Recife | Secretaria de Turismo e Lazer — Prefeitura do Recife | https://www2.recife.pe.gov.br/pagina/secretaria-de-turismo-e-lazer | A secretaria informa que coordena acções de cultura, lazer e roteiros turísticos; a página municipal remete ao canal público para programação e detalhes. |
+| Recife | Grande Recife Consórcio de Transporte | https://www.granderecife.pe.gov.br/ | Portal institucional para notícias e serviços do transporte metropolitano; a página municipal encaminha à fonte para condições actualizadas. |
+| Fortaleza | Prefeitura de Fortaleza — Rede Vamos Juntos | https://www.fortaleza.ce.gov.br/noticias/prefeitura-de-fortaleza-testa-novo-modelo-de-transporte-gratuito-para-viagens-curtas-na-periferia | A fonte descreve um projecto-piloto e limitado; qualquer referência deve explicitar o carácter de teste e indicar a página original. |
+
+As fichas de novas capitais só devem ganhar factos históricos, nomes de equipamentos ou dados operacionais após verificação individual em fonte oficial. Atalhos para pesquisas cartográficas são identificados como pesquisas externas, não como recomendação editorial de um estabelecimento.
+
+## Fontes de apoio para todas as localidades
+
+| Tema | Entidade | URL |
+| --- | --- | --- |
+| Emergência e utilidade pública | Anatel | https://www.gov.br/anatel/pt-br/regulado/numeracao/codigos-nacionais/servicos-de-utilidade-publica-e-de-emergencia |
+| Turismo municipal | Ministério do Turismo | https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr/mapa-do-turismo-brasileiro |

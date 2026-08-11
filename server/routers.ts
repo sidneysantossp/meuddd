@@ -22,6 +22,9 @@ export const appRouter = router({
     search: publicProcedure
       .input(z.object({ query: z.string().max(120).optional(), uf: z.string().length(2).optional() }).optional())
       .query(({ input }) => db.searchDdds(input ?? {})),
+    recordUnmatchedSearch: publicProcedure
+      .input(z.object({ query: z.string().min(1).max(120), uf: z.string().length(2).optional() }))
+      .mutation(({ input }) => db.recordUnmatchedSearch(input)),
     byCode: publicProcedure
       .input(z.object({ code: z.string().regex(/^\d{2}$/) }))
       .query(({ input }) => db.getDddDetails(input.code)),

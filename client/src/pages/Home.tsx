@@ -1,5 +1,5 @@
 /* Atlas Vivo: busca em dados reais, cartografia clicável e índices partilháveis. */
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 import { Link, useLocation, useSearch } from "wouter";
 import {
@@ -54,6 +54,8 @@ export default function Home() {
   const states = trpc.ddd.states.useQuery();
   const searchInput = useMemo(() => ({ query: query.trim() || undefined, uf: stateFilter || undefined }), [query, stateFilter]);
   const search = trpc.ddd.search.useQuery(searchInput);
+  const recordUnmatchedSearch = trpc.ddd.recordUnmatchedSearch.useMutation();
+  const trackedSearches = useRef(new Set<string>());
   const stateOptions = states.data ?? [];
   const results = search.data ?? [];
   const groupedResults = useMemo(
@@ -67,6 +69,14 @@ export default function Home() {
     if (stateFilter) params.set("uf", stateFilter);
     window.history.replaceState({}, "", `${window.location.pathname}${params.size ? `?${params}` : ""}${window.location.hash}`);
   }, [query, stateFilter]);
+
+  useEffect(() => {
+    const attemptedQuery = query.trim();
+    const key = `${attemptedQuery.toLocaleLowerCase("pt-BR")}|${stateFilter}`;
+    if (!attemptedQuery || search.isLoading || !search.isSuccess || results.length !== 0 || trackedSearches.current.has(key)) return;
+    trackedSearches.current.add(key);
+    recordUnmatchedSearch.mutate({ query: attemptedQuery, uf: stateFilter || undefined });
+  }, [query, stateFilter, results.length, search.isLoading, search.isSuccess, recordUnmatchedSearch]);
 
   const copy = (value: string, message: string) => navigator.clipboard.writeText(value).then(() => toast.success(message)).catch(() => toast.error("Não foi possível copiar agora."));
   const updateQuery = (value: string) => {

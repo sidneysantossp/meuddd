@@ -10,6 +10,7 @@ vi.mock("@/lib/trpc", () => ({
     ddd: {
       states: { useQuery: () => ({ data: [], isLoading: false }) },
       search: { useQuery: () => ({ data: [], isLoading: false }) },
+      recordUnmatchedSearch: { useMutation: () => ({ mutate: vi.fn() }) },
       byCode: { useQuery: () => ({ data: undefined, isLoading: false }) },
       byState: { useQuery: () => ({ data: undefined, isLoading: false }) },
       byMunicipality: { useQuery: () => ({ data: undefined, isLoading: false }) },
@@ -42,7 +43,7 @@ describe("hidratação das rotas públicas", () => {
     document.head.innerHTML = "";
   });
 
-  it.each(["/", "/ddd/11", "/estado/sp", "/cidade/sp/sao-paulo", "/guias", "/guia/o-que-e-ddd", "/guia/portabilidade-numerica"])("hidrata %s sem divergências recuperáveis", async path => {
+  it.each(["/", "/ddd/11", "/estado/sp", "/cidade/sp/sao-paulo", "/guias", "/guia/o-que-e-ddd", "/guia/portabilidade-numerica", "/guia/ddd-11-cidades-e-cobertura"])("hidrata %s sem divergências recuperáveis", async path => {
     await expectHydrationFor(path);
   });
 });
