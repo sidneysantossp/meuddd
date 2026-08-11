@@ -14,6 +14,8 @@ describe("configuração de publicação Vercel", () => {
     expect(config.functions["server.ts"].includeFiles).toContain("public/**");
     expect(config.functions["server.ts"].includeFiles).toContain("dist/server/**");
     expect(serverEntry).toContain('import express from "express"');
+    expect(serverEntry).toContain('import { serveStatic } from "./server/_core/ssrStatic"');
+    expect(serverEntry).not.toContain('"./server/_core/vite"');
     expect(serverEntry).toContain("const app = express()");
     expect(serverEntry).toContain("export default app");
   });

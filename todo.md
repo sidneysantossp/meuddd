@@ -77,3 +77,7 @@
 - [ ] Confirmar o novo deployment da Vercel e a resposta HTTPS correta no domínio configurado pela Cloudflare.
 - [x] Evitar referências de analytics não configuradas no template HTML de publicação externa.
 - [x] Corrigir a deteção do entrypoint Express pela Vercel, que rejeitou o `server.ts` como importador de Express.
+- [x] Diagnosticar e corrigir a resolução DNS de www.meuddd.com.br entre Cloudflare e Vercel.
+- [x] Diagnosticar e corrigir a falha `FUNCTION_INVOCATION_FAILED` da função serverless da Vercel.
+- [ ] Validar publicamente a resolução de `meuddd.com.br` e `www.meuddd.com.br` com evidência registada no projeto.
+- [ ] Confirmar o deployment da Vercel no domínio final com resposta HTTPS 200 e HTML SSR correto após a correção de DNS.

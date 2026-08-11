@@ -3,7 +3,6 @@ import fs from "fs";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
 import path from "path";
-import { pathToFileURL } from "url";
 import { createServer as createViteServer } from "vite";
 import viteConfig from "../../vite.config";
 import { createSsrPrefetch } from "../ssrPrefetch";
@@ -45,38 +44,6 @@ export async function setupVite(app: Express, server: Server) {
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);
-    }
-  });
-}
-
-export function serveStatic(app: Express) {
-  const distPath =
-    process.env.VERCEL
-      ? path.resolve(process.cwd(), "public")
-      : process.env.NODE_ENV === "development"
-      ? path.resolve(import.meta.dirname, "../..", "dist", "public")
-      : path.resolve(import.meta.dirname, "public");
-  if (!fs.existsSync(distPath)) {
-    console.error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`
-    );
-  }
-
-  app.use(express.static(distPath));
-
-  // public pages are rendered server-side after static assets have had priority
-  app.use("*", async (req, res, next) => {
-    try {
-      const template = await fs.promises.readFile(path.resolve(distPath, "index.html"), "utf-8");
-      const entryPath = process.env.VERCEL
-        ? path.resolve(process.cwd(), "dist", "server", "entry-server.js")
-        : path.resolve(import.meta.dirname, "server", "entry-server.js");
-      const entry = pathToFileURL(entryPath).href;
-      const { render } = await import(entry);
-      const rendered = await render(req.originalUrl, createSsrPrefetch());
-      res.status(rendered.head.notFound ? 404 : 200).set({ "Content-Type": "text/html" }).end(composeSsrHtml(template, rendered.html, rendered.dehydratedState, rendered.head, originFor(req)));
-    } catch (error) {
-      next(error);
     }
   });
 }

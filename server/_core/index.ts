@@ -9,7 +9,8 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { listSitemapInventory } from "../db";
 import { createContext } from "./context";
-import { serveStatic, setupVite } from "./vite";
+import { setupVite } from "./vite";
+import { serveStatic } from "./ssrStatic";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
