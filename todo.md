@@ -8,3 +8,14 @@
 - [x] Testar rotas diretas, filtros, mapa, mobile e build de produção.
 - [x] Adicionar tabelas de estados e municípios ao esquema, gerar migração e aplicá-la na base de dados.
 - [x] Implementar helpers de base de dados e procedimentos tRPC públicos para pesquisa e detalhe de DDD.
+- [x] Auditar a arquitetura atual e definir o modelo escalável de páginas por estado, cidade e DDD.
+- [x] Validar as diretrizes oficiais de rastreio, dados estruturados e conteúdo útil para pesquisa.
+- [x] Adicionar dados territoriais verificáveis para estados e municípios, incluindo população, região e coordenadas.
+- [x] Converter as páginas públicas relevantes para renderização acessível a rastreadores e adicionar metadados por rota.
+- [x] Implementar rotas programáticas de pilares estaduais e páginas de municípios e DDDs.
+- [x] Incluir JSON-LD específico por tipo de página, com FAQPage apenas quando as perguntas forem visíveis e relevantes.
+- [x] Criar navegação interna contextual entre estado, DDD, cidade e FAQ de telefonia.
+- [x] Gerar sitemap XML segmentado, robots.txt e links canónicos para a estrutura pública.
+- [x] Validar marcação estruturada, metadados, resposta HTML e cobertura de rotas prioritárias.
+- [ ] Definir e rever fontes editoriais por estado e município para clima e pontos de interesse antes de as publicar.
+- [x] Criar o primeiro guia informacional de telefonia, com dados estruturados e ligações para os pilares territoriais.

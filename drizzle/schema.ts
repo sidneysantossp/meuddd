@@ -33,6 +33,8 @@ export const states = mysqlTable(
     uf: varchar("uf", { length: 2 }).notNull().unique(),
     name: varchar("name", { length: 64 }).notNull(),
     region: varchar("region", { length: 20 }).notNull(),
+    populationEstimated: int("populationEstimated"),
+    populationReferenceYear: int("populationReferenceYear"),
   },
   table => [index("states_region_idx").on(table.region)],
 );
@@ -48,17 +50,21 @@ export const municipalities = mysqlTable(
   {
     ibgeCode: int("ibgeCode").primaryKey(),
     name: varchar("name", { length: 120 }).notNull(),
+    slug: varchar("slug", { length: 160 }),
     stateIbgeCode: int("stateIbgeCode").notNull(),
     ddd: varchar("ddd", { length: 2 }).notNull(),
     latitude: decimal("latitude", { precision: 9, scale: 6 }).notNull(),
     longitude: decimal("longitude", { precision: 9, scale: 6 }).notNull(),
     timezone: varchar("timezone", { length: 64 }).notNull(),
     capital: boolean("capital").notNull().default(false),
+    populationEstimated: int("populationEstimated"),
+    populationReferenceYear: int("populationReferenceYear"),
   },
   table => [
     index("municipalities_state_idx").on(table.stateIbgeCode),
     index("municipalities_ddd_idx").on(table.ddd),
     index("municipalities_name_idx").on(table.name),
+    index("municipalities_state_slug_idx").on(table.stateIbgeCode, table.slug),
   ],
 );
 

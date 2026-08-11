@@ -11,3 +11,7 @@ Os nomes e os códigos municipais serão guardados pelo código IBGE para permit
 ## Camada cartográfica
 
 O mapa usa a camada GeoJSON de limites estaduais do projeto público [Click That ’Hood](https://github.com/codeforgermany/click_that_hood), com os códigos de UF em cada polígono, para permitir seleção visual. A interface trata a geometria apenas como navegação: o resultado de DDD e municípios continua a ser sempre consultado na base relacional acima.
+
+## População estimada
+
+As fichas territoriais vão usar a tabela de [Estimativas de População 2025 do IBGE](https://ftp.ibge.gov.br/Estimativas_de_Populacao/Estimativas_2025/POP2025_20260113.xls), com data de referência em **1 de julho de 2025** e atualização publicada em **13 de janeiro de 2026**. O valor será persistido com o respetivo ano, em vez de ser apresentado como população atual sem qualificação temporal. A documentação metodológica e os ficheiros oficiais estão disponíveis na página de [Estimativas da População do IBGE](https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html).

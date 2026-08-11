@@ -28,6 +28,9 @@ export const appRouter = router({
     byState: publicProcedure
       .input(z.object({ uf: z.string().length(2) }))
       .query(({ input }) => db.getStateDetails(input.uf)),
+    byMunicipality: publicProcedure
+      .input(z.object({ uf: z.string().length(2), slug: z.string().min(1).max(160) }))
+      .query(({ input }) => db.getMunicipalityDetails(input.uf, input.slug)),
     states: publicProcedure.query(() => db.listStateSummaries()),
   }),
 });

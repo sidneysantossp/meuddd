@@ -9,6 +9,7 @@ dotenv.config({ path: path.join(projectDir, ".env") });
 
 const sourcePath = process.argv[2] ?? "/home/ubuntu/Downloads/ddd-brasil-data/municipios.csv";
 const chunk = (items, size) => Array.from({ length: Math.ceil(items.length / size) }, (_, index) => items.slice(index * size, index * size + size));
+const slugify = value => value.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase("pt-BR").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 const states = [
   [11, "RO", "Rondônia", "Norte"], [12, "AC", "Acre", "Norte"], [13, "AM", "Amazonas", "Norte"], [14, "RR", "Roraima", "Norte"], [15, "PA", "Pará", "Norte"], [16, "AP", "Amapá", "Norte"], [17, "TO", "Tocantins", "Norte"],
@@ -23,7 +24,7 @@ if (!fs.existsSync(sourcePath)) throw new Error(`Ficheiro de origem não encontr
 
 const rows = fs.readFileSync(sourcePath, "utf8").trim().split(/\r?\n/).slice(1).map(line => {
   const [ibgeCode, name, latitude, longitude, capital, stateIbgeCode, , ddd, timezone] = line.split(",");
-  return [Number(ibgeCode), name, Number(stateIbgeCode), String(ddd).padStart(2, "0"), latitude, longitude, timezone, capital === "1"];
+  return [Number(ibgeCode), name, slugify(name), Number(stateIbgeCode), String(ddd).padStart(2, "0"), latitude, longitude, timezone, capital === "1"];
 });
 
 const duplicatesBy = selector => {
@@ -38,12 +39,12 @@ const duplicatesBy = selector => {
 };
 
 const duplicateIbgeCodes = duplicatesBy(([ibgeCode]) => ibgeCode);
-const duplicateMunicipalityNames = duplicatesBy(([, name, stateIbgeCode]) => `${stateIbgeCode}:${name.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase("pt-BR")}`);
+const duplicateMunicipalityNames = duplicatesBy(([, name, , stateIbgeCode]) => `${stateIbgeCode}:${name.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLocaleLowerCase("pt-BR")}`);
 if (duplicateIbgeCodes.length || duplicateMunicipalityNames.length) {
   throw new Error(`Fonte contém duplicidades: ${duplicateIbgeCodes.length} código(s) IBGE e ${duplicateMunicipalityNames.length} nome(s) de município por UF.`);
 }
 
-const ddds = [...new Set(rows.map(([, , , ddd]) => ddd))].sort((left, right) => Number(left) - Number(right));
+const ddds = [...new Set(rows.map(([, , , , ddd]) => ddd))].sort((left, right) => Number(left) - Number(right));
 const connection = await mysql.createConnection(process.env.DATABASE_URL);
 
 try {
@@ -56,7 +57,7 @@ try {
 
   for (const batch of chunk(rows, 400)) {
     await connection.query(
-      "INSERT INTO municipalities (ibgeCode, name, stateIbgeCode, ddd, latitude, longitude, timezone, capital) VALUES ? ON DUPLICATE KEY UPDATE name = VALUES(name), stateIbgeCode = VALUES(stateIbgeCode), ddd = VALUES(ddd), latitude = VALUES(latitude), longitude = VALUES(longitude), timezone = VALUES(timezone), capital = VALUES(capital)",
+      "INSERT INTO municipalities (ibgeCode, name, slug, stateIbgeCode, ddd, latitude, longitude, timezone, capital) VALUES ? ON DUPLICATE KEY UPDATE name = VALUES(name), slug = VALUES(slug), stateIbgeCode = VALUES(stateIbgeCode), ddd = VALUES(ddd), latitude = VALUES(latitude), longitude = VALUES(longitude), timezone = VALUES(timezone), capital = VALUES(capital)",
       [batch],
     );
   }

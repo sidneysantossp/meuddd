@@ -92,14 +92,19 @@ export async function getUserByOpenId(openId: string) {
 type MunicipalityRecord = {
   ibgeCode: number;
   name: string;
+  slug: string | null;
   ddd: string;
   latitude: string;
   longitude: string;
   capital: boolean;
   timezone: string;
+  populationEstimated: number | null;
+  populationReferenceYear: number | null;
   stateName: string;
   uf: string;
   region: string;
+  statePopulationEstimated: number | null;
+  statePopulationReferenceYear: number | null;
 };
 
 export type DddSummary = {
@@ -115,6 +120,8 @@ export type StateSummary = {
   region: string;
   cityCount: number;
   dddCount: number;
+  populationEstimated: number | null;
+  populationReferenceYear: number | null;
 };
 
 function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
@@ -134,7 +141,7 @@ function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
     .sort((left, right) => Number(left.code) - Number(right.code));
 }
 
-async function selectMunicipalities({ query, uf, ddd }: { query?: string; uf?: string; ddd?: string }) {
+async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; uf?: string; ddd?: string; slug?: string }) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
 
@@ -142,6 +149,7 @@ async function selectMunicipalities({ query, uf, ddd }: { query?: string; uf?: s
   const terms = [];
   if (uf) terms.push(eq(states.uf, uf.toUpperCase()));
   if (ddd) terms.push(eq(municipalities.ddd, ddd));
+  if (slug) terms.push(eq(municipalities.slug, slug));
   if (normalizedQuery) {
     const wildcard = `%${normalizedQuery}%`;
     const normalizedDdd = normalizedQuery.replace(/\D/g, "");
@@ -158,14 +166,19 @@ async function selectMunicipalities({ query, uf, ddd }: { query?: string; uf?: s
     .select({
       ibgeCode: municipalities.ibgeCode,
       name: municipalities.name,
+      slug: municipalities.slug,
       ddd: municipalities.ddd,
       latitude: municipalities.latitude,
       longitude: municipalities.longitude,
       capital: municipalities.capital,
       timezone: municipalities.timezone,
+      populationEstimated: municipalities.populationEstimated,
+      populationReferenceYear: municipalities.populationReferenceYear,
       stateName: states.name,
       uf: states.uf,
       region: states.region,
+      statePopulationEstimated: states.populationEstimated,
+      statePopulationReferenceYear: states.populationReferenceYear,
     })
     .from(municipalities)
     .innerJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
@@ -194,9 +207,38 @@ export async function getStateDetails(uf: string) {
 
   const first = municipalitiesForState[0];
   return {
-    state: { name: first.stateName, uf: first.uf, region: first.region },
+    state: {
+      name: first.stateName,
+      uf: first.uf,
+      region: first.region,
+      populationEstimated: first.statePopulationEstimated,
+      populationReferenceYear: first.statePopulationReferenceYear,
+    },
     cityCount: municipalitiesForState.length,
     ddds: groupDddRows(municipalitiesForState),
+    municipalities: municipalitiesForState,
+  };
+}
+
+export async function getMunicipalityDetails(uf: string, slug: string) {
+  const [municipality] = await selectMunicipalities({ uf, slug });
+  if (!municipality) return null;
+
+  const municipalitiesForDdd = await selectMunicipalities({ ddd: municipality.ddd });
+  const [ddd] = groupDddRows(municipalitiesForDdd);
+  return {
+    municipality,
+    state: {
+      name: municipality.stateName,
+      uf: municipality.uf,
+      region: municipality.region,
+      populationEstimated: municipality.statePopulationEstimated,
+      populationReferenceYear: municipality.statePopulationReferenceYear,
+    },
+    ddd,
+    relatedMunicipalities: municipalitiesForDdd
+      .filter(item => item.uf === municipality.uf && item.ibgeCode !== municipality.ibgeCode)
+      .slice(0, 12),
   };
 }
 
@@ -212,8 +254,29 @@ export async function listStateSummaries(): Promise<StateSummary[]> {
       region: group[0].region,
       cityCount: group.length,
       dddCount: new Set(group.map(row => row.ddd)).size,
+      populationEstimated: group[0].statePopulationEstimated,
+      populationReferenceYear: group[0].statePopulationReferenceYear,
     }))
     .sort((left, right) => left.name.localeCompare(right.name, "pt-BR"));
+}
+
+export async function listSitemapPaths() {
+  const db = await getDb();
+  if (!db) throw new Error("A base de dados não está disponível.");
+  const municipalitiesForSitemap = await db
+    .select({ uf: states.uf, slug: municipalities.slug })
+    .from(municipalities)
+    .innerJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
+    .where(and());
+  const stateRows = await db.select({ uf: states.uf }).from(states);
+  const dddRows = await db.selectDistinct({ code: municipalities.ddd }).from(municipalities).orderBy(asc(municipalities.ddd));
+  return [
+    "/",
+    "/guia/o-que-e-ddd",
+    ...stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
+    ...dddRows.map(item => `/ddd/${item.code}`),
+    ...municipalitiesForSitemap.flatMap(item => item.slug ? [`/cidade/${item.uf.toLowerCase()}/${item.slug}`] : []),
+  ];
 }
 
 export const __testables = { groupDddRows };

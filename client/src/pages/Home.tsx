@@ -1,7 +1,7 @@
 /* Atlas Vivo: busca em dados reais, cartografia clicável e índices partilháveis. */
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
-import { Link, useLocation } from "wouter";
+import { Link, useLocation, useSearch } from "wouter";
 import {
   ArrowDownRight,
   ArrowUpRight,
@@ -38,14 +38,15 @@ function Brand() {
   );
 }
 
-function initialSearch() {
-  const params = new URLSearchParams(window.location.search);
+function initialSearch(search: string) {
+  const params = new URLSearchParams(search);
   return { query: params.get("q") ?? "", uf: params.get("uf")?.toUpperCase() ?? "" };
 }
 
 export default function Home() {
   const [, setLocation] = useLocation();
-  const [{ query: firstQuery, uf: firstUf }] = useState(initialSearch);
+  const urlSearch = useSearch();
+  const [{ query: firstQuery, uf: firstUf }] = useState(() => initialSearch(urlSearch));
   const [query, setQuery] = useState(firstQuery);
   const [stateFilter, setStateFilter] = useState(firstUf);
   const [mobileNav, setMobileNav] = useState(false);
