@@ -26,3 +26,11 @@
 - [x] Documentar a estratégia de indexação escalável e as recomendações para pesquisa generativa.
 - [x] Diagnosticar e corrigir a divergência de hidratação SSR na página inicial.
 - [x] Validar que a primeira renderização do cliente não produz erros de hidratação no navegador.
+- [x] Criar testes automatizados de hidratação para a página inicial e as rotas de DDD, estado e município.
+- [x] Implementar botões de partilha por WhatsApp e redes sociais nas páginas de DDD e município.
+- [x] Tornar o feedback de cópia do link visualmente explícito e acessível.
+- [x] Validar os fluxos de partilha e a suite completa de testes antes da entrega.
+- [x] Testar no navegador os botões de WhatsApp, LinkedIn, X e cópia nas páginas de DDD e município.
+- [x] Adicionar testes automatizados ao componente de partilha para URL gerado e confirmação após cópia.
+- [x] Testar LinkedIn e X na página de DDD e registar os destinos de partilha.
+- [x] Testar WhatsApp na página municipal e registar o destino de partilha.
