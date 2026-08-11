@@ -85,3 +85,9 @@
 - [x] Registar no projeto a mensagem textual ou stack trace da função Vercel que originou o erro de runtime.
 - [ ] Validar no deployment público que a função Vercel deixou de falhar e registar uma resposta HTTP bem-sucedida.
 - [x] Corrigir a configuração `functions.server.ts.includeFiles`, rejeitada pela Vercel por aceitar apenas uma string.
+- [x] Diagnosticar a nova falha `FUNCTION_INVOCATION_FAILED` observada na revisão Vercel 6fba372 já promovida a Production.
+- [x] Registar no documento de incidente a correção de `createSsrPrefetch` aplicada em `server/ssrPrefetch.ts` e a mudança realizada.
+- [x] Impedir que o ficheiro index.html estático intercepte a rota principal antes da renderização SSR.
+- [x] Corrigir a saída do build SSR, gerada em client/dist/server em vez de dist/server, para o caminho carregado pela Vercel.
+- [x] Garantir que a verificação local do runtime Vercel termina após consultar a rota SSR com dependência de base de dados.
+- [x] Adicionar uma verificação executável persistida que invoque `/` em modo SSR/Vercel e falhe por HTTP 500 ou por `createSsrPrefetch is not defined`.

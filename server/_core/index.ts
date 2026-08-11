@@ -9,7 +9,6 @@ import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { listSitemapInventory } from "../db";
 import { createContext } from "./context";
-import { setupVite } from "./vite";
 import { serveStatic } from "./ssrStatic";
 
 function isPortAvailable(port: number): Promise<boolean> {
@@ -99,6 +98,7 @@ async function startServer() {
 
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
+    const { setupVite } = await import("./vite");
     await setupVite(app, server);
   } else {
     serveStatic(app);

@@ -10,7 +10,17 @@ A correção passa a fazer o entrypoint importar estaticamente `dist/index.js`, 
 
 Após o envio do commit de correção `42a333f`, o domínio de produção ainda respondeu temporariamente com o mesmo `ERR_MODULE_NOT_FOUND`. A validação deve, portanto, confirmar no painel de Deployments que essa revisão específica foi concluída e promovida para Production antes de atribuir uma nova resposta 500 ao código corrigido.
 
+O deployment seguinte, commit `6fba372`, foi iniciado com a correção do esquema `functions.server.ts.includeFiles` para o padrão único `dist/**`. No painel da Vercel, esta revisão encontrava-se em estado `Building`; a validação de produção só será registada após o estado final estar disponível.
+
+O deployment `6fba372` foi concluído em estado `Ready` no ambiente `Production`, com duração de 1 minuto e 11 segundos. A revisão foi atribuída a `www.meuddd.com.br`, ao domínio de produção Git e ao URL específico do deployment. Falta validar a resposta HTTP efetiva e o HTML SSR a partir do domínio público.
+
+Ao invocar a revisão `6fba372`, a Vercel devolveu `FUNCTION_INVOCATION_FAILED` e os logs filtrados pelo deployment `dpl_4Qv3bkVVkwJYvknWJ5BdrAHz3B2E` registaram repetidamente: `Error: Cannot find module @rollup/rollup-linux-x64-gnu`. O erro aponta para `node_modules/.pnpm/rollup@4.52.4`, incluindo a rota `/` e ficheiros de favicon. Isto mostra que o runtime serverless ainda carrega uma dependência de desenvolvimento Vite/Rollup durante a importação do bundle, mesmo sem executar o middleware de desenvolvimento. A próxima correção deve remover a importação estática desse módulo do caminho de produção, deixando-o sob importação dinâmica exclusiva do arranque local.
+
+A importação de `./vite` no entrypoint foi alterada para `await import("./vite")` exclusivamente dentro do ramo `NODE_ENV === "development"`. Assim, a função Vercel pode importar o bundle de produção sem carregar `vite` nem a dependência opcional nativa do Rollup. O contrato automatizado de publicação passou a bloquear uma importação estática de `./vite` no entrypoint principal.
+
 Além da separação entre a entrega SSR de produção (`server/_core/ssrStatic.ts`) e o middleware Vite de desenvolvimento, o projeto inclui agora `pnpm run verify:vercel-runtime`. A verificação arranca o mesmo `server.ts` sob `VERCEL=1`, responde `robots.txt` com HTTP 200 e confirma que o bundle e os ficheiros SSR necessários estão resolvíveis antes da publicação.
+
+Após reiniciar o servidor local e reproduzir a rota `/`, foi identificado que a referência de prefetch tinha de permanecer disponível durante a transformação SSR do Vite. A correção foi aplicada em `server/ssrPrefetch.ts`: `createSsrPrefetch` passou de constante-arrow para uma exportação de função explícita. A disponibilidade da factory é coberta em `server/ssrPrefetch.test.ts`. Além disso, `scripts/verify-vercel-runtime.mjs` passou a falhar explicitamente se `/` devolver HTTP 500 ou se o HTML contiver `createSsrPrefetch is not defined`; a execução limpa devolveu HTTP 200, estado de hidratação e ausência dessa exceção.
 
 ## Referências oficiais
 

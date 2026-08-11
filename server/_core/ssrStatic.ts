@@ -21,7 +21,9 @@ export function serveStatic(app: Express) {
     console.error("Could not find the build directory: ${distPath}, make sure to build the client first");
   }
 
-  app.use(express.static(distPath));
+  // O index.html precisa passar pelo handler abaixo para receber HTML, metadados e JSON-LD de SSR.
+  // Os demais assets continuam a ser servidos diretamente deste diretório.
+  app.use(express.static(distPath, { index: false }));
   app.use("*", async (req, res, next) => {
     try {
       const template = await fs.promises.readFile(path.resolve(distPath, "index.html"), "utf-8");
