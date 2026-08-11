@@ -84,3 +84,4 @@
 - [x] Obter o detalhe de runtime de `FUNCTION_INVOCATION_FAILED` no deployment mais recente da Vercel e corrigir a dependência que impede o arranque.
 - [x] Registar no projeto a mensagem textual ou stack trace da função Vercel que originou o erro de runtime.
 - [ ] Validar no deployment público que a função Vercel deixou de falhar e registar uma resposta HTTP bem-sucedida.
+- [x] Corrigir a configuração `functions.server.ts.includeFiles`, rejeitada pela Vercel por aceitar apenas uma string.

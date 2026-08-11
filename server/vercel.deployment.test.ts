@@ -11,9 +11,7 @@ describe("configuração de publicação Vercel", () => {
 
     expect(config.framework).toBe("express");
     expect(config.buildCommand).toBe("pnpm run build:vercel");
-    expect(config.functions["server.ts"].includeFiles).toContain("public/**");
-    expect(config.functions["server.ts"].includeFiles).toContain("dist/index.js");
-    expect(config.functions["server.ts"].includeFiles).toContain("dist/server/**");
+    expect(config.functions["server.ts"].includeFiles).toBe("dist/**");
     expect(serverEntry).toContain('import express from "express"');
     expect(serverEntry).toContain('import { createApp, serveStatic } from "./dist/index.js"');
     expect(serverEntry).not.toContain('"./server/_core/');
