@@ -60,3 +60,9 @@
 - [x] Adicionar filtros de período e volume ao painel de termos de pesquisa sem resultados.
 - [x] Criar interface administrativa de moderação para aprovar ou rejeitar sugestões locais.
 - [x] Validar filtros, moderação, permissões, SSR, testes e build da expansão.
+- [x] Auditar a cobertura e as fontes existentes para Porto Alegre, Recife e Fortaleza.
+- [x] Completar as fichas locais verificadas de Porto Alegre, Recife e Fortaleza com turismo, parques, património, mobilidade e serviços.
+- [x] Adicionar filtros por UF e categoria à lista administrativa de sugestões locais.
+- [x] Validar visualmente as fichas locais de Recife e Fortaleza, além de Porto Alegre.
+- [x] Acrescentar cobertura automatizada explícita para Porto Alegre, Recife e Fortaleza no catálogo local partilhado.
+- [x] Validar explicitamente o HTML SSR de Recife e Fortaleza e executar a verificação final antes do checkpoint.

@@ -332,13 +332,19 @@ export async function createLocalitySuggestion(input: { municipalityIbgeCode: nu
   return { accepted: true } as const;
 }
 
-export type LocalitySuggestionFilters = { status?: "pending" | "reviewed" | "approved" | "dismissed"; limit?: number };
+export type LocalitySuggestionFilters = {
+  status?: "pending" | "reviewed" | "approved" | "dismissed";
+  uf?: string;
+  topic?: "mobility" | "useful_phone" | "other";
+  limit?: number;
+};
 
 export async function listLocalitySuggestions(input: LocalitySuggestionFilters = {}) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   const safeLimit = Math.max(1, Math.min(input.limit ?? 100, 100));
-  const statusCondition = input.status ? eq(localitySuggestions.status, input.status) : undefined;
+  const safeUf = input.uf?.trim().toUpperCase();
+  const ufCondition = safeUf && /^[A-Z]{2}$/.test(safeUf) ? eq(states.uf, safeUf) : undefined;
   return db
     .select({
       id: localitySuggestions.id,
@@ -354,7 +360,11 @@ export async function listLocalitySuggestions(input: LocalitySuggestionFilters =
     .from(localitySuggestions)
     .leftJoin(municipalities, eq(localitySuggestions.municipalityIbgeCode, municipalities.ibgeCode))
     .leftJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
-    .where(statusCondition)
+    .where(and(
+      input.status ? eq(localitySuggestions.status, input.status) : undefined,
+      ufCondition,
+      input.topic ? eq(localitySuggestions.topic, input.topic) : undefined,
+    ))
     .orderBy(asc(localitySuggestions.status), desc(localitySuggestions.createdAt))
     .limit(safeLimit);
 }

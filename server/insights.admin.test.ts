@@ -37,4 +37,12 @@ describe("insights administrativos", () => {
     await expect(caller.insights.reviewLocalitySuggestion({ id: 42, status: "approved" })).resolves.toEqual({ updated: true });
     expect(review).toHaveBeenCalledWith({ id: 42, status: "approved" });
   });
+
+  it("encaminha filtros de UF e categoria para a triagem de sugestões", async () => {
+    const list = vi.spyOn(db, "listLocalitySuggestions").mockResolvedValue([]);
+    const caller = appRouter.createCaller(createAdminContext());
+
+    await expect(caller.insights.localitySuggestions({ status: "pending", uf: "PE", topic: "mobility", limit: 25 })).resolves.toEqual([]);
+    expect(list).toHaveBeenCalledWith({ status: "pending", uf: "PE", topic: "mobility", limit: 25 });
+  });
 });

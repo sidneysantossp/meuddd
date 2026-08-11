@@ -39,6 +39,18 @@ describe("conteúdo local verificável", () => {
     }
   });
 
+  it("mantém turismo, património, parques, mobilidade e serviços nas fichas de Porto Alegre, Recife e Fortaleza", () => {
+    const capitals = [["RS", "Porto-Alegre"], ["PE", "Recife"], ["CE", "Fortaleza"]] as const;
+    for (const [uf, slug] of capitals) {
+      const content = getLocalityContent(uf, slug);
+      expect(content?.history?.body).toBeTruthy();
+      expect(content?.heritage?.length).toBeGreaterThan(0);
+      expect(content?.parks?.length).toBeGreaterThan(0);
+      expect(content?.mobility?.href).toMatch(/^https:\/\//);
+      expect(content?.municipalServices?.length).toBeGreaterThan(0);
+    }
+  });
+
   it("devolve apenas um URL de pesquisa de mapa devidamente codificado", () => {
     expect(mapSearchUrl("Bares e restaurantes em Barueri, SP")).toBe(
       "https://www.google.com/maps/search/?api=1&query=Bares%20e%20restaurantes%20em%20Barueri%2C%20SP",

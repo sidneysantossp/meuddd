@@ -54,7 +54,12 @@ export const appRouter = router({
       }).optional())
       .query(({ input }) => db.listUnmatchedSearches(input)),
     localitySuggestions: adminProcedure
-      .input(z.object({ status: z.enum(["pending", "reviewed", "approved", "dismissed"]).optional(), limit: z.number().int().min(1).max(100).optional() }).optional())
+      .input(z.object({
+        status: z.enum(["pending", "reviewed", "approved", "dismissed"]).optional(),
+        uf: z.string().length(2).optional(),
+        topic: z.enum(["mobility", "useful_phone", "other"]).optional(),
+        limit: z.number().int().min(1).max(100).optional(),
+      }).optional())
       .query(({ input }) => db.listLocalitySuggestions(input)),
     reviewLocalitySuggestion: adminProcedure
       .input(z.object({ id: z.number().int().positive(), status: z.enum(["reviewed", "approved", "dismissed"]) }))
