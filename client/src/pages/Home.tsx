@@ -162,7 +162,7 @@ export default function Home() {
 
         <section id="sobre" className="container grid gap-10 py-20 lg:grid-cols-[1fr_0.7fr] lg:py-24"><div><div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">Um atlas para o dia a dia</div><h2 className="font-display max-w-[620px] text-5xl leading-[0.95] tracking-[-0.06em] text-[#143d36] sm:text-6xl">Menos dúvida na hora de <em className="font-normal">conectar.</em></h2></div><div className="border-l border-[#d9d1bf] pl-6 text-sm leading-7 text-[#6b8177]"><p>O DDD Brasil organiza os códigos de área do país em uma busca rápida, com ligação direta para cada DDD e leitura visual por estado.</p><div className="mt-8 flex items-center gap-3 text-xs font-bold text-[#143d36]"><span className="grid size-9 place-items-center rounded-full bg-[#f5c5a1]"><Phone size={15} /></span> Informação clara, de ponta a ponta.</div></div></section>
       </main>
-      <footer className="bg-[#143d36] py-10 text-[#d6e0d7]"><div className="container flex flex-col justify-between gap-4 text-xs sm:flex-row sm:items-center"><span className="font-display text-xl text-[#faf3e5]">DDD Brasil</span><span>Base territorial importada e documentada · {new Date().getFullYear()}</span></div></footer>
+      <footer className="bg-[#143d36] py-10 text-[#d6e0d7]"><div className="container flex flex-col justify-between gap-4 text-xs sm:flex-row sm:items-center"><span className="font-display text-xl text-[#faf3e5]">DDD Brasil</span><span>Base territorial importada e documentada</span></div></footer>
     </div>
   );
 }

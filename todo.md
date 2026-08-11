@@ -24,3 +24,5 @@
 - [x] Rever a marcação Schema.org de páginas territoriais e definir os limites corretos para LocalBusiness e FAQPage.
 - [x] Testar HTML, metadados, JSON-LD e navegação interna nas páginas-pilar de estado e município.
 - [x] Documentar a estratégia de indexação escalável e as recomendações para pesquisa generativa.
+- [x] Diagnosticar e corrigir a divergência de hidratação SSR na página inicial.
+- [x] Validar que a primeira renderização do cliente não produz erros de hidratação no navegador.
