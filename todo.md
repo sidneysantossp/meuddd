@@ -17,5 +17,5 @@
 - [x] Criar navegação interna contextual entre estado, DDD, cidade e FAQ de telefonia.
 - [x] Gerar sitemap XML segmentado, robots.txt e links canónicos para a estrutura pública.
 - [x] Validar marcação estruturada, metadados, resposta HTML e cobertura de rotas prioritárias.
-- [ ] Definir e rever fontes editoriais por estado e município para clima e pontos de interesse antes de as publicar.
+- [x] Definir e rever fontes editoriais por estado e município para clima e pontos de interesse antes de as publicar.
 - [x] Criar o primeiro guia informacional de telefonia, com dados estruturados e ligações para os pilares territoriais.
