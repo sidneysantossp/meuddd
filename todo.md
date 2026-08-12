@@ -110,3 +110,4 @@
 - [x] Confirmar em código e teste que o título principal preserva o espaçamento entre letras solicitado: `HERO_TITLE_CLASS` usa `tracking-[0.012em]` e o teste `Home.branding.test.tsx` é executado pela suite.
 - [x] Registar a validação visual objetiva do herói e do mapa SVG em desktop e móvel antes do checkpoint: em 1280×720, a marca Meu DDD, o título e os 27 limites estaduais foram exibidos no herói; em 375×812, o cabeçalho, título e painel do mapa mantiveram legibilidade e encaixe vertical.
 - [x] Adicionar uma verificação estrutural que confirme a renderização dos 27 estados no mapa SVG principal: `BrazilStateMap.test.tsx` carrega 27 UFs e confirma 27 paths SVG, além da seleção de São Paulo.
+- [x] Adicionar o ficheiro público `ads.txt` com a declaração Google AdSense fornecida e validar a sua cópia para `dist/public/ads.txt` no build de produção.
