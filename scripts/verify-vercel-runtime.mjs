@@ -27,6 +27,10 @@ try {
   const robots = await response.text();
   const homeResponse = await fetch(`http://127.0.0.1:${address.port}/`);
   const homeHtml = await homeResponse.text();
+  const dddResponse = await fetch(`http://127.0.0.1:${address.port}/ddd/11`);
+  const dddHtml = await dddResponse.text();
+  const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
+  const sitemapXml = await sitemapResponse.text();
 
   if (!response.ok || !robots.includes("Sitemap:")) {
     throw new Error(`O entrypoint Vercel não respondeu robots.txt corretamente (HTTP ${response.status}).`);
@@ -41,7 +45,15 @@ try {
     throw new Error(`O entrypoint Vercel não renderizou SSR na rota principal (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt e a rota SSR principal responderam HTTP 200.");
+  if (!dddResponse.ok || !dddHtml.includes("DDD 11: cidades e estados atendidos")) {
+    throw new Error(`A reserva territorial não renderizou a rota programática /ddd/11 (HTTP ${dddResponse.status}): ${dddHtml.slice(0, 600)}`);
+  }
+
+  if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
+    throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
+  }
+
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rota DDD e sitemap responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

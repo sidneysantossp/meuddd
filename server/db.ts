@@ -3,6 +3,7 @@ import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, localitySuggestions, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 import { editorialGuides } from "../shared/editorialGuides";
+import { staticTerritory } from "./territoryFallback";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -107,6 +108,22 @@ type MunicipalityRecord = {
   statePopulationEstimated: number | null;
   statePopulationReferenceYear: number | null;
 };
+
+function staticMunicipalities(input: { query?: string; uf?: string; ddd?: string; slug?: string }) {
+  const query = input.query?.trim().toLocaleLowerCase("pt-BR");
+  const normalizedDdd = query?.replace(/\D/g, "");
+  return staticTerritory
+    .filter(row => {
+      if (input.uf && row.uf !== input.uf.toUpperCase()) return false;
+      if (input.ddd && row.ddd !== input.ddd) return false;
+      if (input.slug && row.slug !== input.slug) return false;
+      if (!query) return true;
+      return [row.name, row.stateName, row.uf, row.region, row.ddd]
+        .some(value => value.toLocaleLowerCase("pt-BR").includes(query))
+        || Boolean(normalizedDdd && row.ddd.startsWith(normalizedDdd));
+    })
+    .sort((left, right) => Number(left.ddd) - Number(right.ddd) || left.name.localeCompare(right.name, "pt-BR"));
+}
 
 function normalizeSearch(value: string) {
   return value
@@ -214,7 +231,7 @@ function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
 
 async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; uf?: string; ddd?: string; slug?: string }) {
   const db = await getDb();
-  if (!db) throw new Error("A base de dados não está disponível.");
+  if (!db) return staticMunicipalities({ query, uf, ddd, slug });
 
   const normalizedQuery = query?.trim();
   const terms = [];
@@ -458,7 +475,24 @@ export type SitemapInventory = {
 
 export async function listSitemapInventory(): Promise<SitemapInventory> {
   const db = await getDb();
-  if (!db) throw new Error("A base de dados não está disponível.");
+  if (!db) {
+    const citiesByUf: Record<string, string[]> = {};
+    for (const item of staticTerritory) {
+      if (!item.slug) continue;
+      const uf = item.uf.toLowerCase();
+      citiesByUf[uf] = [...(citiesByUf[uf] ?? []), `/cidade/${uf}/${item.slug}`];
+    }
+    return {
+      states: Array.from(new Set(staticTerritory.map(item => item.uf)))
+        .sort()
+        .map(uf => `/estado/${uf.toLowerCase()}`),
+      ddds: Array.from(new Set(staticTerritory.map(item => item.ddd)))
+        .sort((left, right) => Number(left) - Number(right))
+        .map(code => `/ddd/${code}`),
+      citiesByUf,
+      guides: ["/", "/guias", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
+    };
+  }
   const municipalitiesForSitemap = await db
     .select({ uf: states.uf, slug: municipalities.slug })
     .from(municipalities)
@@ -492,4 +526,4 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion };
+export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion, staticMunicipalities };

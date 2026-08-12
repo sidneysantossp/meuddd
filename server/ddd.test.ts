@@ -16,3 +16,15 @@ describe("agregação de DDDs", () => {
     expect(summaries[1]?.states).toEqual([{ name: "Goiás", uf: "GO", region: "Centro-Oeste" }]);
   });
 });
+
+describe("reserva territorial para SSR", () => {
+  it("mantém o catálogo nacional consultável quando a ligação de base de dados não está disponível", () => {
+    const ddd11 = __testables.staticMunicipalities({ ddd: "11" });
+    const saoPaulo = __testables.staticMunicipalities({ uf: "SP", slug: "sao-paulo" });
+
+    expect(ddd11.length).toBeGreaterThan(1);
+    expect(ddd11.every(item => item.ddd === "11")).toBe(true);
+    expect(saoPaulo).toHaveLength(1);
+    expect(saoPaulo[0]).toMatchObject({ name: "São Paulo", uf: "SP", ddd: "11" });
+  });
+});

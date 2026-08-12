@@ -98,3 +98,4 @@
 - [ ] Validar uma revisão publicada após o handler dedicado com HTTP 200 e HTML SSR no URL de produção da Vercel.
 - [x] Confirmar que a ocorrência local de `createSsrPrefetch is not defined` era histórica e não reapareceu nos registos frescos após o reinício.
 - [x] Corrigir o caminho de recursos SSR no modo Vercel, que procura `public/` embora a função inclua `dist/public/`.
+- [x] Adicionar uma reserva versionada dos dados territoriais para que as páginas públicas SSR permaneçam disponíveis quando a variável `DATABASE_URL` não estiver configurada na Vercel.
