@@ -153,15 +153,18 @@
 - [x] Exibir em páginas de cidade, DDD e estado a proveniência ANATEL/IBGE aplicável, com data de revisão e ligação à fonte oficial.
 - [x] Criar clusters de intenção interligados por município, DDD, estado e região, com conteúdo único e links internos rastreáveis.
 - [x] Implementar o protocolo IndexNow com verificação de chave, submissão controlada de URLs atualizadas e testes automatizados.
-- [ ] Preparar a medição de cobertura para Google Search Console, incluindo guia de verificação de propriedade e painel/estrutura de KPIs sem expor credenciais.
+- [x] Preparar a medição de cobertura para Google Search Console, incluindo guia de verificação de propriedade e painel/estrutura de KPIs sem expor credenciais.
 - [x] Priorizar e implementar as oportunidades restantes do relatório de SEO/GEO que sejam viáveis sem serviços externos adicionais.
 - [x] Adicionar blocos de resposta rápida factuais às páginas de município, DDD e estado para melhorar a compreensão e citação por mecanismos de busca.
 - [x] Publicar RSS do Blog, sitemap de imagens e incluir hubs regionais/institucionais no inventário de sitemaps rastreáveis.
 - [x] Ampliar os dados estruturados com `dateModified`, `Organization`, `WebSite`, `SearchAction` e relações territoriais verificáveis.
 - [x] Gerar e publicar a chave de verificação do IndexNow, com endpoint público estável no domínio canónico.
 - [x] Implementar a submissão controlada de URLs IndexNow e cobrir o contrato com teste automatizado.
-- [ ] Criar a propriedade de domínio `meuddd.com.br` no Google Search Console e obter o valor TXT de verificação.
-- [ ] Publicar no Cloudflare o registo TXT entregue pelo Google Search Console e confirmar a propriedade de domínio.
+- [x] Confirmar que a propriedade de domínio `meuddd.com.br` já existe e está verificada no Google Search Console.
+- [x] Confirmar a verificação por provedor de domínio já ativa para `https://www.meuddd.com.br/`, sem duplicar registos TXT ou metatags.
 - [x] Expandir fichas locais verificadas para Florianópolis, Vitória e Campo Grande, com referências institucionais documentadas.
 - [x] Exibir uma data editorial de revisão em cada ficha local publicada.
 - [x] Criar a página pública `/capitais`, filtrável por região, com DDD, ligação municipal, SSR, JSON-LD e sitemap.
+- [x] Documentar a leitura de cobertura Search Console e a rotina de monitorização dos sitemaps já publicados.
+- [x] Confirmar que `sitemap.xml` já tinha sido submetido na propriedade verificada e se encontra processado no Search Console.
+- [x] Registar a evidência do Search Console que confirma o processamento prévio do índice e dos sitemaps segmentados.
