@@ -126,3 +126,6 @@
 - [x] Corrigir a resolução das entradas SSR no servidor de desenvolvimento quando a configuração Vite é definida por função.
 - [x] Registar no projeto a evidência da validação pós-otimização, incluindo rotas principais, viewport móvel e resultado da navegação.
 - [x] Adicionar e executar uma verificação automatizada do build otimizado para `/`, `/ddd/11`, uma rota de estado e uma rota de município.
+- [x] Exibir as siglas das 27 UFs no mapa SVG interativo com posicionamento legível e acessível.
+- [x] Adicionar animações decorativas de conexão entre estados no mapa, respeitando `prefers-reduced-motion` e sem interferir nos cliques.
+- [x] Incluir a página `/gerador` na navegação principal e reforçar o aviso de que os números são exclusivamente simulados, sem vínculo com linhas reais.

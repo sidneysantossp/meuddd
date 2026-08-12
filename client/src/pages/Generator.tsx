@@ -5,6 +5,8 @@ import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import { createMobileSubscriber, formatMobileNumber, sanitizeMobileSubscriber } from "@/lib/mobileNumber";
 
+export const GENERATOR_SIMULATION_NOTICE = "Os números são exemplos aleatórios para simulação e testes. A ferramenta não consulta, identifica, reserva ou possui qualquer vínculo com números reais de telefone, titulares ou operadoras. Não confirma se o número existe, está disponível ou pertence a alguém.";
+
 function GeneratorBrand() {
   return (
     <Link href="/" className="group inline-flex items-center gap-3" aria-label="Meu DDD, ir para a página inicial">
@@ -128,7 +130,10 @@ export default function Generator() {
               </div>
             </div>
 
-            <p className="mt-5 flex gap-2 text-xs leading-5 text-[#b8cec4]"><ShieldCheck size={16} className="mt-0.5 shrink-0 text-[#f5c5a1]" /> Este gerador produz apenas um exemplo de formato. Não confirma se o número existe, está disponível ou pertence a alguém.</p>
+            <aside role="note" aria-label="Aviso sobre a simulação" className="mt-5 flex gap-3 rounded-xl border border-[#f5c5a1]/35 bg-[#f5ead7]/10 px-4 py-3 text-xs leading-5 text-[#d9eee7]">
+              <ShieldCheck size={17} className="mt-0.5 shrink-0 text-[#f5c5a1]" />
+              <p><strong className="text-[#fffaf1]">Uso exclusivamente simulatório.</strong> {GENERATOR_SIMULATION_NOTICE}</p>
+            </aside>
           </section>
         </section>
 

@@ -132,6 +132,36 @@ button { cursor: pointer; }
 @keyframes drift { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(0, -8px, 0); } }
 .map-drift { animation: drift 7s ease-in-out infinite; }
 
+.state-labels text {
+  fill: #fffaf1;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  paint-order: stroke;
+  stroke: #143d36;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+.state-connection {
+  fill: none;
+  stroke: #f5c5a1;
+  stroke-width: 1.55px;
+  stroke-dasharray: 4 10;
+  opacity: 0.88;
+}
+
+.state-connection-node { fill: #f06a4d; stroke: #fffaf1; stroke-width: 1px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .state-connection { animation: state-connection-travel 3.8s linear infinite; }
+  .state-connection-node { animation: state-connection-pulse 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+}
+
+@keyframes state-connection-travel { to { stroke-dashoffset: -56; } }
+@keyframes state-connection-pulse { 50% { opacity: 0.4; r: 3.6px; } }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }

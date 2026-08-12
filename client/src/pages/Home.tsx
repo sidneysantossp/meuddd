@@ -25,6 +25,13 @@ import { trpc } from "@/lib/trpc";
 const featuredCodes = ["11", "21", "31", "41", "51", "61", "71", "81", "91"];
 const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
 
+export const MAIN_NAV_ITEMS = [
+  { href: "#buscar", label: "Buscar DDD" },
+  { href: "#mapa", label: "Mapa interativo" },
+  { href: "/gerador", label: "Gerar número" },
+  { href: "#sobre", label: "Como funciona" },
+] as const;
+
 function Brand() {
   return (
     <a href="#topo" className="group inline-flex items-center gap-3" aria-label="Meu DDD, voltar ao topo">
@@ -105,10 +112,12 @@ export default function Home() {
       <header className="relative z-20 border-b border-[#d9d1bf]/70 bg-[#faf3e5]/90 backdrop-blur-md">
         <div className="container flex min-h-[78px] items-center justify-between gap-8">
           <Brand />
-          <nav className={`${mobileNav ? "flex" : "hidden"} absolute left-4 right-4 top-[86px] flex-col gap-2 rounded-2xl border border-[#d9d1bf] bg-[#faf3e5] p-3 shadow-xl md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}>
-            <a href="#buscar" className="rounded-lg px-3 py-2 text-sm font-semibold text-[#143d36]">Buscar DDD</a>
-            <a href="#mapa" className="rounded-lg px-3 py-2 text-sm font-semibold text-[#5d756c]">Mapa interativo</a>
-            <a href="#sobre" className="rounded-lg px-3 py-2 text-sm font-semibold text-[#5d756c]">Como funciona</a>
+          <nav aria-label="Navegação principal" className={`${mobileNav ? "flex" : "hidden"} absolute left-4 right-4 top-[86px] flex-col gap-2 rounded-2xl border border-[#d9d1bf] bg-[#faf3e5] p-3 shadow-xl md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}>
+            {MAIN_NAV_ITEMS.map(item => item.href.startsWith("#") ? (
+              <a key={item.href} href={item.href} onClick={() => setMobileNav(false)} className={`rounded-lg px-3 py-2 text-sm font-semibold ${item.href === "#buscar" ? "text-[#143d36]" : "text-[#5d756c]"}`}>{item.label}</a>
+            ) : (
+              <Link key={item.href} href={item.href} onClick={() => setMobileNav(false)} className="rounded-lg px-3 py-2 text-sm font-semibold text-[#5d756c] hover:text-[#143d36]">{item.label}</Link>
+            ))}
           </nav>
           <div className="flex items-center gap-3">
             <a href="#buscar" className="pressable hidden items-center gap-2 rounded-full bg-[#143d36] px-4 py-2.5 text-sm font-bold text-[#faf3e5] md:inline-flex">Consultar agora <ArrowUpRight size={15} /></a>

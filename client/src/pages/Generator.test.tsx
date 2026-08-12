@@ -53,5 +53,6 @@ describe("página do gerador", () => {
     expect(writeText).toHaveBeenCalledWith("(21) 91234-5678");
     expect(toastSuccess).toHaveBeenCalledWith("Número simulado copiado.");
     expect(container.textContent).toContain("Não confirma se o número existe");
+    expect(container.textContent).toContain("vínculo com números reais");
   });
 });

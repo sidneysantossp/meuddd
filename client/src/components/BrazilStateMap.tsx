@@ -9,18 +9,39 @@ type StateSummary = {
   dddCount: number;
 };
 
-type Position = [number, number];
+type Position = readonly [number, number];
 type Ring = Position[];
 type Geometry = { type: "Polygon"; coordinates: Ring[] } | { type: "MultiPolygon"; coordinates: Ring[][] };
 type GeoFeature = { properties: { sigla?: string }; geometry: Geometry };
 type GeoCollection = { features: GeoFeature[] };
-type SvgFeature = { uf: string; path: string };
+type SvgFeature = { uf: string; path: string; label: Position };
+type StateConnection = { id: string; path: string; start: Position; end: Position; index: number };
 
 const GEOJSON_URL = "/manus-storage/brazil-states_dc614e06.geojson";
 const MAP_WIDTH = 520;
 const MAP_HEIGHT = 530;
 const PADDING = 24;
 const MAX_POINTS_PER_RING = 220;
+
+export const STATE_CONNECTIONS = [
+  ["AM", "PA"],
+  ["PA", "MA"],
+  ["GO", "SP"],
+  ["SP", "RJ"],
+  ["BA", "PE"],
+  ["PR", "SC"],
+] as const;
+
+const STATE_LABEL_OFFSETS: Partial<Record<string, Position>> = {
+  AL: [13, -2],
+  DF: [-17, 10],
+  ES: [14, -3],
+  PB: [12, 1],
+  PE: [13, -7],
+  RJ: [14, 6],
+  RN: [9, -6],
+  SE: [13, 8],
+};
 
 function simplifyRing(ring: Ring) {
   if (ring.length <= MAX_POINTS_PER_RING) return ring;
@@ -59,8 +80,24 @@ function createPaths(collection: GeoCollection): SvgFeature[] {
     if (!uf) return [];
     const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
     const path = polygons.map(polygon => polygon.map(ringPath).join(" ")).join(" ");
-    return path ? [{ uf, path }] : [];
+    const featurePositions = polygons.flatMap(polygon => polygon.flat());
+    const featureLongitudes = featurePositions.map(([longitude]) => longitude);
+    const featureLatitudes = featurePositions.map(([, latitude]) => latitude);
+    const label = point([
+      (Math.min(...featureLongitudes) + Math.max(...featureLongitudes)) / 2,
+      (Math.min(...featureLatitudes) + Math.max(...featureLatitudes)) / 2,
+    ]);
+    return path ? [{ uf, path, label }] : [];
   });
+}
+
+function createConnectionPath(start: Position, end: Position) {
+  const [startX, startY] = start;
+  const [endX, endY] = end;
+  const midpointX = (startX + endX) / 2;
+  const midpointY = (startY + endY) / 2;
+  const bend = Math.min(28, Math.max(12, Math.abs(endX - startX) * 0.14));
+  return `M${startX.toFixed(1)},${startY.toFixed(1)} Q${midpointX.toFixed(1)},${(midpointY - bend).toFixed(1)} ${endX.toFixed(1)},${endY.toFixed(1)}`;
 }
 
 export function BrazilStateMap({
@@ -80,6 +117,15 @@ export function BrazilStateMap({
   const [hasHydrated, setHasHydrated] = useState(false);
   const stateByUf = useMemo(() => new Map(states.map(state => [state.uf, state])), [states]);
   const selectedState = selectedUf ? stateByUf.get(selectedUf) : undefined;
+  const labelPositions = useMemo(() => new Map(features.map(feature => {
+    const [offsetX, offsetY] = STATE_LABEL_OFFSETS[feature.uf] ?? [0, 0];
+    return [feature.uf, [feature.label[0] + offsetX, feature.label[1] + offsetY] as Position];
+  })), [features]);
+  const connections = useMemo<StateConnection[]>(() => STATE_CONNECTIONS.flatMap(([from, to], index) => {
+    const start = labelPositions.get(from);
+    const end = labelPositions.get(to);
+    return start && end ? [{ id: `${from}-${to}`, path: createConnectionPath(start, end), start, end, index }] : [];
+  }), [labelPositions]);
 
   useEffect(() => setHasHydrated(true), []);
 
@@ -162,6 +208,21 @@ export function BrazilStateMap({
                 />
               );
             })}
+            <g aria-hidden="true" pointerEvents="none">
+              {connections.map(connection => (
+                <g key={connection.id}>
+                  <path d={connection.path} className="state-connection" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                  <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                  <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                </g>
+              ))}
+            </g>
+            <g aria-hidden="true" pointerEvents="none" className="state-labels">
+              {features.map(feature => {
+                const label = labelPositions.get(feature.uf);
+                return label ? <text key={feature.uf} x={label[0]} y={label[1]} textAnchor="middle" dominantBaseline="central">{feature.uf}</text> : null;
+              })}
+            </g>
           </svg>
         ) : (
           <div className="grid h-full place-items-center px-10 text-center text-xs font-bold uppercase tracking-[0.18em] text-[#f7e8ce]/80">
