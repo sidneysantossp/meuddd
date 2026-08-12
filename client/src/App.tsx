@@ -11,6 +11,7 @@ import StatePage from "./pages/StatePage";
 import MunicipalityPage from "./pages/MunicipalityPage";
 import DddGuidePage from "./pages/DddGuidePage";
 import GuidesIndexPage from "./pages/GuidesIndexPage";
+import Generator from "./pages/Generator";
 import SearchInsightsPage from "./pages/SearchInsightsPage";
 import SuggestionModerationPage from "./pages/SuggestionModerationPage";
 
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/estado/:uf" component={StatePage} />
       <Route path="/cidade/:uf/:slug" component={MunicipalityPage} />
       <Route path="/guias" component={GuidesIndexPage} />
+      <Route path="/gerador" component={Generator} />
       <Route path="/guia/:slug" component={DddGuidePage} />
       <Route path="/ddd/:code" component={DddDetail} />
       <Route path="/admin/pesquisas" component={SearchInsightsPage} />

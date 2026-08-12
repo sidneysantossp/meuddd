@@ -111,3 +111,8 @@
 - [x] Registar a validação visual objetiva do herói e do mapa SVG em desktop e móvel antes do checkpoint: em 1280×720, a marca Meu DDD, o título e os 27 limites estaduais foram exibidos no herói; em 375×812, o cabeçalho, título e painel do mapa mantiveram legibilidade e encaixe vertical.
 - [x] Adicionar uma verificação estrutural que confirme a renderização dos 27 estados no mapa SVG principal: `BrazilStateMap.test.tsx` carrega 27 UFs e confirma 27 paths SVG, além da seleção de São Paulo.
 - [x] Adicionar o ficheiro público `ads.txt` com a declaração Google AdSense fornecida e validar a sua cópia para `dist/public/ads.txt` no build de produção.
+- [x] Criar a rota pública `/gerador` com uma ferramenta de simulação de número móvel brasileiro por DDD, deixando explícito que não verifica disponibilidade nem titularidade.
+- [x] Incluir metadados SSR, dados estruturados e navegação interna para a página do gerador.
+- [x] Cobrir o gerador com testes automatizados e validação visual em desktop e móvel.
+- [x] Adicionar estados explícitos de carregamento, erro e vazio para os dados territoriais usados na página `/gerador`.
+- [x] Garantir que os testes do gerador são incluídos pela suite Vitest e acrescentar cobertura integrada de seleção, geração, cópia e aviso de simulação.

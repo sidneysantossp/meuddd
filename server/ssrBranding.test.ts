@@ -18,4 +18,25 @@ describe("metadados SSR da marca Meu DDD", () => {
       name: "Meu DDD",
     });
   });
+
+  it("descreve o gerador de número móvel com URL canónica e dados estruturados próprios", async () => {
+    const head = await prefetchForPath("/gerador", new QueryClient(), {
+      states: async () => [],
+      search: async () => [],
+      byCode: async () => null,
+      byState: async () => null,
+      byMunicipality: async () => null,
+    });
+
+    expect(head).toMatchObject({
+      title: "Gerador de número de celular por DDD | Meu DDD",
+      canonicalPath: "/gerador",
+      ogType: "website",
+    });
+    expect(head.jsonLd?.[1]).toMatchObject({
+      "@type": "WebPage",
+      name: "Gerador de número de celular por DDD",
+      url: "/gerador",
+    });
+  });
 });

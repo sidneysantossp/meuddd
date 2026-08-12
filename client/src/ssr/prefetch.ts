@@ -40,6 +40,11 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     await seed(queryClient, getQueryKey(trpc.ddd.search, input, "query"), results);
     return { title: `${site} — Consulte DDDs de todo o Brasil`, description, canonicalPath: "/", ogType: "website", jsonLd: [{ "@context": "https://schema.org", "@type": "WebSite", name: site, url: "/", potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: "/?q={search_term_string}" }, "query-input": "required name=search_term_string" } }] };
   }
+  if (path === "/gerador") {
+    const title = `Gerador de número de celular por DDD | ${site}`;
+    const generatorDescription = "Simule um número de celular brasileiro por estado e DDD, em formato móvel de nove dígitos.";
+    return { title, description: generatorDescription, canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Gerador de número de celular", item: path }]), { "@context": "https://schema.org", "@type": "WebPage", name: "Gerador de número de celular por DDD", url: path, description: generatorDescription, about: { "@type": "Thing", name: "Simulação de número de celular brasileiro por DDD" }, isPartOf: { "@type": "WebSite", name: site, url: "/" } }] };
+  }
   if (path === "/guias") return { title: `Guias de telefonia: DDD, chamadas e direitos | ${site}`, description: "Guias práticos sobre DDD, numeração, chamadas, portabilidade e direitos do consumidor na telefonia brasileira.", canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", name: "Guias de telefonia", url: path, hasPart: editorialGuides.map(guide => ({ "@type": "Article", headline: guide.title, url: `/guia/${guide.slug}` })) }] };
   const guideMatch = path.match(/^\/guia\/([^/]+)$/);
   if (guideMatch) {
