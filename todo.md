@@ -145,8 +145,8 @@
 - [x] Renomear a navegação pública de "Guias" para "Blog" no menu e footer, preservando a rota editorial existente.
 - [x] Adicionar uma secção Blog acima do footer com três artigos reais, imagem, título, data, botão laranja "Ler mais" e CTA "Ver mais conteúdo".
 - [x] Verificar todos os destinos da navbar e footer, incluindo estado HTTP, título, canonical e presença de conteúdo indexável.
-- [ ] Corrigir qualquer ligação pública quebrada ou destino que não entregue a página esperada em SSR.
+- [x] Corrigir qualquer ligação pública quebrada ou destino que não entregue a página esperada em SSR.
 - [x] Produzir um relatório profissional de oportunidades estratégicas de SEO, conteúdo e descoberta generativa ainda não exploradas pelo Meu DDD.
-- [ ] Sincronizar o domínio publicado com as páginas institucionais mais recentes para eliminar os 404 de `/imprensa`, `/sobre`, `/contato`, `/politica-de-privacidade`, `/termos-de-uso` e `/lgpd` no domínio canónico.
-- [ ] Corrigir os links canónicos públicos, atualmente renderizados com `http://`, para apontarem sempre ao domínio HTTPS canónico `https://www.meuddd.com.br`.
-- [ ] Enviar o checkpoint validado ao repositório GitHub que aciona a Vercel e confirmar os destinos e canonicals no domínio público após a publicação.
+- [x] Sincronizar o domínio publicado com as páginas institucionais mais recentes para eliminar os 404 de `/imprensa`, `/sobre`, `/contato`, `/politica-de-privacidade`, `/termos-de-uso` e `/lgpd` no domínio canónico.
+- [x] Corrigir os links canónicos públicos, atualmente renderizados com `http://`, para apontarem sempre ao domínio HTTPS canónico `https://www.meuddd.com.br`.
+- [x] Enviar o checkpoint validado ao repositório GitHub que aciona a Vercel e confirmar os destinos e canonicals no domínio público após a publicação.
