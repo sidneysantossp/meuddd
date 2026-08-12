@@ -149,3 +149,4 @@
 - [x] Produzir um relatório profissional de oportunidades estratégicas de SEO, conteúdo e descoberta generativa ainda não exploradas pelo Meu DDD.
 - [ ] Sincronizar o domínio publicado com as páginas institucionais mais recentes para eliminar os 404 de `/imprensa`, `/sobre`, `/contato`, `/politica-de-privacidade`, `/termos-de-uso` e `/lgpd` no domínio canónico.
 - [ ] Corrigir os links canónicos públicos, atualmente renderizados com `http://`, para apontarem sempre ao domínio HTTPS canónico `https://www.meuddd.com.br`.
+- [ ] Enviar o checkpoint validado ao repositório GitHub que aciona a Vercel e confirmar os destinos e canonicals no domínio público após a publicação.
