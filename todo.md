@@ -170,3 +170,6 @@
 - [x] Registar a evidência do Search Console que confirma o processamento prévio do índice e dos sitemaps segmentados.
 - [x] Analisar o histórico de consultas orgânicas enviado e estimar o potencial de recuperação após a indisponibilidade do site.
 - [x] Definir um plano priorizado de recuperação de tráfego, rastreamento e conteúdo com métricas de acompanhamento.
+- [x] Cruzar o relatório de consultas com páginas de destino candidatas, priorizar URLs e verificar a presença atual no índice Google.
+- [x] Definir melhorias editoriais úteis para as páginas prioritárias, incluindo a página de simulação de números.
+- [ ] Implementar e validar uma melhoria editorial piloto na URL prioritária escolhida, antes de expandir para outros DDDs e estados.
