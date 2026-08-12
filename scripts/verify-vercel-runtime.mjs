@@ -59,7 +59,7 @@ try {
     throw new Error(`A rota SSR principal falhou em runtime (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
   }
 
-  if (!homeResponse.ok || !homeHtml.includes('id="root"') || !homeHtml.includes("window.__RQ_STATE__") || homeHtml.includes("<!--app-html-->")) {
+  if (!homeResponse.ok || !homeHtml.includes('id="root"') || !homeHtml.includes("window.__RQ_STATE__") || !homeHtml.includes("Blog") || !homeHtml.includes("Ver mais conteúdo") || homeHtml.includes("<!--app-html-->")) {
     throw new Error(`O entrypoint Vercel não renderizou SSR na rota principal (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
   }
 
@@ -84,11 +84,21 @@ try {
     throw new Error(`A rota institucional ${invalidInstitutionalPage.path} não renderizou o conteúdo ou footer via SSR (HTTP ${invalidInstitutionalPage.status}): ${invalidInstitutionalPage.html.slice(0, 600)}`);
   }
 
+  const contactPage = institutionalPages.find(page => page.path === "/contato");
+  if (!contactPage?.html.includes("Validar mensagem") || !contactPage.html.includes("Como podemos ajudar?")) {
+    throw new Error(`A página de contacto não renderizou o formulário validável via SSR: ${contactPage?.html.slice(0, 600)}`);
+  }
+
+  const pressPage = institutionalPages.find(page => page.path === "/imprensa");
+  if (!pressPage?.html.includes("Kit de marca") || !pressPage.html.includes("Em números") || !pressPage.html.includes("meu-ddd-kit-de-marca-2026")) {
+    throw new Error(`A página de imprensa não renderizou kit de marca e estatísticas via SSR: ${pressPage?.html.slice(0, 600)}`);
+  }
+
   if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
     throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município/guias/institucionais, footer, partilha e sitemap responderam HTTP 200.");
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, Blog, contacto, imprensa, rotas DDD/estado/município/guias/institucionais, footer, partilha e sitemap responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

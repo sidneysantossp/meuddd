@@ -3,11 +3,12 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { lazy, Suspense, type ComponentType } from "react";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import { PublicFooter } from "./components/PublicFooter";
+import { BlogHighlights } from "./components/BlogHighlights";
 
 type RouteModule = { default: ComponentType<any> };
 
@@ -81,6 +82,12 @@ function Router() {
   );
 }
 
+function PublicBottom() {
+  const [location] = useLocation();
+  if (location.startsWith("/admin")) return null;
+  return <><BlogHighlights /><PublicFooter /></>;
+}
+
 export default function App() {
   return (
     <ErrorBoundary>
@@ -88,7 +95,7 @@ export default function App() {
         <TooltipProvider>
           <Toaster position="bottom-right" />
           <Router />
-          <PublicFooter />
+          <PublicBottom />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

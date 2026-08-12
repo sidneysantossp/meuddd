@@ -23,7 +23,7 @@ describe("navbar pública", () => {
     expect(PUBLIC_NAV_ITEMS).toEqual([
       { href: "/#buscar", label: "Buscar DDD" },
       { href: "/#mapa", label: "Mapa interativo" },
-      { href: "/guias", label: "Guias" },
+      { href: "/guias", label: "Blog" },
       { href: "/gerador", label: "Gerar número" },
     ]);
   });

@@ -5,7 +5,7 @@ import { Link } from "wouter";
 export const PUBLIC_NAV_ITEMS = [
   { href: "/#buscar", label: "Buscar DDD" },
   { href: "/#mapa", label: "Mapa interativo" },
-  { href: "/guias", label: "Guias" },
+  { href: "/guias", label: "Blog" },
   { href: "/gerador", label: "Gerar número" },
 ] as const;
 

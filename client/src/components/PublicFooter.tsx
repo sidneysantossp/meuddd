@@ -5,7 +5,7 @@ const productLinks = [
   { href: "/#buscar", label: "Buscar DDD" },
   { href: "/#mapa", label: "Mapa interativo" },
   { href: "/gerador", label: "Gerador de número" },
-  { href: "/guias", label: "Blog de telefonia" },
+  { href: "/guias", label: "Blog" },
   { href: "/imprensa", label: "Imprensa" },
 ] as const;
 

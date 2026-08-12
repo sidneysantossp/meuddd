@@ -22,6 +22,7 @@ describe("footer público", () => {
   it("expõe navegação institucional, legal, utilitária e social sem repetir o diretório de UFs", () => {
     expect(container.textContent).toContain("© 2026 Meu DDD");
     expect(Array.from(container.querySelectorAll("a")).find(link => link.textContent === "Gerador de número")?.getAttribute("href")).toBe("/gerador");
+    expect(Array.from(container.querySelectorAll("a")).find(link => link.textContent === "Blog")?.getAttribute("href")).toBe("/guias");
     expect(Array.from(container.querySelectorAll("a")).find(link => link.textContent === "LGPD")?.getAttribute("href")).toBe("/lgpd");
     expect(container.querySelectorAll('a[target="_blank"]').length).toBe(3);
     expect(container.textContent).not.toContain("Acre");

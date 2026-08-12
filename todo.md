@@ -140,3 +140,7 @@
 - [x] Não incluir no footer links semânticos para as páginas dos 27 estados brasileiros, pois a navegação territorial já está disponível na página. (Requisito retirado pelo utilizador.)
 - [x] Manter o footer focado em navegação institucional, legal, social e utilitária, sem repetir o diretório de estados.
 - [x] Validar o footer e as páginas institucionais em build Vercel/SSR, incluindo a adaptação para desktop e telemóvel.
+- [x] Expandir a página de imprensa com kit de marca descarregável e estatísticas atualizadas da plataforma.
+- [x] Criar formulário de contacto com campos nome, email e mensagem, validação básica e confirmação clara ao utilizador.
+- [x] Renomear a navegação pública de "Guias" para "Blog" no menu e footer, preservando a rota editorial existente.
+- [x] Adicionar uma secção Blog acima do footer com três artigos reais, imagem, título, data, botão laranja "Ler mais" e CTA "Ver mais conteúdo".
