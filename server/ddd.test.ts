@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { __testables } from "./db";
+import { __testables, listCapitalSummaries } from "./db";
 
 describe("agregação de DDDs", () => {
   it("agrupa municípios pelo DDD, preserva estados únicos e oferece amostra de cidades", () => {
@@ -26,5 +26,15 @@ describe("reserva territorial para SSR", () => {
     expect(ddd11.every(item => item.ddd === "11")).toBe(true);
     expect(saoPaulo).toHaveLength(1);
     expect(saoPaulo[0]).toMatchObject({ name: "São Paulo", uf: "SP", ddd: "11" });
+  });
+
+  it("expõe as 27 capitais, com rota municipal, DDD e filtro regional disponível sem base de dados", async () => {
+    const capitals = await listCapitalSummaries();
+
+    expect(capitals).toHaveLength(27);
+    expect(capitals.find(item => item.uf === "SC")).toMatchObject({ name: "Florianópolis", slug: "florianopolis", ddd: "48", region: "Sul" });
+    expect(capitals.find(item => item.uf === "ES")).toMatchObject({ name: "Vitória", slug: "vitoria", ddd: "27", region: "Sudeste" });
+    expect(capitals.find(item => item.uf === "MS")).toMatchObject({ name: "Campo Grande", slug: "campo-grande", ddd: "67", region: "Centro-Oeste" });
+    expect(new Set(capitals.map(item => item.region))).toEqual(new Set(["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"]));
   });
 });

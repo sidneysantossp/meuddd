@@ -44,6 +44,7 @@ const searchInsightsRoute = createLoadableRoute(() => import("./pages/SearchInsi
 const suggestionsRoute = createLoadableRoute(() => import("./pages/SuggestionModerationPage"));
 const institutionalRoute = createLoadableRoute(() => import("./pages/InstitutionalPage"));
 const regionRoute = createLoadableRoute(() => import("./pages/RegionPage"));
+const capitalsRoute = createLoadableRoute(() => import("./pages/CapitalsIndexPage"));
 
 export function preloadRouteForPath(pathname: string) {
   if (/^\/estado\/[a-z]{2}$/i.test(pathname)) return stateRoute.preload();
@@ -53,6 +54,7 @@ export function preloadRouteForPath(pathname: string) {
   if (/^\/guia\//.test(pathname)) return guideRoute.preload();
   if (/^\/ddd\//.test(pathname)) return dddRoute.preload();
   if (/^\/regiao\//.test(pathname)) return regionRoute.preload();
+  if (pathname === "/capitais") return capitalsRoute.preload();
   if (pathname === "/admin/pesquisas") return searchInsightsRoute.preload();
   if (pathname === "/admin/sugestoes") return suggestionsRoute.preload();
   if (["/sobre", "/contato", "/politica-de-privacidade", "/termos-de-uso", "/lgpd", "/imprensa"].includes(pathname)) return institutionalRoute.preload();
@@ -71,6 +73,7 @@ function Router() {
       <Route path="/guia/:slug" component={guideRoute.RouteComponent} />
       <Route path="/ddd/:code" component={dddRoute.RouteComponent} />
       <Route path="/regiao/:slug" component={regionRoute.RouteComponent} />
+      <Route path="/capitais" component={capitalsRoute.RouteComponent} />
       <Route path="/admin/pesquisas" component={searchInsightsRoute.RouteComponent} />
       <Route path="/admin/sugestoes" component={suggestionsRoute.RouteComponent} />
       <Route path="/sobre" component={institutionalRoute.RouteComponent} />

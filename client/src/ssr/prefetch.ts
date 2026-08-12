@@ -14,6 +14,7 @@ export type SsrPrefetch = {
   byCode: (input: { code: string }) => Promise<Outputs["ddd"]["byCode"]>;
   byState: (input: { uf: string }) => Promise<Outputs["ddd"]["byState"]>;
   byMunicipality: (input: { uf: string; slug: string }) => Promise<Outputs["ddd"]["byMunicipality"]>;
+  capitals: () => Promise<Outputs["ddd"]["capitals"]>;
 };
 
 const site = "Meu DDD";
@@ -61,6 +62,12 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     return { title: `${institutionalPage.name} | ${site}`, description: institutionalPage.description, canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: institutionalPage.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", name: institutionalPage.name, url: path, description: institutionalPage.description, isPartOf: { "@type": "WebSite", name: site, url: "/" } }] };
   }
   if (path === "/guias") return { title: `Guias de telefonia: DDD, chamadas e direitos | ${site}`, description: "Guias práticos sobre DDD, numeração, chamadas, portabilidade e direitos do consumidor na telefonia brasileira.", canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", name: "Guias de telefonia", url: path, hasPart: editorialGuides.map(guide => ({ "@type": "Article", headline: guide.title, url: `/guia/${guide.slug}` })) }] };
+  if (path === "/capitais") {
+    const capitals = await prefetch.capitals();
+    await seed(queryClient, getQueryKey(trpc.ddd.capitals, undefined, "query"), capitals);
+    const capitalsDescription = "Consulte o DDD das capitais brasileiras, filtre por região e aceda à ficha local de cada município.";
+    return { title: `DDD das capitais do Brasil | ${site}`, description: capitalsDescription, canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Capitais do Brasil", item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", name: "DDD das capitais do Brasil", url: path, description: capitalsDescription, hasPart: capitals.map(capital => ({ "@type": "WebPage", name: `DDD de ${capital.name}`, url: `/cidade/${capital.uf.toLowerCase()}/${capital.slug}` })) }] };
+  }
   const guideMatch = path.match(/^\/guia\/([^/]+)$/);
   if (guideMatch) {
     const guide = findEditorialGuide(guideMatch[1]);

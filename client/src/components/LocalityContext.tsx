@@ -1,5 +1,5 @@
 import { Building2, BusFront, ExternalLink, Landmark, MapPinned, PhoneCall, Trees } from "lucide-react";
-import { getLocalityContent, mapSearchUrl } from "@shared/localityContent";
+import { getLocalityContent, LOCALITY_EDITORIAL_REVIEW_DATE, mapSearchUrl } from "@shared/localityContent";
 import { LocalitySuggestionDialog } from "./LocalitySuggestionDialog";
 
 type LocalityContextProps = {
@@ -36,6 +36,7 @@ export function LocalityContext({ name, stateName, uf, slug, municipalityIbgeCod
           <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Guia local verificável</div>
           <h2 id="local-context-title" className="mt-3 font-display text-4xl tracking-[-0.05em]">{name} além do DDD</h2>
           <p className="mt-5 max-w-md text-sm leading-6 text-[#5d756c]">Atalhos de contexto local para planear uma visita ou confirmar serviços. As informações específicas só aparecem quando há fonte institucional identificada.</p>
+          {local && <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#718378]">Ficha local revista em {LOCALITY_EDITORIAL_REVIEW_DATE}</p>}
           <div className="mt-6 flex flex-col items-start gap-3">
             <a href="https://www.gov.br/anatel/pt-br/regulado/numeracao/codigos-nacionais/servicos-de-utilidade-publica-e-de-emergencia" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-[#f06a4d] hover:text-[#143d36]">Códigos nacionais de emergência e utilidade pública <ExternalLink size={14} /></a>
             <LocalitySuggestionDialog municipalityIbgeCode={municipalityIbgeCode} municipalityName={name} />

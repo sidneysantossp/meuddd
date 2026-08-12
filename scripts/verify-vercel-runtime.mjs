@@ -35,6 +35,8 @@ try {
   const municipalityHtml = await municipalityResponse.text();
   const guidesResponse = await fetch(`http://127.0.0.1:${address.port}/guias`);
   const guidesHtml = await guidesResponse.text();
+  const capitalsResponse = await fetch(`http://127.0.0.1:${address.port}/capitais`);
+  const capitalsHtml = await capitalsResponse.text();
   const institutionalRoutes = [
     ["/sobre", "Sobre o Meu DDD"],
     ["/contato", "Fale sobre o Meu DDD"],
@@ -87,6 +89,10 @@ try {
     throw new Error(`A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`);
   }
 
+  if (!capitalsResponse.ok || !capitalsHtml.includes("DDDs das capitais") || !capitalsHtml.includes("Florianópolis") || !capitalsHtml.includes('id="public-mobile-navigation"')) {
+    throw new Error(`A rota /capitais não renderizou o índice territorial via SSR (HTTP ${capitalsResponse.status}): ${capitalsHtml.slice(0, 600)}`);
+  }
+
   const invalidInstitutionalPage = institutionalPages.find(page => !page.ok || !page.html.includes(page.marker) || !page.html.includes("© 2026 Meu DDD"));
   if (invalidInstitutionalPage) {
     throw new Error(`A rota institucional ${invalidInstitutionalPage.path} não renderizou o conteúdo ou footer via SSR (HTTP ${invalidInstitutionalPage.status}): ${invalidInstitutionalPage.html.slice(0, 600)}`);
@@ -122,7 +128,7 @@ try {
     throw new Error(`A chave pública IndexNow não foi publicada corretamente (HTTP ${indexNowKeyResponse.status}).`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, RSS, sitemaps, chave IndexNow, Blog, contacto, imprensa, rotas DDD/estado/município/guias/institucionais, footer e partilha responderam HTTP 200.");
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, RSS, sitemaps, chave IndexNow, Blog, contacto, imprensa, rotas DDD/estado/município/guias/capitais/institucionais, footer e partilha responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

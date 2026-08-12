@@ -12,6 +12,8 @@ export type LocalityContent = {
   municipalServices?: { title: string; href: string; source: LocalSource }[];
 };
 
+export const LOCALITY_EDITORIAL_REVIEW_DATE = "12 de agosto de 2026";
+
 const barueriHistory: LocalSource = {
   label: "História de Barueri — Prefeitura de Barueri",
   url: "https://portal.barueri.sp.gov.br/cidadao/conheca-barueri/historia-de-barueri/",
@@ -160,6 +162,36 @@ const goianiaTourism: LocalSource = {
   label: "GoiâniaTur — Agência Municipal de Turismo e Eventos",
   url: "https://www.goiania.go.gov.br/goianiatur/",
   verifiedOn: "11 de agosto de 2026",
+};
+
+const florianopolisMunicipal: LocalSource = {
+  label: "Prefeitura de Florianópolis — serviços e notícias municipais",
+  url: "https://www.pmf.sc.gov.br/",
+  verifiedOn: LOCALITY_EDITORIAL_REVIEW_DATE,
+};
+
+const florianopolisHeritage: LocalSource = {
+  label: "Ponte Viva — Prefeitura de Florianópolis",
+  url: "http://ponteviva.pmf.sc.gov.br/",
+  verifiedOn: LOCALITY_EDITORIAL_REVIEW_DATE,
+};
+
+const vitoriaTourism: LocalSource = {
+  label: "Turista — Prefeitura de Vitória",
+  url: "https://www.vitoria.es.gov.br/turista/saiba-mais-sobre-vitoria",
+  verifiedOn: LOCALITY_EDITORIAL_REVIEW_DATE,
+};
+
+const campoGrandeTourism: LocalSource = {
+  label: "Turismo de Negócios e Eventos — Prefeitura de Campo Grande",
+  url: "https://www.campogrande.ms.gov.br/turismo-de-negocios-e-eventos/",
+  verifiedOn: LOCALITY_EDITORIAL_REVIEW_DATE,
+};
+
+const campoGrandeMobility: LocalSource = {
+  label: "Transporte público — Prefeitura de Campo Grande",
+  url: "https://www.campogrande.ms.gov.br/cgnoticias/noticia/intervencao-apresenta-primeiro-relatorio-sobre-transporte-publico-da-capital/",
+  verifiedOn: LOCALITY_EDITORIAL_REVIEW_DATE,
 };
 
 const localityContent: Record<string, LocalityContent> = {
@@ -490,6 +522,87 @@ const localityContent: Record<string, LocalityContent> = {
     municipalServices: [
       { title: "Centros de Atendimento ao Turista e telefones úteis de Goiânia", href: "https://www.goiania.go.gov.br/goianiatur/turismo/cats/", source: goianiaTourism },
       { title: "Bares e restaurantes em Goiânia: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Goiânia GO"), source: goianiaTourism },
+    ],
+  },
+  "sc:florianopolis": {
+    history: {
+      body: "O portal da Prefeitura de Florianópolis concentra serviços, notícias e orientações do município. Consulte os canais institucionais para aprofundar o contexto histórico, cultural e territorial antes de montar o seu roteiro.",
+      source: florianopolisMunicipal,
+    },
+    heritage: [{
+      title: "Ponte Hercílio Luz e património urbano",
+      description: "O projecto municipal Ponte Viva relaciona mobilidade, turismo e património. Abra a fonte para conhecer o enquadramento institucional e confirme as condições de visitação antes de sair.",
+      href: mapSearchUrl("Ponte Hercílio Luz Florianópolis SC"),
+      source: florianopolisHeritage,
+    }],
+    parks: [{
+      title: "Parque da Luz",
+      description: "A Prefeitura mantém informações públicas sobre intervenções e uso dos espaços urbanos. Consulte o canal municipal para atualizações e abra o mapa para planear o acesso.",
+      href: mapSearchUrl("Parque da Luz Florianópolis SC"),
+      source: florianopolisMunicipal,
+    }],
+    mobility: {
+      body: "O município disponibiliza serviços relacionados à mobilidade e ao transporte coletivo. Antes da viagem, confirme linhas, horários, acessibilidade e alterações operacionais nos canais públicos responsáveis.",
+      href: "https://www.pmf.sc.gov.br/servicos/index.php?pagina=servpagina&acao=open&id=4430",
+      source: florianopolisMunicipal,
+    },
+    municipalServices: [
+      { title: "Serviços e atendimento da Prefeitura de Florianópolis", href: florianopolisMunicipal.url, source: florianopolisMunicipal },
+      { title: "Bares e restaurantes em Florianópolis: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Florianópolis SC"), source: florianopolisMunicipal },
+    ],
+  },
+  "es:vitoria": {
+    history: {
+      body: "A Prefeitura de Vitória informa que a Ilha de Vitória integra um arquipélago de 33 ilhas e uma porção continental. Segundo o mesmo canal, o nome Ilha de Vitória remonta a 1551; a emancipação política do município é datada de 24 de fevereiro de 1823.",
+      source: vitoriaTourism,
+    },
+    heritage: [{
+      title: "Centro histórico, museus e monumentos de Vitória",
+      description: "O guia turístico municipal reúne referências para o centro histórico, património cultural, museus e monumentos. Consulte a fonte para contexto e condições práticas antes da visita.",
+      href: "https://www.vitoria.es.gov.br/turista/centro-historico-concentra-capelas-fortes-e-outros-monumentos",
+      source: vitoriaTourism,
+    }],
+    parks: [{
+      title: "Parques e trilhas urbanas de Vitória",
+      description: "O portal turístico da cidade mantém secções dedicadas a parques e às trilhas da Gruta da Onça. Confirme acesso, programação e recomendações no canal municipal antes de visitar.",
+      href: "https://www.vitoria.es.gov.br/turista/parques",
+      source: vitoriaTourism,
+    }],
+    mobility: {
+      body: "O portal municipal reúne informação para visitantes sobre autocarro turístico, táxis e Táxi Vix. Para deslocações do dia a dia, confirme percursos e condições atualizadas diretamente com os operadores e serviços públicos competentes.",
+      href: "https://www.vitoria.es.gov.br/turista/onibus-turistico",
+      source: vitoriaTourism,
+    },
+    municipalServices: [
+      { title: "Informações turísticas e serviços de Vitória", href: "https://www.vitoria.es.gov.br/turista/informacoes-turisticas", source: vitoriaTourism },
+      { title: "Bares e restaurantes em Vitória: guia municipal", href: "https://www.vitoria.es.gov.br/turista/bares-e-restaurantes", source: vitoriaTourism },
+    ],
+  },
+  "ms:campo-grande": {
+    history: {
+      body: "A Prefeitura de Campo Grande mantém iniciativas municipais voltadas à história, à identidade e à promoção turística da capital. Utilize a publicação institucional para aprofundar o contexto local e confirme a programação antes de visitar equipamentos culturais.",
+      source: campoGrandeTourism,
+    },
+    heritage: [{
+      title: "Cultura e turismo de negócios em Campo Grande",
+      description: "O canal municipal de turismo reúne referências para eventos, cultura e serviços ao visitante. Abra a fonte institucional para detalhes e use o mapa para localizar os equipamentos de interesse.",
+      href: campoGrandeTourism.url,
+      source: campoGrandeTourism,
+    }],
+    parks: [{
+      title: "Horto Florestal",
+      description: "A Prefeitura publica atualizações sobre o Horto Florestal e as suas atividades públicas. Verifique o canal municipal antes da visita, pois acesso e programação podem mudar.",
+      href: mapSearchUrl("Horto Florestal Campo Grande MS"),
+      source: campoGrandeTourism,
+    }],
+    mobility: {
+      body: "A Prefeitura divulga atualizações institucionais sobre o sistema de transporte público da capital. Consulte o relatório mais recente e os canais dos operadores antes de definir linhas, horários ou integrações.",
+      href: campoGrandeMobility.url,
+      source: campoGrandeMobility,
+    },
+    municipalServices: [
+      { title: "Turismo de negócios e eventos em Campo Grande", href: campoGrandeTourism.url, source: campoGrandeTourism },
+      { title: "Bares e restaurantes em Campo Grande: pesquisa no mapa", href: mapSearchUrl("bares e restaurantes Campo Grande MS"), source: campoGrandeTourism },
     ],
   },
 };

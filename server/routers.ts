@@ -35,6 +35,7 @@ export const appRouter = router({
       .input(z.object({ uf: z.string().length(2), slug: z.string().min(1).max(160) }))
       .query(({ input }) => db.getMunicipalityDetails(input.uf, input.slug)),
     states: publicProcedure.query(() => db.listStateSummaries()),
+    capitals: publicProcedure.query(() => db.listCapitalSummaries()),
   }),
   local: router({
     suggestUpdate: publicProcedure

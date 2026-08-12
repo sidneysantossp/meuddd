@@ -11,6 +11,7 @@ describe("createSsrPrefetch", () => {
       byCode: expect.any(Function),
       byState: expect.any(Function),
       byMunicipality: expect.any(Function),
+      capitals: expect.any(Function),
     }));
   });
 });

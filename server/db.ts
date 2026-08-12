@@ -466,6 +466,16 @@ export async function listStateSummaries(): Promise<StateSummary[]> {
     .sort((left, right) => left.name.localeCompare(right.name, "pt-BR"));
 }
 
+export type CapitalSummary = Pick<MunicipalityRecord, "ibgeCode" | "name" | "slug" | "ddd" | "populationEstimated" | "populationReferenceYear" | "stateName" | "uf" | "region">;
+
+export async function listCapitalSummaries(): Promise<CapitalSummary[]> {
+  const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
+  return (await selectMunicipalities({}))
+    .filter(item => item.capital && item.slug)
+    .map(({ ibgeCode, name, slug, ddd, populationEstimated, populationReferenceYear, stateName, uf, region }) => ({ ibgeCode, name, slug, ddd, populationEstimated, populationReferenceYear, stateName, uf, region }))
+    .sort((left, right) => regionOrder.indexOf(left.region) - regionOrder.indexOf(right.region) || left.name.localeCompare(right.name, "pt-BR"));
+}
+
 export type SitemapInventory = {
   states: string[];
   ddds: string[];
@@ -490,7 +500,7 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
         .sort((left, right) => Number(left) - Number(right))
         .map(code => `/ddd/${code}`),
       citiesByUf,
-      guides: ["/", "/guias", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
+      guides: ["/", "/guias", "/capitais", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
     };
   }
   const municipalitiesForSitemap = await db
@@ -511,7 +521,7 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
       states: stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
       ddds: dddRows.map(item => `/ddd/${item.code}`),
       citiesByUf,
-      guides: ["/", "/guias", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
+      guides: ["/", "/guias", "/capitais", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
     },
   ][0];
 }

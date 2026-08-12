@@ -15,6 +15,7 @@ describe("artefactos de descoberta SEO/GEO", () => {
     expect(appSource).toContain('"/sitemaps/imagens.xml"');
     expect(appSource).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"');
     expect(appSource).toContain('regionHubs.map(region => `/regiao/${region.slug}`)');
+    expect(appSource).toContain('"/capitais"');
   });
 
   it("publica Organization, WebSite e SearchAction em todas as respostas SSR", () => {
