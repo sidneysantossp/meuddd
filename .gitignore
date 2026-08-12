@@ -5,6 +5,9 @@
 # Build outputs
 dist/
 public/
+!client/
+!client/public/
+!client/public/282752bf-8a95-4e8f-8504-771d734634f1.txt
 build/
 *.dist
 

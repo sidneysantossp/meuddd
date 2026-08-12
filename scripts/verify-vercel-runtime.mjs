@@ -49,6 +49,14 @@ try {
   }));
   const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
   const sitemapXml = await sitemapResponse.text();
+  const feedResponse = await fetch(`http://127.0.0.1:${address.port}/feed.xml`);
+  const feedXml = await feedResponse.text();
+  const regionsSitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/regioes.xml`);
+  const regionsSitemapXml = await regionsSitemapResponse.text();
+  const imagesSitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/imagens.xml`);
+  const imagesSitemapXml = await imagesSitemapResponse.text();
+  const indexNowKeyResponse = await fetch(`http://127.0.0.1:${address.port}/282752bf-8a95-4e8f-8504-771d734634f1.txt`);
+  const indexNowKey = await indexNowKeyResponse.text();
 
   if (!response.ok || !robots.includes("Sitemap:")) {
     throw new Error(`O entrypoint Vercel não respondeu robots.txt corretamente (HTTP ${response.status}).`);
@@ -98,7 +106,23 @@ try {
     throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, Blog, contacto, imprensa, rotas DDD/estado/município/guias/institucionais, footer, partilha e sitemap responderam HTTP 200.");
+  if (!feedResponse.ok || !feedXml.includes("<rss") || !feedXml.includes("Blog Meu DDD")) {
+    throw new Error(`O feed RSS não respondeu corretamente (HTTP ${feedResponse.status}): ${feedXml.slice(0, 600)}`);
+  }
+
+  if (!regionsSitemapResponse.ok || !regionsSitemapXml.includes("/regiao/sudeste")) {
+    throw new Error(`O sitemap de regiões não incluiu os hubs territoriais (HTTP ${regionsSitemapResponse.status}): ${regionsSitemapXml.slice(0, 600)}`);
+  }
+
+  if (!imagesSitemapResponse.ok || !imagesSitemapXml.includes("xmlns:image")) {
+    throw new Error(`O sitemap de imagens não respondeu no formato esperado (HTTP ${imagesSitemapResponse.status}): ${imagesSitemapXml.slice(0, 600)}`);
+  }
+
+  if (!indexNowKeyResponse.ok || indexNowKey.trim() !== "282752bf-8a95-4e8f-8504-771d734634f1") {
+    throw new Error(`A chave pública IndexNow não foi publicada corretamente (HTTP ${indexNowKeyResponse.status}).`);
+  }
+
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, RSS, sitemaps, chave IndexNow, Blog, contacto, imprensa, rotas DDD/estado/município/guias/institucionais, footer e partilha responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

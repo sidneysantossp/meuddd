@@ -4,6 +4,7 @@ import type { inferRouterOutputs } from "@trpc/server";
 import type { AppRouter } from "../../../server/routers";
 import { trpc } from "@/lib/trpc";
 import { editorialGuides, editorialSources, findEditorialGuide } from "@shared/editorialGuides";
+import { findRegionHub, regionSlug } from "@shared/territorialSeo";
 
 type Outputs = inferRouterOutputs<AppRouter>;
 export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[] };
@@ -65,6 +66,14 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     const guide = findEditorialGuide(guideMatch[1]);
     if (!guide) return { title: "Guia não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
+  }
+  const regionMatch = path.match(/^\/regiao\/([^/]+)$/);
+  if (regionMatch) {
+    const region = findRegionHub(regionMatch[1]);
+    if (!region) return { title: "Região não encontrada | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
+    const regionStates = states.filter(state => regionSlug(state.region) === region.slug);
+    const regionDescription = `Consulte os DDDs, estados e municípios da região ${region.name} em um hub territorial do Meu DDD.`;
+    return { title: `DDDs da região ${region.name} | ${site}`, description: regionDescription, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: `DDD do ${region.name}`, item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", "@id": path, url: path, name: `DDDs do ${region.name}`, description: regionDescription, about: { "@type": "AdministrativeArea", name: `Região ${region.name}, Brasil`, containedInPlace: { "@type": "Country", name: "Brasil" } }, hasPart: regionStates.map(state => ({ "@type": "WebPage", name: `DDD de ${state.name}`, url: `/estado/${state.uf.toLowerCase()}` })) }] };
   }
   const dddMatch = path.match(/^\/ddd\/(\d{2})$/);
   if (dddMatch) {
