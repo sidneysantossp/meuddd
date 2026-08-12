@@ -122,6 +122,59 @@ export default function Generator() {
             <Link href="/" className="pressable inline-flex w-fit items-center self-center rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Consultar cidades e DDDs reais</Link>
           </div>
         </section>
+
+        <section className="container py-16 lg:py-20" aria-labelledby="generator-guide-title">
+          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr]">
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Guia da ferramenta</span>
+              <h2 id="generator-guide-title" className="mt-3 max-w-md font-display text-4xl tracking-[-0.05em] text-[#143d36] sm:text-5xl">Como funciona o gerador de número de telefone?</h2>
+              <p className="mt-5 max-w-md text-base leading-7 text-[#5d756c]">Este simulador combina um DDD oficial do estado selecionado com uma sequência móvel de nove dígitos. O resultado serve para representar um formato brasileiro em ambientes de teste, maquetas, exemplos de interface e documentação técnica.</p>
+            </div>
+
+            <div className="grid gap-5">
+              <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]">
+                <h3 className="font-display text-2xl tracking-[-0.04em] text-[#143d36]">O que o simulador faz</h3>
+                <p className="mt-3 text-sm leading-6 text-[#5d756c]">Ao escolher um estado, a ferramenta apresenta os DDDs associados àquele território. Depois, gera uma parte local iniciada em 9 e formata o exemplo como número móvel. Isto ajuda quem está a testar campos de formulário, fluxos de produto ou materiais demonstrativos a usar uma estrutura de número coerente.</p>
+              </article>
+              <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]">
+                <h3 className="font-display text-2xl tracking-[-0.04em] text-[#143d36]">O que o simulador não faz</h3>
+                <p className="mt-3 text-sm leading-6 text-[#5d756c]">O resultado não consulta operadoras, não identifica titulares e não confirma se há uma linha ativa. Por isso, não deve ser usado para assumir que um contacto existe, para efetuar cadastros, enviar mensagens, fazer chamadas ou contactar terceiros. Para uma demonstração segura, trate sempre o resultado como dado fictício.</p>
+              </article>
+            </div>
+          </div>
+
+          <div className="mt-14 grid gap-7 border-t border-[#d9d1bf] pt-12 lg:grid-cols-[1fr_0.9fr]">
+            <article>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">DDD e território</span>
+              <h3 className="mt-3 font-display text-3xl tracking-[-0.04em] text-[#143d36]">Escolha o código antes de criar o exemplo</h3>
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5d756c]">O DDD identifica a área de numeração associada à ligação. Escolher primeiro o estado e o DDD torna o exemplo mais consistente com o contexto que está a ser representado. Se a sua dúvida é territorial, consulte a página do código ou do estado: ela explica a cobertura, os municípios e as informações de discagem sem confundir um exemplo simulado com um número de contacto.</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/ddd/63" className="pressable rounded-full border border-[#b8c8be] px-4 py-2 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">DDD 63 — Tocantins</Link>
+                <Link href="/ddd/96" className="pressable rounded-full border border-[#b8c8be] px-4 py-2 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">DDD 96 — Amapá</Link>
+                <Link href="/estado/to" className="pressable rounded-full border border-[#b8c8be] px-4 py-2 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">DDDs do Tocantins</Link>
+                <Link href="/estado/al" className="pressable rounded-full border border-[#b8c8be] px-4 py-2 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">DDDs de Alagoas</Link>
+              </div>
+            </article>
+
+            <aside className="rounded-[1.5rem] bg-[#143d36] p-7 text-[#faf3e5]">
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5c5a1]">Uso responsável</span>
+              <h3 className="mt-3 font-display text-3xl tracking-[-0.04em]">Para testes, não para contactos.</h3>
+              <p className="mt-4 text-sm leading-7 text-[#d9eee7]">Use exemplos simulados quando precisar preencher protótipos, criar casos de teste, preparar uma demonstração ou documentar uma integração. Não use um número produzido aqui para se passar por outra pessoa, tentar receber códigos de confirmação ou comunicar com destinatários desconhecidos.</p>
+              <a href="https://www.gov.br/anatel/pt-br/regulado/numeracao" target="_blank" rel="noreferrer" className="pressable mt-6 inline-flex text-sm font-bold text-[#f5c5a1] underline decoration-[#f5c5a1]/40 underline-offset-4 hover:text-white">Consultar orientações de numeração da Anatel</a>
+            </aside>
+          </div>
+
+          <section className="mt-14 border-t border-[#d9d1bf] pt-12" aria-labelledby="generator-faq-title">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Perguntas frequentes</span>
+            <h2 id="generator-faq-title" className="mt-3 font-display text-4xl tracking-[-0.05em] text-[#143d36]">Dúvidas sobre números simulados e DDD</h2>
+            <div className="mt-7 grid gap-4 md:grid-cols-2">
+              <article className="rounded-2xl border border-[#ded2be] bg-[#fffaf1] p-6"><h3 className="font-display text-xl tracking-[-0.03em] text-[#143d36]">O número gerado é real ou está disponível?</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Não. A ferramenta constrói apenas um exemplo de formato e não verifica se existe uma linha, se está ativa ou se pertence a alguém.</p></article>
+              <article className="rounded-2xl border border-[#ded2be] bg-[#fffaf1] p-6"><h3 className="font-display text-xl tracking-[-0.03em] text-[#143d36]">Posso usar o número em WhatsApp ou num cadastro?</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Não é recomendado. Um exemplo simulado não deve ser usado para contacto, mensagens, validação por SMS, recuperação de conta ou qualquer cadastro externo.</p></article>
+              <article className="rounded-2xl border border-[#ded2be] bg-[#fffaf1] p-6"><h3 className="font-display text-xl tracking-[-0.03em] text-[#143d36]">Por que escolher o estado e o DDD?</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">O DDD dá contexto territorial ao exemplo. A seleção usa a base de DDDs do Meu DDD para apresentar os códigos associados ao estado escolhido.</p></article>
+              <article className="rounded-2xl border border-[#ded2be] bg-[#fffaf1] p-6"><h3 className="font-display text-xl tracking-[-0.03em] text-[#143d36]">Onde encontro um DDD de verdade?</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Pesquise uma cidade, estado ou código no Meu DDD. As páginas territoriais mostram a cobertura do DDD e ajudam a identificar a área correta.</p></article>
+            </div>
+          </section>
+        </section>
       </main>
     </div>
   );

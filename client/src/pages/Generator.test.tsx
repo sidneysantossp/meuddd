@@ -54,5 +54,9 @@ describe("página do gerador", () => {
     expect(toastSuccess).toHaveBeenCalledWith("Número simulado copiado.");
     expect(container.textContent).toContain("Não confirma se o número existe");
     expect(container.textContent).toContain("vínculo com números reais");
+    expect(container.textContent).toContain("Como funciona o gerador de número de telefone?");
+    expect(container.textContent).toContain("O que o simulador não faz");
+    expect(container.textContent).toContain("Para testes, não para contactos.");
+    expect(container.querySelector('a[href="/ddd/63"]')?.textContent).toContain("DDD 63");
   });
 });

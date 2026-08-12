@@ -2,6 +2,10 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
+// O handler escolhe os caminhos de dist da Vercel com base nesta variável.
+// Defini-la aqui faz o script verificar o mesmo modo que será servido em produção.
+process.env.VERCEL ||= "1";
+
 const handlerBundle = await readFile(resolve("dist/vercel/handler.js"), "utf8");
 const forbiddenRuntimeReferences = [/\b(?:vite|rollup|lightningcss)\b/i, /server\/_core\/vite\.ts/i];
 const forbiddenReference = forbiddenRuntimeReferences.find(pattern => pattern.test(handlerBundle));
@@ -89,7 +93,7 @@ try {
     throw new Error(`A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`);
   }
 
-  if (!capitalsResponse.ok || !capitalsHtml.includes("DDDs das capitais") || !capitalsHtml.includes("Florianópolis") || !capitalsHtml.includes('id="public-mobile-navigation"')) {
+  if (!capitalsResponse.ok || !capitalsHtml.includes("DDD das capitais do Brasil") || !capitalsHtml.includes("Florianópolis") || !capitalsHtml.includes('id="public-mobile-navigation"')) {
     throw new Error(`A rota /capitais não renderizou o índice territorial via SSR (HTTP ${capitalsResponse.status}): ${capitalsHtml.slice(0, 600)}`);
   }
 

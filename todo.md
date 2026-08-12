@@ -172,4 +172,4 @@
 - [x] Definir um plano priorizado de recuperação de tráfego, rastreamento e conteúdo com métricas de acompanhamento.
 - [x] Cruzar o relatório de consultas com páginas de destino candidatas, priorizar URLs e verificar a presença atual no índice Google.
 - [x] Definir melhorias editoriais úteis para as páginas prioritárias, incluindo a página de simulação de números.
-- [ ] Implementar e validar uma melhoria editorial piloto na URL prioritária escolhida, antes de expandir para outros DDDs e estados.
+- [x] Implementar e validar a melhoria editorial piloto na página `/gerador`, antes de expandir para outros DDDs e estados.
