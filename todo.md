@@ -168,3 +168,5 @@
 - [x] Documentar a leitura de cobertura Search Console e a rotina de monitorização dos sitemaps já publicados.
 - [x] Confirmar que `sitemap.xml` já tinha sido submetido na propriedade verificada e se encontra processado no Search Console.
 - [x] Registar a evidência do Search Console que confirma o processamento prévio do índice e dos sitemaps segmentados.
+- [x] Analisar o histórico de consultas orgânicas enviado e estimar o potencial de recuperação após a indisponibilidade do site.
+- [x] Definir um plano priorizado de recuperação de tráfego, rastreamento e conteúdo com métricas de acompanhamento.
