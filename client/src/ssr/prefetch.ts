@@ -15,7 +15,7 @@ export type SsrPrefetch = {
   byMunicipality: (input: { uf: string; slug: string }) => Promise<Outputs["ddd"]["byMunicipality"]>;
 };
 
-const site = "DDD Brasil";
+const site = "Meu DDD";
 const description = "Consulte o DDD de qualquer cidade ou estado do Brasil em uma base territorial completa.";
 const breadcrumbs = (items: { name: string; item: string }[]) => ({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items.map((entry, position) => ({ "@type": "ListItem", position: position + 1, name: entry.name, item: entry.item })) });
 const seed = (queryClient: QueryClient, key: unknown, data: unknown) => queryClient.setQueryData(key as never, data as never);
@@ -44,14 +44,14 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   const guideMatch = path.match(/^\/guia\/([^/]+)$/);
   if (guideMatch) {
     const guide = findEditorialGuide(guideMatch[1]);
-    if (!guide) return { title: "Guia não encontrado | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+    if (!guide) return { title: "Guia não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
   }
   const dddMatch = path.match(/^\/ddd\/(\d{2})$/);
   if (dddMatch) {
     const code = dddMatch[1]; const data = await prefetch.byCode({ code });
     await seed(queryClient, getQueryKey(trpc.ddd.byCode, { code }, "query"), data);
-    if (!data) return { title: "DDD não encontrado | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+    if (!data) return { title: "DDD não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     const stateNames = data.states.map(state => state.name).join(", ");
     return { title: `DDD ${code}: cidades e estados atendidos | ${site}`, description: `Veja as ${data.cityCount} cidades atendidas pelo DDD ${code}${stateNames ? ` em ${stateNames}` : ""}.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: `DDD ${code}`, item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", "@id": path, url: path, name: `DDD ${code}: cidades e estados atendidos`, mainEntity: { "@type": "DefinedTerm", name: `DDD ${code}`, description: `Código de área com ${data.cityCount} municípios abrangidos.`, inDefinedTermSet: "Códigos DDD do Brasil" } }] };
   }
@@ -59,15 +59,15 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   if (stateMatch) {
     const uf = stateMatch[1].toUpperCase(); const data = await prefetch.byState({ uf });
     await seed(queryClient, getQueryKey(trpc.ddd.byState, { uf }, "query"), data);
-    if (!data) return { title: "Estado não encontrado | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+    if (!data) return { title: "Estado não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     return { title: `DDD de ${data.state.name}: cidades e códigos | ${site}`, description: `Consulte os DDDs e os ${data.cityCount} municípios de ${data.state.name}, na região ${data.state.region}.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", "@id": path, url: path, name: `DDD de ${data.state.name}`, about: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf, containedInPlace: { "@type": "Country", name: "Brasil" }, population: data.state.populationEstimated ?? undefined } }] };
   }
   const cityMatch = path.match(/^\/cidade\/([a-zA-Z]{2})\/([^/]+)$/);
   if (cityMatch) {
     const uf = cityMatch[1].toUpperCase(); const slug = cityMatch[2]; const data = await prefetch.byMunicipality({ uf, slug });
     await seed(queryClient, getQueryKey(trpc.ddd.byMunicipality, { uf, slug }, "query"), data);
-    if (!data) return { title: "Município não encontrado | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+    if (!data) return { title: "Município não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     return { title: `DDD de ${data.municipality.name} (${data.state.uf}) | ${site}`, description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: `/estado/${data.state.uf.toLowerCase()}` }, { name: data.municipality.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", "@id": path, url: path, name: `DDD de ${data.municipality.name}`, about: { "@type": "City", name: data.municipality.name, containedInPlace: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf }, population: data.municipality.populationEstimated ?? undefined, geo: { "@type": "GeoCoordinates", latitude: data.municipality.latitude, longitude: data.municipality.longitude } } }] };
   }
-  return { title: "Página não encontrada | DDD Brasil", description, canonicalPath: path, notFound: true, noindex: true };
+  return { title: "Página não encontrada | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
 }

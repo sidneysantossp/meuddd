@@ -8,7 +8,6 @@ import {
   Check,
   ChevronDown,
   Copy,
-  Globe2,
   History,
   MapPin,
   Menu,
@@ -19,6 +18,8 @@ import {
   X,
 } from "lucide-react";
 import { BrazilStateMap } from "@/components/BrazilStateMap";
+
+export const HERO_TITLE_CLASS = "reveal reveal-delay-1 font-display text-[clamp(3.7rem,8vw,7.2rem)] font-semibold leading-[0.88] tracking-[0.012em] text-[#143d36]";
 import { trpc } from "@/lib/trpc";
 
 const featuredCodes = ["11", "21", "31", "41", "51", "61", "71", "81", "91"];
@@ -26,13 +27,13 @@ const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
 
 function Brand() {
   return (
-    <a href="#topo" className="group inline-flex items-center gap-3" aria-label="DDD Brasil, voltar ao topo">
-      <span className="grid size-11 place-items-center overflow-hidden rounded-[14px] bg-[#f06a4d] shadow-[0_7px_18px_rgba(240,106,77,0.22)]">
-        <img src="/manus-storage/ddd-brasil-mark_5ec0d09e.png" alt="" className="size-8 object-contain transition-transform duration-300 group-hover:rotate-6" />
+    <a href="#topo" className="group inline-flex items-center gap-3" aria-label="Meu DDD, voltar ao topo">
+      <span className="grid size-11 place-items-center rounded-[14px] bg-[#f06a4d] text-[#fffaf1] shadow-[0_7px_18px_rgba(240,106,77,0.22)] transition-transform duration-300 group-hover:rotate-6">
+        <MapPin size={25} strokeWidth={2.25} aria-hidden="true" />
       </span>
       <span className="leading-none">
-        <span className="font-display block text-[1.35rem] font-semibold tracking-[-0.05em] text-[#143d36]">DDD Brasil</span>
-        <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.24em] text-[#678176]">Atlas de conexões</span>
+        <span className="font-display block text-[1.35rem] font-semibold tracking-[-0.05em] text-[#143d36]">Meu DDD</span>
+        <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.24em] text-[#678176]">Brasil conectado</span>
       </span>
     </a>
   );
@@ -114,10 +115,10 @@ export default function Home() {
       </header>
 
       <main>
-        <section className="container relative grid min-h-[640px] items-center gap-14 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:py-20">
+        <section id="mapa" className="container relative grid min-h-[640px] scroll-mt-8 items-center gap-14 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:py-20">
           <div className="relative z-10 max-w-[640px]">
             <div className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-[#d9d1bf] bg-[#f5ead7] px-3 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#547267]"><Sparkles size={14} className="text-[#f06a4d]" /> Base territorial completa</div>
-            <h1 className="reveal reveal-delay-1 font-display text-[clamp(3.7rem,8vw,7.2rem)] font-semibold leading-[0.88] tracking-[-0.075em] text-[#143d36]">Qual é o <em className="font-normal text-[#f06a4d]">DDD</em> de onde você está?</h1>
+            <h1 className={HERO_TITLE_CLASS}>Qual é o <em className="font-normal text-[#f06a4d]">DDD</em> de onde você está?</h1>
             <p className="reveal reveal-delay-2 mt-8 max-w-[470px] text-[1.08rem] leading-7 text-[#5d756c]">Consulte todos os municípios brasileiros por cidade, estado, UF ou número. Cada DDD tem agora um link próprio para partilhar.</p>
             <div className="reveal reveal-delay-3 mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-semibold text-[#6d8178]">
               <span className="inline-flex items-center gap-2"><Check size={15} className="text-[#f06a4d]" /> 5.571 municípios</span>
@@ -126,13 +127,8 @@ export default function Home() {
             </div>
           </div>
           <div className="relative min-h-[430px] lg:min-h-[540px]">
-            <div className="hero-grid absolute inset-x-3 top-4 h-[410px] overflow-hidden rounded-[2rem] bg-[#143d36] shadow-[0_30px_70px_rgba(20,61,54,0.24)] lg:inset-x-0 lg:h-[500px]">
-              <img src="/manus-storage/ddd-brasil-hero-reference_27813efb.png" alt="Mapa topográfico abstrato do Brasil com pontos de conexão" className="map-drift absolute inset-0 h-full w-full object-cover opacity-90 mix-blend-screen" />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#143d36]/15 via-transparent to-[#143d36]/70" />
-              <div className="absolute left-6 top-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em] text-[#f7e8ce]/70"><span className="size-2 rounded-full bg-[#f06a4d]" /> Dados em movimento</div>
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 border-t border-[#f7e8ce]/20 pt-4 text-[#f7e8ce]"><span className="font-display text-3xl italic">27 UFs</span><span className="text-right text-[10px] font-bold uppercase leading-4 tracking-[0.18em] text-[#f7e8ce]/70">um país<br />conectado</span></div>
-            </div>
-            <div className="absolute -bottom-4 -left-3 z-10 flex items-center gap-3 rounded-2xl border border-[#e3d6c0] bg-[#fffaf1] px-4 py-3 shadow-[0_18px_36px_rgba(20,61,54,0.13)] sm:left-4 lg:bottom-2 lg:-left-10"><span className="grid size-10 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36]"><Globe2 size={19} /></span><span><strong className="block font-display text-2xl leading-5 text-[#143d36]">67</strong><small className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#668077]">códigos ativos</small></span></div>
+            <BrazilStateMap states={stateOptions} selectedUf={stateFilter || undefined} onStateSelect={selectState} />
+            <div className="pointer-events-none absolute -bottom-4 -left-3 z-10 flex items-center gap-3 rounded-2xl border border-[#e3d6c0] bg-[#fffaf1] px-4 py-3 shadow-[0_18px_36px_rgba(20,61,54,0.13)] sm:left-4 lg:bottom-2 lg:-left-10"><span className="grid size-10 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36]"><MapPin size={19} /></span><span><strong className="block font-display text-2xl leading-5 text-[#143d36]">27</strong><small className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#668077]">estados clicáveis</small></span></div>
           </div>
         </section>
 
@@ -162,17 +158,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="mapa" className="border-y border-[#d9d1bf] bg-[#eee5d3] py-20 lg:py-24">
+        <section id="estados" className="border-y border-[#d9d1bf] bg-[#eee5d3] py-20 lg:py-24">
           <div className="container">
             <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"><div><div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">03 / Explorar</div><h2 className="font-display max-w-[520px] text-5xl leading-[0.94] tracking-[-0.06em] text-[#143d36]">Clique no estado. <em className="font-normal text-[#f06a4d]">Abra o território.</em></h2></div><p className="max-w-[450px] text-sm leading-6 text-[#6b8177]">Cada forma do mapa representa uma UF. Ao selecionar uma, a busca mostra todos os DDDs e municípios daquele estado.</p></div>
-            <BrazilStateMap states={stateOptions} selectedUf={stateFilter || undefined} onStateSelect={selectState} />
-            <div className="mt-6 flex flex-wrap gap-2">{stateOptions.map(state => <button type="button" key={state.uf} onClick={() => selectState(state.uf)} className={`pressable rounded-full border px-3 py-2 text-xs font-bold transition-colors ${stateFilter === state.uf ? "border-[#f06a4d] bg-[#f06a4d] text-white" : "border-[#cfc3b0] bg-[#fffaf1] text-[#143d36] hover:border-[#f06a4d]"}`}>{state.uf} <span className="ml-1 opacity-70">{state.dddCount}</span></button>)}</div>
+            <div className="rounded-[1.5rem] border border-[#cfc3b0] bg-[#fffaf1] p-5 shadow-[0_22px_50px_rgba(20,61,54,0.08)] sm:p-7"><div className="mb-5 flex items-center justify-between gap-4 border-b border-[#e3d6c0] pb-5"><span className="text-xs font-bold uppercase tracking-[0.18em] text-[#667f75]">Seleção rápida por UF</span><span className="font-display text-2xl text-[#143d36]">27 UFs</span></div><div className="flex flex-wrap gap-2">{stateOptions.map(state => <button type="button" key={state.uf} onClick={() => selectState(state.uf)} className={`pressable rounded-full border px-3 py-2 text-xs font-bold transition-colors ${stateFilter === state.uf ? "border-[#f06a4d] bg-[#f06a4d] text-white" : "border-[#cfc3b0] bg-[#fffaf1] text-[#143d36] hover:border-[#f06a4d]"}`}>{state.uf} <span className="ml-1 opacity-70">{state.dddCount}</span></button>)}</div></div>
           </div>
         </section>
 
-        <section id="sobre" className="container grid gap-10 py-20 lg:grid-cols-[1fr_0.7fr] lg:py-24"><div><div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">Um atlas para o dia a dia</div><h2 className="font-display max-w-[620px] text-5xl leading-[0.95] tracking-[-0.06em] text-[#143d36] sm:text-6xl">Menos dúvida na hora de <em className="font-normal">conectar.</em></h2></div><div className="border-l border-[#d9d1bf] pl-6 text-sm leading-7 text-[#6b8177]"><p>O DDD Brasil organiza os códigos de área do país em uma busca rápida, com ligação direta para cada DDD e leitura visual por estado.</p><div className="mt-8 flex items-center gap-3 text-xs font-bold text-[#143d36]"><span className="grid size-9 place-items-center rounded-full bg-[#f5c5a1]"><Phone size={15} /></span> Informação clara, de ponta a ponta.</div></div></section>
+        <section id="sobre" className="container grid gap-10 py-20 lg:grid-cols-[1fr_0.7fr] lg:py-24"><div><div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">Um atlas para o dia a dia</div><h2 className="font-display max-w-[620px] text-5xl leading-[0.95] tracking-[-0.06em] text-[#143d36] sm:text-6xl">Menos dúvida na hora de <em className="font-normal">conectar.</em></h2></div><div className="border-l border-[#d9d1bf] pl-6 text-sm leading-7 text-[#6b8177]"><p>O Meu DDD organiza os códigos de área do país em uma busca rápida, com ligação direta para cada DDD e leitura visual por estado.</p><div className="mt-8 flex items-center gap-3 text-xs font-bold text-[#143d36]"><span className="grid size-9 place-items-center rounded-full bg-[#f5c5a1]"><Phone size={15} /></span> Informação clara, de ponta a ponta.</div></div></section>
       </main>
-      <footer className="bg-[#143d36] py-10 text-[#d6e0d7]"><div className="container flex flex-col justify-between gap-4 text-xs sm:flex-row sm:items-center"><span className="font-display text-xl text-[#faf3e5]">DDD Brasil</span><span>Base territorial importada e documentada</span></div></footer>
+      <footer className="bg-[#143d36] py-10 text-[#d6e0d7]"><div className="container flex flex-col justify-between gap-4 text-xs sm:flex-row sm:items-center"><span className="font-display text-xl text-[#faf3e5]">Meu DDD</span><span>Base territorial importada e documentada</span></div></footer>
     </div>
   );
 }

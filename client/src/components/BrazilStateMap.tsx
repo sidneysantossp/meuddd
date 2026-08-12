@@ -1,6 +1,5 @@
 import { MapPin } from "lucide-react";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { MapView } from "@/components/Map";
+import { useEffect, useMemo, useState } from "react";
 
 type StateSummary = {
   name: string;
@@ -10,7 +9,59 @@ type StateSummary = {
   dddCount: number;
 };
 
+type Position = [number, number];
+type Ring = Position[];
+type Geometry = { type: "Polygon"; coordinates: Ring[] } | { type: "MultiPolygon"; coordinates: Ring[][] };
+type GeoFeature = { properties: { sigla?: string }; geometry: Geometry };
+type GeoCollection = { features: GeoFeature[] };
+type SvgFeature = { uf: string; path: string };
+
 const GEOJSON_URL = "/manus-storage/brazil-states_dc614e06.geojson";
+const MAP_WIDTH = 520;
+const MAP_HEIGHT = 530;
+const PADDING = 24;
+const MAX_POINTS_PER_RING = 220;
+
+function simplifyRing(ring: Ring) {
+  if (ring.length <= MAX_POINTS_PER_RING) return ring;
+  const stride = Math.ceil(ring.length / MAX_POINTS_PER_RING);
+  const sampled = ring.filter((_, index) => index % stride === 0);
+  const last = ring[ring.length - 1];
+  if (sampled[sampled.length - 1] !== last) sampled.push(last);
+  return sampled;
+}
+
+function createPaths(collection: GeoCollection): SvgFeature[] {
+  const positions = collection.features.flatMap(feature => {
+    const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+    return polygons.flatMap(polygon => polygon.flat());
+  });
+  if (!positions.length) return [];
+
+  const longitudes = positions.map(([longitude]) => longitude);
+  const latitudes = positions.map(([, latitude]) => latitude);
+  const minLongitude = Math.min(...longitudes);
+  const maxLongitude = Math.max(...longitudes);
+  const minLatitude = Math.min(...latitudes);
+  const maxLatitude = Math.max(...latitudes);
+  const scale = Math.min((MAP_WIDTH - PADDING * 2) / (maxLongitude - minLongitude), (MAP_HEIGHT - PADDING * 2) / (maxLatitude - minLatitude));
+  const offsetX = (MAP_WIDTH - (maxLongitude - minLongitude) * scale) / 2;
+  const offsetY = (MAP_HEIGHT - (maxLatitude - minLatitude) * scale) / 2;
+  const point = ([longitude, latitude]: Position) => [offsetX + (longitude - minLongitude) * scale, offsetY + (maxLatitude - latitude) * scale] as const;
+  const ringPath = (ring: Ring) => {
+    const points = simplifyRing(ring).map(point);
+    if (points.length < 3) return "";
+    return `${points.map(([x, y], index) => `${index ? "L" : "M"}${x.toFixed(1)},${y.toFixed(1)}`).join("")}Z`;
+  };
+
+  return collection.features.flatMap(feature => {
+    const uf = feature.properties.sigla?.toUpperCase();
+    if (!uf) return [];
+    const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+    const path = polygons.map(polygon => polygon.map(ringPath).join(" ")).join(" ");
+    return path ? [{ uf, path }] : [];
+  });
+}
 
 export function BrazilStateMap({
   states,
@@ -21,58 +72,73 @@ export function BrazilStateMap({
   selectedUf?: string;
   onStateSelect: (uf: string) => void;
 }) {
-  const [map, setMap] = useState<google.maps.Map | null>(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
+  const [features, setFeatures] = useState<SvgFeature[]>([]);
+  const [loadError, setLoadError] = useState(false);
+  const [hoveredUf, setHoveredUf] = useState<string | undefined>();
   const stateByUf = useMemo(() => new Map(states.map(state => [state.uf, state])), [states]);
   const selectedState = selectedUf ? stateByUf.get(selectedUf) : undefined;
 
-  const applyStyle = useCallback(() => {
-    if (!map) return;
-    map.data.setStyle(feature => {
-      const uf = String(feature.getProperty("sigla") ?? "");
-      const isSelected = uf === selectedUf;
-      return {
-        fillColor: isSelected ? "#f06a4d" : "#6ca8a0",
-        fillOpacity: isSelected ? 0.86 : 0.56,
-        strokeColor: isSelected ? "#fffaf1" : "#143d36",
-        strokeWeight: isSelected ? 2.5 : 1,
-        clickable: Boolean(stateByUf.get(uf)),
-      };
-    });
-  }, [map, selectedUf, stateByUf]);
-
   useEffect(() => {
-    applyStyle();
-  }, [applyStyle]);
-
-  const handleMapReady = useCallback((instance: google.maps.Map) => {
-    setMap(instance);
-    instance.setOptions({
-      mapTypeId: "terrain",
-      disableDefaultUI: true,
-      zoomControl: true,
-      gestureHandling: "cooperative",
-      backgroundColor: "#143d36",
-      styles: [
-        { elementType: "geometry", stylers: [{ color: "#e7dcc6" }] },
-        { elementType: "labels.text.fill", stylers: [{ color: "#143d36" }] },
-        { elementType: "labels.text.stroke", stylers: [{ color: "#faf3e5" }] },
-        { featureType: "water", elementType: "geometry", stylers: [{ color: "#a7c8c2" }] },
-        { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#d2c5ad" }] },
-      ],
-    });
-    instance.data.loadGeoJson(GEOJSON_URL, { idPropertyName: "sigla" }, () => setMapLoaded(true));
-    instance.data.addListener("click", (event: google.maps.Data.MouseEvent) => {
-      const uf = String(event.feature.getProperty("sigla") ?? "");
-      if (stateByUf.has(uf)) onStateSelect(uf);
-    });
-  }, [onStateSelect, stateByUf]);
+    const controller = new AbortController();
+    fetch(GEOJSON_URL, { signal: controller.signal })
+      .then(response => {
+        if (!response.ok) throw new Error("Não foi possível carregar os limites estaduais.");
+        return response.json() as Promise<GeoCollection>;
+      })
+      .then(data => setFeatures(createPaths(data)))
+      .catch(error => {
+        if (error.name !== "AbortError") setLoadError(true);
+      });
+    return () => controller.abort();
+  }, []);
 
   return (
-    <div className="relative overflow-hidden rounded-[1.5rem] border border-[#cfc3b0] bg-[#e7dcc6] shadow-[0_22px_50px_rgba(20,61,54,0.12)]">
-      <MapView className="h-[420px] sm:h-[500px]" initialCenter={{ lat: -14.3, lng: -52.3 }} initialZoom={3.45} onMapReady={handleMapReady} />
+    <div className="relative overflow-hidden rounded-[1.5rem] border border-[#29564d] bg-[#143d36] shadow-[0_22px_50px_rgba(20,61,54,0.24)]">
+      <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(250,243,229,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(250,243,229,0.18)_1px,transparent_1px)] [background-size:26px_26px]" />
+      <div className="relative h-[420px] sm:h-[500px]">
+        {features.length > 0 ? (
+          <svg viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`} className="h-full w-full p-6 sm:p-8" role="list" aria-label="Mapa interativo dos estados do Brasil">
+            <title>Mapa interativo dos estados brasileiros</title>
+            {features.map(feature => {
+              const state = stateByUf.get(feature.uf);
+              const isSelected = feature.uf === selectedUf;
+              const isHovered = feature.uf === hoveredUf;
+              return (
+                <path
+                  key={feature.uf}
+                  d={feature.path}
+                  role="listitem"
+                  tabIndex={state ? 0 : -1}
+                  aria-label={state ? `Selecionar ${state.name}, ${state.uf}` : feature.uf}
+                  aria-current={isSelected ? "true" : undefined}
+                  onClick={() => state && onStateSelect(feature.uf)}
+                  onKeyDown={event => {
+                    if (state && (event.key === "Enter" || event.key === " ")) {
+                      event.preventDefault();
+                      onStateSelect(feature.uf);
+                    }
+                  }}
+                  onMouseEnter={() => setHoveredUf(feature.uf)}
+                  onMouseLeave={() => setHoveredUf(undefined)}
+                  className={state ? "cursor-pointer outline-none transition-[fill,stroke,opacity] duration-200 focus-visible:stroke-[#fffaf1] focus-visible:[stroke-width:3]" : "opacity-40"}
+                  fill={isSelected ? "#f06a4d" : isHovered ? "#9ec9c0" : "#5f9f96"}
+                  fillOpacity={isSelected ? 1 : isHovered ? 0.96 : 0.78}
+                  stroke={isSelected ? "#fffaf1" : "#d9eee7"}
+                  strokeWidth={isSelected ? 2.4 : 1.05}
+                  vectorEffect="non-scaling-stroke"
+                  fillRule="evenodd"
+                />
+              );
+            })}
+          </svg>
+        ) : (
+          <div className="grid h-full place-items-center px-10 text-center text-xs font-bold uppercase tracking-[0.18em] text-[#f7e8ce]/80">
+            {loadError ? "Limites indisponíveis no momento" : "A carregar mapa dos estados"}
+          </div>
+        )}
+      </div>
       <div className="pointer-events-none absolute inset-x-4 top-4 flex items-start justify-between gap-3">
-        <div className="rounded-xl border border-[#fffaf1]/70 bg-[#143d36]/95 px-4 py-3 text-[#faf3e5] shadow-lg backdrop-blur-sm">
+        <div className="rounded-xl border border-[#fffaf1]/20 bg-[#143d36]/95 px-4 py-3 text-[#faf3e5] shadow-lg backdrop-blur-sm">
           <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#f5c5a1]">Mapa de navegação</div>
           <div className="mt-1 flex items-center gap-2 text-sm font-bold"><MapPin size={15} className="text-[#f06a4d]" /> Clique em um estado</div>
         </div>
@@ -84,7 +150,7 @@ export function BrazilStateMap({
           </div>
         )}
       </div>
-      {!mapLoaded && <div className="pointer-events-none absolute inset-0 grid place-items-center bg-[#143d36]/15 text-xs font-bold uppercase tracking-[0.18em] text-[#143d36]">A carregar limites estaduais</div>}
+      {loadError && <div className="absolute inset-x-5 bottom-5 rounded-xl border border-[#f5c5a1]/30 bg-[#143d36]/90 px-4 py-3 text-center text-xs text-[#f7e8ce]">Use a seleção rápida abaixo para navegar pelos estados.</div>}
     </div>
   );
 }

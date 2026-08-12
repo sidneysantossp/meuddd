@@ -101,3 +101,12 @@
 - [x] Confirmar que a ocorrência local de `createSsrPrefetch is not defined` era histórica e não reapareceu nos registos frescos após o reinício.
 - [x] Corrigir o caminho de recursos SSR no modo Vercel, que procura `public/` embora a função inclua `dist/public/`.
 - [x] Adicionar uma reserva versionada dos dados territoriais para que as páginas públicas SSR permaneçam disponíveis quando a variável `DATABASE_URL` não estiver configurada na Vercel.
+- [x] Reiniciar o servidor de desenvolvimento e confirmar a resposta da pré-visualização após a interrupção reportada.
+- [x] Renomear a identidade visível da plataforma para "Meu DDD" e substituir o símbolo atual por um ícone de geolocalização.
+- [x] Ajustar o título principal da página inicial com espaçamento entre letras, conforme a nova direção visual solicitada.
+- [x] Integrar um mapa interativo dos estados do Brasil na experiência principal, com navegação por estado.
+- [x] Substituir o carregamento dependente do Google Maps por um mapa SVG dos limites estaduais, para que a navegação por estado não permaneça em estado de carregamento.
+- [x] Validar visualmente a página principal atualizada em desktop e dispositivo móvel, além da suite automatizada.
+- [x] Confirmar em código e teste que o título principal preserva o espaçamento entre letras solicitado: `HERO_TITLE_CLASS` usa `tracking-[0.012em]` e o teste `Home.branding.test.tsx` é executado pela suite.
+- [x] Registar a validação visual objetiva do herói e do mapa SVG em desktop e móvel antes do checkpoint: em 1280×720, a marca Meu DDD, o título e os 27 limites estaduais foram exibidos no herói; em 375×812, o cabeçalho, título e painel do mapa mantiveram legibilidade e encaixe vertical.
+- [x] Adicionar uma verificação estrutural que confirme a renderização dos 27 estados no mapa SVG principal: `BrazilStateMap.test.tsx` carrega 27 UFs e confirma 27 paths SVG, além da seleção de São Paulo.
