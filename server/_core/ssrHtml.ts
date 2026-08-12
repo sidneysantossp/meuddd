@@ -2,6 +2,7 @@ import type { HeadMeta } from "../../client/src/ssr/prefetch";
 
 const escapeHtml = (value: string) => value.replace(/[&<>\"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character] ?? character);
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
+const CANONICAL_ORIGIN = "https://www.meuddd.com.br";
 
 const urlKeys = new Set(["@id", "item", "url", "urlTemplate", "mainEntityOfPage"]);
 function absolutizeJsonLd(value: unknown, origin: string, key?: string): unknown {
@@ -12,7 +13,8 @@ function absolutizeJsonLd(value: unknown, origin: string, key?: string): unknown
 }
 
 export function composeSsrHtml(template: string, html: string, dehydratedState: unknown, head: HeadMeta, origin: string) {
-  const canonical = new URL(head.canonicalPath, origin).toString();
+  const canonicalOrigin = origin.startsWith(CANONICAL_ORIGIN) ? origin : CANONICAL_ORIGIN;
+  const canonical = new URL(head.canonicalPath, canonicalOrigin).toString();
   const tags = [
     `<title>${escapeHtml(head.title)}</title>`,
     `<meta name="description" content="${escapeHtml(head.description)}">`,
@@ -24,7 +26,7 @@ export function composeSsrHtml(template: string, html: string, dehydratedState: 
     `<meta property="og:locale" content="pt_BR">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     head.noindex ? `<meta name="robots" content="noindex,follow">` : "",
-    ...(head.jsonLd ?? []).map(item => `<script type="application/ld+json">${safeJson(absolutizeJsonLd(item, origin))}</script>`),
+    ...(head.jsonLd ?? []).map(item => `<script type="application/ld+json">${safeJson(absolutizeJsonLd(item, canonicalOrigin))}</script>`),
   ].join("");
   const stateScript = `<script>window.__RQ_STATE__=${safeJson(dehydratedState)}</script>`;
   return template.replace("<!--app-head-->", tags).replace("<!--app-html-->", html).replace("</body>", `${stateScript}</body>`);

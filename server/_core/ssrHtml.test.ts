@@ -18,10 +18,10 @@ describe("composeSsrHtml", () => {
     );
 
     expect(html).toContain("<title>DDD 11 | DDD Brasil</title>");
-    expect(html).toContain('rel="canonical" href="https://dddbrasil.example/ddd/11"');
+    expect(html).toContain('rel="canonical" href="https://www.meuddd.com.br/ddd/11"');
     expect(html).toContain('name="robots" content="noindex,follow"');
     expect(html).toContain('type="application/ld+json"');
-    expect(html).toContain('"@id":"https://dddbrasil.example/ddd/11"');
+    expect(html).toContain('"@id":"https://www.meuddd.com.br/ddd/11"');
     expect(html).toContain("<main>DDD 11</main>");
     expect(html).not.toContain("<!--app-head-->");
   });
