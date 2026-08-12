@@ -18,25 +18,44 @@ const geojson = {
 describe("BrazilStateMap", () => {
   let container: HTMLDivElement;
   let root: Root;
+  let observeMap: ((entries: IntersectionObserverEntry[]) => void) | undefined;
   const onStateSelect = vi.fn();
 
   beforeEach(() => {
     container = document.createElement("div");
     document.body.appendChild(container);
     root = createRoot(container);
+    vi.useFakeTimers();
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ok: true, json: async () => geojson }));
+    vi.stubGlobal("IntersectionObserver", class {
+      constructor(callback: (entries: IntersectionObserverEntry[]) => void) { observeMap = callback; }
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+      takeRecords() { return []; }
+      readonly root = null;
+      readonly rootMargin = "240px 0px";
+      readonly thresholds = [];
+    });
   });
 
   afterEach(() => {
     act(() => root.unmount());
     container.remove();
     vi.unstubAllGlobals();
+    vi.useRealTimers();
     vi.clearAllMocks();
   });
 
   it("desenha um limite carregado e seleciona o estado quando o utilizador clica", async () => {
     await act(async () => {
       root.render(<BrazilStateMap states={[{ name: "São Paulo", uf: "SP", region: "Sudeste", cityCount: 645, dddCount: 10 }]} onStateSelect={onStateSelect} />);
+    });
+    expect(fetch).not.toHaveBeenCalled();
+
+    await act(async () => {
+      observeMap?.([{ isIntersecting: true } as IntersectionObserverEntry]);
+      vi.advanceTimersByTime(450);
       await Promise.resolve();
       await Promise.resolve();
     });

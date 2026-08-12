@@ -116,3 +116,13 @@
 - [x] Cobrir o gerador com testes automatizados e validação visual em desktop e móvel.
 - [x] Adicionar estados explícitos de carregamento, erro e vazio para os dados territoriais usados na página `/gerador`.
 - [x] Garantir que os testes do gerador são incluídos pela suite Vitest e acrescentar cobertura integrada de seleção, geração, cópia e aviso de simulação.
+- [x] Reproduzir e corrigir a divergência de hidratação SSR na rota inicial `/?uf=PA`.
+- [x] Adicionar teste de regressão de hidratação para o filtro por UF na página inicial.
+- [x] Extrair as métricas e os avisos acionáveis do relatório PageSpeed móvel fornecido.
+- [x] Reduzir o trabalho da renderização inicial móvel, o JavaScript não essencial e o peso do mapa sem afetar SSR ou SEO.
+- [x] Medir e validar as melhorias de desempenho móvel, preservando a experiência visual e a navegação principal.
+- [x] Validar explicitamente no browser a homepage e a navegação principal após a remoção da instrumentação Manus do build de produção, e registar a evidência no projeto/todo.
+- [x] Executar cobertura de regressão que confirme que a homepage e as rotas principais continuam funcionais após o build de produção otimizado.
+- [x] Corrigir a resolução das entradas SSR no servidor de desenvolvimento quando a configuração Vite é definida por função.
+- [x] Registar no projeto a evidência da validação pós-otimização, incluindo rotas principais, viewport móvel e resultado da navegação.
+- [x] Adicionar e executar uma verificação automatizada do build otimizado para `/`, `/ddd/11`, uma rota de estado e uma rota de município.

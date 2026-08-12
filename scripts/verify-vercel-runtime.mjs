@@ -29,6 +29,10 @@ try {
   const homeHtml = await homeResponse.text();
   const dddResponse = await fetch(`http://127.0.0.1:${address.port}/ddd/11`);
   const dddHtml = await dddResponse.text();
+  const stateResponse = await fetch(`http://127.0.0.1:${address.port}/estado/sp`);
+  const stateHtml = await stateResponse.text();
+  const municipalityResponse = await fetch(`http://127.0.0.1:${address.port}/cidade/sp/sao-paulo`);
+  const municipalityHtml = await municipalityResponse.text();
   const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
   const sitemapXml = await sitemapResponse.text();
 
@@ -49,11 +53,19 @@ try {
     throw new Error(`A reserva territorial não renderizou a rota programática /ddd/11 (HTTP ${dddResponse.status}): ${dddHtml.slice(0, 600)}`);
   }
 
+  if (!stateResponse.ok || !stateHtml.includes("DDD de São Paulo")) {
+    throw new Error(`A reserva territorial não renderizou a rota programática /estado/sp (HTTP ${stateResponse.status}): ${stateHtml.slice(0, 600)}`);
+  }
+
+  if (!municipalityResponse.ok || !municipalityHtml.includes("DDD de São Paulo (SP) | Meu DDD")) {
+    throw new Error(`A reserva territorial não renderizou a rota programática /cidade/sp/sao-paulo (HTTP ${municipalityResponse.status}): ${municipalityHtml.slice(0, 600)}`);
+  }
+
   if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
     throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rota DDD e sitemap responderam HTTP 200.");
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município e sitemap responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

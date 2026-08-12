@@ -36,8 +36,10 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   if (path === "/") {
     const params = new URLSearchParams(rawSearch);
     const input = { query: params.get("q")?.trim() || undefined, uf: params.get("uf")?.toUpperCase() || undefined };
-    const results = await prefetch.search(input);
-    await seed(queryClient, getQueryKey(trpc.ddd.search, input, "query"), results);
+    if (input.query || input.uf) {
+      const results = await prefetch.search(input);
+      await seed(queryClient, getQueryKey(trpc.ddd.search, input, "query"), results);
+    }
     return { title: `${site} — Consulte DDDs de todo o Brasil`, description, canonicalPath: "/", ogType: "website", jsonLd: [{ "@context": "https://schema.org", "@type": "WebSite", name: site, url: "/", potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: "/?q={search_term_string}" }, "query-input": "required name=search_term_string" } }] };
   }
   if (path === "/gerador") {

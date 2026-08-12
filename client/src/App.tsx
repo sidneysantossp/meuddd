@@ -2,32 +2,70 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
+import { lazy, Suspense, type ComponentType } from "react";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import DddDetail from "./pages/DddDetail";
 import Home from "./pages/Home";
-import StatePage from "./pages/StatePage";
-import MunicipalityPage from "./pages/MunicipalityPage";
-import DddGuidePage from "./pages/DddGuidePage";
-import GuidesIndexPage from "./pages/GuidesIndexPage";
-import Generator from "./pages/Generator";
-import SearchInsightsPage from "./pages/SearchInsightsPage";
-import SuggestionModerationPage from "./pages/SuggestionModerationPage";
+
+type RouteModule = { default: ComponentType<any> };
+
+function createLoadableRoute(loader: () => Promise<RouteModule>) {
+  let resolved: ComponentType<any> | undefined;
+  let loading: Promise<void> | undefined;
+  const preload = () => {
+    loading ??= loader().then(module => { resolved = module.default; });
+    return loading;
+  };
+  const LazyRoute = lazy(async () => {
+    await preload();
+    return { default: resolved! };
+  });
+  const RouteComponent = (props: any) => {
+    const ResolvedRoute = resolved;
+    return ResolvedRoute ? <ResolvedRoute {...props} /> : <Suspense fallback={<RouteLoadingFallback />}><LazyRoute {...props} /></Suspense>;
+  };
+  return { RouteComponent, preload };
+}
+
+function RouteLoadingFallback() {
+  return <main className="min-h-screen bg-[#faf3e5]" aria-busy="true" aria-label="A carregar página" />;
+}
+
+const stateRoute = createLoadableRoute(() => import("./pages/StatePage"));
+const municipalityRoute = createLoadableRoute(() => import("./pages/MunicipalityPage"));
+const guidesRoute = createLoadableRoute(() => import("./pages/GuidesIndexPage"));
+const generatorRoute = createLoadableRoute(() => import("./pages/Generator"));
+const guideRoute = createLoadableRoute(() => import("./pages/DddGuidePage"));
+const dddRoute = createLoadableRoute(() => import("./pages/DddDetail"));
+const searchInsightsRoute = createLoadableRoute(() => import("./pages/SearchInsightsPage"));
+const suggestionsRoute = createLoadableRoute(() => import("./pages/SuggestionModerationPage"));
+
+export function preloadRouteForPath(pathname: string) {
+  if (/^\/estado\/[a-z]{2}$/i.test(pathname)) return stateRoute.preload();
+  if (/^\/cidade\/[a-z]{2}\//i.test(pathname)) return municipalityRoute.preload();
+  if (pathname === "/guias") return guidesRoute.preload();
+  if (pathname === "/gerador") return generatorRoute.preload();
+  if (/^\/guia\//.test(pathname)) return guideRoute.preload();
+  if (/^\/ddd\//.test(pathname)) return dddRoute.preload();
+  if (pathname === "/admin/pesquisas") return searchInsightsRoute.preload();
+  if (pathname === "/admin/sugestoes") return suggestionsRoute.preload();
+  return Promise.resolve();
+}
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/estado/:uf" component={StatePage} />
-      <Route path="/cidade/:uf/:slug" component={MunicipalityPage} />
-      <Route path="/guias" component={GuidesIndexPage} />
-      <Route path="/gerador" component={Generator} />
-      <Route path="/guia/:slug" component={DddGuidePage} />
-      <Route path="/ddd/:code" component={DddDetail} />
-      <Route path="/admin/pesquisas" component={SearchInsightsPage} />
-      <Route path="/admin/sugestoes" component={SuggestionModerationPage} />
+      <Route path="/estado/:uf" component={stateRoute.RouteComponent} />
+      <Route path="/cidade/:uf/:slug" component={municipalityRoute.RouteComponent} />
+      <Route path="/guias" component={guidesRoute.RouteComponent} />
+      <Route path="/gerador" component={generatorRoute.RouteComponent} />
+      <Route path="/guia/:slug" component={guideRoute.RouteComponent} />
+      <Route path="/ddd/:code" component={dddRoute.RouteComponent} />
+      <Route path="/admin/pesquisas" component={searchInsightsRoute.RouteComponent} />
+      <Route path="/admin/sugestoes" component={suggestionsRoute.RouteComponent} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

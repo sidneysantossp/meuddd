@@ -6,7 +6,7 @@ import superjson from "superjson";
 import { trpc } from "@/lib/trpc";
 import { installAnalytics } from "@/lib/analytics";
 import { COOKIE_NAME, UNAUTHED_ERR_MSG } from "@shared/const";
-import App from "./App";
+import App, { preloadRouteForPath } from "./App";
 import { startLogin } from "./const";
 import "./index.css";
 
@@ -18,5 +18,12 @@ const trpcClient = trpc.createClient({ links: [httpBatchLink({ url: "/api/trpc",
 const rawState = (window as Window & { __RQ_STATE__?: unknown }).__RQ_STATE__;
 // O servidor injeta o resultado de dehydrate() como JSON seguro; não é um payload serializado pelo SuperJSON.
 const dehydratedState = rawState as DehydratedState | undefined;
-installAnalytics(document, import.meta.env.VITE_ANALYTICS_ENDPOINT, import.meta.env.VITE_ANALYTICS_WEBSITE_ID);
-hydrateRoot(document.getElementById("root")!, <trpc.Provider client={trpcClient} queryClient={queryClient}><QueryClientProvider client={queryClient}><HydrationBoundary state={dehydratedState}><Router><App /></Router></HydrationBoundary></QueryClientProvider></trpc.Provider>);
+const hydrateApplication = () => {
+  hydrateRoot(document.getElementById("root")!, <trpc.Provider client={trpcClient} queryClient={queryClient}><QueryClientProvider client={queryClient}><HydrationBoundary state={dehydratedState}><Router><App /></Router></HydrationBoundary></QueryClientProvider></trpc.Provider>);
+  const install = () => installAnalytics(document, import.meta.env.VITE_ANALYTICS_ENDPOINT, import.meta.env.VITE_ANALYTICS_WEBSITE_ID);
+  const requestIdle = (window as Window & { requestIdleCallback?: (callback: IdleRequestCallback, options?: IdleRequestOptions) => number }).requestIdleCallback;
+  if (requestIdle) requestIdle(install, { timeout: 2_000 });
+  else window.setTimeout(install, 1_200);
+};
+
+void preloadRouteForPath(window.location.pathname).finally(hydrateApplication);

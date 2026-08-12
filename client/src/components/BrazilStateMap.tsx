@@ -1,5 +1,5 @@
 import { MapPin } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type StateSummary = {
   name: string;
@@ -72,13 +72,45 @@ export function BrazilStateMap({
   selectedUf?: string;
   onStateSelect: (uf: string) => void;
 }) {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
   const [features, setFeatures] = useState<SvgFeature[]>([]);
   const [loadError, setLoadError] = useState(false);
   const [hoveredUf, setHoveredUf] = useState<string | undefined>();
+  const [hasHydrated, setHasHydrated] = useState(false);
   const stateByUf = useMemo(() => new Map(states.map(state => [state.uf, state])), [states]);
   const selectedState = selectedUf ? stateByUf.get(selectedUf) : undefined;
 
+  useEffect(() => setHasHydrated(true), []);
+
   useEffect(() => {
+    const target = mapRef.current;
+    if (!target) return;
+    let loadTimer: number | undefined;
+    const scheduleLoad = () => {
+      loadTimer = window.setTimeout(() => setShouldLoad(true), 450);
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      scheduleLoad();
+      return () => window.clearTimeout(loadTimer);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        observer.disconnect();
+        scheduleLoad();
+      }
+    }, { rootMargin: "240px 0px" });
+    observer.observe(target);
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(loadTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!shouldLoad) return;
     const controller = new AbortController();
     fetch(GEOJSON_URL, { signal: controller.signal })
       .then(response => {
@@ -90,10 +122,10 @@ export function BrazilStateMap({
         if (error.name !== "AbortError") setLoadError(true);
       });
     return () => controller.abort();
-  }, []);
+  }, [shouldLoad]);
 
   return (
-    <div className="relative overflow-hidden rounded-[1.5rem] border border-[#29564d] bg-[#143d36] shadow-[0_22px_50px_rgba(20,61,54,0.24)]">
+    <div ref={mapRef} className="relative overflow-hidden rounded-[1.5rem] border border-[#29564d] bg-[#143d36] shadow-[0_22px_50px_rgba(20,61,54,0.24)]">
       <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(250,243,229,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(250,243,229,0.18)_1px,transparent_1px)] [background-size:26px_26px]" />
       <div className="relative h-[420px] sm:h-[500px]">
         {features.length > 0 ? (
@@ -133,7 +165,7 @@ export function BrazilStateMap({
           </svg>
         ) : (
           <div className="grid h-full place-items-center px-10 text-center text-xs font-bold uppercase tracking-[0.18em] text-[#f7e8ce]/80">
-            {loadError ? "Limites indisponíveis no momento" : "A carregar mapa dos estados"}
+            {loadError ? "Limites indisponíveis no momento" : shouldLoad ? "A carregar mapa dos estados" : "Mapa pronto para navegar"}
           </div>
         )}
       </div>
@@ -142,7 +174,7 @@ export function BrazilStateMap({
           <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#f5c5a1]">Mapa de navegação</div>
           <div className="mt-1 flex items-center gap-2 text-sm font-bold"><MapPin size={15} className="text-[#f06a4d]" /> Clique em um estado</div>
         </div>
-        {selectedState && (
+        {hasHydrated && selectedState && (
           <div className="rounded-xl border border-[#fffaf1]/70 bg-[#fffaf1]/95 px-4 py-3 text-right text-[#143d36] shadow-lg backdrop-blur-sm">
             <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#718378]">Selecionado</div>
             <div className="font-display text-2xl leading-none">{selectedState.uf}</div>

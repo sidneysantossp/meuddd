@@ -3,7 +3,7 @@ import { renderToString } from "react-dom/server";
 import { hydrateRoot, type Root } from "react-dom/client";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { Router } from "wouter";
-import App from "./App";
+import App, { preloadRouteForPath } from "./App";
 
 vi.mock("@/lib/trpc", () => ({
   trpc: {
@@ -19,11 +19,13 @@ vi.mock("@/lib/trpc", () => ({
 }));
 
 function RouteTree({ path, server = false }: { path: string; server?: boolean }) {
-  return <Router ssrPath={server ? path : undefined}><App /></Router>;
+  const [pathname, ssrSearch = ""] = path.split("?");
+  return <Router ssrPath={server ? pathname : undefined} ssrSearch={server ? ssrSearch : undefined}><App /></Router>;
 }
 
 async function expectHydrationFor(path: string) {
   window.history.replaceState({}, "", path);
+  await preloadRouteForPath(new URL(path, window.location.origin).pathname);
   const serverHtml = renderToString(<RouteTree path={path} server />);
   document.body.innerHTML = `<div id="root">${serverHtml}</div>`;
   const container = document.getElementById("root")!;
@@ -43,7 +45,7 @@ describe("hidratação das rotas públicas", () => {
     document.head.innerHTML = "";
   });
 
-  it.each(["/", "/ddd/11", "/estado/sp", "/cidade/sp/sao-paulo", "/guias", "/guia/o-que-e-ddd", "/guia/portabilidade-numerica", "/guia/ddd-11-cidades-e-cobertura"])("hidrata %s sem divergências recuperáveis", async path => {
+  it.each(["/", "/?uf=PA", "/ddd/11", "/estado/sp", "/cidade/sp/sao-paulo", "/guias", "/guia/o-que-e-ddd", "/guia/portabilidade-numerica", "/guia/ddd-11-cidades-e-cobertura"])("hidrata %s sem divergências recuperáveis", async path => {
     await expectHydrationFor(path);
   });
 });

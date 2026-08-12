@@ -47,14 +47,19 @@ function initialSearch(search: string) {
 export default function Home() {
   const [, setLocation] = useLocation();
   const urlSearch = useSearch();
-  const [{ query: firstQuery, uf: firstUf }] = useState(() => initialSearch(urlSearch));
+  // O Router recebe `ssrSearch` no servidor, enquanto o navegador já dispõe de
+  // `window.location.search` antes da hidratação. A fonte explícita evita que o
+  // filtro por UF seja vazio apenas na primeira renderização do cliente.
+  const initialUrlSearch = typeof window === "undefined" ? urlSearch : window.location.search;
+  const [{ query: firstQuery, uf: firstUf }] = useState(() => initialSearch(initialUrlSearch));
   const [query, setQuery] = useState(firstQuery);
   const [stateFilter, setStateFilter] = useState(firstUf);
   const [mobileNav, setMobileNav] = useState(false);
   const [recent, setRecent] = useState(["11", "21", "61"]);
   const states = trpc.ddd.states.useQuery();
   const searchInput = useMemo(() => ({ query: query.trim() || undefined, uf: stateFilter || undefined }), [query, stateFilter]);
-  const search = trpc.ddd.search.useQuery(searchInput);
+  const hasSearchCriteria = Boolean(searchInput.query || searchInput.uf);
+  const search = trpc.ddd.search.useQuery(searchInput, { enabled: hasSearchCriteria });
   const recordUnmatchedSearch = trpc.ddd.recordUnmatchedSearch.useMutation();
   const trackedSearches = useRef(new Set<string>());
   const stateOptions = states.data ?? [];

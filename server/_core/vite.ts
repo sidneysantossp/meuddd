@@ -13,6 +13,10 @@ const clientTemplate = path.resolve(projectRoot, "client", "index.html");
 const originFor = (req: express.Request) => `${req.protocol}://${req.get("host") ?? "localhost"}`;
 
 export async function setupVite(app: Express, server: Server) {
+  const resolvedViteConfig =
+    typeof viteConfig === "function"
+      ? await viteConfig({ command: "serve", mode: "development", isSsrBuild: false, isPreview: false })
+      : viteConfig;
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
@@ -20,7 +24,7 @@ export async function setupVite(app: Express, server: Server) {
   };
 
   const vite = await createViteServer({
-    ...viteConfig,
+    ...resolvedViteConfig,
     configFile: false,
     server: serverOptions,
     appType: "custom",

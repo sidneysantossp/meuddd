@@ -1,5 +1,5 @@
 import { QueryClient } from "@tanstack/react-query";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { prefetchForPath } from "../client/src/ssr/prefetch";
 
 describe("metadados SSR da marca Meu DDD", () => {
@@ -17,6 +17,23 @@ describe("metadados SSR da marca Meu DDD", () => {
       "@type": "WebSite",
       name: "Meu DDD",
     });
+  });
+
+  it("omite a pesquisa territorial vazia do estado SSR, mas mantém a consulta quando há uma UF na URL", async () => {
+    const search = vi.fn(async () => []);
+    const prefetch = {
+      states: async () => [],
+      search,
+      byCode: async () => null,
+      byState: async () => null,
+      byMunicipality: async () => null,
+    };
+
+    await prefetchForPath("/", new QueryClient(), prefetch);
+    expect(search).not.toHaveBeenCalled();
+
+    await prefetchForPath("/?uf=PA", new QueryClient(), prefetch);
+    expect(search).toHaveBeenCalledWith({ query: undefined, uf: "PA" });
   });
 
   it("descreve o gerador de número móvel com URL canónica e dados estruturados próprios", async () => {
