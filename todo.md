@@ -96,3 +96,5 @@
 - [x] Atualizar o documento de incidente com a transcrição completa do erro da revisão 452270f, incluindo mensagem, Require stack e frames principais da Vercel.
 - [x] Fazer a verificação do handler Vercel falhar explicitamente se o bundle contiver `vite`, `rollup` ou `lightningcss`.
 - [ ] Validar uma revisão publicada após o handler dedicado com HTTP 200 e HTML SSR no URL de produção da Vercel.
+- [x] Confirmar que a ocorrência local de `createSsrPrefetch is not defined` era histórica e não reapareceu nos registos frescos após o reinício.
+- [x] Corrigir o caminho de recursos SSR no modo Vercel, que procura `public/` embora a função inclua `dist/public/`.

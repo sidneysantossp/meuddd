@@ -42,6 +42,14 @@ The logs above can help with debugging the issue.
 
 O painel da Vercel associou esta exceção a `GET /` e `GET /favicon.ico` no host `meuddd-e4po0iyrq-admsuisso-1633s-projects.vercel.app`, ambos com HTTP 500 e código `FUNCTION_INVOCATION_FAILED`. Como a exceção não expôs frames adicionais além do `Require stack` acima, essa cadeia representa o stack trace completo disponibilizado pelo runtime.
 
+### Revisão com handler isolado em promoção
+
+Em 11 de agosto de 2026, a revisão `958552f`, com o handler serverless dedicado sem Vite, Rollup ou Lightning CSS, foi enviada ao branch `main` e entrou na fila de produção da Vercel. O URL único apresentado pelo painel é `https://meuddd-cjvq6r4do-admsuisso-1633s-projects.vercel.app`. A validação pública deve ocorrer apenas depois de o estado mudar de `Queued` para `Ready`.
+
+O painel de deployments da Vercel passou a indicar a revisão `958552f` como `Ready` em Production, com duração de build de 55 segundos. A próxima validação deve consultar o URL único desta revisão e os domínios configurados, para confirmar a execução da função e o HTML SSR.
+
+O URL único `https://meuddd-cjvq6r4do-admsuisso-1633s-projects.vercel.app` respondeu `Internal Server Error` após a revisão ter ficado `Ready`. A página de logs da Vercel passou a exigir autenticação novamente antes de expor a exceção correspondente; é necessário restabelecer a sessão da Vercel e recolher o novo stack trace antes de concluir a causa de runtime desta revisão.
+
 ## Referências oficiais
 
 - [Vercel — Adding & Configuring a Custom Domain](https://vercel.com/docs/domains/working-with-domains/add-a-domain): o domínio de ápice usa registo A e subdomínios usam CNAME; os valores exatos devem ser copiados do cartão de domínio da Vercel.

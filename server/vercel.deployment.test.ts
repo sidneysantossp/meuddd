@@ -10,6 +10,7 @@ describe("configuração de publicação Vercel", () => {
     const packageJson = JSON.parse(fs.readFileSync(path.join(projectRoot, "package.json"), "utf8"));
     const serverEntry = fs.readFileSync(path.join(projectRoot, "server.ts"), "utf8");
     const coreEntry = fs.readFileSync(path.join(projectRoot, "server/_core/index.ts"), "utf8");
+    const ssrStatic = fs.readFileSync(path.join(projectRoot, "server/_core/ssrStatic.ts"), "utf8");
     const runtimeVerification = fs.readFileSync(path.join(projectRoot, "scripts/verify-vercel-runtime.mjs"), "utf8");
 
     expect(config.framework).toBe("express");
@@ -25,6 +26,8 @@ describe("configuração de publicação Vercel", () => {
     expect(serverEntry).toContain("export default app");
     expect(coreEntry).not.toContain('from "./vite"');
     expect(coreEntry).toContain('await import("./vite")');
+    expect(ssrStatic).toContain('path.resolve(process.cwd(), "dist", "public")');
+    expect(ssrStatic).toContain('path.resolve(process.cwd(), "dist", "server", "entry-server.js")');
     expect(runtimeVerification).toContain("window.__RQ_STATE__");
     expect(runtimeVerification).toContain("homeResponse");
     expect(runtimeVerification).toContain("dist/vercel/handler.js");
