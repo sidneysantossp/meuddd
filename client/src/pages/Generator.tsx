@@ -4,22 +4,9 @@ import { Check, ChevronDown, Copy, Dices, MapPin, Phone, ShieldCheck, Sparkles }
 import { toast } from "sonner";
 import { trpc } from "@/lib/trpc";
 import { createMobileSubscriber, formatMobileNumber, sanitizeMobileSubscriber } from "@/lib/mobileNumber";
+import { PublicNavbar } from "@/components/PublicNavbar";
 
 export const GENERATOR_SIMULATION_NOTICE = "Os números são exemplos aleatórios para simulação e testes. A ferramenta não consulta, identifica, reserva ou possui qualquer vínculo com números reais de telefone, titulares ou operadoras. Não confirma se o número existe, está disponível ou pertence a alguém.";
-
-function GeneratorBrand() {
-  return (
-    <Link href="/" className="group inline-flex items-center gap-3" aria-label="Meu DDD, ir para a página inicial">
-      <span className="grid size-11 place-items-center rounded-[14px] bg-[#f06a4d] text-[#fffaf1] shadow-[0_7px_18px_rgba(240,106,77,0.22)] transition-transform duration-300 group-hover:rotate-6">
-        <MapPin size={25} strokeWidth={2.25} aria-hidden="true" />
-      </span>
-      <span className="leading-none">
-        <span className="font-display block text-[1.35rem] font-semibold tracking-[-0.05em] text-[#143d36]">Meu DDD</span>
-        <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.24em] text-[#678176]">Brasil conectado</span>
-      </span>
-    </Link>
-  );
-}
 
 export default function Generator() {
   const statesQuery = trpc.ddd.states.useQuery();
@@ -58,16 +45,7 @@ export default function Generator() {
 
   return (
     <div className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">
-      <header className="border-b border-[#d9d1bf]/70 bg-[#faf3e5]/90 backdrop-blur-md">
-        <div className="container flex min-h-[78px] items-center justify-between gap-5">
-          <GeneratorBrand />
-          <nav className="hidden items-center gap-7 text-sm font-semibold text-[#5d756c] md:flex">
-            <Link href="/" className="rounded-lg px-2 py-2 hover:text-[#143d36]">Buscar DDD</Link>
-            <Link href="/guias" className="rounded-lg px-2 py-2 hover:text-[#143d36]">Guias</Link>
-          </nav>
-          <Link href="/" className="pressable rounded-full bg-[#143d36] px-4 py-2.5 text-sm font-bold text-[#faf3e5]">Consultar DDD</Link>
-        </div>
-      </header>
+      <PublicNavbar />
 
       <main>
         <section className="container grid gap-10 py-14 lg:grid-cols-[0.86fr_1.14fr] lg:items-center lg:py-20">

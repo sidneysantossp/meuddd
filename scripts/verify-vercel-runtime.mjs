@@ -33,6 +33,8 @@ try {
   const stateHtml = await stateResponse.text();
   const municipalityResponse = await fetch(`http://127.0.0.1:${address.port}/cidade/sp/sao-paulo`);
   const municipalityHtml = await municipalityResponse.text();
+  const guidesResponse = await fetch(`http://127.0.0.1:${address.port}/guias`);
+  const guidesHtml = await guidesResponse.text();
   const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
   const sitemapXml = await sitemapResponse.text();
 
@@ -49,7 +51,7 @@ try {
     throw new Error(`O entrypoint Vercel não renderizou SSR na rota principal (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
   }
 
-  if (!dddResponse.ok || !dddHtml.includes("DDD 11: cidades e estados atendidos")) {
+  if (!dddResponse.ok || !dddHtml.includes("DDD 11: cidades e estados atendidos") || !dddHtml.includes('id="public-mobile-navigation"') || !dddHtml.includes("Copiar link")) {
     throw new Error(`A reserva territorial não renderizou a rota programática /ddd/11 (HTTP ${dddResponse.status}): ${dddHtml.slice(0, 600)}`);
   }
 
@@ -57,15 +59,19 @@ try {
     throw new Error(`A reserva territorial não renderizou a rota programática /estado/sp (HTTP ${stateResponse.status}): ${stateHtml.slice(0, 600)}`);
   }
 
-  if (!municipalityResponse.ok || !municipalityHtml.includes("DDD de São Paulo (SP) | Meu DDD")) {
+  if (!municipalityResponse.ok || !municipalityHtml.includes("DDD de São Paulo (SP) | Meu DDD") || !municipalityHtml.includes('id="public-mobile-navigation"') || !municipalityHtml.includes("Copiar link")) {
     throw new Error(`A reserva territorial não renderizou a rota programática /cidade/sp/sao-paulo (HTTP ${municipalityResponse.status}): ${municipalityHtml.slice(0, 600)}`);
+  }
+
+  if (!guidesResponse.ok || !guidesHtml.includes("Guias de telefonia") || !guidesHtml.includes('id="public-mobile-navigation"')) {
+    throw new Error(`A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`);
   }
 
   if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
     throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município e sitemap responderam HTTP 200.");
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município/guias, partilha e sitemap responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

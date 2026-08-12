@@ -130,3 +130,8 @@
 - [x] Adicionar animações decorativas de conexão entre estados no mapa, respeitando `prefers-reduced-motion` e sem interferir nos cliques.
 - [x] Incluir a página `/gerador` na navegação principal e reforçar o aviso de que os números são exclusivamente simulados, sem vínculo com linhas reais.
 - [x] Reposicionar o botão "Sugerir alteração local" para imediatamente abaixo do link "Códigos nacionais de emergência e utilidade pública" nas páginas municipais.
+- [x] Auditar todas as navbars públicas e consolidar links, CTA, identidade visual e comportamento móvel num padrão único, incluindo `/gerador`.
+- [x] Preservar as ações de partilha das páginas de DDD e município em mobile, tablet e desktop na navbar pública partilhada.
+- [x] Adicionar regressão para partilha com a navbar partilhada e validar as rotas DDD, estado, município e guias em produção SSR.
+- [x] Cobrir as rotas reais de DDD e município em mobile, confirmando que as ações de partilha são disponibilizadas pelo menu público.
+- [x] Ampliar a verificação SSR Vercel para a rota `/guias` e revalidar o build de produção.

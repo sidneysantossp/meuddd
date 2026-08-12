@@ -1,6 +1,7 @@
 import { ArrowLeft, ArrowUpRight, BookOpenText, ExternalLink, MapPin, PhoneCall, Search } from "lucide-react";
 import { Link, useRoute } from "wouter";
 import { editorialSources, findEditorialGuide, getRelatedEditorialGuides } from "@shared/editorialGuides";
+import { PublicNavbar } from "@/components/PublicNavbar";
 import NotFound from "./NotFound";
 
 export default function DddGuidePage() {
@@ -12,12 +13,7 @@ export default function DddGuidePage() {
 
   return (
     <main className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">
-      <header className="border-b border-[#d9d1bf] bg-[#faf3e5]/90 backdrop-blur">
-        <div className="container flex min-h-[76px] items-center justify-between gap-5">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold"><ArrowLeft size={17} /> DDD Brasil</Link>
-          <Link href="/guias" className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#718378] hover:text-[#f06a4d]">Guias de telefonia</Link>
-        </div>
-      </header>
+      <PublicNavbar />
 
       <article className="container py-14 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">

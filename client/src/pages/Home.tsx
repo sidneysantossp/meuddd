@@ -18,6 +18,7 @@ import {
   X,
 } from "lucide-react";
 import { BrazilStateMap } from "@/components/BrazilStateMap";
+import { PUBLIC_NAV_ITEMS, PublicNavbar } from "@/components/PublicNavbar";
 
 export const HERO_TITLE_CLASS = "reveal reveal-delay-1 font-display text-[clamp(3.7rem,8vw,7.2rem)] font-semibold leading-[0.88] tracking-[0.012em] text-[#143d36]";
 import { trpc } from "@/lib/trpc";
@@ -25,12 +26,7 @@ import { trpc } from "@/lib/trpc";
 const featuredCodes = ["11", "21", "31", "41", "51", "61", "71", "81", "91"];
 const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
 
-export const MAIN_NAV_ITEMS = [
-  { href: "#buscar", label: "Buscar DDD" },
-  { href: "#mapa", label: "Mapa interativo" },
-  { href: "/gerador", label: "Gerar número" },
-  { href: "#sobre", label: "Como funciona" },
-] as const;
+export { PUBLIC_NAV_ITEMS as MAIN_NAV_ITEMS };
 
 function Brand() {
   return (
@@ -109,24 +105,7 @@ export default function Home() {
 
   return (
     <div id="topo" className="page-shell min-h-screen">
-      <header className="relative z-20 border-b border-[#d9d1bf]/70 bg-[#faf3e5]/90 backdrop-blur-md">
-        <div className="container flex min-h-[78px] items-center justify-between gap-8">
-          <Brand />
-          <nav aria-label="Navegação principal" className={`${mobileNav ? "flex" : "hidden"} absolute left-4 right-4 top-[86px] flex-col gap-2 rounded-2xl border border-[#d9d1bf] bg-[#faf3e5] p-3 shadow-xl md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}>
-            {MAIN_NAV_ITEMS.map(item => item.href.startsWith("#") ? (
-              <a key={item.href} href={item.href} onClick={() => setMobileNav(false)} className={`rounded-lg px-3 py-2 text-sm font-semibold ${item.href === "#buscar" ? "text-[#143d36]" : "text-[#5d756c]"}`}>{item.label}</a>
-            ) : (
-              <Link key={item.href} href={item.href} onClick={() => setMobileNav(false)} className="rounded-lg px-3 py-2 text-sm font-semibold text-[#5d756c] hover:text-[#143d36]">{item.label}</Link>
-            ))}
-          </nav>
-          <div className="flex items-center gap-3">
-            <a href="#buscar" className="pressable hidden items-center gap-2 rounded-full bg-[#143d36] px-4 py-2.5 text-sm font-bold text-[#faf3e5] md:inline-flex">Consultar agora <ArrowUpRight size={15} /></a>
-            <button type="button" className="pressable grid size-10 place-items-center rounded-full border border-[#d9d1bf] text-[#143d36] md:hidden" aria-label="Abrir menu" onClick={() => setMobileNav(value => !value)}>
-              {mobileNav ? <X size={19} /> : <Menu size={19} />}
-            </button>
-          </div>
-        </div>
-      </header>
+      <PublicNavbar />
 
       <main>
         <section id="mapa" className="container relative grid min-h-[640px] scroll-mt-8 items-center gap-14 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:py-20">
