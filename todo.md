@@ -135,3 +135,8 @@
 - [x] Adicionar regressão para partilha com a navbar partilhada e validar as rotas DDD, estado, município e guias em produção SSR.
 - [x] Cobrir as rotas reais de DDD e município em mobile, confirmando que as ações de partilha são disponibilizadas pelo menu público.
 - [x] Ampliar a verificação SSR Vercel para a rota `/guias` e revalidar o build de produção.
+- [x] Criar um footer público robusto com apresentação da plataforma, contacto, redes sociais, links de navegação e copyright 2026.
+- [x] Adicionar ao footer links institucionais de políticas, termos, privacidade/LGPD, imprensa, blog e gerador de números.
+- [x] Não incluir no footer links semânticos para as páginas dos 27 estados brasileiros, pois a navegação territorial já está disponível na página. (Requisito retirado pelo utilizador.)
+- [x] Manter o footer focado em navegação institucional, legal, social e utilitária, sem repetir o diretório de estados.
+- [x] Validar o footer e as páginas institucionais em build Vercel/SSR, incluindo a adaptação para desktop e telemóvel.

@@ -7,6 +7,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import { PublicFooter } from "./components/PublicFooter";
 
 type RouteModule = { default: ComponentType<any> };
 
@@ -40,6 +41,7 @@ const guideRoute = createLoadableRoute(() => import("./pages/DddGuidePage"));
 const dddRoute = createLoadableRoute(() => import("./pages/DddDetail"));
 const searchInsightsRoute = createLoadableRoute(() => import("./pages/SearchInsightsPage"));
 const suggestionsRoute = createLoadableRoute(() => import("./pages/SuggestionModerationPage"));
+const institutionalRoute = createLoadableRoute(() => import("./pages/InstitutionalPage"));
 
 export function preloadRouteForPath(pathname: string) {
   if (/^\/estado\/[a-z]{2}$/i.test(pathname)) return stateRoute.preload();
@@ -50,6 +52,7 @@ export function preloadRouteForPath(pathname: string) {
   if (/^\/ddd\//.test(pathname)) return dddRoute.preload();
   if (pathname === "/admin/pesquisas") return searchInsightsRoute.preload();
   if (pathname === "/admin/sugestoes") return suggestionsRoute.preload();
+  if (["/sobre", "/contato", "/politica-de-privacidade", "/termos-de-uso", "/lgpd", "/imprensa"].includes(pathname)) return institutionalRoute.preload();
   return Promise.resolve();
 }
 
@@ -66,6 +69,12 @@ function Router() {
       <Route path="/ddd/:code" component={dddRoute.RouteComponent} />
       <Route path="/admin/pesquisas" component={searchInsightsRoute.RouteComponent} />
       <Route path="/admin/sugestoes" component={suggestionsRoute.RouteComponent} />
+      <Route path="/sobre" component={institutionalRoute.RouteComponent} />
+      <Route path="/contato" component={institutionalRoute.RouteComponent} />
+      <Route path="/politica-de-privacidade" component={institutionalRoute.RouteComponent} />
+      <Route path="/termos-de-uso" component={institutionalRoute.RouteComponent} />
+      <Route path="/lgpd" component={institutionalRoute.RouteComponent} />
+      <Route path="/imprensa" component={institutionalRoute.RouteComponent} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
@@ -79,6 +88,7 @@ export default function App() {
         <TooltipProvider>
           <Toaster position="bottom-right" />
           <Router />
+          <PublicFooter />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

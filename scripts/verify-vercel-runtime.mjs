@@ -35,6 +35,18 @@ try {
   const municipalityHtml = await municipalityResponse.text();
   const guidesResponse = await fetch(`http://127.0.0.1:${address.port}/guias`);
   const guidesHtml = await guidesResponse.text();
+  const institutionalRoutes = [
+    ["/sobre", "Sobre o Meu DDD"],
+    ["/contato", "Fale sobre o Meu DDD"],
+    ["/politica-de-privacidade", "Política de privacidade"],
+    ["/termos-de-uso", "Termos de uso"],
+    ["/lgpd", "LGPD e transparência"],
+    ["/imprensa", "Informações para imprensa"],
+  ];
+  const institutionalPages = await Promise.all(institutionalRoutes.map(async ([path, marker]) => {
+    const pageResponse = await fetch(`http://127.0.0.1:${address.port}${path}`);
+    return { path, marker, status: pageResponse.status, ok: pageResponse.ok, html: await pageResponse.text() };
+  }));
   const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
   const sitemapXml = await sitemapResponse.text();
 
@@ -67,11 +79,16 @@ try {
     throw new Error(`A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`);
   }
 
+  const invalidInstitutionalPage = institutionalPages.find(page => !page.ok || !page.html.includes(page.marker) || !page.html.includes("© 2026 Meu DDD"));
+  if (invalidInstitutionalPage) {
+    throw new Error(`A rota institucional ${invalidInstitutionalPage.path} não renderizou o conteúdo ou footer via SSR (HTTP ${invalidInstitutionalPage.status}): ${invalidInstitutionalPage.html.slice(0, 600)}`);
+  }
+
   if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
     throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município/guias, partilha e sitemap responderam HTTP 200.");
+  console.log("Entrada Vercel carregada com sucesso; robots.txt, SSR principal, rotas DDD/estado/município/guias/institucionais, footer, partilha e sitemap responderam HTTP 200.");
 } finally {
   await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
 }

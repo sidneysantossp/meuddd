@@ -19,6 +19,14 @@ const site = "Meu DDD";
 const description = "Consulte o DDD de qualquer cidade ou estado do Brasil em uma base territorial completa.";
 const breadcrumbs = (items: { name: string; item: string }[]) => ({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: items.map((entry, position) => ({ "@type": "ListItem", position: position + 1, name: entry.name, item: entry.item })) });
 const seed = (queryClient: QueryClient, key: unknown, data: unknown) => queryClient.setQueryData(key as never, data as never);
+const institutionalPages: Record<string, { name: string; description: string }> = {
+  "/sobre": { name: "Sobre o Meu DDD", description: "Conheça o Meu DDD, uma plataforma de consulta de códigos de área brasileiros por cidade, estado e DDD." },
+  "/contato": { name: "Fale sobre o Meu DDD", description: "Saiba como enviar correções locais e encaminhar assuntos institucionais relacionados ao Meu DDD." },
+  "/politica-de-privacidade": { name: "Política de privacidade", description: "Entenda, de forma resumida, como o Meu DDD trata dados de navegação e sugestões de conteúdo." },
+  "/termos-de-uso": { name: "Termos de uso", description: "Consulte os termos de uso informativo da plataforma Meu DDD." },
+  "/lgpd": { name: "LGPD e transparência", description: "Conheça os princípios de proteção de dados pessoais e transparência aplicados pelo Meu DDD." },
+  "/imprensa": { name: "Informações para imprensa", description: "Apresentação institucional do Meu DDD para imprensa e parceiros editoriais." },
+};
 
 export async function prefetchForPath(url: string, queryClient: QueryClient, prefetch: SsrPrefetch): Promise<HeadMeta> {
   const queryIndex = url.indexOf("?");
@@ -46,6 +54,10 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     const title = `Gerador de número de celular por DDD | ${site}`;
     const generatorDescription = "Simule um número de celular brasileiro por estado e DDD, em formato móvel de nove dígitos.";
     return { title, description: generatorDescription, canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Gerador de número de celular", item: path }]), { "@context": "https://schema.org", "@type": "WebPage", name: "Gerador de número de celular por DDD", url: path, description: generatorDescription, about: { "@type": "Thing", name: "Simulação de número de celular brasileiro por DDD" }, isPartOf: { "@type": "WebSite", name: site, url: "/" } }] };
+  }
+  const institutionalPage = institutionalPages[path];
+  if (institutionalPage) {
+    return { title: `${institutionalPage.name} | ${site}`, description: institutionalPage.description, canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: institutionalPage.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", name: institutionalPage.name, url: path, description: institutionalPage.description, isPartOf: { "@type": "WebSite", name: site, url: "/" } }] };
   }
   if (path === "/guias") return { title: `Guias de telefonia: DDD, chamadas e direitos | ${site}`, description: "Guias práticos sobre DDD, numeração, chamadas, portabilidade e direitos do consumidor na telefonia brasileira.", canonicalPath: path, ogType: "website", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", name: "Guias de telefonia", url: path, hasPart: editorialGuides.map(guide => ({ "@type": "Article", headline: guide.title, url: `/guia/${guide.slug}` })) }] };
   const guideMatch = path.match(/^\/guia\/([^/]+)$/);
