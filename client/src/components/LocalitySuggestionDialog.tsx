@@ -30,7 +30,7 @@ export function LocalitySuggestionDialog({ municipalityIbgeCode, municipalityNam
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button type="button" variant="outline" className="mt-6 h-auto border-[#143d36]/20 bg-transparent px-4 py-3 text-left text-xs font-bold text-[#143d36] hover:border-[#e8533a] hover:bg-[#fff5e9]">
+        <Button type="button" variant="outline" className="h-auto border-[#143d36]/20 bg-transparent px-4 py-3 text-left text-xs font-bold text-[#143d36] hover:border-[#e8533a] hover:bg-[#fff5e9]">
           <MessageSquarePlus className="mr-2 h-4 w-4 text-[#e8533a]" /> Sugerir alteração local
         </Button>
       </DialogTrigger>

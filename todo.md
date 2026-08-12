@@ -129,3 +129,4 @@
 - [x] Exibir as siglas das 27 UFs no mapa SVG interativo com posicionamento legível e acessível.
 - [x] Adicionar animações decorativas de conexão entre estados no mapa, respeitando `prefers-reduced-motion` e sem interferir nos cliques.
 - [x] Incluir a página `/gerador` na navegação principal e reforçar o aviso de que os números são exclusivamente simulados, sem vínculo com linhas reais.
+- [x] Reposicionar o botão "Sugerir alteração local" para imediatamente abaixo do link "Códigos nacionais de emergência e utilidade pública" nas páginas municipais.
