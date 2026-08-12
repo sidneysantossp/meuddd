@@ -74,16 +74,16 @@
 - [x] Enviar o checkpoint atual para o repositório GitHub confirmado.
 - [x] Confirmar a presença do commit remoto e registar a exportação concluída.
 - [x] Diagnosticar a exibição do bundle JavaScript no domínio publicado via Vercel e Cloudflare e preparar uma configuração de implantação compatível com SSR.
-- [ ] Confirmar o novo deployment da Vercel e a resposta HTTPS correta no domínio configurado pela Cloudflare.
+- [x] Confirmar o novo deployment da Vercel e a resposta HTTPS correta no domínio configurado pela Cloudflare.
 - [x] Evitar referências de analytics não configuradas no template HTML de publicação externa.
 - [x] Corrigir a deteção do entrypoint Express pela Vercel, que rejeitou o `server.ts` como importador de Express.
 - [x] Diagnosticar e corrigir a resolução DNS de www.meuddd.com.br entre Cloudflare e Vercel.
 - [x] Diagnosticar e corrigir a falha `FUNCTION_INVOCATION_FAILED` da função serverless da Vercel.
-- [ ] Validar publicamente a resolução de `meuddd.com.br` e `www.meuddd.com.br` com evidência registada no projeto.
-- [ ] Confirmar o deployment da Vercel no domínio final com resposta HTTPS 200 e HTML SSR correto após a correção de DNS.
+- [x] Validar publicamente a resolução de `meuddd.com.br` e `www.meuddd.com.br` com evidência registada no projeto.
+- [x] Confirmar o deployment da Vercel no domínio final com resposta HTTPS 200 e HTML SSR correto após a correção de DNS.
 - [x] Obter o detalhe de runtime de `FUNCTION_INVOCATION_FAILED` no deployment mais recente da Vercel e corrigir a dependência que impede o arranque.
 - [x] Registar no projeto a mensagem textual ou stack trace da função Vercel que originou o erro de runtime.
-- [ ] Validar no deployment público que a função Vercel deixou de falhar e registar uma resposta HTTP bem-sucedida.
+- [x] Validar no deployment público que a função Vercel deixou de falhar e registar uma resposta HTTP bem-sucedida.
 - [x] Corrigir a configuração `functions.server.ts.includeFiles`, rejeitada pela Vercel por aceitar apenas uma string.
 - [x] Diagnosticar a nova falha `FUNCTION_INVOCATION_FAILED` observada na revisão Vercel 6fba372 já promovida a Production.
 - [x] Registar no documento de incidente a correção de `createSsrPrefetch` aplicada em `server/ssrPrefetch.ts` e a mudança realizada.
@@ -95,7 +95,9 @@
 - [x] Impedir definitivamente que Vite, Rollup e Lightning CSS sejam incluídos ou importados pela função Vercel de produção.
 - [x] Atualizar o documento de incidente com a transcrição completa do erro da revisão 452270f, incluindo mensagem, Require stack e frames principais da Vercel.
 - [x] Fazer a verificação do handler Vercel falhar explicitamente se o bundle contiver `vite`, `rollup` ou `lightningcss`.
-- [ ] Validar uma revisão publicada após o handler dedicado com HTTP 200 e HTML SSR no URL de produção da Vercel.
+- [x] Validar uma revisão publicada após o handler dedicado: a revisão 8178dee está Ready e renderiza SSR autenticado no URL técnico; o URL técnico é protegido por SSO (HTTP 302 sem sessão) e o domínio canónico público responde HTTP 200.
+- [x] Validar explicitamente o URL de produção da Vercel da revisão final, confirmando a disponibilidade autenticada da raiz e de `/ddd/11`; a proteção SSO devolve HTTP 302 a consultas técnicas sem sessão, enquanto o domínio canónico público devolve HTTP 200.
+- [x] Registar no incidente a evidência textual da revisão Vercel final, incluindo URL, status HTTP e marcadores de SSR.
 - [x] Confirmar que a ocorrência local de `createSsrPrefetch is not defined` era histórica e não reapareceu nos registos frescos após o reinício.
 - [x] Corrigir o caminho de recursos SSR no modo Vercel, que procura `public/` embora a função inclua `dist/public/`.
 - [x] Adicionar uma reserva versionada dos dados territoriais para que as páginas públicas SSR permaneçam disponíveis quando a variável `DATABASE_URL` não estiver configurada na Vercel.

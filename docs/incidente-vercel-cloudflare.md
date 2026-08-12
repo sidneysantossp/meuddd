@@ -50,6 +50,14 @@ O painel de deployments da Vercel passou a indicar a revisão `958552f` como `Re
 
 O URL único `https://meuddd-cjvq6r4do-admsuisso-1633s-projects.vercel.app` respondeu `Internal Server Error` após a revisão ter ficado `Ready`. A página de logs da Vercel passou a exigir autenticação novamente antes de expor a exceção correspondente; é necessário restabelecer a sessão da Vercel e recolher o novo stack trace antes de concluir a causa de runtime desta revisão.
 
+### Resolução publicada
+
+Os logs de runtime posteriores identificaram que a função já iniciava corretamente, mas a primeira pré-busca SSR falhava com `Error: A base de dados não está disponível.` porque o projeto Vercel não tinha `DATABASE_URL` configurada. Para não tornar as páginas públicas dependentes de uma variável externa no runtime serverless, o commit `8178dee` acrescentou uma reserva versionada dos 5.571 municípios já validados pela plataforma. As consultas públicas de estado, DDD, município e inventário de sitemap usam essa reserva somente quando a base de dados não está disponível; quando `DATABASE_URL` existe, a base continua a ser a fonte preferencial.
+
+Em 12 de agosto de 2026, a validação pública confirmou `HTTP 200` para `https://www.meuddd.com.br/` e para a sua rota canónica a partir de `https://meuddd.com.br/`, que redireciona por `HTTP 308` para `www`. A página inicial e `https://www.meuddd.com.br/ddd/11` contêm `id="root"` e `window.__RQ_STATE__`, sem as mensagens `createSsrPrefetch is not defined`, `A base de dados não está disponível` ou `Internal Server Error`. O sitemap `https://www.meuddd.com.br/sitemaps/ddds.xml` também respondeu com conteúdo XML publicado.
+
+A revisão final `8178dee` aparece como `Ready` em `Production` no painel da Vercel, com duração de 58 segundos, e usa o URL técnico `https://meuddd-j2d7kiqzr-admsuisso-1633s-projects.vercel.app`. Na sessão autenticada da Vercel, a raiz desse URL apresentou o título `DDD Brasil — Consulte DDDs de todo o Brasil` e o respetivo elemento `id="root"`; a rota `/ddd/11` apresentou o título `DDD 11: cidades e estados atendidos | DDD Brasil`, a lista das 64 cidades e os controlos de partilha. Uma consulta técnica sem sessão recebe `HTTP 302` para `vercel.com/sso-api`, o comportamento esperado da proteção de deployment da Vercel, e não uma falha da função. A confirmação pública sem autenticação permanece o domínio canónico `www.meuddd.com.br`, que respondeu `HTTP 200`.
+
 ## Referências oficiais
 
 - [Vercel — Adding & Configuring a Custom Domain](https://vercel.com/docs/domains/working-with-domains/add-a-domain): o domínio de ápice usa registo A e subdomínios usam CNAME; os valores exatos devem ser copiados do cartão de domínio da Vercel.
