@@ -263,6 +263,6 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Validar: 86 testes, TypeScript; SSR verificado via curl com <a> ibge.gov.br, climate-data.org, anatel.gov.br, osasco.sp.gov.br e 4× link interno /estado/sp — screenshot final e checkpoint pendentes
 
 ## Varredura SEO (pedido 2026-08-13)
-- [ ] Varredura das páginas principais: meta tags (title/description/og), canonical, JSON-LD, headings, links internos/externos, texto/HTML, performance
-- [ ] Implementar as melhorias SEO e de links identificados
+- [x] Varredura das páginas principais: meta tags (title/description/og), canonical, JSON-LD, headings, links internos/externos, texto/HTML, performance — script scripts/seo-audit.mts cobriu home, /ddd/11, /ddd/21, /estado/sp, /cidade/sp/osasco, /cidade/sp/aracariguama, /regiao/sudeste, /guia/o-que-e-ddd
+- [x] Implementar as melhorias SEO e de links identificados: og:image genérico (1440x810) em todas as páginas SSR + og:image por artigo nos guias; redirect /blog → /guias com canonical; H1 DDD enriquecido ("DDD {code}: {N} cidades atendidas") com links internos do estado; parágrafo da região com links internos para os estados do hub; canonical e og:description já existiam (varredura falhou a extração por ordem de atributos); corrigido [object Object] no texto do DDD e espaço em falta na região
 - [ ] Commit no GitHub e entrega
