@@ -1,5 +1,9 @@
 import type { HeadMeta } from "../../client/src/ssr/prefetch";
 
+/** Imagem de partilha genérica do site (1440×810, servida como ativo estático). */
+const DEFAULT_SHARE_IMAGE = "/assets/blog-ddd-mapa-brasil.jpg";
+const shareImage = (ogImage?: string) => new URL(ogImage ?? DEFAULT_SHARE_IMAGE, CANONICAL_ORIGIN).toString();
+
 const escapeHtml = (value: string) => value.replace(/[&<>\"]/g, character => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[character] ?? character);
 const safeJson = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
 const CANONICAL_ORIGIN = "https://www.meuddd.com.br";
@@ -51,6 +55,10 @@ export function composeSsrHtml(template: string, html: string, dehydratedState: 
     `<meta property="og:url" content="${escapeHtml(canonical)}">`,
     `<meta property="og:type" content="${head.ogType ?? "website"}">`,
     `<meta property="og:locale" content="pt_BR">`,
+    `<meta property="og:image" content="${escapeHtml(shareImage(head.ogImage))}">`,
+    `<meta property="og:image:width" content="1440">`,
+    `<meta property="og:image:height" content="810">`,
+    `<meta property="og:image:alt" content="${escapeHtml(head.ogImageAlt ?? "Meu DDD — consulta de códigos de área de todo o Brasil")}">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     head.noindex ? `<meta name="robots" content="noindex,follow">` : "",
     `<script type="application/ld+json">${safeJson(siteJsonLd)}</script>`,

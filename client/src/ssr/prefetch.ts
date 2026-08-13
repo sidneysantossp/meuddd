@@ -9,7 +9,7 @@ import { buildMunicipalityFaq, buildStateFaq, faqPageJsonLd } from "@shared/terr
 import { getMunicipalityTabsKey, loadMunicipalityTabs, mapPointUrl } from "@shared/localityTabs";
 
 type Outputs = inferRouterOutputs<AppRouter>;
-export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[] };
+export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[]; ogImage?: string; ogImageAlt?: string };
 export type SsrPrefetch = {
   states: () => Promise<Outputs["ddd"]["states"]>;
   search: (input: { query?: string; uf?: string }) => Promise<Outputs["ddd"]["search"]>;
@@ -74,7 +74,7 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   if (guideMatch) {
     const guide = findEditorialGuide(guideMatch[1]);
     if (!guide) return { title: "Guia não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
-    return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, image: guide.image, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
+    return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", ogImage: guide.image, ogImageAlt: guide.imageAlt, jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, image: guide.image, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
   }
   const regionMatch = path.match(/^\/regiao\/([^/]+)$/);
   if (regionMatch) {
@@ -136,5 +136,6 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     }
     return meta;
   }
+  if (path === "/blog") return { title: "Blog → Guias de telefonia | " + site, description: "A secção de blog do Meu DDD agora integra os guias de telefonia.", canonicalPath: "/guias", ogType: "website" };
   return { title: "Página não encontrada | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
 }

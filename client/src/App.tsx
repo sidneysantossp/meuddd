@@ -34,6 +34,13 @@ function RouteLoadingFallback() {
   return <main className="min-h-screen bg-[#faf3e5]" aria-busy="true" aria-label="A carregar página" />;
 }
 
+/** Redirecionamento permanente /blog → /guias (o nav e o footer apontam para /guias). */
+function BlogRedirect() {
+  const [, setLocation] = useLocation();
+  if (typeof window !== "undefined") setLocation("/guias", { replace: true });
+  return <main className="min-h-screen bg-[#faf3e5]" aria-busy="true" aria-label="A redirecionar para os guias de telefonia" />;
+}
+
 const stateRoute = createLoadableRoute(() => import("./pages/StatePage"));
 const municipalityRoute = createLoadableRoute(() => import("./pages/MunicipalityPage"));
 const guidesRoute = createLoadableRoute(() => import("./pages/GuidesIndexPage"));
@@ -49,7 +56,7 @@ const capitalsRoute = createLoadableRoute(() => import("./pages/CapitalsIndexPag
 export function preloadRouteForPath(pathname: string) {
   if (/^\/estado\/[a-z]{2}$/i.test(pathname)) return stateRoute.preload();
   if (/^\/cidade\/[a-z]{2}\//i.test(pathname)) return municipalityRoute.preload();
-  if (pathname === "/guias") return guidesRoute.preload();
+  if (pathname === "/guias" || pathname === "/blog") return guidesRoute.preload();
   if (pathname === "/gerador") return generatorRoute.preload();
   if (/^\/guia\//.test(pathname)) return guideRoute.preload();
   if (/^\/ddd\//.test(pathname)) return dddRoute.preload();
@@ -69,6 +76,7 @@ function Router() {
       <Route path="/estado/:uf" component={stateRoute.RouteComponent} />
       <Route path="/cidade/:uf/:slug" component={municipalityRoute.RouteComponent} />
       <Route path="/guias" component={guidesRoute.RouteComponent} />
+      <Route path="/blog" component={BlogRedirect} />
       <Route path="/gerador" component={generatorRoute.RouteComponent} />
       <Route path="/guia/:slug" component={guideRoute.RouteComponent} />
       <Route path="/ddd/:code" component={dddRoute.RouteComponent} />

@@ -261,3 +261,8 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Página DDD: links internos (DDD→estado, estado→municípios) e "Consultar contexto territorial no IBGE" linkado
 - [x] Atualizar scripts de geração para bloquear fontes de terceiros fora da whitelist na geração em massa
 - [x] Validar: 86 testes, TypeScript; SSR verificado via curl com <a> ibge.gov.br, climate-data.org, anatel.gov.br, osasco.sp.gov.br e 4× link interno /estado/sp — screenshot final e checkpoint pendentes
+
+## Varredura SEO (pedido 2026-08-13)
+- [ ] Varredura das páginas principais: meta tags (title/description/og), canonical, JSON-LD, headings, links internos/externos, texto/HTML, performance
+- [ ] Implementar as melhorias SEO e de links identificados
+- [ ] Commit no GitHub e entrega
