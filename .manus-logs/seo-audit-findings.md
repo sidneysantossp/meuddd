@@ -109,3 +109,10 @@ Descobertas-chave para implementação:
 - curl /sitemap.xml com Host: www.meuddd.com.br → URLs https://www.meuddd.com.br canônicas; robots.txt dinâmico aponta Sitemap ${origin}/sitemap.xml.
 - /sitemaps/cidades-sp.xml 200 com lastmod/changefreq/priority.
 - pnpm test: 35 arquivos, 86 testes verdes.
+
+## Novo pedido 13/08 (noite): FAQ JSON-LD nas páginas DDD
+- Pedido: secção FAQ + marcação JSON-LD (FAQPage) nas páginas de DDD.
+- Estado: todo.md atualizado com item pendente; fase 1 em curso.
+- Padrão existente: shared/territorialFaq.ts tem `buildStateFaq`, `buildMunicipalityFaq` (TerritorialFaq = {question, answer}). Usar função nova `buildDddFaq` em shared/territorialFaq.ts.
+- Onde renderizar: client/src/pages/DddDetail.tsx (página /ddd/:code). Verificar como MunicipalityPage renderiza FAQ (componente details) e injetar FAQPage JSON-LD (prefetch.ts já injeta jsonLd para /ddd — adicionar FAQPage aí com as mesmas perguntas).
+- Validação: curl SSR /ddd/11 deve conter FAQPage JSON-LD; pnpm test; commit GitHub (remote "github" → sidneysantossp/meuddd, main); checkpoint final.
