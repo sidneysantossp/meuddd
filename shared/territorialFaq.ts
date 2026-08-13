@@ -133,3 +133,58 @@ export function faqPageJsonLd(faqs: TerritorialFaq[]) {
     })),
   };
 }
+
+export function buildDddFaq(input: {
+  dddCode: string;
+  cityCount: number;
+  stateNames: string[];
+}): TerritorialFaq[] {
+  const coverage = `${input.cityCount} ${pluralize(input.cityCount, "município", "municípios")}`;
+  const inStates = input.stateNames.length
+    ? input.stateNames.length === 1 ? `no estado de ${input.stateNames[0]}` : `nos estados de ${input.stateNames.slice(0, -1).join(", ")}${input.stateNames.length > 2 ? "," : ""} ${input.stateNames[input.stateNames.length - 1]}` : "no território nacional"
+  ;
+  const statesText = input.stateNames.length ? ` em ${input.stateNames.join(" e ")}` : "";
+
+  return [
+    {
+      question: `Qual cidade usa o DDD ${input.dddCode}?`,
+      answer: `O DDD ${input.dddCode} abrange ${coverage} do inventário territorial do Meu DDD${inStates}. Consulte a lista completa de municípios na página do código.`,
+    },
+    {
+      question: `Quantas cidades usam o DDD ${input.dddCode}?`,
+      answer: `O inventário desta página reúne ${coverage} atendidas pelo DDD ${input.dddCode}${statesText}. O número real de assinaturas é muito maior, pois cada município possui milhares de linhas telefônicas.`,
+    },
+    {
+      question: `Como ligar para o DDD ${input.dddCode} de outro estado?`,
+      answer: `Confirme o número completo do destino e, quando a sua prestadora solicitar discagem interurbana, disque 0 + código da prestadora + ${input.dddCode} + número. As regras e tarifas dependem do plano contratado.`,
+    },
+    {
+      question: `Como ligar para o DDD ${input.dddCode} do exterior?`,
+      answer: `Use o código do Brasil (+55), seguido do DDD ${input.dddCode} e do número completo. A sequência de saída e o custo dependem da operadora de origem.`,
+    },
+    {
+      question: `Como descobrir em qual cidade está o DDD ${input.dddCode}?`,
+      answer: `Digite o código na busca do Meu DDD ou abra a página /ddd/${input.dddCode}: a lista completa de municípios atendidos, com o respetivo estado e a região, aparece logo abaixo do cartão do código.`,
+    },
+    {
+      question: `Um número com DDD ${input.dddCode} pertence a qual operadora?`,
+      answer: `O DDD ${input.dddCode} identifica apenas a área de numeração, não a operadora. Com a portabilidade numérica, um número dessa área pode ser de qualquer prestadora; confirme diretamente com a operadora em caso de dúvida.`,
+    },
+    {
+      question: `Como formatar um número do DDD ${input.dddCode}?`,
+      answer: `Escreva (${input.dddCode}) XXXX-XXXX para telefone fixo ou (${input.dddCode}) 9XXXX-XXXX para celular. O DDD fica fora dos parênteses e não conta nos oito ou nove dígitos do assinante.`,
+    },
+    {
+      question: `Posso manter o DDD ${input.dddCode} se me mudar de cidade?`,
+      answer: `A portabilidade numérica permite manter o número em situações definidas pela regulamentação e pela operadora, mas não garante a permanência do DDD em toda mudança de área. Confirme com a sua prestadora antes da mudança.`,
+    },
+    {
+      question: `Qual é a diferença entre DDD ${input.dddCode} e DDI?`,
+      answer: `O DDD ${input.dddCode} é um código de área interno do Brasil, com dois dígitos, que identifica a localidade do assinante. O DDI é o código internacional de cada país; o do Brasil é +55.`,
+    },
+    {
+      question: `O DDD ${input.dddCode} está relacionado ao CEP de alguma cidade da área?`,
+      answer: `Não. O DDD organiza a numeração telefônica por área geográfica definida pela ANATEL, enquanto o CEP organiza a malha postal nos Correios. Um mesmo município pode ter CEPs diferentes dentro da mesma área ${input.dddCode}.`,
+    },
+  ];
+}

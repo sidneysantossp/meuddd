@@ -274,3 +274,6 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Links internos "cidades vizinhas" com parágrafo contextual nas páginas de município: seção "Outras cidades com DDD" agora abre com frase editorial nomeando as 5 primeiras cidades vizinhas com links internos (SSR validado em /cidade/sp/aruja, 25 links internos por página)
 - [x] Preparação da medição de cobertura no Search Console (documento docs/SEARCH-CONSOLE.md criado com protocolo semanal e metas 30/90 dias)
 - [x] Commit final no GitHub (f8d88c4 → github.com/sidneysantossp/meuddd, main) e entrega
+
+## Pedido 2026-08-13 (noite)
+- [x] Secção FAQ com marcação JSON-LD (FAQPage) nas páginas de DDD: buildDddFaq com 10 perguntas em shared/territorialFaq.ts, conteúdo visível em DddDetail.tsx alinhado com o JSON-LD do SSR (prefetch.ts), FAQPage validado via curl em /ddd/11 e 86 testes verdes

@@ -7,6 +7,7 @@ import { TerritoryTrustPanel } from "@/components/TerritoryTrustPanel";
 import { IntentCluster } from "@/components/IntentCluster";
 import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
 import { officialTerritorialSources } from "@shared/territorialSeo";
+import { buildDddFaq } from "@shared/territorialFaq";
 
 export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string; title: string; summary: string; curiosity: string }> = {
   "63": {
