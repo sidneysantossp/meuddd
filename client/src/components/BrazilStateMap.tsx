@@ -19,6 +19,8 @@ type SvgFeature = { uf: string; path: string; label: Position };
 type StateConnection = { id: string; path: string; start: Position; end: Position; midpoint: Position; index: number };
 
 const GEOJSON_URL = "/assets/brazil-states.geojson";
+const LOAD_TIMEOUT_MS = 8_000;
+const OBSERVER_FALLBACK_MS = 3_000;
 const MAP_WIDTH = 520;
 const MAP_HEIGHT = 530;
 const PADDING = 24;
@@ -137,14 +139,25 @@ export function BrazilStateMap({
     const target = mapRef.current;
     if (!target) return;
     let loadTimer: number | undefined;
+    let fallbackTimer: number | undefined;
     const scheduleLoad = () => {
+      window.clearTimeout(loadTimer);
+      window.clearTimeout(fallbackTimer);
       loadTimer = window.setTimeout(() => setShouldLoad(true), 450);
     };
 
     if (!("IntersectionObserver" in window)) {
       scheduleLoad();
-      return () => window.clearTimeout(loadTimer);
+      return () => {
+        window.clearTimeout(loadTimer);
+        window.clearTimeout(fallbackTimer);
+      };
     }
+
+    // Guarantee the map eventually loads even if the observer never fires
+    // (e.g., browser quirks, hidden containers, or delayed visibility). Without
+    // this, users could stay on "A carregar mapa dos estados" indefinitely.
+    fallbackTimer = window.setTimeout(scheduleLoad, OBSERVER_FALLBACK_MS);
 
     const observer = new IntersectionObserver(entries => {
       if (entries.some(entry => entry.isIntersecting)) {
@@ -156,12 +169,15 @@ export function BrazilStateMap({
     return () => {
       observer.disconnect();
       window.clearTimeout(loadTimer);
+      window.clearTimeout(fallbackTimer);
     };
   }, []);
 
   useEffect(() => {
     if (!shouldLoad) return;
     const controller = new AbortController();
+    const timeoutTimer = window.setTimeout(() => controller.abort(), LOAD_TIMEOUT_MS);
+    let aborted = false;
     fetch(GEOJSON_URL, { signal: controller.signal })
       .then(response => {
         if (!response.ok) throw new Error("Não foi possível carregar os limites estaduais.");
@@ -169,9 +185,14 @@ export function BrazilStateMap({
       })
       .then(data => setFeatures(createPaths(data)))
       .catch(error => {
-        if (error.name !== "AbortError") setLoadError(true);
-      });
-    return () => controller.abort();
+        aborted = error.name === "AbortError";
+        if (!aborted) setLoadError(true);
+      })
+      .finally(() => window.clearTimeout(timeoutTimer));
+    return () => {
+      window.clearTimeout(timeoutTimer);
+      if (!aborted) controller.abort();
+    };
   }, [shouldLoad]);
 
   return (
@@ -265,7 +286,29 @@ export function BrazilStateMap({
           </svg>
         ) : (
           <div className="grid h-full place-items-center px-10 text-center text-xs font-bold uppercase tracking-[0.18em] text-[#f7e8ce]/80">
-            {loadError ? "Limites indisponíveis no momento" : shouldLoad ? "A carregar mapa dos estados" : "Mapa pronto para navegar"}
+            {loadError ? (
+              <div className="flex flex-col items-center gap-4">
+                <span>Limites indisponíveis no momento</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLoadError(false);
+                    setShouldLoad(false);
+                    window.setTimeout(() => setShouldLoad(true), 50);
+                  }}
+                  className="rounded-full bg-[#f06a4d] px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-[#fffaf1] transition-transform duration-150 hover:opacity-90 active:scale-[0.97]"
+                >
+                  Tentar novamente
+                </button>
+              </div>
+            ) : shouldLoad ? (
+              <div className="flex flex-col items-center gap-4">
+                <span className="inline-block size-7 animate-spin rounded-full border-2 border-[#f7e8ce]/30 border-t-[#f5c5a1]" aria-hidden="true" />
+                <span>A desenhar os limites estaduais…</span>
+              </div>
+            ) : (
+              "Mapa pronto para navegar"
+            )}
           </div>
         )}
       </div>

@@ -246,3 +246,5 @@
 
 ## Verificação visual (18:27)
 Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleção rápida por UF" e secção "Um atlas para o dia a dia" com fundo verde escuro (#143d36) contínuo até à tarja do footer, texto em tons claros (#faf3e5/#b8cec4) e ícone coral. 82 testes verdes, TypeScript sem erros.
+- [x] Corrigir o travamento potencial do mapa interativo da homepage: o mapa dependia exclusivamente do IntersectionObserver, que pode nunca disparar (navegadores com quirks, contentores ocultos, scroll abaixo da dobra) e deixava o estado "A carregar mapa dos estados" indefinidamente. Adicionado fallback de 3s que garante o carregamento, timeout de 8s no fetch com erro tratado, indicador de spinner durante o desenho e botão "Tentar novamente" para re-tentativa manual; validado com 82 testes, TypeScript e screenshots desktop/móvel.
+- [ ] Monitorizar a retomada da geração em massa das tabs editoriais (agendada para 14/08 06:00 BRT): a quota diária de LLM permaneceu esgotada no dia 13/08 (412 usage exhausted); a tarefa agendada `PW66RMcon4WDl815DcI966` executa diariamente e resume com --only-empty a partir dos logs OK.
