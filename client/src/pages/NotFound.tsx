@@ -6,7 +6,7 @@ export default function NotFound() {
     <main className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">
       <div className="container flex min-h-screen flex-col justify-between py-8 sm:py-10">
         <a href="/" className="inline-flex w-fit items-center gap-3" aria-label="DDD Brasil, voltar ao início">
-          <span className="grid size-11 place-items-center rounded-[14px] bg-[#f06a4d] shadow-[0_7px_18px_rgba(240,106,77,0.22)]"><img src="/manus-storage/ddd-brasil-mark_5ec0d09e.png" alt="" className="size-8 object-contain" /></span>
+          <span className="grid size-11 place-items-center rounded-[14px] bg-[#f06a4d] shadow-[0_7px_18px_rgba(240,106,77,0.22)]"><img src="/assets/meu-ddd-mark.svg" alt="" className="size-8 object-contain" /></span>
           <span><strong className="font-display block text-[1.35rem] leading-none tracking-[-0.05em]">DDD Brasil</strong><small className="mt-1 block text-[9px] font-bold uppercase tracking-[0.24em] text-[#678176]">Atlas de conexões</small></span>
         </a>
         <section className="relative grid items-center gap-12 py-20 lg:grid-cols-[0.85fr_1.15fr]">

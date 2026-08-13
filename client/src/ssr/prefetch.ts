@@ -73,7 +73,7 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   if (guideMatch) {
     const guide = findEditorialGuide(guideMatch[1]);
     if (!guide) return { title: "Guia não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
-    return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
+    return { title: `${guide.title} | ${site}`, description: guide.description, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: "Guias de telefonia", item: "/guias" }, { name: guide.title, item: path }]), { "@context": "https://schema.org", "@type": "Article", headline: guide.title, description: guide.description, inLanguage: "pt-BR", mainEntityOfPage: path, url: path, image: guide.image, author: { "@type": "Organization", name: site }, publisher: { "@type": "Organization", name: site }, citation: guide.sources.map(sourceId => editorialSources[sourceId].url), about: { "@type": "Thing", name: guide.eyebrow } }] };
   }
   const regionMatch = path.match(/^\/regiao\/([^/]+)$/);
   if (regionMatch) {

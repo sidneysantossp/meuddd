@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Marca Meu DDD">
+  <title>Meu DDD</title>
+  <rect width="1024" height="1024" rx="144" fill="#143d36"/>
+  <circle cx="512" cy="452" r="170" fill="#f06a4d"/>
+  <path d="M512 382a70 70 0 1 0 0 140 70 70 0 0 0 0-140zm0 114a44 44 0 1 1 0-88 44 44 0 0 1 0 88z" fill="#143d36"/>
+  <path d="M512 560c-66 0-124 24-168 62 34 76 96 132 168 132s134-56 168-132c-44-38-102-62-168-62z" fill="#f06a4d"/>
+</svg>

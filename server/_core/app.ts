@@ -12,9 +12,9 @@ import { regionHubs } from "../../shared/territorialSeo";
 const PUBLIC_SITE_ORIGIN = "https://www.meuddd.com.br";
 const INSTITUTIONAL_PATHS = ["/sobre", "/contato", "/politica-de-privacidade", "/termos-de-uso", "/lgpd", "/imprensa", "/capitais"];
 const EDITORIAL_IMAGES: Record<string, { src: string; title: string; caption: string }> = {
-  "o-que-e-ddd": { src: "/manus-storage/blog-ddd-mapa-brasil_57876089.png", title: "O que é DDD", caption: "Mapa do Brasil, telefone e marcador de localização." },
-  "como-descobrir-ddd-de-uma-cidade": { src: "/manus-storage/blog-consultar-ddd-cidade_0819cb9e.png", title: "Como descobrir o DDD de uma cidade", caption: "Malha urbana, mapa dobrado e marcador de localização." },
-  "como-ligar-para-outro-estado": { src: "/manus-storage/blog-ligacao-entre-estados_42079c98.png", title: "Como ligar para outro estado", caption: "Regiões conectadas por uma ligação telefónica." },
+  "o-que-e-ddd": { src: "/assets/blog-ddd-mapa-brasil.jpg", title: "O que é DDD", caption: "Mapa do Brasil, telefone e marcador de localização." },
+  "como-descobrir-ddd-de-uma-cidade": { src: "/assets/blog-consultar-ddd-cidade.jpg", title: "Como descobrir o DDD de uma cidade", caption: "Malha urbana, mapa dobrado e marcador de localização." },
+  "como-ligar-para-outro-estado": { src: "/assets/blog-ligacao-entre-estados.jpg", title: "Como ligar para outro estado", caption: "Regiões conectadas por uma ligação telefónica." },
 };
 
 function requestOrigin(req: express.Request) {

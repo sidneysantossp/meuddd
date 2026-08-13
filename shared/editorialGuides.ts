@@ -14,6 +14,10 @@ export type EditorialGuide = {
   eyebrow: string;
   summary: string;
   intro: string;
+  /** Imagem editorial em ativo estático (não depende do proxy de armazenamento). */
+  image: string;
+  /** Texto alternativo da imagem editorial. */
+  imageAlt: string;
   sections: { title: string; body: string }[];
   faqs: { question: string; answer: string }[];
   sources: EditorialSourceId[];
@@ -21,6 +25,28 @@ export type EditorialGuide = {
   relatedSlugs: string[];
 };
 
+/** Imagens editoriais em ativos estáticos estáveis, por slug. */
+export const editorialGuideImages: Record<string, { image: string; imageAlt: string }> = {
+  "o-que-e-ddd": { image: "/assets/guia-o-que-e-ddd.jpg", imageAlt: "Ilustração editorial de teclado de telefone com códigos de dois dígitos sobre mapa do Brasil." },
+  "como-descobrir-ddd-de-uma-cidade": { image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg", imageAlt: "Ilustração editorial de um mapa urbano dobrado com marcador de localização." },
+  "como-ligar-para-outro-estado": { image: "/assets/guia-como-ligar-para-outro-estado.jpg", imageAlt: "Ilustração editorial de duas regiões ligadas por uma linha de telefone." },
+  "como-ligar-de-celular-para-fixo": { image: "/assets/guia-como-ligar-de-celular-para-fixo.jpg", imageAlt: "Ilustração editorial de um smartphone conectado a um telefone fixo." },
+  "como-ligar-para-celular-em-outro-estado": { image: "/assets/guia-como-ligar-para-celular-em-outro-estado.jpg", imageAlt: "Ilustração editorial de um celular a contactar outro estado." },
+  "codigo-de-operadora-csp": { image: "/assets/guia-codigo-de-operadora-csp.jpg", imageAlt: "Ilustração editorial de dígitos a seguir uma rota até uma torre de operadora." },
+  "como-ligar-para-outro-pais-ddi": { image: "/assets/guia-como-ligar-para-outro-pais-ddi.jpg", imageAlt: "Ilustração editorial de um globo com rota aérea de chamada internacional." },
+  "diferenca-entre-ddd-e-ddi": { image: "/assets/guia-diferenca-entre-ddd-e-ddi.jpg", imageAlt: "Ilustração editorial de dois cartões comparando mapa do Brasil e globo." },
+  "portabilidade-numerica": { image: "/assets/guia-portabilidade-numerica.jpg", imageAlt: "Ilustração editorial de um telefone em migração entre torres de operadoras." },
+  "numeros-de-emergencia": { image: "/assets/guia-numeros-de-emergencia.jpg", imageAlt: "Ilustração editorial de um telefone de emergência com radar de atenção." },
+  "como-bloquear-chamadas-indesejadas": { image: "/assets/guia-numeros-de-emergencia.jpg", imageAlt: "Ilustração editorial de um telefone com sinal de bloqueio sobre chamadas." },
+  "numero-fixo-tem-quantos-digitos": { image: "/assets/guia-numero-fixo-tem-quantos-digitos.jpg", imageAlt: "Ilustração editorial de um telefone fixo com sequência de dígitos." },
+  "numero-de-celular-tem-quantos-digitos": { image: "/assets/guia-numero-de-celular-tem-quantos-digitos.jpg", imageAlt: "Ilustração editorial de um smartphone com sequência de nove dígitos." },
+  "o-que-e-codigo-nacional": { image: "/assets/guia-codigo-de-operadora-csp.jpg", imageAlt: "Ilustração editorial de uma estrutura de código nacional na telefonia." },
+  "como-ligar-a-cobrar": { image: "/assets/guia-como-ligar-para-outro-estado.jpg", imageAlt: "Ilustração editorial de dois telefones unidos por uma chamada." },
+  "ddd-de-capitais-do-brasil": { image: "/assets/guia-o-que-e-ddd.jpg", imageAlt: "Ilustração editorial de capitais brasileiras marcadas num mapa do Brasil." },
+  "como-telefonar-para-sao-paulo": { image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg", imageAlt: "Ilustração editorial de um mapa urbano representando São Paulo." },
+  "como-telefonar-para-rio-de-janeiro": { image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg", imageAlt: "Ilustração editorial de um mapa urbano representando o Rio de Janeiro." },
+  "como-telefonar-para-brasilia": { image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg", imageAlt: "Ilustração editorial de um mapa urbano representando Brasília." },
+};
 const commonTerritoryLinks = [
   { label: "Consultar DDD por estado", href: "/#explorar" },
   { label: "DDD de São Paulo", href: "/ddd/11" },
@@ -30,6 +56,8 @@ const commonTerritoryLinks = [
 export const editorialGuides: EditorialGuide[] = [
   {
     slug: "o-que-e-ddd",
+  image: editorialGuideImages["o-que-e-ddd"].image,
+  imageAlt: editorialGuideImages["o-que-e-ddd"].imageAlt,
     title: "O que é DDD? Entenda os códigos de área do Brasil",
     description: "Saiba o que significa DDD, por que o código tem dois dígitos e como localizar a área de numeração de uma cidade brasileira.",
     eyebrow: "Telefonia / guia essencial",
@@ -49,6 +77,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-descobrir-ddd-de-uma-cidade",
+  image: editorialGuideImages["como-descobrir-ddd-de-uma-cidade"].image,
+  imageAlt: editorialGuideImages["como-descobrir-ddd-de-uma-cidade"].imageAlt,
     title: "Como descobrir o DDD de uma cidade brasileira",
     description: "Veja como encontrar o DDD de qualquer cidade por nome, UF ou estado e como confirmar a área de numeração correta.",
     eyebrow: "Consulta / cidades",
@@ -68,6 +98,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-ligar-para-outro-estado",
+  image: editorialGuideImages["como-ligar-para-outro-estado"].image,
+  imageAlt: editorialGuideImages["como-ligar-para-outro-estado"].imageAlt,
     title: "Como ligar para outro estado: DDD e número de destino",
     description: "Entenda o papel do DDD nas chamadas entre estados e como confirmar a forma de discagem aplicável ao seu serviço.",
     eyebrow: "Chamadas / interurbanas",
@@ -87,6 +119,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-ligar-de-celular-para-fixo",
+  image: editorialGuideImages["como-ligar-de-celular-para-fixo"].image,
+  imageAlt: editorialGuideImages["como-ligar-de-celular-para-fixo"].imageAlt,
     title: "Como ligar de celular para telefone fixo",
     description: "Saiba o que verificar antes de ligar de um celular para um telefone fixo em outra cidade ou área de numeração.",
     eyebrow: "Chamadas / celular e fixo",
@@ -106,6 +140,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-ligar-para-celular-em-outro-estado",
+  image: editorialGuideImages["como-ligar-para-celular-em-outro-estado"].image,
+  imageAlt: editorialGuideImages["como-ligar-para-celular-em-outro-estado"].imageAlt,
     title: "Como ligar para celular em outro estado",
     description: "Veja como confirmar o DDD e o formato de um número de celular antes de uma chamada para outra área de numeração.",
     eyebrow: "Chamadas / celular",
@@ -125,6 +161,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "codigo-de-operadora-csp",
+  image: editorialGuideImages["codigo-de-operadora-csp"].image,
+  imageAlt: editorialGuideImages["codigo-de-operadora-csp"].imageAlt,
     title: "O que é código de operadora (CSP) e quando confirmar",
     description: "Entenda o que significa CSP na telefonia e por que as instruções de discagem devem ser confirmadas no seu plano e prestadora.",
     eyebrow: "Chamadas / prestadoras",
@@ -144,6 +182,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-ligar-para-outro-pais-ddi",
+  image: editorialGuideImages["como-ligar-para-outro-pais-ddi"].image,
+  imageAlt: editorialGuideImages["como-ligar-para-outro-pais-ddi"].imageAlt,
     title: "Como ligar para outro país: para que serve o DDI",
     description: "Entenda a diferença entre DDI, DDD e número do assinante antes de realizar uma chamada internacional.",
     eyebrow: "Chamadas / internacionais",
@@ -163,6 +203,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "diferenca-entre-ddd-e-ddi",
+  image: editorialGuideImages["diferenca-entre-ddd-e-ddi"].image,
+  imageAlt: editorialGuideImages["diferenca-entre-ddd-e-ddi"].imageAlt,
     title: "Diferença entre DDD e DDI: guia rápido",
     description: "Compare DDD e DDI, saiba o que cada código identifica e em que situações consultar cada um.",
     eyebrow: "Telefonia / conceitos",
@@ -182,6 +224,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "portabilidade-numerica",
+  image: editorialGuideImages["portabilidade-numerica"].image,
+  imageAlt: editorialGuideImages["portabilidade-numerica"].imageAlt,
     title: "Portabilidade numérica: como manter o número ao mudar de operadora",
     description: "Conheça o direito à portabilidade numérica, o prazo informado pela Anatel e os cuidados para iniciar o pedido.",
     eyebrow: "Consumidor / direitos",
@@ -201,6 +245,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "numeros-de-emergencia",
+  image: editorialGuideImages["numeros-de-emergencia"].image,
+  imageAlt: editorialGuideImages["numeros-de-emergencia"].imageAlt,
     title: "Números de emergência no Brasil: quando usar códigos tridígitos",
     description: "Entenda o que são os códigos telefónicos tridígitos de emergência e utilidade pública e onde confirmar a lista oficial.",
     eyebrow: "Serviços / emergência",
@@ -220,6 +266,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-bloquear-chamadas-indesejadas",
+  image: editorialGuideImages["como-bloquear-chamadas-indesejadas"].image,
+  imageAlt: editorialGuideImages["como-bloquear-chamadas-indesejadas"].imageAlt,
     title: "Como bloquear chamadas indesejadas e telemarketing",
     description: "Conheça medidas indicadas pela Anatel para reduzir chamadas indesejadas, bloquear números e utilizar o Não Me Perturbe.",
     eyebrow: "Consumidor / proteção",
@@ -239,6 +287,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "numero-fixo-tem-quantos-digitos",
+  image: editorialGuideImages["numero-fixo-tem-quantos-digitos"].image,
+  imageAlt: editorialGuideImages["numero-fixo-tem-quantos-digitos"].imageAlt,
     title: "Número fixo tem quantos dígitos no Brasil?",
     description: "Confira o formato de oito dígitos da telefonia fixa segundo o Plano de Numeração Brasileiro.",
     eyebrow: "Telefonia / formatos",
@@ -258,6 +308,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "numero-de-celular-tem-quantos-digitos",
+  image: editorialGuideImages["numero-de-celular-tem-quantos-digitos"].image,
+  imageAlt: editorialGuideImages["numero-de-celular-tem-quantos-digitos"].imageAlt,
     title: "Número de celular tem quantos dígitos no Brasil?",
     description: "Veja o formato de nove dígitos do celular no Brasil e como distinguir o número móvel do telefone fixo.",
     eyebrow: "Telefonia / formatos",
@@ -277,6 +329,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "o-que-e-codigo-nacional",
+  image: editorialGuideImages["o-que-e-codigo-nacional"].image,
+  imageAlt: editorialGuideImages["o-que-e-codigo-nacional"].imageAlt,
     title: "O que é código nacional na telefonia brasileira?",
     description: "Entenda a relação entre código nacional, área de numeração e DDD no Plano de Numeração Brasileiro.",
     eyebrow: "Telefonia / numeração",
@@ -296,6 +350,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-ligar-a-cobrar",
+  image: editorialGuideImages["como-ligar-a-cobrar"].image,
+  imageAlt: editorialGuideImages["como-ligar-a-cobrar"].imageAlt,
     title: "Como ligar a cobrar: o que confirmar antes da chamada",
     description: "Veja os cuidados para procurar instruções atualizadas sobre chamadas a cobrar e confirmar disponibilidade com a prestadora.",
     eyebrow: "Chamadas / orientações",
@@ -315,6 +371,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "ddd-de-capitais-do-brasil",
+  image: editorialGuideImages["ddd-de-capitais-do-brasil"].image,
+  imageAlt: editorialGuideImages["ddd-de-capitais-do-brasil"].imageAlt,
     title: "DDD das capitais do Brasil: como consultar por cidade",
     description: "Aprenda a encontrar o DDD das capitais brasileiras pela ficha municipal e a confirmar o código de cada área de numeração.",
     eyebrow: "Consulta / capitais",
@@ -336,6 +394,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-telefonar-para-sao-paulo",
+  image: editorialGuideImages["como-telefonar-para-sao-paulo"].image,
+  imageAlt: editorialGuideImages["como-telefonar-para-sao-paulo"].imageAlt,
     title: "Como telefonar para São Paulo: encontre o DDD da cidade",
     description: "Consulte o DDD de São Paulo, confirme a ficha da cidade e navegue pela cobertura territorial do código 11.",
     eyebrow: "Cidades / São Paulo",
@@ -355,6 +415,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-telefonar-para-rio-de-janeiro",
+  image: editorialGuideImages["como-telefonar-para-rio-de-janeiro"].image,
+  imageAlt: editorialGuideImages["como-telefonar-para-rio-de-janeiro"].imageAlt,
     title: "Como telefonar para o Rio de Janeiro: encontre o DDD da cidade",
     description: "Consulte o DDD do Rio de Janeiro, confirme a ficha municipal e navegue pela área de numeração associada ao código 21.",
     eyebrow: "Cidades / Rio de Janeiro",
@@ -374,6 +436,8 @@ export const editorialGuides: EditorialGuide[] = [
   },
   {
     slug: "como-telefonar-para-brasilia",
+  image: editorialGuideImages["como-telefonar-para-brasilia"].image,
+  imageAlt: editorialGuideImages["como-telefonar-para-brasilia"].imageAlt,
     title: "Como telefonar para Brasília: encontre o DDD da cidade",
     description: "Consulte o DDD de Brasília, confirme o município e explore a página territorial associada ao código 61.",
     eyebrow: "Cidades / Brasília",
@@ -394,8 +458,11 @@ export const editorialGuides: EditorialGuide[] = [
 ];
 
 function createCapitalGuide(input: { slug: string; city: string; state: string; uf: string; ddd: string }) : EditorialGuide {
+  const image = editorialGuideImages[input.slug];
   return {
     slug: input.slug,
+    image: image?.image ?? "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg",
+    imageAlt: image?.imageAlt ?? `Ilustração editorial de um mapa urbano representando ${input.city}.`,
     title: `Como telefonar para ${input.city}: DDD ${input.ddd}`,
     description: `Consulte o DDD de ${input.city}, confirme a ficha municipal e navegue pela cobertura territorial do código ${input.ddd}.`,
     eyebrow: `Cidades / ${input.city}`,
@@ -422,8 +489,11 @@ function createCapitalGuide(input: { slug: string; city: string; state: string; 
 }
 
 function createDddGuide(input: { code: string; cities: string; state: string; uf: string; anchorCity: string; citySlug: string }) : EditorialGuide {
+  const image = editorialGuideImages[`ddd-${input.code}-cidades-e-cobertura`];
   return {
     slug: `ddd-${input.code}-cidades-e-cobertura`,
+    image: image?.image ?? "/assets/guia-o-que-e-ddd.jpg",
+    imageAlt: image?.imageAlt ?? `Ilustração editorial da área de numeração do DDD ${input.code}.`,
     title: `DDD ${input.code}: cidades e cobertura da área de numeração`,
     description: `Consulte o DDD ${input.code}, confirme cidades atendidas e navegue pela cobertura territorial ligada a ${input.anchorCity}.`,
     eyebrow: `DDD / ${input.code}`,

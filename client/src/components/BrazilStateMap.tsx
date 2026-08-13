@@ -18,7 +18,7 @@ type GeoCollection = { features: GeoFeature[] };
 type SvgFeature = { uf: string; path: string; label: Position };
 type StateConnection = { id: string; path: string; start: Position; end: Position; midpoint: Position; index: number };
 
-const GEOJSON_URL = "/manus-storage/brazil-states_dc614e06.geojson";
+const GEOJSON_URL = "/assets/brazil-states.geojson";
 const MAP_WIDTH = 520;
 const MAP_HEIGHT = 530;
 const PADDING = 24;

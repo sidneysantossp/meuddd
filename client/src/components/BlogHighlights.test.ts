@@ -6,10 +6,10 @@ describe("imagens dos destaques do Blog", () => {
     const images = featuredArticles.map(article => article.image);
 
     expect(images).toEqual([
-      "/manus-storage/blog-ddd-mapa-brasil_ab2cdf6e.png",
-      "/manus-storage/blog-consultar-ddd-cidade_5b64333e.png",
-      "/manus-storage/blog-ligacao-entre-estados_dcca6a6d.png",
+      "/assets/blog-ddd-mapa-brasil.jpg",
+      "/assets/blog-consultar-ddd-cidade.jpg",
+      "/assets/blog-ligacao-entre-estados.jpg",
     ]);
-    expect(images.join(" ")).not.toMatch(/57876089|0819cb9e|42079c98/);
+    expect(images.join(" ")).not.toMatch(/manus-storage/);
   });
 });

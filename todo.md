@@ -204,3 +204,14 @@
 - [x] Diagnosticar o erro 500 reportado pelo Search Console para `https://www.meuddd.com.br/manus-storage/meu-ddd-kit-de-marca-2026_a8693944.zip` (página de imprensa, kit de marca): o proxy `manus-storage` falha no ambiente de produção (500) para a chave antiga, embora o objeto no S3 ainda exista.
 - [x] Corrigir a entrega do ZIP do kit de marca: republicou-se o ativo como URL estática estável e atualizou-se a referência na página de imprensa, com regressão que bloqueia a chave antiga.
 - [x] Validar o download do kit: entrega final 200, pacote íntegro após redirecionamento, regressão automatizada da página de imprensa e tipagem aprovadas; resta a republicação do checkpoint para refletir a correção no domínio publicado.
+
+## Imagens do blog (produção)
+- [x] Diagnosticar imagens quebradas do blog na produção: o proxy manus-storage devolve 500 "Storage proxy not configured" em www.meuddd.com.br (credenciais ausentes no runtime da Vercel). Os ativos de conteúdo passaram a servir-se como ficheiros estáticos em /assets/.
+- [x] Gerar 12 ilustrações editoriais no padrão Atlas Vivo (quota diária do plano excedida para as restantes 7): o-que-e-ddd, como-descobrir-ddd-de-uma-cidade, como-ligar-para-outro-estado, como-ligar-de-celular-para-fixo, como-ligar-para-celular-em-outro-estado, codigo-de-operadora-csp, como-ligar-para-outro-pais-ddi, diferenca-entre-ddd-e-ddi, portabilidade-numerica, numeros-de-emergencia, numero-fixo-tem-quantos-digitos, numero-de-celular-tem-quantos-digitos.
+- [x] Publicar as ilustrações e demais ativos (blog, mark, geojson, kit) como URLs estáticas estáveis em /assets/ (comprimidas: jpg/webp, geojson 31 KB).
+- [x] Adicionar campo image/imageAlt ao catálogo editorial (editorialGuideImages, 19 guias cobertos com fallback) e renderizar hero na página do guia; incluir image no Article JSON-LD do SSR.
+- [x] Substituir as 3 imagens antigas dos cartões do blog por /assets/blog-*.jpg estáticas.
+- [x] Corrigir a imagem do NotFound (meu-ddd-mark.svg), o GeoJSON do mapa (brazil-states.geojson simplificado) e o kit de imprensa (/assets/kit-marca-meu-ddd.zip) para ativos estáticos.
+- [x] Adicionar regressões de teste bloqueando chaves manus-storage de ativos de conteúdo (BlogHighlights, InstitutionalPage, editorialGuides).
+- [x] Validar visualmente a home, /guias, /guia/o-que-e-ddd e /guia/numeros-de-emergencia; suíte com 82 testes e TypeScript aprovados.
+- [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica.

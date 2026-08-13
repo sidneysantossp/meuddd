@@ -26,11 +26,12 @@ describe("páginas institucionais", () => {
     expect(container.textContent).toContain("Kit de marca");
     expect(container.textContent).toContain("Em números");
     const kitHref = container.querySelector('a[download]')?.getAttribute("href") ?? "";
-    expect(kitHref).toContain("meu-ddd-kit-de-marca-2026");
-    // O proxy manus-storage com chave antiga devolvia HTTP 500 no domínio publicado;
-    // a entrega deve usar apenas ativos republicados com chaves estáveis.
+    expect(kitHref).toContain("/assets/kit-marca-meu-ddd.zip");
+    // O proxy manus-storage devolvia HTTP 500 no domínio publicado;
+    // a entrega deve usar apenas ativos estáticos servidos pelo próprio site.
     expect(kitHref).not.toContain("a8693944");
-    expect(kitHref).not.toMatch(/manus-storage\/(blog-consultar-ddd-cidade_0819cb9e|blog-ddd-mapa-brasil_57876089|blog-ligacao-entre-estados_42079c98|meu-ddd-kit-de-marca-2026_a8693944)/);
+    expect(kitHref).not.toContain("ee73e833");
+    expect(kitHref).not.toMatch(/manus-storage/);
   });
 
   it("valida os campos obrigatórios do formulário de contacto", () => {

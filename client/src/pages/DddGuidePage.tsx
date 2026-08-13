@@ -23,9 +23,12 @@ export default function DddGuidePage() {
             <p className="mt-6 max-w-md text-base leading-7 text-[#5d756c]">{guide.description}</p>
             <Link href="/#buscar" className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Pesquisar um DDD <ArrowUpRight size={16} /></Link>
           </div>
-          <div className="relative overflow-hidden rounded-[1.75rem] bg-[#143d36] p-7 text-[#faf3e5] sm:p-10">
-            <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(#f5c5a1_1px,transparent_1px)] [background-size:18px_18px]" />
-            <div className="relative"><div className="grid size-12 place-items-center rounded-full bg-[#f06a4d]"><PhoneCall size={22} /></div><p className="mt-10 font-display text-3xl leading-tight sm:text-4xl">{guide.summary}</p><p className="mt-5 max-w-xl text-sm leading-6 text-[#c8dbd2]">Cada guia combina explicação prática, referências oficiais e atalhos para o atlas territorial de DDDs.</p></div>
+          <div className="relative overflow-hidden rounded-[1.75rem] lg:col-span-2">
+            <img src={guide.image} alt={guide.imageAlt} className="h-64 w-full object-cover sm:h-80 lg:h-96" width={1280} height={720} loading="eager" />
+            <div className="relative bg-[#143d36] p-7 text-[#faf3e5] sm:p-10">
+              <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(#f5c5a1_1px,transparent_1px)] [background-size:18px_18px]" />
+              <div className="relative"><div className="grid size-12 place-items-center rounded-full bg-[#f06a4d]"><PhoneCall size={22} /></div><p className="mt-6 font-display text-2xl leading-tight sm:text-3xl">{guide.summary}</p><p className="mt-4 max-w-xl text-sm leading-6 text-[#c8dbd2]">Cada guia combina explicação prática, referências oficiais e atalhos para o atlas territorial de DDDs.</p></div>
+            </div>
           </div>
         </div>
 
