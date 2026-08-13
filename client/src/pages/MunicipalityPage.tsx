@@ -15,14 +15,47 @@ import { buildMunicipalityFaq } from "@shared/territorialFaq";
 
 const formatPopulation = (value: number | null) => value ? new Intl.NumberFormat("pt-BR").format(value) : "Dado não disponível";
 
+// Subcomponente com ordem de hooks estável: a query dos tabs editoriais é
+// sempre chamada (nunca dentro de IIFE nem depois de early returns), e o
+// initialData mantém a identidade com o seed SSR para hidratação correta.
+function MunicipalityTabsSection({ municipality, state, slug, queryClient }: {
+  municipality: { name: string; ibgeCode: number };
+  state: { uf: string; name: string };
+  slug: string;
+  queryClient: ReturnType<typeof useQueryClient>;
+}) {
+  const tabsKey = getMunicipalityTabsKey(state.uf, slug);
+  const tabsQuery = trpc.localityTabs.byMunicipality.useQuery(
+    { uf: state.uf, slug },
+    {
+      enabled: Boolean(slug),
+      // Dados iniciais do SSR: o prefetch semeia as tabs da UF no queryClient
+      // (chave ["localityTabs", uf]), garantindo que o primeiro render do
+      // client é idêntico ao HTML hidratado e sem mismatch de hidratação.
+      initialData: () => {
+        const catalog = queryClient.getQueryData<LocalityTabsCatalog>(["localityTabs", state.uf.toLowerCase()]);
+        const tabs = catalog?.[tabsKey] ?? getMunicipalityTabsSync(state.uf, slug);
+        return tabs ? { tabs } : undefined;
+      },
+    },
+  );
+  const tabs = tabsQuery.data?.tabs;
+  if (tabs) return <MunicipalityTabs city={municipality.name} stateName={state.name} uf={state.uf} tabs={tabs} />;
+  return <LocalityContext name={municipality.name} stateName={state.name} uf={state.uf} slug={slug} municipalityIbgeCode={municipality.ibgeCode} />;
+}
+
+// Nota crítica: TODOS os hooks (useQueryClient etc.) devem ser declarados antes
+// de qualquer early return. Hooks condicionais entre renders (primeiro render
+// loading → segundo render com hooks extras) causam o erro React #310
+// ("hooks can only be called inside a function component") em produção.
 export default function MunicipalityPage() {
   const [, params] = useRoute("/cidade/:uf/:slug");
   const [, setLocation] = useLocation();
   const uf = (params?.uf ?? "").toUpperCase();
   const slug = params?.slug ?? "";
+  const queryClient = useQueryClient();
   const detail = trpc.ddd.byMunicipality.useQuery({ uf, slug }, { enabled: /^[A-Z]{2}$/.test(uf) && Boolean(slug) });
   if (detail.isLoading) return <main className="page-shell grid min-h-screen place-items-center bg-[#faf3e5] text-[#143d36]"><p className="text-xs font-bold uppercase tracking-[0.2em]">A localizar município</p></main>;
-  const queryClient = useQueryClient();
   if (!detail.data) return <main className="page-shell grid min-h-screen place-items-center bg-[#faf3e5] px-6 text-center text-[#143d36]"><div><h1 className="font-display text-5xl">Município não encontrado</h1><Link href="/" className="mt-7 inline-flex rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Voltar ao atlas</Link></div></main>;
 
   const { municipality, state, ddd, relatedMunicipalities } = detail.data;
@@ -32,26 +65,7 @@ export default function MunicipalityPage() {
   return <main className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">
     <PublicNavbar endSlot={<ShareActions compact path={`/cidade/${uf.toLowerCase()}/${slug}`} title={`DDD de ${municipality.name}, ${state.name}`} />} />
     <section className="container py-14 lg:py-20"><div className="grid gap-10 lg:grid-cols-[1fr_0.9fr]"><div><div className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#f06a4d]">{state.region} / {state.name}</div><h1 className="mt-4 font-display text-6xl leading-[0.9] tracking-[-0.07em] sm:text-7xl">DDD de {municipality.name}</h1><p className="mt-6 max-w-xl text-base leading-7 text-[#5d756c]">{municipality.name} é um município de {state.name}. O código de área associado à localidade é o <strong className="text-[#143d36]">DDD {municipality.ddd}</strong>.</p><div className="mt-8 grid grid-cols-2 gap-3"><div className="rounded-2xl bg-[#e9deca] p-4"><Users size={17} className="text-[#f06a4d]" /><strong className="mt-4 block font-display text-3xl">{formatPopulation(municipality.populationEstimated)}</strong><span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#718378]">habitantes · IBGE {municipality.populationReferenceYear}</span></div><Link href={`/ddd/${municipality.ddd}`} className="rounded-2xl bg-[#143d36] p-4 text-[#faf3e5]"><Phone size={17} className="text-[#f5c5a1]" /><strong className="mt-4 block font-display text-3xl">{municipality.ddd}</strong><span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#b8cec4]">ver municípios do DDD</span></Link></div></div><a href={mapUrl} target="_blank" rel="noreferrer" className="group relative min-h-[320px] overflow-hidden rounded-[1.75rem] bg-[#143d36] p-7 text-[#faf3e5] shadow-[0_24px_55px_rgba(20,61,54,0.18)]"><div className="absolute inset-0 opacity-30 [background-image:radial-gradient(#f5c5a1_1px,transparent_1px)] [background-size:18px_18px]" /><div className="relative flex h-full flex-col justify-between"><div className="flex size-12 items-center justify-center rounded-full bg-[#f06a4d]"><MapPin size={22} /></div><div><div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f5c5a1]">Mapa da localidade</div><p className="mt-3 font-display text-4xl leading-none">Abrir {municipality.name}</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-bold">Ver no mapa <ArrowUpRight size={15} /></span></div></div></a></div></section>
-    {(() => {
-      const tabsKey = getMunicipalityTabsKey(state.uf, slug);
-      const tabsQuery = trpc.localityTabs.byMunicipality.useQuery(
-        { uf: state.uf, slug },
-        {
-          enabled: Boolean(slug),
-          // Dados iniciais do SSR: o prefetch semeia as tabs da UF no queryClient
-          // (chave ["localityTabs", uf]), garantindo que o primeiro render do
-          // client é idêntico ao HTML hidratado e sem mismatch de hidratação.
-          initialData: () => {
-            const catalog = queryClient.getQueryData<LocalityTabsCatalog>(["localityTabs", state.uf.toLowerCase()]);
-            const tabs = catalog?.[tabsKey] ?? getMunicipalityTabsSync(state.uf, slug);
-            return tabs ? { tabs } : undefined;
-          },
-        },
-      );
-      const tabs = tabsQuery.data?.tabs;
-      if (tabs) return <MunicipalityTabs city={municipality.name} stateName={state.name} uf={state.uf} tabs={tabs} />;
-      return <LocalityContext name={municipality.name} stateName={state.name} uf={state.uf} slug={slug} municipalityIbgeCode={municipality.ibgeCode} />;
-    })()}
+    <MunicipalityTabsSection municipality={municipality} state={state} slug={slug} queryClient={queryClient} />
     <section className="container py-2 lg:py-6"><TerritoryTrustPanel scope="cidade" populationYear={municipality.populationReferenceYear} /></section>
     <TerritoryQuickAnswer question={`Qual é o DDD de ${municipality.name}?`} answer={`O DDD de ${municipality.name}, em ${state.name}, é ${municipality.ddd}.`} context="A cobertura é organizada por área de numeração. Confirme o município e a UF antes de utilizar o código numa ligação." />
     <IntentCluster city={{ name: municipality.name, uf: state.uf, slug }} ddd={municipality.ddd} state={state} />
