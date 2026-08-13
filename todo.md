@@ -186,3 +186,5 @@
 - [x] Atualizar a marcação FAQPage e os testes de regressão das páginas territoriais para refletir os dez itens visíveis.
 - [x] Diagnosticar a indisponibilidade reportada para `/guia/como-descobrir-ddd-de-uma-cidade`: a rota respondeu HTTP 200, sem erro de consola ou servidor, e não exigiu alteração de encaminhamento.
 - [x] Adicionar regressão automatizada para a rota de guia canónica e validar a resposta SSR após a correção.
+- [x] Testar todos os 19 slugs de guias editoriais por URL direta, incluindo estado HTTP, título SSR e ausência de páginas não encontradas.
+- [x] Consolidar a auditoria de guias e acrescentar cobertura automática abrangente para prevenir regressões de rota.

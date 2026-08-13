@@ -1,6 +1,7 @@
 import { QueryClient } from "@tanstack/react-query";
 import { describe, expect, it, vi } from "vitest";
 import { prefetchForPath } from "../client/src/ssr/prefetch";
+import { editorialGuides } from "../shared/editorialGuides";
 
 describe("metadados SSR da marca Meu DDD", () => {
   it("expõe a nova marca no título e no Website Schema.org da página inicial", async () => {
@@ -85,6 +86,32 @@ describe("metadados SSR da marca Meu DDD", () => {
     expect(head.jsonLd).toEqual(expect.arrayContaining([
       expect.objectContaining({ "@type": "Article", headline: "Como descobrir o DDD de uma cidade brasileira" }),
     ]));
+  });
+
+  it("resolve todos os slugs editoriais por rota direta com metadados SSR", async () => {
+    const prefetch = {
+      states: async () => [],
+      search: async () => [],
+      byCode: async () => null,
+      byState: async () => null,
+      byMunicipality: async () => null,
+      capitals: async () => [],
+    };
+    const heads = await Promise.all(editorialGuides.map(guide => prefetchForPath(`/guia/${guide.slug}`, new QueryClient(), prefetch)));
+
+    expect(heads).toHaveLength(editorialGuides.length);
+    heads.forEach((head, index) => {
+      const guide = editorialGuides[index];
+      expect(head).toMatchObject({
+        title: `${guide.title} | Meu DDD`,
+        canonicalPath: `/guia/${guide.slug}`,
+        ogType: "article",
+      });
+      expect(head.notFound).not.toBe(true);
+      expect(head.jsonLd).toEqual(expect.arrayContaining([
+        expect.objectContaining({ "@type": "Article", headline: guide.title }),
+      ]));
+    });
   });
 
   it("inclui o FAQPage de dez perguntas dinâmicas nas rotas de estado e município", async () => {
