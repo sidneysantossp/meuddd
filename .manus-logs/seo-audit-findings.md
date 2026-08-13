@@ -116,3 +116,13 @@ Descobertas-chave para implementação:
 - Padrão existente: shared/territorialFaq.ts tem `buildStateFaq`, `buildMunicipalityFaq` (TerritorialFaq = {question, answer}). Usar função nova `buildDddFaq` em shared/territorialFaq.ts.
 - Onde renderizar: client/src/pages/DddDetail.tsx (página /ddd/:code). Verificar como MunicipalityPage renderiza FAQ (componente details) e injetar FAQPage JSON-LD (prefetch.ts já injeta jsonLd para /ddd — adicionar FAQPage aí com as mesmas perguntas).
 - Validação: curl SSR /ddd/11 deve conter FAQPage JSON-LD; pnpm test; commit GitHub (remote "github" → sidneysantossp/meuddd, main); checkpoint final.
+
+## Trabalho em curso (13/08 ~22:35): Acordeão FAQ
+Pedido: comportamento de acordeão (collapsible) na secção FAQ. Escopo definido por mim: aplicar em /ddd, /estado e /cidade (consistência).
+
+FEITO:
+- client/src/components/FaqSection.tsx criado: componente acordeão acessível (button + aria-expanded + aria-controls + AnimatePresence/framer-motion, ease [0.23,1,0.32,1], 220ms; chevron rotaciona 180deg). Nota: sem details/summary (framer-motion) — conteúdo HTML visível permanece no SSR pois o componente renderiza as perguntas sempre (respostas em bloco com height 0 quando fechadas) — OK para SEO/FAQPage.
+- Dependência: framer-motion JÁ instalada (animatePresence usado? verificar pnpm list; se não, pnpm add framer-motion + restart server).
+- Pendente: substituir os blocos details nas páginas DddDetail.tsx (linha ~207: section "Perguntas frequentes"), verificar /estado (StateDetail ou similar — procurar onde renderiza faqs do buildStateFaq), e MunicipalityPage.tsx (linha 74: section "Sobre o DDD de {municipality.name}" com details). Depois: testes (86 verdes, deve manter), tsc, screenshot, commit GitHub, checkpoint.
+- Validação FAQ DDD já feita antes: FAQPage JSON-LD em /ddd/11 com 10 perguntas (commit f482ad5, checkpoint b707d92f).
+- Estado git: remote "github" → sidneysantossp/meuddd, main; author "Sidney Santos".
