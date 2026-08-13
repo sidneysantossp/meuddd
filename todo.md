@@ -277,3 +277,6 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Pedido 2026-08-13 (noite)
 - [x] Secção FAQ com marcação JSON-LD (FAQPage) nas páginas de DDD: buildDddFaq com 10 perguntas em shared/territorialFaq.ts, conteúdo visível em DddDetail.tsx alinhado com o JSON-LD do SSR (prefetch.ts), FAQPage validado via curl em /ddd/11 e 86 testes verdes
+
+## Pedido 2026-08-13 (noite)
+- [x] Acordeão (collapsible) na secção de FAQ com animação suave e acessibilidade, aplicado em /ddd, /estado e /cidade (FaqSection com framer-motion, aria-expanded, temas claro/escuro; SSR mantém as perguntas visíveis e o FAQPage JSON-LD)

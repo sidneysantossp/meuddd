@@ -8,6 +8,7 @@ import { IntentCluster } from "@/components/IntentCluster";
 import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
 import { officialTerritorialSources } from "@shared/territorialSeo";
 import { buildDddFaq } from "@shared/territorialFaq";
+import { FaqSection } from "@/components/FaqSection";
 
 export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string; title: string; summary: string; curiosity: string }> = {
   "63": {
@@ -170,11 +171,11 @@ export default function DddDetail() {
 
   const { municipalities, states } = data;
   const priorityEditorial = PRIORITY_DDD_EDITORIAL[data.code];
-  const faqs = [
-    ...(priorityEditorial ? [[priorityEditorial.title, priorityEditorial.summary] as [string, string]] : []),
-    [`Quais cidades usam o DDD ${data.code}?`, `O DDD ${data.code} abrange ${data.cityCount} municípios apresentados na lista desta página.`],
-    [`Como ligar para um número com DDD ${data.code}?`, `Em ligações interurbanas, informe o código da operadora, o DDD ${data.code} e o número de telefone.`],
-  ];
+  // Secção de perguntas frequentes do DDD: 10 perguntas com marcação FAQPage
+  // JSON-LD no SSR (prefetch) — o conteúdo visível usa exatamente as mesmas
+  // perguntas e respostas do FAQPage para evitar discrepância Google/HTML.
+  // O FaqSection apresenta as perguntas num acordeão suave e acessível.
+  const faqs = buildDddFaq({ dddCode: data.code, cityCount: data.cityCount, stateNames: states.map(state => state.name) });
 
   return <main className="page-shell min-h-screen bg-[#faf3e5] text-[#143d36]">
     <PublicNavbar endSlot={<ShareActions compact path={`/ddd/${code}`} title={`DDD ${data.code}: cidades e estados abrangidos`} />} />
@@ -205,6 +206,6 @@ export default function DddDetail() {
         </div>
       </div>
     </section> : null}
-    <section className="border-t border-[#ded4c3] bg-[#fffaf1]"><div className="container grid gap-8 py-14 lg:grid-cols-[0.75fr_1.25fr]"><div><div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Perguntas frequentes</div><h2 className="mt-3 font-display text-4xl tracking-[-0.05em]">Sobre o DDD {data.code}</h2><p className="mt-4 text-sm leading-6 text-[#6b8177]">Respostas diretas sobre a cobertura e o uso do código de área.</p></div><div className="grid gap-3">{faqs.map(([question, answer]) => <details key={question} className="rounded-xl border border-[#ded4c3] bg-[#faf3e5] px-5 py-4"><summary className="cursor-pointer text-sm font-bold">{question}</summary><p className="mt-3 text-sm leading-6 text-[#5d756c]">{answer}</p></details>)}</div></div></section>
+    <FaqSection id={`faq-ddd-${data.code}`} heading="Perguntas frequentes" subheading={`Sobre o DDD ${data.code}`} faqs={faqs} />
   </main>;
 }
