@@ -215,3 +215,10 @@
 - [x] Adicionar regressões de teste bloqueando chaves manus-storage de ativos de conteúdo (BlogHighlights, InstitutionalPage, editorialGuides).
 - [x] Validar visualmente a home, /guias, /guia/o-que-e-ddd e /guia/numeros-de-emergencia; suíte com 82 testes e TypeScript aprovados.
 - [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica.
+
+## Google Analytics, llms.txt e proporção texto/HTML
+- [ ] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas, sem duplicar tags.
+- [ ] Criar /llms.txt na raiz do site para eliminar o aviso "llms.txt não encontrado" do Search Console.
+- [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
+- [ ] Otimizar a proporção texto/HTML das páginas prioritárias (reduzir código inline, expandir conteúdo textual, minificar HTML quando aplicável).
+- [ ] Validar com testes, screenshots e guardar checkpoint.

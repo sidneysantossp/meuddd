@@ -1,0 +1,21 @@
+# Meu DDD
+> Plataforma brasileira para consultar códigos DDD por cidade, estado e região, com base territorial completa cobrindo os 27 estados e 5.570 municípios do Brasil.
+
+- /: Página inicial — busca de DDD por cidade, estado ou código, com mapa interativo e geolocalização.
+- /ddd/63: DDD 63 (Tocantins) — municípios, cobertura e contexto de telefonia.
+- /ddd/96: DDD 96 (Amapá) — municípios, cobertura e contexto de telefonia.
+- /ddd/11: DDD 11 (São Paulo capital e região) — municípios, cobertura e contexto de telefonia.
+- /estado/sp: Pilar do estado de São Paulo — todos os DDDs e municípios do estado.
+- /cidade/sp/sao-paulo: Página do município de São Paulo — DDD, dados IBGE, contexto local verificável e FAQ.
+- /guia/o-que-e-ddd: Guia editorial — o que é um DDD e como funciona a numeração nacional.
+- /guia/como-descobrir-ddd-de-uma-cidade: Guia editorial — como descobrir o DDD de uma cidade.
+- /guia/como-ligar-para-outro-estado: Guia editorial — como ligar para outro estado.
+- /guia/numeros-de-emergencia: Guia editorial — números de emergência e utilidade pública no Brasil.
+- /guia/portabilidade-numerica: Guia editorial — portabilidade numérica entre operadoras.
+- /guia/diferenca-entre-ddd-e-ddi: Guia editorial — diferença entre DDD e DDI.
+- /gerador: Ferramenta de geração simulada de números de telefone para testes (sem vínculo com números reais).
+- /mapa: Mapa interativo dos estados do Brasil com navegação por DDD.
+- /blog: Índice de artigos editoriais sobre telefonia.
+- /imprensa: Página de imprensa com kit de marca e estatísticas.
+- /contato: Formulário de contato da plataforma.
+- /sugestoes: Painel de sugestões de alteração das páginas locais.
