@@ -191,3 +191,6 @@
 - [x] Adicionar localização voluntária com consentimento explícito para sugerir automaticamente a UF e os DDDs territoriais no filtro inicial.
 - [x] Fazer com que os badges de siglas estaduais executem a pesquisa e apresentem resultados imediatamente ao serem selecionados.
 - [x] Cobrir geolocalização, consentimento, falhas de permissão e seleção direta de UF com testes automatizados e validação visual.
+- [x] Exibir uma animação de carregamento acessível enquanto a geolocalização é obtida e resolvida.
+- [x] Adicionar um botão para limpar a sugestão territorial e reiniciar a pesquisa manual.
+- [x] Cobrir o carregamento e a limpeza da sugestão com testes automatizados e validação visual.

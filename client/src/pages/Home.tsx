@@ -73,6 +73,7 @@ export default function Home() {
   const trackedSearches = useRef(new Set<string>());
   const stateOptions = states.data ?? [];
   const results = search.data ?? [];
+  const isLocating = locationStatus === "requesting" || locationStatus === "resolving";
   const groupedResults = useMemo(
     () => regionOrder.map(region => ({ region, items: results.filter(item => item.states[0]?.region === region) })).filter(group => group.items.length),
     [results],
@@ -99,6 +100,12 @@ export default function Home() {
     if (/^\d{2}$/.test(value)) setRecent(current => [value, ...current.filter(code => code !== value)].slice(0, 3));
   };
   const clearFilters = () => { setQuery(""); setStateFilter(""); };
+  const clearLocationSuggestion = () => {
+    clearFilters();
+    setLocationStatus("idle");
+    setLocationLabel("");
+    toast.message("Sugestão de localização removida. Faça uma nova pesquisa.");
+  };
   const revealResults = () => window.requestAnimationFrame(() => document.getElementById("resultados")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   const selectState = (uf: string) => {
     const selection = stateSelection(uf);
@@ -183,7 +190,8 @@ export default function Home() {
               <button type="button" onClick={submitSearch} className="pressable flex min-h-[70px] items-center justify-center gap-2 rounded-xl bg-[#f06a4d] px-7 text-sm font-bold text-white hover:bg-[#dd593e]">Encontrar DDD <ArrowDownRight size={18} /></button>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-xs text-[#b8cec4]"><span className="mr-1 font-semibold text-[#76998c]">Sugestões rápidas</span>{featuredCodes.map(code => <button key={code} type="button" onClick={() => updateQuery(code)} className="pressable rounded-full border border-[#4d7268] px-3 py-1.5 font-bold text-[#f8f0df] hover:border-[#f06a4d] hover:bg-[#f06a4d]">{code}</button>)}<span className="ml-1 text-[#9bb7ab]">Aceita acentos e grafias aproximadas, como “Sao Paolo”.</span></div>
-            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center"><button type="button" onClick={requestLocation} disabled={locationStatus === "requesting" || locationStatus === "resolving"} aria-describedby="privacidade-localizacao" className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#5c8074] bg-[#19483f] px-4 py-2 text-xs font-bold text-[#f8f0df] hover:border-[#f5c5a1] hover:bg-[#21564b] disabled:cursor-wait disabled:opacity-70"><span className="grid size-5 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36]">{locationStatus === "requesting" || locationStatus === "resolving" ? <LoaderCircle size={13} className="animate-spin" /> : <LocateFixed size={13} />}</span>{locationStatus === "requesting" ? "A aguardar permissão…" : locationStatus === "resolving" ? "A localizar território…" : "Usar a minha localização"}</button><p id="privacidade-localizacao" className="max-w-xl text-[11px] leading-5 text-[#9bb7ab]">A localização só é consultada após a sua ação para sugerir cidade, UF e DDD. As coordenadas não são guardadas.</p></div>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center"><button type="button" onClick={requestLocation} disabled={isLocating} aria-describedby="privacidade-localizacao" className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#5c8074] bg-[#19483f] px-4 py-2 text-xs font-bold text-[#f8f0df] hover:border-[#f5c5a1] hover:bg-[#21564b] disabled:cursor-wait disabled:opacity-80"><span className={`relative grid size-6 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36] ${isLocating ? "location-target" : ""}`}>{isLocating ? <LoaderCircle size={14} className="animate-spin" aria-hidden="true" /> : <LocateFixed size={14} aria-hidden="true" />}</span>{locationStatus === "requesting" ? "A aguardar permissão…" : locationStatus === "resolving" ? "A localizar território…" : "Usar a minha localização"}</button>{locationStatus === "resolved" && <button type="button" onClick={clearLocationSuggestion} className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#799a8d] px-4 py-2 text-xs font-bold text-[#d6e5de] hover:border-[#f5c5a1] hover:bg-[#21564b] hover:text-[#fffaf1]"><X size={14} aria-hidden="true" /> Limpar sugestão</button>}<p id="privacidade-localizacao" className="max-w-xl text-[11px] leading-5 text-[#9bb7ab]">A localização só é consultada após a sua ação para sugerir cidade, UF e DDD. As coordenadas não são guardadas.</p></div>
+            {isLocating && <div role="status" aria-live="polite" className="location-progress mt-3 flex max-w-xl items-center gap-3 rounded-xl border border-[#41695e] bg-[#19483f] px-4 py-3 text-xs text-[#d6e5de]"><span className="location-progress-bars" aria-hidden="true"><i /><i /><i /></span><span><strong className="block text-[#fffaf1]">{locationStatus === "requesting" ? "A solicitar acesso à localização" : "A identificar o território mais próximo"}</strong><span className="mt-0.5 block text-[#abc5ba]">A pesquisa será atualizada assim que o DDD for sugerido.</span></span></div>}
             {locationLabel && <p aria-live="polite" className={`mt-3 text-xs font-semibold ${locationStatus === "resolved" ? "text-[#f5c5a1]" : "text-[#ffb3a3]"}`}>{locationLabel}</p>}
           </div>
         </section>
