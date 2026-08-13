@@ -217,11 +217,11 @@
 - [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica.
 
 ## Google Analytics, llms.txt e proporção texto/HTML
-- [ ] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas, sem duplicar tags.
-- [ ] Criar /llms.txt na raiz do site para eliminar o aviso "llms.txt não encontrado" do Search Console.
+- [x] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas (feito 12/08 — checkpoint 3850c50).
+- [x] Criar /llms.txt na raiz do site (feito 12/08 — checkpoint 3850c50).
 - [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
 - [ ] Otimizar a proporção texto/HTML das páginas prioritárias (reduzir código inline, expandir conteúdo textual, minificar HTML quando aplicável).
-- [ ] Validar com testes, screenshots e guardar checkpoint.
+- [x] Validar com testes, screenshots e guardar checkpoint (86 testes verdes, checkpoints 17a77f93 e 615e1aae; geração em massa segue agendada).
 
 ## Fase atual — Tabs editoriais em massa (reconstrução pós-reset do sandbox 2026-08-13)
 - [x] shared/localityTabs/types.ts — tipo MunicipalityTabs e LocalityTabsCatalog
