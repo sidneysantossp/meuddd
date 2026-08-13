@@ -65,6 +65,28 @@ describe("metadados SSR da marca Meu DDD", () => {
     });
   });
 
+  it("resolve o guia canónico de como descobrir o DDD de uma cidade por SSR", async () => {
+    const path = "/guia/como-descobrir-ddd-de-uma-cidade";
+    const head = await prefetchForPath(path, new QueryClient(), {
+      states: async () => [],
+      search: async () => [],
+      byCode: async () => null,
+      byState: async () => null,
+      byMunicipality: async () => null,
+      capitals: async () => [],
+    });
+
+    expect(head).toMatchObject({
+      title: "Como descobrir o DDD de uma cidade brasileira | Meu DDD",
+      canonicalPath: path,
+      ogType: "article",
+    });
+    expect(head.notFound).not.toBe(true);
+    expect(head.jsonLd).toEqual(expect.arrayContaining([
+      expect.objectContaining({ "@type": "Article", headline: "Como descobrir o DDD de uma cidade brasileira" }),
+    ]));
+  });
+
   it("inclui o FAQPage de dez perguntas dinâmicas nas rotas de estado e município", async () => {
     const stateHead = await prefetchForPath("/estado/sp", new QueryClient(), {
       states: async () => [],

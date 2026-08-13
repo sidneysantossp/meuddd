@@ -184,3 +184,5 @@
 - [x] Permitir abrir e fechar facilmente por toque os tooltips dos marcadores pulsantes do mapa em dispositivos móveis.
 - [x] Expandir para dez perguntas e respostas dinâmicas, orientadas ao padrão PAA, em todas as páginas de estados e municípios.
 - [x] Atualizar a marcação FAQPage e os testes de regressão das páginas territoriais para refletir os dez itens visíveis.
+- [x] Diagnosticar a indisponibilidade reportada para `/guia/como-descobrir-ddd-de-uma-cidade`: a rota respondeu HTTP 200, sem erro de consola ou servidor, e não exigiu alteração de encaminhamento.
+- [x] Adicionar regressão automatizada para a rota de guia canónica e validar a resposta SSR após a correção.
