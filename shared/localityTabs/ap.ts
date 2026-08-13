@@ -1,6 +1,4 @@
 /* Conteúdo editorial em tabs dos municípios de AP. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
 import type { LocalityTabsCatalog } from "./types";
 
-const catalog: LocalityTabsCatalog = {};
-
-export default catalog;
+export const catalog: LocalityTabsCatalog = {};

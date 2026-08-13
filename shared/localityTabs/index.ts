@@ -3,41 +3,67 @@
    quando a respetiva página de município pede o conteúdo). */
 import type { LocalityTabsCatalog, MunicipalityTabs } from "./types";
 
+import { catalog as AC } from "./ac";
+import { catalog as AL } from "./al";
+import { catalog as AM } from "./am";
+import { catalog as AP } from "./ap";
+import { catalog as BA } from "./ba";
+import { catalog as CE } from "./ce";
+import { catalog as DF } from "./df";
+import { catalog as ES } from "./es";
+import { catalog as GO } from "./go";
+import { catalog as MA } from "./ma";
+import { catalog as MG } from "./mg";
+import { catalog as MS } from "./ms";
+import { catalog as MT } from "./mt";
+import { catalog as PA } from "./pa";
+import { catalog as PB } from "./pb";
+import { catalog as PE } from "./pe";
+import { catalog as PI } from "./pi";
+import { catalog as PR } from "./pr";
+import { catalog as RJ } from "./rj";
+import { catalog as RN } from "./rn";
+import { catalog as RO } from "./ro";
+import { catalog as RR } from "./rr";
+import { catalog as RS } from "./rs";
+import { catalog as SC } from "./sc";
+import { catalog as SE } from "./se";
+import { catalog as SP } from "./sp";
+import { catalog as TO } from "./to";
 const loaders: Record<string, () => Promise<LocalityTabsCatalog>> = {
-  ac: () => import("./ac").then(m => m.default),
-  al: () => import("./al").then(m => m.default),
-  ap: () => import("./ap").then(m => m.default),
-  am: () => import("./am").then(m => m.default),
-  ba: () => import("./ba").then(m => m.default),
-  ce: () => import("./ce").then(m => m.default),
-  df: () => import("./df").then(m => m.default),
-  es: () => import("./es").then(m => m.default),
-  go: () => import("./go").then(m => m.default),
-  ma: () => import("./ma").then(m => m.default),
-  mt: () => import("./mt").then(m => m.default),
-  ms: () => import("./ms").then(m => m.default),
-  mg: () => import("./mg").then(m => m.default),
-  pa: () => import("./pa").then(m => m.default),
-  pb: () => import("./pb").then(m => m.default),
-  pr: () => import("./pr").then(m => m.default),
-  pe: () => import("./pe").then(m => m.default),
-  pi: () => import("./pi").then(m => m.default),
-  rj: () => import("./rj").then(m => m.default),
-  rn: () => import("./rn").then(m => m.default),
-  rs: () => import("./rs").then(m => m.default),
-  ro: () => import("./ro").then(m => m.default),
-  rr: () => import("./rr").then(m => m.default),
-  sc: () => import("./sc").then(m => m.default),
-  sp: () => import("./sp").then(m => m.default),
-  se: () => import("./se").then(m => m.default),
-  to: () => import("./to").then(m => m.default),
+  ac: () => Promise.resolve(AC),
+  al: () => Promise.resolve(AL),
+  am: () => Promise.resolve(AM),
+  ap: () => Promise.resolve(AP),
+  ba: () => Promise.resolve(BA),
+  ce: () => Promise.resolve(CE),
+  df: () => Promise.resolve(DF),
+  es: () => Promise.resolve(ES),
+  go: () => Promise.resolve(GO),
+  ma: () => Promise.resolve(MA),
+  mg: () => Promise.resolve(MG),
+  ms: () => Promise.resolve(MS),
+  mt: () => Promise.resolve(MT),
+  pa: () => Promise.resolve(PA),
+  pb: () => Promise.resolve(PB),
+  pe: () => Promise.resolve(PE),
+  pi: () => Promise.resolve(PI),
+  pr: () => Promise.resolve(PR),
+  rj: () => Promise.resolve(RJ),
+  rn: () => Promise.resolve(RN),
+  ro: () => Promise.resolve(RO),
+  rr: () => Promise.resolve(RR),
+  rs: () => Promise.resolve(RS),
+  sc: () => Promise.resolve(SC),
+  se: () => Promise.resolve(SE),
+  sp: () => Promise.resolve(SP),
+  to: () => Promise.resolve(TO),
 };
-
 const cache = new Map<string, LocalityTabsCatalog>();
 
 /** Obter as tabs editoriais de um município (SSR-safe; síncrono quando já em cache). */
 export function getMunicipalityTabsSync(uf: string, slug: string): MunicipalityTabs | undefined {
-  const key = `${uf.toLowerCase()}:${slug.toLowerCase()}`;
+  const key = slug.toLowerCase();
   const catalog = cache.get(uf.toLowerCase());
   return catalog?.[key];
 }

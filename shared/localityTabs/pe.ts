@@ -1,6 +1,145 @@
-/* Conteúdo editorial em tabs dos municípios de PE. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
-import type { LocalityTabsCatalog } from "./types";
-
-const catalog: LocalityTabsCatalog = {};
-
-export default catalog;
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "olinda": {
+    "climate": {
+      "body": "Olinda está situada no litoral de Pernambuco, na região Nordeste do Brasil, e apresenta clima tropical úmido típico do litoral nordestino. A temperatura média anual fica em torno de 25,5 a 26,5 °C, com variações sazonais moderadas ao longo do ano. A precipitação anual costuma situar-se em torno de 1.100 a 1.120 mm, distribuída ao longo do ano, com maior volume em períodos úmidos e menor nos meses considerados mais secos. Segundo dados de fontes climáticas para Olinda/PE, o mês mais seco costuma ser novembro. Tais características favorecem atividades ao ar livre durante grande parte do ano, incluindo visitas ao Centro Histórico, caminhadas pelas ladeiras e passeios costeiros, com variações ocasionais de chuva conforme o regime pluviométrico anual. A região litorânea nordestina, em termos de clima, costuma ser descrita como tropical úmido, com chuvas distribuídas ao longo do ano.",
+      "details": [
+        {
+          "label": "Classificação Köppen (regional)",
+          "value": "O litoral nordestino é frequentemente descrito como tropical úmido (As) em descrições regionais; em Olinda/Recife, dados de fontes climáticas divergem entre Aw (tropical úmido) e Am/As em diferentes bases de dados. Para Olinda, fontes como Climate-Data.org indicam Aw, enquanto textos de referência diferentes apontam Am. Referência: fontes climáticas. ",
+        },
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 25,7 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "aprox. 1.120 mm",
+        },
+        {
+          "label": "Mês mais seco",
+          "value": "novembro",
+        },
+      ],
+      "intro": "Clima típico de Olinda/PE, com temperaturas elevadas e chuvas distribuídas ao longo do ano, compondo o cenário climático da região litorânea do Nordeste.",
+    },
+    "dining": {
+      "closing": "A gastronomia local enfatiza ingredientes e preparos regionais, com relevância para visitas culturais e eventos locais.",
+      "intro": "A alimentação na região de Olinda faz parte da herança cultural de Pernambuco, com destaque para pratos que refletem a tradição nordestina, bem como doces típicos associados à informalidade das feiras e ao patrimônio imaterial local. Pratos comuns costumam valorizar a carne de sol, o uso de mandioca (macaxeira) e o aproveitamento de frutos tropicais. Além disso, há reconhecimentos regionais como o bolo de rolo, originalmente pernambucano, que figura entre os símbolos da gastronomia local e estadual.",
+      "items": [
+        {
+          "description": "Bolo de rolo",
+          "kind": "Patrimônio cultural imaterial de Pernambuco",
+          "name": "Bolo de rolo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bolo%20de%20rolo%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Pratos nordestinos com carne de sol e mandioca (macaxeira) em preparos como carne de sol com macaxeira",
+          "kind": "Prato típico regional",
+          "name": "Carne de sol com macaxeira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Carne%20de%20sol%20com%20macaxeira%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Doces regionais, queijos coalhos e outras iguarias de feira podem aparecer em pontos de venda públicos ou feiras locais; a elevação do bolo de rolo como patrimônio cultural é citada pela legislação estadual.",
+          "kind": "Gastronomia regional",
+          "name": "Bolos e doces regionais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bolos%20e%20doces%20regionais%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Feiras de artesanato e produtos locais em pontos como o Mercado da Ribeira costumam oferecer itens artesanais pernambucanos",
+          "kind": "Mercado/Feira",
+          "name": "Mercado da Ribeira (Olinda)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20da%20Ribeira%20(Olinda)%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "A cidade também celebra festivais como a Fenearte, feira de artesanato realizada no Centro de Convenções de Olinda, que agrega artesanato, culinária e cultura.",
+          "kind": "Evento cultural",
+          "name": "Fenearte – Feira Nacional de Negócios do Artesanato",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Fenearte%20%E2%80%93%20Feira%20Nacional%20de%20Neg%C3%B3cios%20do%20Artesanato%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Bonecos gigantes e tradição carnavalesca de Olinda (frevo, maracatu) como elementos integrantes da memória cultural da cidade",
+          "kind": "Tradição cultural",
+          "name": "Carnaval de Olinda e bonecos gigantes",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Carnaval%20de%20Olinda%20e%20bonecos%20gigantes%2C%20Olinda%2C%20PE",
+        },
+      ],
+    },
+    "tourism": {
+      "closing": "Planeje visitas com base no calendário cultural e nas informações oficiais da prefeitura, e utilize os circuitos de transporte público para deslocamento entre o Sítio Histórico e áreas periféricas.",
+      "intro": "Olinda, reconhecida como Patrimônio Mundial pela UNESCO, é uma cidade histórica com um conjunto arquitetônico preservado, ladeiras de paralelepípedos, igrejas barrocas e vistas para o litoral. O turismo local está fortemente relacionado ao Sítio Histórico (Cidade Alta), aos eventos culturais como o Carnaval de Olinda e à vasta expressividade artesanal da região. Além disso, polo de artesanato, música e tradições, Olinda oferece uma série de atrativos públicos e culturais que refletem a herança colonial, a religiosidade e a religiosidade popular do estado de Pernambuco. Eventos como Fenearte destacam a importância da produção artesanal local e atraem visitantes de várias partes do país. É comum combinar passeios a pé pelo centro histórico com visitas a mirantes e pontos de observação da cidade. ",
+      "items": [
+        {
+          "description": "Centro Histórico de Olinda (Cidade Alta) abriga igrejas, casarões coloniais e mirantes com vistas para Recife. Foi reconhecido pela UNESCO em 1982 como Patrimônio Mundial, preservando a malha urbana histórica e a arquitetura barroca.",
+          "name": "Centro Histórico de Olinda (Cidade Alta)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20Hist%C3%B3rico%20de%20Olinda%20(Cidade%20Alta)%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Convento e Igreja de Nossa Senhora do Carmo e Igreja de São Francisco (Convento de São Francisco, Sítio Histórico) compõem um conjunto de patrimônio religioso com relevância histórica. O Convento de São Francisco é o mais antigo conjunto franciscano do Brasil, com ligação à Igreja de Nossa Senhora das Neves.",
+          "name": "Convento de São Francisco / Igreja de Nossa Senhora do Carmo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Convento%20de%20S%C3%A3o%20Francisco%20%2F%20Igreja%20de%20Nossa%20Senhora%20do%20Carmo%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Elevador Panorâmico do Alto da Sé oferece acesso a um mirante com visão de 360 graus do Sítio Histórico e da cidade de Recife. O equipamento está instalado na Caixa D’Água do Alto da Sé.",
+          "name": "Elevador Panorâmico do Alto da Sé",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Elevador%20Panor%C3%A2mico%20do%20Alto%20da%20S%C3%A9%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Mercado da Ribeira é um espaço histórico que hoje funciona como centro de artesanato, com lojas de artisanal regional e opções de alimentação, integrando o circuito turístico do Sítio Histórico.",
+          "name": "Mercado da Ribeira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20da%20Ribeira%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Fenearte – Feira Nacional de Negócios do Artesanato, realizada no Centro de Convenções de Pernambuco, em Olinda, é a maior feira de artesanato da América Latina e reúne milhares de artesãos, oficinas e programação cultural ao longo do evento.",
+          "name": "Fenearte",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Fenearte%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Bonecos Gigantes de Olinda, parte fundamental do Carnaval de Olinda (frevo, maracatu) e de encontros públicos; a prática envolve desfiles com figuras gigantes e é amplamente coberta pela mídia local e nacional.",
+          "name": "Bonecos Gigantes de Olinda",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bonecos%20Gigantes%20de%20Olinda%2C%20Olinda%2C%20PE",
+        },
+      ],
+    },
+    "transport": {
+      "closing": "Para deslocamentos entre Olinda e Recife, utilize o sistema de ônibus integrado e, quando possível, o Metrô do Recife para conexões; planeje com antecedência especialmente durante eventos culturais.",
+      "intro": "Olinda é parte da Região Metropolitana do Recife e utiliza a rede de transporte público da região para mobilidade urbana. O acesso a Olinda costuma ocorrer por meio do aeroporto de Recife, bem como por ônibus da Grande Recife e, em alguns casos, por terminais integrados que conectam a cidade a municípios vizinhos. A mobilidade local é complementada pela rede de metrô regional (MetroRec), que oferece ligações à malha de ônibus e a outros municípios da região, possibilitando deslocamentos até o centro de Recife e áreas adjacentes.",
+      "items": [
+        {
+          "description": "Terminal Integrado da PE-015 (Ouro Preto) funciona como ponto de conexão entre linhas de ônibus da região, integrando a malha de transportes com Olinda.",
+          "kind": "Terminal integrado",
+          "name": "Terminal Integrado da PE-015",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminal%20Integrado%20da%20PE-015%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Sistema de ônibus da Grande Recife opera linhas que atendem bairros de Olinda e conectam com a Região Metropolitana do Recife, com integração por Bilhete Único.",
+          "kind": "Ônibus urbano",
+          "name": "Ônibus Grande Recife (Bilhete Único)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%C3%94nibus%20Grande%20Recife%20(Bilhete%20%C3%9Anico)%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Aeroporto mais próximo é o Aeroporto Internacional do Recife – Guararapes (REC), localizado em Recife, a cerca de 15 km do centro de Olinda; oferece tráfego nacional e internacional.",
+          "kind": "Aeroporto",
+          "name": "Aeroporto do Recife – Guararapes (REC)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20do%20Recife%20%E2%80%93%20Guararapes%20(REC)%2C%20Olinda%2C%20PE",
+        },
+        {
+          "description": "Metrô do Recife (MetroRec) atende à Região Metropolitana do Recife com linhas e conexões; Olinda não possui linha de metrô dentro do município, mas há integração com o sistema por meio de terminais de ônibus e pontos de conexão.",
+          "kind": "Ferrovias/metropolitano",
+          "name": "Metrô do Recife (MetroRec)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Metr%C3%B4%20do%20Recife%20(MetroRec)%2C%20Olinda%2C%20PE",
+        },
+      ],
+    },
+    "city": "Olinda",
+    "uf": "PE",
+    "stateName": "Pernambuco",
+    "region": "Nordeste",
+    "ddd": "81",
+    "population": 364717,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+} as Record<string, MunicipalityTabs>;

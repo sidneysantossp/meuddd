@@ -152,107 +152,107 @@
         },
         {
           "label": "Bioma predominante",
-          "value": "Amaz\u0000f4nia"
+          "value": "Amazf4nia"
         },
         {
           "label": "Populao estimada (1o jul/2024)",
           "value": "46.816"
         }
       ],
-      "intro": "Tarauacá, cidade do Acre na região Norte, situa-se no Vale do Juruá e apresenta clima típico da Amaz\u0000f4nia: quente, úmido e com chuvas bem distribuídas ao longo do ano. O bioma predominante é a Amaz\u0000f4nia, o que explica o regime pluviom\u0000e9trico e a vegeta\u0000e7\u0000e3o densa; corresponde ao cl\u0000e1ssicoAf (floresta tropical). ([cidades.ibge.gov.br](https://cidades.ibge.gov.br/v4/brasil/ac/tarauaca/panorama))"
+      "intro": "Tarauacá, cidade do Acre na região Norte, situa-se no Vale do Juruá e apresenta clima típico da Amazf4nia: quente, úmido e com chuvas bem distribuídas ao longo do ano. O bioma predominante é a Amazf4nia, o que explica o regime pluviome9trico e a vegetae7e3o densa; corresponde ao cle1ssicoAf (floresta tropical). ([cidades.ibge.gov.br](https://cidades.ibge.gov.br/v4/brasil/ac/tarauaca/panorama))"
     },
     "dining": {
-      "closing": "Mercados locais e pratos da culin\u0000e1ria acreana oferecem uma vis\u0000e3o concr\u0000ea da cultura regional. Planeje-se para visitar estabelecimentos públicos, mercados e feiras para vivenciar a gastronomia de Tarauacá com responsabilidade e sem depender de servios privados. ",
-      "intro": "A gastronomia de Tarauacá acompanha a matriz cultural do Acre e da Amaz\u0000f4nia, com peixes da regi\u0000e3o, tucupi, jambu e iguarias que refletem influ\u0000eancias ind\u0000edgenas, nordestinas e amaz\u0000f4nicas. O Mercado Municipal Domingos do Rego Leite \u0000e9 um espa\u0000e7o central para observar produtos locais, peixes da regi\u0000e3o e artesanato. Pratos emblem\u0000e1ticos da regi\u0000e3o incluem pato no tucupi e tacac\u0000e1, acompanhados, quando poss\u0000edveis, de pirarucu ou tambaqui. A cidade tamb\u0000e9m\u0000e9 celebra a tradi\u0000e7\u0000e3o do abacaxi gigante. A gastronomia acreana associa ingredientes naturais a t\u0000e9cnicas tradicionais, reforando a identidade local. ([tarauaca.ac.gov.br](https://www.tarauaca.ac.gov.br/single-post/prefeita-maria-lucin%C3%A9ia-reinaugura-mercado-municipal-de-tarauac%C3%A1))",
+      "closing": "Mercados locais e pratos da culine1ria acreana oferecem uma vise3o concrea da cultura regional. Planeje-se para visitar estabelecimentos públicos, mercados e feiras para vivenciar a gastronomia de Tarauacá com responsabilidade e sem depender de servios privados. ",
+      "intro": "A gastronomia de Tarauacá acompanha a matriz cultural do Acre e da Amazf4nia, com peixes da regie3o, tucupi, jambu e iguarias que refletem influeancias indedgenas, nordestinas e amazf4nicas. O Mercado Municipal Domingos do Rego Leite e9 um espae7o central para observar produtos locais, peixes da regie3o e artesanato. Pratos embleme1ticos da regie3o incluem pato no tucupi e tacace1, acompanhados, quando possedveis, de pirarucu ou tambaqui. A cidade tambe9me9 celebra a tradie7e3o do abacaxi gigante. A gastronomia acreana associa ingredientes naturais a te9cnicas tradicionais, reforando a identidade local. ([tarauaca.ac.gov.br](https://www.tarauaca.ac.gov.br/single-post/prefeita-maria-lucin%C3%A9ia-reinaugura-mercado-municipal-de-tarauac%C3%A1))",
       "items": [
         {
-          "description": "Mercado p\u0000fablico central de Tarauac\u0000e1, onde se podem encontrar frutas, verdura, peixes da regi\u0000e3o e itens de artesanato. A reinaugura\u0000e3o do Mercado Municipal Domingos do Rego Leite foi acompanhada pela Prefeitura. ",
+          "description": "Mercado pfablico central de Tarauace1, onde se podem encontrar frutas, verdura, peixes da regie3o e itens de artesanato. A reinaugurae3o do Mercado Municipal Domingos do Rego Leite foi acompanhada pela Prefeitura. ",
           "kind": "Mercado",
           "name": "Mercado Municipal Domingos do Rego Leite",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20Domingos%20do%20Rego%20Leite%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Prato tradicional preparado com pato cozido em tucupi, servido com arroz e jambu, refletindo a cozinha amaz\u0000f4nica e acreana de Tarauac\u0000e1. ",
-          "kind": "Prato t\u0000edpico",
+          "description": "Prato tradicional preparado com pato cozido em tucupi, servido com arroz e jambu, refletindo a cozinha amazf4nica e acreana de Tarauace1. ",
+          "kind": "Prato tedpico",
           "name": "Pato no Tucupi",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Pato%20no%20Tucupi%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Sopa quente de tucupi com goma, jambu e camar\u0000e3o seco, tratada como um prato emblem\u0000e1tico da regio\u0000e3o Norte, inclusive no Acre. ",
-          "kind": "Prato t\u0000edpico",
-          "name": "Tacac\u0000e1 Acreano",
+          "description": "Sopa quente de tucupi com goma, jambu e camare3o seco, tratada como um prato embleme1tico da regioe3o Norte, inclusive no Acre. ",
+          "kind": "Prato tedpico",
+          "name": "Tacace1 Acreano",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Tacac%00e1%20Acreano%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Tradi\u0000e7\u0000e3o associada \u0000e0 cidade, destacada em festividades locais; a identidade envolve o abacaxi gigante como elemento cultural. ",
-          "kind": "Tradi\u0000e7\u0000e3o/local",
-          "name": "Abacaxi gigante de Tarauac\u0000e1",
+          "description": "Tradie7e3o associada e0 cidade, destacada em festividades locais; a identidade envolve o abacaxi gigante como elemento cultural. ",
+          "kind": "Tradie7e3o/local",
+          "name": "Abacaxi gigante de Tarauace1",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Abacaxi%20gigante%20de%20Tarauac%00e1%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Mercado listado como ponto de observa\u0000e7\u0000e3o de tranci\u0000e3o & artesanato local, com participa\u0000e7\u0000e3o de comunidades na economia da regi\u0000e3o. ",
+          "description": "Mercado listado como ponto de observae7e3o de trancie3o & artesanato local, com participae7e3o de comunidades na economia da regie3o. ",
           "kind": "Mercado/Feira regional",
-          "name": "Mercado Jo\u0000e3ozinho Melo",
+          "name": "Mercado Joe3ozinho Melo",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Jo%00e3ozinho%20Melo%2C%20Tarauac%C3%A1%2C%20AC"
         }
       ]
     },
     "tourism": {
-      "closing": "Ao planejar visitas, verifique calend\u0000e1rios locais e disponibilidade de traslados. As op\u0000e7\u0000f5es variam conforme a época do ano e a infraestrutura regional.",
-      "intro": "Tarauac\u0000e1, localizada no Vale do Juru\u0000e1, oferece turismo de natureza, cultura e viv\u0000eancia ribeirinha. O regi\u0000e3o se destaca pela paisagem amaz\u0000f4nica, pelos rios e pela hist\u0000f3ria ligada ao ciclo da borracha e ao estabelecimento da cidade em 1907. Ponto s\u0000e9dio na vida urbana, a Catedral de Nossa Senhora da Gl\u0000f3ria, no centro, marca o cen\u0000e1rio religioso. O Mercado Jo\u0000e3ozinho Melo \u0000e9 um eixo cultural, com artesanato e produtos regionais. A regi\u0000e3o tamb\u0000e9m oferece passeios de observa\u0000e7\u0000e3o de fauna/flora nos afluentes do Rio Juru\u0000e1 e entorno, e a cultura ribeirinha est\u0000e1 presente em comunidades locais. Eventos regionais, como festivais de cultura e gastronomia, comp\u0000f5em o calend\u0000e1rio tur\u0000edstico. ([g1.globo.com](https://g1.globo.com/ac/acre/natureza/amazonia/noticia/2023/05/03/o-que-fazer-no-jurua-g1-faz-guia-com-alguns-pontos-para-voce-conhecer-na-regiao.ghtml))",
+      "closing": "Ao planejar visitas, verifique calende1rios locais e disponibilidade de traslados. As ope7f5es variam conforme a época do ano e a infraestrutura regional.",
+      "intro": "Tarauace1, localizada no Vale do Jurue1, oferece turismo de natureza, cultura e viveancia ribeirinha. O regie3o se destaca pela paisagem amazf4nica, pelos rios e pela histf3ria ligada ao ciclo da borracha e ao estabelecimento da cidade em 1907. Ponto se9dio na vida urbana, a Catedral de Nossa Senhora da Glf3ria, no centro, marca o cene1rio religioso. O Mercado Joe3ozinho Melo e9 um eixo cultural, com artesanato e produtos regionais. A regie3o tambe9m oferece passeios de observae7e3o de fauna/flora nos afluentes do Rio Jurue1 e entorno, e a cultura ribeirinha este1 presente em comunidades locais. Eventos regionais, como festivais de cultura e gastronomia, compf5em o calende1rio turedstico. ([g1.globo.com](https://g1.globo.com/ac/acre/natureza/amazonia/noticia/2023/05/03/o-que-fazer-no-jurua-g1-faz-guia-com-alguns-pontos-para-voce-conhecer-na-regiao.ghtml))",
       "items": [
         {
-          "description": "Igreja catedral localizada no centro de Tarauac\u0000e1, marco da hist\u0000f3ria religiosa e urbana da cidade.",
-          "name": "Catedral de Nossa Senhora da Gl\u0000f3ria e S\u0000e9 de Tarauac\u0000e1? ou Catedral de Tarauac\u0000e1? (Nossa Senhora da Gl\u0000f3ria)",
+          "description": "Igreja catedral localizada no centro de Tarauace1, marco da histf3ria religiosa e urbana da cidade.",
+          "name": "Catedral de Nossa Senhora da Glf3ria e Se9 de Tarauace1? ou Catedral de Tarauace1? (Nossa Senhora da Glf3ria)",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Nossa%20Senhora%20da%20Gl%00f3ria%20e%20S%00e9%20de%20Tarauac%00e1%3F%20ou%20Catedral%20de%20Tarauac%00e1%3F%20(Nossa%20Senhora%20da%20Gl%00f3ria)%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Mercado municipal de Tarauac\u0000e1, ponto de observa\u0000e7\u0000e3o de produtos regionais e artesanato, listado como refer\u0000eancia local.",
-          "name": "Mercado Jo\u0000e3ozinho Melo",
+          "description": "Mercado municipal de Tarauace1, ponto de observae7e3o de produtos regionais e artesanato, listado como refereancia local.",
+          "name": "Mercado Joe3ozinho Melo",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Jo%00e3ozinho%20Melo%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Passeios de observa\u0000e7\u0000e3o de biodiversidade nos arredores do Vale do Juru\u0000e1, incluindo rios e comunidades ribeirinhas.",
-          "name": "Rio Juru\u0000e1 e afluentes",
+          "description": "Passeios de observae7e3o de biodiversidade nos arredores do Vale do Jurue1, incluindo rios e comunidades ribeirinhas.",
+          "name": "Rio Jurue1 e afluentes",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20Juru%00e1%20e%20afluentes%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Festival de cultura e gastronomia da regi\u0000e3o, destacando a identidade local e a culin\u0000e1ria acreana.",
+          "description": "Festival de cultura e gastronomia da regie3o, destacando a identidade local e a culine1ria acreana.",
           "name": "Festival de Cultura e Gastronomia",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Festival%20de%20Cultura%20e%20Gastronomia%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Tradi\u0000e7\u0000e3o local associada \u000e$ a abacaxi gigante, presente em festas e celebra\u0000f5es regionais.",
-          "name": "Abacaxi gigante de Tarauac\u0000e1",
+          "description": "Tradie7e3o local associada $ a abacaxi gigante, presente em festas e celebraf5es regionais.",
+          "name": "Abacaxi gigante de Tarauace1",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Abacaxi%20gigante%20de%20Tarauac%00e1%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Conte\u0000fdeo sobre patrim\u0000f4nio e lazer local, incluindo pontos culturais listados pela prefeitura.",
-          "name": "Pontos tur\u0000edsticos locais (Tarauac\u0000e1EuCuido)",
+          "description": "Contefdeo sobre patrimf4nio e lazer local, incluindo pontos culturais listados pela prefeitura.",
+          "name": "Pontos turedsticos locais (Tarauace1EuCuido)",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Pontos%20tur%00edsticos%20locais%20(Tarauac%00e1EuCuido)%2C%20Tarauac%C3%A1%2C%20AC"
         }
       ]
     },
     "transport": {
-      "closing": "Para deslocamentos, consulte com anteced\u0000eancia as op\u0000e7\u00000es de viagem (onibus) e as condi\u0000e7\u0000f5es de via BR-364, especialmente em perioada de chuvas.",
-      "intro": "Tarauac\u0000e1 tem liga\u0000e7\u0000f5es de via terrestre pela BR-364, conectando a cidade a Rio Branco e a outras localidades do Acre. A cidade abriga a Rodovi\u0000e1ria Raimundo de Carvalho Oliveira (terminal municipal de embarque/desembarque) com acessos de infraestrutura desde 2023, quando a via de acesso ao terminal foi pavimentada pela prefeitura em parceria com o DERACRE. O Aeroporto Regional Tarauac\u0000e1 (TRQ) fica a cerca de 3 km do centro, mas n\u0000e3o h\u0000e1 voos regulares. Em termos de ferrovias, n\u0000e3o h\u0000e1 opera\u0000e7\u0000f5es de trens na cidade. ([tripsardou.com](https://tripsardou.com/o-que-fazer-em-tarauaca-ac-explore-a-cultura-natureza-e-tradicoes-desta-cidade-amazonica/))",
+      "closing": "Para deslocamentos, consulte com antecedeancia as ope70es de viagem (onibus) e as condie7f5es de via BR-364, especialmente em perioada de chuvas.",
+      "intro": "Tarauace1 tem ligae7f5es de via terrestre pela BR-364, conectando a cidade a Rio Branco e a outras localidades do Acre. A cidade abriga a Rodovie1ria Raimundo de Carvalho Oliveira (terminal municipal de embarque/desembarque) com acessos de infraestrutura desde 2023, quando a via de acesso ao terminal foi pavimentada pela prefeitura em parceria com o DERACRE. O Aeroporto Regional Tarauace1 (TRQ) fica a cerca de 3 km do centro, mas ne3o he1 voos regulares. Em termos de ferrovias, ne3o he1 operae7f5es de trens na cidade. ([tripsardou.com](https://tripsardou.com/o-que-fazer-em-tarauaca-ac-explore-a-cultura-natureza-e-tradicoes-desta-cidade-amazonica/))",
       "items": [
         {
-          "description": "Terminal rodovi\u0000e1rio municipal de Tarauac\u0000e1, com embarque/desembarque para destinos regionais. A pavimenta\u0000e7\u0000e3o de acesso ao terminal foi conclu\u0000edda em 2023.",
-          "kind": "Rodovi\u0000e1ria",
-          "name": "Rodovi\u0000e1ria Raimundo de Carvalho Oliveira",
+          "description": "Terminal rodovie1rio municipal de Tarauace1, com embarque/desembarque para destinos regionais. A pavimentae7e3o de acesso ao terminal foi concluedda em 2023.",
+          "kind": "Rodovie1ria",
+          "name": "Rodovie1ria Raimundo de Carvalho Oliveira",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%00e1ria%20Raimundo%20de%20Carvalho%20Oliveira%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Via principal de entrada/sa\u0000edda da cidade: BR-364, conectando Tarauac\u0000e1 a Rio Branco e a outras cidades do Acre.",
+          "description": "Via principal de entrada/saedda da cidade: BR-364, conectando Tarauace1 a Rio Branco e a outras cidades do Acre.",
           "kind": "Rodovia",
           "name": "BR-364",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=BR-364%2C%20Tarauac%C3%A1%2C%20AC"
         },
         {
-          "description": "Aeroporto regional da cidade, localizado a cerca de 3 km do centro; no momento, n\u0000e3o h\u0000e1 voos regulares. Acesso principal pela cidade ou por cidades vizinhas com voos regionais.",
+          "description": "Aeroporto regional da cidade, localizado a cerca de 3 km do centro; no momento, ne3o he1 voos regulares. Acesso principal pela cidade ou por cidades vizinhas com voos regionais.",
           "kind": "Aeroporto",
-          "name": "Aeroporto de Tarauac\u0000e1 (TRQ)",
+          "name": "Aeroporto de Tarauace1 (TRQ)",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20de%20Tarauac%00e1%20(TRQ)%2C%20Tarauac%C3%A1%2C%20AC"
         }
       ]

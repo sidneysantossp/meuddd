@@ -1,6 +1,133 @@
-/* Conteúdo editorial em tabs dos municípios de SE. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
-import type { LocalityTabsCatalog } from "./types";
-
-const catalog: LocalityTabsCatalog = {};
-
-export default catalog;
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "estancia": {
+    "climate": {
+      "body": "Est\u0000e2ncia, no litoral sul de Sergipe, apresenta um clima tropical caracter\u0000edstico da regi\u0000e3o Nordeste litor\u0000e2neo, com temperaturas quentes e varia\u0000e7\u0000f5es sazonais de chuvas ao longo do ano. As temperaturas mant\u0000eam-se elevadas durante todo o ano, com m\u0000e9dias em torno de 25 \u0000b0C, variando aproximadamente entre 23 \u0000b0C e 32 \u0000b0C. A chuva acumula-se principalmente no per\u0000edodo chuvoso, de maro a agosto, enquanto os meses de setembro a fevereiro costumam ser mais secos. A brisa vinda do litoral pode moderar o calor em zonas pr\u0000f3ximas \u0000e0 linha costeira. Pela classifica\u0000e7\u0000e3o Köppen-Geiger, o regime regulator fica, em fontes t\u0000e9cnicas, associado ao As (savanna tropical com esta\u0000e7\u0000e3o seca). Recomenda-se planejamento de atividades ao ar livre com aten\u0000e7\u0000e3o \u0000e0s chuvas sazonais.",
+      "details": [
+        {
+          "label": "Classifica\u0000e7\u0000e3o Köppen-Geiger",
+          "value": "As (savanna tropical com esta\u0000e7\u0000e3o seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "principalmente mar/maio a agosto (per\u0000edodo chuvoso) ; meses mais secos entre setembro e fevereiro",
+        },
+        {
+          "label": "Temperatura m\u0000e9dia anual",
+          "value": "aprox. 25,4 \u0000b0C (estimativa para a regi\u0000e3o)",
+        },
+        {
+          "label": "Notas locais",
+          "value": "A influ\u0000eancia litor\u0000e2nea favorece tempo quente e úmido; a varia\u0000e7\u0000e3o regional \u0000e9 observada entre zonas pr\u0000f3ximas \u0000e0 o mar e \u0000e0s \u0000e1reas mais interiores.",
+        },
+      ],
+      "intro": "Est\u0000e2ncia tem um clime tipicamente nordestino, com temporada de chuva concentrada e longos per\u0000edodos de tempo mais seco. A presen\u0000e7a da brisa marinha pode atenuar as temperaturas em pontos litor\u0000e2neos. A localiza\u0000e7\u0000e3o na faixa litor\u0000e2nea favorece varia\u0000e7\u0000f5es sazonais, o que impacta atividades ao ar livre, turismo de praia e visitas a lagoas e dunas na regi\u0000e3o.",
+    },
+    "dining": {
+      "closing": "Para conhecer a culin\u0000e1ria local, priorize preparos com frutos do mar, caranguejo e produtos regionais, como tapioca e pequenas iguarias de milho. Op\u0000e7\u0000f5es de restaurantes informais e barracas de praia costumam oferecer esses itens com ingredientes frescos locais.",
+      "intro": "A gastronomia sergipana reflete influ\u0000eancias tupi, africana e portuguesa, com foco em frutos do mar, peixes e carnes na linha costeira. Em Est\u0000e2ncia, os quiosques e barracas de praia, bem como mercados locais, enfatizam o uso de peixes frescos, caranguejo e mariscos, j\u0000e1 combinados a itens t\u000203picos da regi\u0000e3o como leite de coco, milho e tapioca. Pratos tipicamente associados \u0000e0 regi\u0000e3o costeira incluem caranguejo, moqueca sergipana e preparos com sururu, seringueiras de coco e frutos do mar. A culin\u0000e1ria sergipana tamb\u0000e9m celebra doces \u0000e0 base de frutas regionais, como mangaba e jenipapo.",
+      "items": [
+        {
+          "description": "Caranguejo: iguaria marinha muito presente no litoral de Sergipe, servido em diversas preparações, desde pratos ensopados at\u0000e9 a petiscos, acompanhados de arroz e pir\u0000e3o.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Caranguejo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Caranguejo%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Moqueca Sergipana: varia\u0000e7\u0000f5es locais com peixe ou siri, leite de coco e azeite de dend\u0000ea, comum em serviis de praia e barracas regionais.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Moqueca Sergipana",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Moqueca%20Sergipana%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Sururu: fruto do mar amplamente utilizado em cald\u00000eos e refogados, acompanhado de piment\u0000f5es, coentro e \u0000e1gua de coco em algumas regi\u0000f5es.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Sururu",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sururu%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Tapioca e beiju: itens de car\u0000e1ter regional amplamente consumidos no caf\u0000e9 da manh\u0000e3 e lanches, com vers\u0000f5es doces e salgadas.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Tapioca/Beiju",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Tapioca%2FBeiju%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Doces regionais: compotas e licores de frutas tropicais locais, incluindo mangaba e jenipapo, comuns em feiras e mercados p\u0000fablicos.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Doces regionais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Doces%20regionais%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+      ],
+    },
+    "tourism": {
+      "closing": "Planeje visitas com base na mar\u0000e9 e nos per\u0000edodos de chuva. Combine praias com passeio no centro hist\u0000f3rico e visitas a pontos naturais para conhecer a diversidade da regi\u0000e3o.",
+      "intro": "Est\u0000e2ncia, localizada no litoral sul de Sergipe, oferece um conjunto de atra\u0000e7\u0000f5es naturais, praias, lagoas e um patrimônio hist\u0000f3rico que complementam a visita \u0000e0 regi\u0000e3o Nordeste. A cidade fica a cerca de 66 km de Aracaju, facilitando o acesso a partir da capital para quem visita o estado. O litoral reserva paisagens de dunas, mar e piscinas naturais, enquanto o interior apresenta lagoas e belezas naturais. O turismo mundial tem destacado a Praia do Saco, as dunas e a Lagoa dos Tambaquis, bem como o conjunto arquitet\u0000f4nico do centro hist\u0000f3rico, que preserva o passado colonial e a vida ribeirinha da regi\u0000e3o.",
+      "items": [
+        {
+          "description": "Praia do Saco: truncada por dunas, praia de areias claras e litoral com rio de transi\u0000e7\u0000e3o com o oceano, ideal para buggy e passeios ao longo do dia.",
+          "name": "Praia do Saco",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Praia%20do%20Saco%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Dunas da Praia do Saco: forma\u0000e7\u0000f5es de areias brancas que proporcionam vistas panor\u0000e2micas e ocasi\u0000f5es para fotos e atividades de beira-mar.",
+          "name": "Dunas da Praia do Saco Dunes",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Dunas%20da%20Praia%20do%20Saco%20Dunes%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Lagoa dos Tambaquis Eco Park: parque de lazer com lagoa natural, \u0000e1reas de banho, piscinas e atividades aqu\u0000e1ticas, integrando gastronomia regional e contato com a natureza.",
+          "name": "Lagoa dos Tambaquis Eco Park",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lagoa%20dos%20Tambaquis%20Eco%20Park%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Centro hist\u0000f3rico de Est\u0000e2ncia: sobrados azulejados e edific\u0000e1es que remetem ao s\u0000e9culo XIX, com patrim\u0000f4nio ligado \u000e Diocese de Est\u0000e2ncia e ao passado colonial.",
+          "name": "Centro hist\u0000f3rico e Igreja Matriz",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%00f3rico%20e%20Igreja%20Matriz%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Diocese de Est\u0000e2ncia: a sede episcopal fica na Catedral Nossa Senhora de Guadalupe, fortalecendo o patrimonio religioso da regi\u0000e3o.",
+          "name": "Catedral Nossa Senhora de Guadalupe/Diocese de Est\u0000e2ncia",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Catedral%20Nossa%20Senhora%20de%20Guadalupe%2FDiocese%20de%20Est%00e2ncia%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Festividades locais: a cidade participa de festas juninas, tradi\u0000f5es religiosas e atividades de pesca que refletem a vida ribeirinha e a cultura regional.",
+          "name": "Festas juninas e tradi\u00007es regionais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Festas%20juninas%20e%20tradi%007es%20regionais%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+      ],
+    },
+    "transport": {
+      "closing": "Consulte horarios e rotas com anteced\u0000eancia, especialmente para viagens de intermunicipais. A cidade fica acess\u0000edvel por via terrestre via BR-101, com a rodovia estadual e rotas de litoral.",
+      "intro": "Est\u0000e2ncia possui infraestrutura de transporte que conecta a cidade com o restante do Sergipe e com Aracaju, atrav\u0000e9s de terminal rodovi\u0000e1rio, sistema de \u0000f4nibus e liga\u0000e7\u0000f5es rodovi\u0000e1rias regionais. O aeroporto mais pr\u0000f3ximo \u0000e9 o Aeroporto Internacional de Aracaju – Santa Maria (AJU), situado em Aracaju, a cerca de 66 a 70 km de Est\u0000e2ncia. A cidade permanece conectada principalmente por via rodovi\u0000e1ria (BR-101 e outras rodovias estaduais), e n\u0000e3o h\u0000e1 servi\u0000e7os de trem de passageiro na regi\u0000e3o at\u0000e9 o momento.",
+      "items": [
+        {
+          "description": "Rodovi\u0000e1ria de Est\u0000e2ncia: terminal com v\u0000e1rias vias de embarque, operado por empresas de transporte intermunicipal; ponto de partida para rotas para Aracaju, Lagos entre outras cidades.",
+          "kind": "Rodovi\u0000e1ria Municipal",
+          "name": "Rodovi\u0000e1ria de Est\u0000e2ncia",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%00e1ria%20de%20Est%00e2ncia%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Aeroporto mais pr\u0000f3ximo: Aeroporto Internacional de Aracaju \u0000d3 Santa Maria (AJU) em Aracaju; dist\u0000e2ncia aproximada de 66 km desde Est\u0000e2ncia.",
+          "kind": "Aeroporto pr\u0000f3ximo",
+          "name": "Aeroporto AJU - Aracaju",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20AJU%20-%20Aracaju%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+        {
+          "description": "Ferrovias/Metro: n\u0000e3o h\u0000e1 servit\u0000f6 de trem de passageiros ativo na regi\u0000e3o; as ferrovias locais no estado foram em grande parte reformuladas para carga e n\u0000e3o h\u0000e1 linha de metro ou VLT operando em Est\u0000e2ncia. ",
+          "kind": "Ferrovias/Metro",
+          "name": "Sem serviio ativo de passagem",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sem%20servi%7Fio%20ativo%20de%20passagem%2C%20Est%C3%A2ncia%2C%20SE",
+        },
+      ],
+    },
+    "city": "Estância",
+    "uf": "SE",
+    "stateName": "Sergipe",
+    "region": "Nordeste",
+    "ddd": "79",
+    "population": 67060,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+} as Record<string, MunicipalityTabs>;

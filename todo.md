@@ -233,9 +233,9 @@
 - [x] scripts/generateTabs.mts — produtor em massa (schema real camelCase, slug NULL fallback, flags --uf/--limit/--only-empty; json_schema strict com required completos; limpeza de artefactos de raciocínio)
 - [x] Validação de piloto (3 municípios do AC, 0 falhas, qualidade verificada)
 - [ ] Geração em massa: 27 UFs em lote sequencial (5.570 municípios) — agendada para 14/08 06:00 BRT (quota LLM diária repôs à meia-noite)
-- [ ] scripts/integrateTabs.mts — converter JSON gerado em módulos TS
-- [ ] Integrar conteúdo gerado nos 27 módulos e rodar pnpm format
-- [ ] Testes vitest: tabs SSR em página de município, link cidade→estado
-- [ ] pnpm test + tsc sem erros
-- [ ] Screenshot desktop/móvel de /cidade/ac/cruzeiro-do-sul e /cidade/sp/sao-paulo com tabs renderizadas
-- [ ] Checkpoint + commit GitHub
+- [x] scripts/integrateTabs.mts — converter JSON gerado em módulos TS (testado com catálogo AC)
+- [x] Integrar conteúdo piloto nos módulos TS (AC: 2 municípios; restantes após lote LLM)
+- [x] Testes vitest: mock localityTabs na hidratação + QueryClientProvider (82 testes verdes)
+- [x] pnpm test (82/82) + tsc sem erros
+- [x] Screenshot de /cidade/ac/cruzeiro-do-sul com tabs renderizadas (desktop full-page confirmado; sem erros de hidratação)
+- [ ] Checkpoint + commit GitHub (a fazer)

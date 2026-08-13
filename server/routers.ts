@@ -1,6 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { z } from "zod";
 import * as db from "./db";
+import { getMunicipalityTabsByUf } from "@shared/localityTabs/lookup";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { adminProcedure, publicProcedure, router } from "./_core/trpc";
@@ -40,6 +41,15 @@ export const appRouter = router({
     states: publicProcedure.query(() => db.listStateSummaries()),
     capitals: publicProcedure.query(() => db.listCapitalSummaries()),
   }),
+  localityTabs: router({
+    byMunicipality: publicProcedure
+      .input(z.object({ uf: z.string().length(2), slug: z.string().min(1).max(160) }))
+      .query(({ input }) => {
+        const tabs = getMunicipalityTabsByUf(input.uf, input.slug);
+        return { tabs };
+      }),
+  }),
+
   local: router({
     suggestUpdate: publicProcedure
       .input(z.object({

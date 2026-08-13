@@ -1,4 +1,5 @@
 import React, { act } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { renderToString } from "react-dom/server";
 import { hydrateRoot, type Root } from "react-dom/client";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -16,12 +17,21 @@ vi.mock("@/lib/trpc", () => ({
       byState: { useQuery: () => ({ data: undefined, isLoading: false }) },
       byMunicipality: { useQuery: () => ({ data: undefined, isLoading: false }) },
     },
+    localityTabs: {
+      byMunicipality: { useQuery: () => ({ data: undefined, isLoading: false }) },
+    },
   },
 }));
 
+const testQueryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+
 function RouteTree({ path, server = false }: { path: string; server?: boolean }) {
   const [pathname, ssrSearch = ""] = path.split("?");
-  return <Router ssrPath={server ? pathname : undefined} ssrSearch={server ? ssrSearch : undefined}><App /></Router>;
+  return (
+    <QueryClientProvider client={testQueryClient}>
+      <Router ssrPath={server ? pathname : undefined} ssrSearch={server ? ssrSearch : undefined}><App /></Router>
+    </QueryClientProvider>
+  );
 }
 
 async function expectHydrationFor(path: string) {
@@ -44,6 +54,7 @@ describe("hidratação das rotas públicas", () => {
   beforeEach(() => {
     (globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
     document.head.innerHTML = "";
+    testQueryClient.clear();
   });
 
   it.each(["/", "/?uf=PA", "/ddd/11", "/estado/sp", "/cidade/sp/sao-paulo", "/guias", "/guia/o-que-e-ddd", "/guia/portabilidade-numerica", "/guia/ddd-11-cidades-e-cobertura"])("hidrata %s sem divergências recuperáveis", async path => {

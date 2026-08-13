@@ -1,6 +1,139 @@
-/* Conteúdo editorial em tabs dos municípios de RO. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
-import type { LocalityTabsCatalog } from "./types";
-
-const catalog: LocalityTabsCatalog = {};
-
-export default catalog;
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "porto-velho": {
+    "climate": {
+      "body": "Porto Velho, capital de Rondônia, está situada na Amazônia Legal, na porção norte do estado. O clima é quente e úmido, com elevada umidade ao longo de todo o ano e chuvas frequentes. A classificação Köppen mais citada para a cidade é Am (tropical de monções), com precipitação anual elevada e temperaturas estáveis em torno de 25–27 °C, variando pouco ao longo do ano. Algumas fontes mencionam Af (equatorial) para a região amazônica, mas a referência mais comum para Porto Velho é Am, o que implica chuvas distribuídas ao longo de todas as estações. Em média, a cidade recebe volumes pluviométricos consideráveis, contribuindo para a cobertura de mata ao redor. Observa-se pouca variação térmica diária, com calor intenso em boa parte do ano. ([en.climate-data.org](https://en.climate-data.org/south-america/brazil/rondonia/porto-velho-3120/))",
+      "details": [
+        {
+          "label": "Classificação Köppen",
+          "value": "Am (tropical de monções) — chuvas ao longo do ano; temperatura média anual alta.",
+        },
+        {
+          "label": "Notas sobre classificação",
+          "value": "Algumas fontes citam Af (equatorial). A classificação amplamente utilizada para Porto Velho é Am.",
+        },
+        {
+          "label": "Temperatura média anual (aprox.)",
+          "value": "Em torno de 26 °C, com variação diária típica entre aproximadamente 23 °C e 33 °C.",
+        },
+        {
+          "label": "",
+          "value": "",
+        },
+      ],
+      "intro": "Porto Velho é a capital do estado de Rondônia, situada às margens do Rio Madeira, na região Norte do Brasil. O clima da cidade é característico da Amazônia: quente, úmido e com precipitação significativa ao longo de todo o ano. O regime de chuvas e as altas temperaturas influenciam a demanda por espaços abertos, áreas verdes e atividades ao ar livre. A cidade apresenta um microclima típico de áreas de floresta tropical, com variações sazonais moderadas que não definem uma estação seca bem marcada. ",
+    },
+    "dining": {
+      "closing": "Para conhecer a gastronomia local, visite o Mercado Cultural de Porto Velho, onde é possível experimentar pratos regionais em contexto de atividades culturais.",
+      "intro": "A culinária de Porto Velho reflete a experiência de um território da Amazônia com influências indígenas, ribeirinhas e migrantes. Pratos à base de tucupi, jambu e mandioca são comuns, com o tacacá figurando entre as iguarias mais associadas à região Norte. A cidade também celebra a sazonalidade de ingredientes com espaços públicos que agregam cultura e alimentação. As opções variam entre preparos simples de peixe fresco, iguarias de origem amazônica e receitas que incorporam a mandioca em diferentes formas. ",
+      "items": [
+        {
+          "description": "Tacacá é uma sopa quente à base de tucupi, goma de tapioca, jambu e peixe seco, servida com pimenta-de-cheiro. Um prato tradicional da região Norte que pode ser encontrado em feiras, mercados e estabelecimentos locais.",
+          "kind": "Prato típico",
+          "name": "Tacacá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Tacac%C3%A1%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Pato no tucupi é um prato típico da região Norte, feito com pato cozido em tucupi, acompanhado de jambu e arroz. É comum em restaurantes e eventos que valorizam a gastronomia regional.",
+          "kind": "Prato típico",
+          "name": "Pato no tucupi",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pato%20no%20tucupi%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Mercado Cultural de Porto Velho é um espaço público no centro histórico que agrega artesanato, programação cultural e opções gastronômicas locais.",
+          "kind": "Mercado público",
+          "name": "Mercado Cultural de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "",
+          "kind": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "",
+          "kind": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+        },
+      ],
+    },
+    "tourism": {
+      "closing": "Para imergir na história e na natureza locais, priorize o Museu da Estrada de Ferro Madeira-Mamoré, o Parque Natural Raimundo Paraguassu de Oliveira e os espaços históricos reformulados no Centro de Porto Velho.",
+      "intro": "Porto Velho, capital de Rondônia, está localizada às margens do Madeira e representa um ponto de encontro entre história, cultura e natureza da Amazônia. O município desenvolve atrações voltadas à memória da região, como o complexo da Estrada de Ferro Madeira-Mamoré, que rememora um capítulo importante da formação histórica do estado. Além disso, áreas verdes como o Parque Natural Raimundo Paraguassu de Oliveira oferecem trilhas, museu da fauna amazônica e preservação de eco sistemas nativos. Ao redor do centro, museus e palácios conservam memória regional, enquanto mercados locais preservam tradições culinárias e artesanato. ",
+      "items": [
+        {
+          "description": "Museu da Estrada de Ferro Madeira-Mamoré (EFMM) funciona no Complexo EFMM e preserva peças e relatos da histórica ferrovia que contribuiu para a formação de Porto Velho e de Rondônia.",
+          "name": "Museu da Estrada de Ferro Madeira-Mamoré",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Museu%20da%20Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Parque Natural Raimundo Paraguassu de Oliveira (Parque Natural de Porto Velho) ocupa cerca de 390 hectares de mata preservada, com trilhas ecológicas, museu da fauna amazônica e distribuição de mudas.",
+          "name": "Parque Natural Raimundo Paraguassu de Oliveira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20Natural%20Raimundo%20Paraguassu%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Palácio Getúlio Vargas, atual Museu da Memória Rondoniense, é referência histórica e arquitetônica no Centro de Porto Velho, com acervo que aborda a história do estado.",
+          "name": "Palácio Getúlio Vargas / Museu da Memória Rondoniense",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio%20Get%C3%BAlio%20Vargas%20%2F%20Museu%20da%20Mem%C3%B3ria%20Rondoniense%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Mercado Cultural de Porto Velho, espaço público administrado pela Fundação Cultural, reúne cultura, gastronomia e atividades ao vivo no centro histórico.",
+          "name": "Mercado Cultural de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Mercado Municipal KM 1, um exemplo de mercado histórico na cidade, ligado à vida cotidiana e à memória urbana.",
+          "name": "Mercado Municipal KM 1",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20KM%201%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+        },
+      ],
+    },
+    "transport": {
+      "closing": "Para deslocamento, utilize a rodoviária para viagens intermunicipais, o sistema de ônibus da cidade ou o aeroporto local para voos domésticos; o histórico ferroviário hoje é preservado como patrimônio museal.",
+      "intro": "Acesso e mobilidade em Porto Velho contam com rodoviária municipal, rede de ônibus urbana e o Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH). A Estrada de Ferro Madeira-Mamoré não opera como trem de passageiros, mas o patrimônio ferroviário é preservado pelo Museu da EFMM. O código DDD da cidade é 69. O fluxo de transporte público local é monitorado pela Semtran e pelo aplicativo Cittamobi para consulta de horários e itinerários.",
+      "items": [
+        {
+          "description": "Rodoviária de Porto Velho é o terminal de ônibus que conecta a cidade a diversas rotas interestaduais e intermunicipais dentro de Rondônia e região.",
+          "kind": "Rodoviária",
+          "name": "Rodoviária de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Sistema de ônibus urbano com várias linhas; a cidade oferece monitoramento de rotas online em tempo real via Semtran e aplicativos de trajetos.",
+          "kind": "Transporte público",
+          "name": "Ônibus urbano de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%C3%94nibus%20urbano%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH) recebe voos nacionais e opera sob gestão da concessionária Vinci Airports.",
+          "kind": "Aeroporto",
+          "name": "Aeroporto PVH (Porto Velho) — Governador Jorge Teixeira de Oliveira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20PVH%20(Porto%20Velho)%20%E2%80%94%20Governador%20Jorge%20Teixeira%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
+        },
+        {
+          "description": "Ferrovia Madeira-Mamoré preservada como patrimônio museal; não há serviço de trem de passageiros ativo na cidade.",
+          "kind": "Ferrovia histórica",
+          "name": "Estrada de Ferro Madeira-Mamoré (EFMM) – museu",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%20(EFMM)%20%E2%80%93%20museu%2C%20Porto%20Velho%2C%20RO",
+        },
+      ],
+    },
+    "city": "Porto Velho",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 517709,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+} as Record<string, MunicipalityTabs>;
