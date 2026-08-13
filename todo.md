@@ -269,8 +269,8 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Oportunidades futuras SEO do relatório (pedido 2026-08-13)
 - [x] Sitemap XML fracionado por tipo: /sitemap.xml index dinâmico + /sitemaps/estados.xml, ddds.xml, cidades-{uf}.xml (27), guias.xml, paginas.xml, regioes.xml, imagens.xml — todos com lastmod/changefreq/priority, cache de inventário 1h, tested 86/86
-- [ ] Schema BreadcrumbList em todas as páginas principais
+- [x] Schema BreadcrumbList em todas as páginas principais (já existia: função breadcrumbs() no prefetch SSR — validado por curl)
 - [x] Article JSON-LD nas páginas DDD, estado e cidade (headline, inLanguage pt-BR, author/publisher Organization, about territorial) — validado via curl SSR em /ddd/11, /estado/sp e /cidade/sp/aruja
 - [x] Links internos "cidades vizinhas" com parágrafo contextual nas páginas de município: seção "Outras cidades com DDD" agora abre com frase editorial nomeando as 5 primeiras cidades vizinhas com links internos (SSR validado em /cidade/sp/aruja, 25 links internos por página)
-- [ ] Preparação da medição de cobertura no Search Console (documento de referência)
-- [ ] Commit final no GitHub e entrega
+- [x] Preparação da medição de cobertura no Search Console (documento docs/SEARCH-CONSOLE.md criado com protocolo semanal e metas 30/90 dias)
+- [x] Commit final no GitHub (f8d88c4 → github.com/sidneysantossp/meuddd, main) e entrega
