@@ -238,4 +238,11 @@
 - [x] Testes vitest: mock localityTabs na hidratação + QueryClientProvider (82 testes verdes)
 - [x] pnpm test (82/82) + tsc sem erros
 - [x] Screenshot de /cidade/ac/cruzeiro-do-sul com tabs renderizadas (desktop full-page confirmado; sem erros de hidratação)
-- [ ] Checkpoint + commit GitHub (a fazer)
+- [x] Checkpoint + commit GitHub (615e1aa, push github/main)
+
+## Ajustes visuais homepage (pedido 2026-08-13)
+- [x] Remover a numeração dos badges de UF na secção de seleção rápida por UF da home (confirmado visualmente)
+- [x] Secção "Um Atlas para o Dia a Dia" com background verde escuro (confirmado visualmente, contínuo com o footer)
+
+## Verificação visual (18:27)
+Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleção rápida por UF" e secção "Um atlas para o dia a dia" com fundo verde escuro (#143d36) contínuo até à tarja do footer, texto em tons claros (#faf3e5/#b8cec4) e ícone coral. 82 testes verdes, TypeScript sem erros.
