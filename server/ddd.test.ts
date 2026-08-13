@@ -15,6 +15,16 @@ describe("agregação de DDDs", () => {
     ]);
     expect(summaries[1]?.states).toEqual([{ name: "Goiás", uf: "GO", region: "Centro-Oeste" }]);
   });
+
+  it("sugere o território mais próximo sem persistir coordenadas da visita", () => {
+    const nearby = __testables.findNearestTerritory([
+      { ibgeCode: 1, name: "Brasília", ddd: "61", latitude: "-15.793889", longitude: "-47.882778", capital: true, timezone: "America/Sao_Paulo", stateName: "Distrito Federal", uf: "DF", region: "Centro-Oeste" },
+      { ibgeCode: 2, name: "Goiânia", ddd: "62", latitude: "-16.686889", longitude: "-49.264794", capital: true, timezone: "America/Sao_Paulo", stateName: "Goiás", uf: "GO", region: "Centro-Oeste" },
+    ], -15.80, -47.88);
+
+    expect(nearby).toMatchObject({ municipalityName: "Brasília", uf: "DF", ddd: "61" });
+    expect(nearby?.distanceKm).toBeLessThan(2);
+  });
 });
 
 describe("reserva territorial para SSR", () => {

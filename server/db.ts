@@ -212,6 +212,45 @@ export type StateSummary = {
   populationReferenceYear: number | null;
 };
 
+export type NearbyTerritory = {
+  municipalityName: string;
+  uf: string;
+  stateName: string;
+  ddd: string;
+  distanceKm: number;
+};
+
+function haversineDistanceKm(latitude: number, longitude: number, targetLatitude: number, targetLongitude: number) {
+  const earthRadiusKm = 6_371;
+  const toRadians = (value: number) => value * Math.PI / 180;
+  const latitudeDelta = toRadians(targetLatitude - latitude);
+  const longitudeDelta = toRadians(targetLongitude - longitude);
+  const latitudeStart = toRadians(latitude);
+  const latitudeEnd = toRadians(targetLatitude);
+  const arc = Math.sin(latitudeDelta / 2) ** 2
+    + Math.cos(latitudeStart) * Math.cos(latitudeEnd) * Math.sin(longitudeDelta / 2) ** 2;
+  return 2 * earthRadiusKm * Math.atan2(Math.sqrt(arc), Math.sqrt(1 - arc));
+}
+
+export function findNearestTerritory(rows: MunicipalityRecord[], latitude: number, longitude: number): NearbyTerritory | null {
+  let nearest: { row: MunicipalityRecord; distanceKm: number } | null = null;
+  for (const row of rows) {
+    const targetLatitude = Number(row.latitude);
+    const targetLongitude = Number(row.longitude);
+    if (!Number.isFinite(targetLatitude) || !Number.isFinite(targetLongitude)) continue;
+    const distanceKm = haversineDistanceKm(latitude, longitude, targetLatitude, targetLongitude);
+    if (!nearest || distanceKm < nearest.distanceKm) nearest = { row, distanceKm };
+  }
+  if (!nearest) return null;
+  return {
+    municipalityName: nearest.row.name,
+    uf: nearest.row.uf,
+    stateName: nearest.row.stateName,
+    ddd: nearest.row.ddd,
+    distanceKm: Math.round(nearest.distanceKm * 10) / 10,
+  };
+}
+
 function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
   const groups = new Map<string, MunicipalityRecord[]>();
   for (const row of rows) groups.set(row.ddd, [...(groups.get(row.ddd) ?? []), row]);
@@ -278,6 +317,10 @@ export async function searchDdds(input: { query?: string; uf?: string }) {
   const query = input.query?.trim();
   if (!query || /^\d+$/.test(query.replace(/\D/g, ""))) return groupDddRows(await selectMunicipalities(input));
   return groupDddRows(fuzzyFilterMunicipalities(await selectMunicipalities({ uf: input.uf }), query));
+}
+
+export async function resolveNearbyTerritory(input: { latitude: number; longitude: number }) {
+  return findNearestTerritory(await selectMunicipalities({}), input.latitude, input.longitude);
 }
 
 export function prepareUnmatchedSearch(input: { query: string; uf?: string }) {
@@ -536,4 +579,4 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion, staticMunicipalities };
+export const __testables = { findNearestTerritory, groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion, staticMunicipalities };

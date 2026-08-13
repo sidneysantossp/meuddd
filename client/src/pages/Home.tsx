@@ -9,6 +9,8 @@ import {
   ChevronDown,
   Copy,
   History,
+  LocateFixed,
+  LoaderCircle,
   MapPin,
   Menu,
   Phone,
@@ -19,6 +21,7 @@ import {
 } from "lucide-react";
 import { BrazilStateMap } from "@/components/BrazilStateMap";
 import { PUBLIC_NAV_ITEMS, PublicNavbar } from "@/components/PublicNavbar";
+import { geolocationFailure, stateSelection, territorySelection, type LocationStatus } from "@/lib/territoryDiscovery";
 
 export const HERO_TITLE_CLASS = "reveal reveal-delay-1 font-display text-[clamp(3.7rem,8vw,7.2rem)] font-semibold leading-[0.88] tracking-[0.012em] text-[#143d36]";
 import { trpc } from "@/lib/trpc";
@@ -59,11 +62,14 @@ export default function Home() {
   const [stateFilter, setStateFilter] = useState(firstUf);
   const [mobileNav, setMobileNav] = useState(false);
   const [recent, setRecent] = useState(["11", "21", "61"]);
+  const [locationStatus, setLocationStatus] = useState<LocationStatus>("idle");
+  const [locationLabel, setLocationLabel] = useState("");
   const states = trpc.ddd.states.useQuery();
   const searchInput = useMemo(() => ({ query: query.trim() || undefined, uf: stateFilter || undefined }), [query, stateFilter]);
   const hasSearchCriteria = Boolean(searchInput.query || searchInput.uf);
   const search = trpc.ddd.search.useQuery(searchInput, { enabled: hasSearchCriteria });
   const recordUnmatchedSearch = trpc.ddd.recordUnmatchedSearch.useMutation();
+  const resolveNearbyTerritory = trpc.ddd.resolveNearbyTerritory.useMutation();
   const trackedSearches = useRef(new Set<string>());
   const stateOptions = states.data ?? [];
   const results = search.data ?? [];
@@ -93,9 +99,52 @@ export default function Home() {
     if (/^\d{2}$/.test(value)) setRecent(current => [value, ...current.filter(code => code !== value)].slice(0, 3));
   };
   const clearFilters = () => { setQuery(""); setStateFilter(""); };
+  const revealResults = () => window.requestAnimationFrame(() => document.getElementById("resultados")?.scrollIntoView({ behavior: "smooth", block: "start" }));
   const selectState = (uf: string) => {
-    setStateFilter(uf);
-    document.getElementById("resultados")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const selection = stateSelection(uf);
+    setQuery(selection.query);
+    setStateFilter(selection.uf);
+    revealResults();
+  };
+  const requestLocation = () => {
+    if (!("geolocation" in navigator)) {
+      setLocationStatus("unsupported");
+      setLocationLabel("Este navegador não disponibiliza localização.");
+      return;
+    }
+    setLocationStatus("requesting");
+    setLocationLabel("");
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        setLocationStatus("resolving");
+        resolveNearbyTerritory.mutate({ latitude: position.coords.latitude, longitude: position.coords.longitude }, {
+          onSuccess: territory => {
+            if (!territory) {
+              setLocationStatus("error");
+              setLocationLabel("Não foi possível sugerir um DDD para esta localização.");
+              return;
+            }
+            const selection = territorySelection(territory);
+            updateQuery(selection.query);
+            setStateFilter(selection.uf);
+            setLocationStatus("resolved");
+            setLocationLabel(selection.label);
+            toast.success(`DDD ${territory.ddd} sugerido para ${territory.municipalityName}.`);
+            revealResults();
+          },
+          onError: () => {
+            setLocationStatus("error");
+            setLocationLabel("Não foi possível consultar o território desta localização.");
+          },
+        });
+      },
+      error => {
+        const failure = geolocationFailure(error.code);
+        setLocationStatus(failure.status);
+        setLocationLabel(failure.label);
+      },
+      { enableHighAccuracy: false, timeout: 10_000, maximumAge: 300_000 },
+    );
   };
   const submitSearch = () => {
     const code = query.trim();
@@ -130,10 +179,12 @@ export default function Home() {
             <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end"><div><div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">01 / Encontrar</div><h2 className="font-display text-4xl tracking-[-0.05em] sm:text-5xl">Digite um lugar. <em className="font-normal text-[#f5c5a1]">Aponte o caminho.</em></h2></div><p className="max-w-[280px] text-sm leading-6 text-[#b8cec4]">Nome da cidade, estado, UF ou os dois dígitos. Se for um DDD, abrimos o seu link direto.</p></div>
             <div className="grid gap-4 rounded-[1.5rem] bg-[#f8f0df] p-3 text-[#143d36] shadow-[0_22px_60px_rgba(0,0,0,0.16)] md:grid-cols-[1fr_260px_auto] md:p-4">
               <label className="group flex min-h-[70px] items-center gap-3 rounded-xl bg-[#fffaf1] px-5 ring-1 ring-inset ring-[#ded2be] focus-within:ring-2 focus-within:ring-[#f06a4d]"><Search size={22} className="shrink-0 text-[#f06a4d]" /><span className="sr-only">Pesquisar DDD</span><input value={query} onChange={event => updateQuery(event.target.value)} onKeyDown={event => { if (event.key === "Enter") submitSearch(); }} placeholder="Ex.: Campinas, Bahia ou 21" className="w-full bg-transparent text-base font-semibold outline-none placeholder:font-normal placeholder:text-[#98a69c]" /></label>
-              <label className="relative flex min-h-[70px] items-center rounded-xl bg-[#fffaf1] px-5 ring-1 ring-inset ring-[#ded2be] focus-within:ring-2 focus-within:ring-[#f06a4d]"><span className="absolute left-5 top-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#7b9085]">Filtrar por estado</span><select value={stateFilter} onChange={event => setStateFilter(event.target.value)} className="w-full appearance-none bg-transparent pt-4 text-sm font-semibold outline-none"><option value="">Todos os estados</option>{stateOptions.map(state => <option value={state.uf} key={state.uf}>{state.name} · {state.uf}</option>)}</select><ChevronDown size={17} className="pointer-events-none absolute right-4 top-7 text-[#f06a4d]" /></label>
+              <label className="relative flex min-h-[70px] items-center rounded-xl bg-[#fffaf1] px-5 ring-1 ring-inset ring-[#ded2be] focus-within:ring-2 focus-within:ring-[#f06a4d]"><span className="absolute left-5 top-3 text-[9px] font-bold uppercase tracking-[0.18em] text-[#7b9085]">Filtrar por estado</span><select value={stateFilter} onChange={event => event.target.value ? selectState(event.target.value) : clearFilters()} className="w-full appearance-none bg-transparent pt-4 text-sm font-semibold outline-none"><option value="">Todos os estados</option>{stateOptions.map(state => <option value={state.uf} key={state.uf}>{state.name} · {state.uf}</option>)}</select><ChevronDown size={17} className="pointer-events-none absolute right-4 top-7 text-[#f06a4d]" /></label>
               <button type="button" onClick={submitSearch} className="pressable flex min-h-[70px] items-center justify-center gap-2 rounded-xl bg-[#f06a4d] px-7 text-sm font-bold text-white hover:bg-[#dd593e]">Encontrar DDD <ArrowDownRight size={18} /></button>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-xs text-[#b8cec4]"><span className="mr-1 font-semibold text-[#76998c]">Sugestões rápidas</span>{featuredCodes.map(code => <button key={code} type="button" onClick={() => updateQuery(code)} className="pressable rounded-full border border-[#4d7268] px-3 py-1.5 font-bold text-[#f8f0df] hover:border-[#f06a4d] hover:bg-[#f06a4d]">{code}</button>)}<span className="ml-1 text-[#9bb7ab]">Aceita acentos e grafias aproximadas, como “Sao Paolo”.</span></div>
+            <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-center"><button type="button" onClick={requestLocation} disabled={locationStatus === "requesting" || locationStatus === "resolving"} aria-describedby="privacidade-localizacao" className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#5c8074] bg-[#19483f] px-4 py-2 text-xs font-bold text-[#f8f0df] hover:border-[#f5c5a1] hover:bg-[#21564b] disabled:cursor-wait disabled:opacity-70"><span className="grid size-5 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36]">{locationStatus === "requesting" || locationStatus === "resolving" ? <LoaderCircle size={13} className="animate-spin" /> : <LocateFixed size={13} />}</span>{locationStatus === "requesting" ? "A aguardar permissão…" : locationStatus === "resolving" ? "A localizar território…" : "Usar a minha localização"}</button><p id="privacidade-localizacao" className="max-w-xl text-[11px] leading-5 text-[#9bb7ab]">A localização só é consultada após a sua ação para sugerir cidade, UF e DDD. As coordenadas não são guardadas.</p></div>
+            {locationLabel && <p aria-live="polite" className={`mt-3 text-xs font-semibold ${locationStatus === "resolved" ? "text-[#f5c5a1]" : "text-[#ffb3a3]"}`}>{locationLabel}</p>}
           </div>
         </section>
 
@@ -154,7 +205,7 @@ export default function Home() {
         <section id="estados" className="border-y border-[#d9d1bf] bg-[#eee5d3] py-20 lg:py-24">
           <div className="container">
             <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end"><div><div className="mb-4 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">03 / Explorar</div><h2 className="font-display max-w-[520px] text-5xl leading-[0.94] tracking-[-0.06em] text-[#143d36]">Clique no estado. <em className="font-normal text-[#f06a4d]">Abra o território.</em></h2></div><p className="max-w-[450px] text-sm leading-6 text-[#6b8177]">Cada forma do mapa representa uma UF. Ao selecionar uma, a busca mostra todos os DDDs e municípios daquele estado.</p></div>
-            <div className="rounded-[1.5rem] border border-[#cfc3b0] bg-[#fffaf1] p-5 shadow-[0_22px_50px_rgba(20,61,54,0.08)] sm:p-7"><div className="mb-5 flex items-center justify-between gap-4 border-b border-[#e3d6c0] pb-5"><span className="text-xs font-bold uppercase tracking-[0.18em] text-[#667f75]">Seleção rápida por UF</span><span className="font-display text-2xl text-[#143d36]">27 UFs</span></div><div className="flex flex-wrap gap-2">{stateOptions.map(state => <button type="button" key={state.uf} onClick={() => selectState(state.uf)} className={`pressable rounded-full border px-3 py-2 text-xs font-bold transition-colors ${stateFilter === state.uf ? "border-[#f06a4d] bg-[#f06a4d] text-white" : "border-[#cfc3b0] bg-[#fffaf1] text-[#143d36] hover:border-[#f06a4d]"}`}>{state.uf} <span className="ml-1 opacity-70">{state.dddCount}</span></button>)}</div></div>
+            <div className="rounded-[1.5rem] border border-[#cfc3b0] bg-[#fffaf1] p-5 shadow-[0_22px_50px_rgba(20,61,54,0.08)] sm:p-7"><div className="mb-5 flex items-center justify-between gap-4 border-b border-[#e3d6c0] pb-5"><span className="text-xs font-bold uppercase tracking-[0.18em] text-[#667f75]">Seleção rápida por UF</span><span className="font-display text-2xl text-[#143d36]">27 UFs</span></div><div className="flex flex-wrap gap-2">{stateOptions.map(state => <button type="button" key={state.uf} onClick={() => selectState(state.uf)} aria-pressed={stateFilter === state.uf} aria-label={`Mostrar imediatamente os DDDs de ${state.name}`} className={`pressable rounded-full border px-3 py-2 text-xs font-bold transition-colors ${stateFilter === state.uf ? "border-[#f06a4d] bg-[#f06a4d] text-white" : "border-[#cfc3b0] bg-[#fffaf1] text-[#143d36] hover:border-[#f06a4d]"}`}>{state.uf} <span className="ml-1 opacity-70">{state.dddCount}</span></button>)}</div></div>
           </div>
         </section>
 

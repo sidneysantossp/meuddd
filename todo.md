@@ -188,3 +188,6 @@
 - [x] Adicionar regressão automatizada para a rota de guia canónica e validar a resposta SSR após a correção.
 - [x] Testar todos os 19 slugs de guias editoriais por URL direta, incluindo estado HTTP, título SSR e ausência de páginas não encontradas.
 - [x] Consolidar a auditoria de guias e acrescentar cobertura automática abrangente para prevenir regressões de rota.
+- [x] Adicionar localização voluntária com consentimento explícito para sugerir automaticamente a UF e os DDDs territoriais no filtro inicial.
+- [x] Fazer com que os badges de siglas estaduais executem a pesquisa e apresentem resultados imediatamente ao serem selecionados.
+- [x] Cobrir geolocalização, consentimento, falhas de permissão e seleção direta de UF com testes automatizados e validação visual.

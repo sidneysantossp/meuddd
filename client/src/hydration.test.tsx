@@ -11,6 +11,7 @@ vi.mock("@/lib/trpc", () => ({
       states: { useQuery: () => ({ data: [], isLoading: false }) },
       search: { useQuery: () => ({ data: [], isLoading: false }) },
       recordUnmatchedSearch: { useMutation: () => ({ mutate: vi.fn() }) },
+      resolveNearbyTerritory: { useMutation: () => ({ mutate: vi.fn() }) },
       byCode: { useQuery: () => ({ data: undefined, isLoading: false }) },
       byState: { useQuery: () => ({ data: undefined, isLoading: false }) },
       byMunicipality: { useQuery: () => ({ data: undefined, isLoading: false }) },

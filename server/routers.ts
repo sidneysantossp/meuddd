@@ -34,6 +34,9 @@ export const appRouter = router({
     byMunicipality: publicProcedure
       .input(z.object({ uf: z.string().length(2), slug: z.string().min(1).max(160) }))
       .query(({ input }) => db.getMunicipalityDetails(input.uf, input.slug)),
+    resolveNearbyTerritory: publicProcedure
+      .input(z.object({ latitude: z.number().finite().min(-34).max(6), longitude: z.number().finite().min(-75).max(-29) }))
+      .mutation(({ input }) => db.resolveNearbyTerritory(input)),
     states: publicProcedure.query(() => db.listStateSummaries()),
     capitals: publicProcedure.query(() => db.listCapitalSummaries()),
   }),
