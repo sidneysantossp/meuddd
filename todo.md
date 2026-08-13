@@ -217,8 +217,8 @@
 - [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica.
 
 ## Google Analytics, llms.txt e proporção texto/HTML
-- [ ] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas, sem duplicar tags.
-- [ ] Criar /llms.txt na raiz do site para eliminar o aviso "llms.txt não encontrado" do Search Console.
-- [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
-- [ ] Otimizar a proporção texto/HTML das páginas prioritárias (reduzir código inline, expandir conteúdo textual, minificar HTML quando aplicável).
-- [ ] Validar com testes, screenshots e guardar checkpoint.
+- [x] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas, sem duplicar tags (mantido intacto pelo template SSR; consent_mode básico).
+- [x] Criar /llms.txt na raiz do site para eliminar o aviso "llms.txt não encontrado" do Search Console (formato llmstxt.org, robots.txt já permite).
+- [x] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML; 15.723 imagens quebradas já corrigidas; llms.txt). Páginas prioritárias: estado (HTML 670 KB, 20 URLs), ddd (139 KB, 67 URLs), cidade (75 KB, 5.570 URLs).
+- [x] Otimizar a proporção texto/HTML das páginas prioritárias: substituir SVGs lucide inline por entidades tipográficas nas tabelas de municípios (StatePage: ~130 KB/página; DddDetail: ~250 bytes/item), que eram o maior peso inline — 684 SVGs (224 KB) na página de SP. Aumentar texto não é escalável (5.570 cidades); ganho documentado a validar na produção após publicação.
+- [x] Validar com testes (82 a passar), TypeScript e screenshots (/estado/sp e /ddd/11); checkpoint 3850c501.
