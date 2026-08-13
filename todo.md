@@ -265,4 +265,12 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 ## Varredura SEO (pedido 2026-08-13)
 - [x] Varredura das páginas principais: meta tags (title/description/og), canonical, JSON-LD, headings, links internos/externos, texto/HTML, performance — script scripts/seo-audit.mts cobriu home, /ddd/11, /ddd/21, /estado/sp, /cidade/sp/osasco, /cidade/sp/aracariguama, /regiao/sudeste, /guia/o-que-e-ddd
 - [x] Implementar as melhorias SEO e de links identificados: og:image genérico (1440x810) em todas as páginas SSR + og:image por artigo nos guias; redirect /blog → /guias com canonical; H1 DDD enriquecido ("DDD {code}: {N} cidades atendidas") com links internos do estado; parágrafo da região com links internos para os estados do hub; canonical e og:description já existiam (varredura falhou a extração por ordem de atributos); corrigido [object Object] no texto do DDD e espaço em falta na região
-- [ ] Commit no GitHub e entrega
+- [x] Commit no GitHub e entrega (5cc9177 no github.com/sidneysantossp/meuddd, branch main; código via checkpoint 2d08030 auto-publicado em produção)
+
+## Oportunidades futuras SEO do relatório (pedido 2026-08-13)
+- [x] Sitemap XML fracionado por tipo: /sitemap.xml index dinâmico + /sitemaps/estados.xml, ddds.xml, cidades-{uf}.xml (27), guias.xml, paginas.xml, regioes.xml, imagens.xml — todos com lastmod/changefreq/priority, cache de inventário 1h, tested 86/86
+- [ ] Schema BreadcrumbList em todas as páginas principais
+- [x] Article JSON-LD nas páginas DDD, estado e cidade (headline, inLanguage pt-BR, author/publisher Organization, about territorial) — validado via curl SSR em /ddd/11, /estado/sp e /cidade/sp/aruja
+- [x] Links internos "cidades vizinhas" com parágrafo contextual nas páginas de município: seção "Outras cidades com DDD" agora abre com frase editorial nomeando as 5 primeiras cidades vizinhas com links internos (SSR validado em /cidade/sp/aruja, 25 links internos por página)
+- [ ] Preparação da medição de cobertura no Search Console (documento de referência)
+- [ ] Commit final no GitHub e entrega

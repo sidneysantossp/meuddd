@@ -22,14 +22,27 @@ function requestOrigin(req: express.Request) {
   return host.includes("meuddd.com.br") ? PUBLIC_SITE_ORIGIN : `${req.protocol}://${host}`;
 }
 
-function sitemapXml(paths: string[], origin: string) {
-  const entries = paths.map(path => `<url><loc>${new URL(path, origin).toString()}</loc></url>`).join("");
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</urlset>`;
+const LASTMOD = "2026-08-13";
+
+function sitemapXml(entries: { path: string; priority?: string; changefreq?: string }[], origin: string) {
+  const blocks = entries
+    .map(({ path, priority = "0.8", changefreq = "weekly" }) => `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${LASTMOD}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`)
+    .join("");
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${blocks}</urlset>`;
 }
 
 function sitemapIndexXml(paths: string[], origin: string) {
-  const entries = paths.map(path => `<sitemap><loc>${new URL(path, origin).toString()}</loc></sitemap>`).join("");
+  const entries = paths.map(path => `<sitemap><loc>${new URL(path, origin).toString()}</loc><lastmod>${LASTMOD}</lastmod></sitemap>`).join("");
   return `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</sitemapindex>`;
+}
+
+/** Inventário de sitemap em cache (1 hora) para não sobrecarregar a base em cada pedido do Googlebot. */
+let inventoryCache: { data: Awaited<ReturnType<typeof listSitemapInventory>> | null; at: number } = { data: null, at: 0 };
+async function cachedInventory(): Promise<Awaited<ReturnType<typeof listSitemapInventory>>> {
+  if (inventoryCache.data && Date.now() - inventoryCache.at < 3_600_000) return inventoryCache.data;
+  const data = await listSitemapInventory().catch(() => null);
+  inventoryCache = { data, at: Date.now() };
+  return data!;
 }
 
 function escapeXml(value: string) {
@@ -68,30 +81,42 @@ export function createApp() {
     const origin = requestOrigin(req);
     res.type("text/plain").send(`User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
   });
-  app.get("/sitemap.xml", (req, res) => {
+  app.get("/sitemap.xml", async (req, res) => {
     const origin = requestOrigin(req);
-    res.type("application/xml").send(sitemapIndexXml(["/sitemaps/estados.xml", "/sitemaps/ddds.xml", "/sitemaps/cidades.xml", "/sitemaps/guias.xml", "/sitemaps/regioes.xml", "/sitemaps/institucional.xml", "/sitemaps/imagens.xml"], origin));
+    const inventory = await cachedInventory();
+    const cityKinds = inventory ? Object.keys(inventory.citiesByUf).sort().map(uf => `/sitemaps/cidades-${uf}.xml`) : ["/sitemaps/cidades.xml"];
+    res.type("application/xml").send(sitemapIndexXml(["/sitemaps/guias.xml", "/sitemaps/paginas.xml", ...cityKinds, "/sitemaps/estados.xml", "/sitemaps/ddds.xml", "/sitemaps/regioes.xml", "/sitemaps/imagens.xml"], origin));
   });
   app.get("/feed.xml", (req, res) => res.type("application/rss+xml").send(rssXml(requestOrigin(req))));
   app.get("/sitemaps/:kind.xml", async (req, res, next) => {
     try {
-      const inventory = await listSitemapInventory();
+      const origin = requestOrigin(req);
+      const inventory = await cachedInventory();
       const kind = req.params.kind;
       if (kind === "cidades") {
-        const cityMaps = Object.keys(inventory.citiesByUf).sort().map(uf => `/sitemaps/cidades-${uf}.xml`);
-        return res.type("application/xml").send(sitemapIndexXml(cityMaps, requestOrigin(req)));
+        const cityMaps = inventory ? Object.keys(inventory.citiesByUf).sort().map(uf => `/sitemaps/cidades-${uf}.xml`) : [];
+        return res.type("application/xml").send(sitemapIndexXml(cityMaps, origin));
       }
       const cityMatch = kind.match(/^cidades-([a-z]{2})$/);
-      const selected = kind === "estados" ? inventory.states
-        : kind === "ddds" ? inventory.ddds
-          : kind === "guias" ? inventory.guides
-            : kind === "regioes" ? regionHubs.map(region => `/regiao/${region.slug}`)
-              : kind === "institucional" ? INSTITUTIONAL_PATHS
-            : cityMatch ? inventory.citiesByUf[cityMatch[1]] ?? null
-              : null;
-      if (kind === "imagens") return res.type("application/xml").send(imageSitemapXml(requestOrigin(req)));
+      type SitemapEntry = { path: string; priority?: string; changefreq?: string };
+      const selected: SitemapEntry[] | null = kind === "estados"
+        ? inventory?.states.map(path => ({ path, priority: "0.9" })) ?? null
+        : kind === "ddds"
+          ? inventory?.ddds.map(path => ({ path, priority: "0.9" })) ?? null
+          : kind === "guias"
+            ? inventory?.guides.map(path => ({ path, priority: path.startsWith("/guia/") ? "0.8" : "1.0", changefreq: "weekly" })) ?? null
+            : kind === "paginas"
+              ? [{ path: "/", priority: "1.0" }, { path: "/gerador", priority: "0.7", changefreq: "monthly" }, { path: "/capitais", priority: "0.8" }, ...INSTITUTIONAL_PATHS.filter(path => path !== "/capitais").map(path => ({ path, priority: "0.5", changefreq: "monthly" }))]
+              : kind === "regioes"
+                ? regionHubs.map(region => ({ path: `/regiao/${region.slug}` as string, priority: "0.8", changefreq: "monthly" }))
+                : kind === "institucional"
+                  ? INSTITUTIONAL_PATHS.map(path => ({ path, priority: "0.5", changefreq: "monthly" }))
+                  : cityMatch
+                    ? (inventory?.citiesByUf[cityMatch[1]] ?? []).map(path => ({ path, priority: "0.8" }))
+                    : null;
+      if (kind === "imagens") return res.type("application/xml").send(imageSitemapXml(origin));
       if (!selected) return res.status(404).type("text/plain").send("Sitemap não encontrado.");
-      res.type("application/xml").send(sitemapXml(selected, requestOrigin(req)));
+      res.type("application/xml").send(sitemapXml(selected, origin));
     } catch (error) {
       next(error);
     }

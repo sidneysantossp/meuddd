@@ -62,3 +62,50 @@ Nota extra: erro devserver residual "MunicipalityTabs.tsx 42:182" é de 20:49 (a
 
 ## Validação final (21:48)
 Todos os screenshots confirmados OK: /ddd/11 mostra "DDD 11: 64 cidades atendidas" com link interno "São Paulo" no texto; /regiao/sudeste mostra "abrangendo Espírito Santo, Minas Gerais, Rio de Janeiro e São Paulo" com links internos; /guia/o-que-e-ddd renderiza corretamente (a URL anterior da varredura estava errada); /blog redireciona para /guias. Nota: o /blog screenshot mostra /guias renderizado com redirect client-side — o SSR do /blog já serve canonical /guias. Falta: checkpoint + commit GitHub.
+
+## Plano implementação oportunidades SEO (13/08 ~22:00)
+Descobertas-chave para implementação:
+1. **JSON-LD/Breadcrumbs JÁ EXISTEM!** O prefetch.ts já injeta `breadcrumbs()` + CollectionPage/WebPage/FAQPage JSON-LD em /ddd, /estado, /cidade, /regiao. Logo BreadcrumbList e Article JSON-LD já estão cobertos em grande parte. Verificar o que falta: Article @type nas páginas DDD/estado (usam CollectionPage — manter? artigo editorial → adicionar Article em /ddd e /estado), e LocalBusiness para guias (Article já existe).
+2. **Ficheiros estáticos públicos**: client/public/ contém llms.txt, ads.txt, assets/ → servidos via express.static em production (server/index.ts linhas 13-23: `app.use(express.static(staticPath))` onde staticPath = dist/public). Sitemap XML pode ser ficheiro estático gerado por script (scripts/generate-sitemaps.mts) → escreve em client/public/sitemap*.xml e dist é rebuildado no build? ATENÇÃO: vite build copia publicDir → dist. Melhor abordagem: gerar sitemaps staticamente em client/public/sitemap-*.xml + sitemap.xml index, e script para regenerar quando dados mudarem. Usar SITE_URL=https://www.meuddd.com.br, lastmod do dia.
+3. **Cidades vizinhas**: MunicipalityPage.tsx já tem secção de vizinhança? Verificar "cidades próximas"/IntentCluster. Município vizinho: usar ibgeCode vizinhos — dados disponíveis no catálogo (municipalities do DDD podem ser do mesmo estado). Implementar parágrafo contextual "Municípios vizinhos" com links.
+4. **Medição Search Console**: documento /home/ubuntu/relatorio-variacao... (feito). Criar docs/SEARCH-CONSOLE-COBERANCA.md no repo? Sim — documento de referência de medição.
+5. Estrutura JSON-LD atual por tipo (prefetch.ts):
+   - /ddd/: BreadcrumbList + CollectionPage (DefinedTerm) — adicionar Article (headline, datePublished, inLanguage pt-BR, about AdministrativeArea)
+   - /estado/: BreadcrumbList + CollectionPage (AdministrativeArea com population) + FAQPage — adicionar Article
+   - /cidade/: BreadcrumbList + WebPage (City com geo/population) + FAQPage + DefinedTermSet (tabs) — OK
+   - /regiao/: BreadcrumbList + CollectionPage — OK
+   - /guia/: Article — já existe
+   - / (home): a verificar (WebSite + ItemList?)
+6. Site base: site = "Meu DDD"; canonical https://www.meuddd.com.br.
+7. Sitemap index: sitemap.xml → sitemap-ddd.xml, sitemap-estado.xml, sitemap-cidade.xml (5.570 URLs — Google aceita até 50k), sitemap-guia.xml. Incluir também /gerador, /guias, guias principais, home, region hubs.
+
+## Diagnóstico JSON-LD existente (confirmado via SSR local, 13/08)
+- BreadcrumbList JÁ EXISTE em /ddd, /estado, /cidade, /regiao, /gerador, /guias/:slug, institucionais (função `breadcrumbs()` em prefetch.ts).
+- /cidade: WebPage+City (geo, population) + FAQPage + DefinedTermSet (tabs) + BreadcrumbList — completo.
+- /guia: Article + BreadcrumbList — completo.
+- /gerador: WebPage + SoftwareApplication + FAQPage + BreadcrumbList — completo.
+- Home (/): WebSite + Organization com @graph (URLs absolutas https://www.meuddd.com.br) — mas sem ItemList dos hubs/DDDs populares.
+- /estado: CollectionPage (AdministrativeArea+population) + FAQPage + BreadcrumbList — falta Article.
+- /ddd: CollectionPage (DefinedTerm) + BreadcrumbList — falta Article.
+- /regiao: CollectionPage + BreadcrumbList — ok; pode ter Article.
+- O SSR injecta 2 blocos ld+json: um com @graph global (Organization+WebSite, urls absolutas) e um por página (prefetch jsonLd).
+- Home jsonLd atual tem url "/" relativo — ok no SSR.
+- Falta implementar: (1) Article JSON-LD em /ddd e /estado; (2) sitemaps XML fracionados estáticos em client/public/; (3) parágrafo "cidades vizinhas" com links no MunicipalityPage/LocalityContext; (4) docs/SEARCH-CONSOLE.md para medição.
+
+## Estado do trabalho "Oportunidades futuras SEO" (13/08 22:15)
+
+### Concluído nesta fase
+1. Article JSON-LD adicionado em prefetch.ts (linhas 93, 101, 126) para /ddd, /estado e /cidade (headline, inLanguage pt-BR, author/publisher Organization, about territorial, datePublished/Modified 2026-08-01). Validação curl SSR: /ddd/11 tem [Organization, BreadcrumbList, Article, CollectionPage]; /estado/sp [Organization, BreadcrumbList, CollectionPage, FAQPage, Article]; /cidade/sp/aruja [Organization, BreadcrumbList, WebPage, FAQPage, Article, DefinedTermSet].
+2. Sitemaps: o projeto JÁ tinha sistema dinâmico em server/_core/app.ts (/sitemap.xml index + /sitemaps/:kind.xml: estados, ddds, cidades, cidades-{uf}, guias, regioes, institucional, imagens). ENRIQUECI com: LASTMOD="2026-08-13", <lastmod>/<changefreq>/<priority> por URL, prioridade 0.9 estados/ddds, 1.0 home, kind novo "paginas" (/, /gerador 0.7, /capitais, institucionais 0.5), cache inventário 1h (cachedInventory), guias com priority 1.0 na raiz e 0.8 por guia. seoDiscovery.test.ts atualizado (86/86 testes verdes).
+3. Decisão tomada: REMOVIDOS client/public/sitemaps/ (estáticos) e scripts/generateSitemaps.mts — o sistema dinâmico enriquecido substitui (evita 5.570 URLs estáticas pesadas e mantém-se sempre atualizado).
+4. Revertidos os app.use("/sitemaps") express.static adicionados a ssrStatic.ts e vite.ts (desnecessários).
+
+### Pendente
+- [ ] Adicionar parágrafo editorial contextual "Cidades vizinhas" na página de município (enriquecer o <p> da seção "Outras cidades com DDD" em MunicipalityPage.tsx linha 73 com texto contextual e links). NOTA: relatedMunicipalities (12 máx, mesma UF) já vem no retorno do byMunicipality; a seção já existe e é SSR (validado via curl /cidade/sp/aruja com 12 links cidade/sp/*).
+- [ ] docs/SEARCH-CONSOLE.md (medição de cobertura).
+- [ ] Checkpoint final + commit no GitHub (remote "github" → sidneysantossp/meuddd, branch main).
+
+### Verificações feitas
+- curl /sitemap.xml com Host: www.meuddd.com.br → URLs https://www.meuddd.com.br canônicas; robots.txt dinâmico aponta Sitemap ${origin}/sitemap.xml.
+- /sitemaps/cidades-sp.xml 200 com lastmod/changefreq/priority.
+- pnpm test: 35 arquivos, 86 testes verdes.
