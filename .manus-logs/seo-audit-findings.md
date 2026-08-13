@@ -126,3 +126,40 @@ FEITO:
 - Pendente: substituir os blocos details nas páginas DddDetail.tsx (linha ~207: section "Perguntas frequentes"), verificar /estado (StateDetail ou similar — procurar onde renderiza faqs do buildStateFaq), e MunicipalityPage.tsx (linha 74: section "Sobre o DDD de {municipality.name}" com details). Depois: testes (86 verdes, deve manter), tsc, screenshot, commit GitHub, checkpoint.
 - Validação FAQ DDD já feita antes: FAQPage JSON-LD em /ddd/11 com 10 perguntas (commit f482ad5, checkpoint b707d92f).
 - Estado git: remote "github" → sidneysantossp/meuddd, main; author "Sidney Santos".
+
+## Diagnóstico texto/HTML (13/08 ~23:00) — pedido pendente no todo.md
+Scripts de análise em /tmp/: textRatio.mts (scripts/textRatio.mts no projeto), analyze_html.py, analyze_html2.py, analyze_html3.py, analyze_prod.py.
+
+Medições em PRODUÇÃO (dddbrazil-jbfgdfkn.manus.space):
+| Página | HTML total | gzip | texto | ratio |
+|---|---|---|---|---|
+| /ddd/11 | 108 KB | 14.5 KB | 3.8 KB | 3.56% |
+| /estado/sp | 547.5 KB | 43.6 KB | 14.9 KB | 2.73% |
+| /cidade/sp/aruja | ~464 KB (dev) | — | 3.8 KB | 0.83% (dev, inflado por runtime inline 367 KB que em produção NÃO existe) |
+| /gerador | 414 KB (dev) | — | 5.0 KB | 1.20% |
+
+Composição em produção /ddd/11: scripts totais 40 KB (ld+json, gtag, plausible, RQ_STATE 27.5 KB); root 72.6 KB (gzip 8.3 KB).
+/estado/sp: root 305.7 KB (gzip 18.2 KB) — causa principal: 645 links de municípios com markup <Link> completo (href, aria, setas, classes) inline.
+
+Nota: 5.238 páginas do Search Console com ratio baixa = páginas de estado (muitos municípios: SP 645, MG 853, etc.) + páginas de DDD (64 links) + lista de todas as cidades no /estado (5.570). O "rest: 111511 bytes" em dev inclui o manus-runtime inline (367 KB) que NÃO existe em produção.
+
+Otimizações candidatas (em dev com SSR):
+1. Estado: reduzir markup por linha de município na lista (seta → caractere, remover aria/span redundantes, encurtar classes) — já antes reduzi setas SVG→char; posso compactar mais: usar markup mínimo <a href= x >N</a> com classes partilhadas via CSS global em vez de 15 classes inline por item.
+2. DDD: links das cidades (64) já razoáveis; verificar setas &#8599; inline repetidas.
+3. A tabela de municípios do estado usa o mesmo componente de card por cidade; converter para markup compacto (div flex + <a>).
+4. RQ_STATE 27.5 KB: inevitável (hydrate), OK.
+
+Estado atual do pedido: analisado; pendente implementar otimizações e marcar todo.md.
+
+## Otimização texto/HTML (13/08 ~23:30) — em curso
+FEITO (commits locais, ainda não comitados):
+- client/src/pages/StatePage.tsx linha ~33: lista de municípios usa .mun-grid + .mun-item (classes globais no index.css, via @layer components no fim do ficheiro). data-ddd no item.
+- client/src/pages/DddDetail.tsx linha ~184: card de municípios usa .ddd-mun-grid + .ddd-mun-item; data-uf, data-capital="1".
+- client/src/index.css: adicionado @layer components com .mun-grid/.mun-item e .ddd-mun-grid/.ddd-mun-item (no fim do ficheiro).
+- Validação local: 86 testes verdes, tsc OK. Dev ratio melhorou: /estado/sp 1.25%→1.56% (dev, 1024→825 KB), /ddd/11 0.77%→0.83% (500→470 KB). Nota: em dev o runtime inline (367 KB) distorce; em produção o HTML real é ~113 KB (/ddd/11) e 547 KB (/estado/sp).
+- Produção ainda NÃO tem o novo markup (class="mun-grid" ausente em /tmp/prod_sp2.txt) — deploy auto pode estar com build antigo OU o checkpoint ainda não foi guardado (auto-publish acontece no checkpoint).
+- Scripts de análise: /tmp/analyze_*.py, scripts/textRatio.mts no projeto.
+- Estado do checkpoint: último salvo c8739267 (acordeão FAQ); otimização texto/HTML ainda não em checkpoint.
+
+PENDENTE: guardar checkpoint (publica), re-medir produção, commit git (main) com todo.md marcado, entregar ao user.
+Nota de decisão: ratio ~3.5% no SSR é normal para SPAs SSR (JS bundle + RQ_STATE são inevitáveis); a otimização reduz o markup inline repetido. Os itens 222/223 do todo.md referem-se às 5.238 páginas com baixa proporção — ação aplicável: compactar markup das listas (feito para estado/DDD; página de busca /e listagem geral de cidades pode ser analisada depois).
