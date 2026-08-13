@@ -201,3 +201,6 @@
 - [x] Analisar a planilha de 15.723 imagens internas reportadas como quebradas e identificar a causa comum por URL, rota e tipo de ativo.
 - [x] Corrigir em escala a entrega ou referência das imagens internas afetadas no domínio publicado.
 - [x] Validar uma amostra representativa de imagens, imagens de dados estruturados e o build/SSR após a correção.
+- [x] Diagnosticar o erro 500 reportado pelo Search Console para `https://www.meuddd.com.br/manus-storage/meu-ddd-kit-de-marca-2026_a8693944.zip` (página de imprensa, kit de marca): o proxy `manus-storage` falha no ambiente de produção (500) para a chave antiga, embora o objeto no S3 ainda exista.
+- [x] Corrigir a entrega do ZIP do kit de marca: republicou-se o ativo como URL estática estável e atualizou-se a referência na página de imprensa, com regressão que bloqueia a chave antiga.
+- [x] Validar o download do kit: entrega final 200, pacote íntegro após redirecionamento, regressão automatizada da página de imprensa e tipagem aprovadas; resta a republicação do checkpoint para refletir a correção no domínio publicado.

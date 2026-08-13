@@ -62,7 +62,7 @@ function PressResources() {
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#f6b96c]">Recursos editoriais</p>
         <h2 id="brand-kit-title" className="mt-3 font-display text-3xl tracking-[-0.04em]">Kit de marca</h2>
         <p className="mt-4 max-w-xl text-sm leading-7 text-[#d9e4dc]">O pacote contém a marca gráfica em SVG, uma paleta essencial, uma apresentação curta e orientações de atribuição editorial.</p>
-        <a href="/manus-storage/meu-ddd-kit-de-marca-2026_a8693944.zip" download className="pressable mt-6 inline-flex items-center gap-2 rounded-full bg-[#f06a4d] px-5 py-3 text-sm font-bold text-[#fffaf1] hover:bg-[#ff7a5f]">Baixar kit de marca <Download size={16} /></a>
+        <a href="/manus-storage/meu-ddd-kit-de-marca-2026_ee73e833.zip" download className="pressable mt-6 inline-flex items-center gap-2 rounded-full bg-[#f06a4d] px-5 py-3 text-sm font-bold text-[#fffaf1] hover:bg-[#ff7a5f]">Baixar kit de marca <Download size={16} /></a>
       </section>
       <section className="rounded-3xl border border-[#ded5c4] bg-[#fffaf1] p-7 sm:p-8" aria-labelledby="platform-stats-title">
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#e8533a]">Atualizado em agosto de 2026</p>
