@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { geolocationFailure, stateSelection, territorySelection } from "./territoryDiscovery";
+import { coordinatesForPrecision, geolocationFailure, precisionDescription, stateSelection, territorySelection } from "./territoryDiscovery";
 
 describe("descoberta territorial", () => {
   it("limpa a consulta e aplica a UF ao selecionar um badge", () => {
@@ -19,5 +19,11 @@ describe("descoberta territorial", () => {
       status: "denied",
       label: "Permissão não concedida. Você pode pesquisar por cidade, UF ou DDD.",
     });
+  });
+
+  it("reduz a precisão da coordenada antes da sugestão quando o modo aproximado é escolhido", () => {
+    expect(coordinatesForPrecision({ latitude: -23.5531, longitude: -46.6321 }, "approximate")).toEqual({ latitude: -23.5, longitude: -46.75 });
+    expect(coordinatesForPrecision({ latitude: -23.5531, longitude: -46.6321 }, "exact")).toEqual({ latitude: -23.5531, longitude: -46.6321 });
+    expect(precisionDescription("approximate")).toContain("reduzimos a precisão");
   });
 });

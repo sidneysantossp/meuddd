@@ -21,12 +21,21 @@ import {
 } from "lucide-react";
 import { BrazilStateMap } from "@/components/BrazilStateMap";
 import { PUBLIC_NAV_ITEMS, PublicNavbar } from "@/components/PublicNavbar";
-import { geolocationFailure, stateSelection, territorySelection, type LocationStatus } from "@/lib/territoryDiscovery";
+import { coordinatesForPrecision, geolocationFailure, precisionDescription, stateSelection, territorySelection, type LocationPrecision, type LocationStatus } from "@/lib/territoryDiscovery";
+import { addRecentDdd, readRecentDdds, saveRecentDdds } from "@/lib/recentDdds";
 
 export const HERO_TITLE_CLASS = "reveal reveal-delay-1 font-display text-[clamp(3.7rem,8vw,7.2rem)] font-semibold leading-[0.88] tracking-[0.012em] text-[#143d36]";
 import { trpc } from "@/lib/trpc";
 
 const featuredCodes = ["11", "21", "31", "41", "51", "61", "71", "81", "91"];
+const popularDdds = [
+  { code: "63", territory: "Tocantins" },
+  { code: "96", territory: "Amapá" },
+  { code: "82", territory: "Alagoas" },
+  { code: "68", territory: "Acre" },
+  { code: "86", territory: "Piauí" },
+  { code: "61", territory: "Distrito Federal e entorno" },
+];
 const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
 
 export { PUBLIC_NAV_ITEMS as MAIN_NAV_ITEMS };
@@ -61,8 +70,9 @@ export default function Home() {
   const [query, setQuery] = useState(firstQuery);
   const [stateFilter, setStateFilter] = useState(firstUf);
   const [mobileNav, setMobileNav] = useState(false);
-  const [recent, setRecent] = useState(["11", "21", "61"]);
+  const [recent, setRecent] = useState<string[]>([]);
   const [locationStatus, setLocationStatus] = useState<LocationStatus>("idle");
+  const [locationPrecision, setLocationPrecision] = useState<LocationPrecision>("approximate");
   const [locationLabel, setLocationLabel] = useState("");
   const states = trpc.ddd.states.useQuery();
   const searchInput = useMemo(() => ({ query: query.trim() || undefined, uf: stateFilter || undefined }), [query, stateFilter]);
@@ -94,12 +104,24 @@ export default function Home() {
     recordUnmatchedSearch.mutate({ query: attemptedQuery, uf: stateFilter || undefined });
   }, [query, stateFilter, results.length, search.isLoading, search.isSuccess, recordUnmatchedSearch]);
 
+  useEffect(() => {
+    setRecent(readRecentDdds(window.localStorage));
+  }, []);
+
+  useEffect(() => {
+    saveRecentDdds(window.localStorage, recent);
+  }, [recent]);
+
   const copy = (value: string, message: string) => navigator.clipboard.writeText(value).then(() => toast.success(message)).catch(() => toast.error("Não foi possível copiar agora."));
   const updateQuery = (value: string) => {
     setQuery(value);
-    if (/^\d{2}$/.test(value)) setRecent(current => [value, ...current.filter(code => code !== value)].slice(0, 3));
+    if (/^\d{2}$/.test(value)) setRecent(current => addRecentDdd(current, value));
   };
   const clearFilters = () => { setQuery(""); setStateFilter(""); };
+  const clearRecent = () => {
+    setRecent([]);
+    toast.message("Histórico local removido deste dispositivo.");
+  };
   const clearLocationSuggestion = () => {
     clearFilters();
     setLocationStatus("idle");
@@ -124,7 +146,8 @@ export default function Home() {
     navigator.geolocation.getCurrentPosition(
       position => {
         setLocationStatus("resolving");
-        resolveNearbyTerritory.mutate({ latitude: position.coords.latitude, longitude: position.coords.longitude }, {
+        const coordinates = coordinatesForPrecision({ latitude: position.coords.latitude, longitude: position.coords.longitude }, locationPrecision);
+        resolveNearbyTerritory.mutate(coordinates, {
           onSuccess: territory => {
             if (!territory) {
               setLocationStatus("error");
@@ -135,7 +158,7 @@ export default function Home() {
             updateQuery(selection.query);
             setStateFilter(selection.uf);
             setLocationStatus("resolved");
-            setLocationLabel(selection.label);
+            setLocationLabel(`${selection.label} ${locationPrecision === "approximate" ? "A sugestão usa uma localização aproximada." : "A sugestão usa a localização mais precisa disponibilizada pelo dispositivo."}`);
             toast.success(`DDD ${territory.ddd} sugerido para ${territory.municipalityName}.`);
             revealResults();
           },
@@ -190,18 +213,20 @@ export default function Home() {
               <button type="button" onClick={submitSearch} className="pressable flex min-h-[70px] items-center justify-center gap-2 rounded-xl bg-[#f06a4d] px-7 text-sm font-bold text-white hover:bg-[#dd593e]">Encontrar DDD <ArrowDownRight size={18} /></button>
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-2 text-xs text-[#b8cec4]"><span className="mr-1 font-semibold text-[#76998c]">Sugestões rápidas</span>{featuredCodes.map(code => <button key={code} type="button" onClick={() => updateQuery(code)} className="pressable rounded-full border border-[#4d7268] px-3 py-1.5 font-bold text-[#f8f0df] hover:border-[#f06a4d] hover:bg-[#f06a4d]">{code}</button>)}<span className="ml-1 text-[#9bb7ab]">Aceita acentos e grafias aproximadas, como “Sao Paolo”.</span></div>
-            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center"><button type="button" onClick={requestLocation} disabled={isLocating} aria-describedby="privacidade-localizacao" className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#5c8074] bg-[#19483f] px-4 py-2 text-xs font-bold text-[#f8f0df] hover:border-[#f5c5a1] hover:bg-[#21564b] disabled:cursor-wait disabled:opacity-80"><span className={`relative grid size-6 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36] ${isLocating ? "location-target" : ""}`}>{isLocating ? <LoaderCircle size={14} className="animate-spin" aria-hidden="true" /> : <LocateFixed size={14} aria-hidden="true" />}</span>{locationStatus === "requesting" ? "A aguardar permissão…" : locationStatus === "resolving" ? "A localizar território…" : "Usar a minha localização"}</button>{locationStatus === "resolved" && <button type="button" onClick={clearLocationSuggestion} className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#799a8d] px-4 py-2 text-xs font-bold text-[#d6e5de] hover:border-[#f5c5a1] hover:bg-[#21564b] hover:text-[#fffaf1]"><X size={14} aria-hidden="true" /> Limpar sugestão</button>}<p id="privacidade-localizacao" className="max-w-xl text-[11px] leading-5 text-[#9bb7ab]">A localização só é consultada após a sua ação para sugerir cidade, UF e DDD. As coordenadas não são guardadas.</p></div>
+            <div className="mt-4 flex flex-col gap-3"><div className="flex flex-col gap-3 sm:flex-row sm:items-center"><button type="button" onClick={requestLocation} disabled={isLocating} aria-describedby="privacidade-localizacao" className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#5c8074] bg-[#19483f] px-4 py-2 text-xs font-bold text-[#f8f0df] hover:border-[#f5c5a1] hover:bg-[#21564b] disabled:cursor-wait disabled:opacity-80"><span className={`relative grid size-6 place-items-center rounded-full bg-[#f5c5a1] text-[#143d36] ${isLocating ? "location-target" : ""}`}>{isLocating ? <LoaderCircle size={14} className="animate-spin" aria-hidden="true" /> : <LocateFixed size={14} aria-hidden="true" />}</span>{locationStatus === "requesting" ? "A aguardar permissão…" : locationStatus === "resolving" ? "A localizar território…" : `Usar localização ${locationPrecision === "approximate" ? "aproximada" : "mais precisa"}`}</button>{locationStatus === "resolved" && <button type="button" onClick={clearLocationSuggestion} className="pressable inline-flex w-fit items-center gap-2 rounded-full border border-[#799a8d] px-4 py-2 text-xs font-bold text-[#d6e5de] hover:border-[#f5c5a1] hover:bg-[#21564b] hover:text-[#fffaf1]"><X size={14} aria-hidden="true" /> Limpar sugestão</button>}</div><fieldset className="flex flex-wrap gap-2" aria-label="Precisão da localização"><legend className="sr-only">Precisão da localização</legend>{(["approximate", "exact"] as const).map(precision => <button key={precision} type="button" disabled={isLocating} aria-pressed={locationPrecision === precision} onClick={() => setLocationPrecision(precision)} className={`pressable rounded-full border px-3 py-1.5 text-[11px] font-bold ${locationPrecision === precision ? "border-[#f5c5a1] bg-[#f5c5a1] text-[#143d36]" : "border-[#5c8074] text-[#c8dbd2] hover:border-[#f5c5a1]"}`}>{precision === "approximate" ? "Aproximada (recomendada)" : "Mais precisa"}</button>)}</fieldset><p id="privacidade-localizacao" className="max-w-xl text-[11px] leading-5 text-[#9bb7ab]">{precisionDescription(locationPrecision)} A localização só é consultada após a sua ação para sugerir cidade, UF e DDD. As coordenadas não são guardadas.</p></div>
             {isLocating && <div role="status" aria-live="polite" className="location-progress mt-3 flex max-w-xl items-center gap-3 rounded-xl border border-[#41695e] bg-[#19483f] px-4 py-3 text-xs text-[#d6e5de]"><span className="location-progress-bars" aria-hidden="true"><i /><i /><i /></span><span><strong className="block text-[#fffaf1]">{locationStatus === "requesting" ? "A solicitar acesso à localização" : "A identificar o território mais próximo"}</strong><span className="mt-0.5 block text-[#abc5ba]">A pesquisa será atualizada assim que o DDD for sugerido.</span></span></div>}
             {locationLabel && <p aria-live="polite" className={`mt-3 text-xs font-semibold ${locationStatus === "resolved" ? "text-[#f5c5a1]" : "text-[#ffb3a3]"}`}>{locationLabel}</p>}
           </div>
         </section>
+
+        <section aria-labelledby="ddds-populares" className="border-y border-[#d9d1bf] bg-[#f5ead7] py-14 lg:py-16"><div className="container"><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><div><div className="mb-3 text-[10px] font-bold uppercase tracking-[0.22em] text-[#f06a4d]">Acesso rápido</div><h2 id="ddds-populares" className="font-display text-4xl tracking-[-0.05em] text-[#143d36]">DDDs mais procurados</h2></div><p className="max-w-md text-sm leading-6 text-[#6b8177]">Atalhos baseados em consultas históricas agregadas do Meu DDD. Não representam dados pessoais.</p></div><div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{popularDdds.map((item, index) => <button type="button" key={item.code} onClick={() => { updateQuery(item.code); revealResults(); }} className="pressable group flex items-center justify-between rounded-2xl border border-[#d9d1bf] bg-[#fffaf1] px-5 py-4 text-left hover:border-[#f06a4d] hover:shadow-[0_12px_28px_rgba(20,61,54,0.09)]"><span><span className="block text-[10px] font-bold uppercase tracking-[0.18em] text-[#7b9085]">0{index + 1} / DDD</span><strong className="mt-1 block font-display text-3xl leading-none text-[#f06a4d]">{item.code}</strong><span className="mt-2 block text-xs font-semibold text-[#5d756c]">{item.territory}</span></span><ArrowDownRight className="text-[#143d36] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5" size={18} /></button>)}</div></div></section>
 
         <section id="resultados" className="container scroll-mt-8 py-20 lg:py-24">
           <div className="grid gap-12 lg:grid-cols-[230px_1fr] lg:gap-16">
             <aside className="lg:sticky lg:top-8 lg:self-start">
               <div className="mb-8 flex items-center justify-between lg:block"><div><div className="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-[#f06a4d]">02 / Resultados</div><h2 className="font-display text-3xl leading-none tracking-[-0.04em] text-[#143d36]">O Brasil<br /><em className="font-normal">responde.</em></h2></div><div className="grid size-11 place-items-center rounded-full bg-[#e9deca] text-[#143d36] lg:mt-7"><SlidersHorizontal size={18} /></div></div>
               <div className="hidden border-l border-[#d9d1bf] pl-5 text-xs leading-5 text-[#6b8177] lg:block"><p>Encontramos <strong className="text-[#143d36]">{results.length}</strong> códigos que combinam com a busca.</p><p className="mt-3">Dados reais, organizados por território.</p></div>
-              {recent.length > 0 && <div className="mt-8 border-t border-[#d9d1bf] pt-5"><div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8b9b91]"><History size={13} /> Consultados</div><div className="flex flex-wrap gap-2 lg:flex-col">{recent.map(code => <Link key={code} href={`/ddd/${code}`} className="flex items-center justify-between rounded-lg bg-[#eee5d3] px-3 py-2 text-left text-xs font-bold text-[#143d36] hover:bg-[#f5c5a1]"><span>DDD {code}</span><ArrowUpRight size={13} /></Link>)}</div></div>}
+              {recent.length > 0 && <div className="mt-8 border-t border-[#d9d1bf] pt-5"><div className="mb-3 flex items-center justify-between gap-2"><div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.16em] text-[#8b9b91]"><History size={13} /> Consultados</div><button type="button" onClick={clearRecent} className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#f06a4d] hover:text-[#143d36]">Limpar</button></div><p className="mb-3 text-[10px] leading-4 text-[#7b9085]">Guardado apenas neste dispositivo.</p><div className="flex flex-wrap gap-2 lg:flex-col">{recent.map(code => <Link key={code} href={`/ddd/${code}`} className="flex items-center justify-between rounded-lg bg-[#eee5d3] px-3 py-2 text-left text-xs font-bold text-[#143d36] hover:bg-[#f5c5a1]"><span>DDD {code}</span><ArrowUpRight size={13} /></Link>)}</div></div>}
             </aside>
             <div>
               <div className="mb-6 flex flex-col justify-between gap-4 border-b border-[#d9d1bf] pb-5 sm:flex-row sm:items-center"><p className="text-sm text-[#6b8177]" aria-live="polite"><strong className="text-[#143d36]">{search.isLoading ? "…" : results.length}</strong> resultados encontrados</p>{(query || stateFilter) && <button type="button" onClick={clearFilters} className="pressable inline-flex items-center gap-2 self-start text-xs font-bold text-[#f06a4d] hover:text-[#143d36]">Limpar busca <X size={14} /></button>}</div>

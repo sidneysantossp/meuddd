@@ -1,4 +1,5 @@
 export type LocationStatus = "idle" | "requesting" | "resolving" | "resolved" | "denied" | "unsupported" | "error";
+export type LocationPrecision = "approximate" | "exact";
 
 export type NearbyTerritorySuggestion = {
   municipalityName: string;
@@ -18,6 +19,21 @@ export function territorySelection(territory: NearbyTerritorySuggestion) {
     uf: territory.uf,
     label: `Localização aproximada: ${territory.municipalityName} · ${territory.uf}. Sugerimos o DDD ${territory.ddd}.`,
   };
+}
+
+export function coordinatesForPrecision(coordinates: { latitude: number; longitude: number }, precision: LocationPrecision) {
+  if (precision === "exact") return coordinates;
+  const grid = 0.25;
+  return {
+    latitude: Math.round(coordinates.latitude / grid) * grid,
+    longitude: Math.round(coordinates.longitude / grid) * grid,
+  };
+}
+
+export function precisionDescription(precision: LocationPrecision) {
+  return precision === "approximate"
+    ? "Aproximada: reduzimos a precisão da coordenada antes da consulta."
+    : "Mais precisa: usamos a coordenada recebida apenas para sugerir o território.";
 }
 
 export function geolocationFailure(code: number) {

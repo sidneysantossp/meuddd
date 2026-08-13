@@ -194,3 +194,7 @@
 - [x] Exibir uma animação de carregamento acessível enquanto a geolocalização é obtida e resolvida.
 - [x] Adicionar um botão para limpar a sugestão territorial e reiniciar a pesquisa manual.
 - [x] Cobrir o carregamento e a limpeza da sugestão com testes automatizados e validação visual.
+- [x] Adicionar opção de localização aproximada, com explicação clara sobre a precisão e consentimento voluntário.
+- [x] Criar uma secção de DDDs populares para acesso rápido na página inicial usando dados públicos já disponíveis na plataforma.
+- [x] Guardar no dispositivo um histórico limitado de pesquisas recentes, com acesso rápido e opção de limpeza.
+- [x] Cobrir privacidade, localização aproximada, DDDs populares e histórico local com testes automatizados e validação visual.

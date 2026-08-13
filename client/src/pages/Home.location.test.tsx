@@ -56,8 +56,9 @@ describe("feedback de localização na página inicial", () => {
       root.render(<Home />);
     });
 
-    const locateButton = Array.from(container.querySelectorAll("button")).find(button => button.textContent?.includes("Usar a minha localização"));
+    const locateButton = Array.from(container.querySelectorAll("button")).find(button => button.textContent?.includes("Usar localização aproximada"));
     expect(locateButton).toBeTruthy();
+    expect(Array.from(container.querySelectorAll("button")).find(button => button.textContent?.includes("Aproximada (recomendada)"))?.getAttribute("aria-pressed")).toBe("true");
 
     await act(async () => locateButton?.click());
 
