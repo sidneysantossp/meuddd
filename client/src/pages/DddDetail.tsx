@@ -20,6 +20,36 @@ export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string;
     title: "DDD 96 é de qual estado?",
     summary: "O DDD 96 é utilizado no Amapá. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
   },
+  "82": {
+    state: "Alagoas",
+    uf: "AL",
+    title: "DDD 82 é de qual estado?",
+    summary: "O DDD 82 é utilizado em Alagoas. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+  "68": {
+    state: "Acre",
+    uf: "AC",
+    title: "DDD 68 é de qual estado?",
+    summary: "O DDD 68 é utilizado no Acre. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+  "86": {
+    state: "Piauí",
+    uf: "PI",
+    title: "DDD 86 é de qual estado?",
+    summary: "O DDD 86 é utilizado no Piauí. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+  "27": {
+    state: "Espírito Santo",
+    uf: "ES",
+    title: "DDD 27 é de qual estado?",
+    summary: "O DDD 27 é utilizado no Espírito Santo. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+  "61": {
+    state: "Distrito Federal",
+    uf: "DF",
+    title: "DDD 61 é de onde?",
+    summary: "O DDD 61 atende o Distrito Federal e localidades de Goiás. Nesta página, consulte os municípios abrangidos e confirme a localidade antes de fazer uma ligação.",
+  },
 };
 
 export default function DddDetail() {

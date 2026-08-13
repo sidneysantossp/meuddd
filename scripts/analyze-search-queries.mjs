@@ -62,6 +62,11 @@ function cluster(query) {
   return "Cauda longa territorial e outras consultas";
 }
 
+function extractDddCode(query) {
+  const match = normalize(query).match(/\bddd\s?(\d{2})\b/);
+  return match?.[1] ?? null;
+}
+
 function aggregate(rows, keyFn) {
   const groups = new Map();
   for (const row of rows) {
@@ -151,6 +156,20 @@ const topQueries = [...normalizedRows]
   .sort((left, right) => right.impressions - left.impressions)
   .slice(0, 30);
 
+const dddPriorities = aggregate(
+  normalizedRows.filter(row => extractDddCode(row.key)),
+  row => extractDddCode(row.key),
+)
+  .map(row => ({
+    ...row,
+    code: row.key,
+    queries: normalizedRows
+      .filter(source => extractDddCode(source.key) === row.key)
+      .sort((left, right) => right.impressions - left.impressions)
+      .map(source => ({ query: source.query, impressions: source.impressions, clicks: source.clicks, position: source.position })),
+  }))
+  .sort((left, right) => right.impressions - left.impressions);
+
 const positionBuckets = [
   { label: "1–3", min: 1, max: 3 },
   { label: "4–6", min: 4, max: 6 },
@@ -171,6 +190,7 @@ const report = {
   clusters,
   positionBuckets,
   topQueries,
+  dddPriorities,
   opportunities,
   brand: {
     clicks: exactBrand.reduce((sum, row) => sum + row.clicks, 0),

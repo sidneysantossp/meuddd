@@ -1,4 +1,5 @@
 {
+  "source": "Consultas.csv",
   "rows": {
     "original": 1000,
     "normalized": 928
@@ -69,6 +70,2745 @@
       "ctr": 0.0010443864229765013,
       "position": 15.490000000000002,
       "cluster": "Consulta genérica de DDD"
+    }
+  ],
+  "positionBuckets": [
+    {
+      "label": "1–3",
+      "min": 1,
+      "max": 3,
+      "queries": 8,
+      "clicks": 104,
+      "impressions": 1253,
+      "ctr": 0.08300079808459697
+    },
+    {
+      "label": "4–6",
+      "min": 4,
+      "max": 6,
+      "queries": 20,
+      "clicks": 78,
+      "impressions": 2608,
+      "ctr": 0.0299079754601227
+    },
+    {
+      "label": "7–10",
+      "min": 7,
+      "max": 10,
+      "queries": 303,
+      "clicks": 252,
+      "impressions": 92240,
+      "ctr": 0.0027320034692107547
+    },
+    {
+      "label": "11–20",
+      "min": 11,
+      "max": 20,
+      "queries": 274,
+      "clicks": 26,
+      "impressions": 61048,
+      "ctr": 0.00042589437819420784
+    },
+    {
+      "label": "20+",
+      "min": 20.00001,
+      "max": null,
+      "queries": 93,
+      "clicks": 9,
+      "impressions": 7124,
+      "ctr": 0.0012633352049410444
+    }
+  ],
+  "topQueries": [
+    {
+      "key": "ddd 63",
+      "clicks": 0,
+      "impressions": 16034,
+      "positionSum": 139499.04,
+      "rows": 2,
+      "ctr": 0,
+      "position": 8.700202070599975,
+      "query": "ddd 63",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 63 qual estado",
+      "clicks": 0,
+      "impressions": 8725,
+      "positionSum": 86028.5,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.86,
+      "query": "ddd 63 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd 96",
+      "clicks": 0,
+      "impressions": 4826,
+      "positionSum": 49852.58,
+      "rows": 1,
+      "ctr": 0,
+      "position": 10.33,
+      "query": "ddd 96",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 82",
+      "clicks": 0,
+      "impressions": 4050,
+      "positionSum": 47628,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.76,
+      "query": "ddd 82",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 68",
+      "clicks": 0,
+      "impressions": 3982,
+      "positionSum": 43841.82,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.01,
+      "query": "ddd 68",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd63",
+      "clicks": 0,
+      "impressions": 3899,
+      "positionSum": 33570.39,
+      "rows": 1,
+      "ctr": 0,
+      "position": 8.61,
+      "query": "ddd63",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "gerador de telefone",
+      "clicks": 22,
+      "impressions": 3511,
+      "positionSum": 28544.430000000004,
+      "rows": 1,
+      "ctr": 0.006266021076616349,
+      "position": 8.13,
+      "query": "gerador de telefone",
+      "cluster": "Gerador de números"
+    },
+    {
+      "key": "ddd 68 qual estado",
+      "clicks": 1,
+      "impressions": 3297,
+      "positionSum": 35211.96,
+      "rows": 1,
+      "ctr": 0.00030330603579011223,
+      "position": 10.68,
+      "query": "ddd 68 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd 96 qual estado",
+      "clicks": 0,
+      "impressions": 3170,
+      "positionSum": 32841.2,
+      "rows": 1,
+      "ctr": 0,
+      "position": 10.36,
+      "query": "ddd 96 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd 82 qual estado",
+      "clicks": 0,
+      "impressions": 2852,
+      "positionSum": 32569.84,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.42,
+      "query": "ddd 82 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "gerador de numero de celular",
+      "clicks": 66,
+      "impressions": 2751,
+      "positionSum": 19351.68,
+      "rows": 2,
+      "ctr": 0.023991275899672846,
+      "position": 7.034416575790622,
+      "query": "gerador de numero de celular",
+      "cluster": "Gerador de números"
+    },
+    {
+      "key": "gerador de numero de telefone",
+      "clicks": 38,
+      "impressions": 2191,
+      "positionSum": 18300.31,
+      "rows": 2,
+      "ctr": 0.01734367868553172,
+      "position": 8.352492012779553,
+      "query": "gerador de numero de telefone",
+      "cluster": "Gerador de números"
+    },
+    {
+      "key": "ddd de alagoas",
+      "clicks": 0,
+      "impressions": 1969,
+      "positionSum": 20969.850000000002,
+      "rows": 1,
+      "ctr": 0,
+      "position": 10.65,
+      "query": "ddd de alagoas",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd",
+      "clicks": 2,
+      "impressions": 1915,
+      "positionSum": 29663.350000000002,
+      "rows": 1,
+      "ctr": 0.0010443864229765013,
+      "position": 15.490000000000002,
+      "query": "ddd",
+      "cluster": "Consulta genérica de DDD"
+    },
+    {
+      "key": "ddd tocantins",
+      "clicks": 1,
+      "impressions": 1819,
+      "positionSum": 15043.13,
+      "rows": 1,
+      "ctr": 0.0005497526113249038,
+      "position": 8.27,
+      "query": "ddd tocantins",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "82 ddd",
+      "clicks": 0,
+      "impressions": 1677,
+      "positionSum": 19050.719999999998,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.359999999999998,
+      "query": "82 ddd",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 86 qual estado",
+      "clicks": 0,
+      "impressions": 1617,
+      "positionSum": 15652.56,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.68,
+      "query": "ddd 86 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd alagoas",
+      "clicks": 0,
+      "impressions": 1595,
+      "positionSum": 15902.150000000001,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.97,
+      "query": "ddd alagoas",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "de onde e o ddd 82",
+      "clicks": 0,
+      "impressions": 1593,
+      "positionSum": 17121.49,
+      "rows": 3,
+      "ctr": 0,
+      "position": 10.747953546767107,
+      "query": "de onde é o ddd 82",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd82 qual estado",
+      "clicks": 0,
+      "impressions": 1560,
+      "positionSum": 15943.2,
+      "rows": 1,
+      "ctr": 0,
+      "position": 10.22,
+      "query": "ddd82 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "gerador de celular",
+      "clicks": 9,
+      "impressions": 1525,
+      "positionSum": 10004,
+      "rows": 1,
+      "ctr": 0.005901639344262295,
+      "position": 6.56,
+      "query": "gerador de celular",
+      "cluster": "Gerador de números"
+    },
+    {
+      "key": "ddd 82 e de qual estado",
+      "clicks": 0,
+      "impressions": 1430,
+      "positionSum": 16673.8,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.66,
+      "query": "ddd 82 é de qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd acre",
+      "clicks": 0,
+      "impressions": 1325,
+      "positionSum": 12362.25,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.33,
+      "query": "ddd acre",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 27 qual estado",
+      "clicks": 0,
+      "impressions": 1318,
+      "positionSum": 14603.44,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.08,
+      "query": "ddd 27 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "ddd 61 qual estado",
+      "clicks": 0,
+      "impressions": 1288,
+      "positionSum": 12377.679999999998,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.61,
+      "query": "ddd 61 qual estado",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "gerador de numeros de celular",
+      "clicks": 22,
+      "impressions": 1286,
+      "positionSum": 10961.550000000001,
+      "rows": 2,
+      "ctr": 0.017107309486780714,
+      "position": 8.523755832037326,
+      "query": "gerador de números de celular",
+      "cluster": "Gerador de números"
+    },
+    {
+      "key": "lista de numeros de celular validos",
+      "clicks": 15,
+      "impressions": 1265,
+      "positionSum": 8639.95,
+      "rows": 1,
+      "ctr": 0.011857707509881422,
+      "position": 6.830000000000001,
+      "query": "lista de números de celular válidos",
+      "cluster": "Números válidos e simulação"
+    },
+    {
+      "key": "ddd 63 e de onde",
+      "clicks": 0,
+      "impressions": 1245,
+      "positionSum": 11087.15,
+      "rows": 3,
+      "ctr": 0,
+      "position": 8.905341365461847,
+      "query": "ddd 63 é de onde",
+      "cluster": "Consulta e descoberta de DDD"
+    },
+    {
+      "key": "63 ddd",
+      "clicks": 0,
+      "impressions": 1235,
+      "positionSum": 12325.300000000001,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.98,
+      "query": "63 ddd",
+      "cluster": "Cauda longa territorial e outras consultas"
+    },
+    {
+      "key": "ddd 82 e de onde",
+      "clicks": 0,
+      "impressions": 1230,
+      "positionSum": 12905.35,
+      "rows": 3,
+      "ctr": 0,
+      "position": 10.492154471544715,
+      "query": "ddd 82 é de onde",
+      "cluster": "Consulta e descoberta de DDD"
+    }
+  ],
+  "dddPriorities": [
+    {
+      "key": "63",
+      "clicks": 1,
+      "impressions": 37917,
+      "positionSum": 344650.91000000015,
+      "rows": 47,
+      "ctr": 0.00002637339451960862,
+      "position": 9.089614420972127,
+      "code": "63",
+      "queries": [
+        {
+          "query": "ddd 63",
+          "impressions": 16034,
+          "clicks": 0,
+          "position": 8.700202070599975
+        },
+        {
+          "query": "ddd 63 qual estado",
+          "impressions": 8725,
+          "clicks": 0,
+          "position": 9.86
+        },
+        {
+          "query": "ddd63",
+          "impressions": 3899,
+          "clicks": 0,
+          "position": 8.61
+        },
+        {
+          "query": "ddd 63 é de onde",
+          "impressions": 1245,
+          "clicks": 0,
+          "position": 8.905341365461847
+        },
+        {
+          "query": "de onde é o ddd 63",
+          "impressions": 822,
+          "clicks": 0,
+          "position": 8.990717761557178
+        },
+        {
+          "query": "ddd63 é de onde",
+          "impressions": 777,
+          "clicks": 0,
+          "position": 9.39
+        },
+        {
+          "query": "ddd 63 é de qual estado",
+          "impressions": 642,
+          "clicks": 0,
+          "position": 10.12
+        },
+        {
+          "query": "ddd 63 é de qual região",
+          "impressions": 553,
+          "clicks": 0,
+          "position": 7.880000000000001
+        },
+        {
+          "query": "ddd 63 cidades",
+          "impressions": 449,
+          "clicks": 1,
+          "position": 6.67
+        },
+        {
+          "query": "ddd 63 cidade e estado",
+          "impressions": 436,
+          "clicks": 0,
+          "position": 8.29
+        },
+        {
+          "query": "da onde é o ddd 63",
+          "impressions": 352,
+          "clicks": 0,
+          "position": 9.655454545454546
+        },
+        {
+          "query": "ddd 63 é da onde",
+          "impressions": 342,
+          "clicks": 0,
+          "position": 8.526140350877194
+        },
+        {
+          "query": "ddd 63 qual cidade",
+          "impressions": 278,
+          "clicks": 0,
+          "position": 10.31
+        },
+        {
+          "query": "ddd 63 de onde é",
+          "impressions": 266,
+          "clicks": 0,
+          "position": 10.08
+        },
+        {
+          "query": "ddd 63 é de qual estado do brasil",
+          "impressions": 227,
+          "clicks": 0,
+          "position": 9.41
+        },
+        {
+          "query": "o ddd 63 é de onde",
+          "impressions": 225,
+          "clicks": 0,
+          "position": 8.98
+        },
+        {
+          "query": "o ddd 63 é de qual estado",
+          "impressions": 223,
+          "clicks": 0,
+          "position": 9.96
+        },
+        {
+          "query": "ddd 63 é de qual cidade",
+          "impressions": 170,
+          "clicks": 0,
+          "position": 11.2
+        },
+        {
+          "query": "ddd 63 fica em qual cidade",
+          "impressions": 167,
+          "clicks": 0,
+          "position": 9.72
+        },
+        {
+          "query": "onde é o ddd 63",
+          "impressions": 162,
+          "clicks": 0,
+          "position": 8.728518518518518
+        },
+        {
+          "query": "ddd 63 estado",
+          "impressions": 151,
+          "clicks": 0,
+          "position": 15.52
+        },
+        {
+          "query": "de onde é o ddd 63 qual estado",
+          "impressions": 136,
+          "clicks": 0,
+          "position": 9.11
+        },
+        {
+          "query": "de qual estado é o ddd 63",
+          "impressions": 116,
+          "clicks": 0,
+          "position": 9.12
+        },
+        {
+          "query": "ddd 63 é de que estado",
+          "impressions": 113,
+          "clicks": 0,
+          "position": 12.92
+        },
+        {
+          "query": "ddd 63 qual estado e cidade",
+          "impressions": 99,
+          "clicks": 0,
+          "position": 7.99
+        },
+        {
+          "query": "ddd 63 de onde",
+          "impressions": 97,
+          "clicks": 0,
+          "position": 7.64
+        },
+        {
+          "query": "codigo ddd 63",
+          "impressions": 79,
+          "clicks": 0,
+          "position": 12.06
+        },
+        {
+          "query": "qual o ddd 63",
+          "impressions": 77,
+          "clicks": 0,
+          "position": 7.9399999999999995
+        },
+        {
+          "query": "ddd 63 é de onde qual estado",
+          "impressions": 77,
+          "clicks": 0,
+          "position": 9.3
+        },
+        {
+          "query": "qual ddd 63",
+          "impressions": 76,
+          "clicks": 0,
+          "position": 7.710000000000001
+        },
+        {
+          "query": "ddd 63 tocantins",
+          "impressions": 71,
+          "clicks": 0,
+          "position": 7.700000000000001
+        },
+        {
+          "query": "ddd 63 cidade",
+          "impressions": 61,
+          "clicks": 0,
+          "position": 24.08
+        },
+        {
+          "query": "de onde é o ddd 63 no brasil",
+          "impressions": 60,
+          "clicks": 0,
+          "position": 8.08
+        },
+        {
+          "query": "qual é o ddd 63",
+          "impressions": 58,
+          "clicks": 0,
+          "position": 9
+        },
+        {
+          "query": "codigo ddd 63 qual cidade",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 7.4
+        },
+        {
+          "query": "cidades ddd 63",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 8.65
+        },
+        {
+          "query": "ddd 63 é qual estado",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 8.93
+        },
+        {
+          "query": "de onde é ddd 63",
+          "impressions": 56,
+          "clicks": 0,
+          "position": 8.05
+        },
+        {
+          "query": "o ddd 63 é da onde",
+          "impressions": 56,
+          "clicks": 0,
+          "position": 8.64
+        },
+        {
+          "query": "qual estado é o ddd 63",
+          "impressions": 55,
+          "clicks": 0,
+          "position": 8.78
+        },
+        {
+          "query": "de qual cidade é o ddd 63",
+          "impressions": 54,
+          "clicks": 0,
+          "position": 8.2
+        },
+        {
+          "query": "ddd 63 da onde é",
+          "impressions": 49,
+          "clicks": 0,
+          "position": 10.08
+        },
+        {
+          "query": "qual estado ddd 63",
+          "impressions": 46,
+          "clicks": 0,
+          "position": 9.87
+        },
+        {
+          "query": "ddd 63 onde é",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 8
+        },
+        {
+          "query": "de que estado é o ddd 63",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 9.17
+        },
+        {
+          "query": "o ddd 63 é de qual cidade",
+          "impressions": 41,
+          "clicks": 0,
+          "position": 7.759999999999999
+        },
+        {
+          "query": "estado ddd 63",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 8.55
+        }
+      ]
+    },
+    {
+      "key": "82",
+      "clicks": 0,
+      "impressions": 20322,
+      "positionSum": 226063.1199999999,
+      "rows": 51,
+      "ctr": 0,
+      "position": 11.124058655644125,
+      "code": "82",
+      "queries": [
+        {
+          "query": "ddd 82",
+          "impressions": 4050,
+          "clicks": 0,
+          "position": 11.76
+        },
+        {
+          "query": "ddd 82 qual estado",
+          "impressions": 2852,
+          "clicks": 0,
+          "position": 11.42
+        },
+        {
+          "query": "de onde é o ddd 82",
+          "impressions": 1593,
+          "clicks": 0,
+          "position": 10.747953546767107
+        },
+        {
+          "query": "ddd82 qual estado",
+          "impressions": 1560,
+          "clicks": 0,
+          "position": 10.22
+        },
+        {
+          "query": "ddd 82 é de qual estado",
+          "impressions": 1430,
+          "clicks": 0,
+          "position": 11.66
+        },
+        {
+          "query": "ddd 82 é de onde",
+          "impressions": 1230,
+          "clicks": 0,
+          "position": 10.492154471544715
+        },
+        {
+          "query": "ddd 82 é de qual cidade",
+          "impressions": 1107,
+          "clicks": 0,
+          "position": 10.99
+        },
+        {
+          "query": "ddd82",
+          "impressions": 629,
+          "clicks": 0,
+          "position": 12.48
+        },
+        {
+          "query": "ddd 82 qual cidade",
+          "impressions": 528,
+          "clicks": 0,
+          "position": 11.39
+        },
+        {
+          "query": "ddd 82 é da onde",
+          "impressions": 524,
+          "clicks": 0,
+          "position": 11.150458015267176
+        },
+        {
+          "query": "ddd82 é de onde",
+          "impressions": 483,
+          "clicks": 0,
+          "position": 10.43
+        },
+        {
+          "query": "da onde é o ddd 82",
+          "impressions": 314,
+          "clicks": 0,
+          "position": 10.542579617834395
+        },
+        {
+          "query": "o ddd 82 é de onde",
+          "impressions": 299,
+          "clicks": 0,
+          "position": 11.13
+        },
+        {
+          "query": "de onde é ddd 82",
+          "impressions": 282,
+          "clicks": 0,
+          "position": 10.684432624113475
+        },
+        {
+          "query": "ddd 82 é nordeste",
+          "impressions": 248,
+          "clicks": 0,
+          "position": 8.44
+        },
+        {
+          "query": "ddd 82 é de qual estado do brasil",
+          "impressions": 211,
+          "clicks": 0,
+          "position": 11.78
+        },
+        {
+          "query": "ddd 82 estado",
+          "impressions": 207,
+          "clicks": 0,
+          "position": 10.93
+        },
+        {
+          "query": "ddd 82 é de qual região",
+          "impressions": 170,
+          "clicks": 0,
+          "position": 11.14
+        },
+        {
+          "query": "onde é o ddd 82",
+          "impressions": 160,
+          "clicks": 0,
+          "position": 10.432500000000001
+        },
+        {
+          "query": "ddd 82 é de que estado",
+          "impressions": 158,
+          "clicks": 0,
+          "position": 11.44
+        },
+        {
+          "query": "ddd 82 de onde é",
+          "impressions": 154,
+          "clicks": 0,
+          "position": 10.89
+        },
+        {
+          "query": "de onde é o ddd 82 no brasil",
+          "impressions": 131,
+          "clicks": 0,
+          "position": 10.79
+        },
+        {
+          "query": "ddd 82 qual estado e cidade",
+          "impressions": 111,
+          "clicks": 0,
+          "position": 11.28
+        },
+        {
+          "query": "ddd 82 cidade",
+          "impressions": 103,
+          "clicks": 0,
+          "position": 11.6
+        },
+        {
+          "query": "o ddd 82 é de qual estado",
+          "impressions": 96,
+          "clicks": 0,
+          "position": 10.42
+        },
+        {
+          "query": "qual estado é o ddd 82",
+          "impressions": 91,
+          "clicks": 0,
+          "position": 11.75
+        },
+        {
+          "query": "ddd 82 onde é",
+          "impressions": 89,
+          "clicks": 0,
+          "position": 10.09
+        },
+        {
+          "query": "o ddd 82 é da onde",
+          "impressions": 89,
+          "clicks": 0,
+          "position": 11.33
+        },
+        {
+          "query": "qual ddd 82",
+          "impressions": 88,
+          "clicks": 0,
+          "position": 11.26
+        },
+        {
+          "query": "de onde é o ddd 82 qual estado",
+          "impressions": 85,
+          "clicks": 0,
+          "position": 11.33
+        },
+        {
+          "query": "qual o ddd 82",
+          "impressions": 85,
+          "clicks": 0,
+          "position": 11.34
+        },
+        {
+          "query": "qual é o ddd 82",
+          "impressions": 83,
+          "clicks": 0,
+          "position": 10.8
+        },
+        {
+          "query": "ddd 82 é de que cidade",
+          "impressions": 82,
+          "clicks": 0,
+          "position": 13.44
+        },
+        {
+          "query": "ddd 82 é qual estado",
+          "impressions": 77,
+          "clicks": 0,
+          "position": 11.01
+        },
+        {
+          "query": "ddd 82 brasil",
+          "impressions": 76,
+          "clicks": 0,
+          "position": 9.04
+        },
+        {
+          "query": "ddd82 fica em qual cidade",
+          "impressions": 73,
+          "clicks": 0,
+          "position": 1.16
+        },
+        {
+          "query": "de qual estado é o ddd 82",
+          "impressions": 69,
+          "clicks": 0,
+          "position": 11.46
+        },
+        {
+          "query": "ddd82 qual cidade",
+          "impressions": 65,
+          "clicks": 0,
+          "position": 12.26
+        },
+        {
+          "query": "ddd 82 cidades",
+          "impressions": 63,
+          "clicks": 0,
+          "position": 9.63
+        },
+        {
+          "query": "onde é ddd 82",
+          "impressions": 61,
+          "clicks": 0,
+          "position": 10.38
+        },
+        {
+          "query": "qual estado ddd 82",
+          "impressions": 58,
+          "clicks": 0,
+          "position": 11.91
+        },
+        {
+          "query": "ddd 82 da onde é",
+          "impressions": 56,
+          "clicks": 0,
+          "position": 10.5
+        },
+        {
+          "query": "ddd82 cidade e estado",
+          "impressions": 54,
+          "clicks": 0,
+          "position": 9.59
+        },
+        {
+          "query": "de que estado é o ddd 82",
+          "impressions": 49,
+          "clicks": 0,
+          "position": 11.529999999999998
+        },
+        {
+          "query": "estado ddd 82",
+          "impressions": 48,
+          "clicks": 0,
+          "position": 10.58
+        },
+        {
+          "query": "ddd 82 alagoas",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 9.44
+        },
+        {
+          "query": "de onde é o ddd82",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 10.41
+        },
+        {
+          "query": "ddd 82 de qual estado",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 10.52
+        },
+        {
+          "query": "codigo ddd 82",
+          "impressions": 41,
+          "clicks": 0,
+          "position": 10.49
+        },
+        {
+          "query": "ddd 82 é de onde qual estado",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 12.03
+        },
+        {
+          "query": "ddd 82 e de qual estado brasileiro",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 11.95
+        }
+      ]
+    },
+    {
+      "key": "96",
+      "clicks": 0,
+      "impressions": 10947,
+      "positionSum": 112208.03999999998,
+      "rows": 14,
+      "ctr": 0,
+      "position": 10.250117840504245,
+      "code": "96",
+      "queries": [
+        {
+          "query": "ddd 96",
+          "impressions": 4826,
+          "clicks": 0,
+          "position": 10.33
+        },
+        {
+          "query": "ddd 96 qual estado",
+          "impressions": 3170,
+          "clicks": 0,
+          "position": 10.36
+        },
+        {
+          "query": "ddd96",
+          "impressions": 959,
+          "clicks": 0,
+          "position": 10.06
+        },
+        {
+          "query": "de onde é o ddd 96",
+          "impressions": 435,
+          "clicks": 0,
+          "position": 10.228000000000002
+        },
+        {
+          "query": "ddd 96 é de qual estado",
+          "impressions": 359,
+          "clicks": 0,
+          "position": 11.63
+        },
+        {
+          "query": "ddd 96 qual cidade",
+          "impressions": 354,
+          "clicks": 0,
+          "position": 8.75
+        },
+        {
+          "query": "ddd 96 é de onde",
+          "impressions": 326,
+          "clicks": 0,
+          "position": 9.741595092024541
+        },
+        {
+          "query": "ddd 96 é de qual cidade",
+          "impressions": 126,
+          "clicks": 0,
+          "position": 10.25
+        },
+        {
+          "query": "da onde é o ddd 96",
+          "impressions": 113,
+          "clicks": 0,
+          "position": 8.77
+        },
+        {
+          "query": "ddd 96 é da onde",
+          "impressions": 112,
+          "clicks": 0,
+          "position": 9.45
+        },
+        {
+          "query": "qual ddd 96",
+          "impressions": 46,
+          "clicks": 0,
+          "position": 9.13
+        },
+        {
+          "query": "ddd 96 de onde é",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 9.91
+        },
+        {
+          "query": "de onde é ddd 96",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 9.9
+        },
+        {
+          "query": "o ddd 96 é de qual estado",
+          "impressions": 38,
+          "clicks": 0,
+          "position": 10.16
+        }
+      ]
+    },
+    {
+      "key": "68",
+      "clicks": 1,
+      "impressions": 9385,
+      "positionSum": 99865.22,
+      "rows": 17,
+      "ctr": 0.00010655301012253596,
+      "position": 10.640939797549281,
+      "code": "68",
+      "queries": [
+        {
+          "query": "ddd 68",
+          "impressions": 3982,
+          "clicks": 0,
+          "position": 11.01
+        },
+        {
+          "query": "ddd 68 qual estado",
+          "impressions": 3297,
+          "clicks": 1,
+          "position": 10.68
+        },
+        {
+          "query": "ddd 68 é de qual estado",
+          "impressions": 424,
+          "clicks": 0,
+          "position": 10
+        },
+        {
+          "query": "ddd68",
+          "impressions": 326,
+          "clicks": 0,
+          "position": 10.1
+        },
+        {
+          "query": "ddd 68 é de onde",
+          "impressions": 293,
+          "clicks": 0,
+          "position": 9.58
+        },
+        {
+          "query": "de onde é o ddd 68",
+          "impressions": 234,
+          "clicks": 0,
+          "position": 9.934444444444447
+        },
+        {
+          "query": "ddd 68 é de qual cidade",
+          "impressions": 231,
+          "clicks": 0,
+          "position": 9.8
+        },
+        {
+          "query": "ddd 68 qual cidade",
+          "impressions": 107,
+          "clicks": 0,
+          "position": 9.06
+        },
+        {
+          "query": "da onde é o ddd 68",
+          "impressions": 89,
+          "clicks": 0,
+          "position": 9.44
+        },
+        {
+          "query": "ddd 68 é da onde",
+          "impressions": 71,
+          "clicks": 0,
+          "position": 8.96
+        },
+        {
+          "query": "o ddd 68 é de qual estado",
+          "impressions": 63,
+          "clicks": 0,
+          "position": 10.27
+        },
+        {
+          "query": "ddd 68 de onde é",
+          "impressions": 48,
+          "clicks": 0,
+          "position": 11.35
+        },
+        {
+          "query": "ddd 68 cidade",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 9.51
+        },
+        {
+          "query": "ddd 68 onde fica",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 13.319999999999999
+        },
+        {
+          "query": "ddd 68 estado",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 9.04
+        },
+        {
+          "query": "ddd 68 é de qual estado do brasil",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 9.79
+        },
+        {
+          "query": "qual ddd 68",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 9.1
+        }
+      ]
+    },
+    {
+      "key": "86",
+      "clicks": 0,
+      "impressions": 3988,
+      "positionSum": 43767.5,
+      "rows": 12,
+      "ctr": 0,
+      "position": 10.974799398194584,
+      "code": "86",
+      "queries": [
+        {
+          "query": "ddd 86 qual estado",
+          "impressions": 1617,
+          "clicks": 0,
+          "position": 9.68
+        },
+        {
+          "query": "ddd86",
+          "impressions": 654,
+          "clicks": 0,
+          "position": 11.19
+        },
+        {
+          "query": "ddd 86 é de qual estado",
+          "impressions": 490,
+          "clicks": 0,
+          "position": 11.51
+        },
+        {
+          "query": "ddd 86",
+          "impressions": 390,
+          "clicks": 0,
+          "position": 13.72
+        },
+        {
+          "query": "ddd 86 estado",
+          "impressions": 197,
+          "clicks": 0,
+          "position": 12.12
+        },
+        {
+          "query": "ddd 86 é de onde",
+          "impressions": 177,
+          "clicks": 0,
+          "position": 12.180000000000001
+        },
+        {
+          "query": "de onde é o ddd 86",
+          "impressions": 120,
+          "clicks": 0,
+          "position": 10.85
+        },
+        {
+          "query": "ddd 86 é de qual cidade",
+          "impressions": 102,
+          "clicks": 0,
+          "position": 10.92
+        },
+        {
+          "query": "o ddd 86 é de qual estado",
+          "impressions": 90,
+          "clicks": 0,
+          "position": 12.84
+        },
+        {
+          "query": "ddd 86 é da onde",
+          "impressions": 61,
+          "clicks": 0,
+          "position": 12.52
+        },
+        {
+          "query": "da onde é o ddd 86",
+          "impressions": 52,
+          "clicks": 0,
+          "position": 10.349999999999998
+        },
+        {
+          "query": "de onde é ddd 86",
+          "impressions": 38,
+          "clicks": 0,
+          "position": 10.24
+        }
+      ]
+    },
+    {
+      "key": "27",
+      "clicks": 0,
+      "impressions": 3138,
+      "positionSum": 39559.619999999995,
+      "rows": 9,
+      "ctr": 0,
+      "position": 12.60663479923518,
+      "code": "27",
+      "queries": [
+        {
+          "query": "ddd 27 qual estado",
+          "impressions": 1318,
+          "clicks": 0,
+          "position": 11.08
+        },
+        {
+          "query": "ddd27 é de onde",
+          "impressions": 520,
+          "clicks": 0,
+          "position": 11.39
+        },
+        {
+          "query": "ddd 27 é de qual estado",
+          "impressions": 419,
+          "clicks": 0,
+          "position": 10.98
+        },
+        {
+          "query": "ddd27 qual estado",
+          "impressions": 322,
+          "clicks": 0,
+          "position": 10.78
+        },
+        {
+          "query": "ddd 27",
+          "impressions": 271,
+          "clicks": 0,
+          "position": 19.84
+        },
+        {
+          "query": "o ddd 27 é de qual estado",
+          "impressions": 87,
+          "clicks": 0,
+          "position": 12.39
+        },
+        {
+          "query": "ddd 27 é de onde",
+          "impressions": 84,
+          "clicks": 0,
+          "position": 20.57
+        },
+        {
+          "query": "ddd27",
+          "impressions": 77,
+          "clicks": 0,
+          "position": 21.35
+        },
+        {
+          "query": "codigo ddd 27",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 28.380000000000003
+        }
+      ]
+    },
+    {
+      "key": "61",
+      "clicks": 0,
+      "impressions": 2289,
+      "positionSum": 26508.6,
+      "rows": 9,
+      "ctr": 0,
+      "position": 11.58086500655308,
+      "code": "61",
+      "queries": [
+        {
+          "query": "ddd 61 qual estado",
+          "impressions": 1288,
+          "clicks": 0,
+          "position": 9.61
+        },
+        {
+          "query": "ddd61 qual estado",
+          "impressions": 339,
+          "clicks": 0,
+          "position": 11.18
+        },
+        {
+          "query": "ddd 61 é de qual estado",
+          "impressions": 165,
+          "clicks": 0,
+          "position": 12.39
+        },
+        {
+          "query": "ddd 61",
+          "impressions": 146,
+          "clicks": 0,
+          "position": 18.26
+        },
+        {
+          "query": "ddd 61 qual cidade",
+          "impressions": 137,
+          "clicks": 0,
+          "position": 12.93
+        },
+        {
+          "query": "ddd 61 é de que estado",
+          "impressions": 70,
+          "clicks": 0,
+          "position": 12.64
+        },
+        {
+          "query": "ddd 61 estado",
+          "impressions": 56,
+          "clicks": 0,
+          "position": 15.86
+        },
+        {
+          "query": "o ddd 61 é de qual estado",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 11.64
+        },
+        {
+          "query": "ddd61",
+          "impressions": 41,
+          "clicks": 0,
+          "position": 37.54
+        }
+      ]
+    },
+    {
+      "key": "94",
+      "clicks": 0,
+      "impressions": 2186,
+      "positionSum": 28901.5,
+      "rows": 10,
+      "ctr": 0,
+      "position": 13.221180237877402,
+      "code": "94",
+      "queries": [
+        {
+          "query": "ddd 94 qual estado",
+          "impressions": 881,
+          "clicks": 0,
+          "position": 13.56
+        },
+        {
+          "query": "ddd 94 é de qual estado",
+          "impressions": 424,
+          "clicks": 0,
+          "position": 11.949999999999998
+        },
+        {
+          "query": "ddd 94",
+          "impressions": 227,
+          "clicks": 0,
+          "position": 20.95
+        },
+        {
+          "query": "ddd94 cidade e estado",
+          "impressions": 188,
+          "clicks": 0,
+          "position": 9.2
+        },
+        {
+          "query": "ddd 94 qual cidade",
+          "impressions": 152,
+          "clicks": 0,
+          "position": 10.38
+        },
+        {
+          "query": "ddd94 qual cidade",
+          "impressions": 106,
+          "clicks": 0,
+          "position": 10.92
+        },
+        {
+          "query": "ddd 94 é de onde",
+          "impressions": 63,
+          "clicks": 0,
+          "position": 14.57
+        },
+        {
+          "query": "ddd94 é de onde",
+          "impressions": 51,
+          "clicks": 0,
+          "position": 11.37
+        },
+        {
+          "query": "ddd 94 qual estado e cidade",
+          "impressions": 49,
+          "clicks": 0,
+          "position": 10.920000000000002
+        },
+        {
+          "query": "de onde é o ddd 94",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 14.109999999999998
+        }
+      ]
+    },
+    {
+      "key": "28",
+      "clicks": 0,
+      "impressions": 1612,
+      "positionSum": 23201.19,
+      "rows": 10,
+      "ctr": 0,
+      "position": 14.392797766749378,
+      "code": "28",
+      "queries": [
+        {
+          "query": "ddd 28 qual estado",
+          "impressions": 734,
+          "clicks": 0,
+          "position": 12.25
+        },
+        {
+          "query": "ddd 28 qual cidade",
+          "impressions": 202,
+          "clicks": 0,
+          "position": 12.64
+        },
+        {
+          "query": "ddd 28 é de onde",
+          "impressions": 137,
+          "clicks": 0,
+          "position": 11.76
+        },
+        {
+          "query": "ddd 28",
+          "impressions": 130,
+          "clicks": 0,
+          "position": 34.15
+        },
+        {
+          "query": "ddd28",
+          "impressions": 113,
+          "clicks": 0,
+          "position": 12.02
+        },
+        {
+          "query": "ddd 28 é de qual estado",
+          "impressions": 69,
+          "clicks": 0,
+          "position": 16.09
+        },
+        {
+          "query": "de onde é o ddd 28",
+          "impressions": 65,
+          "clicks": 0,
+          "position": 13.88
+        },
+        {
+          "query": "ddd 28 é da onde",
+          "impressions": 62,
+          "clicks": 0,
+          "position": 10.55
+        },
+        {
+          "query": "ddd 28 é de qual cidade",
+          "impressions": 58,
+          "clicks": 0,
+          "position": 17.36
+        },
+        {
+          "query": "ddd 28 cidade",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 13.67
+        }
+      ]
+    },
+    {
+      "key": "89",
+      "clicks": 0,
+      "impressions": 1572,
+      "positionSum": 18944.37,
+      "rows": 7,
+      "ctr": 0,
+      "position": 12.051125954198472,
+      "code": "89",
+      "queries": [
+        {
+          "query": "ddd 89",
+          "impressions": 658,
+          "clicks": 0,
+          "position": 13.01
+        },
+        {
+          "query": "ddd 89 qual estado",
+          "impressions": 587,
+          "clicks": 0,
+          "position": 10.85
+        },
+        {
+          "query": "de onde é o ddd 89",
+          "impressions": 82,
+          "clicks": 0,
+          "position": 10.29
+        },
+        {
+          "query": "ddd 89 é de qual estado",
+          "impressions": 80,
+          "clicks": 0,
+          "position": 16.44
+        },
+        {
+          "query": "ddd89 é de onde",
+          "impressions": 61,
+          "clicks": 0,
+          "position": 10.62
+        },
+        {
+          "query": "ddd 89 é de onde",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 12.14
+        },
+        {
+          "query": "ddd89",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 10.98
+        }
+      ]
+    },
+    {
+      "key": "41",
+      "clicks": 0,
+      "impressions": 1039,
+      "positionSum": 18614.34,
+      "rows": 9,
+      "ctr": 0,
+      "position": 17.915630413859482,
+      "code": "41",
+      "queries": [
+        {
+          "query": "ddd 41 qual estado",
+          "impressions": 387,
+          "clicks": 0,
+          "position": 17.74
+        },
+        {
+          "query": "ddd 41",
+          "impressions": 178,
+          "clicks": 0,
+          "position": 22.1
+        },
+        {
+          "query": "ddd 41 é de qual estado",
+          "impressions": 140,
+          "clicks": 0,
+          "position": 17.81
+        },
+        {
+          "query": "ddd41 qual estado",
+          "impressions": 68,
+          "clicks": 0,
+          "position": 10.66
+        },
+        {
+          "query": "ddd41 cidade e estado",
+          "impressions": 60,
+          "clicks": 0,
+          "position": 11.92
+        },
+        {
+          "query": "ddd 41 estado",
+          "impressions": 60,
+          "clicks": 0,
+          "position": 30.13
+        },
+        {
+          "query": "ddd41",
+          "impressions": 53,
+          "clicks": 0,
+          "position": 21.04
+        },
+        {
+          "query": "ddd41 e de qual estado brasileiro",
+          "impressions": 49,
+          "clicks": 0,
+          "position": 10.12
+        },
+        {
+          "query": "ddd 41 mapa",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 10.52
+        }
+      ]
+    },
+    {
+      "key": "43",
+      "clicks": 0,
+      "impressions": 965,
+      "positionSum": 15000.779999999999,
+      "rows": 5,
+      "ctr": 0,
+      "position": 15.54484974093264,
+      "code": "43",
+      "queries": [
+        {
+          "query": "ddd 43",
+          "impressions": 447,
+          "clicks": 0,
+          "position": 14.87
+        },
+        {
+          "query": "ddd 43 qual estado",
+          "impressions": 276,
+          "clicks": 0,
+          "position": 16.71
+        },
+        {
+          "query": "ddd 43 mapa",
+          "impressions": 115,
+          "clicks": 0,
+          "position": 9.009999999999998
+        },
+        {
+          "query": "ddd43",
+          "impressions": 71,
+          "clicks": 0,
+          "position": 14.14
+        },
+        {
+          "query": "ddd 43 estado",
+          "impressions": 56,
+          "clicks": 0,
+          "position": 30.390000000000004
+        }
+      ]
+    },
+    {
+      "key": "29",
+      "clicks": 0,
+      "impressions": 907,
+      "positionSum": 9675.74,
+      "rows": 3,
+      "ctr": 0,
+      "position": 10.667850055126792,
+      "code": "29",
+      "queries": [
+        {
+          "query": "ddd 29",
+          "impressions": 638,
+          "clicks": 0,
+          "position": 10.82
+        },
+        {
+          "query": "ddd 29 qual estado",
+          "impressions": 212,
+          "clicks": 0,
+          "position": 10.61
+        },
+        {
+          "query": "ddd 29 qual cidade",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 9.18
+        }
+      ]
+    },
+    {
+      "key": "95",
+      "clicks": 0,
+      "impressions": 817,
+      "positionSum": 15077.489999999998,
+      "rows": 4,
+      "ctr": 0,
+      "position": 18.454700122399018,
+      "code": "95",
+      "queries": [
+        {
+          "query": "ddd 95 qual estado",
+          "impressions": 421,
+          "clicks": 0,
+          "position": 13.93
+        },
+        {
+          "query": "ddd 95",
+          "impressions": 266,
+          "clicks": 0,
+          "position": 23.81
+        },
+        {
+          "query": "ddd95",
+          "impressions": 91,
+          "clicks": 0,
+          "position": 14.049999999999999
+        },
+        {
+          "query": "ddd 95 qual cidade",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 41.05
+        }
+      ]
+    },
+    {
+      "key": "13",
+      "clicks": 0,
+      "impressions": 728,
+      "positionSum": 8348.77,
+      "rows": 2,
+      "ctr": 0,
+      "position": 11.46809065934066,
+      "code": "13",
+      "queries": [
+        {
+          "query": "ddd 13 qual estado",
+          "impressions": 683,
+          "clicks": 0,
+          "position": 11.24
+        },
+        {
+          "query": "ddd 13 é de qual estado",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 14.93
+        }
+      ]
+    },
+    {
+      "key": "93",
+      "clicks": 0,
+      "impressions": 680,
+      "positionSum": 11661.050000000001,
+      "rows": 3,
+      "ctr": 0,
+      "position": 17.14860294117647,
+      "code": "93",
+      "queries": [
+        {
+          "query": "ddd 93 qual estado",
+          "impressions": 427,
+          "clicks": 0,
+          "position": 12.72
+        },
+        {
+          "query": "ddd 93",
+          "impressions": 167,
+          "clicks": 0,
+          "position": 26.19
+        },
+        {
+          "query": "ddd 93 qual cidade",
+          "impressions": 86,
+          "clicks": 0,
+          "position": 21.58
+        }
+      ]
+    },
+    {
+      "key": "64",
+      "clicks": 0,
+      "impressions": 506,
+      "positionSum": 11489.16,
+      "rows": 5,
+      "ctr": 0,
+      "position": 22.705849802371542,
+      "code": "64",
+      "queries": [
+        {
+          "query": "ddd 64 qual estado",
+          "impressions": 176,
+          "clicks": 0,
+          "position": 24.94
+        },
+        {
+          "query": "ddd 64",
+          "impressions": 150,
+          "clicks": 0,
+          "position": 26.64
+        },
+        {
+          "query": "ddd 64 é de qual estado",
+          "impressions": 74,
+          "clicks": 0,
+          "position": 19.28
+        },
+        {
+          "query": "ddd 64 estado",
+          "impressions": 59,
+          "clicks": 0,
+          "position": 13.32
+        },
+        {
+          "query": "ddd 64 qual cidade",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 18.96
+        }
+      ]
+    },
+    {
+      "key": "83",
+      "clicks": 0,
+      "impressions": 486,
+      "positionSum": 9672.7,
+      "rows": 4,
+      "ctr": 0,
+      "position": 19.902674897119343,
+      "code": "83",
+      "queries": [
+        {
+          "query": "ddd 83 qual estado",
+          "impressions": 172,
+          "clicks": 0,
+          "position": 25.37
+        },
+        {
+          "query": "ddd83 qual estado",
+          "impressions": 157,
+          "clicks": 0,
+          "position": 11.38
+        },
+        {
+          "query": "ddd 83",
+          "impressions": 99,
+          "clicks": 0,
+          "position": 29.439999999999998
+        },
+        {
+          "query": "ddd 83 mapa",
+          "impressions": 58,
+          "clicks": 0,
+          "position": 10.48
+        }
+      ]
+    },
+    {
+      "key": "87",
+      "clicks": 0,
+      "impressions": 478,
+      "positionSum": 8222.67,
+      "rows": 3,
+      "ctr": 0,
+      "position": 17.20223849372385,
+      "code": "87",
+      "queries": [
+        {
+          "query": "ddd 87 qual estado",
+          "impressions": 263,
+          "clicks": 0,
+          "position": 14.07
+        },
+        {
+          "query": "ddd 87",
+          "impressions": 134,
+          "clicks": 0,
+          "position": 21.84
+        },
+        {
+          "query": "ddd 87 estado",
+          "impressions": 81,
+          "clicks": 0,
+          "position": 19.7
+        }
+      ]
+    },
+    {
+      "key": "53",
+      "clicks": 0,
+      "impressions": 470,
+      "positionSum": 7828.859999999999,
+      "rows": 3,
+      "ctr": 0,
+      "position": 16.65714893617021,
+      "code": "53",
+      "queries": [
+        {
+          "query": "ddd 53",
+          "impressions": 264,
+          "clicks": 0,
+          "position": 20.15
+        },
+        {
+          "query": "ddd 53 qual estado",
+          "impressions": 166,
+          "clicks": 0,
+          "position": 12.61
+        },
+        {
+          "query": "ddd 53 mapa",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 10.4
+        }
+      ]
+    },
+    {
+      "key": "79",
+      "clicks": 0,
+      "impressions": 409,
+      "positionSum": 7806.860000000001,
+      "rows": 3,
+      "ctr": 0,
+      "position": 19.087677261613692,
+      "code": "79",
+      "queries": [
+        {
+          "query": "ddd 79",
+          "impressions": 253,
+          "clicks": 0,
+          "position": 19.21
+        },
+        {
+          "query": "ddd79",
+          "impressions": 113,
+          "clicks": 0,
+          "position": 13.28
+        },
+        {
+          "query": "ddd 79 qual estado",
+          "impressions": 43,
+          "clicks": 0,
+          "position": 33.63
+        }
+      ]
+    },
+    {
+      "key": "55",
+      "clicks": 0,
+      "impressions": 391,
+      "positionSum": 5700.78,
+      "rows": 1,
+      "ctr": 0,
+      "position": 14.58,
+      "code": "55",
+      "queries": [
+        {
+          "query": "ddd 55 qual estado",
+          "impressions": 391,
+          "clicks": 0,
+          "position": 14.58
+        }
+      ]
+    },
+    {
+      "key": "92",
+      "clicks": 0,
+      "impressions": 385,
+      "positionSum": 6634.84,
+      "rows": 3,
+      "ctr": 0,
+      "position": 17.23335064935065,
+      "code": "92",
+      "queries": [
+        {
+          "query": "ddd 92",
+          "impressions": 190,
+          "clicks": 0,
+          "position": 20.25
+        },
+        {
+          "query": "ddd 92 qual estado",
+          "impressions": 142,
+          "clicks": 0,
+          "position": 16.27
+        },
+        {
+          "query": "ddd92 cidade e estado",
+          "impressions": 53,
+          "clicks": 0,
+          "position": 9
+        }
+      ]
+    },
+    {
+      "key": "09",
+      "clicks": 0,
+      "impressions": 292,
+      "positionSum": 3489.3999999999996,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.95,
+      "code": "09",
+      "queries": [
+        {
+          "query": "ddd 09",
+          "impressions": 292,
+          "clicks": 0,
+          "position": 11.95
+        }
+      ]
+    },
+    {
+      "key": "47",
+      "clicks": 0,
+      "impressions": 288,
+      "positionSum": 4535.01,
+      "rows": 2,
+      "ctr": 0,
+      "position": 15.746562500000001,
+      "code": "47",
+      "queries": [
+        {
+          "query": "ddd 47 qual estado",
+          "impressions": 241,
+          "clicks": 0,
+          "position": 16.29
+        },
+        {
+          "query": "ddd 47 mapa",
+          "impressions": 47,
+          "clicks": 0,
+          "position": 12.96
+        }
+      ]
+    },
+    {
+      "key": "46",
+      "clicks": 0,
+      "impressions": 234,
+      "positionSum": 4528.9,
+      "rows": 2,
+      "ctr": 0,
+      "position": 19.354273504273504,
+      "code": "46",
+      "queries": [
+        {
+          "query": "ddd 46 qual estado",
+          "impressions": 190,
+          "clicks": 0,
+          "position": 13.230000000000002
+        },
+        {
+          "query": "ddd 46",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 45.8
+        }
+      ]
+    },
+    {
+      "key": "33",
+      "clicks": 0,
+      "impressions": 234,
+      "positionSum": 6689.280000000001,
+      "rows": 2,
+      "ctr": 0,
+      "position": 28.58666666666667,
+      "code": "33",
+      "queries": [
+        {
+          "query": "ddd 33 qual estado",
+          "impressions": 130,
+          "clicks": 0,
+          "position": 27.52
+        },
+        {
+          "query": "ddd 33",
+          "impressions": 104,
+          "clicks": 0,
+          "position": 29.92
+        }
+      ]
+    },
+    {
+      "key": "34",
+      "clicks": 0,
+      "impressions": 218,
+      "positionSum": 5220.7,
+      "rows": 2,
+      "ctr": 0,
+      "position": 23.948165137614676,
+      "code": "34",
+      "queries": [
+        {
+          "query": "ddd 34",
+          "impressions": 132,
+          "clicks": 0,
+          "position": 22.24
+        },
+        {
+          "query": "ddd 34 qual estado",
+          "impressions": 86,
+          "clicks": 0,
+          "position": 26.57
+        }
+      ]
+    },
+    {
+      "key": "35",
+      "clicks": 0,
+      "impressions": 214,
+      "positionSum": 5856.009999999999,
+      "rows": 3,
+      "ctr": 0,
+      "position": 27.364532710280372,
+      "code": "35",
+      "queries": [
+        {
+          "query": "ddd 35",
+          "impressions": 95,
+          "clicks": 0,
+          "position": 33.44
+        },
+        {
+          "query": "ddd 35 qual estado",
+          "impressions": 75,
+          "clicks": 0,
+          "position": 30.83
+        },
+        {
+          "query": "ddd 35 mapa",
+          "impressions": 44,
+          "clicks": 0,
+          "position": 8.34
+        }
+      ]
+    },
+    {
+      "key": "12",
+      "clicks": 0,
+      "impressions": 210,
+      "positionSum": 3907.68,
+      "rows": 2,
+      "ctr": 0,
+      "position": 18.608,
+      "code": "12",
+      "queries": [
+        {
+          "query": "ddd 12 qual estado",
+          "impressions": 168,
+          "clicks": 0,
+          "position": 20.48
+        },
+        {
+          "query": "ddd12 qual estado",
+          "impressions": 42,
+          "clicks": 0,
+          "position": 11.12
+        }
+      ]
+    },
+    {
+      "key": "65",
+      "clicks": 0,
+      "impressions": 206,
+      "positionSum": 3289.17,
+      "rows": 2,
+      "ctr": 0,
+      "position": 15.966844660194175,
+      "code": "65",
+      "queries": [
+        {
+          "query": "ddd 65",
+          "impressions": 161,
+          "clicks": 0,
+          "position": 17.07
+        },
+        {
+          "query": "ddd65 é de onde",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 12.02
+        }
+      ]
+    },
+    {
+      "key": "42",
+      "clicks": 0,
+      "impressions": 183,
+      "positionSum": 4738.14,
+      "rows": 2,
+      "ctr": 0,
+      "position": 25.89147540983607,
+      "code": "42",
+      "queries": [
+        {
+          "query": "ddd 42",
+          "impressions": 99,
+          "clicks": 0,
+          "position": 39.18
+        },
+        {
+          "query": "ddd42 é de que localidade",
+          "impressions": 84,
+          "clicks": 0,
+          "position": 10.23
+        }
+      ]
+    },
+    {
+      "key": "60",
+      "clicks": 0,
+      "impressions": 182,
+      "positionSum": 2183.23,
+      "rows": 2,
+      "ctr": 0,
+      "position": 11.99576923076923,
+      "code": "60",
+      "queries": [
+        {
+          "query": "ddd 60 qual estado",
+          "impressions": 125,
+          "clicks": 0,
+          "position": 11.36
+        },
+        {
+          "query": "ddd 60",
+          "impressions": 57,
+          "clicks": 0,
+          "position": 13.39
+        }
+      ]
+    },
+    {
+      "key": "11",
+      "clicks": 0,
+      "impressions": 178,
+      "positionSum": 3668.58,
+      "rows": 1,
+      "ctr": 0,
+      "position": 20.61,
+      "code": "11",
+      "queries": [
+        {
+          "query": "ddd 11 qual estado",
+          "impressions": 178,
+          "clicks": 0,
+          "position": 20.61
+        }
+      ]
+    },
+    {
+      "key": "97",
+      "clicks": 0,
+      "impressions": 162,
+      "positionSum": 2772.63,
+      "rows": 2,
+      "ctr": 0,
+      "position": 17.115000000000002,
+      "code": "97",
+      "queries": [
+        {
+          "query": "ddd 97 qual estado",
+          "impressions": 93,
+          "clicks": 0,
+          "position": 11.939999999999998
+        },
+        {
+          "query": "ddd 97",
+          "impressions": 69,
+          "clicks": 0,
+          "position": 24.09
+        }
+      ]
+    },
+    {
+      "key": "21",
+      "clicks": 0,
+      "impressions": 158,
+      "positionSum": 5164.91,
+      "rows": 2,
+      "ctr": 0,
+      "position": 32.689303797468355,
+      "code": "21",
+      "queries": [
+        {
+          "query": "ddd 21 qual estado",
+          "impressions": 119,
+          "clicks": 0,
+          "position": 30.1
+        },
+        {
+          "query": "ddd 21 é de qual estado",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 40.59
+        }
+      ]
+    },
+    {
+      "key": "84",
+      "clicks": 0,
+      "impressions": 147,
+      "positionSum": 2110.92,
+      "rows": 1,
+      "ctr": 0,
+      "position": 14.360000000000001,
+      "code": "84",
+      "queries": [
+        {
+          "query": "ddd 84 qual estado",
+          "impressions": 147,
+          "clicks": 0,
+          "position": 14.360000000000001
+        }
+      ]
+    },
+    {
+      "key": "81",
+      "clicks": 0,
+      "impressions": 133,
+      "positionSum": 5187.84,
+      "rows": 3,
+      "ctr": 0,
+      "position": 39.00631578947368,
+      "code": "81",
+      "queries": [
+        {
+          "query": "ddd 81 estado",
+          "impressions": 50,
+          "clicks": 0,
+          "position": 32.02
+        },
+        {
+          "query": "ddd 81",
+          "impressions": 43,
+          "clicks": 0,
+          "position": 33.88
+        },
+        {
+          "query": "ddd 81 qual estado",
+          "impressions": 40,
+          "clicks": 0,
+          "position": 53.25
+        }
+      ]
+    },
+    {
+      "key": "17",
+      "clicks": 0,
+      "impressions": 132,
+      "positionSum": 7087.34,
+      "rows": 2,
+      "ctr": 0,
+      "position": 53.6919696969697,
+      "code": "17",
+      "queries": [
+        {
+          "query": "ddd 17",
+          "impressions": 86,
+          "clicks": 0,
+          "position": 52.190000000000005
+        },
+        {
+          "query": "ddd 17 qual estado",
+          "impressions": 46,
+          "clicks": 0,
+          "position": 56.5
+        }
+      ]
+    },
+    {
+      "key": "16",
+      "clicks": 0,
+      "impressions": 130,
+      "positionSum": 4954.56,
+      "rows": 2,
+      "ctr": 0,
+      "position": 38.112,
+      "code": "16",
+      "queries": [
+        {
+          "query": "ddd 16 qual estado",
+          "impressions": 67,
+          "clicks": 0,
+          "position": 35.34
+        },
+        {
+          "query": "ddd 16",
+          "impressions": 63,
+          "clicks": 0,
+          "position": 41.06
+        }
+      ]
+    },
+    {
+      "key": "32",
+      "clicks": 0,
+      "impressions": 115,
+      "positionSum": 3126.87,
+      "rows": 2,
+      "ctr": 0,
+      "position": 27.190173913043477,
+      "code": "32",
+      "queries": [
+        {
+          "query": "ddd 32",
+          "impressions": 72,
+          "clicks": 0,
+          "position": 26.82
+        },
+        {
+          "query": "ddd 32 qual estado",
+          "impressions": 43,
+          "clicks": 0,
+          "position": 27.81
+        }
+      ]
+    },
+    {
+      "key": "99",
+      "clicks": 0,
+      "impressions": 109,
+      "positionSum": 2627.0600000000004,
+      "rows": 2,
+      "ctr": 0,
+      "position": 24.10146788990826,
+      "code": "99",
+      "queries": [
+        {
+          "query": "ddd 99 qual estado",
+          "impressions": 66,
+          "clicks": 0,
+          "position": 19.62
+        },
+        {
+          "query": "ddd 99",
+          "impressions": 43,
+          "clicks": 0,
+          "position": 30.980000000000004
+        }
+      ]
+    },
+    {
+      "key": "88",
+      "clicks": 0,
+      "impressions": 99,
+      "positionSum": 3579.84,
+      "rows": 2,
+      "ctr": 0,
+      "position": 36.160000000000004,
+      "code": "88",
+      "queries": [
+        {
+          "query": "ddd 88 estado",
+          "impressions": 51,
+          "clicks": 0,
+          "position": 32.8
+        },
+        {
+          "query": "ddd 88 qual estado",
+          "impressions": 48,
+          "clicks": 0,
+          "position": 39.73
+        }
+      ]
+    },
+    {
+      "key": "14",
+      "clicks": 0,
+      "impressions": 95,
+      "positionSum": 4972.16,
+      "rows": 2,
+      "ctr": 0,
+      "position": 52.33852631578947,
+      "code": "14",
+      "queries": [
+        {
+          "query": "ddd 14",
+          "impressions": 54,
+          "clicks": 0,
+          "position": 53.37
+        },
+        {
+          "query": "ddd 14 qual estado",
+          "impressions": 41,
+          "clicks": 0,
+          "position": 50.98
+        }
+      ]
+    },
+    {
+      "key": "38",
+      "clicks": 0,
+      "impressions": 77,
+      "positionSum": 592.9,
+      "rows": 1,
+      "ctr": 0,
+      "position": 7.699999999999999,
+      "code": "38",
+      "queries": [
+        {
+          "query": "janaúba ddd 38",
+          "impressions": 77,
+          "clicks": 0,
+          "position": 7.699999999999999
+        }
+      ]
+    },
+    {
+      "key": "49",
+      "clicks": 0,
+      "impressions": 70,
+      "positionSum": 1168.3000000000002,
+      "rows": 1,
+      "ctr": 0,
+      "position": 16.69,
+      "code": "49",
+      "queries": [
+        {
+          "query": "ddd 49",
+          "impressions": 70,
+          "clicks": 0,
+          "position": 16.69
+        }
+      ]
+    },
+    {
+      "key": "37",
+      "clicks": 0,
+      "impressions": 63,
+      "positionSum": 3408.3,
+      "rows": 1,
+      "ctr": 0,
+      "position": 54.1,
+      "code": "37",
+      "queries": [
+        {
+          "query": "ddd 37",
+          "impressions": 63,
+          "clicks": 0,
+          "position": 54.1
+        }
+      ]
+    },
+    {
+      "key": "71",
+      "clicks": 0,
+      "impressions": 62,
+      "positionSum": 2442.7999999999997,
+      "rows": 1,
+      "ctr": 0,
+      "position": 39.4,
+      "code": "71",
+      "queries": [
+        {
+          "query": "ddd 71",
+          "impressions": 62,
+          "clicks": 0,
+          "position": 39.4
+        }
+      ]
+    },
+    {
+      "key": "45",
+      "clicks": 0,
+      "impressions": 55,
+      "positionSum": 513.15,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.33,
+      "code": "45",
+      "queries": [
+        {
+          "query": "ddd 45 mapa",
+          "impressions": 55,
+          "clicks": 0,
+          "position": 9.33
+        }
+      ]
+    },
+    {
+      "key": "48",
+      "clicks": 0,
+      "impressions": 55,
+      "positionSum": 1489.95,
+      "rows": 1,
+      "ctr": 0,
+      "position": 27.09,
+      "code": "48",
+      "queries": [
+        {
+          "query": "ddd 48 qual estado",
+          "impressions": 55,
+          "clicks": 0,
+          "position": 27.09
+        }
+      ]
+    },
+    {
+      "key": "69",
+      "clicks": 0,
+      "impressions": 46,
+      "positionSum": 2041.94,
+      "rows": 1,
+      "ctr": 0,
+      "position": 44.39,
+      "code": "69",
+      "queries": [
+        {
+          "query": "ddd 69",
+          "impressions": 46,
+          "clicks": 0,
+          "position": 44.39
+        }
+      ]
+    },
+    {
+      "key": "15",
+      "clicks": 0,
+      "impressions": 45,
+      "positionSum": 3286.8,
+      "rows": 1,
+      "ctr": 0,
+      "position": 73.04,
+      "code": "15",
+      "queries": [
+        {
+          "query": "ddd 15 qual estado",
+          "impressions": 45,
+          "clicks": 0,
+          "position": 73.04
+        }
+      ]
+    },
+    {
+      "key": "67",
+      "clicks": 0,
+      "impressions": 39,
+      "positionSum": 1779.1799999999998,
+      "rows": 1,
+      "ctr": 0,
+      "position": 45.62,
+      "code": "67",
+      "queries": [
+        {
+          "query": "ddd 67",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 45.62
+        }
+      ]
+    },
+    {
+      "key": "22",
+      "clicks": 0,
+      "impressions": 39,
+      "positionSum": 1891.1100000000001,
+      "rows": 1,
+      "ctr": 0,
+      "position": 48.49,
+      "code": "22",
+      "queries": [
+        {
+          "query": "ddd 22 qual estado",
+          "impressions": 39,
+          "clicks": 0,
+          "position": 48.49
+        }
+      ]
     }
   ],
   "opportunities": [
@@ -211,6 +2951,295 @@
       "benchmarkCtr": 0.07,
       "estimatedAdditionalClicks": 49,
       "opportunityScore": 49.07000000000001
+    },
+    {
+      "key": "ddd 82",
+      "clicks": 0,
+      "impressions": 4050,
+      "positionSum": 47628,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.76,
+      "query": "ddd 82",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.012,
+      "estimatedAdditionalClicks": 49,
+      "opportunityScore": 48.6
+    },
+    {
+      "key": "ddd 68",
+      "clicks": 0,
+      "impressions": 3982,
+      "positionSum": 43841.82,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.01,
+      "query": "ddd 68",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.012,
+      "estimatedAdditionalClicks": 48,
+      "opportunityScore": 47.784
+    },
+    {
+      "key": "ddd acre",
+      "clicks": 0,
+      "impressions": 1325,
+      "positionSum": 12362.25,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.33,
+      "query": "ddd acre",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 46,
+      "opportunityScore": 46.37500000000001
+    },
+    {
+      "key": "ddd 61 qual estado",
+      "clicks": 0,
+      "impressions": 1288,
+      "positionSum": 12377.679999999998,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.61,
+      "query": "ddd 61 qual estado",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 45,
+      "opportunityScore": 45.080000000000005
+    },
+    {
+      "key": "gerador de celular",
+      "clicks": 9,
+      "impressions": 1525,
+      "positionSum": 10004,
+      "rows": 1,
+      "ctr": 0.005901639344262295,
+      "position": 6.56,
+      "query": "gerador de celular",
+      "cluster": "Gerador de números",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 44,
+      "opportunityScore": 44.37500000000001
+    },
+    {
+      "key": "ddd 63 e de onde",
+      "clicks": 0,
+      "impressions": 1245,
+      "positionSum": 11087.15,
+      "rows": 3,
+      "ctr": 0,
+      "position": 8.905341365461847,
+      "query": "ddd 63 é de onde",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 44,
+      "opportunityScore": 43.575
+    },
+    {
+      "key": "63 ddd",
+      "clicks": 0,
+      "impressions": 1235,
+      "positionSum": 12325.300000000001,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.98,
+      "query": "63 ddd",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 43,
+      "opportunityScore": 43.225
+    },
+    {
+      "key": "ddd do acre",
+      "clicks": 0,
+      "impressions": 1165,
+      "positionSum": 10974.3,
+      "rows": 1,
+      "ctr": 0,
+      "position": 9.42,
+      "query": "ddd do acre",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 41,
+      "opportunityScore": 40.775000000000006
+    },
+    {
+      "key": "ddd de tocantins",
+      "clicks": 1,
+      "impressions": 1178,
+      "positionSum": 10142.58,
+      "rows": 1,
+      "ctr": 0.0008488964346349745,
+      "position": 8.61,
+      "query": "ddd de tocantins",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 40,
+      "opportunityScore": 40.230000000000004
+    },
+    {
+      "key": "gerador de telefone celular",
+      "clicks": 16,
+      "impressions": 788,
+      "positionSum": 4696.48,
+      "rows": 1,
+      "ctr": 0.02030456852791878,
+      "position": 5.959999999999999,
+      "query": "gerador de telefone celular",
+      "cluster": "Gerador de números",
+      "benchmarkCtr": 0.07,
+      "estimatedAdditionalClicks": 39,
+      "opportunityScore": 39.160000000000004
+    },
+    {
+      "key": "gerador de numero de telefone",
+      "clicks": 38,
+      "impressions": 2191,
+      "positionSum": 18300.31,
+      "rows": 2,
+      "ctr": 0.01734367868553172,
+      "position": 8.352492012779553,
+      "query": "gerador de numero de telefone",
+      "cluster": "Gerador de números",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 39,
+      "opportunityScore": 38.68500000000001
+    },
+    {
+      "key": "ddd 68 qual estado",
+      "clicks": 1,
+      "impressions": 3297,
+      "positionSum": 35211.96,
+      "rows": 1,
+      "ctr": 0.00030330603579011223,
+      "position": 10.68,
+      "query": "ddd 68 qual estado",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.012,
+      "estimatedAdditionalClicks": 39,
+      "opportunityScore": 38.564
+    },
+    {
+      "key": "ddd 96 qual estado",
+      "clicks": 0,
+      "impressions": 3170,
+      "positionSum": 32841.2,
+      "rows": 1,
+      "ctr": 0,
+      "position": 10.36,
+      "query": "ddd 96 qual estado",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.012,
+      "estimatedAdditionalClicks": 38,
+      "opportunityScore": 38.04
+    },
+    {
+      "key": "dd 63",
+      "clicks": 0,
+      "impressions": 1075,
+      "positionSum": 9438.5,
+      "rows": 1,
+      "ctr": 0,
+      "position": 8.78,
+      "query": "dd 63",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 38,
+      "opportunityScore": 37.62500000000001
+    },
+    {
+      "key": "ddd 82 qual estado",
+      "clicks": 0,
+      "impressions": 2852,
+      "positionSum": 32569.84,
+      "rows": 1,
+      "ctr": 0,
+      "position": 11.42,
+      "query": "ddd 82 qual estado",
+      "cluster": "Consulta e descoberta de DDD",
+      "benchmarkCtr": 0.012,
+      "estimatedAdditionalClicks": 34,
+      "opportunityScore": 34.224000000000004
+    },
+    {
+      "key": "ddd espirito santo",
+      "clicks": 0,
+      "impressions": 900,
+      "positionSum": 7745.2,
+      "rows": 2,
+      "ctr": 0,
+      "position": 8.605777777777778,
+      "query": "ddd espirito santo",
+      "cluster": "Cauda longa territorial e outras consultas",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 32,
+      "opportunityScore": 31.500000000000004
+    },
+    {
+      "key": "gerador de numero de celular",
+      "clicks": 66,
+      "impressions": 2751,
+      "positionSum": 19351.68,
+      "rows": 2,
+      "ctr": 0.023991275899672846,
+      "position": 7.034416575790622,
+      "query": "gerador de numero de celular",
+      "cluster": "Gerador de números",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 30,
+      "opportunityScore": 30.28500000000001
+    },
+    {
+      "key": "qual o meu ddd",
+      "clicks": 8,
+      "impressions": 541,
+      "positionSum": 2066.62,
+      "rows": 1,
+      "ctr": 0.014787430683918669,
+      "position": 3.82,
+      "query": "qual o meu ddd",
+      "cluster": "Marca e descoberta do próprio DDD",
+      "benchmarkCtr": 0.07,
+      "estimatedAdditionalClicks": 30,
+      "opportunityScore": 29.870000000000005
+    },
+    {
+      "key": "lista de numeros de celular validos",
+      "clicks": 15,
+      "impressions": 1265,
+      "positionSum": 8639.95,
+      "rows": 1,
+      "ctr": 0.011857707509881422,
+      "position": 6.830000000000001,
+      "query": "lista de números de celular válidos",
+      "cluster": "Números válidos e simulação",
+      "benchmarkCtr": 0.035,
+      "estimatedAdditionalClicks": 29,
+      "opportunityScore": 29.275000000000002
+    },
+    {
+      "key": "qual e meu ddd",
+      "clicks": 7,
+      "impressions": 515,
+      "positionSum": 1903.8,
+      "rows": 2,
+      "ctr": 0.013592233009708738,
+      "position": 3.6966990291262136,
+      "query": "qual é meu ddd",
+      "cluster": "Marca e descoberta do próprio DDD",
+      "benchmarkCtr": 0.07,
+      "estimatedAdditionalClicks": 29,
+      "opportunityScore": 29.050000000000004
     }
+  ],
+  "brand": {
+    "clicks": 142,
+    "impressions": 4474,
+    "position": 3.7239070183281187
+  },
+  "notes": [
+    "O ficheiro não inclui dimensões de data, página ou país; a análise mede a distribuição agregada de consultas, não uma série temporal de queda/recuperação.",
+    "As estimativas de ganho usam patamares conservadores de CTR por posição exclusivamente para priorização; não são previsões de tráfego."
   ]
 }

@@ -49,7 +49,12 @@ describe("BrazilStateMap", () => {
 
   it("desenha um limite carregado e seleciona o estado quando o utilizador clica", async () => {
     await act(async () => {
-      root.render(<BrazilStateMap states={[{ name: "São Paulo", uf: "SP", region: "Sudeste", cityCount: 645, dddCount: 10 }]} onStateSelect={onStateSelect} />);
+      root.render(<BrazilStateMap states={[
+        { name: "São Paulo", uf: "SP", region: "Sudeste", cityCount: 645, dddCount: 10 },
+        { name: "Rio de Janeiro", uf: "RJ", region: "Sudeste", cityCount: 92, dddCount: 4 },
+        { name: "Amazonas", uf: "AM", region: "Norte", cityCount: 62, dddCount: 2 },
+        { name: "Pará", uf: "PA", region: "Norte", cityCount: 144, dddCount: 3 },
+      ]} onStateSelect={onStateSelect} />);
     });
     expect(fetch).not.toHaveBeenCalled();
 
@@ -64,6 +69,7 @@ describe("BrazilStateMap", () => {
     expect(state).toBeTruthy();
     expect(container.querySelectorAll('path[role="listitem"]')).toHaveLength(27);
     expect(container.querySelectorAll(".state-connection-midpoint")).toHaveLength(6);
+    expect(container.querySelector('[aria-label="Ver detalhes da conexão entre amazonas e pará"]')).toBeTruthy();
     act(() => state.dispatchEvent(new MouseEvent("click", { bubbles: true })));
     expect(onStateSelect).toHaveBeenCalledWith("SP");
   });

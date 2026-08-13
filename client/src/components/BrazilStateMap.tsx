@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 type StateSummary = {
   name: string;
@@ -210,15 +211,41 @@ export function BrazilStateMap({
                 />
               );
             })}
-            <g aria-hidden="true" pointerEvents="none">
-              {connections.map(connection => (
-                <g key={connection.id}>
-                  <path d={connection.path} className="state-connection" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                  <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                  <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                  <circle cx={connection.midpoint[0]} cy={connection.midpoint[1]} r="3.8" className="state-connection-midpoint" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                </g>
-              ))}
+            <g>
+              {connections.map(connection => {
+                const fromState = stateByUf.get(connection.id.split("-")[0]);
+                const toState = stateByUf.get(connection.id.split("-")[1]);
+                const tooltipLabel = fromState && toState
+                  ? `Conexão entre ${fromState.name} e ${toState.name}`
+                  : `Conexão entre ${connection.id.replace("-", " e ")}`;
+
+                return (
+                  <g key={connection.id}>
+                    <path d={connection.path} className="state-connection" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                    <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                    <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <circle
+                          cx={connection.midpoint[0]}
+                          cy={connection.midpoint[1]}
+                          r="3.8"
+                          tabIndex={0}
+                          role="img"
+                          aria-label={`Ver detalhes da ${tooltipLabel.toLowerCase()}`}
+                          className="state-connection-midpoint"
+                          style={{ animationDelay: `${-connection.index * 0.55}s` }}
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent side="top" sideOffset={8} className="max-w-56 border border-[#b8c8be] bg-[#fffaf1] px-3 py-2 text-[#143d36] shadow-xl">
+                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#d94e34]">Conexão territorial</div>
+                        <div className="mt-1 text-xs font-bold">{fromState?.name ?? connection.id.split("-")[0]} → {toState?.name ?? connection.id.split("-")[1]}</div>
+                        {fromState && toState ? <div className="mt-1 text-[11px] leading-4 text-[#5d756c]">{fromState.uf}: {fromState.dddCount} DDDs · {toState.uf}: {toState.dddCount} DDDs</div> : null}
+                      </TooltipContent>
+                    </Tooltip>
+                  </g>
+                );
+              })}
             </g>
             <g aria-hidden="true" pointerEvents="none" className="state-labels">
               {features.map(feature => {

@@ -153,7 +153,8 @@ button { cursor: pointer; }
 }
 
 .state-connection-node { fill: #f06a4d; stroke: #fffaf1; stroke-width: 1px; }
-.state-connection-midpoint { fill: #fffaf1; stroke: #f06a4d; stroke-width: 1.4px; filter: drop-shadow(0 0 4px rgba(240, 106, 77, 0.7)); }
+.state-connection-midpoint { fill: #fffaf1; stroke: #f06a4d; stroke-width: 1.4px; cursor: help; filter: drop-shadow(0 0 4px rgba(240, 106, 77, 0.7)); }
+.state-connection-midpoint:focus-visible { outline: none; stroke: #143d36; stroke-width: 2.6px; }
 
 @media (prefers-reduced-motion: no-preference) {
   .state-connection { animation: state-connection-travel 3.8s linear infinite; }

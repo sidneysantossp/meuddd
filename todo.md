@@ -177,3 +177,5 @@
 - [x] Desenvolver conteúdo otimizado e verificável para a página canónica `/ddd/96`.
 - [x] Reforçar os dados estruturados Schema.org da página `/gerador` com as entidades e perguntas visíveis.
 - [x] Adicionar um ponto pulsante acessível no centro de cada conexão animada do mapa de estados.
+- [x] Aplicar o padrão editorial de recuperação SEO aos próximos cinco DDDs prioritários identificados pelo relatório de consultas.
+- [x] Adicionar tooltips acessíveis aos pontos pulsantes do mapa para mostrar dados territoriais rápidos no hover e foco.
