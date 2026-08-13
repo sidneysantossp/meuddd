@@ -15,7 +15,7 @@ type Geometry = { type: "Polygon"; coordinates: Ring[] } | { type: "MultiPolygon
 type GeoFeature = { properties: { sigla?: string }; geometry: Geometry };
 type GeoCollection = { features: GeoFeature[] };
 type SvgFeature = { uf: string; path: string; label: Position };
-type StateConnection = { id: string; path: string; start: Position; end: Position; index: number };
+type StateConnection = { id: string; path: string; start: Position; end: Position; midpoint: Position; index: number };
 
 const GEOJSON_URL = "/manus-storage/brazil-states_dc614e06.geojson";
 const MAP_WIDTH = 520;
@@ -91,13 +91,13 @@ function createPaths(collection: GeoCollection): SvgFeature[] {
   });
 }
 
-function createConnectionPath(start: Position, end: Position) {
+function createConnectionGeometry(start: Position, end: Position) {
   const [startX, startY] = start;
   const [endX, endY] = end;
   const midpointX = (startX + endX) / 2;
   const midpointY = (startY + endY) / 2;
   const bend = Math.min(28, Math.max(12, Math.abs(endX - startX) * 0.14));
-  return `M${startX.toFixed(1)},${startY.toFixed(1)} Q${midpointX.toFixed(1)},${(midpointY - bend).toFixed(1)} ${endX.toFixed(1)},${endY.toFixed(1)}`;
+  return { path: `M${startX.toFixed(1)},${startY.toFixed(1)} Q${midpointX.toFixed(1)},${(midpointY - bend).toFixed(1)} ${endX.toFixed(1)},${endY.toFixed(1)}`, midpoint: [midpointX, midpointY - bend / 2] as Position };
 }
 
 export function BrazilStateMap({
@@ -124,7 +124,9 @@ export function BrazilStateMap({
   const connections = useMemo<StateConnection[]>(() => STATE_CONNECTIONS.flatMap(([from, to], index) => {
     const start = labelPositions.get(from);
     const end = labelPositions.get(to);
-    return start && end ? [{ id: `${from}-${to}`, path: createConnectionPath(start, end), start, end, index }] : [];
+    if (!start || !end) return [];
+    const geometry = createConnectionGeometry(start, end);
+    return [{ id: `${from}-${to}`, ...geometry, start, end, index }];
   }), [labelPositions]);
 
   useEffect(() => setHasHydrated(true), []);
@@ -214,6 +216,7 @@ export function BrazilStateMap({
                   <path d={connection.path} className="state-connection" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
                   <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
                   <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
+                  <circle cx={connection.midpoint[0]} cy={connection.midpoint[1]} r="3.8" className="state-connection-midpoint" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
                 </g>
               ))}
             </g>

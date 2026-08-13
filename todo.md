@@ -173,3 +173,7 @@
 - [x] Cruzar o relatório de consultas com páginas de destino candidatas, priorizar URLs e verificar a presença atual no índice Google.
 - [x] Definir melhorias editoriais úteis para as páginas prioritárias, incluindo a página de simulação de números.
 - [x] Implementar e validar a melhoria editorial piloto na página `/gerador`, antes de expandir para outros DDDs e estados.
+- [x] Aplicar o padrão editorial de recuperação SEO à página canónica `/ddd/63`.
+- [x] Desenvolver conteúdo otimizado e verificável para a página canónica `/ddd/96`.
+- [x] Reforçar os dados estruturados Schema.org da página `/gerador` com as entidades e perguntas visíveis.
+- [x] Adicionar um ponto pulsante acessível no centro de cada conexão animada do mapa de estados.

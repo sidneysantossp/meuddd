@@ -153,14 +153,17 @@ button { cursor: pointer; }
 }
 
 .state-connection-node { fill: #f06a4d; stroke: #fffaf1; stroke-width: 1px; }
+.state-connection-midpoint { fill: #fffaf1; stroke: #f06a4d; stroke-width: 1.4px; filter: drop-shadow(0 0 4px rgba(240, 106, 77, 0.7)); }
 
 @media (prefers-reduced-motion: no-preference) {
   .state-connection { animation: state-connection-travel 3.8s linear infinite; }
   .state-connection-node { animation: state-connection-pulse 2.4s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
+  .state-connection-midpoint { animation: state-connection-midpoint-pulse 1.9s cubic-bezier(0.23, 1, 0.32, 1) infinite; }
 }
 
 @keyframes state-connection-travel { to { stroke-dashoffset: -56; } }
 @keyframes state-connection-pulse { 50% { opacity: 0.4; r: 3.6px; } }
+@keyframes state-connection-midpoint-pulse { 50% { opacity: 0.32; r: 6.6px; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

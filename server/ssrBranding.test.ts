@@ -55,5 +55,13 @@ describe("metadados SSR da marca Meu DDD", () => {
       name: "Gerador de número de celular por DDD",
       url: "/gerador",
     });
+    expect(head.jsonLd?.[2]).toMatchObject({
+      "@type": "SoftwareApplication",
+      isAccessibleForFree: true,
+    });
+    expect(head.jsonLd?.[3]).toMatchObject({
+      "@type": "FAQPage",
+      mainEntity: expect.arrayContaining([expect.objectContaining({ name: "O número gerado é real ou está disponível?" })]),
+    });
   });
 });

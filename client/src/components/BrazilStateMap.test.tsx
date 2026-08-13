@@ -63,6 +63,7 @@ describe("BrazilStateMap", () => {
     const state = container.querySelector('[aria-label="Selecionar São Paulo, SP"]') as SVGPathElement;
     expect(state).toBeTruthy();
     expect(container.querySelectorAll('path[role="listitem"]')).toHaveLength(27);
+    expect(container.querySelectorAll(".state-connection-midpoint")).toHaveLength(6);
     act(() => state.dispatchEvent(new MouseEvent("click", { bubbles: true })));
     expect(onStateSelect).toHaveBeenCalledWith("SP");
   });

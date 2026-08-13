@@ -7,6 +7,21 @@ import { TerritoryTrustPanel } from "@/components/TerritoryTrustPanel";
 import { IntentCluster } from "@/components/IntentCluster";
 import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
 
+export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string; title: string; summary: string }> = {
+  "63": {
+    state: "Tocantins",
+    uf: "TO",
+    title: "DDD 63 é de qual estado?",
+    summary: "O DDD 63 é utilizado no Tocantins. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+  "96": {
+    state: "Amapá",
+    uf: "AP",
+    title: "DDD 96 é de qual estado?",
+    summary: "O DDD 96 é utilizado no Amapá. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+  },
+};
+
 export default function DddDetail() {
   const [, params] = useRoute("/ddd/:code");
   const code = params?.code ?? "";
@@ -17,7 +32,9 @@ export default function DddDetail() {
   if (!data) return <main className="page-shell grid min-h-screen place-items-center bg-[#faf3e5] px-6 text-center text-[#143d36]"><div><div className="font-display text-7xl text-[#f06a4d]">{code || "—"}</div><h1 className="mt-4 font-display text-4xl">DDD não encontrado</h1><Link href="/#buscar" className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]"><ArrowLeft size={16} /> Voltar à busca</Link></div></main>;
 
   const { municipalities, states } = data;
+  const priorityEditorial = PRIORITY_DDD_EDITORIAL[data.code];
   const faqs = [
+    ...(priorityEditorial ? [[priorityEditorial.title, priorityEditorial.summary] as [string, string]] : []),
     [`Quais cidades usam o DDD ${data.code}?`, `O DDD ${data.code} abrange ${data.cityCount} municípios apresentados na lista desta página.`],
     [`Como ligar para um número com DDD ${data.code}?`, `Em ligações interurbanas, informe o código da operadora, o DDD ${data.code} e o número de telefone.`],
   ];
@@ -31,6 +48,20 @@ export default function DddDetail() {
     <section className="container py-2 lg:py-6"><TerritoryTrustPanel scope="ddd" /></section>
     <TerritoryQuickAnswer question={`Quais cidades usam o DDD ${data.code}?`} answer={`O DDD ${data.code} abrange ${data.cityCount} municípios${states.length ? ` nos estados de ${states.map(state => state.name).join(", ")}` : ""}.`} context="Abra uma ficha municipal para confirmar a localidade antes de fazer ou partilhar uma ligação." />
     {states[0] ? <IntentCluster ddd={data.code} state={states[0]} /> : null}
+    {priorityEditorial ? <section className="border-y border-[#d9d1bf] bg-[#f5ead7]" aria-labelledby={`ddd-${data.code}-guide-title`}>
+      <div className="container grid gap-9 py-14 lg:grid-cols-[0.84fr_1.16fr] lg:py-16">
+        <div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Guia de recuperação territorial</div>
+          <h2 id={`ddd-${data.code}-guide-title`} className="mt-3 font-display text-4xl tracking-[-0.05em] sm:text-5xl">{priorityEditorial.title}</h2>
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#5d756c]">{priorityEditorial.summary}</p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Como usar o DDD {data.code}</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Em uma chamada interurbana, informe o código da operadora, o DDD {data.code} e o número de telefone. Consulte a operadora para conhecer tarifas e condições da ligação.</p></article>
+          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Confirme a localidade</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">O código deve ser interpretado junto com o município. Abra a cidade na lista e confirme a cobertura territorial antes de partilhar um contacto ou organizar uma ligação.</p></article>
+          <div className="sm:col-span-2 flex flex-wrap gap-3 pt-1"><Link href={`/estado/${priorityEditorial.uf.toLowerCase()}`} className="pressable rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Ver DDDs do {priorityEditorial.state}</Link><Link href="/gerador" className="pressable rounded-full border border-[#b8c8be] px-5 py-3 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">Simular formato com DDD</Link></div>
+        </div>
+      </div>
+    </section> : null}
     <section className="border-t border-[#ded4c3] bg-[#fffaf1]"><div className="container grid gap-8 py-14 lg:grid-cols-[0.75fr_1.25fr]"><div><div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#f06a4d]">Perguntas frequentes</div><h2 className="mt-3 font-display text-4xl tracking-[-0.05em]">Sobre o DDD {data.code}</h2><p className="mt-4 text-sm leading-6 text-[#6b8177]">Respostas diretas sobre a cobertura e o uso do código de área.</p></div><div className="grid gap-3">{faqs.map(([question, answer]) => <details key={question} className="rounded-xl border border-[#ded4c3] bg-[#faf3e5] px-5 py-4"><summary className="cursor-pointer text-sm font-bold">{question}</summary><p className="mt-3 text-sm leading-6 text-[#5d756c]">{answer}</p></details>)}</div></div></section>
   </main>;
 }
