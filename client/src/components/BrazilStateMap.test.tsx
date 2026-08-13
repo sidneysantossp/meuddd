@@ -37,6 +37,11 @@ describe("BrazilStateMap", () => {
       readonly rootMargin = "240px 0px";
       readonly thresholds = [];
     });
+    vi.stubGlobal("ResizeObserver", class {
+      observe() {}
+      disconnect() {}
+      unobserve() {}
+    });
   });
 
   afterEach(() => {
@@ -72,5 +77,30 @@ describe("BrazilStateMap", () => {
     expect(container.querySelector('[aria-label="Ver detalhes da conexão entre amazonas e pará"]')).toBeTruthy();
     act(() => state.dispatchEvent(new MouseEvent("click", { bubbles: true })));
     expect(onStateSelect).toHaveBeenCalledWith("SP");
+  });
+
+  it("abre o detalhe de conexão por toque e permite fechá-lo", async () => {
+    await act(async () => {
+      root.render(<BrazilStateMap states={[
+        { name: "Amazonas", uf: "AM", region: "Norte", cityCount: 62, dddCount: 2 },
+        { name: "Pará", uf: "PA", region: "Norte", cityCount: 144, dddCount: 3 },
+      ]} onStateSelect={onStateSelect} />);
+    });
+    await act(async () => {
+      observeMap?.([{ isIntersecting: true } as IntersectionObserverEntry]);
+      vi.advanceTimersByTime(450);
+      await Promise.resolve();
+      await Promise.resolve();
+    });
+
+    const midpoint = container.querySelector('[aria-label="Ver detalhes da conexão entre amazonas e pará"]') as SVGCircleElement;
+    const touch = new Event("pointerdown", { bubbles: true, cancelable: true });
+    Object.defineProperty(touch, "pointerType", { value: "touch" });
+    await act(async () => midpoint.dispatchEvent(touch));
+    expect(document.body.textContent).toContain("Conexão territorial");
+
+    const closeButton = document.body.querySelector('[aria-label="Fechar detalhes da conexão entre amazonas e pará"]') as HTMLButtonElement;
+    await act(async () => closeButton.dispatchEvent(new MouseEvent("click", { bubbles: true })));
+    expect(document.body.querySelector('[aria-label="Fechar detalhes da conexão entre amazonas e pará"]')).toBeFalsy();
   });
 });

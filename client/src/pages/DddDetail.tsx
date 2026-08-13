@@ -6,49 +6,155 @@ import { PublicNavbar } from "@/components/PublicNavbar";
 import { TerritoryTrustPanel } from "@/components/TerritoryTrustPanel";
 import { IntentCluster } from "@/components/IntentCluster";
 import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
+import { officialTerritorialSources } from "@shared/territorialSeo";
 
-export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string; title: string; summary: string }> = {
+export const PRIORITY_DDD_EDITORIAL: Record<string, { state: string; uf: string; title: string; summary: string; curiosity: string }> = {
   "63": {
     state: "Tocantins",
     uf: "TO",
     title: "DDD 63 é de qual estado?",
     summary: "O DDD 63 é utilizado no Tocantins. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "Criado pela Constituição de 1988, o Tocantins é o estado mais novo do Brasil.",
   },
   "96": {
     state: "Amapá",
     uf: "AP",
     title: "DDD 96 é de qual estado?",
     summary: "O DDD 96 é utilizado no Amapá. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "Macapá, a capital amapaense, é conhecida pela proximidade com a Linha do Equador.",
   },
   "82": {
     state: "Alagoas",
     uf: "AL",
     title: "DDD 82 é de qual estado?",
     summary: "O DDD 82 é utilizado em Alagoas. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "Alagoas integra o Nordeste brasileiro e reúne municípios litorâneos e do interior sob o mesmo contexto regional.",
   },
   "68": {
     state: "Acre",
     uf: "AC",
     title: "DDD 68 é de qual estado?",
     summary: "O DDD 68 é utilizado no Acre. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "O Acre passou a integrar o território brasileiro após o Tratado de Petrópolis, assinado em 1903.",
   },
   "86": {
     state: "Piauí",
     uf: "PI",
     title: "DDD 86 é de qual estado?",
     summary: "O DDD 86 é utilizado no Piauí. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "O litoral do Piauí está associado ao Delta do Parnaíba, uma paisagem partilhada com o Maranhão.",
   },
   "27": {
     state: "Espírito Santo",
     uf: "ES",
     title: "DDD 27 é de qual estado?",
     summary: "O DDD 27 é utilizado no Espírito Santo. Nesta página, consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial antes de fazer uma ligação.",
+    curiosity: "Vitória, capital capixaba, combina uma porção insular com áreas no continente.",
   },
   "61": {
     state: "Distrito Federal",
     uf: "DF",
     title: "DDD 61 é de onde?",
     summary: "O DDD 61 atende o Distrito Federal e localidades de Goiás. Nesta página, consulte os municípios abrangidos e confirme a localidade antes de fazer uma ligação.",
+    curiosity: "Brasília foi inaugurada em 1960 e é a capital federal do Brasil.",
+  },
+  "94": {
+    state: "Pará",
+    uf: "PA",
+    title: "DDD 94 é de qual estado?",
+    summary: "O DDD 94 é utilizado no Pará. Consulte os municípios abrangidos e abra as fichas locais para confirmar a localidade antes de organizar uma ligação.",
+    curiosity: "A Ilha do Marajó, no Pará, é um dos grandes arquipélagos flúvio-marinhos brasileiros.",
+  },
+  "28": {
+    state: "Sergipe",
+    uf: "SE",
+    title: "DDD 28 é de qual estado?",
+    summary: "O DDD 28 é utilizado em Sergipe. Consulte os municípios abrangidos, navegue para a ficha estadual e confirme o contexto territorial da ligação.",
+    curiosity: "Sergipe é o menor estado brasileiro em extensão territorial.",
+  },
+  "89": {
+    state: "Piauí",
+    uf: "PI",
+    title: "DDD 89 é de qual estado?",
+    summary: "O DDD 89 é utilizado no Piauí. Consulte a lista de municípios e confirme a localidade antes de partilhar ou utilizar um contacto.",
+    curiosity: "O Piauí reúne sertão, cerrados e litoral no mesmo território nordestino.",
+  },
+  "41": {
+    state: "Paraná",
+    uf: "PR",
+    title: "DDD 41 é de qual estado?",
+    summary: "O DDD 41 é utilizado no Paraná. Nesta página, consulte os municípios abrangidos e avance para as fichas locais e estaduais relacionadas.",
+    curiosity: "O Paraná abriga as Cataratas do Iguaçu, uma das paisagens naturais mais conhecidas do país.",
+  },
+  "43": {
+    state: "Rio Grande do Sul",
+    uf: "RS",
+    title: "DDD 43 é de qual estado?",
+    summary: "O DDD 43 é utilizado no Rio Grande do Sul. Consulte os municípios atendidos e confirme a cobertura local antes de fazer uma ligação.",
+    curiosity: "O Rio Grande do Sul é o estado situado mais ao sul do território brasileiro.",
+  },
+  "29": {
+    state: "Bahia",
+    uf: "BA",
+    title: "DDD 29 é de qual estado?",
+    summary: "O DDD 29 é utilizado na Bahia. Consulte a lista de municípios e navegue para a ficha estadual para confirmar o contexto da ligação.",
+    curiosity: "Salvador, capital da Bahia, foi a primeira capital do Brasil colonial.",
+  },
+  "95": {
+    state: "Roraima",
+    uf: "RR",
+    title: "DDD 95 é de qual estado?",
+    summary: "O DDD 95 é utilizado em Roraima. Consulte os municípios abrangidos e confirme a localidade antes de fazer ou partilhar uma ligação.",
+    curiosity: "O Monte Roraima integra a paisagem de fronteira entre Brasil, Guiana e Venezuela.",
+  },
+  "13": {
+    state: "São Paulo",
+    uf: "SP",
+    title: "DDD 13 é de qual estado?",
+    summary: "O DDD 13 é utilizado em áreas do litoral e do sul do estado de São Paulo. Consulte os municípios listados para confirmar a cobertura local.",
+    curiosity: "O litoral paulista reúne áreas urbanas, portuárias e de preservação ambiental no Sudeste brasileiro.",
+  },
+  "93": {
+    state: "Pará",
+    uf: "PA",
+    title: "DDD 93 é de qual estado?",
+    summary: "O DDD 93 é utilizado no Pará. Consulte os municípios abrangidos e use as fichas locais para confirmar a localidade da ligação.",
+    curiosity: "O Pará é atravessado pela Linha do Equador na sua porção norte e integra a Região Norte.",
+  },
+  "64": {
+    state: "Goiás",
+    uf: "GO",
+    title: "DDD 64 é de qual estado?",
+    summary: "O DDD 64 é utilizado em Goiás. Consulte as cidades atendidas e navegue para a página estadual antes de confirmar um contacto.",
+    curiosity: "Goiás abriga a Chapada dos Veadeiros, reconhecida pela paisagem de cerrado e quedas-d’água.",
+  },
+  "83": {
+    state: "Paraíba",
+    uf: "PB",
+    title: "DDD 83 é de qual estado?",
+    summary: "O DDD 83 é utilizado na Paraíba. Consulte os municípios abrangidos e confirme a localidade para interpretar corretamente o código de área.",
+    curiosity: "A Ponta dos Seixas, na Paraíba, é conhecida como o ponto mais oriental das Américas continentais.",
+  },
+  "87": {
+    state: "Pernambuco",
+    uf: "PE",
+    title: "DDD 87 é de qual estado?",
+    summary: "O DDD 87 é utilizado em Pernambuco. Consulte os municípios da lista e utilize as fichas locais para confirmar a cobertura territorial.",
+    curiosity: "O arquipélago de Fernando de Noronha pertence administrativamente a Pernambuco.",
+  },
+  "53": {
+    state: "Rio Grande do Sul",
+    uf: "RS",
+    title: "DDD 53 é de qual estado?",
+    summary: "O DDD 53 é utilizado no Rio Grande do Sul. Consulte os municípios atendidos e confirme a localidade antes de fazer uma ligação interurbana.",
+    curiosity: "A Lagoa dos Patos é uma referência geográfica importante no sul do Rio Grande do Sul.",
+  },
+  "79": {
+    state: "Sergipe",
+    uf: "SE",
+    title: "DDD 79 é de qual estado?",
+    summary: "O DDD 79 é utilizado em Sergipe. Consulte os municípios abrangidos e navegue para a ficha estadual para complementar a pesquisa.",
+    curiosity: "Sergipe é banhado pelo Atlântico e faz fronteira terrestre com Bahia e Alagoas.",
   },
 };
 
@@ -85,10 +191,16 @@ export default function DddDetail() {
           <h2 id={`ddd-${data.code}-guide-title`} className="mt-3 font-display text-4xl tracking-[-0.05em] sm:text-5xl">{priorityEditorial.title}</h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-[#5d756c]">{priorityEditorial.summary}</p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Como usar o DDD {data.code}</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Em uma chamada interurbana, informe o código da operadora, o DDD {data.code} e o número de telefone. Consulte a operadora para conhecer tarifas e condições da ligação.</p></article>
-          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Confirme a localidade</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">O código deve ser interpretado junto com o município. Abra a cidade na lista e confirme a cobertura territorial antes de partilhar um contacto ou organizar uma ligação.</p></article>
-          <div className="sm:col-span-2 flex flex-wrap gap-3 pt-1"><Link href={`/estado/${priorityEditorial.uf.toLowerCase()}`} className="pressable rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Ver DDDs do {priorityEditorial.state}</Link><Link href="/gerador" className="pressable rounded-full border border-[#b8c8be] px-5 py-3 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">Simular formato com DDD</Link></div>
+	        <div className="grid gap-4 sm:grid-cols-2">
+	          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Como usar o DDD {data.code}</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">Em uma chamada interurbana, informe o código da operadora, o DDD {data.code} e o número de telefone. Consulte a operadora para conhecer tarifas e condições da ligação.</p></article>
+	          <article className="rounded-[1.5rem] border border-[#ded2be] bg-[#fffaf1] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]"><h3 className="font-display text-2xl tracking-[-0.04em]">Confirme a localidade</h3><p className="mt-3 text-sm leading-6 text-[#5d756c]">O código deve ser interpretado junto com o município. Abra a cidade na lista e confirme a cobertura territorial antes de partilhar um contacto ou organizar uma ligação.</p></article>
+	          <article className="sm:col-span-2 rounded-[1.5rem] border border-[#e6be9b] bg-[#fff3df] p-6 shadow-[0_12px_35px_rgba(20,61,54,0.06)]">
+	            <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#d94e34]">Curiosidade regional</div>
+	            <h3 className="mt-2 font-display text-2xl tracking-[-0.04em]">Além do código de área</h3>
+	            <p className="mt-3 max-w-3xl text-sm leading-6 text-[#5d756c]">{priorityEditorial.curiosity}</p>
+	            <a href={officialTerritorialSources.ibge.url} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-1 text-xs font-bold text-[#143d36] underline decoration-[#f06a4d] underline-offset-4">Consultar contexto territorial no IBGE <ArrowUpRight size={13} /></a>
+	          </article>
+	          <div className="sm:col-span-2 flex flex-wrap gap-3 pt-1"><Link href={`/estado/${priorityEditorial.uf.toLowerCase()}`} className="pressable rounded-full bg-[#143d36] px-5 py-3 text-sm font-bold text-[#faf3e5]">Ver DDDs do {priorityEditorial.state}</Link><Link href="/gerador" className="pressable rounded-full border border-[#b8c8be] px-5 py-3 text-sm font-bold text-[#143d36] hover:border-[#f06a4d] hover:text-[#d94e34]">Simular formato com DDD</Link></div>
         </div>
       </div>
     </section> : null}

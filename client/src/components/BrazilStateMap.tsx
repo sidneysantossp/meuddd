@@ -1,4 +1,4 @@
-import { MapPin } from "lucide-react";
+import { MapPin, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -114,7 +114,8 @@ export function BrazilStateMap({
   const [shouldLoad, setShouldLoad] = useState(false);
   const [features, setFeatures] = useState<SvgFeature[]>([]);
   const [loadError, setLoadError] = useState(false);
-  const [hoveredUf, setHoveredUf] = useState<string | undefined>();
+	const [hoveredUf, setHoveredUf] = useState<string | undefined>();
+	const [openConnectionId, setOpenConnectionId] = useState<string | undefined>();
   const [hasHydrated, setHasHydrated] = useState(false);
   const stateByUf = useMemo(() => new Map(states.map(state => [state.uf, state])), [states]);
   const selectedState = selectedUf ? stateByUf.get(selectedUf) : undefined;
@@ -224,21 +225,29 @@ export function BrazilStateMap({
                     <path d={connection.path} className="state-connection" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
                     <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
                     <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <circle
+	                    <Tooltip open={openConnectionId === connection.id} onOpenChange={open => setOpenConnectionId(open ? connection.id : undefined)}>
+	                      <TooltipTrigger asChild>
+	                        <circle
                           cx={connection.midpoint[0]}
                           cy={connection.midpoint[1]}
                           r="3.8"
                           tabIndex={0}
-                          role="img"
-                          aria-label={`Ver detalhes da ${tooltipLabel.toLowerCase()}`}
-                          className="state-connection-midpoint"
-                          style={{ animationDelay: `${-connection.index * 0.55}s` }}
-                        />
-                      </TooltipTrigger>
-                      <TooltipContent side="top" sideOffset={8} className="max-w-56 border border-[#b8c8be] bg-[#fffaf1] px-3 py-2 text-[#143d36] shadow-xl">
-                        <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#d94e34]">Conexão territorial</div>
+	                          role="button"
+	                          aria-label={`Ver detalhes da ${tooltipLabel.toLowerCase()}`}
+	                          className="state-connection-midpoint"
+	                          style={{ animationDelay: `${-connection.index * 0.55}s` }}
+	                          onPointerDown={event => {
+	                            if (event.pointerType !== "touch") return;
+	                            event.preventDefault();
+	                            setOpenConnectionId(current => current === connection.id ? undefined : connection.id);
+	                          }}
+	                          onKeyDown={event => {
+	                            if (event.key === "Escape") setOpenConnectionId(undefined);
+	                          }}
+	                        />
+	                      </TooltipTrigger>
+	                      <TooltipContent side="top" sideOffset={8} className="max-w-56 border border-[#b8c8be] bg-[#fffaf1] px-3 py-2 text-[#143d36] shadow-xl">
+	                        <div className="flex items-start justify-between gap-3"><div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#d94e34]">Conexão territorial</div><button type="button" onClick={() => setOpenConnectionId(undefined)} className="-mr-1 -mt-1 grid size-6 place-items-center rounded-full text-[#143d36] hover:bg-[#f1e5d3] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f06a4d]" aria-label={`Fechar detalhes da ${tooltipLabel.toLowerCase()}`}><X size={13} /></button></div>
                         <div className="mt-1 text-xs font-bold">{fromState?.name ?? connection.id.split("-")[0]} → {toState?.name ?? connection.id.split("-")[1]}</div>
                         {fromState && toState ? <div className="mt-1 text-[11px] leading-4 text-[#5d756c]">{fromState.uf}: {fromState.dddCount} DDDs · {toState.uf}: {toState.dddCount} DDDs</div> : null}
                       </TooltipContent>

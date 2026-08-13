@@ -179,3 +179,6 @@
 - [x] Adicionar um ponto pulsante acessível no centro de cada conexão animada do mapa de estados.
 - [x] Aplicar o padrão editorial de recuperação SEO aos próximos cinco DDDs prioritários identificados pelo relatório de consultas.
 - [x] Adicionar tooltips acessíveis aos pontos pulsantes do mapa para mostrar dados territoriais rápidos no hover e foco.
+- [x] Aplicar o padrão editorial de recuperação SEO aos próximos dez DDDs prioritários do relatório de consultas.
+- [x] Adicionar uma secção de curiosidades regionais factuais às páginas de DDD otimizadas.
+- [x] Permitir abrir e fechar facilmente por toque os tooltips dos marcadores pulsantes do mapa em dispositivos móveis.

@@ -13,7 +13,7 @@ if (forbiddenReference) {
   throw new Error(`O bundle serverless não pode conter dependências de desenvolvimento: ${forbiddenReference}.`);
 }
 
-const { default: app } = await import(new URL("../server.ts", import.meta.url));
+const { default: app } = await import(new URL("../dist/vercel/handler.js", import.meta.url));
 const server = createServer(app);
 
 await new Promise((resolve, reject) => {
