@@ -1,13 +1,13 @@
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import { Link } from "wouter";
 
-const featuredArticles = [
+export const featuredArticles = [
   {
     href: "/guia/o-que-e-ddd",
     eyebrow: "Telefonia / guia essencial",
     title: "O que é DDD? Entenda os códigos de área do Brasil",
     publishedAt: "12 de agosto de 2026",
-    image: "/manus-storage/blog-ddd-mapa-brasil_57876089.png",
+    image: "/manus-storage/blog-ddd-mapa-brasil_ab2cdf6e.png",
     alt: "Ilustração editorial de mapa do Brasil, teclado de telefone e marcador de localização.",
   },
   {
@@ -15,7 +15,7 @@ const featuredArticles = [
     eyebrow: "Consulta / cidades",
     title: "Como descobrir o DDD de uma cidade brasileira",
     publishedAt: "12 de agosto de 2026",
-    image: "/manus-storage/blog-consultar-ddd-cidade_0819cb9e.png",
+    image: "/manus-storage/blog-consultar-ddd-cidade_5b64333e.png",
     alt: "Ilustração editorial de uma malha urbana, mapa dobrado e marcador de localização.",
   },
   {
@@ -23,7 +23,7 @@ const featuredArticles = [
     eyebrow: "Chamadas / interurbanas",
     title: "Como ligar para outro estado: DDD e número de destino",
     publishedAt: "12 de agosto de 2026",
-    image: "/manus-storage/blog-ligacao-entre-estados_42079c98.png",
+    image: "/manus-storage/blog-ligacao-entre-estados_dcca6a6d.png",
     alt: "Ilustração editorial de regiões conectadas por uma ligação telefónica.",
   },
 ] as const;

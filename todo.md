@@ -198,3 +198,6 @@
 - [x] Criar uma secção de DDDs populares para acesso rápido na página inicial usando dados públicos já disponíveis na plataforma.
 - [x] Guardar no dispositivo um histórico limitado de pesquisas recentes, com acesso rápido e opção de limpeza.
 - [x] Cobrir privacidade, localização aproximada, DDDs populares e histórico local com testes automatizados e validação visual.
+- [x] Analisar a planilha de 15.723 imagens internas reportadas como quebradas e identificar a causa comum por URL, rota e tipo de ativo.
+- [x] Corrigir em escala a entrega ou referência das imagens internas afetadas no domínio publicado.
+- [x] Validar uma amostra representativa de imagens, imagens de dados estruturados e o build/SSR após a correção.
