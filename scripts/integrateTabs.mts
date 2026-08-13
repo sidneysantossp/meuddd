@@ -3,6 +3,7 @@
    que alimentam o SSR (prefetch) e o componente MunicipalityTabs. */
 import fs from "node:fs";
 import path from "node:path";
+import { OFFICIAL_URLS, sanitizeExternalLinks } from "../shared/externalLinks";
 
 const GEN_DIR = path.resolve(import.meta.dirname, "../../ddd-brasil/.generated/tabs");
 const OUT_DIR = path.resolve(import.meta.dirname, "../../ddd-brasil/shared/localityTabs");
@@ -39,11 +40,26 @@ for (const uf of UFS) {
   const gen = path.join(GEN_DIR, `${uf}.json`);
   const out = path.join(OUT_DIR, `${uf}.ts`);
   if (!fs.existsSync(gen)) { missing++; continue; }
-  const catalog = JSON.parse(fs.readFileSync(gen, "utf-8"));
+  const rawCatalog = JSON.parse(fs.readFileSync(gen, "utf-8")) as Record<string, { climate?: { body?: string } } | unknown>;
+  // Enrich: cada ficha de clima ganha a fonte Climate-Data.org (autoridade
+  // editorial) com URL oficial por UF/cidade; e a política de links externos
+  // remove qualquer href de domínio fora da whitelist (apenas gov.br, Google
+  // Maps e climate-data.org são permitidos).
+  const catalog: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(rawCatalog)) {
+    const [, slug] = key.split(":");
+    const record = value as { climate?: { body?: string } } | undefined;
+    if (record?.climate?.body) {
+      (record as { climate: { source?: { label: string; href: string } } }).climate.source = { label: "Climate-Data.org", href: OFFICIAL_URLS.climateData(uf, slug.replace(/-/g, " ")) };
+    }
+    catalog[key] = value;
+  }
   const normalized: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(catalog)) {
     const [, slug] = key.split(":");
-    normalized[slug] = value;
+    // Política de links externos: remove hrefs/mapHref de domínios fora da
+    // whitelist (apenas gov.br, Google Maps e climate-data.org são permitidos).
+    normalized[slug] = sanitizeExternalLinks(value);
   }
   const ts = header + toTs(normalized) + " as Record<string, MunicipalityTabs>;\n";
   fs.writeFileSync(out, ts);

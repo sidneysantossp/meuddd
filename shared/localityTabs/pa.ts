@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Regi\u0000e3o Norte do Brasil, Bel\u0000e9m apresenta um clima com chuva durante todo o ano, caracter\u0000e1stico da Amaz\u0000f4nia. A temperatura m\u0000e9dia fica estabilizada entre os 26 e 28 \u0000b0C, com elevada umidade. A precipita\u0000e7\u0000e3o anual fica em torno de 2,1 a 2,2 metros, variando conforme os padr\u0000f5es locais; registra-picos de chuva em meses como mar\u0000e7o e abril, e continuidade de chuvas, ainda que menos intensas, em outros per\u0000edodos. Eventos c\u0000edvicos, como o C\u0000edrio de Nazar\u0000e9 em outubro, influenciam o regime tur\u0000edstico. Fontes: Britannica (clima equatorial) e dados de pluviometria (2.085 a 2.175 mm/ano).",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/pa/belem/",
+      },
     },
     "dining": {
       "closing": "Os pratos t\u0000edpicos da culin\u0000e1ria paraense s\u0000e3o parte essencial da visita a Bel\u0000e9m. Explorar a gastronomia local exige tempo para experimentar combina\u0000e7\u0000f5es do a\u0000e7a\u0000ed, tucupi, jambu e carnes curadas, entre outros itens tradicionais.",

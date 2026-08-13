@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Osasco está situada na Região Metropolitana de São Paulo, com DDD 11 e população estimada em 759.524 habitantes (IBGE, 2025). O clima da cidade reflete o padrão da região: verões quentes com boa possibilidade de chuva, invernos relativamente amenos e chuvas distribuídas ao longo do ano. Essa condição favorece atividades ao ar livre na maior parte do ano, ainda que eventuais dias de chuva exijam planejamento. ([ibge.gov.br](https://www.ibge.gov.br/cidades-e-estados/sp/osasco.html))",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/sp/osasco/",
+      },
     },
     "dining": {
       "closing": "Para planejamento de refeições, vale considerar opções públicas como mercados municipais e feiras, que costumam oferecer produtos frescos e mercadorias locais.",
@@ -103,7 +107,7 @@ export const catalog: Record<string, MunicipalityTabs> = {
       "intro": "Osasco funciona como hub de mobilidade na Região Metropolitana de São Paulo, com infraestrutura de transporte próprio e conexões com redes metropolitanas. A cidade opera através de um sistema de ônibus urbano, com atuação de empresas locais e a supervisão da CMTO (Companhia Municipal de Transportes de Osasco); também dispõe de uma rodoviária municipal e estações de trem da CPTM na área, conectando Osasco a São Paulo e ao interior.",
       "items": [
         {
-          "description": "Terminal Rodoviário Alfredo Thomaz (em Erasmo Braga, 1500, Presidente Altino) é a principal rodoviária da cidade, conectando Osasco a rotas intermunicipais. ([sinart.com.br](https://www.sinart.com.br/rodoviariadeosasco))",
+          "description": "Terminal Rodoviário Alfredo Thomaz (em Erasmo Braga, 1500, Presidente Altino) é a principal rodoviária da cidade, conectando Osasco a rotas intermunicipais. (sinart.com.br)",
           "kind": "Rodoviária",
           "name": "Terminal Rodoviário Alfredo Thomaz",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminal%20Rodovi%C3%A1rio%20Alfredo%20Thomaz%2C%20Osasco%2C%20SP",
@@ -115,13 +119,13 @@ export const catalog: Record<string, MunicipalityTabs> = {
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%C3%B4nibus%20municipal%20(CMTO)%2C%20Osasco%2C%20SP",
         },
         {
-          "description": "O aeroporto mais próximo é o Aeroporto de São Paulo – Congonhas (CGH), localizado na região sul de São Paulo, a cerca de 17–20 km de Osasco. ([rome2rio.com](https://www.rome2rio.com/pt/s/Nearby-Airports/Osasco))",
+          "description": "O aeroporto mais próximo é o Aeroporto de São Paulo – Congonhas (CGH), localizado na região sul de São Paulo, a cerca de 17–20 km de Osasco. (rome2rio.com)",
           "kind": "Aeroporto",
           "name": "Aeroporto de Congonhas (CGH)",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20de%20Congonhas%20(CGH)%2C%20Osasco%2C%20SP",
         },
         {
-          "description": "Infraestrutura ferroviária: Estação Osasco serve as linhas CPTM 8-Diamante e 9-Esmeralda, com conexão entre Osasco, a capital e o interior; a Linha 9 Esmeralda liga Osasco a Varginha, em direção à zona sul de São Paulo. ([metrocptm.com.br](https://www.metrocptm.com.br/linha-9/))",
+          "description": "Infraestrutura ferroviária: Estação Osasco serve as linhas CPTM 8-Diamante e 9-Esmeralda, com conexão entre Osasco, a capital e o interior; a Linha 9 Esmeralda liga Osasco a Varginha, em direção à zona sul de São Paulo. (metrocptm.com.br)",
           "kind": "Ferrovias",
           "name": "Estação Osasco (CPTM) – Linhas 8 Diamante e 9 Esmeralda",
           "mapHref": "https://www.google.com/maps/search/?api=1&query=Esta%C3%A7%C3%A3o%20Osasco%20(CPTM)%20%E2%80%93%20Linhas%208%20Diamante%20e%209%20Esmeralda%2C%20Osasco%2C%20SP",

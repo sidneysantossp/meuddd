@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Curitiba \u0000e9 uma cidade da regi\u0000e3o Sul com clima subtropical de altitude, marcado por ver\u0000e3os moderados e invernos frios relativos. A combina\u0000e7\u0000e3o de altitude, geografia e regime de chuvas faz com que a cidade tenha ver\u0000e3os agrad\u0000e1veis e uma umidade percept\u0000edvel ao longo do ano. \u0004a temperatura m\u0000e9dia fica em torno de 17\u0000b0C, e chuvas ocorrem durante toda a rota estacional, o que influencia as op\u0000e7\u0000f5es de visita e atividades ao ar livre. A popula\u0000e7\u0000e3o estimada para 2025 \u0000e9 de 1.830.795 h0b1itantes, com DDD 41; esses n\u0000fa60 leis ajudam a situar a cidade no cen\u0000e1rio regional e t\u0000earnado de transporte. Fontes: classifica\u0000e7\u0000e3o de Koppen (Cfb); alt. 932 m; n\u0000famero do DDD e popula\u0000e7\u0000e3o estimada (IBGE). ([en.climate-data.org](https://en.climate-data.org/south-america/brazil/parana/curitiba-2010/))",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/pr/curitiba/",
+      },
     },
     "dining": {
       "closing": "Para planejamento, recomende consultar os hor\u0000e1rios de funcionamento de cada local na visita e considerar que muitas op\u0000e7\u0000f5es s\u0000e3o de base comunit\u0000e1ria e pequenos com\u0000e9rcio local, em especial em bairros como Jardim Bot\u0000e2nico e Centro. ",

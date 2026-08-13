@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Betim, município da RMBH, está inserido em uma zona de clima de serras do Sudeste. Este padrão se aproxima do temperado de altitude, com verões mais úmidos e verões quentes, além de invernos relativamente frios e secos. A topografia de serra e a proximidade com Belo Horizonte influenciam a amplitude térmica e a distribuição das chuvas ao longo do ano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/mg/betim/",
+      },
     },
     "dining": {
       "closing": "Mercados públicos e feiras locais costumam oferecer itens regionais, queijos mineiros, doces e quitutes típicos da culinária de Minas Gerais.",

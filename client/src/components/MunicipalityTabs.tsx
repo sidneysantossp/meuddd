@@ -5,7 +5,16 @@
 import { ArrowUpRight, MapPin, Mountain, Utensils, BusFront, CloudSun } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
+import { OFFICIAL_URLS, isAllowedExternal, renderMarkdownLinks } from "@shared/externalLinks";
 import type { MunicipalityTabs as MunicipalityTabsData } from "@shared/localityTabs/types";
+
+/* Links internos por termo territorial: o nome do estado e a região referidos
+   no texto editorial apontam para as páginas pilar do site. */
+function linkRegion(body: string, region: string, regionHref: string): string {
+  const idx = body.indexOf(region);
+  if (idx === -1) return body;
+  return `${body.slice(0, idx)}<a class="underline decoration-[#f06a4d]/60 underline-offset-4 hover:text-[#f06a4d]" href="${regionHref}">${region}</a>${body.slice(idx + region.length)}`;
+}
 
 interface Props {
   city: string;
@@ -30,7 +39,7 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
         <div key={id} role="tabpanel" id={`tabpanel-${id}`} aria-labelledby={`tab-${id}`} hidden={active !== id}>
           {key === "tourism" && (
             <div className="space-y-5">
-              <p className="leading-7 text-[#5d756c]">{tabs.tourism.intro}</p>
+              <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.tourism.intro, stateName, `/estado/${uf.toLowerCase()}`)) }} />
               <div className="grid gap-3 sm:grid-cols-2">
                 {tabs.tourism.items.map(item => (
                   <a key={item.mapHref} href={item.mapHref} target="_blank" rel="noreferrer"
@@ -38,18 +47,18 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
                     <MapPin size={17} className="mt-0.5 shrink-0 text-[#f06a4d]" />
                     <div>
                       <strong className="block font-display text-[#143d36]">{item.name}</strong>
-                      <p className="mt-1 text-sm leading-6 text-[#5d756c]">{item.description}</p>
+                      <p className="mt-1 text-sm leading-6 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(item.description) }} />
                       <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#f06a4d]">Ver no mapa <ArrowUpRight size={12} /></span>
                     </div>
                   </a>
                 ))}
               </div>
-              {tabs.tourism.closing && <p className="leading-7 text-[#5d756c]">{tabs.tourism.closing}</p>}
+              {tabs.tourism.closing && <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.tourism.closing, stateName, `/estado/${uf.toLowerCase()}`)) }} />}
             </div>
           )}
           {key === "dining" && (
             <div className="space-y-5">
-              <p className="leading-7 text-[#5d756c]">{tabs.dining.intro}</p>
+              <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.dining.intro, stateName, `/estado/${uf.toLowerCase()}`)) }} />
               <div className="grid gap-3 sm:grid-cols-2">
                 {tabs.dining.items.map(item => (
                   <a key={item.mapHref} href={item.mapHref} target="_blank" rel="noreferrer"
@@ -58,18 +67,18 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
                     <div>
                       <strong className="block font-display text-[#143d36]">{item.name}</strong>
                       <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#f06a4d]">{item.kind}</span>
-                      <p className="mt-1 text-sm leading-6 text-[#5d756c]">{item.description}</p>
+                      <p className="mt-1 text-sm leading-6 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(item.description) }} />
                       <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#f06a4d]">Ver no mapa <ArrowUpRight size={12} /></span>
                     </div>
                   </a>
                 ))}
               </div>
-              {tabs.dining.closing && <p className="leading-7 text-[#5d756c]">{tabs.dining.closing}</p>}
+              {tabs.dining.closing && <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.dining.closing, stateName, `/estado/${uf.toLowerCase()}`)) }} />}
             </div>
           )}
           {key === "transport" && (
             <div className="space-y-5">
-              <p className="leading-7 text-[#5d756c]">{tabs.transport.intro}</p>
+              <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.transport.intro, stateName, `/estado/${uf.toLowerCase()}`)) }} />
               <div className="grid gap-3 sm:grid-cols-2">
                 {tabs.transport.items.map(item => {
                   const inner = (
@@ -78,7 +87,7 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
                       <div>
                         <strong className="block font-display text-[#143d36]">{item.name}</strong>
                         <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#f06a4d]">{item.kind}</span>
-                        <p className="mt-1 text-sm leading-6 text-[#5d756c]">{item.description}</p>
+                        <p className="mt-1 text-sm leading-6 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(item.description) }} />
                         {item.mapHref && <span className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-[#f06a4d]">Ver no mapa <ArrowUpRight size={12} /></span>}
                       </div>
                     </div>
@@ -90,12 +99,13 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
                   );
                 })}
               </div>
-              {tabs.transport.closing && <p className="leading-7 text-[#5d756c]">{tabs.transport.closing}</p>}
+              {tabs.transport.closing && <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.transport.closing, stateName, `/estado/${uf.toLowerCase()}`)) }} />}
+              <a href={OFFICIAL_URLS.anatelNumeracao} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-[0.12em] text-[#f06a4d] hover:text-[#143d36]">Plano de Numeração Brasileiro · ANATEL <ArrowUpRight size={12} /></a>
             </div>
           )}
           {key === "climate" && (
             <div className="space-y-5">
-              <p className="leading-7 text-[#5d756c]">{tabs.climate.intro}</p>
+              <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.climate.intro, stateName, `/estado/${uf.toLowerCase()}`)) }} />
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {tabs.climate.details.map(d => (
                   <div key={d.label} className="rounded-2xl bg-[#e9deca] p-4">
@@ -104,7 +114,10 @@ export function MunicipalityTabs({ city, stateName, uf, tabs }: Props) {
                   </div>
                 ))}
               </div>
-              <p className="leading-7 text-[#5d756c]">{tabs.climate.body}</p>
+              <p className="leading-7 text-[#5d756c]" dangerouslySetInnerHTML={{ __html: renderMarkdownLinks(linkRegion(tabs.climate.body, stateName, `/estado/${uf.toLowerCase()}`)) }} />
+              {tabs.climate.source && isAllowedExternal(tabs.climate.source.href) && (
+                <a href={tabs.climate.source.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-bold uppercase tracking-[0.12em] text-[#f06a4d] hover:text-[#143d36]">Dados climáticos · {tabs.climate.source.label} <ArrowUpRight size={12} /></a>
+              )}
             </div>
           )}
         </div>

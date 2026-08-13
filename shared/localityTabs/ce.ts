@@ -25,10 +25,14 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Maranguape, integrada à Região Metropolitana de Fortaleza, apresenta clima tropical com influência de altitude na serra, o que favorece variações locais de temperatura. A precipitação é concentrada na estação chuvosa, com abril tipicamente marcando picos de chuva, enquanto setembro tende a ser mais seco. A cidade registra média anual ao redor de 26 °C, tornando o regime climático estável ao longo do ano, ainda que haja variações entre áreas mais elevadas.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ce/maranguape/",
+      },
     },
     "dining": {
-      "closing": "Para vivenciar a gastronomia local, procure feiras e mercados públicos onde se destacam os produtos regionais. A cidade preserva hábitos de cozinha nordestina com influência do Ceará rural, especialmente em preparos com carne de sol, baião de dois e mandioca. Fontes: G1 Nordeste Rural (receita de baião de dois) e publicações sobre a culinária cearense. ([g1.globo.com](https://g1.globo.com/ce/ceara/receitas/noticia/2026/05/17/receita-de-familia-aprenda-a-fazer-o-baiao-de-dois-cremoso-que-conquistou-cearense-de-101-anos.ghtml)) ",
-      "intro": "A culinária de Maranguape está inserida na tradição nordestina do Ceará, com pratos que valorizam o feijão verde, o arroz, o queijo coalho, a carne de sol e a mandioca. Essa região é conhecida pela prática de repassar técnicas culinárias de geração em geração, frequentemente compartilhadas em feiras e mercados locais. Em Maranguape, a oferta de produtos alimentares em feiras da agricultura familiar também revela hábitos regionais de consumo, como a produção de alimentos locais, frutas e itens típicos da zona rural. Fontes: reportagens sobre baião de dois e culinária cearense. ([g1.globo.com](https://g1.globo.com/ce/ceara/receitas/noticia/2026/05/17/receita-de-familia-aprenda-a-fazer-o-baiao-de-dois-cremoso-que-conquistou-cearense-de-101-anos.ghtml))",
+      "closing": "Para vivenciar a gastronomia local, procure feiras e mercados públicos onde se destacam os produtos regionais. A cidade preserva hábitos de cozinha nordestina com influência do Ceará rural, especialmente em preparos com carne de sol, baião de dois e mandioca. Fontes: G1 Nordeste Rural (receita de baião de dois) e publicações sobre a culinária cearense. (g1.globo.com) ",
+      "intro": "A culinária de Maranguape está inserida na tradição nordestina do Ceará, com pratos que valorizam o feijão verde, o arroz, o queijo coalho, a carne de sol e a mandioca. Essa região é conhecida pela prática de repassar técnicas culinárias de geração em geração, frequentemente compartilhadas em feiras e mercados locais. Em Maranguape, a oferta de produtos alimentares em feiras da agricultura familiar também revela hábitos regionais de consumo, como a produção de alimentos locais, frutas e itens típicos da zona rural. Fontes: reportagens sobre baião de dois e culinária cearense. (g1.globo.com)",
       "items": [
         {
           "description": "Baião de dois com carne de sol é um prato tradicional na região, muitas vezes servido com queijo coalho e manteiga de garrafa; a preparação é comum em família e em eventos locais.",
@@ -63,8 +67,8 @@ export const catalog: Record<string, MunicipalityTabs> = {
       ],
     },
     "tourism": {
-      "closing": "Para planejamento, consulte as temporadas de visitas às áreas naturais e aos museus locais, além de verificar a programação de feiras regionais. Fontes: Serra de Maranguape, Museu da Cachaça e AGROMAP. ([pt.wikipedia.org](https://pt.wikipedia.org/wiki/Serra_de_Maranguape)) ",
-      "intro": "Maranguape oferece atrativos naturais, históricos e culturais que refletem a relação entre montanha, natureza e a vida local. A cidade está inserida na Região Metropolitana de Fortaleza e abriga a Serra de Maranguape, com o Pico da Rajada como ponto culminante, a aproximadamente 980 metros de altitude. Além disso, a área abriga áreas de proteção ambiental e trilhas que contemplam a fauna e flora locais. Entre os espaços museais, destaca-se o Museu da Cachaça, instalado na Fazenda Ypióca, que documenta a história da bebida no Brasil. A cidade também conserva referências religiosas, como a Igreja Matriz de Maranguape. Eventos periódicos, como a AGROMAP (Feira da Agricultura Familiar), oferecem visão prática da produção regional. ([pt.wikipedia.org](https://pt.wikipedia.org/wiki/Pico_da_Rajada))",
+      "closing": "Para planejamento, consulte as temporadas de visitas às áreas naturais e aos museus locais, além de verificar a programação de feiras regionais. Fontes: Serra de Maranguape, Museu da Cachaça e AGROMAP. (pt.wikipedia.org) ",
+      "intro": "Maranguape oferece atrativos naturais, históricos e culturais que refletem a relação entre montanha, natureza e a vida local. A cidade está inserida na Região Metropolitana de Fortaleza e abriga a Serra de Maranguape, com o Pico da Rajada como ponto culminante, a aproximadamente 980 metros de altitude. Além disso, a área abriga áreas de proteção ambiental e trilhas que contemplam a fauna e flora locais. Entre os espaços museais, destaca-se o Museu da Cachaça, instalado na Fazenda Ypióca, que documenta a história da bebida no Brasil. A cidade também conserva referências religiosas, como a Igreja Matriz de Maranguape. Eventos periódicos, como a AGROMAP (Feira da Agricultura Familiar), oferecem visão prática da produção regional. (pt.wikipedia.org)",
       "items": [
         {
           "description": "Pico da Rajada (Pedra da Rajada) é uma formação rochosa na Serra de Maranguape, com altitude próxima a 980 metros, atraindo caminhadas e contemplação de paisagens.",
@@ -99,8 +103,8 @@ export const catalog: Record<string, MunicipalityTabs> = {
       ],
     },
     "transport": {
-      "closing": "Sugere-se planejamento prévio de deslocamentos, especialmente para quem depende de transporte público para chegar ao aeroporto ou retornar de áreas rurais. Fontes: rodoviária municipal, ônibus urbanos e VLT de Fortaleza. ([buson.com.br](https://www.buson.com.br/rodoviaria/maranguape-ce)) ",
-      "intro": "Maranguape está conectada principalmente por vias rodoviárias, com uma rodoviária municipal que atende trajetos regionais. O transporte urbano é feito pelo sistema de ônibus local. O aeroporto mais próximo é o de Fortaleza (FOR), acessível por via rodoviária e transferes. A cidade não possui linha ferroviária de passageiros que chegue diretamente, e, embora exista o VLT de Fortaleza em expansão na região metropolitana, não há linha que traga trens até Maranguape. ([buson.com.br](https://www.buson.com.br/rodoviaria/maranguape-ce)) ",
+      "closing": "Sugere-se planejamento prévio de deslocamentos, especialmente para quem depende de transporte público para chegar ao aeroporto ou retornar de áreas rurais. Fontes: rodoviária municipal, ônibus urbanos e VLT de Fortaleza. (buson.com.br) ",
+      "intro": "Maranguape está conectada principalmente por vias rodoviárias, com uma rodoviária municipal que atende trajetos regionais. O transporte urbano é feito pelo sistema de ônibus local. O aeroporto mais próximo é o de Fortaleza (FOR), acessível por via rodoviária e transferes. A cidade não possui linha ferroviária de passageiros que chegue diretamente, e, embora exista o VLT de Fortaleza em expansão na região metropolitana, não há linha que traga trens até Maranguape. (buson.com.br) ",
       "items": [
         {
           "description": "Rodoviária de Maranguape (terminal rodoviário) funciona como o principal ponto de embarque para itinerários regionais de ônibus.",

@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Clima de Belford Roxo é típico da Baixada Fluminense, com verões quentes e chuvas concentradas no verão, e períodos de menor chuva no restante do ano. A cidade apresenta alta umidade e variações sazonais que refletem o relevo e a proximidade com o oceano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/rj/belford%20roxo/",
+      },
     },
     "dining": {
       "closing": "As sugestões apresentadas destacam opções públicas e acessíveis para conhecer a gastronomia local por meio de feiras e mercados. Visitas a esses espaços costumam ocorrer de forma gratuita ou com preços equivalentes a produtos comuns do dia a dia.",

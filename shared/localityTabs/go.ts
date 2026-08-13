@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "O clima de Senador Canedo faz parte do conjunto climático do Cerrado goiano, com a maioria das chuvas concentrada na estação quente e úmida. A cidade, assim como o estado de Go\u0000e1s, apresenta ver\u0000e3o chuvoso e invernos relativamente secos, o que determina os padrões de cultivo, turismo sazonal e atividades ao ar livre ao longo do ano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/go/senador%20canedo/",
+      },
     },
     "dining": {
       "closing": "Para conhecer a gastronomia local, procure mercados municipais e feiras, que costumam oferecer produtos regionais sazonais e iguarias goianas.",

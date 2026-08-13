@@ -125,8 +125,9 @@ const SCHEMA = {
           maxItems: 6,
         },
         body: { type: "string", description: "Texto de 100 a 160 palavras sobre estação chuvosa, melhor época para visitar e o que esperar do clima ao longo do ano." },
+        source: { type: "object", description: "Fonte de autoridade climática: {label: \"Climate-Data.org\", href: \"https://pt.climate-data.org/america-do-sul/brasil/{uf}/<cidade-estilo-slug>/\"}." },
       },
-      required: ["intro", "details", "body"],
+      required: ["intro", "details", "body", "source"],
       additionalProperties: false,
     },
   },
@@ -141,7 +142,8 @@ Regras obrigatórias:
 - Não use superlativos de marketing ("o melhor", "imperdível"). Tom informativo, sóbrio e útil, em português do Brasil.
 - O clima deve refletir a região real: Amazônia (equatorial, Af), Nordeste litorâneo (tropical úmido, As), Sertão (semiárido, BSh), Centro-Oeste e Sudeste de planalto (tropical, Aw), Sul (subtropical, Cfa/Cfb), serras do Sudeste (Cwb).
 - Transporte: mencione a rodoviária municipal, o sistema de ônibus, o aeroporto mais próximo (o da própria cidade ou da maior cidade vizinha) e ferrovias/metropolitano apenas quando existem de fato.
-- Responda em português brasileiro.`;
+- Responda em português brasileiro.
+- FONTES E LINKS EXTERNOS: cite APENAS fontes governamentais (domínios *.gov.br, como prefeituras municipais/estaduais e portais federais), o IBGE (ibge.gov.br) e o Climate-Data.org (climate-data.org) para dados climáticos. NUNCA cite ou invente links de portais comerciais ou de terceiros (ex.: rome2rio, tripadvisor, climatempo, sinart, weatherspark, wikipedia, g1, buson, aenabrasil). No texto, pode referir "segundo dados do IBGE" ou "segundo o Climate-Data.org"; inclua os links apenas dentro de parênteses no formato markdown [label](url) usando exclusivamente esses domínios autorizados.`;
 
 async function main() {
   const pool = mysql.createPool(process.env.DATABASE_URL!);

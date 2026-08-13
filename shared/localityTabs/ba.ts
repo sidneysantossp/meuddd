@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Itabuna está no litoral do Nordeste, integrando a Costa do Cacau, região conhecida pela mata atlântica e pela produção histórica de cacau. O clima local combina calor, alta umidade e chuvas ao longo de todo o ano, típica do bioma da costa baiana.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ba/itabuna/",
+      },
     },
     "dining": {
       "closing": "Para quem visita, é comum encontrar opções que valorizam ingredientes locais e a herança da Costa do Cacau, sem depender de redes privadas de restaurantes.",

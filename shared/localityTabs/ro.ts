@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Porto Velho é a capital do estado de Rondônia, situada às margens do Rio Madeira, na região Norte do Brasil. O clima da cidade é característico da Amazônia: quente, úmido e com precipitação significativa ao longo de todo o ano. O regime de chuvas e as altas temperaturas influenciam a demanda por espaços abertos, áreas verdes e atividades ao ar livre. A cidade apresenta um microclima típico de áreas de floresta tropical, com variações sazonais moderadas que não definem uma estação seca bem marcada. ",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/porto%20velho/",
+      },
     },
     "dining": {
       "closing": "Para conhecer a gastronomia local, visite o Mercado Cultural de Porto Velho, onde é possível experimentar pratos regionais em contexto de atividades culturais.",

@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Extremoz está localizada no litoral norte do Rio Grande do Norte, integrando a Região Metropolitana de Natal e o Polo Costa das Dunas. A cidade abriga paisagens nascentes de dunas e áreas costeiras que compõem o conjunto turístico da região, com relevância ambiental ligada à Dunas de Genipabu e à APA Jenipabu.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/rn/extremoz/",
+      },
     },
     "dining": {
       "closing": "Para quem visita a região, recomenda-se buscar orientações locais sobre pontos de alimentação pública e de frutos do mar disponíveis nos arredores das atrações naturais.",

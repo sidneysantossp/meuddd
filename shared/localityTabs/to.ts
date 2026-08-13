@@ -29,6 +29,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Colinas do Tocantins está situada no norte do Tocantins, em área de clima tropical. A população estimada para 2025 é de 36.209 habitantes, conforme projeções oficiais. O regime climático é Aw (tropical savana), com chuvas concentradas na estação chuvosa e períodos mais secos na estação seca. A temperatura média anual fica em torno de 26,5 °C, com precipitação anual próxima de 1.700 mm. Essas características moldam o cotidiano e influenciam atividades ao ar livre e o aproveitamento de ambientes naturais na região.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/to/colinas%20do%20tocantins/",
+      },
     },
     "dining": {
       "closing": "Para experimentar a gastronomia local, procure mercados municipais e feiras da cidade para conhecer ingredientes regionais e preparos tradicionais.",

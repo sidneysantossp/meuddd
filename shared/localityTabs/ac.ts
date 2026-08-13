@@ -5,7 +5,7 @@ import type { MunicipalityTabs } from "./types";
 export const catalog: Record<string, MunicipalityTabs> = {
   "cruzeiro-do-sul": {
     "climate": {
-      "body": "Cruzeiro do Sul está situada na região Norte do Brasil, no estado do Acre, às margens do rio Juruá, e pertence ao bioma Amazônia. O clima da cidade é classificado como Af (tropical de floresta úmida) pela Köppen-Geiger, com chuva ao longo de todo o ano e temperaturas geralmente estáveis, próximas de 25 °C em média anual. A precipitação anual fica em torno de aproximadamente 2.1 milímetros de (ver dados oficiais).1 milímetros por ano, com maior intensidade nos meses de chuva. A umidade relativa é alta, e o ambiente favorece a fauna e a flora típicas da Amazônia. Bioma predominante: Amazônia. Fontes: Af (Köppen-Geiger) (Even3), temperatura média anual (Climate-data.org) e bioma Amazônia (IBGE). ([even3.com.br](https://www.even3.com.br/anais/iiiscaamazonia/843524-classificacao-climatica-de-koppen-no-estado-do-acre/))",
+      "body": "Cruzeiro do Sul está situada na região Norte do Brasil, no estado do Acre, às margens do rio Juruá, e pertence ao bioma Amazônia. O clima da cidade é classificado como Af (tropical de floresta úmida) pela Köppen-Geiger, com chuva ao longo de todo o ano e temperaturas geralmente estáveis, próximas de 25 °C em média anual. A precipitação anual fica em torno de aproximadamente 2.1 milímetros de (ver dados oficiais).1 milímetros por ano, com maior intensidade nos meses de chuva. A umidade relativa é alta, e o ambiente favorece a fauna e a flora típicas da Amazônia. Bioma predominante: Amazônia. Fontes: Af (Köppen-Geiger) (Even3), temperatura média anual (Climate-data.org) e bioma Amazônia (IBGE). (even3.com.br)",
       "details": [
         {
           "label": "Classificação de Köppen",
@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "O clima de Cruzeiro do Sul é fortemente influenciado pela Mata Amazônica, com regime de chuvas bem distribuído durante o ano e temperaturas relativamente constantes, acima de 20 °C em qualquer mês. Esse padrão climático favorece atividades ligadas à biodiversidade e à floresta, além de influenciar a organização do espaço urbano e as modalidades de uso dos recursos naturais na região.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ac/cruzeiro%20do%20sul/",
+      },
     },
     "dining": {
       "closing": "Para conhecer a culinária local, priorize mercados públicos e feiras locais onde pescados frescos, farinha de mandioca e itens regionais costumam estar disponíveis.",
@@ -144,7 +148,7 @@ export const catalog: Record<string, MunicipalityTabs> = {
   },
   "tarauaca": {
     "climate": {
-      "body": "Tarauacá está localizada no interior do Acre, na região Norte, cercada pela Floresta Amazônica. O clima é tropical de floresta úmida, classificado como Af segundo o sistema de Köppen, com altas temperaturas ao longo do ano e precipitação abundante em quase todos os meses. A umidade é elevada e as diferenças sazonais são mais brandas do que em climas temperados. A presença maciça da floresta e de rios contribui para um regime pluviométrico persistente e para a vegetação densa típicos da região. Segundo o bioma predominante indicado pelo IBGE, a área pertence à Amazônia. ([britannica.com](https://www.britannica.com/science/Koppen-climate-classification))",
+      "body": "Tarauacá está localizada no interior do Acre, na região Norte, cercada pela Floresta Amazônica. O clima é tropical de floresta úmida, classificado como Af segundo o sistema de Köppen, com altas temperaturas ao longo do ano e precipitação abundante em quase todos os meses. A umidade é elevada e as diferenças sazonais são mais brandas do que em climas temperados. A presença maciça da floresta e de rios contribui para um regime pluviométrico persistente e para a vegetação densa típicos da região. Segundo o bioma predominante indicado pelo IBGE, a área pertence à Amazônia. (britannica.com)",
       "details": [
         {
           "label": "Estado",
@@ -164,6 +168,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Tarauacá, cidade do Acre na região Norte, situa-se no Vale do Juruá e apresenta clima típico da Amazf4nia: quente, úmido e com chuvas bem distribuídas ao longo do ano. O bioma predominante é a Amazf4nia, o que explica o regime pluviome9trico e a vegetae7e3o densa; corresponde ao cle1ssicoAf (floresta tropical). ([cidades.ibge.gov.br](https://cidades.ibge.gov.br/v4/brasil/ac/tarauaca/panorama))",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ac/tarauaca/",
+      },
     },
     "dining": {
       "closing": "Mercados locais e pratos da culine1ria acreana oferecem uma vise3o concrea da cultura regional. Planeje-se para visitar estabelecimentos públicos, mercados e feiras para vivenciar a gastronomia de Tarauacá com responsabilidade e sem depender de servios privados. ",
@@ -203,7 +211,7 @@ export const catalog: Record<string, MunicipalityTabs> = {
     },
     "tourism": {
       "closing": "Ao planejar visitas, verifique calende1rios locais e disponibilidade de traslados. As ope7f5es variam conforme a época do ano e a infraestrutura regional.",
-      "intro": "Tarauace1, localizada no Vale do Jurue1, oferece turismo de natureza, cultura e viveancia ribeirinha. O regie3o se destaca pela paisagem amazf4nica, pelos rios e pela histf3ria ligada ao ciclo da borracha e ao estabelecimento da cidade em 1907. Ponto se9dio na vida urbana, a Catedral de Nossa Senhora da Glf3ria, no centro, marca o cene1rio religioso. O Mercado Joe3ozinho Melo e9 um eixo cultural, com artesanato e produtos regionais. A regie3o tambe9m oferece passeios de observae7e3o de fauna/flora nos afluentes do Rio Jurue1 e entorno, e a cultura ribeirinha este1 presente em comunidades locais. Eventos regionais, como festivais de cultura e gastronomia, compf5em o calende1rio turedstico. ([g1.globo.com](https://g1.globo.com/ac/acre/natureza/amazonia/noticia/2023/05/03/o-que-fazer-no-jurua-g1-faz-guia-com-alguns-pontos-para-voce-conhecer-na-regiao.ghtml))",
+      "intro": "Tarauace1, localizada no Vale do Jurue1, oferece turismo de natureza, cultura e viveancia ribeirinha. O regie3o se destaca pela paisagem amazf4nica, pelos rios e pela histf3ria ligada ao ciclo da borracha e ao estabelecimento da cidade em 1907. Ponto se9dio na vida urbana, a Catedral de Nossa Senhora da Glf3ria, no centro, marca o cene1rio religioso. O Mercado Joe3ozinho Melo e9 um eixo cultural, com artesanato e produtos regionais. A regie3o tambe9m oferece passeios de observae7e3o de fauna/flora nos afluentes do Rio Jurue1 e entorno, e a cultura ribeirinha este1 presente em comunidades locais. Eventos regionais, como festivais de cultura e gastronomia, compf5em o calende1rio turedstico. (g1.globo.com)",
       "items": [
         {
           "description": "Igreja catedral localizada no centro de Tarauace1, marco da histf3ria religiosa e urbana da cidade.",
@@ -239,7 +247,7 @@ export const catalog: Record<string, MunicipalityTabs> = {
     },
     "transport": {
       "closing": "Para deslocamentos, consulte com antecedeancia as ope70es de viagem (onibus) e as condie7f5es de via BR-364, especialmente em perioada de chuvas.",
-      "intro": "Tarauace1 tem ligae7f5es de via terrestre pela BR-364, conectando a cidade a Rio Branco e a outras localidades do Acre. A cidade abriga a Rodovie1ria Raimundo de Carvalho Oliveira (terminal municipal de embarque/desembarque) com acessos de infraestrutura desde 2023, quando a via de acesso ao terminal foi pavimentada pela prefeitura em parceria com o DERACRE. O Aeroporto Regional Tarauace1 (TRQ) fica a cerca de 3 km do centro, mas ne3o he1 voos regulares. Em termos de ferrovias, ne3o he1 operae7f5es de trens na cidade. ([tripsardou.com](https://tripsardou.com/o-que-fazer-em-tarauaca-ac-explore-a-cultura-natureza-e-tradicoes-desta-cidade-amazonica/))",
+      "intro": "Tarauace1 tem ligae7f5es de via terrestre pela BR-364, conectando a cidade a Rio Branco e a outras localidades do Acre. A cidade abriga a Rodovie1ria Raimundo de Carvalho Oliveira (terminal municipal de embarque/desembarque) com acessos de infraestrutura desde 2023, quando a via de acesso ao terminal foi pavimentada pela prefeitura em parceria com o DERACRE. O Aeroporto Regional Tarauace1 (TRQ) fica a cerca de 3 km do centro, mas ne3o he1 voos regulares. Em termos de ferrovias, ne3o he1 operae7f5es de trens na cidade. (tripsardou.com)",
       "items": [
         {
           "description": "Terminal rodovie1rio municipal de Tarauace1, com embarque/desembarque para destinos regionais. A pavimentae7e3o de acesso ao terminal foi concluedda em 2023.",

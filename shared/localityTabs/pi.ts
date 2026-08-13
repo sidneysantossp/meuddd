@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Picos é um município do sul do Piauí, na região Nordeste do Brasil, com DDD 89 e population estimate de aproximadamente 86.701 habitantes. A cidade funciona como polo comercial da região, com forte atuação na produção e comercialização de mel. Localiza-se na região centro-sul do estado, cortada pelo rio Guaribas, e está a cerca de 307 km da capital Teresina. O município foi fundado em 12 de dezembro de 1890. Sua posição geográfica, rotas rodoviárias e a presença de infraestrutura pública moldam o acesso à cidade e às áreas ao redor. Fontes oficiais confirmam dados demográficos e geográficos amplamente aceitos pela literatura institucional. ",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/pi/picos/",
+      },
     },
     "dining": {
       "closing": "Para informações gastronômicas locais, recomenda-se consultar guias regionais e feiras públicas.",

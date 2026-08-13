@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "O clima de Iranduba está inserido na Amazônia, com regime equatorial caracterizado por calor e alta umidade ao longo do ano. A cidade apresenta temperatura estável (em torno de 26 a 28 °C) e precipitação elevada, típica de floresta tropical úmida. A vegetação e o modo de vida local são fortemente influenciados por esse regime climático, que não apresenta seca pronunciada, o que exige planejamento para atividades ao ar livre e agricultura.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/iranduba/",
+      },
     },
     "dining": {
       "closing": "A experiência gastronômica em Iranduba está vinculada à rica tradição da Amazônia, com foco em pescados de rio, mandioca, frutos da floresta e pratos compartilhados em feiras regionais.",

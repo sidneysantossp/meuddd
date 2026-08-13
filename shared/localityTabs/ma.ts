@@ -5,7 +5,7 @@ import type { MunicipalityTabs } from "./types";
 export const catalog: Record<string, MunicipalityTabs> = {
   "codo": {
     "climate": {
-      "body": "Codó apresenta clima tropical de savana (Aw), com chuvas concentradas no início do ano e seca no meio do ano. A climatologia local indica chuvas variando de 231 mm a 321 mm nos meses mais chuvosos (jan-fev-mar-abr) e quedas acentuadas na seca (junho a agosto), com chuvas muito baixas em julho e agosto. As temperaturas são elevadas ao longo do ano, com máximas que costumam ficar na casa dos 33–34 °C. Em termos de padrão regional, o Maranhão interior, onde Codó está situado, exibe esse regime tropical sazonal típico da região Nordeste interior, distinto do litoral mais úmido. ([climatempo.com.br](https://www.climatempo.com.br/climatologia/1040/codo-ma))",
+      "body": "Codó apresenta clima tropical de savana (Aw), com chuvas concentradas no início do ano e seca no meio do ano. A climatologia local indica chuvas variando de 231 mm a 321 mm nos meses mais chuvosos (jan-fev-mar-abr) e quedas acentuadas na seca (junho a agosto), com chuvas muito baixas em julho e agosto. As temperaturas são elevadas ao longo do ano, com máximas que costumam ficar na casa dos 33–34 °C. Em termos de padrão regional, o Maranhão interior, onde Codó está situado, exibe esse regime tropical sazonal típico da região Nordeste interior, distinto do litoral mais úmido. (climatempo.com.br)",
       "details": [
         {
           "label": "Classificação Köppen",
@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Codó é município maranhense do Nordeste brasileiro, com população estimada de 118.283 habitantes (2025) e área de 4.361,6 km². Situado no interior do estado, o município convive com a influência de rios da região do Itapecuru e a paisagem típica da região dos Cocais, com a cultura afro-brasileira presente de forma marcante na vida pública e religiosa. A seguir, guia sobre transporte, infraestrutura, patrimônio público, clima e pontos de interesse que ajudam a situar a cidade de forma objetiva e verificável.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ma/codo/",
+      },
     },
     "dining": {
       "closing": "Para o visitante, priorize espaços públicos como praças, mercados locais e a programação cultural da cidade.",

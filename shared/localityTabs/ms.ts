@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "O clima de Nova Andradina corresponde ao padrão da região Centro-Oeste, caracterizado por estações bem definidas: período chuvoso concentrado no fim do ano e início do ano, seguido de estação seca entre os meses de maio e setembro. Essa configuração influencia a dinâmica urbana, a agricultura local e as atividades ao ar livre ao longo do ano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ms/nova%20andradina/",
+      },
     },
     "dining": {
       "closing": "Para quem visita, vale acompanhar as feiras locais, que costumam oferecer produtos regionais frescos e contribuir para o abastecimento doméstico. ",

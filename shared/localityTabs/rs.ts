@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Clima típico da região Sul, com verões relativamente quentes, invernos frios e precipitação ao longo do ano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/rs/pelotas/",
+      },
     },
     "dining": {
       "closing": "Os doces de Pelotas são parte do patrimônio cultural da cidade e valem a visita para quem aprecia tradição artesanal.",

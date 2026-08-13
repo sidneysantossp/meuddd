@@ -25,6 +25,8 @@ export interface ClimateTab {
   intro: string;
   details: { label: string; value: string }[];
   body: string;
+  /** Fonte de autoridade climática (ex.: climate-data.org) com link externo. */
+  source?: { label: string; href: string };
 }
 
 export interface MunicipalityTabs {

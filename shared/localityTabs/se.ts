@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Est\u0000e2ncia tem um clime tipicamente nordestino, com temporada de chuva concentrada e longos per\u0000edodos de tempo mais seco. A presen\u0000e7a da brisa marinha pode atenuar as temperaturas em pontos litor\u0000e2neos. A localiza\u0000e7\u0000e3o na faixa litor\u0000e2nea favorece varia\u0000e7\u0000f5es sazonais, o que impacta atividades ao ar livre, turismo de praia e visitas a lagoas e dunas na regi\u0000e3o.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/se/estancia/",
+      },
     },
     "dining": {
       "closing": "Para conhecer a culin\u0000e1ria local, priorize preparos com frutos do mar, caranguejo e produtos regionais, como tapioca e pequenas iguarias de milho. Op\u0000e7\u0000f5es de restaurantes informais e barracas de praia costumam oferecer esses itens com ingredientes frescos locais.",

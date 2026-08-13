@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "O clima de São José inserido na Grande Florianópolis apresenta padrões típicos da faixa litorânea do Sul, com ver\u0000e3os quentes e dias variando entre úmidos e amenos. A umidade tende a ser elevada, influenciada pelo oceano, e as estações do ano são mais bem definidas do que em regiões tropicais, refletindo a heterogeneidade de relevo ao longo da costa e de áreas de planalto. A Mata Atlântica na regi\u0000e3o contribui para a dinâmica clim\u0000e1tica local, especialmente em áreas litor\u0000e2neas.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/sc/sao%20jose/",
+      },
     },
     "dining": {
       "closing": "As opções públicas de gastronomia e as feiras locais oferecem uma leitura da culinária regional sem depender de estabelecimentos privados específicos.",
@@ -158,6 +162,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Brusque está localizada no Sul de Santa Catarina, região do Vale do Itajaí, com DDD 47 e população estimada de 155.307 habitantes. O clima é humid subtropical, com verões úmidos e invernos amenos, apresentando chuva ao longo do ano.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/sc/brusque/",
+      },
     },
     "dining": {
       "closing": "Para conhecer a gastronomia local, participe de eventos como Fenarreco e explore feiras e mercados municipais que promovem produtores regionais.",

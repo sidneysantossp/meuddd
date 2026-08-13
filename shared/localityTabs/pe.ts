@@ -25,6 +25,10 @@ export const catalog: Record<string, MunicipalityTabs> = {
         },
       ],
       "intro": "Clima típico de Olinda/PE, com temperaturas elevadas e chuvas distribuídas ao longo do ano, compondo o cenário climático da região litorânea do Nordeste.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/pe/olinda/",
+      },
     },
     "dining": {
       "closing": "A gastronomia local enfatiza ingredientes e preparos regionais, com relevância para visitas culturais e eventos locais.",
