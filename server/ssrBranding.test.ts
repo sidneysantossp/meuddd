@@ -64,4 +64,43 @@ describe("metadados SSR da marca Meu DDD", () => {
       mainEntity: expect.arrayContaining([expect.objectContaining({ name: "O número gerado é real ou está disponível?" })]),
     });
   });
+
+  it("inclui o FAQPage de dez perguntas dinâmicas nas rotas de estado e município", async () => {
+    const stateHead = await prefetchForPath("/estado/sp", new QueryClient(), {
+      states: async () => [],
+      search: async () => [],
+      byCode: async () => null,
+      byState: async () => ({
+        state: { name: "São Paulo", uf: "SP", region: "Sudeste", populationEstimated: 11_000_000, populationReferenceYear: 2025 },
+        cityCount: 645,
+        ddds: [{ code: "11", cityCount: 39, sampleCities: ["São Paulo", "Guarulhos"] }],
+        municipalities: [],
+      }) as never,
+      byMunicipality: async () => null,
+    });
+    const municipalityHead = await prefetchForPath("/cidade/sp/sao-paulo", new QueryClient(), {
+      states: async () => [],
+      search: async () => [],
+      byCode: async () => null,
+      byState: async () => null,
+      byMunicipality: async () => ({
+        municipality: { name: "São Paulo", ddd: "11", populationEstimated: 11_000_000, latitude: -23.55, longitude: -46.63 },
+        state: { name: "São Paulo", uf: "SP", region: "Sudeste", populationEstimated: 11_000_000, populationReferenceYear: 2025 },
+        ddd: { code: "11", cityCount: 39, sampleCities: ["São Paulo", "Guarulhos"] },
+        relatedMunicipalities: [],
+      }) as never,
+    });
+
+    const stateFaq = stateHead.jsonLd?.find(entry => entry["@type"] === "FAQPage");
+    const municipalityFaq = municipalityHead.jsonLd?.find(entry => entry["@type"] === "FAQPage");
+
+    expect(stateFaq).toMatchObject({
+      mainEntity: expect.arrayContaining([expect.objectContaining({ name: "Como ligar de outro estado para São Paulo?" })]),
+    });
+    expect((stateFaq?.mainEntity as unknown[])).toHaveLength(10);
+    expect(municipalityFaq).toMatchObject({
+      mainEntity: expect.arrayContaining([expect.objectContaining({ name: "Como formatar um número de telefone de São Paulo?" })]),
+    });
+    expect((municipalityFaq?.mainEntity as unknown[])).toHaveLength(10);
+  });
 });

@@ -5,6 +5,7 @@ import type { AppRouter } from "../../../server/routers";
 import { trpc } from "@/lib/trpc";
 import { editorialGuides, editorialSources, findEditorialGuide } from "@shared/editorialGuides";
 import { findRegionHub, regionSlug } from "@shared/territorialSeo";
+import { buildMunicipalityFaq, buildStateFaq, faqPageJsonLd } from "@shared/territorialFaq";
 
 type Outputs = inferRouterOutputs<AppRouter>;
 export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[] };
@@ -95,14 +96,16 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
     const uf = stateMatch[1].toUpperCase(); const data = await prefetch.byState({ uf });
     await seed(queryClient, getQueryKey(trpc.ddd.byState, { uf }, "query"), data);
     if (!data) return { title: "Estado não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
-    return { title: `DDD de ${data.state.name}: cidades e códigos | ${site}`, description: `Consulte os DDDs e os ${data.cityCount} municípios de ${data.state.name}, na região ${data.state.region}.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", "@id": path, url: path, name: `DDD de ${data.state.name}`, about: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf, containedInPlace: { "@type": "Country", name: "Brasil" }, population: data.state.populationEstimated ?? undefined } }] };
+    const faqs = buildStateFaq({ stateName: data.state.name, uf: data.state.uf, cityCount: data.cityCount, ddds: data.ddds });
+    return { title: `DDD de ${data.state.name}: cidades e códigos | ${site}`, description: `Consulte os DDDs e os ${data.cityCount} municípios de ${data.state.name}, na região ${data.state.region}.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: path }]), { "@context": "https://schema.org", "@type": "CollectionPage", "@id": path, url: path, name: `DDD de ${data.state.name}`, about: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf, containedInPlace: { "@type": "Country", name: "Brasil" }, population: data.state.populationEstimated ?? undefined } }, faqPageJsonLd(faqs)] };
   }
   const cityMatch = path.match(/^\/cidade\/([a-zA-Z]{2})\/([^/]+)$/);
   if (cityMatch) {
     const uf = cityMatch[1].toUpperCase(); const slug = cityMatch[2]; const data = await prefetch.byMunicipality({ uf, slug });
     await seed(queryClient, getQueryKey(trpc.ddd.byMunicipality, { uf, slug }, "query"), data);
     if (!data) return { title: "Município não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
-    return { title: `DDD de ${data.municipality.name} (${data.state.uf}) | ${site}`, description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: `/estado/${data.state.uf.toLowerCase()}` }, { name: data.municipality.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", "@id": path, url: path, name: `DDD de ${data.municipality.name}`, about: { "@type": "City", name: data.municipality.name, containedInPlace: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf }, population: data.municipality.populationEstimated ?? undefined, geo: { "@type": "GeoCoordinates", latitude: data.municipality.latitude, longitude: data.municipality.longitude } } }] };
+    const faqs = buildMunicipalityFaq({ municipalityName: data.municipality.name, stateName: data.state.name, stateUf: data.state.uf, ddd: data.ddd });
+    return { title: `DDD de ${data.municipality.name} (${data.state.uf}) | ${site}`, description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: `/estado/${data.state.uf.toLowerCase()}` }, { name: data.municipality.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", "@id": path, url: path, name: `DDD de ${data.municipality.name}`, about: { "@type": "City", name: data.municipality.name, containedInPlace: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf }, population: data.municipality.populationEstimated ?? undefined, geo: { "@type": "GeoCoordinates", latitude: data.municipality.latitude, longitude: data.municipality.longitude } } }, faqPageJsonLd(faqs)] };
   }
   return { title: "Página não encontrada | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
 }

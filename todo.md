@@ -182,3 +182,5 @@
 - [x] Aplicar o padrão editorial de recuperação SEO aos próximos dez DDDs prioritários do relatório de consultas.
 - [x] Adicionar uma secção de curiosidades regionais factuais às páginas de DDD otimizadas.
 - [x] Permitir abrir e fechar facilmente por toque os tooltips dos marcadores pulsantes do mapa em dispositivos móveis.
+- [x] Expandir para dez perguntas e respostas dinâmicas, orientadas ao padrão PAA, em todas as páginas de estados e municípios.
+- [x] Atualizar a marcação FAQPage e os testes de regressão das páginas territoriais para refletir os dez itens visíveis.
