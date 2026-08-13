@@ -1,0 +1,272 @@
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "cruzeiro-do-sul": {
+    "climate": {
+      "body": "Cruzeiro do Sul está situada na região Norte do Brasil, no estado do Acre, às margens do rio Juruá, e pertence ao bioma Amazônia. O clima da cidade é classificado como Af (tropical de floresta úmida) pela Köppen-Geiger, com chuva ao longo de todo o ano e temperaturas geralmente estáveis, próximas de 25 °C em média anual. A precipitação anual fica em torno de aproximadamente 2.1 milímetros de (ver dados oficiais).1 milímetros por ano, com maior intensidade nos meses de chuva. A umidade relativa é alta, e o ambiente favorece a fauna e a flora típicas da Amazônia. Bioma predominante: Amazônia. Fontes: Af (Köppen-Geiger) (Even3), temperatura média anual (Climate-data.org) e bioma Amazônia (IBGE). ([even3.com.br](https://www.even3.com.br/anais/iiiscaamazonia/843524-classificacao-climatica-de-koppen-no-estado-do-acre/))",
+      "details": [
+        {
+          "label": "Classificação de Köppen",
+          "value": "Af (tropical de floresta úmida)",
+        },
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 25,1 °C",
+        },
+        {
+          "label": "Precipitação média anual",
+          "value": "aprox. 2.169 mm/ano",
+        },
+        {
+          "label": "Bioma predominante",
+          "value": "Amazônia",
+        },
+      ],
+      "intro": "O clima de Cruzeiro do Sul é fortemente influenciado pela Mata Amazônica, com regime de chuvas bem distribuído durante o ano e temperaturas relativamente constantes, acima de 20 °C em qualquer mês. Esse padrão climático favorece atividades ligadas à biodiversidade e à floresta, além de influenciar a organização do espaço urbano e as modalidades de uso dos recursos naturais na região.",
+    },
+    "dining": {
+      "closing": "Para conhecer a culinária local, priorize mercados públicos e feiras locais onde pescados frescos, farinha de mandioca e itens regionais costumam estar disponíveis.",
+      "intro": "A gastronomia de Cruzeiro do Sul está fortemente conectada aos rios da região do Juruá e aos saberes tradicionais da Amazônia. Ingredientes comuns incluem peixe de rio, farinha de mandioca, cupuaçu, açaí e outros produtos regionais simples, preparados de forma prática. O biscoito de goma é uma expressão cultural associada à região, mencionada pela imprensa como um símbolo local. Feiras e mercados públicos apresentam informações sobre a produção local, com destaque para peixes e itens agrícolas, especialmente em datas de eventos sazonais.",
+      "items": [
+        {
+          "description": "Biscoito de goma — tradição regional associada às práticas de panificação e confeitaria locais, frequentemente citado como uma marca da cidade.",
+          "kind": "Prato tradicional",
+          "name": "Biscoito de goma",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Biscoito%20de%20goma%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Mercado do Agricultor João Machado da Silva — espaço público onde produtores locais comercializam pescados, frutas, farinha e itens de consumo básico.",
+          "kind": "Mercado público",
+          "name": "Mercado do Agricultor João Machado da Silva",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20do%20Agricultor%20Jo%C3%A3o%20Machado%20da%20Silva%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Feira do Peixe — evento sazonal que reúne produtores de pescado do entorno, com comercialização no Mercado do Agricultor em Cruzeiro do Sul.",
+          "kind": "Feira/mercado",
+          "name": "Feira do Peixe",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20do%20Peixe%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Feira do Pescado (quando ocorrendo) — importante ponto de distribuição de pescado local com programação especial para datas sazonais.",
+          "kind": "Feira",
+          "name": "Feira do Pescado",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20do%20Pescado%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Gastronomia local também se expressa em preparações simples com peixe de rio, farinha de mandioca e produtos regionais disponíveis nos espaços públicos.",
+          "kind": "Resumo regional",
+          "name": "Gastronomia regional",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Gastronomia%20regional%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+      ],
+    },
+    "tourism": {
+      "closing": "Para planejar visitas, consulte a programação cultural municipal e guias locais disponíveis nos portais oficiais.",
+      "intro": "Cruzeiro do Sul oferece turismo de natureza, cultura e história no entorno do vale do Juruá. A cidade funciona como polo regional no Acre, com atrações que combinam patrimônio religioso, espaços públicos revitalizados e opções de ecoturismo às margens do rio Juruá. Entre os pontos de interesse destacam-se a vida urbana no centro, pontes que marcam o território e a rica produção cultural de comunidades ribeirinhas. Eventos sazonais, feiras e atividades de lazer ao ar livre costumam acontecer ao longo do ano, fortalecendo a relação entre moradores, visitantes e a natureza amazônica.",
+      "items": [
+        {
+          "description": "Catedral Nossa Senhora da Glória, localizada no centro da cidade, destaca-se pela presença histórica na paisagem urbana e pela sua função religiosa na comunidade.",
+          "name": "Catedral Nossa Senhora da Glória",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Catedral%20Nossa%20Senhora%20da%20Gl%C3%B3ria%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Centro Histórico de Cruzeiro do Sul, núcleo urbano que tem passado por revitalização para preservar o patrimônio e a memória da cidade.",
+          "name": "Centro Histórico",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20Hist%C3%B3rico%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Ponte da União sobre o Vale do Juruá, marco de infraestrutura que liga áreas da cidade e facilita o fluxo de pessoas e mercadorias.",
+          "name": "Ponte da União - Vale do Juruá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ponte%20da%20Uni%C3%A3o%20-%20Vale%20do%20Juru%C3%A1%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Expoacre Juruá, feira agropecuária anual com programação que inclui rodeio, cavalgadas e shows, realizada na Arena do Juruá.",
+          "name": "Expoacre Juruá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Expoacre%20Juru%C3%A1%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Parque Ambiental Antônio de Paula, espaço público recente voltado a lazer, educação ambiental e áreas de convivência.",
+          "name": "Parque Ambiental Antônio de Paula",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20Ambiental%20Ant%C3%B4nio%20de%20Paula%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Passeio de barco pelo Rio Juruá, atividade de ecoturismo que permite observar igarapés, corredeiras e a vida ribeirinha.",
+          "name": "Passeio de barco pelo Rio Juruá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Passeio%20de%20barco%20pelo%20Rio%20Juru%C3%A1%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+      ],
+    },
+    "transport": {
+      "closing": "Para deslocamentos, consulte horários atualizados na rodoviária ou com as operadoras locais.",
+      "intro": "O acesso a Cruzeiro do Sul é feito principalmente por via rodoviária (Terminal Rodoviário da cidade) e por via aérea, através do Aerporto Marmud Cameli. Não há ferrovias ativas que conectem Cruzeiro do Sul a outras regiões, o que torna o transporte rodoviário e aéreo as principais opções de deslocamento. Em termos de mobilidade urbana, existe um sistema de ônibus municipal que atende a população local.",
+      "items": [
+        {
+          "description": "Rodoviária Municipal de Cruzeiro do Sul, ponto central de ligação para destinos no Acre e em estados vizinhos.",
+          "kind": "Rodoviária",
+          "name": "Rodoviária de Cruzeiro do Sul",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Cruzeiro%20do%20Sul%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Sistema de ônibus local que atende a população; horários e rotas podem variar, com alterações sazonais.",
+          "kind": "Transporte urbano",
+          "name": "Sistema de ônibus",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%C3%B4nibus%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Aeroporto Marmud Cameli (Aeroporto Internacional de Cruzeiro do Sul), o aeroporto mais próximo com voos nacionais.",
+          "kind": "Aeroporto",
+          "name": "Aeroporto Marmud Cameli",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20Marmud%20Cameli%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Ferrovia: não há ferrovias ativas que atendam Cruzeiro do Sul; o Acre permanece sem malha ferroviária operante segundo fontes locais.",
+          "kind": "Ferrovia",
+          "name": "Ausência de ferrovias",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aus%C3%AAncia%20de%20ferrovias%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+        {
+          "description": "Acesso rodoviário principal via BR-364, liga Rio Branco a Cruzeiro do Sul; houve melhorias recentes que impactam o tempo de viagem entre as duas cidades.",
+          "kind": "Rodovia",
+          "name": "BR-364 (Rio Branco ↔ Cruzeiro do Sul)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=BR-364%20(Rio%20Branco%20%E2%86%94%20Cruzeiro%20do%20Sul)%2C%20Cruzeiro%20do%20Sul%2C%20AC",
+        },
+      ],
+    },
+    "city": "Cruzeiro do Sul",
+    "uf": "AC",
+    "stateName": "Acre",
+    "region": "Norte",
+    "ddd": "68",
+    "population": 98916,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+  "tarauaca": {
+    "climate": {
+      "body": "Tarauacá está localizada no interior do Acre, na região Norte, cercada pela Floresta Amazônica. O clima é tropical de floresta úmida, classificado como Af segundo o sistema de Köppen, com altas temperaturas ao longo do ano e precipitação abundante em quase todos os meses. A umidade é elevada e as diferenças sazonais são mais brandas do que em climas temperados. A presença maciça da floresta e de rios contribui para um regime pluviométrico persistente e para a vegetação densa típicos da região. Segundo o bioma predominante indicado pelo IBGE, a área pertence à Amazônia. ([britannica.com](https://www.britannica.com/science/Koppen-climate-classification))",
+      "details": [
+        {
+          "label": "Estado",
+          "value": "Acre (AC)",
+        },
+        {
+          "label": "Região",
+          "value": "Norte",
+        },
+        {
+          "label": "Bioma predominante",
+          "value": "Amaz\u0000f4nia",
+        },
+        {
+          "label": "Populao estimada (1o jul/2024)",
+          "value": "46.816",
+        },
+      ],
+      "intro": "Tarauacá, cidade do Acre na região Norte, situa-se no Vale do Juruá e apresenta clima típico da Amaz\u0000f4nia: quente, úmido e com chuvas bem distribuídas ao longo do ano. O bioma predominante é a Amaz\u0000f4nia, o que explica o regime pluviom\u0000e9trico e a vegeta\u0000e7\u0000e3o densa; corresponde ao cl\u0000e1ssicoAf (floresta tropical). ([cidades.ibge.gov.br](https://cidades.ibge.gov.br/v4/brasil/ac/tarauaca/panorama))",
+    },
+    "dining": {
+      "closing": "Mercados locais e pratos da culin\u0000e1ria acreana oferecem uma vis\u0000e3o concr\u0000ea da cultura regional. Planeje-se para visitar estabelecimentos públicos, mercados e feiras para vivenciar a gastronomia de Tarauacá com responsabilidade e sem depender de servios privados. ",
+      "intro": "A gastronomia de Tarauacá acompanha a matriz cultural do Acre e da Amaz\u0000f4nia, com peixes da regi\u0000e3o, tucupi, jambu e iguarias que refletem influ\u0000eancias ind\u0000edgenas, nordestinas e amaz\u0000f4nicas. O Mercado Municipal Domingos do Rego Leite \u0000e9 um espa\u0000e7o central para observar produtos locais, peixes da regi\u0000e3o e artesanato. Pratos emblem\u0000e1ticos da regi\u0000e3o incluem pato no tucupi e tacac\u0000e1, acompanhados, quando poss\u0000edveis, de pirarucu ou tambaqui. A cidade tamb\u0000e9m\u0000e9 celebra a tradi\u0000e7\u0000e3o do abacaxi gigante. A gastronomia acreana associa ingredientes naturais a t\u0000e9cnicas tradicionais, reforando a identidade local. ([tarauaca.ac.gov.br](https://www.tarauaca.ac.gov.br/single-post/prefeita-maria-lucin%C3%A9ia-reinaugura-mercado-municipal-de-tarauac%C3%A1))",
+      "items": [
+        {
+          "description": "Mercado p\u0000fablico central de Tarauac\u0000e1, onde se podem encontrar frutas, verdura, peixes da regi\u0000e3o e itens de artesanato. A reinaugura\u0000e3o do Mercado Municipal Domingos do Rego Leite foi acompanhada pela Prefeitura. ",
+          "kind": "Mercado",
+          "name": "Mercado Municipal Domingos do Rego Leite",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20Domingos%20do%20Rego%20Leite%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Prato tradicional preparado com pato cozido em tucupi, servido com arroz e jambu, refletindo a cozinha amaz\u0000f4nica e acreana de Tarauac\u0000e1. ",
+          "kind": "Prato t\u0000edpico",
+          "name": "Pato no Tucupi",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pato%20no%20Tucupi%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Sopa quente de tucupi com goma, jambu e camar\u0000e3o seco, tratada como um prato emblem\u0000e1tico da regio\u0000e3o Norte, inclusive no Acre. ",
+          "kind": "Prato t\u0000edpico",
+          "name": "Tacac\u0000e1 Acreano",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Tacac%00e1%20Acreano%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Tradi\u0000e7\u0000e3o associada \u0000e0 cidade, destacada em festividades locais; a identidade envolve o abacaxi gigante como elemento cultural. ",
+          "kind": "Tradi\u0000e7\u0000e3o/local",
+          "name": "Abacaxi gigante de Tarauac\u0000e1",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Abacaxi%20gigante%20de%20Tarauac%00e1%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Mercado listado como ponto de observa\u0000e7\u0000e3o de tranci\u0000e3o & artesanato local, com participa\u0000e7\u0000e3o de comunidades na economia da regi\u0000e3o. ",
+          "kind": "Mercado/Feira regional",
+          "name": "Mercado Jo\u0000e3ozinho Melo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Jo%00e3ozinho%20Melo%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+      ],
+    },
+    "tourism": {
+      "closing": "Ao planejar visitas, verifique calend\u0000e1rios locais e disponibilidade de traslados. As op\u0000e7\u0000f5es variam conforme a época do ano e a infraestrutura regional.",
+      "intro": "Tarauac\u0000e1, localizada no Vale do Juru\u0000e1, oferece turismo de natureza, cultura e viv\u0000eancia ribeirinha. O regi\u0000e3o se destaca pela paisagem amaz\u0000f4nica, pelos rios e pela hist\u0000f3ria ligada ao ciclo da borracha e ao estabelecimento da cidade em 1907. Ponto s\u0000e9dio na vida urbana, a Catedral de Nossa Senhora da Gl\u0000f3ria, no centro, marca o cen\u0000e1rio religioso. O Mercado Jo\u0000e3ozinho Melo \u0000e9 um eixo cultural, com artesanato e produtos regionais. A regi\u0000e3o tamb\u0000e9m oferece passeios de observa\u0000e7\u0000e3o de fauna/flora nos afluentes do Rio Juru\u0000e1 e entorno, e a cultura ribeirinha est\u0000e1 presente em comunidades locais. Eventos regionais, como festivais de cultura e gastronomia, comp\u0000f5em o calend\u0000e1rio tur\u0000edstico. ([g1.globo.com](https://g1.globo.com/ac/acre/natureza/amazonia/noticia/2023/05/03/o-que-fazer-no-jurua-g1-faz-guia-com-alguns-pontos-para-voce-conhecer-na-regiao.ghtml))",
+      "items": [
+        {
+          "description": "Igreja catedral localizada no centro de Tarauac\u0000e1, marco da hist\u0000f3ria religiosa e urbana da cidade.",
+          "name": "Catedral de Nossa Senhora da Gl\u0000f3ria e S\u0000e9 de Tarauac\u0000e1? ou Catedral de Tarauac\u0000e1? (Nossa Senhora da Gl\u0000f3ria)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Nossa%20Senhora%20da%20Gl%00f3ria%20e%20S%00e9%20de%20Tarauac%00e1%3F%20ou%20Catedral%20de%20Tarauac%00e1%3F%20(Nossa%20Senhora%20da%20Gl%00f3ria)%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Mercado municipal de Tarauac\u0000e1, ponto de observa\u0000e7\u0000e3o de produtos regionais e artesanato, listado como refer\u0000eancia local.",
+          "name": "Mercado Jo\u0000e3ozinho Melo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Jo%00e3ozinho%20Melo%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Passeios de observa\u0000e7\u0000e3o de biodiversidade nos arredores do Vale do Juru\u0000e1, incluindo rios e comunidades ribeirinhas.",
+          "name": "Rio Juru\u0000e1 e afluentes",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20Juru%00e1%20e%20afluentes%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Festival de cultura e gastronomia da regi\u0000e3o, destacando a identidade local e a culin\u0000e1ria acreana.",
+          "name": "Festival de Cultura e Gastronomia",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Festival%20de%20Cultura%20e%20Gastronomia%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Tradi\u0000e7\u0000e3o local associada \u000e$ a abacaxi gigante, presente em festas e celebra\u0000f5es regionais.",
+          "name": "Abacaxi gigante de Tarauac\u0000e1",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Abacaxi%20gigante%20de%20Tarauac%00e1%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Conte\u0000fdeo sobre patrim\u0000f4nio e lazer local, incluindo pontos culturais listados pela prefeitura.",
+          "name": "Pontos tur\u0000edsticos locais (Tarauac\u0000e1EuCuido)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pontos%20tur%00edsticos%20locais%20(Tarauac%00e1EuCuido)%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+      ],
+    },
+    "transport": {
+      "closing": "Para deslocamentos, consulte com anteced\u0000eancia as op\u0000e7\u00000es de viagem (onibus) e as condi\u0000e7\u0000f5es de via BR-364, especialmente em perioada de chuvas.",
+      "intro": "Tarauac\u0000e1 tem liga\u0000e7\u0000f5es de via terrestre pela BR-364, conectando a cidade a Rio Branco e a outras localidades do Acre. A cidade abriga a Rodovi\u0000e1ria Raimundo de Carvalho Oliveira (terminal municipal de embarque/desembarque) com acessos de infraestrutura desde 2023, quando a via de acesso ao terminal foi pavimentada pela prefeitura em parceria com o DERACRE. O Aeroporto Regional Tarauac\u0000e1 (TRQ) fica a cerca de 3 km do centro, mas n\u0000e3o h\u0000e1 voos regulares. Em termos de ferrovias, n\u0000e3o h\u0000e1 opera\u0000e7\u0000f5es de trens na cidade. ([tripsardou.com](https://tripsardou.com/o-que-fazer-em-tarauaca-ac-explore-a-cultura-natureza-e-tradicoes-desta-cidade-amazonica/))",
+      "items": [
+        {
+          "description": "Terminal rodovi\u0000e1rio municipal de Tarauac\u0000e1, com embarque/desembarque para destinos regionais. A pavimenta\u0000e7\u0000e3o de acesso ao terminal foi conclu\u0000edda em 2023.",
+          "kind": "Rodovi\u0000e1ria",
+          "name": "Rodovi\u0000e1ria Raimundo de Carvalho Oliveira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%00e1ria%20Raimundo%20de%20Carvalho%20Oliveira%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Via principal de entrada/sa\u0000edda da cidade: BR-364, conectando Tarauac\u0000e1 a Rio Branco e a outras cidades do Acre.",
+          "kind": "Rodovia",
+          "name": "BR-364",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=BR-364%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+        {
+          "description": "Aeroporto regional da cidade, localizado a cerca de 3 km do centro; no momento, n\u0000e3o h\u0000e1 voos regulares. Acesso principal pela cidade ou por cidades vizinhas com voos regionais.",
+          "kind": "Aeroporto",
+          "name": "Aeroporto de Tarauac\u0000e1 (TRQ)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20de%20Tarauac%00e1%20(TRQ)%2C%20Tarauac%C3%A1%2C%20AC",
+        },
+      ],
+    },
+    "city": "Tarauacá",
+    "uf": "AC",
+    "stateName": "Acre",
+    "region": "Norte",
+    "ddd": "68",
+    "population": 46816,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+} as Record<string, MunicipalityTabs>;

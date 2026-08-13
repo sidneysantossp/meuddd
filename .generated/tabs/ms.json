@@ -1,0 +1,141 @@
+{
+  "MS:nova-andradina": {
+    "climate": {
+      "body": "Nova Andradina está situada na região Centro-Oeste do Brasil, em Mato Grosso do Sul, e seu clima clássicamente pode ser descrito como tropical de savana (Köppen: Aw). Caracteriza-se por verões quentes, chuvas concentradas na estação úmida e períodos mais secos no inverno. A umidade costuma ser alta ao longo do ano, com maior intensidade de precipitação entre os meses de outubro e abril, e um período mais seco de maio a setembro. As temperaturas permanecem elevadas na maior parte do ano, com menor amplitude térmica relativa durante a estação chuvosa. Em média, a temperatura anual fica em patamar elevado para os padrões brasileiros da região.",
+      "details": [
+        {
+          "label": "Clima (Köppen)",
+          "value": "Aw – tropical savana"
+        },
+        {
+          "label": "Estação chuvosa",
+          "value": "predominante de outubro a abril, com chuvas convectivas"
+        },
+        {
+          "label": "Estação seca",
+          "value": "maio a setembro"
+        },
+        {
+          "label": "Temperatura média anual",
+          "value": "em torno de 24–26°C"
+        }
+      ],
+      "intro": "O clima de Nova Andradina corresponde ao padrão da região Centro-Oeste, caracterizado por estações bem definidas: período chuvoso concentrado no fim do ano e início do ano, seguido de estação seca entre os meses de maio e setembro. Essa configuração influencia a dinâmica urbana, a agricultura local e as atividades ao ar livre ao longo do ano."
+    },
+    "dining": {
+      "closing": "Para quem visita, vale acompanhar as feiras locais, que costumam oferecer produtos regionais frescos e contribuir para o abastecimento doméstico. ",
+      "intro": "A gastronomia de Nova Andradina está fortemente ligada ao modo de vida da região do Vale do Ivinhema, com tradições associadas à produção rural, à criação de gado e à pesca em rios vizinhos. As feiras públicas são espaços importantes de alimentação cotidiana e de aproximação entre produtores e consumidores. Em termos de preparos, a cidade acompanha a tradição sul-mato-grossense de refeições simples, com base em arroz, feijão, mandioca, carnes e peixes de rio, além de itens de hortifrúti trazidos pelos produtores locais.",
+      "items": [
+        {
+          "description": "Espaços públicos de venda de alimentos frescos",
+          "kind": "Feira pública",
+          "name": "Feira Livre do Produtor de Nova Andradina",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%20do%20Produtor%20de%20Nova%20Andradina%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Prato regional de base de arroz, mandioca e carnes, comum na mesa local",
+          "kind": "Prato típico",
+          "name": "Prato regional do Vale do Ivinhema",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Prato%20regional%20do%20Vale%20do%20Ivinhema%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Espaço público para venda de produtos alimentícios durante eventos ou mercados especiais",
+          "kind": "Mercado público",
+          "name": "Feira do Povo (programa municipal)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20do%20Povo%20(programa%20municipal)%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Evento sazonal de apresentação de produtos regionais com foco no abastecimento público",
+          "kind": "Evento",
+          "name": "Feira do Povo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20do%20Povo%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Espaços públicos de alimentação vinculados a feiras locais",
+          "kind": "Mercado/feira",
+          "name": "Mercados municipais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercados%20municipais%2C%20Nova%20Andradina%2C%20MS"
+        }
+      ]
+    },
+    "tourism": {
+      "closing": "Observações práticas sobre visitação e horários podem ser obtidas junto à prefeitura e aos espaços culturais.",
+      "intro": "Nova Andradina não é uma cidade de grandes grandes complexos turísticos, mas reúne atrações públicas vinculadas à cultura, à história local e a espaços para convivência. O município oferece opções de lazer ao ar livre, museus e espaços para eventos agropecuários, além de facilitar o acesso a locais históricos que revelam a identidade regional. O entorno, com o Vale do Ivinhema, agrega paisagens que costumam compor roteiros de passeio na região.",
+      "items": [
+        {
+          "description": "Espaço público central com áreas verdes, fontes e áreas de convivência",
+          "name": "Praça Brasil (Antônio Joaquim de Moura Andrade) — núcleo central de Nova Andradina",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Brasil%20(Ant%C3%B4nio%20Joaquim%20de%20Moura%20Andrade)%20%E2%80%94%20n%C3%BAcleo%20central%20de%20Nova%20Andradina%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Museu Histórico e Cultural Antônio Joaquim de Moura Andrade, instalado no eixo central da cidade",
+          "name": "Museu Histórico de Nova Andradina",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Museu%20Hist%C3%B3rico%20de%20Nova%20Andradina%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Espaço para eventos agropecuários e atividades públicas",
+          "name": "Parque de Exposições Henrique Martins",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20de%20Exposi%C3%A7%C3%B5es%20Henrique%20Martins%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Feiras técnicas/agropecuárias anuais com participação de produtores locais",
+          "name": "Exponantec Nova Andradina",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Exponantec%20Nova%20Andradina%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Iniciativa municipal com foco em feiras e produção local",
+          "name": "Feira do Povo",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20do%20Povo%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Pesca e atividades ao ar livre no Rio Ivinhema (atividade sazonal de lazer)",
+          "name": "Pesca no Rio Ivinhema",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pesca%20no%20Rio%20Ivinhema%2C%20Nova%20Andradina%2C%20MS"
+        }
+      ]
+    },
+    "transport": {
+      "closing": "Para informações de horários, consulte a Rodoviária Municipal de Nova Andradina e a Prefeitura.",
+      "intro": "Nova Andradina é atendida pela Rodoviária Municipal, que funciona como hub regional para ônibus intermunicipais e rotas locais. A cidade também conta com um sistema de ônibus urbano para deslocamentos dentro do município. O aeroporto mais próximo com voos regulares de maior porte fica fora da cidade, mas a cidade possui um aeroporto municipal para aeronaves de pequeno porte. Em termos ferroviários, não há serviço de trem de passageiros na região no momento.",
+      "items": [
+        {
+          "description": "Terminal rodoviário que facilita embarques e desembarques regionais",
+          "kind": "Rodoviária",
+          "name": "Rodoviária Municipal de Nova Andradina (Nova Casa Verde / Av. Rio Brilhante, 1188)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20Municipal%20de%20Nova%20Andradina%20(Nova%20Casa%20Verde%20%2F%20Av.%20Rio%20Brilhante%2C%201188)%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Sistema de ônibus urbano com linhas locais (informações oficiais disponíveis na prefeitura/operadoras",
+          "kind": "Transporte público",
+          "name": "Sistema de ônibus urbano de Nova Andradina",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%C3%B4nibus%20urbano%20de%20Nova%20Andradina%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Aeroporto municipal de Nova Andradina para aeronaves de pequeno porte",
+          "kind": "Aeroporto",
+          "name": "Aeroporto Municipal de Nova Andradina (SSID)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20Municipal%20de%20Nova%20Andradina%20(SSID)%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Aeroporto com voos comerciais regulares de maior porte na região",
+          "kind": "Aeroporto regional/externo",
+          "name": "Campo Grande International Airport – CGR (SB CGR)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Campo%20Grande%20International%20Airport%20%E2%80%93%20CGR%20(SB%20CGR)%2C%20Nova%20Andradina%2C%20MS"
+        },
+        {
+          "description": "Presença de projetos de melhoria e expansão ferroviária na região, com debate público sobre a reativação de trens de passageiros",
+          "kind": "Ferrovia (projeto/planejamento)",
+          "name": "Ferrovia de Integração Centro-Oeste (FICO - projeto)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ferrovia%20de%20Integra%C3%A7%C3%A3o%20Centro-Oeste%20(FICO%20-%20projeto)%2C%20Nova%20Andradina%2C%20MS"
+        }
+      ]
+    },
+    "city": "Nova Andradina",
+    "uf": "MS",
+    "stateName": "Mato Grosso do Sul",
+    "region": "Centro-Oeste",
+    "ddd": "67",
+    "population": 50848,
+    "reviewedOn": "13 de agosto de 2026"
+  }
+}

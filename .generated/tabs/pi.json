@@ -1,0 +1,146 @@
+{
+  "PI:picos": {
+    "climate": {
+      "body": "Picos situa-se no sertão do Piauí, região com clima tipicamente seco, quente e com chuvas irregulares. A região abriga paisagens da Caatinga e atua sob padrões de semiárido em parte do estado. Em termos de classificação climática, o semiárido quente (BSh) é comum em áreas do interior nordestino, com estação chuvosa concentrada e longos períodos de seca. Essa caracterização é corroborada por estudos sobre o clima do semiárido no Piauí e pela descrição de climas semiáridos da região.",
+      "details": [
+        {
+          "label": "Classe Köppen",
+          "value": "BSh (semiárido quente)"
+        },
+        {
+          "label": "Observação regional",
+          "value": "Clima típico do interior do Nordeste, com variação pluviométrica ao longo do ano e altas temperaturas."
+        },
+        {
+          "label": "Notas",
+          "value": "Fontes apontam a existência de regionalização climática no semiárido do Piauí e a predominância de Caatinga na região."
+        },
+        {
+          "label": "Fontes utilizadas",
+          "value": "Embrapa/PI, Clima semiárido, Caatinga (Piauí)"
+        }
+      ],
+      "intro": "Picos é um município do sul do Piauí, na região Nordeste do Brasil, com DDD 89 e population estimate de aproximadamente 86.701 habitantes. A cidade funciona como polo comercial da região, com forte atuação na produção e comercialização de mel. Localiza-se na região centro-sul do estado, cortada pelo rio Guaribas, e está a cerca de 307 km da capital Teresina. O município foi fundado em 12 de dezembro de 1890. Sua posição geográfica, rotas rodoviárias e a presença de infraestrutura pública moldam o acesso à cidade e às áreas ao redor. Fontes oficiais confirmam dados demográficos e geográficos amplamente aceitos pela literatura institucional. "
+    },
+    "dining": {
+      "closing": "Para informações gastronômicas locais, recomenda-se consultar guias regionais e feiras públicas.",
+      "intro": "A gastronomia de Picos e do Piauí inclui pratos clássicos da culinária nordestina, com influência indígena, africana e europeia. Em Picos, a tradição de produção de mel é marcante e compõe a identidade local. Pratos comuns do estado incluem carne de sol, baião de dois, arroz Maria Isabel e doces à base de rapadura, caju e buriti. A cidade é conhecida por sua atuação na produção de mel (Capital do Mel), o que também influencia a oferta de produtos rurais e quitutes em feiras locais.",
+      "items": [
+        {
+          "description": "Prato típico",
+          "kind": "Prato regional",
+          "name": "Maria Isabel (arroz com carne seca ou bode e acompanhamentos)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Maria%20Isabel%20(arroz%20com%20carne%20seca%20ou%20bode%20e%20acompanhamentos)%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Mercado público",
+          "kind": "Mercado público",
+          "name": "Mercado Municipal de Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20de%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Feiras",
+          "kind": "Feira",
+          "name": "Feira Livre de Frutas de Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%20de%20Frutas%20de%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Bolos/doces tradicionais",
+          "kind": "Doce regional",
+          "name": "Rapadura/Doces de fruta da região",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rapadura%2FDoces%20de%20fruta%20da%20regi%C3%A3o%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Produtos locais",
+          "kind": "Produtos regionais",
+          "name": "Mel (produção regional destacada)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mel%20(produ%C3%A7%C3%A3o%20regional%20destacada)%2C%20Picos%2C%20PI"
+        }
+      ]
+    },
+    "tourism": {
+      "closing": "O conjunto de atrações públicas e naturais, aliado a espaços históricos, oferece opções de visitação ao longo do ano.",
+      "intro": "Picos dispõe de pontos de interesse históricos, culturais e naturais na própria cidade e na região. Entre eles, destaca-se a Catedral de Nossa Senhora dos Remédios, o Museu Ozildo Albano e espaços de lazer público. Na região, o Parque Nacional Serra das Confusões e o Balneário Vista Serrana oferecem oportunidades de contemplação da natureza e de atividades ao ar livre. Além disso, a cidade abriga mercados públicos e feiras que refletem a vida cotidiana local.",
+      "items": [
+        {
+          "description": "Catedral católica",
+          "name": "Catedral de Nossa Senhora dos Remédios (Picos)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Catedral%20de%20Nossa%20Senhora%20dos%20Rem%C3%A9dios%20(Picos)%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Museu",
+          "name": "Museu Ozildo Albano",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Museu%20Ozildo%20Albano%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Balneário",
+          "name": "Balneário Vista Serrana",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Balne%C3%A1rio%20Vista%20Serrana%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Mercado público",
+          "name": "Mercado Municipal de Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20de%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Feira livre",
+          "name": "Feira Livre de Frutas de Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%20de%20Frutas%20de%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Patrimônio natural",
+          "name": "Parque Nacional Serra das Confusões (região/plena proximidade)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20Nacional%20Serra%20das%20Confus%C3%B5es%20(regi%C3%A3o%2Fplena%20proximidade)%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Patrimônio religioso local",
+          "name": "Paróquia Nossa Senhora dos Remédios (inclui informações históricas da Catedral)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Par%C3%B3quia%20Nossa%20Senhora%20dos%20Rem%C3%A9dios%20(inclui%20informa%C3%A7%C3%B5es%20hist%C3%B3ricas%20da%20Catedral)%2C%20Picos%2C%20PI"
+        }
+      ]
+    },
+    "transport": {
+      "closing": "Transporte urbano em Picos depende de operação municipal e de serviços regulares de ônibus.",
+      "intro": "Transporte público e acessos à cidade envolvem a Rodoviária de Picos, o sistema de ônibus municipal (em regime de concessão/operadores locais) e o aeroporto regional mais próximo com operação local restrita. A rede rodoviária é compatível com conexões para Teresina, Parnaíba e outras cidades do Piauí e estados vizinhos.",
+      "items": [
+        {
+          "description": "Rodoviária municipal",
+          "kind": "Rodoviária",
+          "name": "Rodoviária de Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Sistema de ônibus",
+          "kind": "Ônibus urbano",
+          "name": "Sistema de ônibus público municipal (operadores locais)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%C3%B4nibus%20p%C3%BAblico%20municipal%20(operadores%20locais)%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Aeroporto próximo",
+          "kind": "Aeroporto regional",
+          "name": "Aeroporto Regional Senador Helvídio Nunes (PCS/SNPC), localizado em Picos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20Regional%20Senador%20Helv%C3%ADdio%20Nunes%20(PCS%2FSNPC)%2C%20localizado%20em%20Picos%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Ferrovias",
+          "kind": "Ferrovias",
+          "name": "Não há ferrovias em operação associadas à cidade (informação disponível)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=N%C3%A3o%20h%C3%A1%20ferrovias%20em%20opera%C3%A7%C3%A3o%20associadas%20%C3%A0%20cidade%20(informa%C3%A7%C3%A3o%20dispon%C3%ADvel)%2C%20Picos%2C%20PI"
+        },
+        {
+          "description": "Transporte rodoviário de ligação",
+          "kind": "Conexões rodoviárias",
+          "name": "Rotas para Teresina, Parnaíba e outras cidades via BR-316/Rodovias estaduais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rotas%20para%20Teresina%2C%20Parna%C3%ADba%20e%20outras%20cidades%20via%20BR-316%2FRodovias%20estaduais%2C%20Picos%2C%20PI"
+        }
+      ]
+    },
+    "city": "Picos",
+    "uf": "PI",
+    "stateName": "Piauí",
+    "region": "Nordeste",
+    "ddd": "89",
+    "population": 86701,
+    "reviewedOn": "13 de agosto de 2026"
+  }
+}

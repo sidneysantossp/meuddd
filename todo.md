@@ -222,3 +222,20 @@
 - [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
 - [ ] Otimizar a proporção texto/HTML das páginas prioritárias (reduzir código inline, expandir conteúdo textual, minificar HTML quando aplicável).
 - [ ] Validar com testes, screenshots e guardar checkpoint.
+
+## Fase atual — Tabs editoriais em massa (reconstrução pós-reset do sandbox 2026-08-13)
+- [x] shared/localityTabs/types.ts — tipo MunicipalityTabs e LocalityTabsCatalog
+- [x] shared/localityTabs/index.ts — loaders por UF, getMunicipalityTabsSync, getMunicipalityTabsKey, loadMunicipalityTabs, mapPointUrl
+- [x] 27 módulos shared/localityTabs/<uf>.ts vazios (catálogo vazio, TS compila)
+- [x] client/src/components/MunicipalityTabs.tsx — tabs editoriais com cartão de autoridade cidade→estado
+- [x] client/src/ssr/prefetch.ts — pré-carregar catálogo da UF e seedear ["localityTabs", uf]
+- [x] client/src/pages/MunicipalityPage.tsx — renderizar MunicipalityTabs (seed SSR + fallback síncrono) substituindo o LocalityContext quando há ficha; manter link cidade→estado
+- [x] scripts/generateTabs.mts — produtor em massa (schema real camelCase, slug NULL fallback, flags --uf/--limit/--only-empty; json_schema strict com required completos; limpeza de artefactos de raciocínio)
+- [x] Validação de piloto (3 municípios do AC, 0 falhas, qualidade verificada)
+- [ ] Geração em massa: 27 UFs em paralelo (5.570 municípios) — em curso
+- [ ] scripts/integrateTabs.mts — converter JSON gerado em módulos TS
+- [ ] Integrar conteúdo gerado nos 27 módulos e rodar pnpm format
+- [ ] Testes vitest: tabs SSR em página de município, link cidade→estado
+- [ ] pnpm test + tsc sem erros
+- [ ] Screenshot desktop/móvel de /cidade/ac/cruzeiro-do-sul e /cidade/sp/sao-paulo com tabs renderizadas
+- [ ] Checkpoint + commit GitHub

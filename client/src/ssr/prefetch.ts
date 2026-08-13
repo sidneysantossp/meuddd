@@ -6,6 +6,7 @@ import { trpc } from "@/lib/trpc";
 import { editorialGuides, editorialSources, findEditorialGuide } from "@shared/editorialGuides";
 import { findRegionHub, regionSlug } from "@shared/territorialSeo";
 import { buildMunicipalityFaq, buildStateFaq, faqPageJsonLd } from "@shared/territorialFaq";
+import { getMunicipalityTabsKey, loadMunicipalityTabs, mapPointUrl } from "@shared/localityTabs";
 
 type Outputs = inferRouterOutputs<AppRouter>;
 export type HeadMeta = { title: string; description: string; canonicalPath: string; noindex?: boolean; notFound?: boolean; ogType?: "website" | "article"; jsonLd?: Record<string, unknown>[] };
@@ -103,9 +104,37 @@ export async function prefetchForPath(url: string, queryClient: QueryClient, pre
   if (cityMatch) {
     const uf = cityMatch[1].toUpperCase(); const slug = cityMatch[2]; const data = await prefetch.byMunicipality({ uf, slug });
     await seed(queryClient, getQueryKey(trpc.ddd.byMunicipality, { uf, slug }, "query"), data);
+    // Conteúdo editorial em tabs do município: pré-carrega o catálogo da UF e
+    // seedeia no React Query para que a hidratação do cliente encontre os dados.
+    const tabsCatalog = await loadMunicipalityTabs(uf);
+    if (Object.keys(tabsCatalog).length > 0) {
+      await seed(queryClient, ["localityTabs", uf.toLowerCase()], tabsCatalog);
+    }
     if (!data) return { title: "Município não encontrado | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
     const faqs = buildMunicipalityFaq({ municipalityName: data.municipality.name, stateName: data.state.name, stateUf: data.state.uf, ddd: data.ddd });
-    return { title: `DDD de ${data.municipality.name} (${data.state.uf}) | ${site}`, description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`, canonicalPath: path, ogType: "article", jsonLd: [breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: `/estado/${data.state.uf.toLowerCase()}` }, { name: data.municipality.name, item: path }]), { "@context": "https://schema.org", "@type": "WebPage", "@id": path, url: path, name: `DDD de ${data.municipality.name}`, about: { "@type": "City", name: data.municipality.name, containedInPlace: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf }, population: data.municipality.populationEstimated ?? undefined, geo: { "@type": "GeoCoordinates", latitude: data.municipality.latitude, longitude: data.municipality.longitude } } }, faqPageJsonLd(faqs)] };
+    const meta = {
+      title: `DDD de ${data.municipality.name} (${data.state.uf}) | ${site}`,
+      description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`,
+      canonicalPath: path,
+      ogType: "article" as const,
+      jsonLd: [
+        breadcrumbs([{ name: site, item: "/" }, { name: data.state.name, item: `/estado/${data.state.uf.toLowerCase()}` }, { name: data.municipality.name, item: path }]),
+        { "@context": "https://schema.org", "@type": "WebPage", "@id": path, url: path,
+          name: `DDD de ${data.municipality.name}`,
+          about: { "@type": "City", name: data.municipality.name, containedInPlace: { "@type": "AdministrativeArea", name: data.state.name, identifier: data.state.uf }, population: data.municipality.populationEstimated ?? undefined, geo: { "@type": "GeoCoordinates", latitude: data.municipality.latitude, longitude: data.municipality.longitude } } },
+        faqPageJsonLd(faqs),
+      ] as Record<string, unknown>[],
+    };
+    const tabsAvailable = Boolean(getMunicipalityTabsKey(uf, slug));
+    if (tabsAvailable) {
+      meta.jsonLd.push({ "@context": "https://schema.org", "@type": "DefinedTermSet", name: "conteúdo-editorial-local", hasDefinedTerm: [
+        { "@type": "DefinedTerm", termCode: "turismo", name: "Pontos turísticos" },
+        { "@type": "DefinedTerm", termCode: "gastronomia", name: "Bares e restaurantes" },
+        { "@type": "DefinedTerm", termCode: "transporte", name: "Transporte" },
+        { "@type": "DefinedTerm", termCode: "clima", name: "Clima e região" },
+      ] });
+    }
+    return meta;
   }
   return { title: "Página não encontrada | Meu DDD", description, canonicalPath: path, notFound: true, noindex: true };
 }
