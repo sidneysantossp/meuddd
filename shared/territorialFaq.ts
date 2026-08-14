@@ -147,6 +147,14 @@ export function buildDddFaq(input: {
 
   return [
     {
+      question: `Qual estado é o DDD ${input.dddCode}?`,
+      answer: input.stateNames.length
+        ? input.stateNames.length === 1
+          ? `O DDD ${input.dddCode} é o código de área do estado de ${input.stateNames[0]}. Ele cobre ${coverage}, distribuídos por todo o território estadual. Para confirmar a localidade de uma ligação, consulte a lista completa de municípios na página deste código.`
+          : `O DDD ${input.dddCode} é atendido nos estados de ${input.stateNames.join(", ")}. Ele cobre ${coverage} do inventário territorial do Meu DDD. Para confirmar a localidade de uma ligação, consulte a lista completa de municípios na página deste código.`
+        : `O DDD ${input.dddCode} cobre ${coverage} do inventário territorial do Meu DDD. Para identificar os estados atendidos, consulte a lista completa de municípios na página deste código.`,
+    },
+    {
       question: `Qual cidade usa o DDD ${input.dddCode}?`,
       answer: `O DDD ${input.dddCode} abrange ${coverage} do inventário territorial do Meu DDD${inStates}. Consulte a lista completa de municípios na página do código.`,
     },

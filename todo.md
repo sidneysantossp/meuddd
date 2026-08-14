@@ -283,3 +283,10 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Pedido 2026-08-13 (noite)
 - [x] Ícone indicador de estado (aberto/fechado) nos itens do acordeão das FAQ: chevron dentro de círculo com fundo que muda de tom (aberto = coral #f06a4d com ícone claro, fechado = fundo suave translúcido) e rotação 180° animada (220ms ease-out), em FaqSection (temas claro/escuro); aplica-se a /ddd, /estado e /cidade. Validados: 86 testes, TypeScript e screenshots.
+
+## Plano consolidado de keywords — 2026-08-13 (autorizado pelo utilizador: "pode implementar tudo")
+- [x] Incluir o nome do estado no H1, <title> e meta description das páginas /ddd/:code (ex.: "DDD 31 é de qual estado? Minas Gerais — 139 cidades | Meu DDD") e headline do Article JSON-LD
+- [x] Adicionar pergunta "Qual estado é o DDD X?" ao banco buildDddFaq (11ª pergunta, HTML visível + FAQPage JSON-LD); validado no SSR de /ddd/31
+- [x] Adicionar H2 "Qual é o DDD de X?" com parágrafo-resposta nas 27 páginas de estado
+- [ ] Guia "Qual o DDD da Claro, Vivo e TIM?" (/guia/qual-o-ddd-da-claro-vivo-e-tim) com FAQPage
+- [ ] Guia de códigos internacionais (/guia/codigos-internacionais-ddi) com tabela (Brasil +55, EUA/Canadá +1, Portugal +351) e FAQPage

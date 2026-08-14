@@ -1,3 +1,5 @@
+import { newGuides } from "./newGuides";
+
 export type EditorialSourceId = "numeracao" | "portabilidade" | "emergencia" | "chamadasAbusivas";
 
 export const editorialSources: Record<EditorialSourceId, { name: string; url: string }> = {
@@ -532,6 +534,8 @@ editorialGuides.push(
   createDddGuide({ code: "41", cities: "Curitiba", state: "Paraná", uf: "pr", anchorCity: "Curitiba", citySlug: "curitiba" }),
   createDddGuide({ code: "51", cities: "Porto Alegre", state: "Rio Grande do Sul", uf: "rs", anchorCity: "Porto Alegre", citySlug: "porto-alegre" }),
 );
+// Guias complementares de keywords de operadoras e discagem internacional.
+for (const guide of Object.values(newGuides)) editorialGuides.push(guide);
 
 export const guideSlugs = editorialGuides.map(guide => guide.slug);
 
