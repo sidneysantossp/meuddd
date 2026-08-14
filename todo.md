@@ -288,5 +288,5 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Incluir o nome do estado no H1, <title> e meta description das páginas /ddd/:code (ex.: "DDD 31 é de qual estado? Minas Gerais — 139 cidades | Meu DDD") e headline do Article JSON-LD
 - [x] Adicionar pergunta "Qual estado é o DDD X?" ao banco buildDddFaq (11ª pergunta, HTML visível + FAQPage JSON-LD); validado no SSR de /ddd/31
 - [x] Adicionar H2 "Qual é o DDD de X?" com parágrafo-resposta nas 27 páginas de estado
-- [ ] Guia "Qual o DDD da Claro, Vivo e TIM?" (/guia/qual-o-ddd-da-claro-vivo-e-tim) com FAQPage
-- [ ] Guia de códigos internacionais (/guia/codigos-internacionais-ddi) com tabela (Brasil +55, EUA/Canadá +1, Portugal +351) e FAQPage
+- [x] Guia "Qual o DDD da Claro, Vivo e TIM?" (/guia/qual-o-ddd-da-claro-vivo-e-tim) com FAQPage (10 perguntas, SSR validado)
+- [x] Guia de códigos internacionais (/guia/codigos-internacionais-ddi) com tabela (Brasil +55, EUA/Canadá +1, Portugal +351) e FAQPage (10 perguntas, SSR validado)
