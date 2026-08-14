@@ -139,3 +139,12 @@ Monitorizar: grep -c OK .generated/tabs/*.main.log; re-tentar UFs com falhas (gr
 Depois: pnpm tsx scripts/integrateTabs.mts; pnpm format; pnpm test (86+); tsc; screenshot /cidade/ac/cruzeiro-do-sul (4 tabs + cartão cidade→estado); checkpoint + git push github main.
 Logs: .generated/tabs/*.main.log. Piloto AC já integrado antes.
 Auto-publish ATIVADO.
+
+## Estado do lote de tabs em massa — 14/08 02:58 UTC
+- Plano de keywords CONCLUÍDO e publicado: checkpoint 57e51fa4, GitHub github/main sincronizado, commit 57e51fa.
+- Lote sequencial 27 UFs (nohup, session tabs-batch, PID 63691): relançado às 02:54 UTC conforme pedido do utilizador (relançar geração em massa).
+- PROBLEMA: quota LLM ainda esgotada ("your account has hit a usage exhausted" 412). Run AC de hoje: 0 geradas, 22 falhas. AC tinha apenas ~3-4 fichas OK reais de 13/08 (o reset do sandbox apagou os JSONs; os logs .log sobreviveram, o script resilient usa logs p/ dedup).
+- Criei scripts/generateTabsResilient.mts: por-UF, respeita .generated/tabs/{uf}.json + logs de OK (dedup loadDone), CONC=3, espera 5 min quando 412 (MAX_QUOTA_WAITS=12), retries 4x/município. Usa mysql2/promise como o original (camelCase).
+- PRÓXIMO PASSO: aguardar quota repor (meia-noite UTC? ou agendada 06:00 BRT = 09:00 UTC) e relançar o lote com o script resiliente: for uf em ac al ap am ba ce df es go ma mt ms mg pa pb pr pe pi rj rn rs ro rr sc sp se to; do pnpm tsx scripts/generateTabsResilient.mts --uf=$uf; done. Depois: pnpm tsx scripts/integrateTabs.mts, pnpm format, pnpm test, screenshot /cidade/ac/cruzeiro-do-sul (4 tabs + cartão cidade->estado), checkpoint + push github.
+- Monitor: grep -c OK .generated/tabs/*.log e python3 contar JSONs ({uf}.json é dict).
+- Logs: .generated/tabs/{uf}.log (formato: ISO FAIL AC:capixaba: ... ou OK AC:capixaba).
