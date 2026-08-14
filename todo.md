@@ -232,7 +232,9 @@
 - [x] client/src/pages/MunicipalityPage.tsx — renderizar MunicipalityTabs (seed SSR + fallback síncrono) substituindo o LocalityContext quando há ficha; manter link cidade→estado
 - [x] scripts/generateTabs.mts — produtor em massa (schema real camelCase, slug NULL fallback, flags --uf/--limit/--only-empty; json_schema strict com required completos; limpeza de artefactos de raciocínio)
 - [x] Validação de piloto (3 municípios do AC, 0 falhas, qualidade verificada)
-- [ ] Geração em massa: 27 UFs em lote sequencial (5.570 municípios) — agendada para 14/08 06:00 BRT (quota LLM diária repôs à meia-noite)
+- [ ] Geração em massa: 27 UFs em lote sequencial (5.570 municípios) — lote manual parado às 04:45 UTC 14/08 após 1h de backoff sem avanço (quota não repôs); processo morto com kill (19 ciclos desperdiçados). Retomada assegurada pela tarefa agendada PW66RMcon4WDl815DcI966 (diária 06:00 BRT, expira 16/08), agora instruída a usar scripts/generateTabsResilient.mts com dedup por .generated/tabs/<uf>.json e a não duplicar instâncias. Progresso acumulado: ~27 fichas válidas em JSON (AC 2, SC 2, e ~1 de cada uma das restantes 20 UFs visitadas).
+- [ ] Após conclusão do lote LLM: executar scripts/integrateTabs.mts e validar catálogo TS completo (27 UFs)
+- [ ] Após integração: testar SSR de amostra (/cidade/sp/sorocaba, /cidade/ce/quixadá), 86+ testes, build e commit GitHub
 - [x] scripts/integrateTabs.mts — converter JSON gerado em módulos TS (testado com catálogo AC)
 - [x] Integrar conteúdo piloto nos módulos TS (AC: 2 municípios; restantes após lote LLM)
 - [x] Testes vitest: mock localityTabs na hidratação + QueryClientProvider (82 testes verdes)
