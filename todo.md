@@ -280,3 +280,6 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Pedido 2026-08-13 (noite)
 - [x] Acordeão (collapsible) na secção de FAQ com animação suave e acessibilidade, aplicado em /ddd, /estado e /cidade (FaqSection com framer-motion, aria-expanded, temas claro/escuro; SSR mantém as perguntas visíveis e o FAQPage JSON-LD)
+
+## Pedido 2026-08-13 (noite)
+- [x] Ícone indicador de estado (aberto/fechado) nos itens do acordeão das FAQ: chevron dentro de círculo com fundo que muda de tom (aberto = coral #f06a4d com ícone claro, fechado = fundo suave translúcido) e rotação 180° animada (220ms ease-out), em FaqSection (temas claro/escuro); aplica-se a /ddd, /estado e /cidade. Validados: 86 testes, TypeScript e screenshots.

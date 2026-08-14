@@ -15,6 +15,9 @@ const faqThemes = {
     answerText: "text-[#5d756c]",
     card: "border border-[#ded4c3] bg-[#faf3e5]",
     chevron: "text-[#f06a4d]",
+    chevronBg: "bg-[#f5c5a1]/40",
+    chevronOpenBg: "bg-[#f06a4d]",
+    chevronOpenIcon: "text-[#faf3e5]",
   },
   dark: {
     section: "bg-[#143d36] text-[#faf3e5]",
@@ -23,6 +26,9 @@ const faqThemes = {
     answerText: "text-[#c8dbd2]",
     card: "border border-[#476b61] bg-[#1c4b43]",
     chevron: "text-[#f5c5a1]",
+    chevronBg: "bg-[#476b61]/60",
+    chevronOpenBg: "bg-[#f06a4d]",
+    chevronOpenIcon: "text-[#faf3e5]",
   },
 };
 
@@ -63,11 +69,18 @@ export function FaqSection({
                   onClick={() => toggle(index)}
                 >
                   <span className="w-11/12">{faq.question}</span>
-                  <ChevronDown
-                    size={16}
-                    className={`shrink-0 ${palette.chevron} transition-transform duration-200`}
-                    style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
-                  />
+                  <span
+                    aria-hidden="true"
+                    className={`grid size-7 shrink-0 place-items-center rounded-full transition-colors duration-200 ${
+                      isOpen ? `${palette.chevronOpenBg}` : palette.chevronBg
+                    }`}
+                  >
+                    <ChevronDown
+                      size={14}
+                      className={isOpen ? palette.chevronOpenIcon : palette.chevron}
+                      style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 220ms cubic-bezier(0.23, 1, 0.32, 1), color 160ms ease" }}
+                    />
+                  </span>
                 </button>
                 <AnimatePresence initial={false}>
                   {isOpen ? (
