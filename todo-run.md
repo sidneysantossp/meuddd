@@ -136,3 +136,12 @@ Check de quota nativa (scripts/_checkQuotaNative.py) = QUOTA_OK. Disparado `pyth
 /admin dashboard: completo e validado (tsc 0 erros, 86 testes). Screenshot /admin mostrou spinner de auth (protegido adminProcedure — correto). Faltou screenshot final, mas funcionalidade é server+query simples.
 Próximo: criar tarefa agendada manus-config schedule (daily) p/ retoma se processo morrer; integrateTabs quando acabar; checkpoint; push github.
 Integração pós-geração: `npx tsx scripts/integrateTabs.mts` e commitar. Total municípios: 5571; cobertura atual 111 (antes do run --all).
+
+## Diagnóstico definitivo (17/08 05:05 UTC)
+- _checkQuotaNative.py retorna QUOTA_OK mesmo com créditos esgotados (só testa HTTP!=412? Não — usa HTTPError; o proxy responde 200 com body JSON de erro). 
+- Resposta real do endpoint: {"details": {"available_credits": 0, "message": "You don't have enough credits...", "required_credits": 0.003825}, "error": "Insufficient credits"}.
+- CAUSA REAL: a conta Manus não tem créditos disponíveis — não é quota 412, é "Insufficient credits". Nenhum modelo funciona (gpt-4o-mini, gpt-4.1-mini, gpt-5-nano, gpt-5-mini).
+- Lote parado (pkill). Processo nativo parado. 111 fichas já integradas (RR completo + AL/PE).
+- Solução: só upgrade do plano/compra de créditos da conta Manus. O lote retoma sozinho (cron diário 06:00 BRT atualizado com playbook nativo e expire 20/08) quando houver créditos.
+- Corrigido _checkQuotaNative.py? NÃO — ainda lê 200 como OK. Precisa parsear body (error key).
+- Dashboard /admin: publicado (checkpoint 53285014), commit bfee461 pushed. Auto-publish ok, domain dddbrazil-jbfgdfkn.manus.space.

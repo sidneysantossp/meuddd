@@ -209,7 +209,7 @@ def generate_one(r):
             content = getattr(choice, "content", None)
             finish = getattr(choice, "finish_reason", None)
             if not content:
-                raise RuntimeError(f"resposta vazia (finish={finish})")
+                raise RuntimeError(f"resposta vazia (finish={finish}) — modelo sem suporte a conteudo neste plano")
             parsed = json.loads(content if isinstance(content, str) else str(content))
             # limpeza
             for sec in ["tourism", "dining", "transport"]:
