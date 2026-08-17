@@ -36,9 +36,14 @@ async function startServer() {
 
   const preferredPort = parseInt(process.env.PORT || "3000");
   const port = await findAvailablePort(preferredPort);
-  if (port !== preferredPort) console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
-  server.listen(port, () => console.log(`Server running on http://localhost:${port}/`));
+  if (port !== preferredPort)
+    console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
+  server.listen(port, () =>
+    console.log(`Server running on http://localhost:${port}/`)
+  );
 }
 
-const isDirectExecution = Boolean(process.argv[1]) && pathToFileURL(process.argv[1]).href === import.meta.url;
+const isDirectExecution =
+  Boolean(process.argv[1]) &&
+  pathToFileURL(process.argv[1]).href === import.meta.url;
 if (isDirectExecution) startServer().catch(console.error);

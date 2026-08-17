@@ -1,7 +1,14 @@
 import { and, asc, desc, eq, gte, like, or, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, localitySuggestions, municipalities, states, unmatchedSearches, users } from "../drizzle/schema";
-import { ENV } from './_core/env';
+import {
+  InsertUser,
+  localitySuggestions,
+  municipalities,
+  states,
+  unmatchedSearches,
+  users,
+} from "../drizzle/schema";
+import { ENV } from "./_core/env";
 import { editorialGuides } from "../shared/editorialGuides";
 import { staticTerritory } from "./territoryFallback";
 
@@ -58,8 +65,8 @@ export async function upsertUser(user: InsertUser): Promise<void> {
       values.role = user.role;
       updateSet.role = user.role;
     } else if (user.openId === ENV.ownerOpenId) {
-      values.role = 'admin';
-      updateSet.role = 'admin';
+      values.role = "admin";
+      updateSet.role = "admin";
     }
 
     if (!values.lastSignedIn) {
@@ -86,7 +93,11 @@ export async function getUserByOpenId(openId: string) {
     return undefined;
   }
 
-  const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
+  const result = await db
+    .select()
+    .from(users)
+    .where(eq(users.openId, openId))
+    .limit(1);
 
   return result.length > 0 ? result[0] : undefined;
 }
@@ -109,7 +120,12 @@ type MunicipalityRecord = {
   statePopulationReferenceYear: number | null;
 };
 
-function staticMunicipalities(input: { query?: string; uf?: string; ddd?: string; slug?: string }) {
+function staticMunicipalities(input: {
+  query?: string;
+  uf?: string;
+  ddd?: string;
+  slug?: string;
+}) {
   const query = input.query?.trim().toLocaleLowerCase("pt-BR");
   const normalizedDdd = query?.replace(/\D/g, "");
   return staticTerritory
@@ -118,11 +134,17 @@ function staticMunicipalities(input: { query?: string; uf?: string; ddd?: string
       if (input.ddd && row.ddd !== input.ddd) return false;
       if (input.slug && row.slug !== input.slug) return false;
       if (!query) return true;
-      return [row.name, row.stateName, row.uf, row.region, row.ddd]
-        .some(value => value.toLocaleLowerCase("pt-BR").includes(query))
-        || Boolean(normalizedDdd && row.ddd.startsWith(normalizedDdd));
+      return (
+        [row.name, row.stateName, row.uf, row.region, row.ddd].some(value =>
+          value.toLocaleLowerCase("pt-BR").includes(query)
+        ) || Boolean(normalizedDdd && row.ddd.startsWith(normalizedDdd))
+      );
     })
-    .sort((left, right) => Number(left.ddd) - Number(right.ddd) || left.name.localeCompare(right.name, "pt-BR"));
+    .sort(
+      (left, right) =>
+        Number(left.ddd) - Number(right.ddd) ||
+        left.name.localeCompare(right.name, "pt-BR")
+    );
 }
 
 function normalizeSearch(value: string) {
@@ -145,7 +167,8 @@ function levenshteinDistance(left: string, right: string) {
       current[rightIndex] = Math.min(
         current[rightIndex - 1] + 1,
         previous[rightIndex] + 1,
-        previous[rightIndex - 1] + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+        previous[rightIndex - 1] +
+          (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1)
       );
     }
     previous = current;
@@ -174,7 +197,8 @@ function fuzzyScore(row: MunicipalityRecord, rawQuery: string) {
   ];
   for (const candidate of candidates) {
     if (candidate.value === query) return candidate.boost;
-    if (candidate.value.includes(query)) return candidate.boost - 80 - candidate.value.indexOf(query);
+    if (candidate.value.includes(query))
+      return candidate.boost - 80 - candidate.value.indexOf(query);
   }
   if (query.length < 3 || /^\d+$/.test(query)) return 0;
   return candidates.reduce((best, candidate) => {
@@ -187,8 +211,15 @@ function fuzzyScore(row: MunicipalityRecord, rawQuery: string) {
 function fuzzyFilterMunicipalities(rows: MunicipalityRecord[], query: string) {
   const scored = rows
     .map(row => ({ row, score: fuzzyScore(row, query) }))
-    .filter((entry): entry is { row: MunicipalityRecord; score: number } => entry.score > 0)
-    .sort((left, right) => right.score - left.score || left.row.name.localeCompare(right.row.name, "pt-BR"));
+    .filter(
+      (entry): entry is { row: MunicipalityRecord; score: number } =>
+        entry.score > 0
+    )
+    .sort(
+      (left, right) =>
+        right.score - left.score ||
+        left.row.name.localeCompare(right.row.name, "pt-BR")
+    );
   const threshold = Math.max((scored[0]?.score ?? 0) - 50, 1);
   return scored
     .filter(entry => entry.score >= threshold)
@@ -220,26 +251,45 @@ export type NearbyTerritory = {
   distanceKm: number;
 };
 
-function haversineDistanceKm(latitude: number, longitude: number, targetLatitude: number, targetLongitude: number) {
+function haversineDistanceKm(
+  latitude: number,
+  longitude: number,
+  targetLatitude: number,
+  targetLongitude: number
+) {
   const earthRadiusKm = 6_371;
-  const toRadians = (value: number) => value * Math.PI / 180;
+  const toRadians = (value: number) => (value * Math.PI) / 180;
   const latitudeDelta = toRadians(targetLatitude - latitude);
   const longitudeDelta = toRadians(targetLongitude - longitude);
   const latitudeStart = toRadians(latitude);
   const latitudeEnd = toRadians(targetLatitude);
-  const arc = Math.sin(latitudeDelta / 2) ** 2
-    + Math.cos(latitudeStart) * Math.cos(latitudeEnd) * Math.sin(longitudeDelta / 2) ** 2;
+  const arc =
+    Math.sin(latitudeDelta / 2) ** 2 +
+    Math.cos(latitudeStart) *
+      Math.cos(latitudeEnd) *
+      Math.sin(longitudeDelta / 2) ** 2;
   return 2 * earthRadiusKm * Math.atan2(Math.sqrt(arc), Math.sqrt(1 - arc));
 }
 
-export function findNearestTerritory(rows: MunicipalityRecord[], latitude: number, longitude: number): NearbyTerritory | null {
+export function findNearestTerritory(
+  rows: MunicipalityRecord[],
+  latitude: number,
+  longitude: number
+): NearbyTerritory | null {
   let nearest: { row: MunicipalityRecord; distanceKm: number } | null = null;
   for (const row of rows) {
     const targetLatitude = Number(row.latitude);
     const targetLongitude = Number(row.longitude);
-    if (!Number.isFinite(targetLatitude) || !Number.isFinite(targetLongitude)) continue;
-    const distanceKm = haversineDistanceKm(latitude, longitude, targetLatitude, targetLongitude);
-    if (!nearest || distanceKm < nearest.distanceKm) nearest = { row, distanceKm };
+    if (!Number.isFinite(targetLatitude) || !Number.isFinite(targetLongitude))
+      continue;
+    const distanceKm = haversineDistanceKm(
+      latitude,
+      longitude,
+      targetLatitude,
+      targetLongitude
+    );
+    if (!nearest || distanceKm < nearest.distanceKm)
+      nearest = { row, distanceKm };
   }
   if (!nearest) return null;
   return {
@@ -253,14 +303,22 @@ export function findNearestTerritory(rows: MunicipalityRecord[], latitude: numbe
 
 function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
   const groups = new Map<string, MunicipalityRecord[]>();
-  for (const row of rows) groups.set(row.ddd, [...(groups.get(row.ddd) ?? []), row]);
+  for (const row of rows)
+    groups.set(row.ddd, [...(groups.get(row.ddd) ?? []), row]);
 
   return Array.from(groups.entries())
     .map(([code, group]) => {
-      const stateMap = new Map(group.map(row => [row.uf, { name: row.stateName, uf: row.uf, region: row.region }]));
+      const stateMap = new Map(
+        group.map(row => [
+          row.uf,
+          { name: row.stateName, uf: row.uf, region: row.region },
+        ])
+      );
       return {
         code,
-        states: Array.from(stateMap.values()).sort((left, right) => left.name.localeCompare(right.name, "pt-BR")),
+        states: Array.from(stateMap.values()).sort((left, right) =>
+          left.name.localeCompare(right.name, "pt-BR")
+        ),
         cityCount: group.length,
         sampleCities: group.slice(0, 6).map(row => row.name),
       };
@@ -268,7 +326,17 @@ function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
     .sort((left, right) => Number(left.code) - Number(right.code));
 }
 
-async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; uf?: string; ddd?: string; slug?: string }) {
+async function selectMunicipalities({
+  query,
+  uf,
+  ddd,
+  slug,
+}: {
+  query?: string;
+  uf?: string;
+  ddd?: string;
+  slug?: string;
+}) {
   const db = await getDb();
   if (!db) return staticMunicipalities({ query, uf, ddd, slug });
 
@@ -280,13 +348,17 @@ async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; 
   if (normalizedQuery) {
     const wildcard = `%${normalizedQuery}%`;
     const normalizedDdd = normalizedQuery.replace(/\D/g, "");
-    terms.push(or(
-      like(municipalities.name, wildcard),
-      like(states.name, wildcard),
-      like(states.uf, wildcard.toUpperCase()),
-      like(states.region, wildcard),
-      normalizedDdd ? like(municipalities.ddd, `${normalizedDdd}%`) : undefined,
-    ));
+    terms.push(
+      or(
+        like(municipalities.name, wildcard),
+        like(states.name, wildcard),
+        like(states.uf, wildcard.toUpperCase()),
+        like(states.region, wildcard),
+        normalizedDdd
+          ? like(municipalities.ddd, `${normalizedDdd}%`)
+          : undefined
+      )
+    );
   }
 
   return db
@@ -315,46 +387,78 @@ async function selectMunicipalities({ query, uf, ddd, slug }: { query?: string; 
 
 export async function searchDdds(input: { query?: string; uf?: string }) {
   const query = input.query?.trim();
-  if (!query || /^\d+$/.test(query.replace(/\D/g, ""))) return groupDddRows(await selectMunicipalities(input));
-  return groupDddRows(fuzzyFilterMunicipalities(await selectMunicipalities({ uf: input.uf }), query));
+  if (!query || /^\d+$/.test(query.replace(/\D/g, "")))
+    return groupDddRows(await selectMunicipalities(input));
+  return groupDddRows(
+    fuzzyFilterMunicipalities(
+      await selectMunicipalities({ uf: input.uf }),
+      query
+    )
+  );
 }
 
-export async function resolveNearbyTerritory(input: { latitude: number; longitude: number }) {
-  return findNearestTerritory(await selectMunicipalities({}), input.latitude, input.longitude);
+export async function resolveNearbyTerritory(input: {
+  latitude: number;
+  longitude: number;
+}) {
+  return findNearestTerritory(
+    await selectMunicipalities({}),
+    input.latitude,
+    input.longitude
+  );
 }
 
 export function prepareUnmatchedSearch(input: { query: string; uf?: string }) {
   const latestQuery = input.query.trim().replace(/\s+/g, " ").slice(0, 120);
   const normalizedQuery = normalizeSearch(latestQuery).slice(0, 120);
   const selectedUf = input.uf?.trim().toUpperCase();
-  if (normalizedQuery.length < 2 || /^\d{1,2}$/.test(normalizedQuery) || (selectedUf && !/^[A-Z]{2}$/.test(selectedUf))) return null;
+  if (
+    normalizedQuery.length < 2 ||
+    /^\d{1,2}$/.test(normalizedQuery) ||
+    (selectedUf && !/^[A-Z]{2}$/.test(selectedUf))
+  )
+    return null;
   return { normalizedQuery, latestQuery, selectedUf: selectedUf || null };
 }
 
-export async function recordUnmatchedSearch(input: { query: string; uf?: string }) {
+export async function recordUnmatchedSearch(input: {
+  query: string;
+  uf?: string;
+}) {
   const payload = prepareUnmatchedSearch(input);
   if (!payload) return { recorded: false } as const;
   const db = await getDb();
   if (!db) return { recorded: false } as const;
-  await db.insert(unmatchedSearches).values(payload).onDuplicateKeyUpdate({
-    set: {
-      latestQuery: payload.latestQuery,
-      selectedUf: payload.selectedUf,
-      searchCount: sql`${unmatchedSearches.searchCount} + 1`,
-      lastSeenAt: sql`CURRENT_TIMESTAMP`,
-    },
-  });
+  await db
+    .insert(unmatchedSearches)
+    .values(payload)
+    .onDuplicateKeyUpdate({
+      set: {
+        latestQuery: payload.latestQuery,
+        selectedUf: payload.selectedUf,
+        searchCount: sql`${unmatchedSearches.searchCount} + 1`,
+        lastSeenAt: sql`CURRENT_TIMESTAMP`,
+      },
+    });
   return { recorded: true } as const;
 }
 
-export type UnmatchedSearchFilters = { limit?: number; minVolume?: number; periodDays?: number };
+export type UnmatchedSearchFilters = {
+  limit?: number;
+  minVolume?: number;
+  periodDays?: number;
+};
 
-export async function listUnmatchedSearches(input: UnmatchedSearchFilters = {}) {
+export async function listUnmatchedSearches(
+  input: UnmatchedSearchFilters = {}
+) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   const safeLimit = Math.max(1, Math.min(input.limit ?? 50, 100));
   const safeMinVolume = Math.max(1, Math.min(input.minVolume ?? 1, 10_000));
-  const safePeriodDays = input.periodDays ? Math.max(1, Math.min(input.periodDays, 365)) : undefined;
+  const safePeriodDays = input.periodDays
+    ? Math.max(1, Math.min(input.periodDays, 365))
+    : undefined;
   const conditions = [gte(unmatchedSearches.searchCount, safeMinVolume)];
   if (safePeriodDays) {
     const from = new Date();
@@ -372,20 +476,39 @@ export async function listUnmatchedSearches(input: UnmatchedSearchFilters = {}) 
     })
     .from(unmatchedSearches)
     .where(and(...conditions))
-    .orderBy(desc(unmatchedSearches.searchCount), desc(unmatchedSearches.lastSeenAt))
+    .orderBy(
+      desc(unmatchedSearches.searchCount),
+      desc(unmatchedSearches.lastSeenAt)
+    )
     .limit(safeLimit);
 }
 
-export function prepareLocalitySuggestion(input: { municipalityIbgeCode: number; topic: "mobility" | "useful_phone" | "other"; note: string }) {
+export function prepareLocalitySuggestion(input: {
+  municipalityIbgeCode: number;
+  topic: "mobility" | "useful_phone" | "other";
+  note: string;
+}) {
   const municipalityIbgeCode = Number(input.municipalityIbgeCode);
   const note = input.note.trim().replace(/\s+/g, " ").slice(0, 600);
-  if (!Number.isInteger(municipalityIbgeCode) || municipalityIbgeCode <= 0 || note.length < 12) return null;
+  if (
+    !Number.isInteger(municipalityIbgeCode) ||
+    municipalityIbgeCode <= 0 ||
+    note.length < 12
+  )
+    return null;
   return { municipalityIbgeCode, topic: input.topic, note };
 }
 
-export async function createLocalitySuggestion(input: { municipalityIbgeCode: number; topic: "mobility" | "useful_phone" | "other"; note: string }) {
+export async function createLocalitySuggestion(input: {
+  municipalityIbgeCode: number;
+  topic: "mobility" | "useful_phone" | "other";
+  note: string;
+}) {
   const payload = prepareLocalitySuggestion(input);
-  if (!payload) throw new Error("A sugestão precisa identificar a localidade e descrever a alteração em pelo menos 12 caracteres.");
+  if (!payload)
+    throw new Error(
+      "A sugestão precisa identificar a localidade e descrever a alteração em pelo menos 12 caracteres."
+    );
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   await db.insert(localitySuggestions).values(payload);
@@ -399,12 +522,15 @@ export type LocalitySuggestionFilters = {
   limit?: number;
 };
 
-export async function listLocalitySuggestions(input: LocalitySuggestionFilters = {}) {
+export async function listLocalitySuggestions(
+  input: LocalitySuggestionFilters = {}
+) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   const safeLimit = Math.max(1, Math.min(input.limit ?? 100, 100));
   const safeUf = input.uf?.trim().toUpperCase();
-  const ufCondition = safeUf && /^[A-Z]{2}$/.test(safeUf) ? eq(states.uf, safeUf) : undefined;
+  const ufCondition =
+    safeUf && /^[A-Z]{2}$/.test(safeUf) ? eq(states.uf, safeUf) : undefined;
   return db
     .select({
       id: localitySuggestions.id,
@@ -418,18 +544,29 @@ export async function listLocalitySuggestions(input: LocalitySuggestionFilters =
       reviewedAt: localitySuggestions.reviewedAt,
     })
     .from(localitySuggestions)
-    .leftJoin(municipalities, eq(localitySuggestions.municipalityIbgeCode, municipalities.ibgeCode))
+    .leftJoin(
+      municipalities,
+      eq(localitySuggestions.municipalityIbgeCode, municipalities.ibgeCode)
+    )
     .leftJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
-    .where(and(
-      input.status ? eq(localitySuggestions.status, input.status) : undefined,
-      ufCondition,
-      input.topic ? eq(localitySuggestions.topic, input.topic) : undefined,
-    ))
-    .orderBy(asc(localitySuggestions.status), desc(localitySuggestions.createdAt))
+    .where(
+      and(
+        input.status ? eq(localitySuggestions.status, input.status) : undefined,
+        ufCondition,
+        input.topic ? eq(localitySuggestions.topic, input.topic) : undefined
+      )
+    )
+    .orderBy(
+      asc(localitySuggestions.status),
+      desc(localitySuggestions.createdAt)
+    )
     .limit(safeLimit);
 }
 
-export async function reviewLocalitySuggestion(input: { id: number; status: "reviewed" | "approved" | "dismissed" }) {
+export async function reviewLocalitySuggestion(input: {
+  id: number;
+  status: "reviewed" | "approved" | "dismissed";
+}) {
   const db = await getDb();
   if (!db) throw new Error("A base de dados não está disponível.");
   await db
@@ -473,7 +610,9 @@ export async function getMunicipalityDetails(uf: string, slug: string) {
   const [municipality] = await selectMunicipalities({ uf, slug });
   if (!municipality) return null;
 
-  const municipalitiesForDdd = await selectMunicipalities({ ddd: municipality.ddd });
+  const municipalitiesForDdd = await selectMunicipalities({
+    ddd: municipality.ddd,
+  });
   const [ddd] = groupDddRows(municipalitiesForDdd);
   return {
     municipality,
@@ -486,7 +625,10 @@ export async function getMunicipalityDetails(uf: string, slug: string) {
     },
     ddd,
     relatedMunicipalities: municipalitiesForDdd
-      .filter(item => item.uf === municipality.uf && item.ibgeCode !== municipality.ibgeCode)
+      .filter(
+        item =>
+          item.uf === municipality.uf && item.ibgeCode !== municipality.ibgeCode
+      )
       .slice(0, 12),
   };
 }
@@ -494,7 +636,8 @@ export async function getMunicipalityDetails(uf: string, slug: string) {
 export async function listStateSummaries(): Promise<StateSummary[]> {
   const rows = await selectMunicipalities({});
   const groups = new Map<string, MunicipalityRecord[]>();
-  for (const row of rows) groups.set(row.uf, [...(groups.get(row.uf) ?? []), row]);
+  for (const row of rows)
+    groups.set(row.uf, [...(groups.get(row.uf) ?? []), row]);
 
   return Array.from(groups.values())
     .map(group => ({
@@ -509,14 +652,51 @@ export async function listStateSummaries(): Promise<StateSummary[]> {
     .sort((left, right) => left.name.localeCompare(right.name, "pt-BR"));
 }
 
-export type CapitalSummary = Pick<MunicipalityRecord, "ibgeCode" | "name" | "slug" | "ddd" | "populationEstimated" | "populationReferenceYear" | "stateName" | "uf" | "region">;
+export type CapitalSummary = Pick<
+  MunicipalityRecord,
+  | "ibgeCode"
+  | "name"
+  | "slug"
+  | "ddd"
+  | "populationEstimated"
+  | "populationReferenceYear"
+  | "stateName"
+  | "uf"
+  | "region"
+>;
 
 export async function listCapitalSummaries(): Promise<CapitalSummary[]> {
   const regionOrder = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
   return (await selectMunicipalities({}))
     .filter(item => item.capital && item.slug)
-    .map(({ ibgeCode, name, slug, ddd, populationEstimated, populationReferenceYear, stateName, uf, region }) => ({ ibgeCode, name, slug, ddd, populationEstimated, populationReferenceYear, stateName, uf, region }))
-    .sort((left, right) => regionOrder.indexOf(left.region) - regionOrder.indexOf(right.region) || left.name.localeCompare(right.name, "pt-BR"));
+    .map(
+      ({
+        ibgeCode,
+        name,
+        slug,
+        ddd,
+        populationEstimated,
+        populationReferenceYear,
+        stateName,
+        uf,
+        region,
+      }) => ({
+        ibgeCode,
+        name,
+        slug,
+        ddd,
+        populationEstimated,
+        populationReferenceYear,
+        stateName,
+        uf,
+        region,
+      })
+    )
+    .sort(
+      (left, right) =>
+        regionOrder.indexOf(left.region) - regionOrder.indexOf(right.region) ||
+        left.name.localeCompare(right.name, "pt-BR")
+    );
 }
 
 export type SitemapInventory = {
@@ -533,7 +713,10 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
     for (const item of staticTerritory) {
       if (!item.slug) continue;
       const uf = item.uf.toLowerCase();
-      citiesByUf[uf] = [...(citiesByUf[uf] ?? []), `/cidade/${uf}/${item.slug}`];
+      citiesByUf[uf] = [
+        ...(citiesByUf[uf] ?? []),
+        `/cidade/${uf}/${item.slug}`,
+      ];
     }
     return {
       states: Array.from(new Set(staticTerritory.map(item => item.uf)))
@@ -543,7 +726,12 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
         .sort((left, right) => Number(left) - Number(right))
         .map(code => `/ddd/${code}`),
       citiesByUf,
-      guides: ["/", "/guias", "/capitais", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
+      guides: [
+        "/",
+        "/guias",
+        "/capitais",
+        ...editorialGuides.map(guide => `/guia/${guide.slug}`),
+      ],
     };
   }
   const municipalitiesForSitemap = await db
@@ -552,7 +740,10 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
     .innerJoin(states, eq(municipalities.stateIbgeCode, states.ibgeCode))
     .where(and());
   const stateRows = await db.select({ uf: states.uf }).from(states);
-  const dddRows = await db.selectDistinct({ code: municipalities.ddd }).from(municipalities).orderBy(asc(municipalities.ddd));
+  const dddRows = await db
+    .selectDistinct({ code: municipalities.ddd })
+    .from(municipalities)
+    .orderBy(asc(municipalities.ddd));
   const citiesByUf: Record<string, string[]> = {};
   for (const item of municipalitiesForSitemap) {
     if (!item.slug) continue;
@@ -564,7 +755,12 @@ export async function listSitemapInventory(): Promise<SitemapInventory> {
       states: stateRows.map(state => `/estado/${state.uf.toLowerCase()}`),
       ddds: dddRows.map(item => `/ddd/${item.code}`),
       citiesByUf,
-      guides: ["/", "/guias", "/capitais", ...editorialGuides.map(guide => `/guia/${guide.slug}`)],
+      guides: [
+        "/",
+        "/guias",
+        "/capitais",
+        ...editorialGuides.map(guide => `/guia/${guide.slug}`),
+      ],
     },
   ][0];
 }
@@ -579,4 +775,13 @@ export async function listSitemapPaths() {
   ];
 }
 
-export const __testables = { findNearestTerritory, groupDddRows, normalizeSearch, levenshteinDistance, fuzzyFilterMunicipalities, prepareUnmatchedSearch, prepareLocalitySuggestion, staticMunicipalities };
+export const __testables = {
+  findNearestTerritory,
+  groupDddRows,
+  normalizeSearch,
+  levenshteinDistance,
+  fuzzyFilterMunicipalities,
+  prepareUnmatchedSearch,
+  prepareLocalitySuggestion,
+  staticMunicipalities,
+};

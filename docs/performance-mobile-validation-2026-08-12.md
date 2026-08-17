@@ -2,14 +2,14 @@
 
 Em 12 de agosto de 2026, o build público do Meu DDD foi validado após separar a instrumentação exclusiva da pré-visualização Manus do bundle de produção. A mudança mantém os recursos de diagnóstico quando o Vite é iniciado em desenvolvimento e deixa de injetar no HTML público os scripts de runtime e recolha de depuração que não são necessários aos visitantes.
 
-| Verificação | Resultado |
-| --- | --- |
-| HTML base de produção (`dist/public/index.html`) | **453 bytes** sem compressão e **290 bytes** gzip |
-| Script `manus-runtime` no HTML público | Ausente |
-| Referência ao coletor de depuração | Ausente |
-| Atributos `data-loc` no HTML público | 0 |
-| SSR Vercel sem `DATABASE_URL` | HTTP 200 em `/`, `/ddd/11`, `/estado/sp`, `/cidade/sp/sao-paulo`, `robots.txt` e sitemap de DDDs |
-| Segurança do bundle serverless | A verificação falha caso detete Vite, Rollup ou Lightning CSS no handler |
+| Verificação                                      | Resultado                                                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| HTML base de produção (`dist/public/index.html`) | **453 bytes** sem compressão e **290 bytes** gzip                                                |
+| Script `manus-runtime` no HTML público           | Ausente                                                                                          |
+| Referência ao coletor de depuração               | Ausente                                                                                          |
+| Atributos `data-loc` no HTML público             | 0                                                                                                |
+| SSR Vercel sem `DATABASE_URL`                    | HTTP 200 em `/`, `/ddd/11`, `/estado/sp`, `/cidade/sp/sao-paulo`, `robots.txt` e sitemap de DDDs |
+| Segurança do bundle serverless                   | A verificação falha caso detete Vite, Rollup ou Lightning CSS no handler                         |
 
 A validação visual foi efetuada após reiniciar o servidor SSR de desenvolvimento, na resolução móvel **375 × 812 px**. A homepage manteve a marca Meu DDD, o título e o mapa por estados; as rotas `/ddd/11`, `/estado/sp` e `/cidade/sp/sao-paulo` renderizaram conteúdo e navegação sem erro. A homepage foi também confirmada visualmente em desktop após o reinício.
 

@@ -2,5 +2,3 @@
 import type { LocalityTabsCatalog } from "./types";
 
 export const catalog: LocalityTabsCatalog = {};
-
-

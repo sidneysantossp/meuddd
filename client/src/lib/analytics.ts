@@ -1,8 +1,16 @@
-export function installAnalytics(documentRef: Document, endpoint?: string, websiteId?: string) {
+export function installAnalytics(
+  documentRef: Document,
+  endpoint?: string,
+  websiteId?: string
+) {
   const baseUrl = endpoint?.trim().replace(/\/+$/, "");
   const normalizedWebsiteId = websiteId?.trim();
 
-  if (!baseUrl || !normalizedWebsiteId || documentRef.querySelector('script[data-ddd-analytics="umami"]')) {
+  if (
+    !baseUrl ||
+    !normalizedWebsiteId ||
+    documentRef.querySelector('script[data-ddd-analytics="umami"]')
+  ) {
     return false;
   }
 

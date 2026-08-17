@@ -17,7 +17,12 @@ export interface DiningTab {
 
 export interface TransportTab {
   intro: string;
-  items: { name: string; kind: string; description: string; mapHref?: string }[];
+  items: {
+    name: string;
+    kind: string;
+    description: string;
+    mapHref?: string;
+  }[];
   closing?: string;
 }
 

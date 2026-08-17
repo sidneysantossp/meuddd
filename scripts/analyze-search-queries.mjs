@@ -5,7 +5,9 @@ const inputPath = process.argv[2];
 const outputPath = process.argv[3];
 
 if (!inputPath || !outputPath) {
-  throw new Error("Uso: node scripts/analyze-search-queries.mjs <consultas.csv> <analise.json>");
+  throw new Error(
+    "Uso: node scripts/analyze-search-queries.mjs <consultas.csv> <analise.json>"
+  );
 }
 
 function parseCsv(text) {
@@ -40,7 +42,13 @@ function parseCsv(text) {
 }
 
 function number(value) {
-  return Number(String(value).replace(/[^0-9,.-]/g, "").replace(",", ".")) || 0;
+  return (
+    Number(
+      String(value)
+        .replace(/[^0-9,.-]/g, "")
+        .replace(",", ".")
+    ) || 0
+  );
 }
 
 function normalize(value) {
@@ -54,10 +62,24 @@ function normalize(value) {
 
 function cluster(query) {
   const normalized = normalize(query);
-  if (/^meu d{1,3}$/.test(normalized) || /qual .* meu ddd|meu ddd/.test(normalized)) return "Marca e descoberta do próprio DDD";
-  if (/gerador|gerar/.test(normalized) && /(numero|telefone|celular|ddd)/.test(normalized)) return "Gerador de números";
-  if (/numero.*valido|celular.*valido|telefone.*valido/.test(normalized)) return "Números válidos e simulação";
-  if (/(como|qual|descobrir|consulta|consultar).*(ddd|codigo)|ddd.*(de|brasil|estado|cidade)/.test(normalized)) return "Consulta e descoberta de DDD";
+  if (
+    /^meu d{1,3}$/.test(normalized) ||
+    /qual .* meu ddd|meu ddd/.test(normalized)
+  )
+    return "Marca e descoberta do próprio DDD";
+  if (
+    /gerador|gerar/.test(normalized) &&
+    /(numero|telefone|celular|ddd)/.test(normalized)
+  )
+    return "Gerador de números";
+  if (/numero.*valido|celular.*valido|telefone.*valido/.test(normalized))
+    return "Números válidos e simulação";
+  if (
+    /(como|qual|descobrir|consulta|consultar).*(ddd|codigo)|ddd.*(de|brasil|estado|cidade)/.test(
+      normalized
+    )
+  )
+    return "Consulta e descoberta de DDD";
   if (/^ddd$/.test(normalized)) return "Consulta genérica de DDD";
   return "Cauda longa territorial e outras consultas";
 }
@@ -71,7 +93,13 @@ function aggregate(rows, keyFn) {
   const groups = new Map();
   for (const row of rows) {
     const key = keyFn(row);
-    const current = groups.get(key) ?? { key, clicks: 0, impressions: 0, positionSum: 0, rows: 0 };
+    const current = groups.get(key) ?? {
+      key,
+      clicks: 0,
+      impressions: 0,
+      positionSum: 0,
+      rows: 0,
+    };
     current.clicks += row.clicks;
     current.impressions += row.impressions;
     current.positionSum += row.position * row.impressions;
@@ -88,7 +116,9 @@ function aggregate(rows, keyFn) {
 const matrix = parseCsv(fs.readFileSync(inputPath, "utf8"));
 const headers = matrix.shift().map(header => normalize(header));
 const index = {
-  query: headers.findIndex(header => header.includes("top consultas") || header.includes("consultas")),
+  query: headers.findIndex(
+    header => header.includes("top consultas") || header.includes("consultas")
+  ),
   clicks: headers.findIndex(header => header.includes("cliques")),
   impressions: headers.findIndex(header => header.includes("impressoes")),
   ctr: headers.findIndex(header => header === "ctr"),
@@ -106,18 +136,24 @@ const rawRows = matrix
     position: number(row[index.position]),
   }));
 
-const normalizedRows = aggregate(rawRows, row => row.normalized)
-  .map(row => ({
-    ...row,
-    query: rawRows.find(source => source.normalized === row.key)?.query ?? row.key,
-    cluster: cluster(row.key),
-  }));
+const normalizedRows = aggregate(rawRows, row => row.normalized).map(row => ({
+  ...row,
+  query:
+    rawRows.find(source => source.normalized === row.key)?.query ?? row.key,
+  cluster: cluster(row.key),
+}));
 
-const totals = normalizedRows.reduce((sum, row) => ({
-  clicks: sum.clicks + row.clicks,
-  impressions: sum.impressions + row.impressions,
-}), { clicks: 0, impressions: 0 });
-const weightedPosition = normalizedRows.reduce((sum, row) => sum + row.position * row.impressions, 0);
+const totals = normalizedRows.reduce(
+  (sum, row) => ({
+    clicks: sum.clicks + row.clicks,
+    impressions: sum.impressions + row.impressions,
+  }),
+  { clicks: 0, impressions: 0 }
+);
+const weightedPosition = normalizedRows.reduce(
+  (sum, row) => sum + row.position * row.impressions,
+  0
+);
 
 const clusters = aggregate(normalizedRows, row => row.cluster)
   .sort((left, right) => right.impressions - left.impressions)
@@ -138,13 +174,18 @@ function targetCtr(position) {
 }
 
 const opportunities = normalizedRows
-  .filter(row => row.impressions >= 100 && row.position >= 3 && row.position <= 20)
+  .filter(
+    row => row.impressions >= 100 && row.position >= 3 && row.position <= 20
+  )
   .map(row => {
     const benchmarkCtr = targetCtr(row.position);
     return {
       ...row,
       benchmarkCtr,
-      estimatedAdditionalClicks: Math.max(0, Math.round(row.impressions * (benchmarkCtr - row.ctr))),
+      estimatedAdditionalClicks: Math.max(
+        0,
+        Math.round(row.impressions * (benchmarkCtr - row.ctr))
+      ),
       opportunityScore: Math.max(0, row.impressions * (benchmarkCtr - row.ctr)),
     };
   })
@@ -158,7 +199,7 @@ const topQueries = [...normalizedRows]
 
 const dddPriorities = aggregate(
   normalizedRows.filter(row => extractDddCode(row.key)),
-  row => extractDddCode(row.key),
+  row => extractDddCode(row.key)
 )
   .map(row => ({
     ...row,
@@ -166,7 +207,12 @@ const dddPriorities = aggregate(
     queries: normalizedRows
       .filter(source => extractDddCode(source.key) === row.key)
       .sort((left, right) => right.impressions - left.impressions)
-      .map(source => ({ query: source.query, impressions: source.impressions, clicks: source.clicks, position: source.position })),
+      .map(source => ({
+        query: source.query,
+        impressions: source.impressions,
+        clicks: source.clicks,
+        position: source.position,
+      })),
   }))
   .sort((left, right) => right.impressions - left.impressions);
 
@@ -177,16 +223,35 @@ const positionBuckets = [
   { label: "11–20", min: 11, max: 20 },
   { label: "20+", min: 20.00001, max: Infinity },
 ].map(bucket => {
-  const items = normalizedRows.filter(row => row.position >= bucket.min && row.position <= bucket.max);
-  const totals = items.reduce((sum, row) => ({ clicks: sum.clicks + row.clicks, impressions: sum.impressions + row.impressions }), { clicks: 0, impressions: 0 });
-  return { ...bucket, queries: items.length, ...totals, ctr: totals.impressions ? totals.clicks / totals.impressions : 0 };
+  const items = normalizedRows.filter(
+    row => row.position >= bucket.min && row.position <= bucket.max
+  );
+  const totals = items.reduce(
+    (sum, row) => ({
+      clicks: sum.clicks + row.clicks,
+      impressions: sum.impressions + row.impressions,
+    }),
+    { clicks: 0, impressions: 0 }
+  );
+  return {
+    ...bucket,
+    queries: items.length,
+    ...totals,
+    ctr: totals.impressions ? totals.clicks / totals.impressions : 0,
+  };
 });
 
-const exactBrand = normalizedRows.filter(row => /meu ddd|qual .*meu ddd|meu dd/.test(row.key));
+const exactBrand = normalizedRows.filter(row =>
+  /meu ddd|qual .*meu ddd|meu dd/.test(row.key)
+);
 const report = {
   source: path.basename(inputPath),
   rows: { original: rawRows.length, normalized: normalizedRows.length },
-  totals: { ...totals, ctr: totals.impressions ? totals.clicks / totals.impressions : 0, position: totals.impressions ? weightedPosition / totals.impressions : 0 },
+  totals: {
+    ...totals,
+    ctr: totals.impressions ? totals.clicks / totals.impressions : 0,
+    position: totals.impressions ? weightedPosition / totals.impressions : 0,
+  },
   clusters,
   positionBuckets,
   topQueries,
@@ -196,8 +261,16 @@ const report = {
     clicks: exactBrand.reduce((sum, row) => sum + row.clicks, 0),
     impressions: exactBrand.reduce((sum, row) => sum + row.impressions, 0),
     position: (() => {
-      const impressions = exactBrand.reduce((sum, row) => sum + row.impressions, 0);
-      return impressions ? exactBrand.reduce((sum, row) => sum + row.position * row.impressions, 0) / impressions : 0;
+      const impressions = exactBrand.reduce(
+        (sum, row) => sum + row.impressions,
+        0
+      );
+      return impressions
+        ? exactBrand.reduce(
+            (sum, row) => sum + row.position * row.impressions,
+            0
+          ) / impressions
+        : 0;
     })(),
   },
   notes: [
@@ -208,4 +281,15 @@ const report = {
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, JSON.stringify(report, null, 2));
-console.log(JSON.stringify({ rows: report.rows, totals: report.totals, clusters: report.clusters, opportunities: report.opportunities.slice(0, 10) }, null, 2));
+console.log(
+  JSON.stringify(
+    {
+      rows: report.rows,
+      totals: report.totals,
+      clusters: report.clusters,
+      opportunities: report.opportunities.slice(0, 10),
+    },
+    null,
+    2
+  )
+);

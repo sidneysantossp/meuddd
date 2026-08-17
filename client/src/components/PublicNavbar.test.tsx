@@ -29,24 +29,46 @@ describe("navbar pública", () => {
   });
 
   it("expõe a navegação e o acionador de menu móvel de forma acessível", () => {
-    expect(container.querySelector('nav[aria-label="Navegação principal"]')).toBeTruthy();
-    expect(Array.from(container.querySelectorAll("a")).find(link => link.textContent === "Gerar número")?.getAttribute("href")).toBe("/gerador");
-    const toggle = container.querySelector('button[aria-label="Abrir menu"]') as HTMLButtonElement;
+    expect(
+      container.querySelector('nav[aria-label="Navegação principal"]')
+    ).toBeTruthy();
+    expect(
+      Array.from(container.querySelectorAll("a"))
+        .find(link => link.textContent === "Gerar número")
+        ?.getAttribute("href")
+    ).toBe("/gerador");
+    const toggle = container.querySelector(
+      'button[aria-label="Abrir menu"]'
+    ) as HTMLButtonElement;
     expect(toggle.getAttribute("aria-expanded")).toBe("false");
-    expect(toggle.getAttribute("aria-controls")).toBe("public-mobile-navigation");
+    expect(toggle.getAttribute("aria-controls")).toBe(
+      "public-mobile-navigation"
+    );
 
     act(() => toggle.click());
 
     expect(toggle.getAttribute("aria-expanded")).toBe("true");
-    expect(container.querySelector("#public-mobile-navigation")?.textContent).toContain("Gerar número");
+    expect(
+      container.querySelector("#public-mobile-navigation")?.textContent
+    ).toContain("Gerar número");
   });
 
   it("preserva uma ação contextual, como a partilha, dentro do menu móvel", () => {
-    act(() => root.render(<PublicNavbar endSlot={<button type="button">Partilhar página</button>} />));
+    act(() =>
+      root.render(
+        <PublicNavbar
+          endSlot={<button type="button">Partilhar página</button>}
+        />
+      )
+    );
 
-    const toggle = container.querySelector('button[aria-label="Abrir menu"]') as HTMLButtonElement;
+    const toggle = container.querySelector(
+      'button[aria-label="Abrir menu"]'
+    ) as HTMLButtonElement;
     act(() => toggle.click());
 
-    expect(container.querySelector("#public-mobile-navigation")?.textContent).toContain("Partilhar página");
+    expect(
+      container.querySelector("#public-mobile-navigation")?.textContent
+    ).toContain("Partilhar página");
   });
 });

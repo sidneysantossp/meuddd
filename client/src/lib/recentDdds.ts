@@ -5,14 +5,24 @@ type LocalStorageLike = Pick<Storage, "getItem" | "setItem" | "removeItem">;
 
 export function addRecentDdd(current: string[], code: string) {
   if (!/^\d{2}$/.test(code)) return current;
-  return [code, ...current.filter(item => item !== code)].slice(0, MAX_RECENT_DDDS);
+  return [code, ...current.filter(item => item !== code)].slice(
+    0,
+    MAX_RECENT_DDDS
+  );
 }
 
 export function readRecentDdds(storage: LocalStorageLike) {
   try {
     const raw = storage.getItem(RECENT_DDDS_KEY);
     const parsed: unknown = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed.filter((code): code is string => typeof code === "string" && /^\d{2}$/.test(code)).slice(0, MAX_RECENT_DDDS) : [];
+    return Array.isArray(parsed)
+      ? parsed
+          .filter(
+            (code): code is string =>
+              typeof code === "string" && /^\d{2}$/.test(code)
+          )
+          .slice(0, MAX_RECENT_DDDS)
+      : [];
   } catch {
     return [];
   }

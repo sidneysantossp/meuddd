@@ -7,16 +7,16 @@
 
 A varredura confirmou que a base de SEO on-page já está sólida nas páginas principais:
 
-| Elemento | Estado | Observação |
-|---|---|---|
-| `<title>` único por página | Bom | Padrão "DDD 11 — São Paulo", "Araxá — MG", etc. |
-| Meta description | Bom | Gerada por página com foco na palavra-chave local |
-| Canonical | Bom | Já existia em todas as páginas principais (o `<link rel="canonical">` é injetado pelo SSR) |
-| JSON-LD (FAQPage, LocalBusiness, Article, ItemList) | Bom | Presente nas páginas de estado, município e guias |
-| Heading hierarchy (H1 único + H2s) | Bom | Revisada e reforçada |
-| Links internos (malha cidade → estado → DDD → região) | Bom | Reforçado nesta sessão com 4+ links internos por página municipal |
-| Links externos de autoridade | Bom | IBGE, ANATEL, climate-data.org, Google Maps filtrado |
-| Performance | Bom | HTML leve (~130 KB reduzido com setas tipográficas), ativos estáticos em `/assets/` |
+| Elemento                                              | Estado | Observação                                                                                 |
+| ----------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------ |
+| `<title>` único por página                            | Bom    | Padrão "DDD 11 — São Paulo", "Araxá — MG", etc.                                            |
+| Meta description                                      | Bom    | Gerada por página com foco na palavra-chave local                                          |
+| Canonical                                             | Bom    | Já existia em todas as páginas principais (o `<link rel="canonical">` é injetado pelo SSR) |
+| JSON-LD (FAQPage, LocalBusiness, Article, ItemList)   | Bom    | Presente nas páginas de estado, município e guias                                          |
+| Heading hierarchy (H1 único + H2s)                    | Bom    | Revisada e reforçada                                                                       |
+| Links internos (malha cidade → estado → DDD → região) | Bom    | Reforçado nesta sessão com 4+ links internos por página municipal                          |
+| Links externos de autoridade                          | Bom    | IBGE, ANATEL, climate-data.org, Google Maps filtrado                                       |
+| Performance                                           | Bom    | HTML leve (~130 KB reduzido com setas tipográficas), ativos estáticos em `/assets/`        |
 
 ## 2. Oportunidades identificadas e implementadas
 
@@ -49,16 +49,16 @@ O parágrafo da região listava os estados sem links. **Melhorado:**
 
 ## 3. Oportunidades ainda não exploradas (para o futuro)
 
-| Oportunidade | Benefício | Esforço |
-|---|---|---|
-| **Sitemap XML fracionado** — dividir o sitemap em sitemaps por tipo (DDD, estado, município, guia) com `lastmod` dinâmico | Indexação mais rápida das páginas novas; os motores de busca priorizam sitemaps menores e frequentemente atualizados | Médio |
-| **Schema `BreadcrumbList`** em todas as páginas | Rich snippets de breadcrumb na SERP | Baixo |
-| **Sitemaps `index` com `image`** nos guias editoriais | Indexação de imagens dos artigos | Baixo |
-| **`<link rel="alternate" hreflang="pt-BR">`** se houver expansão regional (PT-PT atual) | Sinalização correta do público-alvo brasileiro | Baixo |
-| **Conteúdo long-form nas páginas de município pendentes** — aguardar a geração em massa (14/08 06:00 BRT) | Resolver as ~5.500 páginas com baixa proporção texto/HTML apontadas pela Semrush | Automático |
-| **Links internos "cidades vizinhas"** nas páginas de município | Malha de vizinhança geográfica já existe nos cartões; pode ser reforçada com parágrafo contextual | Baixo |
-| **Monitorização de cobertura no Search Console** após a reindexação | Medir a recuperação de impressões dos termos históricos (março) | Baixo |
-| **`Article` JSON-LD nas páginas DDD e estado** | Consistência de sinal editorial para AI Overviews | Baixo |
+| Oportunidade                                                                                                              | Benefício                                                                                                            | Esforço    |
+| ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ---------- |
+| **Sitemap XML fracionado** — dividir o sitemap em sitemaps por tipo (DDD, estado, município, guia) com `lastmod` dinâmico | Indexação mais rápida das páginas novas; os motores de busca priorizam sitemaps menores e frequentemente atualizados | Médio      |
+| **Schema `BreadcrumbList`** em todas as páginas                                                                           | Rich snippets de breadcrumb na SERP                                                                                  | Baixo      |
+| **Sitemaps `index` com `image`** nos guias editoriais                                                                     | Indexação de imagens dos artigos                                                                                     | Baixo      |
+| **`<link rel="alternate" hreflang="pt-BR">`** se houver expansão regional (PT-PT atual)                                   | Sinalização correta do público-alvo brasileiro                                                                       | Baixo      |
+| **Conteúdo long-form nas páginas de município pendentes** — aguardar a geração em massa (14/08 06:00 BRT)                 | Resolver as ~5.500 páginas com baixa proporção texto/HTML apontadas pela Semrush                                     | Automático |
+| **Links internos "cidades vizinhas"** nas páginas de município                                                            | Malha de vizinhança geográfica já existe nos cartões; pode ser reforçada com parágrafo contextual                    | Baixo      |
+| **Monitorização de cobertura no Search Console** após a reindexação                                                       | Medir a recuperação de impressões dos termos históricos (março)                                                      | Baixo      |
+| **`Article` JSON-LD nas páginas DDD e estado**                                                                            | Consistência de sinal editorial para AI Overviews                                                                    | Baixo      |
 
 ## 4. Validação
 

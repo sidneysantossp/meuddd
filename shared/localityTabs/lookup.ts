@@ -31,13 +31,40 @@ import { catalog as TO } from "./to";
 import type { LocalityTabsCatalog, MunicipalityTabs } from "./types";
 
 const ufs: Record<string, LocalityTabsCatalog | undefined> = {
-  ac: AC, al: AL, am: AM, ap: AP, ba: BA, ce: CE, df: DF, es: ES, go: GO,
-  ma: MA, mg: MG, ms: MS, mt: MT, pa: PA, pb: PB, pe: PE, pi: PI, pr: PR,
-  rj: RJ, rn: RN, ro: RO, rr: RR, rs: RS, sc: SC, se: SE, sp: SP, to: TO,
+  ac: AC,
+  al: AL,
+  am: AM,
+  ap: AP,
+  ba: BA,
+  ce: CE,
+  df: DF,
+  es: ES,
+  go: GO,
+  ma: MA,
+  mg: MG,
+  ms: MS,
+  mt: MT,
+  pa: PA,
+  pb: PB,
+  pe: PE,
+  pi: PI,
+  pr: PR,
+  rj: RJ,
+  rn: RN,
+  ro: RO,
+  rr: RR,
+  rs: RS,
+  sc: SC,
+  se: SE,
+  sp: SP,
+  to: TO,
 };
 
 /** Obter as tabs editoriais de um município (síncrono, sem runtime dinâmico). */
-export function getMunicipalityTabsByUf(uf: string, slug: string): MunicipalityTabs | undefined {
+export function getMunicipalityTabsByUf(
+  uf: string,
+  slug: string
+): MunicipalityTabs | undefined {
   const key = slug.toLowerCase();
   return ufs[uf.toLowerCase()]?.[key];
 }

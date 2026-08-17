@@ -2,7 +2,9 @@ import { writeFile } from "node:fs/promises";
 import mysql from "mysql2/promise";
 
 if (!process.env.DATABASE_URL) {
-  throw new Error("DATABASE_URL é necessária para exportar a reserva territorial.");
+  throw new Error(
+    "DATABASE_URL é necessária para exportar a reserva territorial."
+  );
 }
 
 const connection = await mysql.createConnection(process.env.DATABASE_URL);
@@ -58,5 +60,11 @@ export type StaticMunicipalityRecord = {
 export const staticTerritory: StaticMunicipalityRecord[] = ${JSON.stringify(municipalities)};
 `;
 
-await writeFile(new URL("../server/territoryFallback.ts", import.meta.url), source, "utf8");
-process.stdout.write(`Reserva territorial exportada: ${municipalities.length} municípios.\n`);
+await writeFile(
+  new URL("../server/territoryFallback.ts", import.meta.url),
+  source,
+  "utf8"
+);
+process.stdout.write(
+  `Reserva territorial exportada: ${municipalities.length} municípios.\n`
+);

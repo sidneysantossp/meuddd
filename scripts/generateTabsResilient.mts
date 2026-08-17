@@ -48,7 +48,9 @@ function loadDone(): Set<string> {
   if (!fs.existsSync(OUT_DIR)) return done;
   for (const entry of fs.readdirSync(OUT_DIR)) {
     if (entry.endsWith(".log")) {
-      for (const line of fs.readFileSync(path.join(OUT_DIR, entry), "utf-8").split("\n")) {
+      for (const line of fs
+        .readFileSync(path.join(OUT_DIR, entry), "utf-8")
+        .split("\n")) {
         const m = line.match(/^OK ([A-Z]{2}:.+)$/);
         if (m) done.add(m[1]);
       }
@@ -57,10 +59,14 @@ function loadDone(): Set<string> {
   return done;
 }
 function appendLog(uf: string, msg: string) {
-  fs.appendFileSync(path.join(OUT_DIR, `${uf}.log`), `${new Date().toISOString()} ${msg}\n`);
+  fs.appendFileSync(
+    path.join(OUT_DIR, `${uf}.log`),
+    `${new Date().toISOString()} ${msg}\n`
+  );
 }
 
-const PROMPT = (r: any) => `Escreva um guia editorial factual e sóbrio sobre o município brasileiro de ${r.name} (${r.stateUf}), com base em dados públicos conhecidos (IBGE, prefeitura, sites oficiais de turismo). Retorne JSON com as secções "tourism" (3 a 5 pontos turísticos reais com nome, descrição curta e ano de fundação/importância quando relevante), "dining" (3 a 5 bares e restaurantes típicos ou conhecidos da cidade), "transport" (3 a 5 itens de transporte público/rodoviária/terminal) e "climate" (clima da região com classificação de Köppen correta para a cidade, temperatura média anual, precipitação e estações). Textos em pt-BR, sem links externos, sem markdown. Se algum dado for incerto, use descrição genérica segura. População de referência: ${r.populationEstimated}.`;
+const PROMPT = (r: any) =>
+  `Escreva um guia editorial factual e sóbrio sobre o município brasileiro de ${r.name} (${r.stateUf}), com base em dados públicos conhecidos (IBGE, prefeitura, sites oficiais de turismo). Retorne JSON com as secções "tourism" (3 a 5 pontos turísticos reais com nome, descrição curta e ano de fundação/importância quando relevante), "dining" (3 a 5 bares e restaurantes típicos ou conhecidos da cidade), "transport" (3 a 5 itens de transporte público/rodoviária/terminal) e "climate" (clima da região com classificação de Köppen correta para a cidade, temperatura média anual, precipitação e estações). Textos em pt-BR, sem links externos, sem markdown. Se algum dado for incerto, use descrição genérica segura. População de referência: ${r.populationEstimated}.`;
 
 const SCHEMA = {
   type: "object",
@@ -73,7 +79,10 @@ const SCHEMA = {
           type: "array",
           items: {
             type: "object",
-            properties: { name: { type: "string" }, description: { type: "string" } },
+            properties: {
+              name: { type: "string" },
+              description: { type: "string" },
+            },
             required: ["name", "description"],
             additionalProperties: false,
           },
@@ -91,7 +100,10 @@ const SCHEMA = {
           type: "array",
           items: {
             type: "object",
-            properties: { name: { type: "string" }, description: { type: "string" } },
+            properties: {
+              name: { type: "string" },
+              description: { type: "string" },
+            },
             required: ["name", "description"],
             additionalProperties: false,
           },
@@ -109,7 +121,10 @@ const SCHEMA = {
           type: "array",
           items: {
             type: "object",
-            properties: { name: { type: "string" }, description: { type: "string" } },
+            properties: {
+              name: { type: "string" },
+              description: { type: "string" },
+            },
             required: ["name", "description"],
             additionalProperties: false,
           },
@@ -128,7 +143,10 @@ const SCHEMA = {
           type: "array",
           items: {
             type: "object",
-            properties: { label: { type: "string" }, value: { type: "string" } },
+            properties: {
+              label: { type: "string" },
+              value: { type: "string" },
+            },
             required: ["label", "value"],
             additionalProperties: false,
           },
@@ -152,9 +170,9 @@ async function fetchPending(uf: string) {
        INNER JOIN states s ON s.ibgeCode = m.stateIbgeCode
        WHERE s.uf = ?
        ORDER BY m.name ASC`,
-      [uf.toUpperCase()],
+      [uf.toUpperCase()]
     );
-    return (rows as any[]).map((r) => ({
+    return (rows as any[]).map(r => ({
       ibgeCode: r.ibgeCode,
       name: r.name,
       slug: r.slug,
@@ -172,16 +190,18 @@ async function fetchPending(uf: string) {
 async function main() {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL ausente");
   const args = process.argv.slice(2);
-  const ufArg = args.find((a) => a.startsWith("--uf="))?.split("=")[1];
+  const ufArg = args.find(a => a.startsWith("--uf="))?.split("=")[1];
   if (!ufArg) throw new Error("usar --uf=<UF>");
   const uf = ufArg.toLowerCase();
   const done = loadDone();
 
   const file = path.join(OUT_DIR, `${uf}.json`);
-  const catalog = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf-8")) : {};
+  const catalog = fs.existsSync(file)
+    ? JSON.parse(fs.readFileSync(file, "utf-8"))
+    : {};
 
   const all = await fetchPending(uf);
-  const work = all.filter((r) => {
+  const work = all.filter(r => {
     const key = `${r.stateUf}:${r.slug}`;
     if (done.has(key) && catalog[key]?.tourism?.items?.length) return false;
     return true;
@@ -198,7 +218,8 @@ async function main() {
   let quotaWaits = 0;
 
   const chunks: any[][] = [];
-  for (let i = 0; i < work.length; i += CONC) chunks.push(work.slice(i, i + CONC));
+  for (let i = 0; i < work.length; i += CONC)
+    chunks.push(work.slice(i, i + CONC));
 
   for (const batch of chunks) {
     const results = await Promise.all(
@@ -210,21 +231,39 @@ async function main() {
             const res = (await invokeLLM({
               model: "gpt-5-nano",
               messages: [
-                { role: "system", content: "Você escreve guias editoriais factuais e sóbrios sobre municípios brasileiros, retornando JSON estruturado." },
+                {
+                  role: "system",
+                  content:
+                    "Você escreve guias editoriais factuais e sóbrios sobre municípios brasileiros, retornando JSON estruturado.",
+                },
                 { role: "user", content: PROMPT(r) },
               ],
-              response_format: { type: "json_schema", json_schema: { name: "locality_tabs", strict: true, schema: SCHEMA } },
+              response_format: {
+                type: "json_schema",
+                json_schema: {
+                  name: "locality_tabs",
+                  strict: true,
+                  schema: SCHEMA,
+                },
+              },
             })) as any;
             const content = res?.choices?.[0]?.message?.content;
             if (!content) throw new Error("resposta vazia");
-            const parsed = JSON.parse(typeof content === "string" ? content : String(content));
+            const parsed = JSON.parse(
+              typeof content === "string" ? content : String(content)
+            );
             for (const sec of ["tourism", "dining", "transport"]) {
-              if (parsed[sec]?.intro) parsed[sec].intro = cleanArtifacts(parsed[sec].intro);
-              if (parsed[sec]?.closing) parsed[sec].closing = cleanArtifacts(parsed[sec].closing);
-              for (const item of parsed[sec]?.items ?? []) item.description = cleanArtifacts(item.description ?? "");
+              if (parsed[sec]?.intro)
+                parsed[sec].intro = cleanArtifacts(parsed[sec].intro);
+              if (parsed[sec]?.closing)
+                parsed[sec].closing = cleanArtifacts(parsed[sec].closing);
+              for (const item of parsed[sec]?.items ?? [])
+                item.description = cleanArtifacts(item.description ?? "");
             }
-            if (parsed.climate?.intro) parsed.climate.intro = cleanArtifacts(parsed.climate.intro);
-            if (parsed.climate?.body) parsed.climate.body = cleanArtifacts(parsed.climate.body);
+            if (parsed.climate?.intro)
+              parsed.climate.intro = cleanArtifacts(parsed.climate.intro);
+            if (parsed.climate?.body)
+              parsed.climate.body = cleanArtifacts(parsed.climate.body);
             for (const d of parsed.climate?.details ?? []) {
               d.label = cleanArtifacts(d.label);
               d.value = cleanArtifacts(d.value);
@@ -239,9 +278,18 @@ async function main() {
               population: r.populationEstimated,
               reviewedOn: REVIEWED_ON,
             };
-            for (const item of catalog[key].tourism.items) item.mapHref = MAP_SEARCH(`${item.name}, ${r.name}, ${r.stateUf}`);
-            for (const item of catalog[key].dining.items) item.mapHref = MAP_SEARCH(`${item.name}, ${r.name}, ${r.stateUf}`);
-            for (const item of catalog[key].transport.items) item.mapHref = MAP_SEARCH(`${item.name}, ${r.name}, ${r.stateUf}`);
+            for (const item of catalog[key].tourism.items)
+              item.mapHref = MAP_SEARCH(
+                `${item.name}, ${r.name}, ${r.stateUf}`
+              );
+            for (const item of catalog[key].dining.items)
+              item.mapHref = MAP_SEARCH(
+                `${item.name}, ${r.name}, ${r.stateUf}`
+              );
+            for (const item of catalog[key].transport.items)
+              item.mapHref = MAP_SEARCH(
+                `${item.name}, ${r.name}, ${r.stateUf}`
+              );
             fs.writeFileSync(file, JSON.stringify(catalog, null, 2) + "\n");
             appendLog(uf, `OK ${key}`);
             return { key, ok: true };
@@ -250,28 +298,33 @@ async function main() {
             const isQuota = /412|usage exhausted|quota/i.test(msg);
             appendLog(uf, `FAIL ${key}: ${msg.slice(0, 120)}`);
             if (isQuota) return { key, ok: false, quota: true };
-            if (attempt === MAX_PER_FAIL - 1) return { key, ok: false, quota: false };
-            await new Promise((res) => setTimeout(res, 3000 * (attempt + 1)));
+            if (attempt === MAX_PER_FAIL - 1)
+              return { key, ok: false, quota: false };
+            await new Promise(res => setTimeout(res, 3000 * (attempt + 1)));
           }
         }
         return { key, ok: false, quota: false };
-      }),
+      })
     );
     for (const res of results) {
       if (res.ok) completed++;
       else failed++;
     }
-    const quotaHit = results.some((r) => r.quota);
+    const quotaHit = results.some(r => r.quota);
     if (quotaHit && quotaWaits < MAX_QUOTA_WAITS) {
       quotaWaits++;
-      console.log(`[${uf}] quota esgotada; aguardando ${QUOTA_WAIT_MS / 60000} min (${quotaWaits}/${MAX_QUOTA_WAITS})...`);
-      await new Promise((res) => setTimeout(res, QUOTA_WAIT_MS));
+      console.log(
+        `[${uf}] quota esgotada; aguardando ${QUOTA_WAIT_MS / 60000} min (${quotaWaits}/${MAX_QUOTA_WAITS})...`
+      );
+      await new Promise(res => setTimeout(res, QUOTA_WAIT_MS));
     }
   }
-  console.log(`[${uf}] Concluído. ${completed} fichas geradas, ${failed} falhas.`);
+  console.log(
+    `[${uf}] Concluído. ${completed} fichas geradas, ${failed} falhas.`
+  );
 }
 
-main().catch((e) => {
+main().catch(e => {
   console.error(e);
   process.exit(1);
 });

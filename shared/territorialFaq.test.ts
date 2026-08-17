@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { buildMunicipalityFaq, buildStateFaq, faqPageJsonLd } from "./territorialFaq";
+import {
+  buildMunicipalityFaq,
+  buildStateFaq,
+  faqPageJsonLd,
+} from "./territorialFaq";
 
 describe("FAQs territoriais", () => {
   it("cria dez perguntas dinâmicas para cada página de estado", () => {
@@ -8,17 +12,23 @@ describe("FAQs territoriais", () => {
       uf: "SP",
       cityCount: 645,
       ddds: [
-        { code: "11", cityCount: 39, sampleCities: ["São Paulo", "Guarulhos", "Osasco"] },
+        {
+          code: "11",
+          cityCount: 39,
+          sampleCities: ["São Paulo", "Guarulhos", "Osasco"],
+        },
         { code: "12", cityCount: 49, sampleCities: ["São José dos Campos"] },
       ],
     });
 
     expect(faqs).toHaveLength(10);
-    expect(faqs.map(faq => faq.question)).toEqual(expect.arrayContaining([
-      "Qual é o DDD de São Paulo?",
-      "Como ligar de outro estado para São Paulo?",
-      "Qual é a diferença entre DDD e DDI em São Paulo?",
-    ]));
+    expect(faqs.map(faq => faq.question)).toEqual(
+      expect.arrayContaining([
+        "Qual é o DDD de São Paulo?",
+        "Como ligar de outro estado para São Paulo?",
+        "Qual é a diferença entre DDD e DDI em São Paulo?",
+      ])
+    );
     expect(faqs.map(faq => faq.answer).join(" ")).toContain("11, 12");
   });
 
@@ -31,12 +41,14 @@ describe("FAQs territoriais", () => {
     });
 
     expect(faqs).toHaveLength(10);
-    expect(faqs.map(faq => faq.question)).toEqual(expect.arrayContaining([
-      "Qual é o DDD de São Paulo?",
-      "Como ligar para São Paulo de outro estado?",
-      "Como formatar um número de telefone de São Paulo?",
-      "O DDD de São Paulo identifica a operadora do número?",
-    ]));
+    expect(faqs.map(faq => faq.question)).toEqual(
+      expect.arrayContaining([
+        "Qual é o DDD de São Paulo?",
+        "Como ligar para São Paulo de outro estado?",
+        "Como formatar um número de telefone de São Paulo?",
+        "O DDD de São Paulo identifica a operadora do número?",
+      ])
+    );
     expect(faqs.map(faq => faq.answer).join(" ")).toContain("DDD 11");
   });
 

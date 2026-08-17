@@ -6,23 +6,23 @@ O DDD Brasil deve responder a uma dúvida territorial concreta com informação 
 
 > A unidade de publicação é uma entidade territorial ou de telefonia real, e não uma combinação artificial de termos de pesquisa.
 
-| Entidade | URL canónica | Intenção principal | Fonte-base | Estado de indexação |
-|---|---|---|---|---|
-| Portal | `/` | Encontrar um DDD ou município | Base territorial | Indexável |
-| Estado | `/estados/{uf}` | Explorar DDDs e municípios de uma UF | IBGE + base de DDD | Indexável |
-| Município | `/cidades/{uf}/{slug}` | Identificar o DDD e o contexto local | IBGE + base de DDD | Indexável |
-| DDD | `/ddd/{codigo}` | Ver área de numeração, estados e cidades | Base de DDD | Indexável |
-| Guia temático | `/guias/{slug}` | Responder a uma dúvida de telefonia | Conteúdo editorial revisto | Indexável |
-| Busca/filtro | `/?q={consulta}` | Consulta transitória | Base territorial | `noindex`, canónica para `/` |
+| Entidade      | URL canónica           | Intenção principal                       | Fonte-base                 | Estado de indexação          |
+| ------------- | ---------------------- | ---------------------------------------- | -------------------------- | ---------------------------- |
+| Portal        | `/`                    | Encontrar um DDD ou município            | Base territorial           | Indexável                    |
+| Estado        | `/estados/{uf}`        | Explorar DDDs e municípios de uma UF     | IBGE + base de DDD         | Indexável                    |
+| Município     | `/cidades/{uf}/{slug}` | Identificar o DDD e o contexto local     | IBGE + base de DDD         | Indexável                    |
+| DDD           | `/ddd/{codigo}`        | Ver área de numeração, estados e cidades | Base de DDD                | Indexável                    |
+| Guia temático | `/guias/{slug}`        | Responder a uma dúvida de telefonia      | Conteúdo editorial revisto | Indexável                    |
+| Busca/filtro  | `/?q={consulta}`       | Consulta transitória                     | Base territorial           | `noindex`, canónica para `/` |
 
 ## 2. Camadas de dados
 
-| Camada | Dados | Regra de qualidade |
-|---|---|---|
-| Núcleo territorial | Código IBGE, município, UF, região, coordenadas, fuso e DDD | Importação reexecutável, código IBGE como chave, validação de cobertura e duplicidade |
-| Estatística | População estimada e ano de referência; área quando disponível | Valor, data de referência e URL da fonte armazenados junto com o dado |
+| Camada             | Dados                                                          | Regra de qualidade                                                                                               |
+| ------------------ | -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Núcleo territorial | Código IBGE, município, UF, região, coordenadas, fuso e DDD    | Importação reexecutável, código IBGE como chave, validação de cobertura e duplicidade                            |
+| Estatística        | População estimada e ano de referência; área quando disponível | Valor, data de referência e URL da fonte armazenados junto com o dado                                            |
 | Contexto editorial | Clima, pontos de interesse, síntese local e notas de telefonia | Apenas conteúdos com fonte, revisão e data de atualização; ausência de dado não é substituída por texto genérico |
-| Descoberta | Títulos, descrições, ligações, breadcrumbs, sitemap e JSON-LD | Derivados da entidade e auditáveis por rota |
+| Descoberta         | Títulos, descrições, ligações, breadcrumbs, sitemap e JSON-LD  | Derivados da entidade e auditáveis por rota                                                                      |
 
 O dado populacional deve usar a tabela municipal do IBGE com ano de referência explícito. Dados de clima e turismo são editoriais: serão apresentados apenas quando houver fonte municipal, estadual, federal ou técnica disponível para aquela entidade.
 
@@ -66,13 +66,13 @@ O sitemap será segmentado por entidade: índice principal, estados, DDDs, munic
 
 ## 5. Dados estruturados por página
 
-| Página | JSON-LD principal | JSON-LD complementar |
-|---|---|---|
-| Portal | `WebSite` + `Organization` | `SearchAction` apenas se a ação de pesquisa for funcional e pública |
-| Estado | `WebPage` | `BreadcrumbList`, `ItemList`, `Dataset` para a coleção territorial visível |
-| Município | `WebPage` + `Place` | `BreadcrumbList`, `Dataset`; `FAQPage` apenas para FAQ visível e específica |
-| DDD | `WebPage` | `BreadcrumbList`, `ItemList`, `Dataset`; `FAQPage` quando aplicável |
-| Guia | `Article` | `BreadcrumbList`, `FAQPage` se a secção estiver visível |
+| Página    | JSON-LD principal          | JSON-LD complementar                                                        |
+| --------- | -------------------------- | --------------------------------------------------------------------------- |
+| Portal    | `WebSite` + `Organization` | `SearchAction` apenas se a ação de pesquisa for funcional e pública         |
+| Estado    | `WebPage`                  | `BreadcrumbList`, `ItemList`, `Dataset` para a coleção territorial visível  |
+| Município | `WebPage` + `Place`        | `BreadcrumbList`, `Dataset`; `FAQPage` apenas para FAQ visível e específica |
+| DDD       | `WebPage`                  | `BreadcrumbList`, `ItemList`, `Dataset`; `FAQPage` quando aplicável         |
+| Guia      | `Article`                  | `BreadcrumbList`, `FAQPage` se a secção estiver visível                     |
 
 Os dados estruturados descrevem apenas conteúdo visível, com valores provenientes da base ou de fontes declaradas. A marcação `FAQPage` não será usada como promessa de resultado aprimorado: a política atual do Google já não exibe esse recurso de forma geral, mas o conteúdo de perguntas continua útil para visitantes.[1]
 

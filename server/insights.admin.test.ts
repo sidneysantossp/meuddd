@@ -26,15 +26,29 @@ describe("insights administrativos", () => {
     const list = vi.spyOn(db, "listUnmatchedSearches").mockResolvedValue([]);
     const caller = appRouter.createCaller(createAdminContext());
 
-    await expect(caller.insights.unmatchedSearches({ limit: 50, minVolume: 5, periodDays: 30 })).resolves.toEqual([]);
-    expect(list).toHaveBeenCalledWith({ limit: 50, minVolume: 5, periodDays: 30 });
+    await expect(
+      caller.insights.unmatchedSearches({
+        limit: 50,
+        minVolume: 5,
+        periodDays: 30,
+      })
+    ).resolves.toEqual([]);
+    expect(list).toHaveBeenCalledWith({
+      limit: 50,
+      minVolume: 5,
+      periodDays: 30,
+    });
   });
 
   it("permite à equipa administradora aprovar uma sugestão moderável", async () => {
-    const review = vi.spyOn(db, "reviewLocalitySuggestion").mockResolvedValue({ updated: true });
+    const review = vi
+      .spyOn(db, "reviewLocalitySuggestion")
+      .mockResolvedValue({ updated: true });
     const caller = appRouter.createCaller(createAdminContext());
 
-    await expect(caller.insights.reviewLocalitySuggestion({ id: 42, status: "approved" })).resolves.toEqual({ updated: true });
+    await expect(
+      caller.insights.reviewLocalitySuggestion({ id: 42, status: "approved" })
+    ).resolves.toEqual({ updated: true });
     expect(review).toHaveBeenCalledWith({ id: 42, status: "approved" });
   });
 
@@ -42,7 +56,19 @@ describe("insights administrativos", () => {
     const list = vi.spyOn(db, "listLocalitySuggestions").mockResolvedValue([]);
     const caller = appRouter.createCaller(createAdminContext());
 
-    await expect(caller.insights.localitySuggestions({ status: "pending", uf: "PE", topic: "mobility", limit: 25 })).resolves.toEqual([]);
-    expect(list).toHaveBeenCalledWith({ status: "pending", uf: "PE", topic: "mobility", limit: 25 });
+    await expect(
+      caller.insights.localitySuggestions({
+        status: "pending",
+        uf: "PE",
+        topic: "mobility",
+        limit: 25,
+      })
+    ).resolves.toEqual([]);
+    expect(list).toHaveBeenCalledWith({
+      status: "pending",
+      uf: "PE",
+      topic: "mobility",
+      limit: 25,
+    });
   });
 });

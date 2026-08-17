@@ -8,8 +8,28 @@ vi.mock("sonner", () => ({ toast: { success: toastSuccess, error: vi.fn() } }));
 vi.mock("@/lib/trpc", () => ({
   trpc: {
     ddd: {
-      states: { useQuery: () => ({ data: [{ uf: "SP", name: "São Paulo" }, { uf: "RJ", name: "Rio de Janeiro" }], isLoading: false, isError: false }) },
-      byState: { useQuery: ({ uf }: { uf: string }) => ({ data: { ddds: uf === "RJ" ? [{ code: "21", cityCount: 24 }] : [{ code: "11", cityCount: 64 }] }, isLoading: false, isError: false }) },
+      states: {
+        useQuery: () => ({
+          data: [
+            { uf: "SP", name: "São Paulo" },
+            { uf: "RJ", name: "Rio de Janeiro" },
+          ],
+          isLoading: false,
+          isError: false,
+        }),
+      },
+      byState: {
+        useQuery: ({ uf }: { uf: string }) => ({
+          data: {
+            ddds:
+              uf === "RJ"
+                ? [{ code: "21", cityCount: 24 }]
+                : [{ code: "11", cityCount: 64 }],
+          },
+          isLoading: false,
+          isError: false,
+        }),
+      },
     },
   },
 }));
@@ -22,7 +42,10 @@ describe("página do gerador", () => {
   const writeText = vi.fn();
 
   beforeEach(() => {
-    Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText } });
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: { writeText },
+    });
     writeText.mockResolvedValue(undefined);
     container = document.createElement("div");
     document.body.appendChild(container);
@@ -38,25 +61,52 @@ describe("página do gerador", () => {
   });
 
   it("permite selecionar UF/DDD, gerar, copiar e explica que o resultado é uma simulação", async () => {
-    const stateSelect = container.querySelector('[aria-label="Selecionar estado"]') as HTMLSelectElement;
+    const stateSelect = container.querySelector(
+      '[aria-label="Selecionar estado"]'
+    ) as HTMLSelectElement;
     await act(async () => {
       stateSelect.value = "RJ";
       stateSelect.dispatchEvent(new Event("change", { bubbles: true }));
     });
-    expect((container.querySelector('[aria-label="Selecionar DDD"]') as HTMLSelectElement).value).toBe("21");
+    expect(
+      (
+        container.querySelector(
+          '[aria-label="Selecionar DDD"]'
+        ) as HTMLSelectElement
+      ).value
+    ).toBe("21");
 
     vi.spyOn(Math, "random").mockReturnValue(0.12345678);
-    await act(async () => { (Array.from(container.querySelectorAll("button")).find(button => button.textContent?.includes("Gerar novo")) as HTMLButtonElement).click(); });
-    expect(container.querySelector("output")?.textContent).toBe("(21) 91234-5678");
+    await act(async () => {
+      (
+        Array.from(container.querySelectorAll("button")).find(button =>
+          button.textContent?.includes("Gerar novo")
+        ) as HTMLButtonElement
+      ).click();
+    });
+    expect(container.querySelector("output")?.textContent).toBe(
+      "(21) 91234-5678"
+    );
 
-    await act(async () => { (Array.from(container.querySelectorAll("button")).find(button => button.textContent?.includes("Copiar")) as HTMLButtonElement).click(); await Promise.resolve(); });
+    await act(async () => {
+      (
+        Array.from(container.querySelectorAll("button")).find(button =>
+          button.textContent?.includes("Copiar")
+        ) as HTMLButtonElement
+      ).click();
+      await Promise.resolve();
+    });
     expect(writeText).toHaveBeenCalledWith("(21) 91234-5678");
     expect(toastSuccess).toHaveBeenCalledWith("Número simulado copiado.");
     expect(container.textContent).toContain("Não confirma se o número existe");
     expect(container.textContent).toContain("vínculo com números reais");
-    expect(container.textContent).toContain("Como funciona o gerador de número de telefone?");
+    expect(container.textContent).toContain(
+      "Como funciona o gerador de número de telefone?"
+    );
     expect(container.textContent).toContain("O que o simulador não faz");
     expect(container.textContent).toContain("Para testes, não para contactos.");
-    expect(container.querySelector('a[href="/ddd/63"]')?.textContent).toContain("DDD 63");
+    expect(container.querySelector('a[href="/ddd/63"]')?.textContent).toContain(
+      "DDD 63"
+    );
   });
 });

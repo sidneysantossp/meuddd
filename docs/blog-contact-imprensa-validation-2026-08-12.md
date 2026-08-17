@@ -8,9 +8,9 @@ A página de imprensa apresenta o kit de marca descarregável, orientações de 
 
 ## Evidência de validação
 
-| Área | Desktop | Telemóvel | Resultado |
-| --- | --- | --- | --- |
-| Homepage e secção Blog | Validado | Validado | Cartões, CTA e footer visíveis após o conteúdo principal. |
-| Página de imprensa | Validado | Validado | Kit de marca, estatísticas e CTAs reorganizam-se sem sobreposição. |
-| Página de contacto | Validado | Validado | Campos empilham-se de forma legível, com botão de validação acessível. |
-| Produção SSR | Validado | N/A | Build Vercel e contrato SSR verificaram Blog, imprensa, contacto, footer e rotas públicas. |
+| Área                   | Desktop  | Telemóvel | Resultado                                                                                  |
+| ---------------------- | -------- | --------- | ------------------------------------------------------------------------------------------ |
+| Homepage e secção Blog | Validado | Validado  | Cartões, CTA e footer visíveis após o conteúdo principal.                                  |
+| Página de imprensa     | Validado | Validado  | Kit de marca, estatísticas e CTAs reorganizam-se sem sobreposição.                         |
+| Página de contacto     | Validado | Validado  | Campos empilham-se de forma legível, com botão de validação acessível.                     |
+| Produção SSR           | Validado | N/A       | Build Vercel e contrato SSR verificaram Blog, imprensa, contacto, footer e rotas públicas. |

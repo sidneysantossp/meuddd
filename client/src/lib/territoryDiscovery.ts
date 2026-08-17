@@ -1,4 +1,11 @@
-export type LocationStatus = "idle" | "requesting" | "resolving" | "resolved" | "denied" | "unsupported" | "error";
+export type LocationStatus =
+  | "idle"
+  | "requesting"
+  | "resolving"
+  | "resolved"
+  | "denied"
+  | "unsupported"
+  | "error";
 export type LocationPrecision = "approximate" | "exact";
 
 export type NearbyTerritorySuggestion = {
@@ -21,7 +28,10 @@ export function territorySelection(territory: NearbyTerritorySuggestion) {
   };
 }
 
-export function coordinatesForPrecision(coordinates: { latitude: number; longitude: number }, precision: LocationPrecision) {
+export function coordinatesForPrecision(
+  coordinates: { latitude: number; longitude: number },
+  precision: LocationPrecision
+) {
   if (precision === "exact") return coordinates;
   const grid = 0.25;
   return {
@@ -38,7 +48,14 @@ export function precisionDescription(precision: LocationPrecision) {
 
 export function geolocationFailure(code: number) {
   if (code === 1) {
-    return { status: "denied" as const, label: "Permissão não concedida. Você pode pesquisar por cidade, UF ou DDD." };
+    return {
+      status: "denied" as const,
+      label:
+        "Permissão não concedida. Você pode pesquisar por cidade, UF ou DDD.",
+    };
   }
-  return { status: "error" as const, label: "Não foi possível obter a localização agora." };
+  return {
+    status: "error" as const,
+    label: "Não foi possível obter a localização agora.",
+  };
 }

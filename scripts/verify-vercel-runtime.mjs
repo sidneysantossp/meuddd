@@ -7,13 +7,22 @@ import { resolve } from "node:path";
 process.env.VERCEL ||= "1";
 
 const handlerBundle = await readFile(resolve("dist/vercel/handler.js"), "utf8");
-const forbiddenRuntimeReferences = [/\b(?:vite|rollup|lightningcss)\b/i, /server\/_core\/vite\.ts/i];
-const forbiddenReference = forbiddenRuntimeReferences.find(pattern => pattern.test(handlerBundle));
+const forbiddenRuntimeReferences = [
+  /\b(?:vite|rollup|lightningcss)\b/i,
+  /server\/_core\/vite\.ts/i,
+];
+const forbiddenReference = forbiddenRuntimeReferences.find(pattern =>
+  pattern.test(handlerBundle)
+);
 if (forbiddenReference) {
-  throw new Error(`O bundle serverless não pode conter dependências de desenvolvimento: ${forbiddenReference}.`);
+  throw new Error(
+    `O bundle serverless não pode conter dependências de desenvolvimento: ${forbiddenReference}.`
+  );
 }
 
-const { default: app } = await import(new URL("../dist/vercel/handler.js", import.meta.url));
+const { default: app } = await import(
+  new URL("../dist/vercel/handler.js", import.meta.url)
+);
 const server = createServer(app);
 
 await new Promise((resolve, reject) => {
@@ -24,7 +33,9 @@ await new Promise((resolve, reject) => {
 try {
   const address = server.address();
   if (!address || typeof address === "string") {
-    throw new Error("A função Vercel não abriu uma porta de verificação local.");
+    throw new Error(
+      "A função Vercel não abriu uma porta de verificação local."
+    );
   }
 
   const response = await fetch(`http://127.0.0.1:${address.port}/robots.txt`);
@@ -33,13 +44,19 @@ try {
   const homeHtml = await homeResponse.text();
   const dddResponse = await fetch(`http://127.0.0.1:${address.port}/ddd/11`);
   const dddHtml = await dddResponse.text();
-  const stateResponse = await fetch(`http://127.0.0.1:${address.port}/estado/sp`);
+  const stateResponse = await fetch(
+    `http://127.0.0.1:${address.port}/estado/sp`
+  );
   const stateHtml = await stateResponse.text();
-  const municipalityResponse = await fetch(`http://127.0.0.1:${address.port}/cidade/sp/sao-paulo`);
+  const municipalityResponse = await fetch(
+    `http://127.0.0.1:${address.port}/cidade/sp/sao-paulo`
+  );
   const municipalityHtml = await municipalityResponse.text();
   const guidesResponse = await fetch(`http://127.0.0.1:${address.port}/guias`);
   const guidesHtml = await guidesResponse.text();
-  const capitalsResponse = await fetch(`http://127.0.0.1:${address.port}/capitais`);
+  const capitalsResponse = await fetch(
+    `http://127.0.0.1:${address.port}/capitais`
+  );
   const capitalsHtml = await capitalsResponse.text();
   const institutionalRoutes = [
     ["/sobre", "Sobre o Meu DDD"],
@@ -49,92 +66,194 @@ try {
     ["/lgpd", "LGPD e transparência"],
     ["/imprensa", "Informações para imprensa"],
   ];
-  const institutionalPages = await Promise.all(institutionalRoutes.map(async ([path, marker]) => {
-    const pageResponse = await fetch(`http://127.0.0.1:${address.port}${path}`);
-    return { path, marker, status: pageResponse.status, ok: pageResponse.ok, html: await pageResponse.text() };
-  }));
-  const sitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/ddds.xml`);
+  const institutionalPages = await Promise.all(
+    institutionalRoutes.map(async ([path, marker]) => {
+      const pageResponse = await fetch(
+        `http://127.0.0.1:${address.port}${path}`
+      );
+      return {
+        path,
+        marker,
+        status: pageResponse.status,
+        ok: pageResponse.ok,
+        html: await pageResponse.text(),
+      };
+    })
+  );
+  const sitemapResponse = await fetch(
+    `http://127.0.0.1:${address.port}/sitemaps/ddds.xml`
+  );
   const sitemapXml = await sitemapResponse.text();
   const feedResponse = await fetch(`http://127.0.0.1:${address.port}/feed.xml`);
   const feedXml = await feedResponse.text();
-  const regionsSitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/regioes.xml`);
+  const regionsSitemapResponse = await fetch(
+    `http://127.0.0.1:${address.port}/sitemaps/regioes.xml`
+  );
   const regionsSitemapXml = await regionsSitemapResponse.text();
-  const imagesSitemapResponse = await fetch(`http://127.0.0.1:${address.port}/sitemaps/imagens.xml`);
+  const imagesSitemapResponse = await fetch(
+    `http://127.0.0.1:${address.port}/sitemaps/imagens.xml`
+  );
   const imagesSitemapXml = await imagesSitemapResponse.text();
-  const indexNowKeyResponse = await fetch(`http://127.0.0.1:${address.port}/282752bf-8a95-4e8f-8504-771d734634f1.txt`);
+  const indexNowKeyResponse = await fetch(
+    `http://127.0.0.1:${address.port}/282752bf-8a95-4e8f-8504-771d734634f1.txt`
+  );
   const indexNowKey = await indexNowKeyResponse.text();
 
   if (!response.ok || !robots.includes("Sitemap:")) {
-    throw new Error(`O entrypoint Vercel não respondeu robots.txt corretamente (HTTP ${response.status}).`);
+    throw new Error(
+      `O entrypoint Vercel não respondeu robots.txt corretamente (HTTP ${response.status}).`
+    );
   }
 
   const prefetchRuntimeError = "createSsrPrefetch is not defined";
   if (homeResponse.status >= 500 || homeHtml.includes(prefetchRuntimeError)) {
-    throw new Error(`A rota SSR principal falhou em runtime (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
+    throw new Error(
+      `A rota SSR principal falhou em runtime (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`
+    );
   }
 
-  if (!homeResponse.ok || !homeHtml.includes('id="root"') || !homeHtml.includes("window.__RQ_STATE__") || !homeHtml.includes("Blog") || !homeHtml.includes("Ver mais conteúdo") || homeHtml.includes("<!--app-html-->")) {
-    throw new Error(`O entrypoint Vercel não renderizou SSR na rota principal (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`);
+  if (
+    !homeResponse.ok ||
+    !homeHtml.includes('id="root"') ||
+    !homeHtml.includes("window.__RQ_STATE__") ||
+    !homeHtml.includes("Blog") ||
+    !homeHtml.includes("Ver mais conteúdo") ||
+    homeHtml.includes("<!--app-html-->")
+  ) {
+    throw new Error(
+      `O entrypoint Vercel não renderizou SSR na rota principal (HTTP ${homeResponse.status}): ${homeHtml.slice(0, 600)}`
+    );
   }
 
-  if (!dddResponse.ok || !dddHtml.includes("DDD 11: cidades e estados atendidos") || !dddHtml.includes('id="public-mobile-navigation"') || !dddHtml.includes("Copiar link")) {
-    throw new Error(`A reserva territorial não renderizou a rota programática /ddd/11 (HTTP ${dddResponse.status}): ${dddHtml.slice(0, 600)}`);
+  if (
+    !dddResponse.ok ||
+    !dddHtml.includes("DDD 11: cidades e estados atendidos") ||
+    !dddHtml.includes('id="public-mobile-navigation"') ||
+    !dddHtml.includes("Copiar link")
+  ) {
+    throw new Error(
+      `A reserva territorial não renderizou a rota programática /ddd/11 (HTTP ${dddResponse.status}): ${dddHtml.slice(0, 600)}`
+    );
   }
 
   if (!stateResponse.ok || !stateHtml.includes("DDD de São Paulo")) {
-    throw new Error(`A reserva territorial não renderizou a rota programática /estado/sp (HTTP ${stateResponse.status}): ${stateHtml.slice(0, 600)}`);
+    throw new Error(
+      `A reserva territorial não renderizou a rota programática /estado/sp (HTTP ${stateResponse.status}): ${stateHtml.slice(0, 600)}`
+    );
   }
 
-  if (!municipalityResponse.ok || !municipalityHtml.includes("DDD de São Paulo (SP) | Meu DDD") || !municipalityHtml.includes('id="public-mobile-navigation"') || !municipalityHtml.includes("Copiar link")) {
-    throw new Error(`A reserva territorial não renderizou a rota programática /cidade/sp/sao-paulo (HTTP ${municipalityResponse.status}): ${municipalityHtml.slice(0, 600)}`);
+  if (
+    !municipalityResponse.ok ||
+    !municipalityHtml.includes("DDD de São Paulo (SP) | Meu DDD") ||
+    !municipalityHtml.includes('id="public-mobile-navigation"') ||
+    !municipalityHtml.includes("Copiar link")
+  ) {
+    throw new Error(
+      `A reserva territorial não renderizou a rota programática /cidade/sp/sao-paulo (HTTP ${municipalityResponse.status}): ${municipalityHtml.slice(0, 600)}`
+    );
   }
 
-  if (!guidesResponse.ok || !guidesHtml.includes("Guias de telefonia") || !guidesHtml.includes('id="public-mobile-navigation"')) {
-    throw new Error(`A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`);
+  if (
+    !guidesResponse.ok ||
+    !guidesHtml.includes("Guias de telefonia") ||
+    !guidesHtml.includes('id="public-mobile-navigation"')
+  ) {
+    throw new Error(
+      `A rota editorial /guias não renderizou a navbar pública via SSR (HTTP ${guidesResponse.status}): ${guidesHtml.slice(0, 600)}`
+    );
   }
 
-  if (!capitalsResponse.ok || !capitalsHtml.includes("DDD das capitais do Brasil") || !capitalsHtml.includes("Florianópolis") || !capitalsHtml.includes('id="public-mobile-navigation"')) {
-    throw new Error(`A rota /capitais não renderizou o índice territorial via SSR (HTTP ${capitalsResponse.status}): ${capitalsHtml.slice(0, 600)}`);
+  if (
+    !capitalsResponse.ok ||
+    !capitalsHtml.includes("DDD das capitais do Brasil") ||
+    !capitalsHtml.includes("Florianópolis") ||
+    !capitalsHtml.includes('id="public-mobile-navigation"')
+  ) {
+    throw new Error(
+      `A rota /capitais não renderizou o índice territorial via SSR (HTTP ${capitalsResponse.status}): ${capitalsHtml.slice(0, 600)}`
+    );
   }
 
-  const invalidInstitutionalPage = institutionalPages.find(page => !page.ok || !page.html.includes(page.marker) || !page.html.includes("© 2026 Meu DDD"));
+  const invalidInstitutionalPage = institutionalPages.find(
+    page =>
+      !page.ok ||
+      !page.html.includes(page.marker) ||
+      !page.html.includes("© 2026 Meu DDD")
+  );
   if (invalidInstitutionalPage) {
-    throw new Error(`A rota institucional ${invalidInstitutionalPage.path} não renderizou o conteúdo ou footer via SSR (HTTP ${invalidInstitutionalPage.status}): ${invalidInstitutionalPage.html.slice(0, 600)}`);
+    throw new Error(
+      `A rota institucional ${invalidInstitutionalPage.path} não renderizou o conteúdo ou footer via SSR (HTTP ${invalidInstitutionalPage.status}): ${invalidInstitutionalPage.html.slice(0, 600)}`
+    );
   }
 
   const contactPage = institutionalPages.find(page => page.path === "/contato");
-  if (!contactPage?.html.includes("Validar mensagem") || !contactPage.html.includes("Como podemos ajudar?")) {
-    throw new Error(`A página de contacto não renderizou o formulário validável via SSR: ${contactPage?.html.slice(0, 600)}`);
+  if (
+    !contactPage?.html.includes("Validar mensagem") ||
+    !contactPage.html.includes("Como podemos ajudar?")
+  ) {
+    throw new Error(
+      `A página de contacto não renderizou o formulário validável via SSR: ${contactPage?.html.slice(0, 600)}`
+    );
   }
 
   const pressPage = institutionalPages.find(page => page.path === "/imprensa");
-  if (!pressPage?.html.includes("Kit de marca") || !pressPage.html.includes("Em números") || !pressPage.html.includes("meu-ddd-kit-de-marca-2026")) {
-    throw new Error(`A página de imprensa não renderizou kit de marca e estatísticas via SSR: ${pressPage?.html.slice(0, 600)}`);
+  if (
+    !pressPage?.html.includes("Kit de marca") ||
+    !pressPage.html.includes("Em números") ||
+    !pressPage.html.includes("meu-ddd-kit-de-marca-2026")
+  ) {
+    throw new Error(
+      `A página de imprensa não renderizou kit de marca e estatísticas via SSR: ${pressPage?.html.slice(0, 600)}`
+    );
   }
 
   if (!sitemapResponse.ok || !sitemapXml.includes("/ddd/11")) {
-    throw new Error(`A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`);
+    throw new Error(
+      `A reserva territorial não gerou o sitemap de DDDs (HTTP ${sitemapResponse.status}): ${sitemapXml.slice(0, 600)}`
+    );
   }
 
-  if (!feedResponse.ok || !feedXml.includes("<rss") || !feedXml.includes("Blog Meu DDD")) {
-    throw new Error(`O feed RSS não respondeu corretamente (HTTP ${feedResponse.status}): ${feedXml.slice(0, 600)}`);
+  if (
+    !feedResponse.ok ||
+    !feedXml.includes("<rss") ||
+    !feedXml.includes("Blog Meu DDD")
+  ) {
+    throw new Error(
+      `O feed RSS não respondeu corretamente (HTTP ${feedResponse.status}): ${feedXml.slice(0, 600)}`
+    );
   }
 
-  if (!regionsSitemapResponse.ok || !regionsSitemapXml.includes("/regiao/sudeste")) {
-    throw new Error(`O sitemap de regiões não incluiu os hubs territoriais (HTTP ${regionsSitemapResponse.status}): ${regionsSitemapXml.slice(0, 600)}`);
+  if (
+    !regionsSitemapResponse.ok ||
+    !regionsSitemapXml.includes("/regiao/sudeste")
+  ) {
+    throw new Error(
+      `O sitemap de regiões não incluiu os hubs territoriais (HTTP ${regionsSitemapResponse.status}): ${regionsSitemapXml.slice(0, 600)}`
+    );
   }
 
   if (!imagesSitemapResponse.ok || !imagesSitemapXml.includes("xmlns:image")) {
-    throw new Error(`O sitemap de imagens não respondeu no formato esperado (HTTP ${imagesSitemapResponse.status}): ${imagesSitemapXml.slice(0, 600)}`);
+    throw new Error(
+      `O sitemap de imagens não respondeu no formato esperado (HTTP ${imagesSitemapResponse.status}): ${imagesSitemapXml.slice(0, 600)}`
+    );
   }
 
-  if (!indexNowKeyResponse.ok || indexNowKey.trim() !== "282752bf-8a95-4e8f-8504-771d734634f1") {
-    throw new Error(`A chave pública IndexNow não foi publicada corretamente (HTTP ${indexNowKeyResponse.status}).`);
+  if (
+    !indexNowKeyResponse.ok ||
+    indexNowKey.trim() !== "282752bf-8a95-4e8f-8504-771d734634f1"
+  ) {
+    throw new Error(
+      `A chave pública IndexNow não foi publicada corretamente (HTTP ${indexNowKeyResponse.status}).`
+    );
   }
 
-  console.log("Entrada Vercel carregada com sucesso; robots.txt, RSS, sitemaps, chave IndexNow, Blog, contacto, imprensa, rotas DDD/estado/município/guias/capitais/institucionais, footer e partilha responderam HTTP 200.");
+  console.log(
+    "Entrada Vercel carregada com sucesso; robots.txt, RSS, sitemaps, chave IndexNow, Blog, contacto, imprensa, rotas DDD/estado/município/guias/capitais/institucionais, footer e partilha responderam HTTP 200."
+  );
 } finally {
-  await new Promise((resolve, reject) => server.close(error => (error ? reject(error) : resolve())));
+  await new Promise((resolve, reject) =>
+    server.close(error => (error ? reject(error) : resolve()))
+  );
 }
 
 // O cliente de dados pode manter sockets ociosos no processo local; a função Vercel não abre este servidor auxiliar.

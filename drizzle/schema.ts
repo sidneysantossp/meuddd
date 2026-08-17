@@ -1,4 +1,14 @@
-import { boolean, decimal, index, int, mysqlEnum, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import {
+  boolean,
+  decimal,
+  index,
+  int,
+  mysqlEnum,
+  mysqlTable,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -36,7 +46,7 @@ export const states = mysqlTable(
     populationEstimated: int("populationEstimated"),
     populationReferenceYear: int("populationReferenceYear"),
   },
-  table => [index("states_region_idx").on(table.region)],
+  table => [index("states_region_idx").on(table.region)]
 );
 
 /** Catálogo dos 67 códigos nacionais de discagem direta à distância. */
@@ -65,7 +75,7 @@ export const municipalities = mysqlTable(
     index("municipalities_ddd_idx").on(table.ddd),
     index("municipalities_name_idx").on(table.name),
     index("municipalities_state_slug_idx").on(table.stateIbgeCode, table.slug),
-  ],
+  ]
 );
 
 /** Consultas que não encontraram correspondência, agregadas sem identificador pessoal. */
@@ -73,14 +83,16 @@ export const unmatchedSearches = mysqlTable(
   "unmatched_searches",
   {
     id: int("id").autoincrement().primaryKey(),
-    normalizedQuery: varchar("normalizedQuery", { length: 120 }).notNull().unique(),
+    normalizedQuery: varchar("normalizedQuery", { length: 120 })
+      .notNull()
+      .unique(),
     latestQuery: varchar("latestQuery", { length: 120 }).notNull(),
     selectedUf: varchar("selectedUf", { length: 2 }),
     searchCount: int("searchCount").notNull().default(1),
     firstSeenAt: timestamp("firstSeenAt").defaultNow().notNull(),
     lastSeenAt: timestamp("lastSeenAt").defaultNow().onUpdateNow().notNull(),
   },
-  table => [index("unmatched_searches_last_seen_idx").on(table.lastSeenAt)],
+  table => [index("unmatched_searches_last_seen_idx").on(table.lastSeenAt)]
 );
 
 /** Sugestões públicas de actualização, sem IP, contacto ou dados de perfil. */
@@ -91,14 +103,26 @@ export const localitySuggestions = mysqlTable(
     municipalityIbgeCode: int("municipalityIbgeCode").notNull(),
     topic: mysqlEnum("topic", ["mobility", "useful_phone", "other"]).notNull(),
     note: varchar("note", { length: 600 }).notNull(),
-    status: mysqlEnum("status", ["pending", "reviewed", "approved", "dismissed"]).notNull().default("pending"),
+    status: mysqlEnum("status", [
+      "pending",
+      "reviewed",
+      "approved",
+      "dismissed",
+    ])
+      .notNull()
+      .default("pending"),
     createdAt: timestamp("createdAt").defaultNow().notNull(),
     reviewedAt: timestamp("reviewedAt"),
   },
   table => [
-    index("locality_suggestions_municipality_idx").on(table.municipalityIbgeCode),
-    index("locality_suggestions_status_created_idx").on(table.status, table.createdAt),
-  ],
+    index("locality_suggestions_municipality_idx").on(
+      table.municipalityIbgeCode
+    ),
+    index("locality_suggestions_status_created_idx").on(
+      table.status,
+      table.createdAt
+    ),
+  ]
 );
 
 export type State = typeof states.$inferSelect;

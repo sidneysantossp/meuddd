@@ -24,7 +24,15 @@ describe("secção Blog em destaque", () => {
     expect(container.querySelectorAll("article")).toHaveLength(3);
     expect(container.querySelectorAll("img")).toHaveLength(3);
     expect(Array.from(container.querySelectorAll("time"))).toHaveLength(3);
-    expect(Array.from(container.querySelectorAll("a")).filter(link => link.textContent?.includes("Ler mais"))).toHaveLength(3);
-    expect(Array.from(container.querySelectorAll("a")).find(link => link.textContent?.includes("Ver mais conteúdo"))?.getAttribute("href")).toBe("/guias");
+    expect(
+      Array.from(container.querySelectorAll("a")).filter(link =>
+        link.textContent?.includes("Ler mais")
+      )
+    ).toHaveLength(3);
+    expect(
+      Array.from(container.querySelectorAll("a"))
+        .find(link => link.textContent?.includes("Ver mais conteúdo"))
+        ?.getAttribute("href")
+    ).toBe("/guias");
   });
 });

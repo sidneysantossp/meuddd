@@ -15,14 +15,14 @@ O objetivo da plataforma é transformar-se no principal recurso de busca de DDD 
 
 ## 2. O que foi publicado para aceleração da indexação
 
-| Artefacto | URL | Função |
-|---|---|---|
-| Sitemap index | `https://www.meuddd.com.br/sitemap.xml` | Índice principal apontado pelo `robots.txt` (`Sitemap: …/sitemap.xml`) |
-| Sitemaps por tipo | `/sitemaps/estados.xml`, `ddds.xml`, `cidades-{uf}.xml` (27), `guias.xml`, `paginas.xml`, `regioes.xml`, `imagens.xml` | Fracionamento que permite ao Google rastrear cada cluster separadamente e medir cobertura por tipo |
-| Sitemap de imagens | `/sitemaps/imagens.xml` | Indexação das ilustrações dos guias editoriais |
-| Dados estruturados | Article, CollectionPage, FAQPage, BreadcrumbList, City, WebSite, SoftwareApplication (por rota, SSR) | Rich results e entendimento semântico por bots e plataformas de busca generativa |
-| llms.txt | `/llms.txt` | Descoberta por crawlers de modelos generativos (ChatGPT, Gemini, Perplexity, Copilot) |
-| Redirecionamentos | `/blog → /guias` (301-style client + canonical) | Consolidação de autoridade, evita páginas 404 |
+| Artefacto          | URL                                                                                                                    | Função                                                                                             |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Sitemap index      | `https://www.meuddd.com.br/sitemap.xml`                                                                                | Índice principal apontado pelo `robots.txt` (`Sitemap: …/sitemap.xml`)                             |
+| Sitemaps por tipo  | `/sitemaps/estados.xml`, `ddds.xml`, `cidades-{uf}.xml` (27), `guias.xml`, `paginas.xml`, `regioes.xml`, `imagens.xml` | Fracionamento que permite ao Google rastrear cada cluster separadamente e medir cobertura por tipo |
+| Sitemap de imagens | `/sitemaps/imagens.xml`                                                                                                | Indexação das ilustrações dos guias editoriais                                                     |
+| Dados estruturados | Article, CollectionPage, FAQPage, BreadcrumbList, City, WebSite, SoftwareApplication (por rota, SSR)                   | Rich results e entendimento semântico por bots e plataformas de busca generativa                   |
+| llms.txt           | `/llms.txt`                                                                                                            | Descoberta por crawlers de modelos generativos (ChatGPT, Gemini, Perplexity, Copilot)              |
+| Redirecionamentos  | `/blog → /guias` (301-style client + canonical)                                                                        | Consolidação de autoridade, evita páginas 404                                                      |
 
 ## 3. Protocolo de medição (a executar 1 vez por semana)
 
@@ -50,13 +50,13 @@ O histórico do site mostra tráfego relevante em março de 2026 seguido de per�
 
 ## 5. Indicadores-alvo (dashboard semanal)
 
-| Indicador | Meta 30 dias | Meta 90 dias |
-|---|---|---|
-| URLs válidas indexadas (todas) | 1.500 | 5.900+ |
-| URLs de cidades indexadas | 800 | 5.570 |
-| Cliques totais | +100% vs. baseline atual | recuperação do pico de março |
-| Impressões em rich results (FAQ/Article) | presença confirmada | 20% das páginas com rich result |
-| Páginas rastreadas sem indexação | <30% do total rastreado | <5% |
+| Indicador                                | Meta 30 dias             | Meta 90 dias                    |
+| ---------------------------------------- | ------------------------ | ------------------------------- |
+| URLs válidas indexadas (todas)           | 1.500                    | 5.900+                          |
+| URLs de cidades indexadas                | 800                      | 5.570                           |
+| Cliques totais                           | +100% vs. baseline atual | recuperação do pico de março    |
+| Impressões em rich results (FAQ/Article) | presença confirmada      | 20% das páginas com rich result |
+| Páginas rastreadas sem indexação         | <30% do total rastreado  | <5%                             |
 
 ## 6. Avisos operacionais
 

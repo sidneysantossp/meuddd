@@ -10,12 +10,18 @@ import { composeSsrHtml } from "./ssrHtml";
 
 const projectRoot = path.resolve(import.meta.dirname, "../..");
 const clientTemplate = path.resolve(projectRoot, "client", "index.html");
-const originFor = (req: express.Request) => `${req.protocol}://${req.get("host") ?? "localhost"}`;
+const originFor = (req: express.Request) =>
+  `${req.protocol}://${req.get("host") ?? "localhost"}`;
 
 export async function setupVite(app: Express, server: Server) {
   const resolvedViteConfig =
     typeof viteConfig === "function"
-      ? await viteConfig({ command: "serve", mode: "development", isSsrBuild: false, isPreview: false })
+      ? await viteConfig({
+          command: "serve",
+          mode: "development",
+          isSsrBuild: false,
+          isPreview: false,
+        })
       : viteConfig;
   const serverOptions = {
     middlewareMode: true,
@@ -44,7 +50,18 @@ export async function setupVite(app: Express, server: Server) {
       const page = await vite.transformIndexHtml(url, template);
       const { render } = await vite.ssrLoadModule("/src/entry-server.tsx");
       const rendered = await render(url, createSsrPrefetch());
-      res.status(rendered.head.notFound ? 404 : 200).set({ "Content-Type": "text/html" }).end(composeSsrHtml(page, rendered.html, rendered.dehydratedState, rendered.head, originFor(req)));
+      res
+        .status(rendered.head.notFound ? 404 : 200)
+        .set({ "Content-Type": "text/html" })
+        .end(
+          composeSsrHtml(
+            page,
+            rendered.html,
+            rendered.dehydratedState,
+            rendered.head,
+            originFor(req)
+          )
+        );
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);

@@ -25,7 +25,22 @@ describe("guias editoriais relacionados", () => {
     const images = new Set(editorialGuides.map(g => g.image));
     expect(images.size).toBeGreaterThan(0);
     for (const image of images) {
-      expect(["/assets/guia-o-que-e-ddd.jpg", "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg", "/assets/guia-como-ligar-para-outro-estado.jpg", "/assets/guia-como-ligar-de-celular-para-fixo.jpg", "/assets/guia-como-ligar-para-celular-em-outro-estado.jpg", "/assets/guia-codigo-de-operadora-csp.jpg", "/assets/guia-como-ligar-para-outro-pais-ddi.jpg", "/assets/guia-diferenca-entre-ddd-e-ddi.jpg", "/assets/guia-portabilidade-numerica.jpg", "/assets/guia-numeros-de-emergencia.jpg", "/assets/guia-numero-fixo-tem-quantos-digitos.jpg", "/assets/guia-numero-de-celular-tem-quantos-digitos.jpg"].includes(image)).toBe(true);
+      expect(
+        [
+          "/assets/guia-o-que-e-ddd.jpg",
+          "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg",
+          "/assets/guia-como-ligar-para-outro-estado.jpg",
+          "/assets/guia-como-ligar-de-celular-para-fixo.jpg",
+          "/assets/guia-como-ligar-para-celular-em-outro-estado.jpg",
+          "/assets/guia-codigo-de-operadora-csp.jpg",
+          "/assets/guia-como-ligar-para-outro-pais-ddi.jpg",
+          "/assets/guia-diferenca-entre-ddd-e-ddi.jpg",
+          "/assets/guia-portabilidade-numerica.jpg",
+          "/assets/guia-numeros-de-emergencia.jpg",
+          "/assets/guia-numero-fixo-tem-quantos-digitos.jpg",
+          "/assets/guia-numero-de-celular-tem-quantos-digitos.jpg",
+        ].includes(image)
+      ).toBe(true);
     }
   });
 });

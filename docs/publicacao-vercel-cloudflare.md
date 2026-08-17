@@ -14,15 +14,15 @@ Remova qualquer valor manual em **Output Directory**, sobretudo `dist` ou `dist/
 
 Defina na Vercel, sem os expor no repositório, os valores necessários para os ambientes Preview e Production:
 
-| Variável | Finalidade |
-|---|---|
-| `DATABASE_URL` | Acesso à base de dados territorial e às funcionalidades administrativas. |
-| `JWT_SECRET` | Assinatura das sessões. |
-| `VITE_APP_ID` | Identificador da integração de autenticação. |
-| `OAUTH_SERVER_URL` | Serviço de autenticação usado pelo projeto. |
-| `VITE_OAUTH_PORTAL_URL` | Portal de autenticação usado no cliente. |
-| `OWNER_OPEN_ID` | Identificador do proprietário para as permissões administrativas. |
-| `BUILT_IN_FORGE_API_URL` e `BUILT_IN_FORGE_API_KEY` | Serviços de infraestrutura usados pelo servidor, quando aplicável. |
+| Variável                                            | Finalidade                                                               |
+| --------------------------------------------------- | ------------------------------------------------------------------------ |
+| `DATABASE_URL`                                      | Acesso à base de dados territorial e às funcionalidades administrativas. |
+| `JWT_SECRET`                                        | Assinatura das sessões.                                                  |
+| `VITE_APP_ID`                                       | Identificador da integração de autenticação.                             |
+| `OAUTH_SERVER_URL`                                  | Serviço de autenticação usado pelo projeto.                              |
+| `VITE_OAUTH_PORTAL_URL`                             | Portal de autenticação usado no cliente.                                 |
+| `OWNER_OPEN_ID`                                     | Identificador do proprietário para as permissões administrativas.        |
+| `BUILT_IN_FORGE_API_URL` e `BUILT_IN_FORGE_API_KEY` | Serviços de infraestrutura usados pelo servidor, quando aplicável.       |
 
 Depois de guardar as variáveis, faça um novo deployment a partir do branch `main`. Valide a página inicial, uma rota municipal, `robots.txt`, `sitemap.xml` e uma consulta por DDD antes de promover a versão para produção.
 

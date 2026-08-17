@@ -47,14 +47,21 @@ export function FaqSection({
 }) {
   const palette = faqThemes[theme];
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const toggle = (index: number) => setOpenIndex(current => (current === index ? null : index));
+  const toggle = (index: number) =>
+    setOpenIndex(current => (current === index ? null : index));
 
   return (
     <section className={palette.section} id={id}>
       <div className="container grid gap-8 py-14 lg:grid-cols-[0.75fr_1.25fr]">
         <div>
-          <div className={`text-[10px] font-bold uppercase tracking-[0.2em] ${palette.eyebrow}`}>{heading}</div>
-          {subheading ? <p className="mt-4 text-sm leading-6 opacity-80">{subheading}</p> : null}
+          <div
+            className={`text-[10px] font-bold uppercase tracking-[0.2em] ${palette.eyebrow}`}
+          >
+            {heading}
+          </div>
+          {subheading ? (
+            <p className="mt-4 text-sm leading-6 opacity-80">{subheading}</p>
+          ) : null}
         </div>
         <div className="grid gap-3" role="presentation">
           {faqs.map((faq, index) => {
@@ -77,8 +84,14 @@ export function FaqSection({
                   >
                     <ChevronDown
                       size={14}
-                      className={isOpen ? palette.chevronOpenIcon : palette.chevron}
-                      style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 220ms cubic-bezier(0.23, 1, 0.32, 1), color 160ms ease" }}
+                      className={
+                        isOpen ? palette.chevronOpenIcon : palette.chevron
+                      }
+                      style={{
+                        transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        transition:
+                          "transform 220ms cubic-bezier(0.23, 1, 0.32, 1), color 160ms ease",
+                      }}
                     />
                   </span>
                 </button>
@@ -92,7 +105,11 @@ export function FaqSection({
                       transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
                       className="overflow-hidden"
                     >
-                      <p className={`px-5 pb-4 text-sm leading-6 ${palette.answerText}`}>{faq.answer}</p>
+                      <p
+                        className={`px-5 pb-4 text-sm leading-6 ${palette.answerText}`}
+                      >
+                        {faq.answer}
+                      </p>
                     </motion.div>
                   ) : null}
                 </AnimatePresence>

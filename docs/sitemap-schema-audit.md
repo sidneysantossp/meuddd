@@ -12,24 +12,24 @@ Embora as perguntas frequentes visíveis continuem úteis para leitores, a docum
 
 ## Estrutura recomendada
 
-| Índice | Conteúdo | Particionamento de escala |
-|---|---|---|
-| `/sitemap.xml` | Índice-raiz, apenas ficheiros filhos | Um índice por tipo de conteúdo |
-| `/sitemaps/estados.xml` | 27 páginas-pilar estaduais | Um único ficheiro |
-| `/sitemaps/ddds.xml` | Páginas de códigos DDD | Um único ficheiro enquanto permanecer abaixo do limite |
-| `/sitemaps/cidades-{uf}.xml` | Páginas municipais | Um ficheiro por UF; dividir novamente por faixa de IBGE acima do limite |
-| `/sitemaps/guias.xml` | Guias e artigos editoriais | Um ficheiro por tipo ou ano quando crescer |
+| Índice                       | Conteúdo                             | Particionamento de escala                                               |
+| ---------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| `/sitemap.xml`               | Índice-raiz, apenas ficheiros filhos | Um índice por tipo de conteúdo                                          |
+| `/sitemaps/estados.xml`      | 27 páginas-pilar estaduais           | Um único ficheiro                                                       |
+| `/sitemaps/ddds.xml`         | Páginas de códigos DDD               | Um único ficheiro enquanto permanecer abaixo do limite                  |
+| `/sitemaps/cidades-{uf}.xml` | Páginas municipais                   | Um ficheiro por UF; dividir novamente por faixa de IBGE acima do limite |
+| `/sitemaps/guias.xml`        | Guias e artigos editoriais           | Um ficheiro por tipo ou ano quando crescer                              |
 
 Cada URL listada deve responder com `200`, incluir `rel=canonical` para si própria, não ter `noindex` e apresentar no HTML inicial o título, o conteúdo principal e o JSON-LD correspondente. Páginas de erro, pesquisa interna e combinações de filtros não entram no sitemap.
 
 ## Marcação recomendada por rota
 
-| Tipo de página | JSON-LD principal | Complementos |
-|---|---|---|
-| Estado | `CollectionPage` ou `WebPage` | `BreadcrumbList`, `ItemList` para DDDs e municípios de destaque, `AdministrativeArea` como entidade territorial |
-| Município | `WebPage` | `BreadcrumbList`, `City` ou `AdministrativeArea`, `GeoCoordinates` e `DefinedTerm` para o DDD |
-| DDD | `DefinedTerm` + `CollectionPage` | `BreadcrumbList`, `ItemList` de municípios e referência aos estados cobertos |
-| Guia editorial | `Article` | `BreadcrumbList`, `Speakable` apenas se o conteúdo atender às condições da propriedade e for validado |
+| Tipo de página | JSON-LD principal                | Complementos                                                                                                    |
+| -------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Estado         | `CollectionPage` ou `WebPage`    | `BreadcrumbList`, `ItemList` para DDDs e municípios de destaque, `AdministrativeArea` como entidade territorial |
+| Município      | `WebPage`                        | `BreadcrumbList`, `City` ou `AdministrativeArea`, `GeoCoordinates` e `DefinedTerm` para o DDD                   |
+| DDD            | `DefinedTerm` + `CollectionPage` | `BreadcrumbList`, `ItemList` de municípios e referência aos estados cobertos                                    |
+| Guia editorial | `Article`                        | `BreadcrumbList`, `Speakable` apenas se o conteúdo atender às condições da propriedade e for validado           |
 
 As entidades devem conter apenas factos visíveis e verificáveis. Para população, clima ou turismo, a página deve conservar fonte, data e período de referência; os mesmos dados podem aparecer no JSON-LD apenas se também estiverem explícitos no conteúdo visível.
 

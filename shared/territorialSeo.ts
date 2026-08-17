@@ -5,13 +5,15 @@ export const officialTerritorialSources = {
     name: "Anatel — Plano de Numeração Brasileiro",
     shortName: "ANATEL",
     url: "https://www.gov.br/anatel/pt-br/regulado/numeracao/plano-de-numeracao-brasileiro",
-    purpose: "Referência para a organização nacional de códigos de área e numeração.",
+    purpose:
+      "Referência para a organização nacional de códigos de área e numeração.",
   },
   ibge: {
     name: "IBGE — Cidades e Estados",
     shortName: "IBGE",
     url: "https://www.ibge.gov.br/cidades-e-estados.html",
-    purpose: "Referência para população estimada, identificação e contexto territorial.",
+    purpose:
+      "Referência para população estimada, identificação e contexto territorial.",
   },
 } as const;
 

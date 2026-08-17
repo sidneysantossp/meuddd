@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { createMobileSubscriber, formatMobileNumber, sanitizeMobileSubscriber } from "./mobileNumber";
+import {
+  createMobileSubscriber,
+  formatMobileNumber,
+  sanitizeMobileSubscriber,
+} from "./mobileNumber";
 
 describe("simulador de número móvel", () => {
   it("normaliza a parte móvel para nove dígitos", () => {

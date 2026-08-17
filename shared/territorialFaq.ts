@@ -9,7 +9,8 @@ type DddCoverage = {
   sampleCities?: string[];
 };
 
-const pluralize = (count: number, singular: string, plural: string) => count === 1 ? singular : plural;
+const pluralize = (count: number, singular: string, plural: string) =>
+  count === 1 ? singular : plural;
 
 const dddList = (ddds: DddCoverage[]) => ddds.map(ddd => ddd.code).join(", ");
 
@@ -21,15 +22,18 @@ export function buildStateFaq(input: {
 }): TerritorialFaq[] {
   const primaryDdd = input.ddds[0];
   const codes = dddList(input.ddds);
-  const primaryCoverage = primaryDdd ? `${primaryDdd.cityCount} ${pluralize(primaryDdd.cityCount, "município", "municípios")}` : "os municípios listados nesta página";
+  const primaryCoverage = primaryDdd
+    ? `${primaryDdd.cityCount} ${pluralize(primaryDdd.cityCount, "município", "municípios")}`
+    : "os municípios listados nesta página";
   const sampleCities = primaryDdd?.sampleCities?.slice(0, 3).join(", ");
 
   return [
     {
       question: `Qual é o DDD de ${input.stateName}?`,
-      answer: input.ddds.length === 1
-        ? `${input.stateName} utiliza o DDD ${primaryDdd?.code}.`
-        : `${input.stateName} possui ${input.ddds.length} códigos de área: ${codes}. Confirme o município de destino antes de ligar.`,
+      answer:
+        input.ddds.length === 1
+          ? `${input.stateName} utiliza o DDD ${primaryDdd?.code}.`
+          : `${input.stateName} possui ${input.ddds.length} códigos de área: ${codes}. Confirme o município de destino antes de ligar.`,
     },
     {
       question: `Quantas cidades usam DDDs em ${input.stateName}?`,
@@ -141,9 +145,13 @@ export function buildDddFaq(input: {
 }): TerritorialFaq[] {
   const coverage = `${input.cityCount} ${pluralize(input.cityCount, "município", "municípios")}`;
   const inStates = input.stateNames.length
-    ? input.stateNames.length === 1 ? `no estado de ${input.stateNames[0]}` : `nos estados de ${input.stateNames.slice(0, -1).join(", ")}${input.stateNames.length > 2 ? "," : ""} ${input.stateNames[input.stateNames.length - 1]}` : "no território nacional"
-  ;
-  const statesText = input.stateNames.length ? ` em ${input.stateNames.join(" e ")}` : "";
+    ? input.stateNames.length === 1
+      ? `no estado de ${input.stateNames[0]}`
+      : `nos estados de ${input.stateNames.slice(0, -1).join(", ")}${input.stateNames.length > 2 ? "," : ""} ${input.stateNames[input.stateNames.length - 1]}`
+    : "no território nacional";
+  const statesText = input.stateNames.length
+    ? ` em ${input.stateNames.join(" e ")}`
+    : "";
 
   return [
     {

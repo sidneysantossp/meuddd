@@ -14,35 +14,35 @@ Na secção **Sitemaps** da propriedade `meuddd.com.br`, submeter `https://www.m
 
 Em **12 de agosto de 2026**, a captura fornecida pelo responsável da propriedade confirmou que a submissão já havia sido feita e que os registos abaixo estavam no estado **Processado**, com última leitura na mesma data. Não foi efetuado um reenvio redundante.
 
-| Sitemap | Estado observado | Páginas encontradas |
-|---|---:|---:|
-| `/sitemap.xml` | Processado | 126 |
-| `/sitemaps/cidades.xml` | Processado | 5.571 |
-| `/sitemaps/ddds.xml` | Processado | 67 |
-| `/sitemaps/estados.xml` | Processado | 27 |
-| `/sitemaps/guias.xml` | Processado | 32 |
+| Sitemap                 | Estado observado | Páginas encontradas |
+| ----------------------- | ---------------: | ------------------: |
+| `/sitemap.xml`          |       Processado |                 126 |
+| `/sitemaps/cidades.xml` |       Processado |               5.571 |
+| `/sitemaps/ddds.xml`    |       Processado |                  67 |
+| `/sitemaps/estados.xml` |       Processado |                  27 |
+| `/sitemaps/guias.xml`   |       Processado |                  32 |
 
 Os inventários adicionais de regiões, institucional, imagens e capitais permanecem publicados no índice. Devem ser acompanhados na leitura seguinte do Search Console, sem necessidade de criar uma nova propriedade ou de adicionar mecanismos de verificação duplicados.
 
-| Artefacto | Objetivo de medição | Sinal a observar |
-|---|---|---|
-| `/sitemap.xml` | Ponto de entrada único da descoberta | Estado de leitura e última data de processamento |
-| Sitemaps territoriais | Cobertura dos pilares de estado, DDD, municípios, regiões e capitais | URLs descobertas e páginas indexadas |
-| Sitemap editorial/institucional | Cobertura de guias, blog e transparência institucional | URLs indexadas e impressões por conteúdo |
-| `/feed.xml` | Descoberta complementar das atualizações do Blog | Presença em rastreamentos externos; não substitui sitemap |
-| Chave IndexNow | Aviso a motores participantes sobre URLs efetivamente alteradas | Resposta da submissão e auditoria de URLs enviadas |
+| Artefacto                       | Objetivo de medição                                                  | Sinal a observar                                          |
+| ------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------- |
+| `/sitemap.xml`                  | Ponto de entrada único da descoberta                                 | Estado de leitura e última data de processamento          |
+| Sitemaps territoriais           | Cobertura dos pilares de estado, DDD, municípios, regiões e capitais | URLs descobertas e páginas indexadas                      |
+| Sitemap editorial/institucional | Cobertura de guias, blog e transparência institucional               | URLs indexadas e impressões por conteúdo                  |
+| `/feed.xml`                     | Descoberta complementar das atualizações do Blog                     | Presença em rastreamentos externos; não substitui sitemap |
+| Chave IndexNow                  | Aviso a motores participantes sobre URLs efetivamente alteradas      | Resposta da submissão e auditoria de URLs enviadas        |
 
 ## Rotina de acompanhamento
 
 Na primeira semana após a submissão, confirmar se o Search Console apresenta o sitemap como lido e se começa a reportar URLs descobertas. É normal que os dados de uma propriedade iniciem a acumulação apenas depois de alguns dias. [1]
 
-| Frequência | Relatório | Leitura recomendada | Ação orientada por evidência |
-|---|---|---|---|
-| Semanal | **Indexação → Páginas** | Motivos de exclusão, páginas rastreadas e indexadas | Corrigir apenas erros reproduzíveis; não forçar indexação em massa |
-| Semanal | **Sitemaps** | Estado, leitura e erros por inventário | Confirmar que cada sitemap segmentado continua acessível em HTTPS |
-| Quinzenal | **Desempenho** | Cliques, impressões, CTR e posição por consulta/página | Identificar clusters de intenção com muitas impressões e CTR baixo |
-| Mensal | **Inspeção de URL** | Páginas-pilar de DDD, estado, município, região e capital | Validar a URL canónica, renderização e última rastreabilidade |
-| Após publicação relevante | Índice + IndexNow | Atualização da URL e receção pelo endpoint | Submeter somente URLs que foram criadas ou alteradas de facto |
+| Frequência                | Relatório               | Leitura recomendada                                       | Ação orientada por evidência                                       |
+| ------------------------- | ----------------------- | --------------------------------------------------------- | ------------------------------------------------------------------ |
+| Semanal                   | **Indexação → Páginas** | Motivos de exclusão, páginas rastreadas e indexadas       | Corrigir apenas erros reproduzíveis; não forçar indexação em massa |
+| Semanal                   | **Sitemaps**            | Estado, leitura e erros por inventário                    | Confirmar que cada sitemap segmentado continua acessível em HTTPS  |
+| Quinzenal                 | **Desempenho**          | Cliques, impressões, CTR e posição por consulta/página    | Identificar clusters de intenção com muitas impressões e CTR baixo |
+| Mensal                    | **Inspeção de URL**     | Páginas-pilar de DDD, estado, município, região e capital | Validar a URL canónica, renderização e última rastreabilidade      |
+| Após publicação relevante | Índice + IndexNow       | Atualização da URL e receção pelo endpoint                | Submeter somente URLs que foram criadas ou alteradas de facto      |
 
 ## Segmentos recomendados
 

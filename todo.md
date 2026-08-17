@@ -206,17 +206,19 @@
 - [x] Validar o download do kit: entrega final 200, pacote íntegro após redirecionamento, regressão automatizada da página de imprensa e tipagem aprovadas; resta a republicação do checkpoint para refletir a correção no domínio publicado.
 
 ## Imagens do blog (produção)
+
 - [x] Diagnosticar imagens quebradas do blog na produção: o proxy manus-storage devolve 500 "Storage proxy not configured" em www.meuddd.com.br (credenciais ausentes no runtime da Vercel). Os ativos de conteúdo passaram a servir-se como ficheiros estáticos em /assets/.
 - [x] Gerar 12 ilustrações editoriais no padrão Atlas Vivo (quota diária do plano excedida para as restantes 7): o-que-e-ddd, como-descobrir-ddd-de-uma-cidade, como-ligar-para-outro-estado, como-ligar-de-celular-para-fixo, como-ligar-para-celular-em-outro-estado, codigo-de-operadora-csp, como-ligar-para-outro-pais-ddi, diferenca-entre-ddd-e-ddi, portabilidade-numerica, numeros-de-emergencia, numero-fixo-tem-quantos-digitos, numero-de-celular-tem-quantos-digitos.
 - [x] Publicar as ilustrações e demais ativos (blog, mark, geojson, kit) como URLs estáticas estáveis em /assets/ (comprimidas: jpg/webp, geojson 31 KB).
 - [x] Adicionar campo image/imageAlt ao catálogo editorial (editorialGuideImages, 19 guias cobertos com fallback) e renderizar hero na página do guia; incluir image no Article JSON-LD do SSR.
-- [x] Substituir as 3 imagens antigas dos cartões do blog por /assets/blog-*.jpg estáticas.
+- [x] Substituir as 3 imagens antigas dos cartões do blog por /assets/blog-\*.jpg estáticas.
 - [x] Corrigir a imagem do NotFound (meu-ddd-mark.svg), o GeoJSON do mapa (brazil-states.geojson simplificado) e o kit de imprensa (/assets/kit-marca-meu-ddd.zip) para ativos estáticos.
 - [x] Adicionar regressões de teste bloqueando chaves manus-storage de ativos de conteúdo (BlogHighlights, InstitutionalPage, editorialGuides).
 - [x] Validar visualmente a home, /guias, /guia/o-que-e-ddd e /guia/numeros-de-emergencia; suíte com 82 testes e TypeScript aprovados.
 - [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica.
 
 ## Google Analytics, llms.txt e proporção texto/HTML
+
 - [x] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas (feito 12/08 — checkpoint 3850c50).
 - [x] Criar /llms.txt na raiz do site (feito 12/08 — checkpoint 3850c50).
 - [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
@@ -224,6 +226,7 @@
 - [x] Validar com testes, screenshots e guardar checkpoint (86 testes verdes, checkpoints 17a77f93 e 615e1aae; geração em massa segue agendada).
 
 ## Fase atual — Tabs editoriais em massa (reconstrução pós-reset do sandbox 2026-08-13)
+
 - [x] shared/localityTabs/types.ts — tipo MunicipalityTabs e LocalityTabsCatalog
 - [x] shared/localityTabs/index.ts — loaders por UF, getMunicipalityTabsSync, getMunicipalityTabsKey, loadMunicipalityTabs, mapPointUrl
 - [x] 27 módulos shared/localityTabs/<uf>.ts vazios (catálogo vazio, TS compila)
@@ -243,19 +246,24 @@
 - [x] Checkpoint + commit GitHub (615e1aa, push github/main)
 
 ## Ajustes visuais homepage (pedido 2026-08-13)
+
 - [x] Remover a numeração dos badges de UF na secção de seleção rápida por UF da home (confirmado visualmente)
 - [x] Secção "Um Atlas para o Dia a Dia" com background verde escuro (confirmado visualmente, contínuo com o footer)
 
 ## Verificação visual (18:27)
+
 Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleção rápida por UF" e secção "Um atlas para o dia a dia" com fundo verde escuro (#143d36) contínuo até à tarja do footer, texto em tons claros (#faf3e5/#b8cec4) e ícone coral. 82 testes verdes, TypeScript sem erros.
+
 - [x] Corrigir o travamento potencial do mapa interativo da homepage: o mapa dependia exclusivamente do IntersectionObserver, que pode nunca disparar (navegadores com quirks, contentores ocultos, scroll abaixo da dobra) e deixava o estado "A carregar mapa dos estados" indefinidamente. Adicionado fallback de 3s que garante o carregamento, timeout de 8s no fetch com erro tratado, indicador de spinner durante o desenho e botão "Tentar novamente" para re-tentativa manual; validado com 82 testes, TypeScript e screenshots desktop/móvel.
 - [x] Monitorizar a retomada da geração em massa das tabs editoriais (agendada para 14/08 06:00 BRT): a quota diária de LLM permaneceu esgotada no dia 13/08 (412 usage exhausted); a tarefa agendada `PW66RMcon4WDl815DcI966` executa diariamente e resume com --only-empty a partir dos logs OK. Cobertura atual: ~24 fichas integradas (AC 2, AL, AM, BA, CE, MA, MG, PA, PB, PR, RN, SC, SE, SP) — a pipeline integra e sanitiza automaticamente na conclusão.
 
 ## Bug reportado 2026-08-13 — links das páginas de DDD
-- [x] Corrigir os links da página de DDD (`/ddd/11` etc.): reproduzido em produção — a navegação client-side para `/cidade/:uf/:slug` colapsava com "An unexpected error occurred" (React minified error #310). Causa raiz confirmada: hooks condicionais em MunicipalityPage.tsx (`useQueryClient` chamado APÓS o early return `if (detail.isLoading)`), que violam as Rules of Hooks entre renders (primeiro render loading → segundo render com hooks extras) na navegação SPA; o SSR direto não reproduzia porque a query já vinha com dados. Correção: mover todos os hooks para antes dos early returns e extrair a secção das tabs editoriais para `MunicipalityTabsSection`, subcomponente com ordem de hooks estável (a query `localityTabs.byMunicipality` é sempre chamada, mantendo o initialData do seed SSR). /estado/* e /regiao/* sempre funcionaram; validado 82 testes + TypeScript.
+
+- [x] Corrigir os links da página de DDD (`/ddd/11` etc.): reproduzido em produção — a navegação client-side para `/cidade/:uf/:slug` colapsava com "An unexpected error occurred" (React minified error #310). Causa raiz confirmada: hooks condicionais em MunicipalityPage.tsx (`useQueryClient` chamado APÓS o early return `if (detail.isLoading)`), que violam as Rules of Hooks entre renders (primeiro render loading → segundo render com hooks extras) na navegação SPA; o SSR direto não reproduzia porque a query já vinha com dados. Correção: mover todos os hooks para antes dos early returns e extrair a secção das tabs editoriais para `MunicipalityTabsSection`, subcomponente com ordem de hooks estável (a query `localityTabs.byMunicipality` é sempre chamada, mantendo o initialData do seed SSR). /estado/_ e /regiao/_ sempre funcionaram; validado 82 testes + TypeScript.
 - [x] Bug (2026-08-13, tabs invisíveis): DIAGNÓSTICO CONCLUÍDO — não é defeito de código: o render cai no fallback apenas para municípios SEM ficha editorial. /cidade/sp/osasco renderiza corretamente as 4 tabs (validado no browser e via curl no SSR); Araçariguama não tem ficha porque a geração em massa parou a ~24 fichas (quota LLM esgotada em 13/08) e ainda não chegou ao SP. O mecanismo de deteção SSR/client funciona; cobertura será resolvida pela retomada automática da geração (14/08 06:00 BRT). Explicado ao utilizador; validado no teste de navegação completo (todas as 4 tabs clicadas em Osasco).
 
 ## Enriquecimento de links internos e externos (pedido 2026-08-13)
+
 - [x] Definir política de links externos: apenas governamentais (gov.br, IBGE, ANATEL) e grandes autoridades (climate-data.org para clima); REMOVER/evitar terceiros fracos (sinart.com.br, rome2rio.com, metrocptm.com.br) nas fichas editoriais novas e existentes — whitelist em shared/externalLinks.ts, sanitizeExternalLinks no integrateTabs + generateTabs (prompt do LLM instruído)
 - [x] Página de município: termo territorial "São Paulo" → link interno /estado/sp (4× no SSR); "população/habitantes" → ibge.gov.br/cidades-e-estados; cada ponto turístico/restaurante → Google Maps com query do local (já vinha); clima → climate-data.org; bodies das tabs com links markdown convertidos por renderMarkdownLinks
 - [x] Página de município: links internos no topo (estado, região Sudeste, DDD 11), cidades vizinhas e cartões de navegação; tabs com links internos via linkRegion
@@ -265,11 +273,13 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Validar: 86 testes, TypeScript; SSR verificado via curl com <a> ibge.gov.br, climate-data.org, anatel.gov.br, osasco.sp.gov.br e 4× link interno /estado/sp — screenshot final e checkpoint pendentes
 
 ## Varredura SEO (pedido 2026-08-13)
+
 - [x] Varredura das páginas principais: meta tags (title/description/og), canonical, JSON-LD, headings, links internos/externos, texto/HTML, performance — script scripts/seo-audit.mts cobriu home, /ddd/11, /ddd/21, /estado/sp, /cidade/sp/osasco, /cidade/sp/aracariguama, /regiao/sudeste, /guia/o-que-e-ddd
 - [x] Implementar as melhorias SEO e de links identificados: og:image genérico (1440x810) em todas as páginas SSR + og:image por artigo nos guias; redirect /blog → /guias com canonical; H1 DDD enriquecido ("DDD {code}: {N} cidades atendidas") com links internos do estado; parágrafo da região com links internos para os estados do hub; canonical e og:description já existiam (varredura falhou a extração por ordem de atributos); corrigido [object Object] no texto do DDD e espaço em falta na região
 - [x] Commit no GitHub e entrega (5cc9177 no github.com/sidneysantossp/meuddd, branch main; código via checkpoint 2d08030 auto-publicado em produção)
 
 ## Oportunidades futuras SEO do relatório (pedido 2026-08-13)
+
 - [x] Sitemap XML fracionado por tipo: /sitemap.xml index dinâmico + /sitemaps/estados.xml, ddds.xml, cidades-{uf}.xml (27), guias.xml, paginas.xml, regioes.xml, imagens.xml — todos com lastmod/changefreq/priority, cache de inventário 1h, tested 86/86
 - [x] Schema BreadcrumbList em todas as páginas principais (já existia: função breadcrumbs() no prefetch SSR — validado por curl)
 - [x] Article JSON-LD nas páginas DDD, estado e cidade (headline, inLanguage pt-BR, author/publisher Organization, about territorial) — validado via curl SSR em /ddd/11, /estado/sp e /cidade/sp/aruja
@@ -278,17 +288,46 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Commit final no GitHub (f8d88c4 → github.com/sidneysantossp/meuddd, main) e entrega
 
 ## Pedido 2026-08-13 (noite)
+
 - [x] Secção FAQ com marcação JSON-LD (FAQPage) nas páginas de DDD: buildDddFaq com 10 perguntas em shared/territorialFaq.ts, conteúdo visível em DddDetail.tsx alinhado com o JSON-LD do SSR (prefetch.ts), FAQPage validado via curl em /ddd/11 e 86 testes verdes
 
 ## Pedido 2026-08-13 (noite)
+
 - [x] Acordeão (collapsible) na secção de FAQ com animação suave e acessibilidade, aplicado em /ddd, /estado e /cidade (FaqSection com framer-motion, aria-expanded, temas claro/escuro; SSR mantém as perguntas visíveis e o FAQPage JSON-LD)
 
 ## Pedido 2026-08-13 (noite)
+
 - [x] Ícone indicador de estado (aberto/fechado) nos itens do acordeão das FAQ: chevron dentro de círculo com fundo que muda de tom (aberto = coral #f06a4d com ícone claro, fechado = fundo suave translúcido) e rotação 180° animada (220ms ease-out), em FaqSection (temas claro/escuro); aplica-se a /ddd, /estado e /cidade. Validados: 86 testes, TypeScript e screenshots.
 
 ## Plano consolidado de keywords — 2026-08-13 (autorizado pelo utilizador: "pode implementar tudo")
+
 - [x] Incluir o nome do estado no H1, <title> e meta description das páginas /ddd/:code (ex.: "DDD 31 é de qual estado? Minas Gerais — 139 cidades | Meu DDD") e headline do Article JSON-LD
 - [x] Adicionar pergunta "Qual estado é o DDD X?" ao banco buildDddFaq (11ª pergunta, HTML visível + FAQPage JSON-LD); validado no SSR de /ddd/31
 - [x] Adicionar H2 "Qual é o DDD de X?" com parágrafo-resposta nas 27 páginas de estado
 - [x] Guia "Qual o DDD da Claro, Vivo e TIM?" (/guia/qual-o-ddd-da-claro-vivo-e-tim) com FAQPage (10 perguntas, SSR validado)
 - [x] Guia de códigos internacionais (/guia/codigos-internacionais-ddi) com tabela (Brasil +55, EUA/Canadá +1, Portugal +351) e FAQPage (10 perguntas, SSR validado)
+
+## Favicon (pedido 2026-08-14)
+
+- [ ] Criar favicon na identidade visual da plataforma (ícone de geolocalização, verde #143d36 / marfim / coral)
+- [ ] Integrar favicon.ico (16/32/48), apple-touch-icon 180 e 512 PWA no client/index.html
+- [ ] Validar no browser, checkpoint, commit GitHub
+
+## Retoma geração em massa das tabs editoriais (pedido 2026-08-15)
+
+- [x] Verificar estado atual do lote resiliente e da quota LLM (lote vivo em PB; quota 412; contagens BD obtidas)
+- [x] Garantir/relançar lote sequencial de 27 UFs com o script resiliente (já em execução — sem duplicação, instância única)
+- [x] Retomar geração: quota 412 mas lote relançado (16/08 09:05 UTC) — script gere backoff sozinho; dedup reinicia em AC (todos com dedup preservado)
+- [ ] Monitorizar progresso até as 27 UFs completas (comparar com contagem de municípios por UF na base de dados)
+- [ ] Executar scripts/integrateTabs.mts e pnpm format/test (80+ testes; TypeScript sem erros)
+- [ ] Screenshot de /cidade/sp/sorocaba com as 4 tabs editoriais e cartão cidade->estado
+- [ ] Criar favicon (quando a quota de imagem repuser) e integrá-lo
+- [ ] Guardar checkpoint descrevendo a conclusão do lote e commit/push para github.com/sidneysantossp/meuddd
+
+## Continuidade (17/08 02:25 UTC)
+
+- [ ] Integrar as 24 fichas editoriais existentes com scripts/integrateTabs.mts (validar sem quebrar a build)
+- [ ] Correr pnpm format, pnpm test e pnpm build após a integração
+- [ ] Sincronizar o GitHub (sidneysantossp/meuddd) com o estado atual
+- [ ] Monitorizar a reposta da quota LLM e retomar a geração das UFs pendentes (MG, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO)
+- [ ] Após a geração concluir as 27 UFs, integrar de novo e guardar checkpoint final

@@ -62,7 +62,10 @@ const loaders: Record<string, () => Promise<LocalityTabsCatalog>> = {
 const cache = new Map<string, LocalityTabsCatalog>();
 
 /** Obter as tabs editoriais de um município (SSR-safe; síncrono quando já em cache). */
-export function getMunicipalityTabsSync(uf: string, slug: string): MunicipalityTabs | undefined {
+export function getMunicipalityTabsSync(
+  uf: string,
+  slug: string
+): MunicipalityTabs | undefined {
   const key = slug.toLowerCase();
   const catalog = cache.get(uf.toLowerCase());
   return catalog?.[key];
@@ -73,7 +76,9 @@ export function getMunicipalityTabsKey(uf: string, slug: string): string {
 }
 
 /** Carregar o catálogo da UF (importa o módulo da UF; cacheia). */
-export async function loadMunicipalityTabs(uf: string): Promise<LocalityTabsCatalog> {
+export async function loadMunicipalityTabs(
+  uf: string
+): Promise<LocalityTabsCatalog> {
   const lower = uf.toLowerCase();
   const cached = cache.get(lower);
   if (cached) return cached;
@@ -85,15 +90,26 @@ export async function loadMunicipalityTabs(uf: string): Promise<LocalityTabsCata
 }
 
 /** Carregar e devolver as tabs de um município específico. */
-export async function getMunicipalityTabs(uf: string, slug: string): Promise<MunicipalityTabs | undefined> {
+export async function getMunicipalityTabs(
+  uf: string,
+  slug: string
+): Promise<MunicipalityTabs | undefined> {
   const catalog = await loadMunicipalityTabs(uf);
   return catalog[getMunicipalityTabsKey(uf, slug)];
 }
 
 /** Link de pesquisa direta no Google Maps com coordenadas reais do ponto. */
-export function mapPointUrl(query: string, latitude?: number | string | null, longitude?: number | string | null): string {
-  const coords = latitude !== null && latitude !== undefined && longitude !== null && longitude !== undefined
-    ? ` ${latitude},${longitude}`
-    : "";
+export function mapPointUrl(
+  query: string,
+  latitude?: number | string | null,
+  longitude?: number | string | null
+): string {
+  const coords =
+    latitude !== null &&
+    latitude !== undefined &&
+    longitude !== null &&
+    longitude !== undefined
+      ? ` ${latitude},${longitude}`
+      : "";
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query + coords)}`;
 }

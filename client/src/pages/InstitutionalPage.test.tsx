@@ -25,7 +25,8 @@ describe("páginas institucionais", () => {
 
     expect(container.textContent).toContain("Kit de marca");
     expect(container.textContent).toContain("Em números");
-    const kitHref = container.querySelector('a[download]')?.getAttribute("href") ?? "";
+    const kitHref =
+      container.querySelector("a[download]")?.getAttribute("href") ?? "";
     expect(kitHref).toContain("/assets/kit-marca-meu-ddd.zip");
     // O proxy manus-storage devolvia HTTP 500 no domínio publicado;
     // a entrega deve usar apenas ativos estáticos servidos pelo próprio site.
@@ -41,7 +42,11 @@ describe("páginas institucionais", () => {
     expect(container.querySelector('input[type="email"]')).toBeTruthy();
     expect(container.querySelector("textarea")).toBeTruthy();
     const form = container.querySelector("form") as HTMLFormElement;
-    act(() => form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true })));
+    act(() =>
+      form.dispatchEvent(
+        new Event("submit", { bubbles: true, cancelable: true })
+      )
+    );
 
     expect(container.textContent).toContain("Informe o seu nome.");
     expect(container.textContent).toContain("Informe um email válido.");

@@ -20,9 +20,7 @@
       "compositePrimaryKeys": {
         "ddd_codes_code": {
           "name": "ddd_codes_code",
-          "columns": [
-            "code"
-          ]
+          "columns": ["code"]
         }
       },
       "uniqueConstraints": {},
@@ -86,17 +84,12 @@
       "indexes": {
         "locality_suggestions_municipality_idx": {
           "name": "locality_suggestions_municipality_idx",
-          "columns": [
-            "municipalityIbgeCode"
-          ],
+          "columns": ["municipalityIbgeCode"],
           "isUnique": false
         },
         "locality_suggestions_status_created_idx": {
           "name": "locality_suggestions_status_created_idx",
-          "columns": [
-            "status",
-            "createdAt"
-          ],
+          "columns": ["status", "createdAt"],
           "isUnique": false
         }
       },
@@ -104,9 +97,7 @@
       "compositePrimaryKeys": {
         "locality_suggestions_id": {
           "name": "locality_suggestions_id",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "uniqueConstraints": {},
@@ -197,31 +188,22 @@
       "indexes": {
         "municipalities_state_idx": {
           "name": "municipalities_state_idx",
-          "columns": [
-            "stateIbgeCode"
-          ],
+          "columns": ["stateIbgeCode"],
           "isUnique": false
         },
         "municipalities_ddd_idx": {
           "name": "municipalities_ddd_idx",
-          "columns": [
-            "ddd"
-          ],
+          "columns": ["ddd"],
           "isUnique": false
         },
         "municipalities_name_idx": {
           "name": "municipalities_name_idx",
-          "columns": [
-            "name"
-          ],
+          "columns": ["name"],
           "isUnique": false
         },
         "municipalities_state_slug_idx": {
           "name": "municipalities_state_slug_idx",
-          "columns": [
-            "stateIbgeCode",
-            "slug"
-          ],
+          "columns": ["stateIbgeCode", "slug"],
           "isUnique": false
         }
       },
@@ -229,9 +211,7 @@
       "compositePrimaryKeys": {
         "municipalities_ibgeCode": {
           "name": "municipalities_ibgeCode",
-          "columns": [
-            "ibgeCode"
-          ]
+          "columns": ["ibgeCode"]
         }
       },
       "uniqueConstraints": {},
@@ -286,9 +266,7 @@
       "indexes": {
         "states_region_idx": {
           "name": "states_region_idx",
-          "columns": [
-            "region"
-          ],
+          "columns": ["region"],
           "isUnique": false
         }
       },
@@ -296,17 +274,13 @@
       "compositePrimaryKeys": {
         "states_ibgeCode": {
           "name": "states_ibgeCode",
-          "columns": [
-            "ibgeCode"
-          ]
+          "columns": ["ibgeCode"]
         }
       },
       "uniqueConstraints": {
         "states_uf_unique": {
           "name": "states_uf_unique",
-          "columns": [
-            "uf"
-          ]
+          "columns": ["uf"]
         }
       },
       "checkConstraint": {}
@@ -371,9 +345,7 @@
       "indexes": {
         "unmatched_searches_last_seen_idx": {
           "name": "unmatched_searches_last_seen_idx",
-          "columns": [
-            "lastSeenAt"
-          ],
+          "columns": ["lastSeenAt"],
           "isUnique": false
         }
       },
@@ -381,17 +353,13 @@
       "compositePrimaryKeys": {
         "unmatched_searches_id": {
           "name": "unmatched_searches_id",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "uniqueConstraints": {
         "unmatched_searches_normalizedQuery_unique": {
           "name": "unmatched_searches_normalizedQuery_unique",
-          "columns": [
-            "normalizedQuery"
-          ]
+          "columns": ["normalizedQuery"]
         }
       },
       "checkConstraint": {}
@@ -473,17 +441,13 @@
       "compositePrimaryKeys": {
         "users_id": {
           "name": "users_id",
-          "columns": [
-            "id"
-          ]
+          "columns": ["id"]
         }
       },
       "uniqueConstraints": {
         "users_openId_unique": {
           "name": "users_openId_unique",
-          "columns": [
-            "openId"
-          ]
+          "columns": ["openId"]
         }
       },
       "checkConstraint": {}

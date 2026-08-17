@@ -3,147 +3,174 @@
 // @ts-nocheck
 import type { MunicipalityTabs } from "./types";
 export const catalog: Record<string, MunicipalityTabs> = {
-  "codo": {
-    "climate": {
-      "body": "Codó apresenta clima tropical de savana (Aw), com chuvas concentradas no início do ano e seca no meio do ano. A climatologia local indica chuvas variando de 231 mm a 321 mm nos meses mais chuvosos (jan-fev-mar-abr) e quedas acentuadas na seca (junho a agosto), com chuvas muito baixas em julho e agosto. As temperaturas são elevadas ao longo do ano, com máximas que costumam ficar na casa dos 33–34 °C. Em termos de padrão regional, o Maranhão interior, onde Codó está situado, exibe esse regime tropical sazonal típico da região Nordeste interior, distinto do litoral mais úmido. (climatempo.com.br)",
-      "details": [
+  codo: {
+    climate: {
+      body: "Codó apresenta clima tropical de savana (Aw), com chuvas concentradas no início do ano e seca no meio do ano. A climatologia local indica chuvas variando de 231 mm a 321 mm nos meses mais chuvosos (jan-fev-mar-abr) e quedas acentuadas na seca (junho a agosto), com chuvas muito baixas em julho e agosto. As temperaturas são elevadas ao longo do ano, com máximas que costumam ficar na casa dos 33–34 °C. Em termos de padrão regional, o Maranhão interior, onde Codó está situado, exibe esse regime tropical sazonal típico da região Nordeste interior, distinto do litoral mais úmido. (climatempo.com.br)",
+      details: [
         {
-          "label": "Classificação Köppen",
-          "value": "Aw (tropical savana) com estação seca no inverno do hemisfério sul",
+          label: "Classificação Köppen",
+          value:
+            "Aw (tropical savana) com estação seca no inverno do hemisfério sul",
         },
         {
-          "label": "Médias mensais de chuva (exemplo)",
-          "value": "Jan 231 mm; Fev 259 mm; Mar 321 mm; Abr 261 mm; Mai 127 mm; Jun 31 mm; Jul 13 mm; Ago 5 mm; Set 8 mm; Out 20 mm; Nov 51 mm; Dez 119 mm",
+          label: "Médias mensais de chuva (exemplo)",
+          value:
+            "Jan 231 mm; Fev 259 mm; Mar 321 mm; Abr 261 mm; Mai 127 mm; Jun 31 mm; Jul 13 mm; Ago 5 mm; Set 8 mm; Out 20 mm; Nov 51 mm; Dez 119 mm",
         },
         {
-          "label": "Fontes",
-          "value": "Climatologia de Codó (médias históricas) e referências de classificação Köppen para a região",
+          label: "Fontes",
+          value:
+            "Climatologia de Codó (médias históricas) e referências de classificação Köppen para a região",
         },
         {
-          "label": "Observação regional",
-          "value": "O padrão Aw está alinhado ao interior nordestino, com verão chuvoso e inverno seco; para Codó, dados locais de climatologia comprovam o regime sazonal.",
+          label: "Observação regional",
+          value:
+            "O padrão Aw está alinhado ao interior nordestino, com verão chuvoso e inverno seco; para Codó, dados locais de climatologia comprovam o regime sazonal.",
         },
       ],
-      "intro": "Codó é município maranhense do Nordeste brasileiro, com população estimada de 118.283 habitantes (2025) e área de 4.361,6 km². Situado no interior do estado, o município convive com a influência de rios da região do Itapecuru e a paisagem típica da região dos Cocais, com a cultura afro-brasileira presente de forma marcante na vida pública e religiosa. A seguir, guia sobre transporte, infraestrutura, patrimônio público, clima e pontos de interesse que ajudam a situar a cidade de forma objetiva e verificável.",
-      "source": {
-        "label": "Climate-Data.org",
-        "href": "https://pt.climate-data.org/america-do-sul/brasil/ma/codo/",
+      intro:
+        "Codó é município maranhense do Nordeste brasileiro, com população estimada de 118.283 habitantes (2025) e área de 4.361,6 km². Situado no interior do estado, o município convive com a influência de rios da região do Itapecuru e a paisagem típica da região dos Cocais, com a cultura afro-brasileira presente de forma marcante na vida pública e religiosa. A seguir, guia sobre transporte, infraestrutura, patrimônio público, clima e pontos de interesse que ajudam a situar a cidade de forma objetiva e verificável.",
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/ma/codo/",
       },
     },
-    "dining": {
-      "closing": "Para o visitante, priorize espaços públicos como praças, mercados locais e a programação cultural da cidade.",
-      "intro": "A alimentação de Codó segue o padrão da região amazônica/maçônica nordestina, com pratos simples que destacam peixes de rios locais, milho, mandioca e frutos da região. A cidade também mantém tradições culturais afro-brasileiras que influenciam a culinária local em feiras públicas e mercados municipais, sem depender de cadeias privadas de grande porte. ",
-      "items": [
+    dining: {
+      closing:
+        "Para o visitante, priorize espaços públicos como praças, mercados locais e a programação cultural da cidade.",
+      intro:
+        "A alimentação de Codó segue o padrão da região amazônica/maçônica nordestina, com pratos simples que destacam peixes de rios locais, milho, mandioca e frutos da região. A cidade também mantém tradições culturais afro-brasileiras que influenciam a culinária local em feiras públicas e mercados municipais, sem depender de cadeias privadas de grande porte. ",
+      items: [
         {
-          "description": "Prato típico",
-          "kind": "Prato regional simples (peixes de rio e carboidratos típicos)",
-          "name": "peixe assado/moquecas regionais",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=peixe%20assado%2Fmoquecas%20regionais%2C%20Cod%C3%B3%2C%20MA",
+          description: "Prato típico",
+          kind: "Prato regional simples (peixes de rio e carboidratos típicos)",
+          name: "peixe assado/moquecas regionais",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=peixe%20assado%2Fmoquecas%20regionais%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Mercado",
-          "kind": "Mercado Municipal",
-          "name": "feiras locais de produtos regionais",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=feiras%20locais%20de%20produtos%20regionais%2C%20Cod%C3%B3%2C%20MA",
+          description: "Mercado",
+          kind: "Mercado Municipal",
+          name: "feiras locais de produtos regionais",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=feiras%20locais%20de%20produtos%20regionais%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Mercado público",
-          "kind": "Mercado público",
-          "name": "produtos frescos e artesanato local",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=produtos%20frescos%20e%20artesanato%20local%2C%20Cod%C3%B3%2C%20MA",
+          description: "Mercado público",
+          kind: "Mercado público",
+          name: "produtos frescos e artesanato local",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=produtos%20frescos%20e%20artesanato%20local%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Mercados e feiras locais",
-          "kind": "Mercado público/Feira regional",
-          "name": "Pontos de venda de produtos agrícolas e artesanato",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pontos%20de%20venda%20de%20produtos%20agr%C3%ADcolas%20e%20artesanato%2C%20Cod%C3%B3%2C%20MA",
+          description: "Mercados e feiras locais",
+          kind: "Mercado público/Feira regional",
+          name: "Pontos de venda de produtos agrícolas e artesanato",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pontos%20de%20venda%20de%20produtos%20agr%C3%ADcolas%20e%20artesanato%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Observação",
-          "kind": "Mercado público",
-          "name": "Sem anúncios de estabelecimentos privados específicos e com foco em espaços públicos",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sem%20an%C3%BAncios%20de%20estabelecimentos%20privados%20espec%C3%ADficos%20e%20com%20foco%20em%20espa%C3%A7os%20p%C3%BAblicos%2C%20Cod%C3%B3%2C%20MA",
-        },
-      ],
-    },
-    "tourism": {
-      "closing": "Planeje visitas a espaços públicos centrais e observe a presença de manifestações culturais da cidade.",
-      "intro": "Codó oferece espaços públicos históricos e uma expressão cultural marcada pela presença de terreiros afro-brasileiros. A cidade mantém praças públicas de referência, bem como um patrimônio ferroviário que remete à sua história de escoamento de mercadorias na região.",
-      "items": [
-        {
-          "description": "Praça da Estação Ferroviária",
-          "name": "Praça da Estação Ferroviária (antiga estação de Codó, hoje espaço cívico/cultural)",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20da%20Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%20(antiga%20esta%C3%A7%C3%A3o%20de%20Cod%C3%B3%2C%20hoje%20espa%C3%A7o%20c%C3%ADvico%2Fcultural)%2C%20Cod%C3%B3%2C%20MA",
-        },
-        {
-          "description": "Praça da Matriz",
-          "name": "Praça da Matriz de Santa Rita e Santa Filomena (centro)",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20da%20Matriz%20de%20Santa%20Rita%20e%20Santa%20Filomena%20(centro)%2C%20Cod%C3%B3%2C%20MA",
-        },
-        {
-          "description": "Praça São Sebastião",
-          "name": "Praça São Sebastião (centro)",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20S%C3%A3o%20Sebasti%C3%A3o%20(centro)%2C%20Cod%C3%B3%2C%20MA",
-        },
-        {
-          "description": "Estação Ferroviária de Codó",
-          "name": "Estação Ferroviária – uso histórico, hoje associada à memória ferroviária",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%20%E2%80%93%20uso%20hist%C3%B3rico%2C%20hoje%20associada%20%C3%A0%20mem%C3%B3ria%20ferrovi%C3%A1ria%2C%20Cod%C3%B3%2C%20MA",
-        },
-        {
-          "description": "Patrimônio cultural",
-          "name": "Terreiros de Candomblé, mapeados e estudados na cidade; Codó é descrita como Terra de Encantados em estudos antropológicos.",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terreiros%20de%20Candombl%C3%A9%2C%20mapeados%20e%20estudados%20na%20cidade%3B%20Cod%C3%B3%20%C3%A9%20descrita%20como%20Terra%20de%20Encantados%20em%20estudos%20antropol%C3%B3gicos.%2C%20Cod%C3%B3%2C%20MA",
-        },
-        {
-          "description": "Observação cultural",
-          "name": "Encantos/encantados e terecô, tema pesquisado na antropologia social em Codó (Ahlert, 2024).",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Encantos%2Fencantados%20e%20terec%C3%B4%2C%20tema%20pesquisado%20na%20antropologia%20social%20em%20Cod%C3%B3%20(Ahlert%2C%202024).%2C%20Cod%C3%B3%2C%20MA",
+          description: "Observação",
+          kind: "Mercado público",
+          name: "Sem anúncios de estabelecimentos privados específicos e com foco em espaços públicos",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Sem%20an%C3%BAncios%20de%20estabelecimentos%20privados%20espec%C3%ADficos%20e%20com%20foco%20em%20espa%C3%A7os%20p%C3%BAblicos%2C%20Cod%C3%B3%2C%20MA",
         },
       ],
     },
-    "transport": {
-      "closing": "Transporte urbano e de ligação com outras cidades é baseado em rodovias e ônibus; não há serviço de trem de passageiros em Codó no momento como infraestrutura de transporte público ativo.",
-      "intro": "Transporte público na cidade envolve rodoviária municipal e linhas de ônibus que conectam Codó a cidades vizinhas e a São Luís. O aeroporto mais próximo com voos comerciais é o de São Luís; há um aeródromo próximo à cidade.",
-      "items": [
+    tourism: {
+      closing:
+        "Planeje visitas a espaços públicos centrais e observe a presença de manifestações culturais da cidade.",
+      intro:
+        "Codó oferece espaços públicos históricos e uma expressão cultural marcada pela presença de terreiros afro-brasileiros. A cidade mantém praças públicas de referência, bem como um patrimônio ferroviário que remete à sua história de escoamento de mercadorias na região.",
+      items: [
         {
-          "description": "Rodoviária municipal",
-          "kind": "Rodoviária",
-          "name": "Rodoviária de Codó (terminal rodoviário)",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Cod%C3%B3%20(terminal%20rodovi%C3%A1rio)%2C%20Cod%C3%B3%2C%20MA",
+          description: "Praça da Estação Ferroviária",
+          name: "Praça da Estação Ferroviária (antiga estação de Codó, hoje espaço cívico/cultural)",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20da%20Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%20(antiga%20esta%C3%A7%C3%A3o%20de%20Cod%C3%B3%2C%20hoje%20espa%C3%A7o%20c%C3%ADvico%2Fcultural)%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Sistema de ônibus",
-          "kind": "Transporte público",
-          "name": "rede de ônibus urbano e ligações intermunicipais (uso de linhas comuns)",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=rede%20de%20%C3%B4nibus%20urbano%20e%20liga%C3%A7%C3%B5es%20intermunicipais%20(uso%20de%20linhas%20comuns)%2C%20Cod%C3%B3%2C%20MA",
+          description: "Praça da Matriz",
+          name: "Praça da Matriz de Santa Rita e Santa Filomena (centro)",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20da%20Matriz%20de%20Santa%20Rita%20e%20Santa%20Filomena%20(centro)%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Aeroporto próximo",
-          "kind": "Aeroporto próximo",
-          "name": "Itapecuru / Itapicuru (SNXH) – aeródromo próximo a Codó",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Itapecuru%20%2F%20Itapicuru%20(SNXH)%20%E2%80%93%20aer%C3%B3dromo%20pr%C3%B3ximo%20a%20Cod%C3%B3%2C%20Cod%C3%B3%2C%20MA",
+          description: "Praça São Sebastião",
+          name: "Praça São Sebastião (centro)",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20S%C3%A3o%20Sebasti%C3%A3o%20(centro)%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Aeroporto principal na região",
-          "kind": "Aeroporto regional",
-          "name": "Aeroporto Marechal Cunha Machado (SLZ/SBSL) em São Luís, o maior hub da região",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20Marechal%20Cunha%20Machado%20(SLZ%2FSBSL)%20em%20S%C3%A3o%20Lu%C3%ADs%2C%20o%20maior%20hub%20da%20regi%C3%A3o%2C%20Cod%C3%B3%2C%20MA",
+          description: "Estação Ferroviária de Codó",
+          name: "Estação Ferroviária – uso histórico, hoje associada à memória ferroviária",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Esta%C3%A7%C3%A3o%20Ferrovi%C3%A1ria%20%E2%80%93%20uso%20hist%C3%B3rico%2C%20hoje%20associada%20%C3%A0%20mem%C3%B3ria%20ferrovi%C3%A1ria%2C%20Cod%C3%B3%2C%20MA",
         },
         {
-          "description": "Distância ao SLZ",
-          "kind": "Distância",
-          "name": "Codó a São Luís: cerca de 296–300 km por estrada",
-          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cod%C3%B3%20a%20S%C3%A3o%20Lu%C3%ADs%3A%20cerca%20de%20296%E2%80%93300%20km%20por%20estrada%2C%20Cod%C3%B3%2C%20MA",
+          description: "Patrimônio cultural",
+          name: "Terreiros de Candomblé, mapeados e estudados na cidade; Codó é descrita como Terra de Encantados em estudos antropológicos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terreiros%20de%20Candombl%C3%A9%2C%20mapeados%20e%20estudados%20na%20cidade%3B%20Cod%C3%B3%20%C3%A9%20descrita%20como%20Terra%20de%20Encantados%20em%20estudos%20antropol%C3%B3gicos.%2C%20Cod%C3%B3%2C%20MA",
+        },
+        {
+          description: "Observação cultural",
+          name: "Encantos/encantados e terecô, tema pesquisado na antropologia social em Codó (Ahlert, 2024).",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Encantos%2Fencantados%20e%20terec%C3%B4%2C%20tema%20pesquisado%20na%20antropologia%20social%20em%20Cod%C3%B3%20(Ahlert%2C%202024).%2C%20Cod%C3%B3%2C%20MA",
         },
       ],
     },
-    "city": "Codó",
-    "uf": "MA",
-    "stateName": "Maranhão",
-    "region": "Nordeste",
-    "ddd": "99",
-    "population": 118283,
-    "reviewedOn": "13 de agosto de 2026",
+    transport: {
+      closing:
+        "Transporte urbano e de ligação com outras cidades é baseado em rodovias e ônibus; não há serviço de trem de passageiros em Codó no momento como infraestrutura de transporte público ativo.",
+      intro:
+        "Transporte público na cidade envolve rodoviária municipal e linhas de ônibus que conectam Codó a cidades vizinhas e a São Luís. O aeroporto mais próximo com voos comerciais é o de São Luís; há um aeródromo próximo à cidade.",
+      items: [
+        {
+          description: "Rodoviária municipal",
+          kind: "Rodoviária",
+          name: "Rodoviária de Codó (terminal rodoviário)",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Cod%C3%B3%20(terminal%20rodovi%C3%A1rio)%2C%20Cod%C3%B3%2C%20MA",
+        },
+        {
+          description: "Sistema de ônibus",
+          kind: "Transporte público",
+          name: "rede de ônibus urbano e ligações intermunicipais (uso de linhas comuns)",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=rede%20de%20%C3%B4nibus%20urbano%20e%20liga%C3%A7%C3%B5es%20intermunicipais%20(uso%20de%20linhas%20comuns)%2C%20Cod%C3%B3%2C%20MA",
+        },
+        {
+          description: "Aeroporto próximo",
+          kind: "Aeroporto próximo",
+          name: "Itapecuru / Itapicuru (SNXH) – aeródromo próximo a Codó",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Itapecuru%20%2F%20Itapicuru%20(SNXH)%20%E2%80%93%20aer%C3%B3dromo%20pr%C3%B3ximo%20a%20Cod%C3%B3%2C%20Cod%C3%B3%2C%20MA",
+        },
+        {
+          description: "Aeroporto principal na região",
+          kind: "Aeroporto regional",
+          name: "Aeroporto Marechal Cunha Machado (SLZ/SBSL) em São Luís, o maior hub da região",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeroporto%20Marechal%20Cunha%20Machado%20(SLZ%2FSBSL)%20em%20S%C3%A3o%20Lu%C3%ADs%2C%20o%20maior%20hub%20da%20regi%C3%A3o%2C%20Cod%C3%B3%2C%20MA",
+        },
+        {
+          description: "Distância ao SLZ",
+          kind: "Distância",
+          name: "Codó a São Luís: cerca de 296–300 km por estrada",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Cod%C3%B3%20a%20S%C3%A3o%20Lu%C3%ADs%3A%20cerca%20de%20296%E2%80%93300%20km%20por%20estrada%2C%20Cod%C3%B3%2C%20MA",
+        },
+      ],
+    },
+    city: "Codó",
+    uf: "MA",
+    stateName: "Maranhão",
+    region: "Nordeste",
+    ddd: "99",
+    population: 118283,
+    reviewedOn: "13 de agosto de 2026",
   },
 } as Record<string, MunicipalityTabs>;

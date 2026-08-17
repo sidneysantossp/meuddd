@@ -12,10 +12,16 @@ describe("installAnalytics", () => {
   });
 
   it("insere apenas uma vez o script com a configuração completa", () => {
-    expect(installAnalytics(document, "https://analytics.example/", "site-123")).toBe(true);
-    expect(installAnalytics(document, "https://analytics.example/", "site-123")).toBe(false);
+    expect(
+      installAnalytics(document, "https://analytics.example/", "site-123")
+    ).toBe(true);
+    expect(
+      installAnalytics(document, "https://analytics.example/", "site-123")
+    ).toBe(false);
 
-    const script = document.head.querySelector('script[data-ddd-analytics="umami"]') as HTMLScriptElement;
+    const script = document.head.querySelector(
+      'script[data-ddd-analytics="umami"]'
+    ) as HTMLScriptElement;
     expect(script.src).toBe("https://analytics.example/umami");
     expect(script.dataset.websiteId).toBe("site-123");
   });

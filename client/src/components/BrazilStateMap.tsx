@@ -1,6 +1,10 @@
 import { MapPin, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type StateSummary = {
   name: string;
@@ -12,11 +16,20 @@ type StateSummary = {
 
 type Position = readonly [number, number];
 type Ring = Position[];
-type Geometry = { type: "Polygon"; coordinates: Ring[] } | { type: "MultiPolygon"; coordinates: Ring[][] };
+type Geometry =
+  | { type: "Polygon"; coordinates: Ring[] }
+  | { type: "MultiPolygon"; coordinates: Ring[][] };
 type GeoFeature = { properties: { sigla?: string }; geometry: Geometry };
 type GeoCollection = { features: GeoFeature[] };
 type SvgFeature = { uf: string; path: string; label: Position };
-type StateConnection = { id: string; path: string; start: Position; end: Position; midpoint: Position; index: number };
+type StateConnection = {
+  id: string;
+  path: string;
+  start: Position;
+  end: Position;
+  midpoint: Position;
+  index: number;
+};
 
 const GEOJSON_URL = "/assets/brazil-states.geojson";
 const LOAD_TIMEOUT_MS = 8_000;
@@ -57,7 +70,10 @@ function simplifyRing(ring: Ring) {
 
 function createPaths(collection: GeoCollection): SvgFeature[] {
   const positions = collection.features.flatMap(feature => {
-    const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
+    const polygons =
+      feature.geometry.type === "Polygon"
+        ? [feature.geometry.coordinates]
+        : feature.geometry.coordinates;
     return polygons.flatMap(polygon => polygon.flat());
   });
   if (!positions.length) return [];
@@ -68,10 +84,17 @@ function createPaths(collection: GeoCollection): SvgFeature[] {
   const maxLongitude = Math.max(...longitudes);
   const minLatitude = Math.min(...latitudes);
   const maxLatitude = Math.max(...latitudes);
-  const scale = Math.min((MAP_WIDTH - PADDING * 2) / (maxLongitude - minLongitude), (MAP_HEIGHT - PADDING * 2) / (maxLatitude - minLatitude));
+  const scale = Math.min(
+    (MAP_WIDTH - PADDING * 2) / (maxLongitude - minLongitude),
+    (MAP_HEIGHT - PADDING * 2) / (maxLatitude - minLatitude)
+  );
   const offsetX = (MAP_WIDTH - (maxLongitude - minLongitude) * scale) / 2;
   const offsetY = (MAP_HEIGHT - (maxLatitude - minLatitude) * scale) / 2;
-  const point = ([longitude, latitude]: Position) => [offsetX + (longitude - minLongitude) * scale, offsetY + (maxLatitude - latitude) * scale] as const;
+  const point = ([longitude, latitude]: Position) =>
+    [
+      offsetX + (longitude - minLongitude) * scale,
+      offsetY + (maxLatitude - latitude) * scale,
+    ] as const;
   const ringPath = (ring: Ring) => {
     const points = simplifyRing(ring).map(point);
     if (points.length < 3) return "";
@@ -81,8 +104,13 @@ function createPaths(collection: GeoCollection): SvgFeature[] {
   return collection.features.flatMap(feature => {
     const uf = feature.properties.sigla?.toUpperCase();
     if (!uf) return [];
-    const polygons = feature.geometry.type === "Polygon" ? [feature.geometry.coordinates] : feature.geometry.coordinates;
-    const path = polygons.map(polygon => polygon.map(ringPath).join(" ")).join(" ");
+    const polygons =
+      feature.geometry.type === "Polygon"
+        ? [feature.geometry.coordinates]
+        : feature.geometry.coordinates;
+    const path = polygons
+      .map(polygon => polygon.map(ringPath).join(" "))
+      .join(" ");
     const featurePositions = polygons.flatMap(polygon => polygon.flat());
     const featureLongitudes = featurePositions.map(([longitude]) => longitude);
     const featureLatitudes = featurePositions.map(([, latitude]) => latitude);
@@ -100,7 +128,10 @@ function createConnectionGeometry(start: Position, end: Position) {
   const midpointX = (startX + endX) / 2;
   const midpointY = (startY + endY) / 2;
   const bend = Math.min(28, Math.max(12, Math.abs(endX - startX) * 0.14));
-  return { path: `M${startX.toFixed(1)},${startY.toFixed(1)} Q${midpointX.toFixed(1)},${(midpointY - bend).toFixed(1)} ${endX.toFixed(1)},${endY.toFixed(1)}`, midpoint: [midpointX, midpointY - bend / 2] as Position };
+  return {
+    path: `M${startX.toFixed(1)},${startY.toFixed(1)} Q${midpointX.toFixed(1)},${(midpointY - bend).toFixed(1)} ${endX.toFixed(1)},${endY.toFixed(1)}`,
+    midpoint: [midpointX, midpointY - bend / 2] as Position,
+  };
 }
 
 export function BrazilStateMap({
@@ -116,22 +147,43 @@ export function BrazilStateMap({
   const [shouldLoad, setShouldLoad] = useState(false);
   const [features, setFeatures] = useState<SvgFeature[]>([]);
   const [loadError, setLoadError] = useState(false);
-	const [hoveredUf, setHoveredUf] = useState<string | undefined>();
-	const [openConnectionId, setOpenConnectionId] = useState<string | undefined>();
+  const [hoveredUf, setHoveredUf] = useState<string | undefined>();
+  const [openConnectionId, setOpenConnectionId] = useState<
+    string | undefined
+  >();
   const [hasHydrated, setHasHydrated] = useState(false);
-  const stateByUf = useMemo(() => new Map(states.map(state => [state.uf, state])), [states]);
+  const stateByUf = useMemo(
+    () => new Map(states.map(state => [state.uf, state])),
+    [states]
+  );
   const selectedState = selectedUf ? stateByUf.get(selectedUf) : undefined;
-  const labelPositions = useMemo(() => new Map(features.map(feature => {
-    const [offsetX, offsetY] = STATE_LABEL_OFFSETS[feature.uf] ?? [0, 0];
-    return [feature.uf, [feature.label[0] + offsetX, feature.label[1] + offsetY] as Position];
-  })), [features]);
-  const connections = useMemo<StateConnection[]>(() => STATE_CONNECTIONS.flatMap(([from, to], index) => {
-    const start = labelPositions.get(from);
-    const end = labelPositions.get(to);
-    if (!start || !end) return [];
-    const geometry = createConnectionGeometry(start, end);
-    return [{ id: `${from}-${to}`, ...geometry, start, end, index }];
-  }), [labelPositions]);
+  const labelPositions = useMemo(
+    () =>
+      new Map(
+        features.map(feature => {
+          const [offsetX, offsetY] = STATE_LABEL_OFFSETS[feature.uf] ?? [0, 0];
+          return [
+            feature.uf,
+            [
+              feature.label[0] + offsetX,
+              feature.label[1] + offsetY,
+            ] as Position,
+          ];
+        })
+      ),
+    [features]
+  );
+  const connections = useMemo<StateConnection[]>(
+    () =>
+      STATE_CONNECTIONS.flatMap(([from, to], index) => {
+        const start = labelPositions.get(from);
+        const end = labelPositions.get(to);
+        if (!start || !end) return [];
+        const geometry = createConnectionGeometry(start, end);
+        return [{ id: `${from}-${to}`, ...geometry, start, end, index }];
+      }),
+    [labelPositions]
+  );
 
   useEffect(() => setHasHydrated(true), []);
 
@@ -159,12 +211,15 @@ export function BrazilStateMap({
     // this, users could stay on "A carregar mapa dos estados" indefinitely.
     fallbackTimer = window.setTimeout(scheduleLoad, OBSERVER_FALLBACK_MS);
 
-    const observer = new IntersectionObserver(entries => {
-      if (entries.some(entry => entry.isIntersecting)) {
-        observer.disconnect();
-        scheduleLoad();
-      }
-    }, { rootMargin: "240px 0px" });
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          observer.disconnect();
+          scheduleLoad();
+        }
+      },
+      { rootMargin: "240px 0px" }
+    );
     observer.observe(target);
     return () => {
       observer.disconnect();
@@ -176,11 +231,15 @@ export function BrazilStateMap({
   useEffect(() => {
     if (!shouldLoad) return;
     const controller = new AbortController();
-    const timeoutTimer = window.setTimeout(() => controller.abort(), LOAD_TIMEOUT_MS);
+    const timeoutTimer = window.setTimeout(
+      () => controller.abort(),
+      LOAD_TIMEOUT_MS
+    );
     let aborted = false;
     fetch(GEOJSON_URL, { signal: controller.signal })
       .then(response => {
-        if (!response.ok) throw new Error("Não foi possível carregar os limites estaduais.");
+        if (!response.ok)
+          throw new Error("Não foi possível carregar os limites estaduais.");
         return response.json() as Promise<GeoCollection>;
       })
       .then(data => setFeatures(createPaths(data)))
@@ -196,11 +255,19 @@ export function BrazilStateMap({
   }, [shouldLoad]);
 
   return (
-    <div ref={mapRef} className="relative overflow-hidden rounded-[1.5rem] border border-[#29564d] bg-[#143d36] shadow-[0_22px_50px_rgba(20,61,54,0.24)]">
+    <div
+      ref={mapRef}
+      className="relative overflow-hidden rounded-[1.5rem] border border-[#29564d] bg-[#143d36] shadow-[0_22px_50px_rgba(20,61,54,0.24)]"
+    >
       <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(250,243,229,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(250,243,229,0.18)_1px,transparent_1px)] [background-size:26px_26px]" />
       <div className="relative h-[420px] sm:h-[500px]">
         {features.length > 0 ? (
-          <svg viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`} className="h-full w-full p-6 sm:p-8" role="list" aria-label="Mapa interativo dos estados do Brasil">
+          <svg
+            viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
+            className="h-full w-full p-6 sm:p-8"
+            role="list"
+            aria-label="Mapa interativo dos estados do Brasil"
+          >
             <title>Mapa interativo dos estados brasileiros</title>
             {features.map(feature => {
               const state = stateByUf.get(feature.uf);
@@ -212,7 +279,9 @@ export function BrazilStateMap({
                   d={feature.path}
                   role="listitem"
                   tabIndex={state ? 0 : -1}
-                  aria-label={state ? `Selecionar ${state.name}, ${state.uf}` : feature.uf}
+                  aria-label={
+                    state ? `Selecionar ${state.name}, ${state.uf}` : feature.uf
+                  }
                   aria-current={isSelected ? "true" : undefined}
                   onClick={() => state && onStateSelect(feature.uf)}
                   onKeyDown={event => {
@@ -223,8 +292,14 @@ export function BrazilStateMap({
                   }}
                   onMouseEnter={() => setHoveredUf(feature.uf)}
                   onMouseLeave={() => setHoveredUf(undefined)}
-                  className={state ? "cursor-pointer outline-none transition-[fill,stroke,opacity] duration-200 focus-visible:stroke-[#fffaf1] focus-visible:[stroke-width:3]" : "opacity-40"}
-                  fill={isSelected ? "#f06a4d" : isHovered ? "#9ec9c0" : "#5f9f96"}
+                  className={
+                    state
+                      ? "cursor-pointer outline-none transition-[fill,stroke,opacity] duration-200 focus-visible:stroke-[#fffaf1] focus-visible:[stroke-width:3]"
+                      : "opacity-40"
+                  }
+                  fill={
+                    isSelected ? "#f06a4d" : isHovered ? "#9ec9c0" : "#5f9f96"
+                  }
                   fillOpacity={isSelected ? 1 : isHovered ? 0.96 : 0.78}
                   stroke={isSelected ? "#fffaf1" : "#d9eee7"}
                   strokeWidth={isSelected ? 2.4 : 1.05}
@@ -237,40 +312,96 @@ export function BrazilStateMap({
               {connections.map(connection => {
                 const fromState = stateByUf.get(connection.id.split("-")[0]);
                 const toState = stateByUf.get(connection.id.split("-")[1]);
-                const tooltipLabel = fromState && toState
-                  ? `Conexão entre ${fromState.name} e ${toState.name}`
-                  : `Conexão entre ${connection.id.replace("-", " e ")}`;
+                const tooltipLabel =
+                  fromState && toState
+                    ? `Conexão entre ${fromState.name} e ${toState.name}`
+                    : `Conexão entre ${connection.id.replace("-", " e ")}`;
 
                 return (
                   <g key={connection.id}>
-                    <path d={connection.path} className="state-connection" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                    <circle cx={connection.start[0]} cy={connection.start[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-                    <circle cx={connection.end[0]} cy={connection.end[1]} r="2.4" className="state-connection-node" pointerEvents="none" style={{ animationDelay: `${-connection.index * 0.55}s` }} />
-	                    <Tooltip open={openConnectionId === connection.id} onOpenChange={open => setOpenConnectionId(open ? connection.id : undefined)}>
-	                      <TooltipTrigger asChild>
-	                        <circle
+                    <path
+                      d={connection.path}
+                      className="state-connection"
+                      pointerEvents="none"
+                      style={{ animationDelay: `${-connection.index * 0.55}s` }}
+                    />
+                    <circle
+                      cx={connection.start[0]}
+                      cy={connection.start[1]}
+                      r="2.4"
+                      className="state-connection-node"
+                      pointerEvents="none"
+                      style={{ animationDelay: `${-connection.index * 0.55}s` }}
+                    />
+                    <circle
+                      cx={connection.end[0]}
+                      cy={connection.end[1]}
+                      r="2.4"
+                      className="state-connection-node"
+                      pointerEvents="none"
+                      style={{ animationDelay: `${-connection.index * 0.55}s` }}
+                    />
+                    <Tooltip
+                      open={openConnectionId === connection.id}
+                      onOpenChange={open =>
+                        setOpenConnectionId(open ? connection.id : undefined)
+                      }
+                    >
+                      <TooltipTrigger asChild>
+                        <circle
                           cx={connection.midpoint[0]}
                           cy={connection.midpoint[1]}
                           r="3.8"
                           tabIndex={0}
-	                          role="button"
-	                          aria-label={`Ver detalhes da ${tooltipLabel.toLowerCase()}`}
-	                          className="state-connection-midpoint"
-	                          style={{ animationDelay: `${-connection.index * 0.55}s` }}
-	                          onPointerDown={event => {
-	                            if (event.pointerType !== "touch") return;
-	                            event.preventDefault();
-	                            setOpenConnectionId(current => current === connection.id ? undefined : connection.id);
-	                          }}
-	                          onKeyDown={event => {
-	                            if (event.key === "Escape") setOpenConnectionId(undefined);
-	                          }}
-	                        />
-	                      </TooltipTrigger>
-	                      <TooltipContent side="top" sideOffset={8} className="max-w-56 border border-[#b8c8be] bg-[#fffaf1] px-3 py-2 text-[#143d36] shadow-xl">
-	                        <div className="flex items-start justify-between gap-3"><div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#d94e34]">Conexão territorial</div><button type="button" onClick={() => setOpenConnectionId(undefined)} className="-mr-1 -mt-1 grid size-6 place-items-center rounded-full text-[#143d36] hover:bg-[#f1e5d3] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f06a4d]" aria-label={`Fechar detalhes da ${tooltipLabel.toLowerCase()}`}><X size={13} /></button></div>
-                        <div className="mt-1 text-xs font-bold">{fromState?.name ?? connection.id.split("-")[0]} → {toState?.name ?? connection.id.split("-")[1]}</div>
-                        {fromState && toState ? <div className="mt-1 text-[11px] leading-4 text-[#5d756c]">{fromState.uf}: {fromState.dddCount} DDDs · {toState.uf}: {toState.dddCount} DDDs</div> : null}
+                          role="button"
+                          aria-label={`Ver detalhes da ${tooltipLabel.toLowerCase()}`}
+                          className="state-connection-midpoint"
+                          style={{
+                            animationDelay: `${-connection.index * 0.55}s`,
+                          }}
+                          onPointerDown={event => {
+                            if (event.pointerType !== "touch") return;
+                            event.preventDefault();
+                            setOpenConnectionId(current =>
+                              current === connection.id
+                                ? undefined
+                                : connection.id
+                            );
+                          }}
+                          onKeyDown={event => {
+                            if (event.key === "Escape")
+                              setOpenConnectionId(undefined);
+                          }}
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent
+                        side="top"
+                        sideOffset={8}
+                        className="max-w-56 border border-[#b8c8be] bg-[#fffaf1] px-3 py-2 text-[#143d36] shadow-xl"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#d94e34]">
+                            Conexão territorial
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => setOpenConnectionId(undefined)}
+                            className="-mr-1 -mt-1 grid size-6 place-items-center rounded-full text-[#143d36] hover:bg-[#f1e5d3] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f06a4d]"
+                            aria-label={`Fechar detalhes da ${tooltipLabel.toLowerCase()}`}
+                          >
+                            <X size={13} />
+                          </button>
+                        </div>
+                        <div className="mt-1 text-xs font-bold">
+                          {fromState?.name ?? connection.id.split("-")[0]} →{" "}
+                          {toState?.name ?? connection.id.split("-")[1]}
+                        </div>
+                        {fromState && toState ? (
+                          <div className="mt-1 text-[11px] leading-4 text-[#5d756c]">
+                            {fromState.uf}: {fromState.dddCount} DDDs ·{" "}
+                            {toState.uf}: {toState.dddCount} DDDs
+                          </div>
+                        ) : null}
                       </TooltipContent>
                     </Tooltip>
                   </g>
@@ -280,7 +411,17 @@ export function BrazilStateMap({
             <g aria-hidden="true" pointerEvents="none" className="state-labels">
               {features.map(feature => {
                 const label = labelPositions.get(feature.uf);
-                return label ? <text key={feature.uf} x={label[0]} y={label[1]} textAnchor="middle" dominantBaseline="central">{feature.uf}</text> : null;
+                return label ? (
+                  <text
+                    key={feature.uf}
+                    x={label[0]}
+                    y={label[1]}
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                  >
+                    {feature.uf}
+                  </text>
+                ) : null;
               })}
             </g>
           </svg>
@@ -303,7 +444,10 @@ export function BrazilStateMap({
               </div>
             ) : shouldLoad ? (
               <div className="flex flex-col items-center gap-4">
-                <span className="inline-block size-7 animate-spin rounded-full border-2 border-[#f7e8ce]/30 border-t-[#f5c5a1]" aria-hidden="true" />
+                <span
+                  className="inline-block size-7 animate-spin rounded-full border-2 border-[#f7e8ce]/30 border-t-[#f5c5a1]"
+                  aria-hidden="true"
+                />
                 <span>A desenhar os limites estaduais…</span>
               </div>
             ) : (
@@ -314,18 +458,32 @@ export function BrazilStateMap({
       </div>
       <div className="pointer-events-none absolute inset-x-4 top-4 flex items-start justify-between gap-3">
         <div className="rounded-xl border border-[#fffaf1]/20 bg-[#143d36]/95 px-4 py-3 text-[#faf3e5] shadow-lg backdrop-blur-sm">
-          <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#f5c5a1]">Mapa de navegação</div>
-          <div className="mt-1 flex items-center gap-2 text-sm font-bold"><MapPin size={15} className="text-[#f06a4d]" /> Clique em um estado</div>
+          <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#f5c5a1]">
+            Mapa de navegação
+          </div>
+          <div className="mt-1 flex items-center gap-2 text-sm font-bold">
+            <MapPin size={15} className="text-[#f06a4d]" /> Clique em um estado
+          </div>
         </div>
         {hasHydrated && selectedState && (
           <div className="rounded-xl border border-[#fffaf1]/70 bg-[#fffaf1]/95 px-4 py-3 text-right text-[#143d36] shadow-lg backdrop-blur-sm">
-            <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#718378]">Selecionado</div>
-            <div className="font-display text-2xl leading-none">{selectedState.uf}</div>
-            <div className="mt-1 text-[11px] font-semibold">{selectedState.dddCount} DDDs · {selectedState.cityCount} cidades</div>
+            <div className="text-[9px] font-bold uppercase tracking-[0.18em] text-[#718378]">
+              Selecionado
+            </div>
+            <div className="font-display text-2xl leading-none">
+              {selectedState.uf}
+            </div>
+            <div className="mt-1 text-[11px] font-semibold">
+              {selectedState.dddCount} DDDs · {selectedState.cityCount} cidades
+            </div>
           </div>
         )}
       </div>
-      {loadError && <div className="absolute inset-x-5 bottom-5 rounded-xl border border-[#f5c5a1]/30 bg-[#143d36]/90 px-4 py-3 text-center text-xs text-[#f7e8ce]">Use a seleção rápida abaixo para navegar pelos estados.</div>}
+      {loadError && (
+        <div className="absolute inset-x-5 bottom-5 rounded-xl border border-[#f5c5a1]/30 bg-[#143d36]/90 px-4 py-3 text-center text-xs text-[#f7e8ce]">
+          Use a seleção rápida abaixo para navegar pelos estados.
+        </div>
+      )}
     </div>
   );
 }

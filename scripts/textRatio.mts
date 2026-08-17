@@ -19,12 +19,20 @@ function textRatio(html: string) {
     .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();
-  return { total: html.length, text: stripped.length, ratio: stripped.length / html.length };
+  return {
+    total: html.length,
+    text: stripped.length,
+    ratio: stripped.length / html.length,
+  };
 }
 
 for (const route of routes) {
   execSync(`curl -s -o /tmp/seo_html.txt "${route.url}"`);
-  const html = await import("fs").then(fs => fs.readFileSync("/tmp/seo_html.txt", "utf-8"));
+  const html = await import("fs").then(fs =>
+    fs.readFileSync("/tmp/seo_html.txt", "utf-8")
+  );
   const { total, text, ratio } = textRatio(html);
-  console.log(`${route.name.padEnd(20)} total: ${(total / 1024).toFixed(0)} KB | text: ${(text / 1024).toFixed(1)} KB | ratio: ${(ratio * 100).toFixed(2)}%`);
+  console.log(
+    `${route.name.padEnd(20)} total: ${(total / 1024).toFixed(0)} KB | text: ${(text / 1024).toFixed(1)} KB | ratio: ${(ratio * 100).toFixed(2)}%`
+  );
 }

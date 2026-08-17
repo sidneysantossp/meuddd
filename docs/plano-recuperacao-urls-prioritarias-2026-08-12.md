@@ -8,26 +8,26 @@
 
 O export enviado contém a dimensão **Consultas**, não **Páginas**. Assim, ele identifica quais intenções tiveram maior procura, mas não permite afirmar com rigor qual URL gerou mais cliques ou impressões no período. A associação abaixo é uma hipótese operacional baseada na arquitetura actual das rotas; a confirmação exige exportar o relatório **Desempenho → Páginas** do Search Console, no mesmo intervalo do CSV.
 
-| Consulta ou grupo | URL candidata | Evidência atual | Decisão |
-|---|---|---|---|
-| `ddd 63`, `ddd63`, `ddd 63 qual estado` | `/ddd/63` | Maior grupo individual de impressões; a URL não é reconhecida no índice atual. | Recuperar a URL existente com resposta direta e malha interna. |
-| `ddd 96` | `/ddd/96` | Consulta prioritária; a URL não é reconhecida no índice atual. | Recuperar a URL existente com conteúdo territorial específico. |
-| `ddd tocantins` | `/estado/to` | URL atual responde 200; não usar `/estado/tocantins`, que devolve 404. | Fortalecer a página estadual existente. |
-| `ddd alagoas` | `/estado/al` | URL atual responde 200; não usar `/estado/alagoas`, que devolve 404. | Fortalecer a página estadual existente. |
-| `gerador de telefone` e variações | `/gerador` | Maior cluster de cliques históricos; há 4xx histórico na inspeção. | Atualizar a página existente e validar a resposta publicada antes de solicitar indexação. |
+| Consulta ou grupo                       | URL candidata | Evidência atual                                                                | Decisão                                                                                   |
+| --------------------------------------- | ------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| `ddd 63`, `ddd63`, `ddd 63 qual estado` | `/ddd/63`     | Maior grupo individual de impressões; a URL não é reconhecida no índice atual. | Recuperar a URL existente com resposta direta e malha interna.                            |
+| `ddd 96`                                | `/ddd/96`     | Consulta prioritária; a URL não é reconhecida no índice atual.                 | Recuperar a URL existente com conteúdo territorial específico.                            |
+| `ddd tocantins`                         | `/estado/to`  | URL atual responde 200; não usar `/estado/tocantins`, que devolve 404.         | Fortalecer a página estadual existente.                                                   |
+| `ddd alagoas`                           | `/estado/al`  | URL atual responde 200; não usar `/estado/alagoas`, que devolve 404.           | Fortalecer a página estadual existente.                                                   |
+| `gerador de telefone` e variações       | `/gerador`    | Maior cluster de cliques históricos; há 4xx histórico na inspeção.             | Atualizar a página existente e validar a resposta publicada antes de solicitar indexação. |
 
 ## Estrutura editorial recomendada para `/gerador`
 
 A página já responde a uma intenção clara, por isso deve receber uma **camada editorial de apoio**, não um “supertexto” genérico. O objetivo é explicar o simulador, reduzir ambiguidade e cobrir perguntas adjacentes que uma pessoa realmente faria antes ou depois de gerar um número.
 
-| Bloco | Objetivo de busca e utilizador | Requisito de qualidade |
-|---|---|---|
-| Resposta curta após o H1 | Explicar, em 40–70 palavras, que a ferramenta cria combinações simuladas por DDD. | Declarar que não verifica disponibilidade, titularidade ou existência de linha real. |
-| Como funciona | Explicar DDD, nono dígito e a seleção de estado/DDD. | Usar exemplos claramente fictícios e nunca alegar “número válido”. |
-| Escolher o DDD | Ligar para páginas de DDD com maior procura, começando por 63, 96, 86 e estados de Tocantins/Alagoas. | Links contextuais, com texto âncora descritivo. |
-| Usos adequados | Testes de formulário, protótipos, maquetes e dados de demonstração. | Não incentivar uso para cadastro, fraude, spam ou contacto com terceiros. |
-| FAQ curto | Responder perguntas sobre simulação, DDD, formato e privacidade. | Respostas factuais, sem repetir palavras-chave artificialmente. |
-| Fontes e atualizações | Referenciar o plano geral de numeração da Anatel quando se explicar a estrutura. | Manter data de revisão visível. |
+| Bloco                    | Objetivo de busca e utilizador                                                                        | Requisito de qualidade                                                               |
+| ------------------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Resposta curta após o H1 | Explicar, em 40–70 palavras, que a ferramenta cria combinações simuladas por DDD.                     | Declarar que não verifica disponibilidade, titularidade ou existência de linha real. |
+| Como funciona            | Explicar DDD, nono dígito e a seleção de estado/DDD.                                                  | Usar exemplos claramente fictícios e nunca alegar “número válido”.                   |
+| Escolher o DDD           | Ligar para páginas de DDD com maior procura, começando por 63, 96, 86 e estados de Tocantins/Alagoas. | Links contextuais, com texto âncora descritivo.                                      |
+| Usos adequados           | Testes de formulário, protótipos, maquetes e dados de demonstração.                                   | Não incentivar uso para cadastro, fraude, spam ou contacto com terceiros.            |
+| FAQ curto                | Responder perguntas sobre simulação, DDD, formato e privacidade.                                      | Respostas factuais, sem repetir palavras-chave artificialmente.                      |
+| Fontes e atualizações    | Referenciar o plano geral de numeração da Anatel quando se explicar a estrutura.                      | Manter data de revisão visível.                                                      |
 
 Uma extensão razoável é **600–900 palavras úteis**, além da própria ferramenta e da FAQ. Não é uma meta de ranking; é um limite editorial para responder sem diluir a funcionalidade. Antes de publicar, o texto deve ser revisado para não prometer que um número funciona em WhatsApp, chamadas, cadastro ou qualquer serviço externo.
 
@@ -35,13 +35,13 @@ Uma extensão razoável é **600–900 palavras úteis**, além da própria ferr
 
 As páginas de DDD devem ser melhores do que uma lista: precisam dar a resposta em destaque, demonstrar o vínculo territorial e oferecer o próximo clique lógico. A base já existente de proveniência Anatel/IBGE, respostas rápidas, clusters de intenção e ligações territoriais permite fazer isso sem repetir parágrafos entre páginas.
 
-| Elemento | Aplicação em DDD 63 e DDD 96 | Aplicação em `/estado/to` e `/estado/al` |
-|---|---|---|
-| Primeira resposta | “O DDD 63 é usado no Tocantins” / “O DDD 96 é usado no Amapá”, com data de revisão. | Responder quantos DDDs atendem ao estado e direcionar ao respetivo código. |
-| Cobertura verificável | Municípios atendidos, em lista navegável e sem inventar abrangência. | DDDs do estado, cidades e hubs regionais. |
-| Contexto local | Breve explicação territorial, ligações para estado, municípios e região. | Contexto sobre a região e ligações para municípios e DDDs mais consultados. |
-| Perguntas frequentes | “DDD 63 é de qual estado?”, “Como ligar para DDD 63?” e variações naturais. | Perguntas sobre códigos, discagem e distribuição territorial. |
-| Ligação interna | Do gerador para DDDs prioritários e entre estado, DDD e cidades. | Links de hubs para DDDs e municípios, sem blocos artificiais repetidos. |
+| Elemento              | Aplicação em DDD 63 e DDD 96                                                        | Aplicação em `/estado/to` e `/estado/al`                                    |
+| --------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Primeira resposta     | “O DDD 63 é usado no Tocantins” / “O DDD 96 é usado no Amapá”, com data de revisão. | Responder quantos DDDs atendem ao estado e direcionar ao respetivo código.  |
+| Cobertura verificável | Municípios atendidos, em lista navegável e sem inventar abrangência.                | DDDs do estado, cidades e hubs regionais.                                   |
+| Contexto local        | Breve explicação territorial, ligações para estado, municípios e região.            | Contexto sobre a região e ligações para municípios e DDDs mais consultados. |
+| Perguntas frequentes  | “DDD 63 é de qual estado?”, “Como ligar para DDD 63?” e variações naturais.         | Perguntas sobre códigos, discagem e distribuição territorial.               |
+| Ligação interna       | Do gerador para DDDs prioritários e entre estado, DDD e cidades.                    | Links de hubs para DDDs e municípios, sem blocos artificiais repetidos.     |
 
 ## Sequência operacional segura
 
@@ -56,5 +56,4 @@ O próximo artefacto necessário é um CSV do Search Console com dimensão **Pá
 ## Referências
 
 [1]: https://developers.google.com/search/docs/fundamentals/creating-helpful-content "Google Search Central — Creating helpful, reliable, people-first content"
-
 [2]: https://support.google.com/webmasters/answer/9012289?hl=pt-BR "Google Search Console — Ferramenta de inspeção de URL"

@@ -11,10 +11,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 2,
-    "jsonLdTypes": [
-      "Organization",
-      "WebSite"
-    ],
+    "jsonLdTypes": ["Organization", "WebSite"],
     "h1Count": 1,
     "h2Count": 9,
     "headingsFirst5": [
@@ -42,11 +39,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 3,
-    "jsonLdTypes": [
-      "Organization",
-      "BreadcrumbList",
-      "CollectionPage"
-    ],
+    "jsonLdTypes": ["Organization", "BreadcrumbList", "CollectionPage"],
     "h1Count": 1,
     "h2Count": 8,
     "headingsFirst5": [
@@ -74,11 +67,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 3,
-    "jsonLdTypes": [
-      "Organization",
-      "BreadcrumbList",
-      "CollectionPage"
-    ],
+    "jsonLdTypes": ["Organization", "BreadcrumbList", "CollectionPage"],
     "h1Count": 1,
     "h2Count": 8,
     "headingsFirst5": [
@@ -106,11 +95,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 3,
-    "jsonLdTypes": [
-      "Organization",
-      "BreadcrumbList",
-      "CollectionPage"
-    ],
+    "jsonLdTypes": ["Organization", "BreadcrumbList", "CollectionPage"],
     "h1Count": 1,
     "h2Count": 8,
     "headingsFirst5": [
@@ -306,11 +291,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 3,
-    "jsonLdTypes": [
-      "Organization",
-      "BreadcrumbList",
-      "CollectionPage"
-    ],
+    "jsonLdTypes": ["Organization", "BreadcrumbList", "CollectionPage"],
     "h1Count": 1,
     "h2Count": 8,
     "headingsFirst5": [
@@ -338,11 +319,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 3,
-    "jsonLdTypes": [
-      "Organization",
-      "BreadcrumbList",
-      "Article"
-    ],
+    "jsonLdTypes": ["Organization", "BreadcrumbList", "Article"],
     "h1Count": 1,
     "h2Count": 9,
     "headingsFirst5": [
@@ -370,9 +347,7 @@
     "canonical": "",
     "ogImage": "nao",
     "jsonLdCount": 1,
-    "jsonLdTypes": [
-      "Organization"
-    ],
+    "jsonLdTypes": ["Organization"],
     "h1Count": 1,
     "h2Count": 5,
     "headingsFirst5": [

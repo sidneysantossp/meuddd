@@ -13,18 +13,34 @@ export type IndexNowPayload = {
 };
 
 export function createIndexNowPayload(urls: string[]): IndexNowPayload {
-  const urlList = Array.from(new Set(urls.map(value => new URL(value).toString())));
+  const urlList = Array.from(
+    new Set(urls.map(value => new URL(value).toString()))
+  );
 
-  if (urlList.length === 0) throw new Error("Informe pelo menos uma URL actualizada para o IndexNow.");
-  if (urlList.length > MAX_URLS_PER_REQUEST) throw new Error(`O IndexNow aceita no máximo ${MAX_URLS_PER_REQUEST} URLs por pedido.`);
+  if (urlList.length === 0)
+    throw new Error("Informe pelo menos uma URL actualizada para o IndexNow.");
+  if (urlList.length > MAX_URLS_PER_REQUEST)
+    throw new Error(
+      `O IndexNow aceita no máximo ${MAX_URLS_PER_REQUEST} URLs por pedido.`
+    );
   if (urlList.some(value => new URL(value).host !== INDEXNOW_HOST)) {
-    throw new Error(`Todas as URLs precisam de pertencer ao host canónico ${INDEXNOW_HOST}.`);
+    throw new Error(
+      `Todas as URLs precisam de pertencer ao host canónico ${INDEXNOW_HOST}.`
+    );
   }
 
-  return { host: INDEXNOW_HOST, key: INDEXNOW_KEY, keyLocation: INDEXNOW_KEY_LOCATION, urlList };
+  return {
+    host: INDEXNOW_HOST,
+    key: INDEXNOW_KEY,
+    keyLocation: INDEXNOW_KEY_LOCATION,
+    urlList,
+  };
 }
 
-export async function submitIndexNowUrls(urls: string[], request: typeof fetch = fetch) {
+export async function submitIndexNowUrls(
+  urls: string[],
+  request: typeof fetch = fetch
+) {
   const payload = createIndexNowPayload(urls);
   const response = await request(INDEXNOW_ENDPOINT, {
     method: "POST",
@@ -32,5 +48,9 @@ export async function submitIndexNowUrls(urls: string[], request: typeof fetch =
     body: JSON.stringify(payload),
   });
 
-  return { accepted: response.ok, status: response.status, submitted: payload.urlList.length };
+  return {
+    accepted: response.ok,
+    status: response.status,
+    submitted: payload.urlList.length,
+  };
 }
