@@ -1,6 +1,7 @@
 import { COOKIE_NAME } from "@shared/const";
 import { z } from "zod";
 import * as db from "./db";
+import { getAdminDashboard } from "./db.admin";
 import { getMunicipalityTabsByUf } from "@shared/localityTabs/lookup";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
@@ -83,6 +84,7 @@ export const appRouter = router({
       .mutation(({ input }) => db.createLocalitySuggestion(input)),
   }),
   insights: router({
+    dashboard: adminProcedure.query(() => getAdminDashboard()),
     unmatchedSearches: adminProcedure
       .input(
         z

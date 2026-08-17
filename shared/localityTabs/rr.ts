@@ -1,4 +1,2372 @@
-/* Conteúdo editorial em tabs dos municípios de RR. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
-import type { LocalityTabsCatalog } from "./types";
-
-export const catalog: LocalityTabsCatalog = {};
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "alto-alegre": {
+    tourism: {
+      intro:
+        "Alto Alegre é um município de porte pequeno em Roraima, com forte vocação para atividades rurais e contato com a natureza. O turismo local é de base comunitária, centrado em praças, igrejas e pequenas áreas naturais. Visitas são complementadas por feiras e eventos religiosos que revelam a cultura regional e o modo de vida do interior do estado.",
+      items: [
+        {
+          name: "Praça Central e Feira Municipal",
+          description:
+            "A praça principal funciona como coração urbano: feira livre, comércio informal e eventos cívicos ocorrem ali com frequência. Aos finais de semana há bancas de gêneros regionais, música e pontos de encontro entre moradores e visitantes.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central e Feira Municipal, Alto Alegre, RR",
+        },
+        {
+          name: "Igreja Matriz (paróquia local)",
+          description:
+            "A igreja matriz é referência religiosa e arquitetônica na cidade, palco de celebrações do padroeiro e festas comunitárias. Missas e eventos litúrgicos atraem moradores das zonas rurais, reforçando tradições locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz (paróquia local), Alto Alegre, RR",
+        },
+        {
+          name: "Áreas naturais e trechos de matas",
+          description:
+            "Nos arredores do perímetro urbano existem trechos de floresta e cursos d'água que sustentam biodiversidade típica do bioma amazônico. Passeios de observação, caminhadas curtas e contato com ambientes rurais são opções para visitantes com interesse em natureza.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Áreas naturais e trechos de matas, Alto Alegre, RR",
+        },
+        {
+          name: "Festas e eventos locais",
+          description:
+            "As festas religiosas e a tradicional feira municipal marcam o calendário cultural do município, com manifestações de música, culinária e artesanato. Esses eventos são os melhores momentos para experimentar a sociabilidade e a produção local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Festas e eventos locais, Alto Alegre, RR",
+        },
+      ],
+      closing:
+        "O turismo em Alto Alegre privilegia experiências de baixo impacto e interação com a comunidade local, adequado a quem busca autenticidade e tranqüilidade. Infraestrutura hoteleira é modesta; recomenda-se planejamento prévio para hospedagem e alimentação. Visitas valorizam respeito às práticas locais e ao ambiente natural.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em Alto Alegre é essencialmente local e caseira, baseada em ingredientes regionais como peixe de água doce, farinhas e produtos agropecuários. Restaurantes e bares servem refeições simples e familiares, com predominância de cozinha regional e refeições por quilo. É comum encontrar opções em praças e ao longo da rua principal.",
+      items: [
+        {
+          name: "Restaurante da Praça",
+          description:
+            "Estabelecimento simples junto à praça central que serve almoço regional por quilo, com pratos à base de peixe, arroz, feijão e guarnições típicas. Frequentado por trabalhadores e visitantes, oferece refeição caseira em ambiente informal e rápido.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante da Praça, Alto Alegre, RR",
+        },
+        {
+          name: "Lanchonete e bar local",
+          description:
+            "Bares e lanchonetes na área urbana servem petiscos, bebidas e pratos rápidos, sendo pontos de convívio social ao entardecer. Muitos funcionam também como mercearia, atendendo necessidades diárias da comunidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete e bar local, Alto Alegre, RR",
+        },
+        {
+          name: "Feira Livre e comida de rua",
+          description:
+            "Na feira municipal é possível provar iguarias regionais feitas na hora, como bolos, tapiocas e preparações com farinha de mandioca. A feira é local ideal para degustar produtos caseiros e conversar com produtores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Livre e comida de rua, Alto Alegre, RR",
+        },
+        {
+          name: "Pequenos restaurantes familiares",
+          description:
+            "Restaurantes familiares oferecem cardápio regional com porções generosas e preços acessíveis, valorizando ingredientes locais. Atendimento é geralmente familiar e personalizado, refletindo a vida comunitária do município.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pequenos restaurantes familiares, Alto Alegre, RR",
+        },
+      ],
+      closing:
+        "A experiência gastronômica em Alto Alegre valoriza autenticidade e produtos locais, sendo recomendável reservar tempo para visitar a feira e provar pratos caseiros. Para opções específicas e horários, é aconselhável confirmar localmente, já que muitos estabelecimentos têm rotina adaptada às demandas das comunidades. Respeite horários e práticas locais.",
+    },
+    transport: {
+      intro:
+        "O transporte em Alto Alegre é dominado por modalidades regionais: ônibus intermunicipais, transporte por lotação e vias estaduais que conectam a sede a municípios vizinhos e à capital estadual. A malha viária pode incluir trechos pavimentados e não pavimentados, comuns no interior de Roraima. Serviços públicos e privados atendem a demandas básicas de deslocamento.",
+      items: [
+        {
+          name: "Rodovia de acesso e ligações estaduais",
+          description:
+            "O município é servido por vias estaduais que fazem a conexão com municípios vizinhos e com a capital do estado, permitindo transporte de cargas e passageiros. Condições de pavimentação podem variar, sendo comum a presença de trechos de terra em períodos de menor manutenção.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodovia de acesso e ligações estaduais, Alto Alegre, RR",
+        },
+        {
+          name: "Linha de ônibus intermunicipal",
+          description:
+            "Serviços regulares de ônibus ligam Alto Alegre a cidades próximas e à capital, operados por empresas locais e regionais. Frequência pode ser reduzida em dias úteis e mais limitada aos finais de semana; recomenda-se checar horários antecipadamente.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linha de ônibus intermunicipal, Alto Alegre, RR",
+        },
+        {
+          name: "Transporte por lotação e vans",
+          description:
+            "Lotação e vans prestam serviço flexível dentro do município e para rotas curtas até povoados vizinhos, sendo alternativa rápida onde a oferta de ônibus é escassa. Funcionam com horários adaptáveis à demanda local e são amplamente utilizados por moradores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte por lotação e vans, Alto Alegre, RR",
+        },
+        {
+          name: "Terminal rodoviário / ponto de embarque urbano",
+          description:
+            "O município dispõe de ponto de embarque e desembarque centralizado próximo à área comercial, onde se concentram ônibus e lotações. Estrutura é simples, com abrigo parcial e serviços básicos; agentes locais informam sobre horários e itinerários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terminal rodoviário / ponto de embarque urbano, Alto Alegre, RR",
+        },
+      ],
+      closing:
+        "Para deslocamentos em Alto Alegre, planeje com antecedência e confirme horários diretamente com empresas e pontos de venda, sobretudo em períodos de chuvas quando estradas podem sofrer alterações. Viagens intermunicipais são possíveis, mas exigem flexibilidade quanto a tempos de viagem. Transporte local privilegia alternativas comunitárias e informais.",
+    },
+    climate: {
+      intro:
+        "O clima de Alto Alegre é tipicamente tropical, com estações bem definidas entre períodos mais chuvosos e secos, influenciado pelo regime climático do norte amazônico. Condições médias refletem temperaturas elevadas durante o ano e precipitação concentrada em meses específicos. Recomenda-se atenção ao período chuvoso para atividades ao ar livre e logísticas.",
+      body: "Classificação climática segundo Köppen atribuída ao município corresponde ao tipo tropical de savana (Aw), com estação seca marcada e pluviometria concentrada em alguns meses. A média térmica anual mantém-se elevada, com variações mínimas entre meses; chuvas são responsáveis por grande parte da dinâmica ambiental regional.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (Tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "27,5 °C",
+        },
+        {
+          label: "Precipitação anual aproximada",
+          value: "1.500 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa aproximadamente de abril a agosto, com pico de precipitação em maio/junho; estação seca de dezembro a março; meses de transição entre setembro e novembro.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/alto%20alegre/",
+      },
+    },
+    city: "Alto Alegre",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 23589,
+    reviewedOn: "2026-08-17",
+  },
+  amajari: {
+    tourism: {
+      intro:
+        "Amajari oferece paisagens de cerrado amazônico (lavrado), trechos de mata ribeirinha e comunidades tradicionais que preservam saberes indígenas. O turismo é essencialmente de natureza e cultural, com infraestrutura modesta e vocação para vivências locais. Visitas requerem planejamento e respeito às comunidades e ao ambiente.",
+      items: [
+        {
+          name: "Praça Municipal",
+          description:
+            "Praça central que funciona como núcleo das atividades cívicas e eventos locais, onde se reúnem feiras, celebrações e encontros comunitários. É ponto de referência para visitantes conhecerem a rotina da cidade e observar o comércio e a vida urbana em pequena escala.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Municipal, Amajari, RR",
+        },
+        {
+          name: "Igreja Matriz / Espaço religioso",
+          description:
+            "Igreja local que acolhe as celebrações religiosas e festas do padroeiro, representando referência histórica e social do município. As festividades religiosas costumam juntar moradores e visitantes, oferecendo oportunidade para vivenciar tradições locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz / Espaço religioso, Amajari, RR",
+        },
+        {
+          name: "Áreas de lavrado e trilhas",
+          description:
+            "Trechos de cerrado amazônico (lavrado) e trilhas por matas e campos que permitem observação de fauna e flora típicas de Roraima. O ecoturismo na região é de baixa infraestrutura, indicado para quem busca contato direto com a natureza e turismo rural.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Áreas de lavrado e trilhas, Amajari, RR",
+        },
+        {
+          name: "Rios e pontos de banho",
+          description:
+            "Trechos de rios e igarapés usados pela população para banho, pesca artesanal e pequenos passeios em canoas. Esses locais são importantes para a subsistência local e para observação de práticas tradicionais de uso dos recursos hídricos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rios e pontos de banho, Amajari, RR",
+        },
+        {
+          name: "Feiras e mercados comunitários",
+          description:
+            "Feiras municipais e pontos de comercialização onde se encontra produtos locais, hortifrutigranjeiros e artesanato, incluindo peças de origem indígena e ribeirinha. São espaços ideais para conhecer a gastronomia local, comprar artesanato e conversar com produtores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feiras e mercados comunitários, Amajari, RR",
+        },
+      ],
+      closing:
+        "O turismo em Amajari privilegia experiências autênticas e de baixa densidade, com ênfase em natureza e cultura local. Visitantes devem priorizar operadores locais e respeitar normas ambientais e costumes comunitários. Planejamento e orientação prévia são recomendáveis devido à infraestrutura limitada.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em Amajari é modesta e centrada em comércios locais, feiras e pequenos restaurantes que servem pratos regionais. Ingredientes típicos como peixes de água doce, mandioca, farinha e produtos agroextrativistas aparecem com frequência. Experiências culinárias privilegiam a comida caseira e o contato com produtores.",
+      items: [
+        {
+          name: "Restaurante Comunitário / Restaurante local",
+          description:
+            "Estabelecimento simples que serve refeições caseiras com pratos à base de peixe, carne e acompanhamentos regionais, atendendo moradores e visitantes. É um bom local para provar preparações cotidianas e colher informações sobre produtos locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante Comunitário / Restaurante local, Amajari, RR",
+        },
+        {
+          name: "Bar e Lanchonete Central",
+          description:
+            "Bar e lanchonete no centro da cidade, ponto de encontro social onde se servem petiscos, sucos e refeições rápidas. Frequentado por trabalhadores e famílias, oferece ambiente informal e pratos típicos adaptados ao gosto local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e Lanchonete Central, Amajari, RR",
+        },
+        {
+          name: "Feira Municipal de Alimentos",
+          description:
+            "Feira onde produtores locais vendem frutas, hortaliças, peixe fresco e farinha; ambiente ideal para degustar sabores regionais e adquirir ingredientes genuínos. A feira também é local de encontro e troca de saberes gastronômicos entre moradores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal de Alimentos, Amajari, RR",
+        },
+        {
+          name: "Ponto de Peixes e Produtos Ribeirinhos",
+          description:
+            "Pontos informais de comercialização de pescado e produtos ribeirinhos, com preparo simples e venda direta ao consumidor. Oferecem oportunidade para experimentar peixes locais preparados de maneira caseira e fresca.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Ponto de Peixes e Produtos Ribeirinhos, Amajari, RR",
+        },
+      ],
+      closing:
+        "A gastronomia em Amajari reflete práticas alimentares locais e produtos naturais da região. Quem visita deve aproveitar as feiras e estabelecimentos comunitários para conhecer sabores autênticos. Recomenda-se respeito às normas sanitárias e apoio a fornecedores locais.",
+    },
+    transport: {
+      intro:
+        "O transporte em Amajari é caracterizado por infraestrutura básica, com mobilidade centrada em vias estaduais e serviços locais de passageiros. A conexão com a capital e outros municípios depende principalmente de transporte rodoviário e de pequenas linhas intermunicipais. Viagens costumam exigir planejamento devido à frequência limitada.",
+      items: [
+        {
+          name: "Acesso rodoviário a partir da capital",
+          description:
+            "O principal acesso é feito por estradas estaduais e rodovias que ligam o município a Boa Vista e demais municípios de Roraima. Viagens por carro ou ônibus intermunicipal são a forma mais comum de chegar; condições podem variar conforme a estação do ano.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário a partir da capital, Amajari, RR",
+        },
+        {
+          name: "Rodoviária / Terminal municipal",
+          description:
+            "Pequeno terminal ou ponto de embarque/desembarque para linhas intermunicipais e vans, que funciona como elo entre Amajari e outras localidades. Oferece serviços básicos de embarque e coordenação de horários conforme a demanda local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / Terminal municipal, Amajari, RR",
+        },
+        {
+          name: "Linhas municipais e transporte por vans",
+          description:
+            "Transporte interno normalmente é garantido por ônibus pequenos, micro-ônibus e vans que atendem perímetros urbanos e distritos. Esses serviços operam com horários mais restritos e são fundamentais para deslocamentos diários de moradores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas municipais e transporte por vans, Amajari, RR",
+        },
+        {
+          name: "Transporte fluvial e vias secundárias",
+          description:
+            "Em áreas rurais, rios e estradas vicinais são usados para deslocamentos e acesso a comunidades ribeirinhas; pequenas embarcações e motocicletas são comuns. A capacidade de acesso pode ser afetada pelo período de chuvas, exigindo atenção ao planejar visitas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial e vias secundárias, Amajari, RR",
+        },
+      ],
+      closing:
+        "Planejar deslocamentos é importante em Amajari, dada a frequência limitada de serviços e as condições variáveis das vias. Para viagens intermunicipais, confirmar horários e reservas com antecedência é aconselhável. Respeitar práticas locais de transporte e cooperar com condutores facilita as viagens.",
+    },
+    climate: {
+      intro:
+        "Amajari situa-se em uma zona de clima tropical de savana, com estação seca bem definida e uma estação chuvosa mais concentrada durante parte do ano. O padrão climático influencia a paisagem de lavrado e as práticas agrícolas locais. Condições de calor e umidade são típicas ao longo do ano.",
+      body: "O clima local é caracterizado por temperaturas elevadas e marcação entre período seco e chuvoso, afetando a disponibilidade de água e o acesso a áreas rurais. A vegetação de lavrado e as atividades econômicas adaptam-se a essa sazonalidade.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (Tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "27 °C (aprox.)",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "≈ 1.600 mm (valor médio aproximado)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: aproximadamente de abril a setembro; estação seca: aproximadamente de outubro a março. A intensidade das chuvas e das secas pode variar ano a ano.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/amajari/",
+      },
+    },
+    city: "Amajari",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 16112,
+    reviewedOn: "2026-08-17",
+  },
+  "boa-vista": {
+    tourism: {
+      intro:
+        "Boa Vista é a capital do estado de Roraima, situada às margens do Rio Branco e atuando como porta de entrada para a geografia do extremo Norte brasileiro. A cidade combina espaços urbanos planejados com forte presença da natureza, parques e manifestações culturais regionais. Visitantes encontram infra‑estrutura básica, atrações ao ar livre e mercados que refletem a diversidade local.",
+      items: [
+        {
+          name: "Parque Anauá",
+          description:
+            "O Parque Anauá é a maior área verde urbana de Boa Vista, com trilhas, lagos, áreas de lazer e equipamentos públicos para eventos. Frequentado por moradores e turistas, funciona como pulmão da cidade e local regular para atividades físicas, feiras e programação cultural ao ar livre.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Parque Anauá, Boa Vista, RR",
+        },
+        {
+          name: "Orla Taumanan (Rio Branco)",
+          description:
+            "A orla do Rio Branco, conhecida como Taumanan, oferece calçadões e mirantes sobre o rio, quiosques e áreas de passeio ao entardecer. É ponto de encontro social, com vista para o curso d'água que marca a paisagem urbana e acesso a eventos sazonais e culinária de rua.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Orla Taumanan (Rio Branco), Boa Vista, RR",
+        },
+        {
+          name: "Catedral Cristo Redentor",
+          description:
+            "Localizada no centro da cidade, a Catedral Cristo Redentor é referência religiosa e marco arquitetônico de Boa Vista. Além das funções litúrgicas, o entorno abriga equipamentos públicos e serve como referência para visitantes que exploram o centro histórico.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Catedral Cristo Redentor, Boa Vista, RR",
+        },
+        {
+          name: "Museu Integrado de Roraima",
+          description:
+            "O museu reúne acervos sobre a história regional, etnografia e a presença indígena em Roraima, com exposições permanentes e temporárias. É um espaço institucional importante para contextualizar a formação social e cultural do estado.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Museu Integrado de Roraima, Boa Vista, RR",
+        },
+        {
+          name: "Mercado Municipal e feiras locais",
+          description:
+            "O Mercado Municipal e as feiras livres da cidade concentram comércio de alimentos, produtos regionais e artesanato, sendo locais ideais para provar iguarias norte‑ribeirinhas e comprar peças produzidas por comunidades locais. As feiras também são espaço de convivência e vivência cultural.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Mercado Municipal e feiras locais, Boa Vista, RR",
+        },
+      ],
+      closing:
+        "A rede de equipamentos turísticos de Boa Vista privilegia espaços públicos, mercados e o contato com o rio e a paisagem amazônica de Roraima. Programações culturais e feiras ocorrem ao longo do ano, integrando hábitos urbanos e tradições regionais. Para explorar com mais profundidade, consulte a prefeitura e órgãos estaduais de turismo.",
+    },
+    dining: {
+      intro:
+        "A gastronomia de Boa Vista reflete a culinária amazônica e regional: peixes de água doce, farinha de mandioca, açaí e pratos à base de produtos locais são presença constante. A cidade oferece desde barracas em feiras e orla até restaurantes mais estruturados que servem pratos típicos e opções de cozinha contemporânea. Provar a culinária local é parte essencial da experiência.",
+      items: [
+        {
+          name: "Bancas e barracas do Mercado Municipal",
+          description:
+            "No Mercado Municipal encontra‑se uma concentração de comidas regionais: caldeiradas, peixe assado, tacacá e tapiocas, além de sucos e açaí. O ambiente é autêntico e permite contato direto com produtores e preparadores locais, ideal para experimentar sabores típicos com preços acessíveis.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bancas e barracas do Mercado Municipal, Boa Vista, RR",
+        },
+        {
+          name: "Restaurantes de cozinha regional",
+          description:
+            "Restaurantes especializados em comida nortista servem pratos como filés de peixe amazônico, maniçoba adaptada e guarnições de farinha e tucupi. Esses estabelecimentos valorizam insumos locais e apresentam almoços executivos e menus que destacam a produção roraimense.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurantes de cozinha regional, Boa Vista, RR",
+        },
+        {
+          name: "Churrascarias e casas de carnes",
+          description:
+            "Como em muitas capitais brasileiras, há churrascarias que atendem ao público urbano oferecendo cortes bovinos e acompanhamentos variados. São opções populares para grupos e visitantes que procuram refeição consistente fora do circuito típico de comida regional.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Churrascarias e casas de carnes, Boa Vista, RR",
+        },
+        {
+          name: "Cafés, confeitarias e bares na orla",
+          description:
+            "Cafés e confeitarias do centro e da orla servem cafés, lanches e sobremesas, sendo locais frequentes para encontros e pausas turísticas. À noite, bares na orla e vias centrais oferecem petiscos regionais e ambiente descontraído à beira do rio.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Cafés, confeitarias e bares na orla, Boa Vista, RR",
+        },
+      ],
+      closing:
+        "A diversidade gastronômica de Boa Vista é pautada pelo uso de ingredientes locais e por ofertas populares em mercados e feiras. Para uma experiência representativa, combine visitas a mercados com refeições em restaurantes que destacam a produção regional. Horários e disponibilidade podem variar conforme temporada e eventos.",
+    },
+    transport: {
+      intro:
+        "Boa Vista é servida por infraestrutura de transporte que conecta a cidade ao restante de Roraima, a Manaus e à fronteira com a Venezuela. A malha urbana é atendida por linhas de ônibus municipais e serviços de táxi e aplicativo; o acesso rodoviário e aéreo assegura a ligação com outras regiões. Para deslocamentos locais, recomenda‑se planejamento em função das distâncias e do horário.",
+      items: [
+        {
+          name: "Aeroporto Internacional de Boa Vista – Atlas Brasil Cantanhede (BVB)",
+          description:
+            "O aeroporto de Boa Vista opera voos regulares para capitais e cidades brasileiras, servindo como principal porta aérea do estado. Oferece estrutura para passageiros e é ponto estratégico para quem chega à região por via aérea.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeroporto Internacional de Boa Vista – Atlas Brasil Cantanhede (BVB), Boa Vista, RR",
+        },
+        {
+          name: "Rodovia BR‑174",
+          description:
+            "A BR‑174 é a principal ligação rodoviária federal, conectando Boa Vista a Manaus ao sul e à fronteira com a Venezuela ao norte. A via é usada tanto por transporte de cargas quanto por ônibus interestaduais e veículos particulares, sendo crucial para o escoamento e o acesso terrestre.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodovia BR‑174, Boa Vista, RR",
+        },
+        {
+          name: "Terminal Rodoviário de Boa Vista",
+          description:
+            "O terminal rodoviário concentra partidas e chegadas de linhas intermunicipais e interestaduais, além de serviços de viajantes e comércio local. É o principal ponto para deslocamentos terrestres de longa distância no estado.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terminal Rodoviário de Boa Vista, Boa Vista, RR",
+        },
+        {
+          name: "Transporte público municipal (ônibus)",
+          description:
+            "A cidade dispõe de linhas de ônibus que cobrem bairros e corredores centrais, operando com frota municipal e integrando pontos de maior demanda. Frequência e cobertura variam conforme a linha; é recomendável consultar horários oficiais para trajetos específicos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte público municipal (ônibus), Boa Vista, RR",
+        },
+        {
+          name: "Táxis, aplicativos e transporte fluvial local",
+          description:
+            "Táxis e serviços por aplicativo são amplamente usados para deslocamentos urbanos e permitem maior flexibilidade em horários. Em trechos ao longo do Rio Branco existe também transporte fluvial pontual para comunidades ribeirinhas e atividades turísticas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Táxis, aplicativos e transporte fluvial local, Boa Vista, RR",
+        },
+      ],
+      closing:
+        "Para visitantes, o acesso por avião é a opção mais prática, enquanto a BR‑174 é a alternativa terrestre que conecta a capital a outras regiões. O transporte público urbano atende a maior parte dos bairros, mas deslocamentos pontuais podem requerer táxi ou aplicativo. Consulte horários e condições antes de viajar, especialmente na estação chuvosa.",
+    },
+    climate: {
+      intro:
+        "Boa Vista tem clima tropical com estação seca relativamente bem definida e estação chuvosa concentrada em parte do ano. As temperaturas são elevadas ao longo de todo o ano, com pequena variação térmica diária e sazonal. As condições climáticas influenciam a melhor época para atividades ao ar livre e viagens pela região.",
+      body: "O clima local é tipicamente tropical de savana (classificação de Köppen: Aw), com médias anuais altas e uma temporada de chuvas marcada. A umidade e as precipitações incidem principalmente durante os meses chuvosos, enquanto a estação seca traz céu mais claro e menor pluviosidade. Observe variações interanuais e consulte previsões locais.",
+      details: [
+        {
+          label: "Köppen",
+          value: "Aw (Tropical de savana, estação seca)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "≈ 27,5 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "≈ 1.600 mm",
+        },
+        {
+          label: "Estação chuvosa",
+          value:
+            "aprox. abril a setembro, com pico de precipitação nos meses centrais",
+        },
+        {
+          label: "Estação seca",
+          value:
+            "aprox. dezembro a março, caracterizada por menor chuva e céu mais claro",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/boa%20vista/",
+      },
+    },
+    city: "Boa Vista",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 485477,
+    reviewedOn: "2026-08-17",
+  },
+  bonfim: {
+    tourism: {
+      intro:
+        "Bonfim, município do norte de Roraima na fronteira com a Guiana, reúne paisagens de rios, áreas de savana e povoados que preservam práticas tradicionais. A cidade funciona como porto de passagem para comunidades ribeirinhas e fronteiriças, com cultura regional marcada pelo intercâmbio amazônico e guianense. O patrimônio local é discreto, mas articulado em praças, igrejas e feiras que revelam a vida cotidiana.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "A praça principal concentra o comércio informal, espaços de convivência e eventos cívicos. É ponto de encontro para feiras, celebrações religiosas e manifestações culturais, oferecendo uma leitura direta da vida urbana de Bonfim.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Bonfim, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "Igreja paroquial que atua como centro de atividades religiosas e festas do padroeiro, com presença constante nas datas comemorativas. O templo é referência para a comunidade local e para as celebrações que mobilizam moradores das áreas rurais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Bonfim, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "A feira reúne produtores locais e vendedores de pescado, hortaliças, farinha e artesanato regional. É local ideal para experimentar ingredientes típicos da dieta roraimense e observar redes de troca entre comunidades ribeirinhas e urbanas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Bonfim, RR",
+        },
+        {
+          name: "Margens dos rios e ambiente ribeirinho",
+          description:
+            "As calhas fluviais próximas ao perímetro urbano oferecem pontos para pesca, embarque e contemplação da paisagem de igarapés e mata de galeria. Passeios simples à margem dos rios permitem observar a biodiversidade e as atividades econômicas tradicionais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Margens dos rios e ambiente ribeirinho, Bonfim, RR",
+        },
+        {
+          name: "Festas e eventos comunitários",
+          description:
+            "Celebrações locais, como festas do padroeiro e eventos juninos, são momentos de intenso convívio social, música e culinária típica. Esses festejos revelam a mistura de referências culturais regionais e o papel das associações e da igreja na organização comunitária.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Festas e eventos comunitários, Bonfim, RR",
+        },
+      ],
+      closing:
+        "Bonfim oferece um turismo de contato com a natureza e com as práticas cotidianas de uma cidade de fronteira, sem grandes infraestrutura turística. A experiência privilegia vivências locais: feiras, celebrações e passeios ribeirinhos. Para visitantes, é recomendável buscar guias locais e respeitar os ritmos das comunidades.",
+    },
+    dining: {
+      intro:
+        "A gastronomia em Bonfim é pautada por ingredientes regionais: peixes de água doce, farinha, mandioca e frutas tropicais. O cardápio reflete influências amazônicas e o intercâmbio com territórios fronteiriços, oferecendo pratos simples e saborosos em estabelecimentos familiares. A feira municipal é um importante espaço gastronômico e social.",
+      items: [
+        {
+          name: "Restaurante regional (centro)",
+          description:
+            "Estabelecimento típico que serve caldeiradas, filés de peixe e acompanhamentos à base de farinha e macaxeira. O serviço costuma ser caseiro e voltado ao público local, com preços acessíveis e porções generosas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante regional (centro), Bonfim, RR",
+        },
+        {
+          name: "Bar e boteco da Praça",
+          description:
+            "Bar popular localizado junto à praça central, ponto de encontro para moradores e viajantes, que serve petiscos regionais e bebidas. É ambiente para conversas informais e para provar pratos rápidos com ingredientes locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e boteco da Praça, Bonfim, RR",
+        },
+        {
+          name: "Banca da Feira (pescados e comidas típicas)",
+          description:
+            "Vendedores na feira oferecem peixes frescos, tacacá simplificado, tapiocas e pratos prontos feitos na hora. A feira é o melhor local para experimentar sabores locais e comprar ingredientes frescos diretamente de produtores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Banca da Feira (pescados e comidas típicas), Bonfim, RR",
+        },
+        {
+          name: "Pequenos restaurantes familiares",
+          description:
+            "Diversos restaurantes de pequeno porte preparam refeições diárias com foco em pratos regionais e atendimento personalizado. Esses estabelecimentos são indicados para quem busca autenticidade e contato direto com a culinária local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pequenos restaurantes familiares, Bonfim, RR",
+        },
+      ],
+      closing:
+        "A oferta gastronômica de Bonfim é modesta, centrada em empreendimentos familiares e na feira municipal. Quem visita deve valorizar a culinária de base regional e considerar horários locais para refeições. Recomenda-se perguntar a moradores por indicações atualizadas de estabelecimentos.",
+    },
+    transport: {
+      intro:
+        "O acesso a Bonfim combina transporte rodoviário, itinerários intermunicipais e transporte fluvial nas áreas ribeirinhas. A malha viária local conecta a cidade a Boa Vista e a pontos fronteiriços, enquanto vans, ônibus e barcos atendem deslocamentos diários. A infraestrutura é funcional, adequada ao fluxo local e às necessidades das comunidades vizinhas.",
+      items: [
+        {
+          name: "Acesso rodoviário",
+          description:
+            "A cidade é servida por rodovias que a ligam à capital estadual e a municípios vizinhos, possibilitando tráfego de automóveis, ônibus interestaduais e transporte de cargas. Trechos podem ser sujeitos a variações de condição conforme o período chuvoso.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário, Bonfim, RR",
+        },
+        {
+          name: "Terminal rodoviário / ponto de embarque",
+          description:
+            "Existência de um terminal ou ponto central de embarque onde partem ônibus e vans para Boa Vista e outras localidades. O terminal funciona como nó para viagens intermunicipais e transporte de passageiros e pequenas cargas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terminal rodoviário / ponto de embarque, Bonfim, RR",
+        },
+        {
+          name: "Linhas intermunicipais e vans",
+          description:
+            "Serviços regulares de vans e ônibus ligam Bonfim a municípios próximos e à capital, com frequência variável ao longo da semana. Esses meios são fundamentais para deslocamentos de trabalho, saúde e comércio.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais e vans, Bonfim, RR",
+        },
+        {
+          name: "Transporte fluvial e embarcações locais",
+          description:
+            "Em áreas ribeirinhas, embarcações e pequenas lanchas garantem a comunicação com comunidades ao longo dos rios. O transporte fluvial é usado tanto para pesca e atividades econômicas quanto para o deslocamento de pessoas e mercadorias.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial e embarcações locais, Bonfim, RR",
+        },
+        {
+          name: "Serviços de táxi e mototáxi",
+          description:
+            "Operam na cidade serviços informais como táxis e mototáxis, comuns em trajetos curtos dentro do perímetro urbano e para povoados próximos. São opções práticas para deslocamentos rápidos quando disponíveis.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Serviços de táxi e mototáxi, Bonfim, RR",
+        },
+      ],
+      closing:
+        "O transporte em Bonfim atende às demandas locais com modalidades mistas: rodoviário, fluvial e serviços informais. Planeje deslocamentos considerando variações sazonais e horários de saída de ônibus. Para viagens intermunicipais mais longas, verificar horários e condições das rodovias previamente.",
+    },
+    climate: {
+      intro:
+        "Bonfim está inserido em clima equatorial de transição para clima de savana, com estação chuvosa bem definida e meses mais secos. As características climáticas influenciam atividades agrícolas, navegação fluvial e eventos locais. O clima é quente durante o ano todo, com amplitude térmica anual reduzida.",
+      body: "Classificação climática conforme Köppen: Aw (tropical de savana), com temperatura média alta ao longo do ano e precipitação concentrada em poucos meses. A estação chuvosa favorece o crescimento da vegetação e eleva o nível dos rios, enquanto a estação seca reduz o volume hídrico e altera acesso a áreas ribeirinhas.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "27,5 °C (estimativa regional)",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "1.600 mm (estimativa aproximada)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa entre abril e agosto; estação mais seca entre setembro e março, com redução das chuvas e maiores amplitudes de poeira e ventos ocasionais.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/bonfim/",
+      },
+    },
+    city: "Bonfim",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 15570,
+    reviewedOn: "2026-08-17",
+  },
+  canta: {
+    tourism: {
+      intro:
+        "Cantá, município situado no estado de Roraima, apresenta um perfil turístico de pequena escala focado na natureza e na vida comunitária. A malha urbana concentra praças e a igreja matriz, enquanto os arredores reúnem igarapés, trechos de mata e comunidades rurais. As festas municipais e a feira típica são momentos importantes para conhecer a cultura local.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "A praça central funciona como núcleo da cidade, reunindo comércio, eventos cívicos e atividades ao ar livre. É comum encontrar bancas, pessoas em convívio e celebrações locais, sendo ponto de partida para conhecer a rotina urbana de Cantá.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Cantá, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "A igreja matriz é referência religiosa e arquitetônica do município, palco de missas e festas padronais que mobilizam moradores das comunidades vizinhas. Além do caráter devocional, a igreja costuma ser ponto de encontro em datas comemorativas e procissões.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Cantá, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "A feira municipal reúne produtores locais, venda de pescado, hortifrutigranjeiros e comidas regionais, oferecendo panorama direto da economia familiar. Visitar a feira é oportunidade para provar ingredientes típicos e observar práticas alimentares e artesanais da região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Cantá, RR",
+        },
+        {
+          name: "Trechos de mata ripária e igarapés",
+          description:
+            "Nos arredores da sede há mata ripária, pequenos igarapés e trechos com quedas d'água que atraem moradores em busca de lazer e pesca artesanal. Esses pontos naturais são indicados para quem procura contato com a flora e fauna locais, sempre com atenção às normas de preservação.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Trechos de mata ripária e igarapés, Cantá, RR",
+        },
+      ],
+      closing:
+        "O turismo em Cantá é de proximidade: valoriza interação com moradores, produtos locais e paisagens simples, porém autênticas. Recomenda-se verificar calendário da prefeitura para eventos e horários da feira. Visitantes devem respeitar normas ambientais e infraestruturas limitadas fora do centro urbano.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica de Cantá é predominantemente local e informal, centrada em restaurantes simples, bares de bairro e barracas na feira. Pratos com peixe de água doce, preparações com mandioca e combinações de influências amazônicas compõem o cardápio habitual. Serviço e formas de pagamento podem ser mais restritos que em centros urbanos maiores.",
+      items: [
+        {
+          name: "Restaurante regional (centro)",
+          description:
+            "Estabelecimentos de comida caseira no centro servem pratos regionais como peixe fresco, farinha, tucupi e guarnições feitas com mandioca. O ambiente é simples, atenção ao horário de funcionamento e à disponibilidade de insumos sazonais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante regional (centro), Cantá, RR",
+        },
+        {
+          name: "Bares e lanchonetes do núcleo urbano",
+          description:
+            "Pequenos bares e lanchonetes são locais de convívio social onde se encontram petiscos, sanduíches e bebidas geladas, além de pratos rápidos. São pontos frequentes para diálogo com moradores e para experimentar preparações locais em ambiente informal.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bares e lanchonetes do núcleo urbano, Cantá, RR",
+        },
+        {
+          name: "Bancas e barracas da Feira Municipal",
+          description:
+            "Na feira é possível provar comidas preparadas na hora, como caldos, frituras e sobremesas regionais, além de comprar peixe e produtos da agricultura familiar. A feira é referência para quem busca sabores autênticos e ingredientes frescos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bancas e barracas da Feira Municipal, Cantá, RR",
+        },
+        {
+          name: "Produtos de tapioca e doces de mandioca",
+          description:
+            "Pequenos produtores e cozinheiras locais oferecem tapiocas, beiju e doces à base de mandioca, itens tradicionais da culinária regional. Essas preparações refletem técnicas locais e são encontradas em padarias, feiras e eventos comunitários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Produtos de tapioca e doces de mandioca, Cantá, RR",
+        },
+      ],
+      closing:
+        "Ao comer em Cantá, prefira estabelecimentos recomendados por moradores e experimente os produtos da feira para uma vivência autêntica. Leve dinheiro em espécie, pois pagamentos eletrônicos podem ser limitados. Respeite horários e apoie o comércio local.",
+    },
+    transport: {
+      intro:
+        "O acesso a Cantá se dá principalmente por via rodoviária, com ligações ao entorno e à capital estadual por ônibus intermunicipais e veículos particulares. A cidade dispõe de serviços de transporte local informais, como táxis, mototáxis e kombis, que interligam bairros e povoados. A infraestrutura é básica e pode ser afetada nas chuvas.",
+      items: [
+        {
+          name: "Acesso rodoviário",
+          description:
+            "A principal conexão de Cantá com o resto do estado é feita por rodovias federais e estaduais que permitem o deslocamento até Boa Vista e municípios vizinhos. As condições de tráfego variam conforme as intempéries; recomenda-se verificar situação das estradas em períodos chuvosos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário, Cantá, RR",
+        },
+        {
+          name: "Rodoviária/terminal municipal",
+          description:
+            "O terminal rodoviário local concentra partidas e chegadas de ônibus e vans intermunicipais, servindo como nó para quem viaja para a capital e povoados. Os horários costumam ser mais reduzidos nos fins de semana e feriados.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária/terminal municipal, Cantá, RR",
+        },
+        {
+          name: "Linhas intermunicipais e vans",
+          description:
+            "Linhas regulares e serviços alternativos (vans e micro-ônibus) fazem a ligação com Boa Vista e outras sedes municipais, com frequência variável conforme demanda. É comum que haja menos viagens durante a noite, exigindo planejamento prévio.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais e vans, Cantá, RR",
+        },
+        {
+          name: "Transporte local informal",
+          description:
+            "Táxis, mototáxis e kombis atendem deslocamentos dentro da cidade e para comunidades rurais próximas, oferecendo flexibilidade, especialmente onde o transporte público formal é escasso. Negocie tarifa e horários com antecedência em trechos mais distantes.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte local informal, Cantá, RR",
+        },
+      ],
+      closing:
+        "Planeje deslocamentos consultando a prefeitura ou empresas de transporte locais para horários atualizados. Em períodos de chuva intensa, verifique condições das rodovias e considere alternativas. Para maior mobilidade dentro do município, conte com os serviços informais e transporte por aplicativo quando disponível.",
+    },
+    climate: {
+      intro:
+        "Cantá situa-se em região de clima tropical com estação seca relativamente pronunciada e alta umidade no período chuvoso. As temperaturas médias são elevadas ao longo do ano, com pouca variação térmica mensal. A precipitação concentra-se em alguns meses, impactando vias não pavimentadas e atividades ao ar livre.",
+      body: "O clima é caracteristicamente quente e úmido na estação chuvosa, com chuvas regulares que alimentam igarapés e a vegetação de transição. Na estação seca, a falta de chuva reduz o nível das águas e diminui a umidade relativa, facilitando o deslocamento e eventos ao ar livre. Variações diurnas são moderadas e a amplitude térmica anual é baixa.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw — Tropical de savana (estação seca marcada)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "26,5 °C (média anual aproximada)",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value:
+            "Aproximadamente 1.400 mm (valor aproximado, sujeito a variações interanuais)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: abril a setembro; estação seca: outubro a março. Temperaturas médias mensalmente entre 24 °C e 29 °C, com maior umidade na estação chuvosa.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/canta/",
+      },
+    },
+    city: "Cantá",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 21102,
+    reviewedOn: "2026-08-17",
+  },
+  caracarai: {
+    tourism: {
+      intro:
+        "Caracaraí é um município de passagem estratégica no interior de Roraima, conhecido pela ligação entre Boa Vista e regiões mais ao sul e oeste. A cidade combina trechos de natureza ribeirinha com espaços urbanos simples e feiras locais que expressam a vida cotidiana. Visitantes encontram pontos de ócio à beira do rio, praças centrais e comunidades ribeirinhas com atividades de pesca e turismo de base comunitária.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "A Praça Central funciona como núcleo de convívio urbano, com áreas sombreadas, coreto e comércio adjacente. É ponto de encontro para eventos cívicos, feiras esporádicas e manifestações culturais da cidade, oferecendo panorama da vida local e contato com moradores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Caracaraí, RR",
+        },
+        {
+          name: "Praia fluvial no Rio Branco",
+          description:
+            "Trechos de margens do Rio Branco próximos ao centro municipal são usados como áreas de lazer fluvial, com praias de água doce e acesso por embarcações locais. A atividade concentra banhistas, pesca artesanal e pequenas barracas, sendo alternativa para apreciar paisagens ribeirinhas e pôr do sol.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praia fluvial no Rio Branco, Caracaraí, RR",
+        },
+        {
+          name: "Feira Municipal de Produtores",
+          description:
+            "A feira livre reúne produtores locais, pescadores e artesãos, oferecendo frutas regionais, pescado fresco, farinha e produtos caseiros. É um bom local para entender a economia local, experimentar ingredientes amazônicos e observar cadeias curtas de produção.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal de Produtores, Caracaraí, RR",
+        },
+        {
+          name: "Igreja Matriz e patrimônio religioso",
+          description:
+            "A igreja matriz e capelas locais representam o centro religioso e social, com celebrações sazonais que atraem moradores da zona rural. Arquitetura modesta e programação ligada a festas religiosas mostram tradições comunitárias preservadas no município.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz e patrimônio religioso, Caracaraí, RR",
+        },
+        {
+          name: "Comunidades ribeirinhas e ecoturismo de base",
+          description:
+            "Comunidades ribeirinhas e assentamentos próximos proporcionam experiências de turismo comunitário, com pesca artesanal e roteiros de observação da natureza. Visitas organizadas permitem conhecer modos de vida locais, manejo pesqueiro e pequenas trilhas na mata ribeirinha.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Comunidades ribeirinhas e ecoturismo de base, Caracaraí, RR",
+        },
+      ],
+      closing:
+        "O turismo em Caracaraí é de natureza essencialmente local e de curta duração, favorecendo o visitante interessado em vida ribeirinha e cultura regional. A infraestrutura é modesta, com opções simples de hospedagem e alimentação, exigindo planejamento para roteiros mais longos. Quem busca contato com comunidades e paisagens fluviais encontrará oportunidades autênticas.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica de Caracaraí é caracteristicamente regional e funcional, centrada em pratos à base de pescado de água doce e ingredientes da agricultura local. Restaurantes e bares atendem moradores e viajantes de passagem pela BR-174, com foco em refeições caseiras e preços acessíveis. Bancas e cozinhas do mercado municipal complementam a experiência com produtos frescos.",
+      items: [
+        {
+          name: "Restaurante junto à orla/rio",
+          description:
+            "Pequenos restaurantes e barracas à beira do rio servem pratos com peixe fresco, como tambaqui e outros exemplares locais, acompanhados de farinha e mandioca. O ambiente é simples e informal, privilegiando produtos locais e porções familiares, ideal para quem busca comida regional autêntica.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante junto à orla/rio, Caracaraí, RR",
+        },
+        {
+          name: "Restaurante do Mercado Municipal",
+          description:
+            "No entorno do mercado municipal encontram-se cozinhas populares que preparam refeições executivas e pratos regionais a preços módicos. É local de escolha para trabalhadores e visitantes que desejam provar pratos caseiros e aproveitar ingredientes recém-comprados na feira.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante do Mercado Municipal, Caracaraí, RR",
+        },
+        {
+          name: "Bares e lanchonetes da Praça Central",
+          description:
+            "Bares e lanchonetes na praça oferecem petiscos, porções e cafés, funcionando como pontos de encontro à tarde e à noite. Essas casas servem bebidas locais, sanduíches e pratos rápidos, além de serem referência para socialização entre moradores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bares e lanchonetes da Praça Central, Caracaraí, RR",
+        },
+        {
+          name: "Comida regional e produtos de economia familiar",
+          description:
+            "A gastronomia local valoriza peixes de água doce, farinha de mandioca, açaí e preparos caseiros produzidos por famílias rurais. Compras na feira permitem levar insumos regionais e experimentar receitas tradicionais em ambientes comunitários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Comida regional e produtos de economia familiar, Caracaraí, RR",
+        },
+      ],
+      closing:
+        "A cena gastronômica de Caracaraí privilegia tradições alimentares da Amazônia e oferta serviços simples voltados à população local e viajantes. Não espere grandes restaurantes, mas sim boas oportunidades para provar ingredientes frescos e preparações caseiras. Para refeições específicas, recomenda-se confirmar horários e disponibilidade com antecedência.",
+    },
+    transport: {
+      intro:
+        "O transporte em Caracaraí combina acessos rodoviários federais, serviços intermunicipais e opções fluviais que atendem comunidades ribeirinhas. A localização na BR-174 torna a cidade um ponto de passagem estratégico entre Boa Vista e municípios do sul do estado. A mobilidade urbana interna é realizada por táxis, mototáxis e transporte informal.",
+      items: [
+        {
+          name: "BR-174 (acesso rodoviário federal)",
+          description:
+            "A BR-174 é a principal via de acesso a Caracaraí, ligando a cidade a Boa Vista, Manaus e zonas internas de Roraima, sendo usada por transporte de cargas e ônibus interestaduais. A rodovia facilita logística e viagens, mas exige atenção ao tráfego de longa distância e às condições sazonais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=BR-174 (acesso rodoviário federal), Caracaraí, RR",
+        },
+        {
+          name: "Rodoviária / Terminal rodoviário",
+          description:
+            "O terminal rodoviário municipal concentra serviços de transporte intermunicipal e eventuais linhas interestaduais, com partidas regulares para Boa Vista e municípios vizinhos. Estrutura é funcional, com bilheterias e embarque para passageiros locais e viajantes de passagem.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / Terminal rodoviário, Caracaraí, RR",
+        },
+        {
+          name: "Transporte fluvial pelo Rio Branco",
+          description:
+            "O rio funciona como via de transporte complementar, com embarcações que atendem comunidades ribeirinhas e transportam pessoas e pequenas cargas. Serviços são em geral informais ou comunitários, essenciais para localidades sem acesso rodoviário direto.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial pelo Rio Branco, Caracaraí, RR",
+        },
+        {
+          name: "Táxi, mototáxi e transporte local",
+          description:
+            "Táxis e mototáxis atendem deslocamentos urbanos e curtas distâncias dentro do município, sendo meios práticos para acessar bairros, feiras e pontos turísticos. Esses serviços funcionam com tarifas locais e flexibilidade de horários, importante em áreas com oferta limitada de transporte coletivo.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Táxi, mototáxi e transporte local, Caracaraí, RR",
+        },
+      ],
+      closing:
+        "A malha de transporte de Caracaraí é orientada pela rodovia federal e complementada por vias fluviais e serviços locais de táxi e mototáxi. Para deslocamentos mais longos recomenda-se planejar com antecedência e checar horários de ônibus e embarcações. Infraestrutura é básica, sendo prudente considerar variações sazonais no acesso.",
+    },
+    climate: {
+      intro:
+        "O clima de Caracaraí é típico do interior amazônico, com altas temperaturas ao longo do ano e variação entre estação chuvosa e período mais seco. Condições favoráveis à vegetação ribeirinha e atividades de pesca moldam a paisagem e a rotina local. A umidade se mantém elevada durante a estação das chuvas, exigindo atenção para quem visita na época de maiores precipitações.",
+      body: "A classificação climática para a região é do tipo tropical de savana (Aw) com influência de regime monçônico em alguns anos, apresentando temperatura média anual elevada e precipitação concentrada em meses chuvosos. A combinação de calor e umidade define as estações e impacta transporte e atividades ao ar livre.",
+      details: [
+        {
+          label: "Köppen",
+          value: "Aw (Tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "27 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "1.600 mm (aprox.)",
+        },
+        {
+          label: "Estação chuvosa",
+          value:
+            "Abril a setembro, com maior concentração de precipitação e aumento da umidade",
+        },
+        {
+          label: "Estação seca",
+          value:
+            "Outubro a março, período mais seco e ventoso, com menor pluviometria e maior incidência de queimadas no entorno",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/caracarai/",
+      },
+    },
+    city: "Caracaraí",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 22750,
+    reviewedOn: "2026-08-17",
+  },
+  caroebe: {
+    tourism: {
+      intro:
+        "Caroebe é um município do sudeste de Roraima que combina pequenas áreas urbanas com paisagens de cerrado e matas de galeria. O turismo local é de base natural e comunitária, voltado a trechos de rios, praças e manifestações populares. Visitantes costumam procurar praças centrais, igrejas e pontos de observação da paisagem rural.",
+      items: [
+        {
+          name: "Praça da Matriz",
+          description:
+            "Praça central e ponto de encontro da cidade, com arborização e bancos que servem à vida comunitária. A área é palco de eventos cívicos e festas locais, além de concentrar comércio informal e serviços próximos ao centro administrativo.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça da Matriz, Caroebe, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "Igreja paroquial que desempenha papel social e cultural importante na comunidade, recebendo celebrações religiosas e eventos comemorativos. A construção, simples na arquitetura, é referência para tradições religiosas e atividades comunitárias do município.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Caroebe, RR",
+        },
+        {
+          name: "Trechos de praia fluvial no rio Caroebe",
+          description:
+            "Margens do rio que cortam a região oferecem praias de água doce usadas para banho, pesca e lazer pela população local. Locais de fácil acesso a partir do centro municipal, ideais para observação da fauna ribeirinha e atividades recreativas simples.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Trechos de praia fluvial no rio Caroebe, Caroebe, RR",
+        },
+        {
+          name: "Área de savana e matas de galeria",
+          description:
+            "Paisagens de cerrado e faixas de mata ao longo de cursos d'água compõem o entorno do município, com flora e fauna típicas da transição Amazônia–Cerrado. Trilhas curtas e passeios guiados por moradores permitem conhecer espécies locais e práticas tradicionais de manejo.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Área de savana e matas de galeria, Caroebe, RR",
+        },
+        {
+          name: "Feira Municipal e festas locais",
+          description:
+            "A feira semanal concentra produtores, venda de pescado e alimentos regionais, além de ser palco de trocas sociais e comerciais. Eventos municipais e festas juninas/folclóricas atraem moradores e visitantes, valorizando gastronomia e música locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal e festas locais, Caroebe, RR",
+        },
+      ],
+      closing:
+        "O turismo em Caroebe é discreto e baseado em experiências de contato com a natureza e com a comunidade local. Estrutura hoteleira é reduzida, por isso o visitante deve planejar logística e hospedagem com antecedência. O roteiro típico reúne praça central, igreja, feira e atividades ribeirinhas.",
+    },
+    dining: {
+      intro:
+        "A gastronomia em Caroebe reflete ingredientes amazônicos e práticas de interior: peixe de água doce, farinha, mandioca e pratos simples preparados em estabelecimentos familiares. A cena alimentar é principalmente local, centrada em restaurantes populares, barracas de feira e bares. Experiências gastronômicas valorizam insumos regionais e atendimento informal.",
+      items: [
+        {
+          name: "Restaurante Popular Municipal",
+          description:
+            "Estabelecimento que serve refeições caseiras a preços acessíveis, voltado a servidores e moradores. O cardápio costuma incluir arroz, feijão, peixe regional e acompanhamentos típicos da culinária nordestina e amazônica adaptada ao paladar local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante Popular Municipal, Caroebe, RR",
+        },
+        {
+          name: "Bares da Praça",
+          description:
+            "Conjunto de bares e botecos ao redor da praça central onde moradores se reúnem ao final do dia. Servem petiscos simples, porções de peixe e bebidas; são também pontos de socialização e troca de informações sobre eventos e mercados.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bares da Praça, Caroebe, RR",
+        },
+        {
+          name: "Barracas da Feira Livre",
+          description:
+            "Feira semanal com bancas que vendem pescado fresco, mandioca, frutas e pratos prontos preparados localmente. É lugar ideal para provar iguarias regionais em ambiente informal e para comprar ingredientes frescos produzidos na região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Barracas da Feira Livre, Caroebe, RR",
+        },
+        {
+          name: "Casa de Peixes e Pratos Regionais",
+          description:
+            "Pequeno restaurante especializado em pratos à base de peixes de água doce, com caldeiradas e frituras típicas. Atendimento simples e porções pensadas para partilha, valorizando ingredientes locais e técnicas de preparo tradicionais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Casa de Peixes e Pratos Regionais, Caroebe, RR",
+        },
+        {
+          name: "Lanchonete e confeitaria local",
+          description:
+            "Estabelecimento que atende demanda diária por lanches, cafés e doces caseiros, muito frequentado por trabalhadores e estudantes. Oferece opções rápidas para quem circula pelo centro, com produtos preparados na própria loja.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete e confeitaria local, Caroebe, RR",
+        },
+      ],
+      closing:
+        "A oferta gastronômica em Caroebe é modesta e orientada para o consumo local, com ênfase em peixes e alimentos regionais. Visitantes encontram opções simples e autênticas sobretudo na feira e em estabelecimentos familiares. Recomenda-se experimentar produtos frescos e combinar com roteiros de contato com a natureza.",
+    },
+    transport: {
+      intro:
+        "O sistema de transporte em Caroebe é básico e atende principalmente deslocamentos intermunicipais e as demandas locais. A cidade dispõe de terminal rodoviário de pequeno porte e serviços regulares ou por demanda de vans e ônibus para municípios vizinhos. A malha viária inclui vias municipais e acesso por estradas estaduais e federais em trechos que ligam à capital do estado.",
+      items: [
+        {
+          name: "Terminal Rodoviário Municipal",
+          description:
+            "Ponto de embarque e desembarque para linhas intermunicipais e veículos de fretamento, com infraestrutura reduzida. Opera ligações esporádicas rumo a municípios vizinhos e, em geral, coordena horários de viajantes e transporte de cargas leves.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terminal Rodoviário Municipal, Caroebe, RR",
+        },
+        {
+          name: "Linhas intermunicipais (vans e ônibus)",
+          description:
+            "Serviços regulares e semiflexíveis que conectam Caroebe a polos próximos e a Boa Vista, dependendo da demanda. Veículos costumam operar em horários definidos, mas horários e frequência podem variar conforme sazonalidade e procura.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais (vans e ônibus), Caroebe, RR",
+        },
+        {
+          name: "Acesso rodoviário",
+          description:
+            "O acesso terrestre se faz por estradas estaduais e trechos federais que ligam o município a outras localidades de Roraima. Condições das vias podem variar; é recomendável verificar estado das estradas em período chuvoso e planejar deslocamentos com antecedência.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário, Caroebe, RR",
+        },
+        {
+          name: "Transporte fluvial local",
+          description:
+            "Trechos de rios na área são usados para deslocamentos curtos, pesca e transporte de cargas leves por comunidades ribeirinhas. Em trechos navegáveis, embarcações pequenas asseguram ligação entre pontos de margem e áreas de lazer.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial local, Caroebe, RR",
+        },
+        {
+          name: "Serviços de táxi e transporte por aplicativo informal",
+          description:
+            "Taxis e motoristas autônomos asseguram deslocamentos dentro do município; aplicativos de transporte têm oferta limitada. Para deslocamentos urbanos e urgentes, esse serviço costuma ser a alternativa mais prática à falta de frotas maiores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Serviços de táxi e transporte por aplicativo informal, Caroebe, RR",
+        },
+      ],
+      closing:
+        "Planejar deslocamentos em Caroebe requer atenção à frequência dos serviços e às condições das estradas, sobretudo na estação das chuvas. Para maior segurança logística, verifique horários e reserve com antecedência quando possível. Transporte fluvial e veículos locais complementam a mobilidade no município.",
+    },
+    climate: {
+      intro:
+        "O clima em Caroebe é tropical de savana, com estação seca bem definida e temporada de chuvas concentrada em alguns meses do ano. As condições favorecem o predomínio de vegetação de cerrado e matas de galeria nas áreas ribeirinhas. Variações diárias de temperatura são moderadas, com índices de umidade mais altos na estação chuvosa.",
+      body: "As chuvas ocorrem principalmente entre abril e setembro, enquanto o período mais seco vai de outubro a março, com redução significativa de precipitação. Temperatura média anual é elevada e estáveis, mantendo o clima quente ao longo do ano. A classificação climática, precipitação e médias térmicas orientam atividades agrícolas e turísticas na região.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (Tropical de savana, inverno seco)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "26,5 °C",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "cerca de 1.800 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: abril a setembro; estação seca: outubro a março",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/caroebe/",
+      },
+    },
+    city: "Caroebe",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 12004,
+    reviewedOn: "2026-08-17",
+  },
+  iracema: {
+    tourism: {
+      intro:
+        "Iracema, município do sul de Roraima, apresenta um perfil de turismo essencialmente local e de natureza, marcado por praças, igrejas e trechos de rio que servem de lazer. A cidade conserva rotinas rurais e eventos comunitários que atraem visitantes da região. A infraestrutura é simples, favorecendo quem busca contato direto com a paisagem e com a comunidade. Visitas costumam combinar lazer, compras na feira e experiências gastronômicas caseiras.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "Ponto de encontro da cidade, a praça central concentra comércios, bancos e eventos cívicos. Árvores e bancos formam espaço de convivência, especialmente aos finais de semana, quando famílias se reúnem e vendedores ambulantes oferecem lanches. É referência para orientação e início de roteiros locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Iracema, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "A igreja matriz funciona como marco religioso e cultural da cidade, recebendo celebrações religiosas e festas patronais. Sua construção reflete a arquitetura simples de municípios rurais e costuma ser palco de missas, procissões e eventos sociais importantes. Visitas respeitosas permitem conhecer a devoção local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Iracema, RR",
+        },
+        {
+          name: "Balneário/trechos de banho no rio",
+          description:
+            "Trechos de rio e pequenas praias fluviais próximos ao perímetro urbano são usados para banho e lazer nos meses mais quentes. Locais de banho oferecem sombra de árvores e pontos para piquenique, com presença de moradores locais e visitantes regionais. A infraestrutura é básica, dependendo muito da sazonalidade das águas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Balneário/trechos de banho no rio, Iracema, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "A feira municipal é núcleo vivo da cidade, onde se comercializam hortifrutigranjeiros, peixes, artesanato e comidas típicas. Além de compras, a feira é importante espaço de sociabilidade e fonte para degustação de pratos regionais. A movimentação maior ocorre nas manhãs e em dias de feira livre definidos pela prefeitura.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Iracema, RR",
+        },
+        {
+          name: "Festas tradicionais e aniversários",
+          description:
+            "As festas juninas, celebrações do padroeiro e o aniversário do município reúnem shows, barraquinhas e manifestações culturais locais. Esses eventos atraem moradores de povoados vizinhos e reforçam a identidade comunitária, com apresentações musicais e competições regionais. São oportunidades para conhecer culinária e artesanato.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Festas tradicionais e aniversários, Iracema, RR",
+        },
+      ],
+      closing:
+        "O turismo em Iracema privilegia experiências simples e próximas à natureza, com forte presença comunitária. Viagens para a cidade costumam combinar lazer fluvial, participação em feiras e presença nas festas locais. A oferta é mais indicada para quem busca turismo de contatos diretos e serviço básico. Planejamento prévio é recomendável em função da infraestrutura.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica de Iracema é caracterizada pela cozinha caseira e ingredientes locais, com forte presença de peixes de água doce, mandioca e pratos regionais. Restaurantes e lanchonetes atendem o público local com refeições simples e porções para compartilhar. A feira municipal e barracas de rua são alternativas para provar sabores autênticos. Horários seguem rotina regional, com movimento intenso nas manhãs e finais de tarde.",
+      items: [
+        {
+          name: "Restaurante de comida caseira (restaurante local)",
+          description:
+            "Estabelecimentos de comida caseira servem almoços por quilo e pratos feitos, com destaque para peixes, arroz, feijão e farinha. O ambiente é informal e voltado para trabalhadores e famílias, oferecendo refeições fartas a preços acessíveis. É o principal recurso para quem busca comida típica do dia a dia.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante de comida caseira (restaurante local), Iracema, RR",
+        },
+        {
+          name: "Lanchonete e bar da praça",
+          description:
+            "Lanchonetes próximas à praça central reúnem moradores em torno de café, salgados e petiscos à noite, funcionando também como ponto de encontro. Bares simples oferecem bebidas, porções e música ao vivo eventualmente, integrando a vida social local. Atendimento costuma ser pessoal e adaptado ao ritmo da comunidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete e bar da praça, Iracema, RR",
+        },
+        {
+          name: "Barracas da Feira Municipal",
+          description:
+            "Nas barracas da feira é possível provar produtos regionais e comidas prontas, como tucunaré ou outro peixe frito, tapiocas e salgados feitos na hora. A feira também oferece frutas e raízes típicas da região, favorecendo um contato direto com produtores locais. É local privilegiado para experiências gastronômicas autênticas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Barracas da Feira Municipal, Iracema, RR",
+        },
+        {
+          name: "Comércio informal de alimentos",
+          description:
+            "Vendedores ambulantes e serviços informais atendem caminhos e pontos de maior fluxo, com opções rápidas como espetinhos, bolos e sucos. Esses pontos complementam a oferta fixa da cidade e são comuns em festas e eventos. A higiene e infraestrutura variam, por isso recomenda-se observar condições antes do consumo.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Comércio informal de alimentos, Iracema, RR",
+        },
+      ],
+      closing:
+        "A gastronomia em Iracema privilegia sabores simples e ingredientes locais, com predominância de peixes e pratos caseiros. Quem visita a cidade encontrará opções em restaurantes, feira e barracas, todas com caráter regional. Recomenda-se experimentar os produtos da feira e conversar com vendedores para descobrir especialidades locais. Horários e oferta podem variar conforme eventos e sazonalidade.",
+    },
+    transport: {
+      intro:
+        "O acesso a Iracema é predominantemente rodoviário, com ligações por estradas estaduais e vicinais que conectam o município a outros polos de Roraima. O transporte público local é modesto, baseado em linhas intermunicipais, vans e alternativos. Em períodos de chuvas intensas, trechos não pavimentados podem sofrer restrições. Para voos e conexões de maior porte, o aeroporto mais próximo fica na capital regional.",
+      items: [
+        {
+          name: "Acesso rodoviário por estradas estaduais e vicinais",
+          description:
+            "A chegada a Iracema se dá por rodovias estaduais e estradas de terra que ligam o município a cidades vizinhas e à malha principal. Trechos não pavimentados exigem atenção na estação chuvosa, quando trânsito e velocidade ficam comprometidos. Veículos leves e transporte de carga utilizam essas rotas como principal alternativa.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário por estradas estaduais e vicinais, Iracema, RR",
+        },
+        {
+          name: "Linhas intermunicipais de ônibus e vans",
+          description:
+            "Serviços regulares de ônibus e vans fazem o transporte entre Iracema e municípios próximos, operados por empresas regionais ou cooperativas locais. Frequência é limitada, especialmente em finais de semana e feriados, encontrando maior oferta em horários de maior demanda. Passagens costumam ser vendidas em pontos centrais ou diretamente com os operadores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais de ônibus e vans, Iracema, RR",
+        },
+        {
+          name: "Terminal rodoviário / ponto de embarque municipal",
+          description:
+            "Um terminal ou ponto de embarque municipal concentra as partidas e chegadas de veículos intermunicipais e alternativos, servindo como elo com a zona rural. Estrutura é simples, com cobertura básica e serviços locais nas proximidades. O terminal funciona como referência para deslocamentos dentro do município e para cidades vizinhas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Terminal rodoviário / ponto de embarque municipal, Iracema, RR",
+        },
+        {
+          name: "Transporte fluvial e uso de embarcações locais",
+          description:
+            "Trechos de rio próximos ao município permitem o uso de pequenas embarcações para deslocamentos e lazer, sobretudo em povoados ribeirinhos. O transporte fluvial tem importância complementar e depende do nível d'água e das condições climáticas. Embarcações costumam ser operadas por moradores ou arranjos comunitários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial e uso de embarcações locais, Iracema, RR",
+        },
+        {
+          name: "Aeroporto mais próximo: Boa Vista",
+          description:
+            "Para conexões aéreas e acesso nacional ou internacional, o aeroporto mais próximo situa-se em Boa Vista, capital de Roraima. Deslocamento entre Iracema e o aeroporto é feito por rodovia, normalmente por ônibus intermunicipal, vans ou táxis. Viagens aéreas exigem planejamento prévio devido à necessidade de transfer por terra.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeroporto mais próximo: Boa Vista, Iracema, RR",
+        },
+      ],
+      closing:
+        "O transporte em Iracema depende fortemente da malha rodoviária regional e de serviços intermunicipais de ônibus e vans. Embarcações fluviais e alternativas locais completam a mobilidade, sobretudo em áreas rurais. Visitantes devem considerar a sazonalidade das estradas e programar transferências a partir de Boa Vista para assegurar chegada e partida. Reservas antecipadas são recomendadas quando possível.",
+    },
+    climate: {
+      intro:
+        "Iracema está inserida em uma zona de clima tropical de savana, com estação chuvosa bem definida e período de seca pronunciado. As temperaturas médias são elevadas ao longo do ano, favorecendo vegetação de cerrado e trechos de cerrado Amazônico. A precipitação anual apresenta variação sazonal significativa, influenciando estradas e atividades ao ar livre. Valores apresentados são aproximações regionais.",
+      body: "Classificação de Köppen: Aw (tropical savana) com estação chuvosa e estação seca bem marcadas. Temperatura média anual aproximada em torno de 27–28 °C, com pouca variação diária e sazonal. Precipitação anual média estimada em torno de 1.300–1.600 mm, concentrada na estação chuvosa. Estações influenciam diretamente agricultura, vias não pavimentadas e níveis de rios, exigindo planejamento para deslocamentos e eventos ao ar livre. População de referência: 10.937 (IBGE).",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "≈ 27–28 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "≈ 1.300–1.600 mm",
+        },
+        {
+          label: "Estação chuvosa",
+          value: "aproximadamente abril a setembro, com chuvas mais intensas",
+        },
+        {
+          label: "Estação seca",
+          value:
+            "aproximadamente outubro a março, com período mais seco e baixas chuvas",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/iracema/",
+      },
+    },
+    city: "Iracema",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 10937,
+    reviewedOn: "2026-08-17",
+  },
+  mucajai: {
+    tourism: {
+      intro:
+        "Mucajaí é um município do interior de Roraima com forte ligação ao rio que lhe dá nome e à vida rural. A cidade tem cerca de 20.006 habitantes (referência IBGE) e preserva traços de cultura regional e modos de vida amazônicos. O turismo local é de baixa infraestrutura, voltado à natureza, à comunidade e a eventos municipais. Visitas valorizam paisagens ribeirinhas, feiras e patrimônios religiosos do centro.",
+      items: [
+        {
+          name: "Praça Central e Igreja Matriz",
+          description:
+            "A praça do centro é o ponto de encontro da cidade, onde se localiza a igreja matriz que serve como referência cultural e religiosa. Ali ocorrem celebrações civis e religiosas e é um bom ponto de partida para entender a história e o cotidiano municipal.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central e Igreja Matriz, Mucajaí, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "A feira semanal reúne produtores locais e é o principal espaço de comércio informal, com produtos da agricultura familiar, peixes e artesanato. É o melhor lugar para experimentar sabores regionais e observar práticas tradicionais de mercado.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Mucajaí, RR",
+        },
+        {
+          name: "Orla e margem do Rio Mucajaí",
+          description:
+            "As margens do rio oferecem trechos de banho, pesca e paisagens ribeirinhas típicas da região Norte. Passeios curtos e observação da vida fluvial permitem contato direto com ecossistemas aquáticos e a economia local ligada ao rio.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Orla e margem do Rio Mucajaí, Mucajaí, RR",
+        },
+        {
+          name: "Trilhas e igarapés da zona rural",
+          description:
+            "Na zona rural há trilhas e pequenos igarapés que mostram a biodiversidade local, com presença de mata de terra firme e áreas alagadas sazonais. Essas rotas são indicadas para quem busca natureza com baixo fluxo turístico, preferencialmente com guias locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Trilhas e igarapés da zona rural, Mucajaí, RR",
+        },
+        {
+          name: "Festas e eventos municipais (aniversário, festas religiosas)",
+          description:
+            "O calendário cultural inclui a festa de aniversário do município e celebrações religiosas que mobilizam moradores e visitantes. Esses eventos apresentam música local, comidas típicas e feiras, sendo oportunidades para vivenciar a cultura comunitária.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Festas e eventos municipais (aniversário, festas religiosas), Mucajaí, RR",
+        },
+      ],
+      closing:
+        "O turismo em Mucajaí é essencialmente local e de base natural, favorecendo quem busca experiências autênticas e contato com comunidades ribeirinhas. A infraestrutura é modesta, por isso planejamento e informações locais são recomendados antes das visitas. Respeito às rotinas comunitárias e ao ambiente natural garante uma experiência mais rica e sustentável.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em Mucajaí é voltada ao consumo local, com estabelecimentos pequenos e comidas caseiras típicas da região Norte. Pratos à base de peixe, mandioca e preparações regionais dominam o cardápio, muitas vezes servidos em lanchonetes e restaurantes simples. A feira municipal é também um ponto central para degustar culinária tradicional.",
+      items: [
+        {
+          name: "Restaurante e Lanchonete Central (cozinha regional)",
+          description:
+            "Estabelecimento tradicional do centro que serve refeições caseiras e pratos típicos como peixe assado, arroz com farinha e guarnições regionais. É frequente entre trabalhadores e visitantes em busca de refeição simples e farta.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante e Lanchonete Central (cozinha regional), Mucajaí, RR",
+        },
+        {
+          name: "Bar e Churrascaria local",
+          description:
+            "Bares com petiscos e opções de churrasco atendem aos moradores no período noturno, com ambiente informal e preços acessíveis. São pontos de sociabilidade onde é possível experimentar cortes locais acompanhados de bebidas regionais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e Churrascaria local, Mucajaí, RR",
+        },
+        {
+          name: "Lanchonete da Feira (comidas de feira)",
+          description:
+            "Na feira municipal encontram-se barracas com tapiocas, peixe frito, bebidas e doces caseiros, refletindo a culinária da agricultura familiar. Aproveita-se para provar ingredientes frescos e preparações tradicionais em ambiente comunitário.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete da Feira (comidas de feira), Mucajaí, RR",
+        },
+        {
+          name: "Bares populares e mercearias com refeições",
+          description:
+            "Diversos bares e mercearias do município oferecem refeições rápidas e pratos do dia, servindo como alternativa para quem procura agilidade e preço baixo. A experiência é inserida no cotidiano local e costuma ser bastante direta.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bares populares e mercearias com refeições, Mucajaí, RR",
+        },
+      ],
+      closing:
+        "A gastronomia em Mucajaí valoriza ingredientes locais e culinária caseira; a experiência é simples e autêntica. Visitantes devem aproveitar a feira e os pequenos restaurantes para provar sabores regionais e apoiar a economia local. Recomenda-se cautela com horários de funcionamento e pagamento em dinheiro em estabelecimentos menores.",
+    },
+    transport: {
+      intro:
+        "O transporte em Mucajaí reflete seu caráter municipal: predominam vias rodoviárias de acesso, transporte intermunicipal por ônibus e serviços informais. A malha principal liga o município a outras cidades de Roraima e à capital, Boa Vista, onde ficam os maiores serviços aéreos e rodoviários. Mobilidade interna é feita por vans, táxis e mototáxis.",
+      items: [
+        {
+          name: "Acesso rodoviário",
+          description:
+            "O município é acessível por estradas estaduais e ramais que conectam a sede a outras localidades de Roraima. Condições das vias podem variar conforme a estação chuvosa, exigindo atenção em períodos de chuva intensa.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário, Mucajaí, RR",
+        },
+        {
+          name: "Rodoviária / terminal intermunicipal",
+          description:
+            "Existe serviço de embarque e desembarque para ônibus intermunicipais que ligam Mucajaí a municípios vizinhos e à capital estadual. Frequência e horários dependem das empresas regionais e da demanda local.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / terminal intermunicipal, Mucajaí, RR",
+        },
+        {
+          name: "Transporte alternativo (vans e linhas rurais)",
+          description:
+            "Vans e micro-ônibus fazem linhas rurais e urbanas menores, conectando comunidades e povoados ao centro da cidade. Esse transporte é fundamental para deslocamentos diários de moradores e para acesso a feiras e serviços.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte alternativo (vans e linhas rurais), Mucajaí, RR",
+        },
+        {
+          name: "Táxis e mototáxis",
+          description:
+            "Táxis e mototáxis atuam como opções flexíveis para deslocamentos curtos dentro do município, com ampla presença em horários de pico. Em áreas rurais, mototáxis costumam ser o meio mais ágil para trajetos em estradas de terra.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Táxis e mototáxis, Mucajaí, RR",
+        },
+        {
+          name: "Acesso aéreo (aeroporto mais próximo em Boa Vista)",
+          description:
+            "O aeroporto mais próximo é o de Boa Vista, capital do estado, que concentra conexões aéreas comerciais. Viagens aéreas ao município exigem deslocamento rodoviário a partir de Boa Vista.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso aéreo (aeroporto mais próximo em Boa Vista), Mucajaí, RR",
+        },
+      ],
+      closing:
+        "Planeje deslocamentos considerando variações sazonais nas estradas e a limitada frequência de transportes coletivos. Para maior segurança, confirme horários com antecedência e considere transporte particular para trechos rurais. O apoio de moradores e da prefeitura local facilita orientações sobre rotas e serviços.",
+    },
+    climate: {
+      intro:
+        "Mucajaí está inserido em região de clima quente e úmido típico do norte brasileiro, com forte influência das massas equatoriais. As condições favorecem vegetação típica amazônica e modos de vida ribeirinhos, além de afetar a sazonalidade das estradas e atividades agrícolas. Recomenda-se preparo para chuvas concentradas em parte do ano.",
+      body: "O clima apresenta elevada temperatura média anual e regime de chuvas concentrado em meses específicos, com um intervalo de menor precipitação. A umidade relativa costuma ser alta e a vegetação ao redor conserva trechos de floresta e áreas alagáveis sazonais. A sazonalidade impacta rotas e eventos locais, exigindo atenção ao calendário climático.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Am (tropical monção / tropical monsoon)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "≈ 26.8 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "≈ 1.800 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Chuvas concentradas entre abril e setembro; período mais seco entre dezembro e março, com transições em abril and outubro. A estação chuvosa aumenta a umidade e pode dificultar o tráfego em ramais não pavimentados.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/mucajai/",
+      },
+    },
+    city: "Mucajaí",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 20006,
+    reviewedOn: "2026-08-17",
+  },
+  normandia: {
+    tourism: {
+      intro:
+        "Normandia (RR) é um município de porte pequeno com forte presença de comunidades locais e elaboração cultural ligada ao entorno natural. O destino oferece espaços públicos e paisagens naturais que revelam a relação entre população urbana, comunidades indígenas e atividades rurais. Visitar exige respeito às práticas locais e atenção às condições de acesso.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "A praça central funciona como ponto de encontro da cidade, onde se realizam feiras, festas e atividades cívicas. Às margens da praça costumam estar comércios, lanchonetes e áreas de convivência que refletem o cotidiano municipal.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Normandia, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "A igreja matriz do município é referência religiosa e arquitetônica local, palco de celebrações do padroeiro e eventos comunitários. Estrutura simples, com atenção às festas litúrgicas que congregam moradores de zonas urbanas e rurais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Normandia, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "A feira reúne produtores locais, venda de pescado, raízes e artesanato; é também espaço de encontro entre moradores e comunidades vizinhas. Ali se encontra oferta de produtos frescos e alimentos preparados na hora, mostrando a culinária regional.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Normandia, RR",
+        },
+        {
+          name: "Áreas naturais e trilhas",
+          description:
+            "Nos arredores há trechos de paisagem natural com caminhos ribeirinhos e formações de campo e mata, apropriados para observação de fauna e práticas de baixo impacto. As trilhas são, em geral, de curta extensão e reclamam orientação local por questões de sinalização e clima.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Áreas naturais e trilhas, Normandia, RR",
+        },
+        {
+          name: "Eventos culturais locais",
+          description:
+            "Festas de padroeiro, celebrações cívicas e manifestações relacionadas a comunidades indígenas compõem o calendário cultural. Esses eventos oferecem oportunidade de conhecer música, dança e gastronomia locais, sempre respeitando protocolos comunitários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Eventos culturais locais, Normandia, RR",
+        },
+      ],
+      closing:
+        "O turismo em Normandia privilegia experiências de contato com a comunidade e a natureza, em contexto de município de pequeno porte. Visitantes devem buscar informação prévia sobre horários e apoio local, respeitando costumes e áreas protegidas. A infraestrutura é básica, ideal para viajantes com interesse em turismo comunitário.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica de Normandia reflete a produção regional: pescado, mandioca e ingredientes locais aparecem em preparos simples e caseiros. Estabelecimentos são em sua maioria familiares ou mesas comunitárias, com presença de barracas e lanchonetes na área central. Recomenda-se experimentar pratos conforme a sazonalidade dos insumos.",
+      items: [
+        {
+          name: "Restaurante da Praça",
+          description:
+            "Pequeno restaurante localizado próximo à praça central, com cardápio de refeições caseiras e pratos regionais à base de peixe e farinha. Ambiente simples e atendimento familiar, opção prática para almoço corporal.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante da Praça, Normandia, RR",
+        },
+        {
+          name: "Bar e Lanchonete Central",
+          description:
+            "Bar tradicional da cidade que serve porções, petiscos e lanches rápidos, ponto de encontro após o expediente. Local onde se concentram conversas locais e se prova a culinária informal da região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e Lanchonete Central, Normandia, RR",
+        },
+        {
+          name: "Feira de Alimentos e Quitandas",
+          description:
+            "A feira municipal oferece opções de quitandas, tapiocas, bolos de mandioca e produtos frescos, além de refeições preparadas na hora. É local indicado para experimentar ingredientes locais e comprar insumos típicos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira de Alimentos e Quitandas, Normandia, RR",
+        },
+        {
+          name: "Serviços de alimentação comunitária",
+          description:
+            "Pequenos pontos de alimentação em comunidades rurais e aldeias próximas servem pratos tradicionais e refeições por encomenda. A experiência é pautada pela hospitalidade e pelo uso de ingredientes da região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Serviços de alimentação comunitária, Normandia, RR",
+        },
+      ],
+      closing:
+        "A cena gastronômica de Normandia é modesta, orientada ao consumidor local e a visitantes interessados em culinária regional autêntica. Para opções mais variadas e maior oferta de serviços, recomenda-se deslocamento à capital do estado. Verifique horários e disponibilidade, especialmente fora da alta temporada.",
+    },
+    transport: {
+      intro:
+        "O acesso a Normandia é predominantemente rodoviário, com ligações por estradas estaduais e trechos municipais. O transporte público interno é básico e complementado por serviços de vans, táxis e lotações que atendem áreas rurais. Horários e condições variam conforme estação e manutenção das vias.",
+      items: [
+        {
+          name: "Acesso rodoviário principal",
+          description:
+            "O município é servido por vias estaduais que conectam à capital e a municípios vizinhos; o trajeto costuma ser feito por ônibus e veículos particulares. Condições da estrada podem variar e trechos não pavimentados exigem atenção em períodos chuvosos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário principal, Normandia, RR",
+        },
+        {
+          name: "Rodoviária/terminal municipal",
+          description:
+            "Há um terminal ou ponto de embarque municipal que concentra partidas e chegadas de linhas intermunicipais e vans. O local funciona como elo entre Normandia e centros regionais, com frequências reduzidas em dias fora de pico.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária/terminal municipal, Normandia, RR",
+        },
+        {
+          name: "Linhas intermunicipais e vans",
+          description:
+            "Serviços de ônibus e vans ligam Normandia a Boa Vista e municípios próximos, operando com pouca frequência diária. Esses veículos são a alternativa mais comum para deslocamentos administrativos, estudos e comércio.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais e vans, Normandia, RR",
+        },
+        {
+          name: "Transporte local e lotações",
+          description:
+            "No interior do município, o deslocamento depende de serviços de lotação, táxis e transporte por motocicleta, além de veículos comunitários. Essas modalidades atendem moradores de áreas rurais e comunidades isoladas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte local e lotações, Normandia, RR",
+        },
+        {
+          name: "Acesso aéreo regional (próximo)",
+          description:
+            "O aeroporto comercial mais próximo fica na capital do estado, que serve como porta de entrada para a região e ponto de conexão para Normandia por via terrestre. Viagens aéreas exigem complemento rodoviário até o município.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso aéreo regional (próximo), Normandia, RR",
+        },
+      ],
+      closing:
+        "Planeje deslocamentos verificando disponibilidade e horários atualizados, especialmente em períodos de chuvas. Viagens intermunicipais costumam partir de manhã; transporte local tem oferta reduzida à noite. Informações na prefeitura ou pontos de embarque ajudam a organizar itinerários.",
+    },
+    climate: {
+      intro:
+        "O clima de Normandia é tipicamente tropical de savana, com temperaturas elevadas durante o ano e estação chuvosa bem definida. A alternância entre período de chuvas e seca influencia atividades agrícolas, estradas e disponibilidade de água. Recomenda-se preparação para chuvas intensas na estação úmida.",
+      body: "Classificação climática conforme Köppen corresponde a Aw (tropical de savana), com média térmica elevada e precipitação concentrada em meses específicos. A estação chuvosa favorece rios e vegetação, enquanto a seca traz risco de queimadas e exige manejo hídrico.",
+      details: [
+        {
+          label: "Classificação (Köppen)",
+          value: "Aw (tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "26,5 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "≈ 1.500 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: abril a agosto; estação seca: dezembro a março; meses de transição nos demais períodos.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/normandia/",
+      },
+    },
+    city: "Normandia",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 16323,
+    reviewedOn: "2026-08-17",
+  },
+  pacaraima: {
+    tourism: {
+      intro:
+        "Pacaraima é um município de fronteira no extremo norte de Roraima, marcado por trocas culturais com a Venezuela e por áreas naturais de vegetação de transição. O destino tem atrativos de caráter local: praças, feira e trechos de fronteira que ilustram a dinâmica regional. Visitantes encontram uma cidade de serviços essenciais e pontos de observação da paisagem e da vida cotidiana.",
+      items: [
+        {
+          name: "Posto de Fronteira e Ponte Internacional",
+          description:
+            "O posto de fronteira que liga Pacaraima à Venezuela é referência local para questões históricas, comerciais e sociais. A área concentra movimentação de pessoas e cargas, funcionando como ponto de observação da dinâmica transfronteiriça e das relações binacionais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Posto de Fronteira e Ponte Internacional, Pacaraima, RR",
+        },
+        {
+          name: "Praça Central",
+          description:
+            "A praça principal é o núcleo de convivência da cidade, onde se realizam eventos, manifestações religiosas e feiras informais. É local de encontro para moradores e ponto de referência para comércio e serviços no centro urbano.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Pacaraima, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "A igreja matriz local serve como marco religioso e arquitetônico do município, reunindo fiéis em celebrações e festas patronais. Além de função espiritual, costuma concentrar atividades comunitárias e culturais da cidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Pacaraima, RR",
+        },
+        {
+          name: "Feira Livre Municipal",
+          description:
+            "A feira livre é um dos principais atrativos urbanos, onde se comercializam alimentos, artesanato e produtos vindos da fronteira. Oferece experiência culinária regional e contato direto com produtores e pequenos comerciantes locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Livre Municipal, Pacaraima, RR",
+        },
+        {
+          name: "Áreas naturais e mirantes locais",
+          description:
+            "Nos arredores de Pacaraima há trechos de vegetação de transição entre cerrado e floresta, com pequenas elevações que servem de mirante para a paisagem. Essas áreas são procuradas por quem busca caminhadas curtas e observação da natureza e do entorno fronteiriço.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Áreas naturais e mirantes locais, Pacaraima, RR",
+        },
+      ],
+      closing:
+        "Pacaraima esboça um turismo de proximidade, ligado à vida de fronteira e à natureza regional. O visitante encontra experiências centradas na convivência urbana, comércio local e paisagens de transição. Planeje-se considerando serviços básicos limitados e oportunidades de contato cultural.",
+    },
+    dining: {
+      intro:
+        "A gastronomia em Pacaraima reflete a posição fronteiriça e a culinária norte-roraimense, com influências venezuelanas e pratos à base de mandioca, peixe e carnes. A cidade concentra bares e lanchonetes no centro e barracas na feira que servem refeições rápidas e caseiras. Comer por aqui é uma experiência direta com ingredientes locais e comércio familiar.",
+      items: [
+        {
+          name: "Feira Livre (bancas e barracas)",
+          description:
+            "Na feira local encontram-se opções de comida caseira, sucos, tapiocas, peixes e iguarias regionais servidas de forma direta e a preços acessíveis. É o melhor lugar para provar preparos cotidianos e ingredientes frescos da região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Livre (bancas e barracas), Pacaraima, RR",
+        },
+        {
+          name: "Bares e lanchonetes do centro",
+          description:
+            "O centro urbano concentra pequenos bares e lanchonetes que atendem trabalhadores e viajantes, com salgados, sanduíches, refeições rápidas e café. Esses estabelecimentos representam boa parte da vida social e gastronômica noturna da cidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bares e lanchonetes do centro, Pacaraima, RR",
+        },
+        {
+          name: "Comidas de fronteira (influência venezuelana)",
+          description:
+            "A proximidade com a Venezuela introduz ofertas como arepas, empanadas e outros pratos de influência andina, presentes em estabelecimentos familiares e bancas. Essa mistura gastronômica é visível nos temperos e nas opções de rua.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Comidas de fronteira (influência venezuelana), Pacaraima, RR",
+        },
+        {
+          name: "Restaurante de culinária regional",
+          description:
+            "Há restaurantes simples que servem pratos típicos do Norte, com destaque para peixes de água doce, farinha de mandioca e acompanhamentos regionais. Esses restaurantes atendem tanto moradores quanto visitantes em busca de refeições mais completas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante de culinária regional, Pacaraima, RR",
+        },
+        {
+          name: "Padarias e mercearias locais",
+          description:
+            "Padarias e mercearias fornecem lanches, pães e produtos básicos, sendo pontos frequentes de alimentação matinal e de compras rápidas. Também funcionam como referência para quem percorre a cidade ou segue viagem pela BR-174.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Padarias e mercearias locais, Pacaraima, RR",
+        },
+      ],
+      closing:
+        "A oferta gastronômica de Pacaraima é funcional e marcada por sabores locais e influências transfronteiriças. Espera-se opções simples, caseiras e adaptadas ao cotidiano fronteiriço, com ênfase em ingredientes regionais. Para experiências mais variadas, vale conversar com moradores e explorar a feira.",
+    },
+    transport: {
+      intro:
+        "Pacaraima é servido principalmente pela rodovia BR-174, eixo rodoviário que liga a cidade a Boa Vista e à fronteira venezuelana. A mobilidade local baseia-se em linhas de ônibus intermunicipais, transporte por táxi/alternativo e serviços de transporte de cargas. Infraestrutura aeroportuária comercial é limitada, com foco em um aeródromo local para voos não regulares.",
+      items: [
+        {
+          name: "BR-174 (acesso rodoviário)",
+          description:
+            "A BR-174 é a principal via de ligação de Pacaraima a Boa Vista e a outros pontos do estado, servindo transporte de pessoas e mercadorias. A rodovia é essencial para abastecimento e conexão regional, com fluxo constante de ônibus e veículos de carga.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=BR-174 (acesso rodoviário), Pacaraima, RR",
+        },
+        {
+          name: "Linhas rodoviárias para Boa Vista",
+          description:
+            "Existem serviços regulares de ônibus intermunicipais que ligam Pacaraima a Boa Vista, operando com frequência variável conforme demanda. Essas linhas são o principal meio para deslocamentos administrativos, comerciais e de saúde à capital estadual.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas rodoviárias para Boa Vista, Pacaraima, RR",
+        },
+        {
+          name: "Rodoviária / Terminal local",
+          description:
+            "O terminal rodoviário municipal concentra embarque e desembarque de linhas intermunicipais e rurais, além de agências e pontos de venda de passagens. Funciona como nó urbano para quem chega ou sai da cidade por terra.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / Terminal local, Pacaraima, RR",
+        },
+        {
+          name: "Posto de controle de fronteira",
+          description:
+            "O posto de fronteira e serviços de fiscalização movem importantes fluxos de trânsito e logística, incluindo veículos de passageiros e transporte de cargas. Esse ponto afeta horários e procedimentos de travessia e comercialização transfronteiriça.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Posto de controle de fronteira, Pacaraima, RR",
+        },
+        {
+          name: "Aeródromo local",
+          description:
+            "Pacaraima conta com um aeródromo/heliponto para operações municipais, oficiais e voos particulares, mas sem voos comerciais regulares. Serve emergências, transporte oficial e operações aéreas eventuais na região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeródromo local, Pacaraima, RR",
+        },
+      ],
+      closing:
+        "A mobilidade em Pacaraima é predominantemente rodoviária, com a BR-174 como infraestrutura chave. Para planejamento de viagem, considere horários de ônibus e a situação das estradas, especialmente em períodos chuvosos. Serviços aéreos regulares são limitados, concentrando-se em transporte terrestre.",
+    },
+    climate: {
+      intro:
+        "Pacaraima apresenta clima tropical quente, típico do norte brasileiro, com distinção entre estação chuvosa e seca. As temperaturas médias são elevadas ao longo do ano, com amplitude anual reduzida. A distribuição das chuvas influencia estradas e atividades agrícolas locais.",
+      body: "A cidade tem clima de savana tropical, com meses mais chuvosos concentrados em boa parte do meio do ano e período seco mais pronunciado em outros meses. A umidade e precipitação variam conforme frentes atmosféricas; durante a estação chuvosa há maior risco de interdição de vias não pavimentadas.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (Tropical de savana, com estação seca bem definida)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "≈ 27 °C",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "≈ 1.800 mm/ano (valor aproximado)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: aproximadamente mai–ago; estação seca: aproximadamente dez–mar; meses de transição em abr e set–nov",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/pacaraima/",
+      },
+    },
+    city: "Pacaraima",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 23112,
+    reviewedOn: "2026-08-17",
+  },
+  rorainopolis: {
+    tourism: {
+      intro:
+        "Rorainópolis é um município marcado pela presença da floresta e por uma malha urbana jovem, com pontos de encontro comunitários e acesso a trechos naturais próximos às águas interiores. O turismo local é voltado sobretudo para natureza, feiras e eventos cívicos que mostram a cultura regional. Visitantes encontram oportunidades para caminhadas curtas, observação de aves e convívio com a vida cotidiana do sul de Roraima.",
+      items: [
+        {
+          name: "Praça Central",
+          description:
+            "Praça utilizada como espaço de convivência e eventos locais, onde moradores se reúnem para lazer e comemorações públicas. A praça costuma receber barraquinhas em finais de semana e é ponto de partida para conhecer o comércio e serviços do centro.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central, Rorainópolis, RR",
+        },
+        {
+          name: "Igreja Matriz",
+          description:
+            "Igreja paroquial que funciona como referência religiosa e social na cidade; suas celebrações marcam datas importantes do calendário municipal. A igreja costuma reunir a comunidade em festas religiosas e ações sociais organizadas por grupos locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz, Rorainópolis, RR",
+        },
+        {
+          name: "Feira Municipal",
+          description:
+            "Feira ao ar livre que reúne produtores, vendedores de alimentos e artesanato regional; local ideal para provar pratos típicos e comprar produtos frescos. É também um espaço importante para troca de informações sobre a região e para observar hábitos alimentares locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal, Rorainópolis, RR",
+        },
+        {
+          name: "Trechos de floresta e igarapés",
+          description:
+            "Áreas de floresta e pequenos cursos d'água nas imediações oferecem oportunidades de observação de fauna e flora típicas do sul de Roraima. Passeios curtos por trilhas informais e observação de aves são as atividades mais comuns, sempre respeitando propriedades privadas e áreas de conservação.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Trechos de floresta e igarapés, Rorainópolis, RR",
+        },
+        {
+          name: "Eventos municipais e culturais",
+          description:
+            "Datas comemorativas do município, como aniversário da cidade e festivais locais, reúnem shows, apresentações culturais e comércio ambulante. Esses eventos permitem contato direto com a comunidade, música regional e comidas típicas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Eventos municipais e culturais, Rorainópolis, RR",
+        },
+      ],
+      closing:
+        "O turismo em Rorainópolis é essencialmente de base local e de natureza, adequado para quem busca contato com a cultura roraimense e com ambientes florestais. A infraestrutura turística é modesta, com foco em serviços urbanos e atividades ao ar livre. Planeje deslocamentos e respeite áreas naturais e normas municipais ao visitar.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em Rorainópolis é dominada por estabelecimentos simples que servem comida caseira e pratos regionais à base de peixe, mandioca e frutas amazônicas. Bares e lanchonetes atendem ao público local, especialmente em torno da feira e do centro. A experiência culinária é direta, com ingredientes frescos da região e serviço informal.",
+      items: [
+        {
+          name: "Restaurante regional (self-service)",
+          description:
+            "Restaurantes self-service no centro oferecem refeições rápidas com opções de peixe, carnes, arroz, farofa e acompanhamentos regionais. São frequentados por trabalhadores e famílias, com preços acessíveis e atendimento informal, representando a alimentação cotidiana da cidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante regional (self-service), Rorainópolis, RR",
+        },
+        {
+          name: "Boteco e bar do centro",
+          description:
+            "Bares locais funcionam como pontos de encontro para conversas e refeições leves, servindo petiscos regionais e bebidas. Muitos mantêm horário estendido e são espaços informais para observar a vida urbana e provar pratos simples depois do trabalho.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Boteco e bar do centro, Rorainópolis, RR",
+        },
+        {
+          name: "Lanchonete de açaí e tapioca",
+          description:
+            "Pontos de venda de açaí e tapioca são populares entre moradores, combinando ingredientes locais e formatos rápidos de consumo. Oferecem opções tanto doces quanto salgadas, ideais para lanches ao longo do dia.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete de açaí e tapioca, Rorainópolis, RR",
+        },
+        {
+          name: "Barracas da Feira Municipal",
+          description:
+            "Nas barracas da feira é comum encontrar comidas prontas, peixes frescos, bolos caseiros e iguarias regionais preparadas por produtores locais. A feira é um bom lugar para experimentar sabores autênticos e comprar insumos diretos de produtores.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Barracas da Feira Municipal, Rorainópolis, RR",
+        },
+        {
+          name: "Peixaria e pratos amazônicos",
+          description:
+            "Estabelecimentos que servem peixes de água doce preparados à moda regional, com acompanhamentos como farinha de mandioca e vinagrete. Pratos são simples, valorizando o produto local e receitas familiares.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Peixaria e pratos amazônicos, Rorainópolis, RR",
+        },
+      ],
+      closing:
+        "A experiência gastronômica em Rorainópolis privilegia a simplicidade e os ingredientes locais, oferecendo uma visão autêntica da culinária roraimense. Não espere alta gastronomia, mas sim comida caseira e atendimento próximo ao cotidiano. Para opções específicas e horários, recomenda-se consultar moradores ou a administração local.",
+    },
+    transport: {
+      intro:
+        "O sistema de transporte em Rorainópolis combina deslocamentos rodoviários, transporte coletivo local e meios fluviais para comunidades ribeirinhas. A malha urbana é atendida por ônibus, vans e táxis informais, enquanto as ligações intermunicipais dependem de linhas estaduais e empresas regionais. Para voos e conexões de longa distância, o acesso é realizado via a capital do estado.",
+      items: [
+        {
+          name: "Acesso rodoviário",
+          description:
+            "O município é servido por estradas estaduais e trechos de rodovias federais que conectam Rorainópolis a outros polos de Roraima e ao resto da Região Norte. As condições variam conforme o trecho e a época do ano, sendo importante verificar a situação das vias em períodos de chuvas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário, Rorainópolis, RR",
+        },
+        {
+          name: "Rodoviária municipal / Terminal",
+          description:
+            "O terminal rodoviário local concentra partidas e chegadas de linhas intermunicipais e regionais, oferecendo conexão com municípios vizinhos. Estrutura é simples, com serviços básicos de bilheteria e embarque.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária municipal / Terminal, Rorainópolis, RR",
+        },
+        {
+          name: "Transporte intermunicipal (ônibus e vans)",
+          description:
+            "Empresas de ônibus e vans realizam viagens regulares e sob demanda para municípios da região e para a capital estadual, com horários que variam segundo a demanda. Esses serviços são a principal alternativa para deslocamentos de média distância.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte intermunicipal (ônibus e vans), Rorainópolis, RR",
+        },
+        {
+          name: "Transporte fluvial e embarcações",
+          description:
+            "Rios e igarapés próximos atendem comunidades ribeirinhas por meio de pequenas embarcações e voadeiras, usadas tanto para transporte de pessoas quanto de cargas. A navegação é condicionada ao nível das águas e às condições climáticas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial e embarcações, Rorainópolis, RR",
+        },
+        {
+          name: "Aeroporto regional (acesso por Boa Vista)",
+          description:
+            "O aeroporto mais próximo com voos regulares fica na capital do estado, Boa Vista, que é o principal hub aéreo da região. Deslocamentos entre Rorainópolis e Boa Vista são feitos por via rodoviária, sendo necessária programação prévia para conexões aéreas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeroporto regional (acesso por Boa Vista), Rorainópolis, RR",
+        },
+      ],
+      closing:
+        "Deslocar-se em Rorainópolis exige planejamento, sobretudo na alta estação de chuvas, quando trechos podem ser afetados. Serviços de ônibus e vans garantem a ligação com municípios vizinhos, enquanto embarcações atendem áreas ribeirinhas. Para viagens longas, calcule tempo para deslocamento até a capital e o aeroporto regional.",
+    },
+    climate: {
+      intro:
+        "Rorainópolis tem clima típico da faixa equatorial do norte do Brasil, com temperaturas elevadas ao longo do ano e um regime de precipitação marcado por estação mais úmida e uma redução relativa nas chuvas. A umidade costuma ser alta e as variações térmicas diárias são menores do que as variações sazonais. Condições climáticas influenciam diretamente atividades ao ar livre e o estado das vias.",
+      body: "O clima favorece a vegetação amazônica e a presença de igarapés e áreas alagáveis em trechos do município. A população adapta rotinas e práticas agrícolas à alternância entre períodos chuvosos e menos chuvosos, com atenção às hidrovias e às vias de terra que podem ser afetadas durante a estação chuvosa.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value:
+            "Aw (tropical de savana) — clima quente com estação seca relativa",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "≈ 26,5 °C",
+        },
+        {
+          label: "Precipitação anual",
+          value: "≈ 1.800–2.200 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa bem definida com maiores volumes de chuva e uma estação relativamente mais seca; variação marcada na precipitação, não em temperatura.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/rorainopolis/",
+      },
+    },
+    city: "Rorainópolis",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 37787,
+    reviewedOn: "2026-08-17",
+  },
+  "sao-joao-da-baliza": {
+    tourism: {
+      intro:
+        "São João da Baliza é um município de porte pequeno no sul de Roraima, com forte vínculo à paisagem natural e às tradições locais. A cidade oferece praças e igrejas que funcionam como centros de sociabilidade, além de trechos de mata, veredas e cursos d'água próximos. O turismo é essencialmente local e de natureza, com eventos religiosos e feiras que revelam a cultura regional.",
+      items: [
+        {
+          name: "Praça Central e coreto",
+          description:
+            "A praça central é o principal ponto de encontro da cidade, onde ocorrem celebrações municipais, festas juninas e atividades culturais. O coreto e áreas de convivência refletem a importância dos espaços públicos para a vida comunitária, especialmente em fins de semana.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central e coreto, São João da Baliza, RR",
+        },
+        {
+          name: "Igreja Matriz de São João Batista",
+          description:
+            "A igreja matriz, dedicada ao padroeiro do município, concentra as festas religiosas e procissões, sobretudo no período de comemoração de São João. A construção local é simples, servindo como referência histórica e espaço de coesão social para moradores e visitantes.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz de São João Batista, São João da Baliza, RR",
+        },
+        {
+          name: "Feira Municipal e artesanato",
+          description:
+            "A feira semanal reúne produtores rurais, vendedores de pescado, hortifrutis e artesãos, sendo um bom local para conhecer produtos típicos e a culinária regional. Além de comércio, a feira é espaço de trocas informais de informações e preservação de saberes locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal e artesanato, São João da Baliza, RR",
+        },
+        {
+          name: "Áreas naturais e trilhas curtas",
+          description:
+            "Nos arredores existem trechos de cerrado e veredas, pequenos cursos d'água e pontos para observação da paisagem, principalmente para quem busca contato com a natureza. As trilhas são de baixa complexidade e demandam guia local em áreas de propriedades privadas; a observação da flora e da fauna é a principal atração.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Áreas naturais e trilhas curtas, São João da Baliza, RR",
+        },
+      ],
+      closing:
+        "Visitar São João da Baliza é aproximar-se de uma Roraima menos urbanizada, marcada por relações rurais, festividades religiosas e paisagens de vereda. O município interessa a quem busca experiências de natureza e cultura local sem infraestrutura turística massificada. Prepare-se para serviços simples e cordialidade comunitária.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em São João da Baliza é modesta e fortemente influenciada pelos produtos regionais: peixe de água doce, farinha, frutas tropicais e pratos caseiros. Bares e lanchonetes cumprem papel social importante, concentrando encontros e refeições rápidas. A impressão geral é de cozinha caseira, com ênfase em sabores do Norte e do interior roraimense.",
+      items: [
+        {
+          name: "Restaurante Popular Municipal",
+          description:
+            "Estabelecimento simples voltado para refeições do dia a dia, oferecendo pratos caseiros com arroz, feijão e opções de peixe quando disponível. Frequentado por servidores, trabalhadores locais e visitantes que buscam refeição econômica e farta.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante Popular Municipal, São João da Baliza, RR",
+        },
+        {
+          name: "Bar e Lanchonete do Zé",
+          description:
+            "Bar tradicional da cidade, ponto de encontro para conversas e petiscos; serve porções, sanduíches e bebidas não alcoólicas, além de pratos rápidos à hora do almoço. Ambiente informal, com atendimento familiar e preços acessíveis.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e Lanchonete do Zé, São João da Baliza, RR",
+        },
+        {
+          name: "Lanchonete da Feira",
+          description:
+            "Espaço junto à feira municipal onde são servidos salgados, tapiocas, bolos caseiros e caldo de peixe em dias de maior movimento. É um bom local para experimentar preparos caseiros feitos com ingredientes locais e acompanhar a rotina da feira.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonete da Feira, São João da Baliza, RR",
+        },
+        {
+          name: "Quitandas e produtos da roça",
+          description:
+            "Pequenos comerciantes vendem bolos, biscoitos, mandioca frita e doces artesanais produzidos na região. Esses pontos compõem a rede de alimentação informal e são indicados para quem deseja provar produtos caseiros e comprar iguarias locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Quitandas e produtos da roça, São João da Baliza, RR",
+        },
+      ],
+      closing:
+        "A experiência gastronômica no município privilegia sabores autênticos e serviços simples, adequados a visitantes que valorizam a culinária regional. Recomenda-se consultar moradores sobre os melhores dias e horários para feiras e pratos típicos. Leve em conta disponibilidade limitada de opções e horário reduzido de funcionamento.",
+    },
+    transport: {
+      intro:
+        "O sistema de transporte em São João da Baliza é de pequena escala, voltado principalmente ao deslocamento intermunicipal e às rotas rurais. A mobilidade depende de estradas estaduais e de veículos de lotação, com presença de mototáxis e vans que ligam povoados próximos. Infraestrutura de transporte público formal é restrita; recomenda-se planejar deslocamentos com antecedência.",
+      items: [
+        {
+          name: "Acesso rodoviário por estradas estaduais",
+          description:
+            "O município é servido por estradas estaduais que o conectam a outros municípios de Roraima e à malha rodoviária regional. Trechos podem ser de pista não pavimentada ou com manutenção variável, exigindo atenção em épocas de chuva e veículos adequados.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário por estradas estaduais, São João da Baliza, RR",
+        },
+        {
+          name: "Rodoviária / ponto de embarque municipal",
+          description:
+            "Existe um ponto de embarque/rodoviária local onde partem e chegam ônibus de pequeno porte, micro-ônibus e vans intermunicipais. O terminal é simples e funciona como elo para se comunicar com centros maiores; horários e frequência variam conforme demanda.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / ponto de embarque municipal, São João da Baliza, RR",
+        },
+        {
+          name: "Linhas intermunicipais (vans e micro-ônibus)",
+          description:
+            "Serviços regulares de vans e micro-ônibus fazem a ligação com municípios vizinhos e, eventualmente, com Boa Vista, permitindo acesso a serviços e comércio de maior escala. Esses serviços costumam operar em horários fixos e em esquemas de lotação quando a demanda aumenta.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Linhas intermunicipais (vans e micro-ônibus), São João da Baliza, RR",
+        },
+        {
+          name: "Transporte local informal",
+          description:
+            "Mototáxis, lotações e táxis alternativos compõem a oferta de transporte dentro do município e para povoados próximos, com flexibilidade de horários. Esses meios são essenciais para deslocamentos curtos e para servir áreas rurais onde o transporte regular não chega.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte local informal, São João da Baliza, RR",
+        },
+      ],
+      closing:
+        "Para circular por São João da Baliza recomenda-se planejamento prévio, especialmente em deslocamentos para Boa Vista ou outras cidades maiores. Verifique condições das estradas em épocas chuvosas e confirme horários de vans e micro-ônibus localmente. Serviços são práticos, porém com infraestrutura limitada.",
+    },
+    climate: {
+      intro:
+        "O clima em São João da Baliza é tipicamente tropical, com uma estação chuvosa bem definida e período de menor precipitação que influencia atividades agrícolas e roteiros ao ar livre. As temperaturas são elevadas durante o ano, com pouca variação térmica diária e alta umidade relativa. Condições climáticas moldam a paisagem de veredas e cerrado que caracterizam a região.",
+      body: "A cidade apresenta regime de chuvas concentradas em alguns meses e um período seco que favorece atividades de colheita e festas. A combinação de temperatura média elevada e estações bem definidas exige atenção ao calendário de viagens: trilhas e atividades ao ar livre são mais seguras na época de menor chuva. Ventos são moderados e a umidade costuma ser alta na estação chuvosa.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (tropical de savana, com estação seca pronunciada)",
+        },
+        {
+          label: "Temperatura média anual",
+          value: "26,5 °C (valor de referência médio)",
+        },
+        {
+          label: "Precipitação anual",
+          value: "Aproximadamente 1.600 mm (valor aproximado)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa: abril a setembro; estação seca: outubro a março, com maiores temperaturas e menor cobertura de chuva",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/sao%20joao%20da%20baliza/",
+      },
+    },
+    city: "São João da Baliza",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 9969,
+    reviewedOn: "2026-08-17",
+  },
+  "sao-luiz": {
+    tourism: {
+      intro:
+        "São Luiz (RR) é um município de porte pequeno com forte presença da natureza ribeirinha e da cultura local. O turismo é modesto e orientado para visitas à praça central, à igreja matriz, à margem do rio e às feiras municipais. Visitas valorizam a vida cotidiana, a gastronomia regional e festas religiosas que mantêm tradições locais.",
+      items: [
+        {
+          name: "Praça Central (Praça da Matriz)",
+          description:
+            "Praça principal e espaço cívico onde se concentram serviços públicos, comércio local e eventos. É ponto de encontro da população, palco de feiras e celebrações municipais e oferece um panorama direto da vida cotidiana da cidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça Central (Praça da Matriz), São Luiz, RR",
+        },
+        {
+          name: "Igreja Matriz de São Luiz",
+          description:
+            "Igreja paroquial que funciona como referência religiosa e cultural para a comunidade. Além das missas, a igreja é núcleo das festas de padroeiro e reúne elementos arquitetônicos simples típicos das pequenas cidades do interior de Roraima.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Igreja Matriz de São Luiz, São Luiz, RR",
+        },
+        {
+          name: "Margens do Rio Anauá",
+          description:
+            "Trechos de várzea e riachos associados ao rio Anauá formam áreas de pesca, lazer e observação da fauna local. As margens preservam paisagens de mata ribeirinha e são utilizadas por moradores para atividades tradicionais, como pesca artesanal e banhos comunitários.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Margens do Rio Anauá, São Luiz, RR",
+        },
+        {
+          name: "Feira Municipal e Mercado Público",
+          description:
+            "Feira semanal onde agricultores e comerciantes vendem produtos frescos, peixes de água doce, farinha e artesanato regional. Ambiente importante para vivenciar sabores locais, trocar informações e observar práticas econômicas da região.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira Municipal e Mercado Público, São Luiz, RR",
+        },
+        {
+          name: "Festa do Padroeiro e eventos culturais",
+          description:
+            "Festas religiosas e eventos culturais anuais reúnem celebrações, missas, barracas com comida típica e apresentações locais. Esses eventos são oportunidade para conhecer música, dança e costumes comunitários preservados no município.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Festa do Padroeiro e eventos culturais, São Luiz, RR",
+        },
+      ],
+      closing:
+        "O roteiro turístico em São Luiz destaca simplicidade e contato direto com a natureza e a comunidade local. Visitas são recomendadas para quem busca experiências autênticas no interior de Roraima. Respeito às práticas locais e planejamento são úteis pela infraestrutura reduzida.",
+    },
+    dining: {
+      intro:
+        "A gastronomia de São Luiz é marcada pela cozinha regional do Norte brasileiro, com ênfase em peixes de água doce, farinha e pratos caseiros. Estabelecimentos são, em sua maioria, pequenos restaurantes familiares, bares e barracas na feira. A oferta prioriza frescor dos ingredientes e preparo tradicional.",
+      items: [
+        {
+          name: "Restaurante de comida caseira (restaurante por quilo)",
+          description:
+            "Estabelecimento típico que serve pratos regionais em sistema por quilo, com opções de peixes de rio, arroz, farinha e acompanhamentos caseiros. Ambiente simples e foco em refeições práticas para trabalhadores e visitantes.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Restaurante de comida caseira (restaurante por quilo), São Luiz, RR",
+        },
+        {
+          name: "Bar e lanchonete da praça",
+          description:
+            "Bar localizado junto à praça central que funciona como ponto social, servindo petiscos, bebidas e lanches rápidos. Frequentado por moradores, o local é opção para experimentar preparações locais e conversar com a comunidade.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Bar e lanchonete da praça, São Luiz, RR",
+        },
+        {
+          name: "Barracas da Feira Municipal",
+          description:
+            "Vendedores ambulantes e bancas na feira oferecem produtos regionais como peixes frescos, tapiocas, bolos caseiros e sucos naturais. Experiência direta com gastronomia local, ideal para provar ingredientes típicos e pratos preparados na hora.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Barracas da Feira Municipal, São Luiz, RR",
+        },
+        {
+          name: "Padaria e confeitaria local",
+          description:
+            "Padarias da cidade fornecem pães, salgados e bolos caseiros consumidos no dia a dia. Além de itens de conveniência, costumam preparar petiscos populares para acompanhar o bate-papo nas redes sociais locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Padaria e confeitaria local, São Luiz, RR",
+        },
+      ],
+      closing:
+        "A cena gastronômica em São Luiz é modesta e voltada ao cotidiano, privilegiando produtos locais e receitas familiares. Para quem valoriza autenticidade, as opções da praça e da feira representam boa amostra da culinária regional. Planeje-se para horários mais restritos de funcionamento.",
+    },
+    transport: {
+      intro:
+        "O transporte em São Luiz é caracterizado por redes rodoviárias estaduais, serviço intermunicipal limitado e mobilidade local por vans e táxis. Não há infraestrutura aeroportuária própria; o acesso aéreo se dá via Boa Vista. A logística exige atenção aos horários e condições das estradas em períodos chuvosos.",
+      items: [
+        {
+          name: "Acesso rodoviário estadual",
+          description:
+            "O município é servido por rodovias estaduais que conectam a municípios vizinhos e à capital estadual. Viagens por estrada são a principal forma de acesso, com movimentação de ônibus intermunicipais e transporte de cargas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário estadual, São Luiz, RR",
+        },
+        {
+          name: "Rodoviária / Terminal municipal",
+          description:
+            "Terminal rodoviário de porte reduzido funciona como ponto de embarque e desembarque de linhas intermunicipais. Serve para conexões regulares com cidades próximas e, eventualmente, rotas para Boa Vista.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Rodoviária / Terminal municipal, São Luiz, RR",
+        },
+        {
+          name: "Transporte alternativo (vans e lotações)",
+          description:
+            "Vans, kombis e lotações fazem a circulação intra e intermunicipal, complementando os horários de ônibus. São meio de transporte amplamente usado pela população para deslocamentos diários e curtas distâncias.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte alternativo (vans e lotações), São Luiz, RR",
+        },
+        {
+          name: "Transporte fluvial",
+          description:
+            "Em trechos próximos ao rio Anauá, embarcações locais e voadeiras são utilizadas para pesca e deslocamentos sazonais. O transporte fluvial tem papel secundário, mais ligado à atividade tradicional do que ao transporte de massa.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial, São Luiz, RR",
+        },
+        {
+          name: "Acesso por via aérea (aeroporto mais próximo)",
+          description:
+            "O principal acesso aéreo é pelo aeroporto da capital, Boa Vista, que concentra voos comerciais regulares. A partir daí, seguem-se viagens rodoviárias até São Luiz, organizadas por empresas de transporte terrestre.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso por via aérea (aeroporto mais próximo), São Luiz, RR",
+        },
+      ],
+      closing:
+        "Deslocar-se para São Luiz exige planejamento, sobretudo em épocas chuvosas quando as condições das estradas podem piorar. O transporte é funcional, mas relativamente limitado em frequência. Para deslocamentos longos, combine voo até Boa Vista com trecho rodoviário.",
+    },
+    climate: {
+      intro:
+        "O clima em São Luiz é tipicamente tropical, com temperatura média elevada ao longo do ano e estação chuvosa bem definida. As condições favorecem vegetação de cerrado e trechos de mata ribeirinha, com impacto direto nas atividades agrícolas e de pesca locais. Recomenda-se atenção à época das chuvas para viajar e planejar atividades ao ar livre.",
+      body: "Predomina um padrão de clima tropical de savana (Köppen Aw), com meses mais secos na estação definida e um período de chuvas concentradas. As temperaturas são relativamente constantes, enquanto a precipitação apresenta variação sazonal que influencia estradas e navegação fluvial. A umidade é normalmente alta na estação chuvosa.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (Tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "26,5 °C (valor aproximado)",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "cerca de 1.700 mm (valor aproximado)",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa bem definida entre abril e setembro; estação mais seca entre dezembro e março, com meses de transição em outubro e novembro",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/sao%20luiz/",
+      },
+    },
+    city: "São Luiz",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 7848,
+    reviewedOn: "2026-08-17",
+  },
+  uiramuta: {
+    tourism: {
+      intro:
+        "Uiramutã é o município mais setentrional do Brasil, situado na região de lavrado de Roraima e com forte presença do território indígena Raposa Serra do Sol. A localidade atrai visitantes interessados em geografia extrema, paisagens de savana e em contato com culturas indígenas. A infraestrutura turística é básica e o acesso pode ser restrito em áreas protegidas.",
+      items: [
+        {
+          name: "Monte Caburaí (ponto mais ao norte do Brasil)",
+          description:
+            "Monte Caburaí e seus afloramentos rochosos representam o extremo norte do território brasileiro, marco geográfico de interesse nacional. O acesso exige travessia por trilhas e apoio local; a visita combina paisagens de lavrado, pequenos cursos d'água e relevos rochosos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Monte Caburaí (ponto mais ao norte do Brasil), Uiramutã, RR",
+        },
+        {
+          name: "Território Indígena Raposa Serra do Sol",
+          description:
+            "Grande parte do município está inserida no território Raposa Serra do Sol, onde vivem diversas etnias com modos tradicionais de vida. Visitas exigem autorização e respeito às normas das comunidades; encontros possibilitam observação de artesanato, práticas alimentares e manifestações culturais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Território Indígena Raposa Serra do Sol, Uiramutã, RR",
+        },
+        {
+          name: "Paisagens de lavrado e vegetação de savana",
+          description:
+            "Os campos de lavrado dominam a paisagem, com trechos de vegetação rasteira, arbustos e formações arenosas únicas na região. Esses ambientes são atraentes para observação de fauna e flora adaptadas ao regime de chuvas, especialmente ao final da estação seca.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Paisagens de lavrado e vegetação de savana, Uiramutã, RR",
+        },
+        {
+          name: "Praça central e estruturas da sede municipal",
+          description:
+            "A sede de Uiramutã concentra serviços administrativos, uma praça central e comércio local que atendem moradores e visitantes. A área é ponto de partida para organizar passeios, contratar guias e obter informações sobre condições de acesso às comunidades.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Praça central e estruturas da sede municipal, Uiramutã, RR",
+        },
+        {
+          name: "Cursos d'água e pequenas cachoeiras",
+          description:
+            "Rios e igarapés da região formam trechos de água doce e pequenas quedas que são refúgios naturais em ambientes de savana. O aproveitamento é de caráter rústico; cuidado com variações sazonais do volume e com a logística para alcançar pontos remotos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Cursos d'água e pequenas cachoeiras, Uiramutã, RR",
+        },
+      ],
+      closing:
+        "O turismo em Uiramutã é pautado por baixo impacto, conhecimento cultural e logística autossuficiente. Planejamento antecipado, guias locais e autorização para áreas indígenas são essenciais para visitas responsáveis. A melhor época para deslocamentos terrestres varia conforme a estação seca.",
+    },
+    dining: {
+      intro:
+        "A oferta gastronômica em Uiramutã é modesta e voltada ao atendimento da população local e de visitantes de curta duração. A culinária regional privilegia ingredientes típicos do Norte: peixes de água doce, mandioca, farinha e preparos indígenas. Eventos comunitários e a feira local são locais importantes para experimentar sabores autênticos.",
+      items: [
+        {
+          name: "Feira municipal e comércio de alimentos",
+          description:
+            "A feira local reúne produtores e vendedores informais com produtos da região: raízes, farinha, peixes e frutas. É o melhor lugar para conhecer ingredientes frescos e adquirir alimentos preparados na hora por cozinheiras locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Feira municipal e comércio de alimentos, Uiramutã, RR",
+        },
+        {
+          name: "Lanchonetes e restaurantes familiares",
+          description:
+            "Pequenos estabelecimentos servem refeições caseiras, com pratos simples à base de peixe, frango, arroz e farinha. O atendimento é informal; horários e cardápios podem variar conforme movimento e suprimentos.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Lanchonetes e restaurantes familiares, Uiramutã, RR",
+        },
+        {
+          name: "Pratos regionais e influências indígenas",
+          description:
+            "A gastronomia incorpora técnicas e ingredientes indígenas, como preparos com mandioca e assados regionais. Prova-se comidas de tradição local em eventos comunitários e em casas de família, com sabores autênticos e porções generosas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Pratos regionais e influências indígenas, Uiramutã, RR",
+        },
+        {
+          name: "Serviços de alimentação em pontos públicos",
+          description:
+            "Ao redor da praça central e de edifícios públicos há opções de barracas e lanchonetes que fornecem alimentação rápida. Esses pontos atendem a pessoal administrativo, turistas e motoristas em trânsito, oferecendo refeições simples e práticas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Serviços de alimentação em pontos públicos, Uiramutã, RR",
+        },
+      ],
+      closing:
+        "Quem visita Uiramutã deve esperar opções básicas e favorecer estabelecimentos locais e a feira municipal para experiências gastronômicas mais autênticas. Levar suprimentos é recomendável em deslocamentos para áreas mais remotas. Respeito às práticas alimentares indígenas é importante quando se participa de eventos comunitários.",
+    },
+    transport: {
+      intro:
+        "Uiramutã é um município de difícil acesso relativo, com infraestrutura viária limitada e longas distâncias até centros urbanos maiores. O transporte local combina ônibus intermunicipais esporádicos, veículos por demanda e meios fluviais em trechos onde rios são navegáveis. Planejamento e flexibilidade são essenciais para deslocamentos na região.",
+      items: [
+        {
+          name: "Acesso rodoviário (estradas estaduais e vicinais)",
+          description:
+            "A chegada ao município costuma ser feita por estradas estaduais e trechos não pavimentados que ligam à malha viária de Roraima. Condições variam com a estação; trechos podem ficar impróprios para veículos leves na época de chuvas.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Acesso rodoviário (estradas estaduais e vicinais), Uiramutã, RR",
+        },
+        {
+          name: "Serviços de ônibus intermunicipal e alternativos",
+          description:
+            "Há serviços de transporte rodoviário intermunicipal e alternativos operados de forma irregular, conectando Uiramutã a municípios vizinhos e a centros administrativos. Horários e frequência dependem da demanda e das condições das vias.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Serviços de ônibus intermunicipal e alternativos, Uiramutã, RR",
+        },
+        {
+          name: "Transporte fluvial e por igarapés",
+          description:
+            "Em alguns trechos, rios e igarapés complementam o transporte, especialmente para comunidades ribeirinhas e pontos de difícil acesso terrestre. Em períodos de cheia, o transporte aquaviário pode ser a opção mais viável.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Transporte fluvial e por igarapés, Uiramutã, RR",
+        },
+        {
+          name: "Veículos regionais e serviços por demanda",
+          description:
+            "Táxis, motocicletas, kombis e caminhonetes de carga prestam serviços de transporte local e por demanda, usados para deslocamentos curtos e fretes. Contratar condutores locais é comum para organizar passeios e transferências a comunidades.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Veículos regionais e serviços por demanda, Uiramutã, RR",
+        },
+        {
+          name: "Aeródromo e voos regionais (serviços esporádicos)",
+          description:
+            "Há registros de pistas de pouso rústicas na região que podem receber aeronaves de pequeno porte em operações pontuais. Voos regulares não são garantidos; qualquer operação aérea requer contato prévio com operadores locais.",
+          mapHref:
+            "https://www.google.com/maps/search/?api=1&query=Aeródromo e voos regionais (serviços esporádicos), Uiramutã, RR",
+        },
+      ],
+      closing:
+        "Devido à distância e às condições das vias, recomenda-se planejar deslocamentos com antecedência, verificar a disponibilidade de serviços e prever margem para imprevistos. Guias locais e operadores comunitários são recursos importantes para organizar transferências e passeios. A sazonalidade influencia fortemente a mobilidade.",
+    },
+    climate: {
+      intro:
+        "O clima em Uiramutã é característico do lavrado de Roraima, combinando temperaturas elevadas ao longo do ano e uma estação chuvosa bem definida. A região apresenta padrão de savana tropical com alternância entre período úmido e seco, influenciando ecossistemas e acesso por estradas. Prever a estação é importante para planejar viagens e atividades ao ar livre.",
+      body: "A classificação de Köppen para a área é predominantemente Aw (clima tropical de savana), com média térmica anual relativamente estável e precipitação concentrada em alguns meses. As temperaturas médias ficam elevadas enquanto a estação seca acentua risco de queimadas e redução de vazão nos cursos d'água.",
+      details: [
+        {
+          label: "Classificação Köppen",
+          value: "Aw (tropical de savana)",
+        },
+        {
+          label: "Temperatura média anual (°C)",
+          value: "≈ 26 °C",
+        },
+        {
+          label: "Precipitação anual (mm)",
+          value: "≈ 1.700 mm",
+        },
+        {
+          label: "Estações",
+          value:
+            "Estação chuvosa aproximadamente entre abril e setembro; estação seca entre outubro e março, quando há menor pluviosidade e condições rodoviárias mais favoráveis.",
+        },
+      ],
+      source: {
+        label: "Climate-Data.org",
+        href: "https://pt.climate-data.org/america-do-sul/brasil/rr/uiramuta/",
+      },
+    },
+    city: "Uiramutã",
+    uf: "RR",
+    stateName: "Roraima",
+    region: "Norte",
+    ddd: "95",
+    population: 16186,
+    reviewedOn: "2026-08-17",
+  },
+} as Record<string, MunicipalityTabs>;

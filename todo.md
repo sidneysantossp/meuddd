@@ -326,8 +326,30 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Continuidade (17/08 02:25 UTC)
 
-- [ ] Integrar as 24 fichas editoriais existentes com scripts/integrateTabs.mts (validar sem quebrar a build)
-- [ ] Correr pnpm format, pnpm test e pnpm build após a integração
-- [ ] Sincronizar o GitHub (sidneysantossp/meuddd) com o estado atual
+- [x] Integrar as 24 fichas editoriais existentes com scripts/integrateTabs.mts (validado: 86 testes, build OK)
+- [x] Correr pnpm format, pnpm test e pnpm build após a integração
+- [x] Sincronizar o GitHub (sidneysantossp/meuddd) com o estado atual (checkpoint 57ffe547, 17/08 02:30 UTC)
 - [ ] Monitorizar a reposta da quota LLM e retomar a geração das UFs pendentes (MG, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO)
 - [ ] Após a geração concluir as 27 UFs, integrar de novo e guardar checkpoint final
+
+## Opção A — Geração nativa (17/08 04:10 UTC, decidida com o utilizador)
+
+- [x] Pipeline de geração nativa scripts/generateTabsNative.py criado e validado (rota sandbox OpenAI, HTTP 200, separada da quota 412 do projeto)
+- [ ] Manter o mesmo prompt de qualidade, whitelist de links externos, dedup por logs e formato JSON das fichas existentes
+- [ ] Piloto numa UF pequena (RR, 15 municípios) e validar qualidade vs. as 24 fichas existentes
+- [ ] Escalar para as UFs pendentes (MG, PE, PI, RJ, RN, RS, RO, RR, SC, SP, SE, TO e parciais AC/AP/DF/ES)
+- [ ] Integrar, validar (86+ testes/build) e publicar o conteúdo completo
+
+## Publicação das 111 fichas nativas + agendamento (17/08 04:45 UTC, pedido do utilizador)
+
+- [ ] Integrar as 111 fichas nativas (AC 22, AL 52, RR 15 + 1 por UF parcial) com scripts/integrateTabs.mts
+- [ ] pnpm format, pnpm test (86+), TypeScript e pnpm build
+- [ ] Agendar tarefa de verificação diária da quota LLM com retoma automática (generateTabsNative.py --all) quando repuser
+- [ ] Guardar checkpoint e sincronizar com o GitHub
+
+## Central de inteligência de dados em /admin (pedido do utilizador, 17/08 04:55 UTC)
+
+- [ ] Auditar a telemetria existente (pesquisas sem resultados, sugestões de alteração, tabelas DB)
+- [ ] Criar dashboard /admin com KPIs: pesquisas sem resultados por período/UF, volume de sugestões pendentes/aprovadas/rejeitadas, cobertura de fichas editoriais (111/5571), top termos, tendências
+- [ ] Proteger /admin por papel admin e validar testes + build
+- [ ] Agendar verificação diária de quota LLM com retoma automática (generateTabsNative.py --all)

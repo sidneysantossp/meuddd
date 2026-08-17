@@ -77,6 +77,7 @@ const searchInsightsRoute = createLoadableRoute(
 const suggestionsRoute = createLoadableRoute(
   () => import("./pages/SuggestionModerationPage")
 );
+const adminRoute = createLoadableRoute(() => import("./pages/Admin"));
 const institutionalRoute = createLoadableRoute(
   () => import("./pages/InstitutionalPage")
 );
@@ -98,6 +99,7 @@ export function preloadRouteForPath(pathname: string) {
   if (pathname === "/capitais") return capitalsRoute.preload();
   if (pathname === "/admin/pesquisas") return searchInsightsRoute.preload();
   if (pathname === "/admin/sugestoes") return suggestionsRoute.preload();
+  if (pathname === "/admin") return adminRoute.preload();
   if (
     [
       "/sobre",
@@ -137,6 +139,7 @@ function Router() {
         path="/admin/sugestoes"
         component={suggestionsRoute.RouteComponent}
       />
+      <Route path="/admin" component={adminRoute.RouteComponent} />
       <Route path="/sobre" component={institutionalRoute.RouteComponent} />
       <Route path="/contato" component={institutionalRoute.RouteComponent} />
       <Route
