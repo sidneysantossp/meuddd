@@ -349,7 +349,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Central de inteligência de dados em /admin (pedido do utilizador, 17/08 04:55 UTC)
 
-- [ ] Auditar a telemetria existente (pesquisas sem resultados, sugestões de alteração, tabelas DB)
-- [ ] Criar dashboard /admin com KPIs: pesquisas sem resultados por período/UF, volume de sugestões pendentes/aprovadas/rejeitadas, cobertura de fichas editoriais (111/5571), top termos, tendências
-- [ ] Proteger /admin por papel admin e validar testes + build
-- [ ] Agendar verificação diária de quota LLM com retoma automática (generateTabsNative.py --all)
+- [x] Auditar a telemetria existente (pesquisas sem resultados, sugestões de alteração, tabelas DB)
+- [x] Criar dashboard /admin com KPIs: pesquisas sem resultados por período/UF, volume de sugestões pendentes/aprovadas/rejeitadas, cobertura de fichas editoriais (111/5571), top termos, tendências
+- [x] Proteger /admin por papel admin e validar testes + build
+- [x] Agendar verificação diária de quota LLM com retoma automática (generateTabsNative.py --all)
