@@ -3,6 +3,14 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import fs from "node:fs";
 import path from "node:path";
+// Os 27 módulos UF do catálogo editorial (51 MB) são compilados por esbuild
+// (scripts/buildTabsModules.mjs) e carregados via require() em runtime — o
+// vite SSR não os resolve nem transforma (ssr.external abaixo).
+const sharedDir = path.resolve(import.meta.dirname, "shared", "localityTabs");
+const UFModules = fs
+  .readdirSync(sharedDir)
+  .filter((f) => /^[a-z]{2}\.ts$/.test(f))
+  .map((f) => path.join(sharedDir, f));
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
@@ -160,8 +168,34 @@ export default defineConfig(({ command }) => {
         ]
       : [];
 
+  // Os 27 módulos UF do catálogo editorial (51 MB) são compilados por esbuild
+  // (scripts/buildTabsModules.mjs) e carregados via require() em runtime — o
+  // vite SSR não os resolve nem transforma (plugin externalTabs abaixo).
+  const sharedDir = path.resolve(import.meta.dirname, "shared", "localityTabs");
+  const UFModules = fs
+    .readdirSync(sharedDir)
+    .filter((f) => /^[a-z]{2}\.ts$/.test(f))
+    .map((f) => path.join(sharedDir, f));
+  const isBuild = command === "build";
+
+  // Marca os módulos UF como externos durante o build SSR (o client não os
+  // importa estaticamente — usa code-splitting dos dynamic imports).
+  const externalTabs: Plugin = {
+    name: "external-tabs-ssr",
+    apply: "build",
+    enforce: "pre",
+    resolveId(source) {
+      if (!isBuild) return null;
+      const resolved = source.startsWith("/")
+        ? source
+        : path.resolve(import.meta.dirname, "shared", "localityTabs", source);
+      if (UFModules.includes(resolved)) return { id: resolved, external: true };
+      return null;
+    },
+  };
+
   return {
-    plugins: [react(), tailwindcss(), ...developmentPlugins],
+    plugins: [react(), tailwindcss(), externalTabs, ...developmentPlugins],
     resolve: {
       alias: {
         "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -175,6 +209,9 @@ export default defineConfig(({ command }) => {
     build: {
       outDir: path.resolve(import.meta.dirname, "dist/public"),
       emptyOutDir: true,
+    },
+    ssr: {
+      external: UFModules,
     },
     server: {
       host: true,

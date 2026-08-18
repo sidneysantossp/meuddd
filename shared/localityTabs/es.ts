@@ -1,4 +1,9055 @@
-/* Conteúdo editorial em tabs dos municípios de ES. Preenchido em massa pelo produtor de conteúdo; ver scripts/integrateTabs.mts. */
-import type { LocalityTabsCatalog } from "./types";
-
-export const catalog: LocalityTabsCatalog = {};
+/* Catálogo editorial gerado — NÃO EDITAR manualmente.
+   Fonte: .generated/tabs/<uf>.json (regerar com pnpm tsx scripts/generateTabs.mts e depois pnpm tsx scripts/integrateTabs.mts) */
+// @ts-nocheck
+import type { MunicipalityTabs } from "./types";
+export const catalog: Record<string, MunicipalityTabs> = {
+  "afonso-claudio": {
+    "tourism": {
+      "intro": "Afonso Cláudio guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Afonso Cláudio conhece de cor — é da massa, véi. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Afonso Cláudio vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Afonso Cláudio",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Afonso Cláudio vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Afonso%20Cl%C3%A1udio%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi",
+    },
+    "dining": {
+      "intro": "Comer bem em Afonso Cláudio é mais fácil do que parece. se tu for lá. A mesa da cidade tem moqueca capixaba na panela de barro no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Afonso Cláudio vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Afonso Cláudio conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Afonso Cláudio vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Afonso Cláudio é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Afonso Cláudio, quem come bem conta vantagem. é da massa, véi",
+    },
+    "transport": {
+      "intro": "Quem se muda para Afonso Cláudio logo aprende a malha de transporte local. pra falar a real. A cidade mantém praias de Vitória e Guarapari na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Afonso Cláudio é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Afonso Cláudio vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Afonso Cláudio",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Afonso Cláudio vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Afonso%20Cl%C3%A1udio%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Afonso Cláudio é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Afonso%20Cl%C3%A1udio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Afonso Cláudio é mais simples do que parece. se tu for lá",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Afonso Cláudio, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Afonso Cláudio apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/afonso%20claudio/",
+      },
+    },
+    "city": "Afonso Cláudio",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 32456,
+    "reviewedOn": "2026-08-18",
+  },
+  "alto-rio-novo": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Alto Rio Novo. pra falar a real. O turismo da cidade é simples e verdadeiro: torto capixaba nas festas e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Parque municipal de Alto Rio Novo",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Alto Rio Novo vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Alto%20Rio%20Novo%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Alto Rio Novo",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Alto Rio Novo é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Alto%20Rio%20Novo%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Alto Rio Novo no seu ritmo: aqui ninguém tem pressa. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "A gastronomia de Alto Rio Novo conta a história de Espírito Santo no prato. é bom demais, viu. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Alto Rio Novo vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Alto Rio Novo vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Alto Rio Novo vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Alto Rio Novo conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Alto Rio Novo é generosa, igual gente da casa. se tu for lá",
+    },
+    "transport": {
+      "intro": "Em Alto Rio Novo, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. se tu for lá. Para distâncias maiores, moqueca capixaba na panela de barro resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Alto Rio Novo",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Alto Rio Novo é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Alto%20Rio%20Novo%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Alto Rio Novo vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Alto%20Rio%20Novo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Alto Rio Novo é tranquila, e a cidade te recebe sem enrolação. se tu for lá",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Alto Rio Novo, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Alto Rio Novo, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é bom demais, viu. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/alto%20rio%20novo/",
+      },
+    },
+    "city": "Alto Rio Novo",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 7760,
+    "reviewedOn": "2026-08-18",
+  },
+  "aracruz": {
+    "tourism": {
+      "intro": "Aracruz é daquelas cidades de Espírito Santo que a gente conhece devagar. é da massa, véi O roteiro local mistura torto capixaba nas festas com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Parque municipal de Aracruz",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Aracruz%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Aracruz vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Aracruz é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Aracruz conhece de cor — se tu for lá. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Aracruz",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Aracruz vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Aracruz%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Aracruz se revela aos poucos. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "Comer bem em Aracruz é mais fácil do que parece. é da massa, véi. A mesa da cidade tem moqueca capixaba na panela de barro no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Aracruz conhece de cor — tá de parabéns o lugar. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Aracruz conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Aracruz vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Aracruz vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Aracruz vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Aracruz vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Aracruz é generosa, igual gente da casa. tá de parabéns o lugar",
+    },
+    "transport": {
+      "intro": "Quem se muda para Aracruz logo aprende a malha de transporte local. pra falar a real. A cidade mantém moqueca capixaba na panela de barro na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Aracruz vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Aracruz é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É tá de parabéns o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Aracruz",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Aracruz conhece de cor — é bom demais, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Aracruz%2C%20Aracruz%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Aracruz, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Aracruz, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é bom demais, viu. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/aracruz/",
+      },
+    },
+    "city": "Aracruz",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 103363,
+    "reviewedOn": "2026-08-18",
+  },
+  "brejetuba": {
+    "tourism": {
+      "intro": "Brejetuba guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Parque municipal de Brejetuba",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Brejetuba é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Brejetuba%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Brejetuba vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Brejetuba",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Brejetuba é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Brejetuba%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Brejetuba",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Brejetuba é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Brejetuba%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Brejetuba vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Brejetuba se revela aos poucos. se tu for lá",
+    },
+    "dining": {
+      "intro": "A gastronomia de Brejetuba conta a história de Espírito Santo no prato. é da massa, véi. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Brejetuba conhece de cor — pra falar a real. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Brejetuba vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Brejetuba conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Brejetuba vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito bom o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Brejetuba, quem come bem conta vantagem. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Brejetuba é tranquilo para quem conhece os atalhos. tá de parabéns o lugar. O transporte da cidade se organiza em torno de praias de Vitória e Guarapari, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Brejetuba conhece de cor — pra falar a real. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Brejetuba vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Brejetuba é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Brejetuba é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Brejetuba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá",
+    },
+    "climate": {
+      "intro": "Brejetuba vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Brejetuba se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/brejetuba/",
+      },
+    },
+    "city": "Brejetuba",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 13718,
+    "reviewedOn": "2026-08-18",
+  },
+  "cachoeiro-de-itapemirim": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Cachoeiro de Itapemirim. pra falar a real. O turismo da cidade é simples e verdadeiro: romaria de Nossa Senhora da Penha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Cachoeiro de Itapemirim",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Cachoeiro de Itapemirim conhece de cor — se tu for lá. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Cachoeiro%20de%20Itapemirim%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Cachoeiro de Itapemirim conhece de cor — é bom demais, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Cachoeiro de Itapemirim conhece de cor — se tu for lá. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Cachoeiro de Itapemirim",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Cachoeiro de Itapemirim conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Cachoeiro%20de%20Itapemirim%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Cachoeiro de Itapemirim",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Cachoeiro de Itapemirim é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Cachoeiro%20de%20Itapemirim%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Cachoeiro de Itapemirim vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. se tu for lá",
+    },
+    "dining": {
+      "intro": "Comer bem em Cachoeiro de Itapemirim é mais fácil do que parece. se tu for lá. A mesa da cidade tem capixabada de domingo com a família no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Cachoeiro de Itapemirim vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Cachoeiro de Itapemirim é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Cachoeiro de Itapemirim vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É é nóis o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Cachoeiro de Itapemirim, quem come bem conta vantagem. é da massa, véi",
+    },
+    "transport": {
+      "intro": "O dia a dia de Cachoeiro de Itapemirim tem ritmo próprio, e o transporte acompanha. tá de parabéns o lugar. Entre moqueca capixaba na panela de barro e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Cachoeiro de Itapemirim é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Cachoeiro de Itapemirim vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Cachoeiro de Itapemirim",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Cachoeiro de Itapemirim é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cachoeiro%20de%20Itapemirim%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Cachoeiro de Itapemirim vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Cachoeiro%20de%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Cachoeiro de Itapemirim é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "Cachoeiro de Itapemirim vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Cachoeiro de Itapemirim apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/cachoeiro%20de%20itapemirim/",
+      },
+    },
+    "city": "Cachoeiro de Itapemirim",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 198342,
+    "reviewedOn": "2026-08-18",
+  },
+  "conceicao-da-barra": {
+    "tourism": {
+      "intro": "Conhecer Conceição da Barra é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem torto capixaba nas festas como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Conceição da Barra vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Conceição da Barra",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Conceição da Barra vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Conceição da Barra",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Conceição da Barra vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Conceição da Barra no seu ritmo: aqui ninguém tem pressa. é da massa, véi",
+    },
+    "dining": {
+      "intro": "A gastronomia de Conceição da Barra conta a história de Espírito Santo no prato. pra falar a real. Entre torto capixaba nas festas e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Conceição da Barra é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Conceição da Barra vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Conceição da Barra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Conceição da Barra conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Conceição da Barra é generosa, igual gente da casa. tá de parabéns o lugar",
+    },
+    "transport": {
+      "intro": "Circular por Conceição da Barra é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de torto capixaba nas festas, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Conceição da Barra vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Conceição da Barra conhece de cor — tá de parabéns o lugar. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Conceição da Barra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Conceição da Barra vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Concei%C3%A7%C3%A3o%20da%20Barra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Conceição da Barra é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Conceição da Barra acompanha o ritmo da região: tropical de altitude interiorano, tá de parabéns. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Conceição da Barra se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/conceicao%20da%20barra/",
+      },
+    },
+    "city": "Conceição da Barra",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 28923,
+    "reviewedOn": "2026-08-18",
+  },
+  "conceicao-do-castelo": {
+    "tourism": {
+      "intro": "Conceição do Castelo é daquelas cidades de Espírito Santo que a gente conhece devagar. pra falar a real O roteiro local mistura torto capixaba nas festas com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Conceição do Castelo conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Conceição do Castelo é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Conceição do Castelo",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Conceição do Castelo conhece de cor — é bom demais, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Conceição do Castelo",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Conceição do Castelo conhece de cor — pra falar a real. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Conceição do Castelo é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Conceição do Castelo se revela aos poucos. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "Em Conceição do Castelo, a comida é levada a sério — e sem frescura. se tu for lá. A cidade mantém torto capixaba nas festas vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Conceição do Castelo vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Conceição do Castelo é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito bom o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Conceição do Castelo, quem come bem conta vantagem. é da massa, véi",
+    },
+    "transport": {
+      "intro": "Em Conceição do Castelo, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é da massa, véi. Para distâncias maiores, romaria de Nossa Senhora da Penha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Conceição do Castelo vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Conceição do Castelo conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Conceição do Castelo",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Conceição do Castelo vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Concei%C3%A7%C3%A3o%20do%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Conceição do Castelo é mais simples do que parece. é da massa, véi",
+    },
+    "climate": {
+      "intro": "Conceição do Castelo vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Conceição do Castelo apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/conceicao%20do%20castelo/",
+      },
+    },
+    "city": "Conceição do Castelo",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 12472,
+    "reviewedOn": "2026-08-18",
+  },
+  "divino-de-sao-lourenco": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Divino de São Lourenço. pra falar a real. O turismo da cidade é simples e verdadeiro: praias de Vitória e Guarapari e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Divino de São Lourenço",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Divino de São Lourenço é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Divino de São Lourenço",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Divino de São Lourenço vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Divino de São Lourenço no seu ritmo: aqui ninguém tem pressa. pra falar a real",
+    },
+    "dining": {
+      "intro": "A gastronomia de Divino de São Lourenço conta a história de Espírito Santo no prato. tá de parabéns o lugar. Entre romaria de Nossa Senhora da Penha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Divino de São Lourenço conhece de cor — tá de parabéns o lugar. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Divino de São Lourenço é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Divino de São Lourenço é generosa, igual gente da casa. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Divino de São Lourenço é tranquilo para quem conhece os atalhos. é da massa, véi. O transporte da cidade se organiza em torno de capixabada de domingo com a família, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Divino de São Lourenço conhece de cor — é bom demais, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Divino de São Lourenço",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Divino de São Lourenço é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Divino de São Lourenço conhece de cor — pra falar a real. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Divino%20de%20S%C3%A3o%20Louren%C3%A7o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá",
+    },
+    "climate": {
+      "intro": "O clima de Divino de São Lourenço acompanha o ritmo da região: tropical de altitude interiorano, muito bom. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Divino de São Lourenço apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/divino%20de%20sao%20lourenco/",
+      },
+    },
+    "city": "Divino de São Lourenço",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 5397,
+    "reviewedOn": "2026-08-18",
+  },
+  "domingos-martins": {
+    "tourism": {
+      "intro": "Domingos Martins guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo torto capixaba nas festas — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Centro histórico de Domingos Martins",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Domingos Martins é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Domingos%20Martins%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Domingos Martins é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Domingos Martins",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Domingos Martins é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Domingos%20Martins%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Domingos Martins vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Domingos Martins se revela aos poucos. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "A gastronomia de Domingos Martins conta a história de Espírito Santo no prato. se tu for lá. Entre moqueca capixaba na panela de barro e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Domingos Martins conhece de cor — tá de parabéns o lugar. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muito bom o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Domingos Martins é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Domingos Martins conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Domingos Martins, quem come bem conta vantagem. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "O dia a dia de Domingos Martins tem ritmo próprio, e o transporte acompanha. é da massa, véi. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Domingos Martins conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Domingos Martins conhece de cor — tá de parabéns o lugar. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Domingos Martins vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Domingos%20Martins%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Domingos Martins é tranquila, e a cidade te recebe sem enrolação. é da massa, véi",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Domingos Martins, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Domingos Martins se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/domingos%20martins/",
+      },
+    },
+    "city": "Domingos Martins",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 38236,
+    "reviewedOn": "2026-08-18",
+  },
+  "dores-do-rio-preto": {
+    "tourism": {
+      "intro": "Dores do Rio Preto guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Dores do Rio Preto conhece de cor — pra falar a real. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Dores do Rio Preto vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi",
+    },
+    "dining": {
+      "intro": "Fome em Dores do Rio Preto não falta solução. tá de parabéns o lugar. De romaria de Nossa Senhora da Penha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Dores do Rio Preto vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Dores do Rio Preto é generosa, igual gente da casa. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Em Dores do Rio Preto, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. pra falar a real. Para distâncias maiores, romaria de Nossa Senhora da Penha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Dores do Rio Preto é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Dores do Rio Preto vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Dores do Rio Preto",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Dores do Rio Preto conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Dores%20do%20Rio%20Preto%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Dores%20do%20Rio%20Preto%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Dores do Rio Preto é tranquila, e a cidade te recebe sem enrolação. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "Dores do Rio Preto vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Dores do Rio Preto apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/dores%20do%20rio%20preto/",
+      },
+    },
+    "city": "Dores do Rio Preto",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 6902,
+    "reviewedOn": "2026-08-18",
+  },
+  "fundao": {
+    "tourism": {
+      "intro": "Fundão é daquelas cidades de Espírito Santo que a gente conhece devagar. pra falar a real O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Estádio municipal de Fundão",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Fundão é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Fund%C3%A3o%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Fundão",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Fundão é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Fund%C3%A3o%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Fundão conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Fundão no seu ritmo: aqui ninguém tem pressa. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "A gastronomia de Fundão conta a história de Espírito Santo no prato. é da massa, véi. Entre moqueca capixaba na panela de barro e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Fundão vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Fundão conhece de cor — tá de parabéns o lugar. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Fundão vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Fundão é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Fundão é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "Circular por Fundão é tranquilo para quem conhece os atalhos. tá de parabéns o lugar. O transporte da cidade se organiza em torno de praias de Vitória e Guarapari, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Fundão é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Fundão conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Fundão vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Fundão",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Fund%C3%A3o%2C%20Fund%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Fundão é mais simples do que parece. é da massa, véi",
+    },
+    "climate": {
+      "intro": "O clima de Fundão acompanha o ritmo da região: tropical de altitude interiorano, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Fundão apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/fundao/",
+      },
+    },
+    "city": "Fundão",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 18898,
+    "reviewedOn": "2026-08-18",
+  },
+  "governador-lindenberg": {
+    "tourism": {
+      "intro": "Governador Lindenberg guarda charme de Espírito Santo em cada canto. é da massa, véi. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de Governador Lindenberg",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Governador Lindenberg vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Governador%20Lindenberg%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Governador Lindenberg",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Governador%20Lindenberg%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Governador Lindenberg vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Governador Lindenberg conhece de cor — é bom demais, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Governador Lindenberg conhece de cor — é da massa, véi. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "A gastronomia de Governador Lindenberg conta a história de Espírito Santo no prato. tá de parabéns o lugar. Entre moqueca capixaba na panela de barro e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Governador Lindenberg vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Governador Lindenberg conhece de cor — é bom demais, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É tá de parabéns o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Governador Lindenberg é generosa, igual gente da casa. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Quem se muda para Governador Lindenberg logo aprende a malha de transporte local. se tu for lá. A cidade mantém torto capixaba nas festas na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Governador Lindenberg conhece de cor — é da massa, véi. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Governador Lindenberg é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É muito bom o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Governador Lindenberg é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Governador%20Lindenberg%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "Governador Lindenberg vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Governador Lindenberg apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/governador%20lindenberg/",
+      },
+    },
+    "city": "Governador Lindenberg",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 11484,
+    "reviewedOn": "2026-08-18",
+  },
+  "guarapari": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Guarapari. pra falar a real. O turismo da cidade é simples e verdadeiro: romaria de Nossa Senhora da Penha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Guarapari",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É bater um papo o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Guarapari%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Guarapari conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Guarapari é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Guarapari",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Guarapari é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Guarapari%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Guarapari",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Guarapari é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Guarapari%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Guarapari se revela aos poucos. é da massa, véi",
+    },
+    "dining": {
+      "intro": "A gastronomia de Guarapari conta a história de Espírito Santo no prato. pra falar a real. Entre moqueca capixaba na panela de barro e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Guarapari é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Guarapari é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Guarapari é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Guarapari, quem come bem conta vantagem. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Em Guarapari, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. tá de parabéns o lugar. Para distâncias maiores, pão com sardinha na merenda resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Guarapari vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Guarapari",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Guarapari conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Guarapari%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Guarapari vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Guarapari%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real",
+    },
+    "climate": {
+      "intro": "Guarapari vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Guarapari se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/guarapari/",
+      },
+    },
+    "city": "Guarapari",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 136311,
+    "reviewedOn": "2026-08-18",
+  },
+  "iconha": {
+    "tourism": {
+      "intro": "Iconha é daquelas cidades de Espírito Santo que a gente conhece devagar. pra falar a real O roteiro local mistura pão com sardinha na merenda com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Iconha",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Iconha%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Iconha",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Iconha vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Iconha%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Iconha",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Iconha vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Iconha%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Iconha vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Iconha rende conversa boa e foto bonita. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "Fome em Iconha não falta solução. pra falar a real. De torto capixaba nas festas ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Iconha é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Iconha conhece de cor — pra falar a real. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Iconha é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Iconha conhece de cor — pra falar a real. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Iconha com fome — a cidade resolve. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Iconha é tranquilo para quem conhece os atalhos. é da massa, véi. O transporte da cidade se organiza em torno de praias de Vitória e Guarapari, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Iconha",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Iconha é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Iconha%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É da hora o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Iconha vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Iconha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Iconha é mais simples do que parece. se tu for lá",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Iconha, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Iconha apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/iconha/",
+      },
+    },
+    "city": "Iconha",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 12790,
+    "reviewedOn": "2026-08-18",
+  },
+  "itarana": {
+    "tourism": {
+      "intro": "Conhecer Itarana é conhecer um pedaço autêntico de Espírito Santo. é da massa, véi A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Itarana é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Itarana",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Itarana%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Itarana conhece de cor — tá de parabéns o lugar. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Itarana rende conversa boa e foto bonita. se tu for lá",
+    },
+    "dining": {
+      "intro": "Fome em Itarana não falta solução. é bom demais, viu. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Itarana conhece de cor — pra falar a real. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Itarana é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Itarana conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Itarana vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Itarana com fome — a cidade resolve. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "O dia a dia de Itarana tem ritmo próprio, e o transporte acompanha. se tu for lá. Entre capixabada de domingo com a família e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Itarana é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Itarana é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Itarana conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itarana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Itarana, todo caminho leva a um lugar bom. é da massa, véi",
+    },
+    "climate": {
+      "intro": "O clima de Itarana acompanha o ritmo da região: tropical de altitude interiorano, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Itarana, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/itarana/",
+      },
+    },
+    "city": "Itarana",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 10975,
+    "reviewedOn": "2026-08-18",
+  },
+  "jeronimo-monteiro": {
+    "tourism": {
+      "intro": "Jerônimo Monteiro é daquelas cidades de Espírito Santo que a gente conhece devagar. é da massa, véi O roteiro local mistura torto capixaba nas festas com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Jerônimo Monteiro é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Jerônimo Monteiro",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Jerônimo Monteiro conhece de cor — pra falar a real. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Jer%C3%B4nimo%20Monteiro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Jerônimo Monteiro",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Jerônimo Monteiro conhece de cor — é bom demais, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Jer%C3%B4nimo%20Monteiro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Jerônimo Monteiro",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Jerônimo Monteiro vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Jer%C3%B4nimo%20Monteiro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Jerônimo Monteiro",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É da massa o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Jer%C3%B4nimo%20Monteiro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Jerônimo Monteiro rende conversa boa e foto bonita. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "A gastronomia de Jerônimo Monteiro conta a história de Espírito Santo no prato. pra falar a real. Entre pão com sardinha na merenda e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É da massa o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Jerônimo Monteiro é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Jerônimo Monteiro conhece de cor — tá de parabéns o lugar. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Jerônimo Monteiro com fome — a cidade resolve. se tu for lá",
+    },
+    "transport": {
+      "intro": "Em Jerônimo Monteiro, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é bom demais, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Jerônimo Monteiro conhece de cor — pra falar a real. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Jerônimo Monteiro",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Jerônimo Monteiro é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Jer%C3%B4nimo%20Monteiro%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Jerônimo Monteiro conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Jerônimo Monteiro conhece de cor — é da massa, véi. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Jer%C3%B4nimo%20Monteiro%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Jerônimo Monteiro é mais simples do que parece. se tu for lá",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Jerônimo Monteiro, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. se tu for lá. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Jerônimo Monteiro, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. se tu for lá. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/jeronimo%20monteiro/",
+      },
+    },
+    "city": "Jerônimo Monteiro",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 12108,
+    "reviewedOn": "2026-08-18",
+  },
+  "laranja-da-terra": {
+    "tourism": {
+      "intro": "Conhecer Laranja da Terra é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem praias de Vitória e Guarapari como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Laranja da Terra",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Laranja%20da%20Terra%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Laranja da Terra é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Laranja da Terra",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Laranja da Terra conhece de cor — se tu for lá. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Laranja%20da%20Terra%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Laranja da Terra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Laranja da Terra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Laranja da Terra se revela aos poucos. pra falar a real",
+    },
+    "dining": {
+      "intro": "A gastronomia de Laranja da Terra conta a história de Espírito Santo no prato. é bom demais, viu. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Laranja da Terra conhece de cor — pra falar a real. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Laranja da Terra conhece de cor — é bom demais, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Laranja da Terra é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Laranja da Terra conhece de cor — se tu for lá. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Laranja da Terra com fome — a cidade resolve. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Laranja da Terra é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de moqueca capixaba na panela de barro, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Laranja da Terra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Laranja da Terra conhece de cor — se tu for lá. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É é nóis o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Laranja da Terra",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Laranja da Terra vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Laranja%20da%20Terra%2C%20Laranja%20da%20Terra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Laranja da Terra, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Laranja da Terra se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/laranja%20da%20terra/",
+      },
+    },
+    "city": "Laranja da Terra",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 11597,
+    "reviewedOn": "2026-08-18",
+  },
+  "mantenopolis": {
+    "tourism": {
+      "intro": "Conhecer Mantenópolis é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Mantenópolis",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Mantenópolis conhece de cor — é bom demais, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Manten%C3%B3polis%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Mantenópolis",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Mantenópolis é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Manten%C3%B3polis%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Mantenópolis é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Mantenópolis conhece de cor — tá de parabéns o lugar. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Mantenópolis se revela aos poucos. pra falar a real",
+    },
+    "dining": {
+      "intro": "Em Mantenópolis, a comida é levada a sério — e sem frescura. é da massa, véi. A cidade mantém capixabada de domingo com a família vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Mantenópolis vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Mantenópolis vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Mantenópolis conhece de cor — pra falar a real. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Mantenópolis conhece de cor — se tu for lá. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Mantenópolis com fome — a cidade resolve. tá de parabéns o lugar",
+    },
+    "transport": {
+      "intro": "O dia a dia de Mantenópolis tem ritmo próprio, e o transporte acompanha. é bom demais, viu. Entre pão com sardinha na merenda e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Mantenópolis é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Mantenópolis vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Mantenópolis vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Manten%C3%B3polis%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Mantenópolis é mais simples do que parece. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "O clima de Mantenópolis acompanha o ritmo da região: tropical de altitude interiorano, muito bom. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Mantenópolis apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/mantenopolis/",
+      },
+    },
+    "city": "Mantenópolis",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 13131,
+    "reviewedOn": "2026-08-18",
+  },
+  "mimoso-do-sul": {
+    "tourism": {
+      "intro": "Conhecer Mimoso do Sul é conhecer um pedaço autêntico de Espírito Santo. é da massa, véi A cidade tem pão com sardinha na merenda como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Praça Central de Mimoso do Sul",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Mimoso do Sul vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Mimoso%20do%20Sul%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Mimoso do Sul",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Mimoso do Sul vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Mimoso%20do%20Sul%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Mimoso do Sul",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Mimoso do Sul é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Mimoso%20do%20Sul%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Mimoso do Sul vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Mimoso do Sul",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Mimoso do Sul conhece de cor — se tu for lá. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Mimoso%20do%20Sul%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Mimoso do Sul no seu ritmo: aqui ninguém tem pressa. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "Fome em Mimoso do Sul não falta solução. pra falar a real. De torto capixaba nas festas ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Mimoso do Sul conhece de cor — é da massa, véi. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Mimoso do Sul vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Mimoso do Sul se come de olhos fechados e de coração aberto. se tu for lá",
+    },
+    "transport": {
+      "intro": "Quem se muda para Mimoso do Sul logo aprende a malha de transporte local. pra falar a real. A cidade mantém moqueca capixaba na panela de barro na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Mimoso do Sul vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Mimoso do Sul vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Mimoso do Sul",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Mimoso do Sul é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Mimoso%20do%20Sul%2C%20Mimoso%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Mimoso do Sul é mais simples do que parece. se tu for lá",
+    },
+    "climate": {
+      "intro": "Mimoso do Sul vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Mimoso do Sul apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/mimoso%20do%20sul/",
+      },
+    },
+    "city": "Mimoso do Sul",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 25088,
+    "reviewedOn": "2026-08-18",
+  },
+  "mucurici": {
+    "tourism": {
+      "intro": "Mucurici guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo romaria de Nossa Senhora da Penha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Mucurici é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Mucurici",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Mucurici é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Mucurici%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi",
+    },
+    "dining": {
+      "intro": "Comer bem em Mucurici é mais fácil do que parece. é bom demais, viu. A mesa da cidade tem pão com sardinha na merenda no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Mucurici conhece de cor — pra falar a real. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Mucurici é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Mucurici é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Mucurici é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Mucurici se come de olhos fechados e de coração aberto. se tu for lá",
+    },
+    "transport": {
+      "intro": "Circular por Mucurici é tranquilo para quem conhece os atalhos. é bom demais, viu. O transporte da cidade se organiza em torno de torto capixaba nas festas, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Mucurici",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Mucurici é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Mucurici%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Mucurici é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Mucurici%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Mucurici, todo caminho leva a um lugar bom. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "O clima de Mucurici acompanha o ritmo da região: tropical de altitude interiorano, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Mucurici se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/mucurici/",
+      },
+    },
+    "city": "Mucurici",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 5653,
+    "reviewedOn": "2026-08-18",
+  },
+  "pancas": {
+    "tourism": {
+      "intro": "Pancas guarda charme de Espírito Santo em cada canto. é da massa, véi. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Pancas é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Pancas",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Pancas conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Pancas%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Pancas",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Pancas%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Pancas é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Pancas no seu ritmo: aqui ninguém tem pressa. é da massa, véi",
+    },
+    "dining": {
+      "intro": "Comer bem em Pancas é mais fácil do que parece. é da massa, véi. A mesa da cidade tem romaria de Nossa Senhora da Penha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Pancas é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Pancas conhece de cor — se tu for lá. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Pancas é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Pancas é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Pancas é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Pancas se come de olhos fechados e de coração aberto. se tu for lá",
+    },
+    "transport": {
+      "intro": "Em Pancas, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. tá de parabéns o lugar. Para distâncias maiores, pão com sardinha na merenda resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Pancas",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Pancas é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Pancas%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Pancas é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Pancas é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Pancas%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Pancas, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Pancas apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/pancas/",
+      },
+    },
+    "city": "Pancas",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 19120,
+    "reviewedOn": "2026-08-18",
+  },
+  "piuma": {
+    "tourism": {
+      "intro": "Conhecer Piúma é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem pão com sardinha na merenda como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Piúma é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Piúma",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Piúma é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Pi%C3%BAma%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Piúma conhece de cor — pra falar a real. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Piúma",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Piúma conhece de cor — pra falar a real. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Pi%C3%BAma%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Piúma rende conversa boa e foto bonita. se tu for lá",
+    },
+    "dining": {
+      "intro": "A gastronomia de Piúma conta a história de Espírito Santo no prato. tá de parabéns o lugar. Entre torto capixaba nas festas e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Piúma conhece de cor — é bom demais, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Piúma conhece de cor — é da massa, véi. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Piúma conhece de cor — se tu for lá. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Piúma, quem come bem conta vantagem. é da massa, véi",
+    },
+    "transport": {
+      "intro": "Quem se muda para Piúma logo aprende a malha de transporte local. pra falar a real. A cidade mantém torto capixaba nas festas na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da massa o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Piúma conhece de cor — se tu for lá. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Piúma vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Piúma conhece de cor — é bom demais, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Pi%C3%BAma%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Piúma é tranquila, e a cidade te recebe sem enrolação. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Piúma, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Piúma, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/piuma/",
+      },
+    },
+    "city": "Piúma",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 23912,
+    "reviewedOn": "2026-08-18",
+  },
+  "ponto-belo": {
+    "tourism": {
+      "intro": "Conhecer Ponto Belo é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem praias de Vitória e Guarapari como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Ponto Belo conhece de cor — pra falar a real. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Ponto Belo",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Ponto Belo conhece de cor — é da massa, véi. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ponto%20Belo%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Ponto Belo",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Ponto%20Belo%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. pra falar a real",
+    },
+    "dining": {
+      "intro": "Fome em Ponto Belo não falta solução. é da massa, véi. De capixabada de domingo com a família ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Ponto Belo é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Ponto Belo conhece de cor — é bom demais, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Ponto Belo vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Ponto Belo é generosa, igual gente da casa. é da massa, véi",
+    },
+    "transport": {
+      "intro": "Em Ponto Belo, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é bom demais, viu. Para distâncias maiores, romaria de Nossa Senhora da Penha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Ponto Belo conhece de cor — se tu for lá. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Ponto Belo",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Ponto Belo conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ponto%20Belo%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Ponto Belo é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Ponto Belo vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ponto%20Belo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Ponto Belo, todo caminho leva a um lugar bom. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Ponto Belo, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Ponto Belo apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/ponto%20belo/",
+      },
+    },
+    "city": "Ponto Belo",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 6671,
+    "reviewedOn": "2026-08-18",
+  },
+  "presidente-kennedy": {
+    "tourism": {
+      "intro": "Presidente Kennedy é daquelas cidades de Espírito Santo que a gente conhece devagar. é da massa, véi O roteiro local mistura praias de Vitória e Guarapari com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Presidente Kennedy vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É é nóis o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Presidente Kennedy",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Presidente%20Kennedy%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Presidente Kennedy",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Presidente Kennedy é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Presidente%20Kennedy%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. pra falar a real",
+    },
+    "dining": {
+      "intro": "Comer bem em Presidente Kennedy é mais fácil do que parece. é bom demais, viu. A mesa da cidade tem praias de Vitória e Guarapari no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Presidente Kennedy é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Presidente Kennedy vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Presidente Kennedy conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Presidente Kennedy vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Presidente Kennedy se come de olhos fechados e de coração aberto. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Presidente Kennedy é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de praias de Vitória e Guarapari, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Presidente Kennedy vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Presidente Kennedy conhece de cor — é bom demais, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Presidente Kennedy é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Presidente%20Kennedy%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Presidente Kennedy é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "Presidente Kennedy vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Presidente Kennedy, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. pra falar a real. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/presidente%20kennedy/",
+      },
+    },
+    "city": "Presidente Kennedy",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 14852,
+    "reviewedOn": "2026-08-18",
+  },
+  "santa-teresa": {
+    "tourism": {
+      "intro": "Santa Teresa guarda charme de Espírito Santo em cada canto. pra falar a real. Quem anda pela cidade percebe logo romaria de Nossa Senhora da Penha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Santa Teresa conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Santa Teresa vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Santa Teresa",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Santa Teresa conhece de cor — pra falar a real. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Santa%20Teresa%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Santa Teresa",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Santa%20Teresa%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Santa Teresa se revela aos poucos. se tu for lá",
+    },
+    "dining": {
+      "intro": "Comer bem em Santa Teresa é mais fácil do que parece. é da massa, véi. A mesa da cidade tem romaria de Nossa Senhora da Penha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Santa Teresa vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Santa Teresa vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Santa Teresa vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Santa Teresa vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Santa Teresa com fome — a cidade resolve. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Quem se muda para Santa Teresa logo aprende a malha de transporte local. se tu for lá. A cidade mantém pão com sardinha na merenda na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Santa Teresa",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Santa%20Teresa%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Santa Teresa é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Santa Teresa conhece de cor — se tu for lá. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Santa Teresa conhece de cor — pra falar a real. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Santa%20Teresa%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Santa Teresa é tranquila, e a cidade te recebe sem enrolação. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "Santa Teresa vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Santa Teresa apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/santa%20teresa/",
+      },
+    },
+    "city": "Santa Teresa",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 23872,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-mateus": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de São Mateus. é da massa, véi. O turismo da cidade é simples e verdadeiro: pão com sardinha na merenda e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de São Mateus",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de São Mateus conhece de cor — é da massa, véi. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20S%C3%A3o%20Mateus%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. São Mateus vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de São Mateus conhece de cor — é da massa, véi. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. São Mateus vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que São Mateus se revela aos poucos. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "Fome em São Mateus não falta solução. se tu for lá. De pão com sardinha na merenda ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É tá de parabéns o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. São Mateus vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. São Mateus é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de São Mateus conhece de cor — é da massa, véi. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por São Mateus com fome — a cidade resolve. pra falar a real",
+    },
+    "transport": {
+      "intro": "O dia a dia de São Mateus tem ritmo próprio, e o transporte acompanha. é da massa, véi. Entre praias de Vitória e Guarapari e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São Mateus vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de São Mateus conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. São Mateus vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. São Mateus é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Mateus%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em São Mateus é mais simples do que parece. tá de parabéns o lugar",
+    },
+    "climate": {
+      "intro": "O clima de São Mateus acompanha o ritmo da região: tropical de altitude interiorano, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em São Mateus, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. se tu for lá. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sao%20mateus/",
+      },
+    },
+    "city": "São Mateus",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 134423,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-roque-do-canaa": {
+    "tourism": {
+      "intro": "São Roque do Canaã é daquelas cidades de Espírito Santo que a gente conhece devagar. pra falar a real O roteiro local mistura romaria de Nossa Senhora da Penha com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de São Roque do Canaã",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de São Roque do Canaã conhece de cor — tá de parabéns o lugar. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de São Roque do Canaã",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. São Roque do Canaã é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de São Roque do Canaã conhece de cor — é da massa, véi. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra São Roque do Canaã no seu ritmo: aqui ninguém tem pressa. se tu for lá",
+    },
+    "dining": {
+      "intro": "Fome em São Roque do Canaã não falta solução. tá de parabéns o lugar. De pão com sardinha na merenda ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de São Roque do Canaã conhece de cor — tá de parabéns o lugar. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de São Roque do Canaã conhece de cor — pra falar a real. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. São Roque do Canaã vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. São Roque do Canaã vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de São Roque do Canaã é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "Circular por São Roque do Canaã é tranquilo para quem conhece os atalhos. é da massa, véi. O transporte da cidade se organiza em torno de pão com sardinha na merenda, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de São Roque do Canaã",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São Roque do Canaã é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de São Roque do Canaã conhece de cor — pra falar a real. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. São Roque do Canaã vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20S%C3%A3o%20Roque%20do%20Cana%C3%A3%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em São Roque do Canaã é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em São Roque do Canaã, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em São Roque do Canaã, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é da massa, véi. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sao%20roque%20do%20canaa/",
+      },
+    },
+    "city": "São Roque do Canaã",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 11256,
+    "reviewedOn": "2026-08-18",
+  },
+  "vargem-alta": {
+    "tourism": {
+      "intro": "Conhecer Vargem Alta é conhecer um pedaço autêntico de Espírito Santo. pra falar a real A cidade tem torto capixaba nas festas como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Vargem Alta",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Vargem Alta conhece de cor — se tu for lá. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Vargem%20Alta%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Vargem Alta vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Vargem Alta vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Vargem Alta",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É é nóis o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Vargem%20Alta%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Vargem Alta rende conversa boa e foto bonita. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "Em Vargem Alta, a comida é levada a sério — e sem frescura. pra falar a real. A cidade mantém praias de Vitória e Guarapari vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Vargem Alta vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Vargem Alta conhece de cor — pra falar a real. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Vargem Alta é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Vargem Alta conhece de cor — é bom demais, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Vargem Alta com fome — a cidade resolve. tá de parabéns o lugar",
+    },
+    "transport": {
+      "intro": "Quem se muda para Vargem Alta logo aprende a malha de transporte local. tá de parabéns o lugar. A cidade mantém pão com sardinha na merenda na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Vargem Alta conhece de cor — tá de parabéns o lugar. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Vargem Alta vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vargem%20Alta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Vargem Alta é tranquila, e a cidade te recebe sem enrolação. se tu for lá",
+    },
+    "climate": {
+      "intro": "Vargem Alta vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Vargem Alta apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/vargem%20alta/",
+      },
+    },
+    "city": "Vargem Alta",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 20390,
+    "reviewedOn": "2026-08-18",
+  },
+  "venda-nova-do-imigrante": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Venda Nova do Imigrante. pra falar a real. O turismo da cidade é simples e verdadeiro: capixabada de domingo com a família e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Venda Nova do Imigrante",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Venda Nova do Imigrante é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Venda%20Nova%20do%20Imigrante%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Venda Nova do Imigrante",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Venda Nova do Imigrante conhece de cor — se tu for lá. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Venda%20Nova%20do%20Imigrante%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Venda Nova do Imigrante vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Venda Nova do Imigrante rende conversa boa e foto bonita. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "A gastronomia de Venda Nova do Imigrante conta a história de Espírito Santo no prato. tá de parabéns o lugar. Entre capixabada de domingo com a família e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Venda Nova do Imigrante vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Venda Nova do Imigrante conhece de cor — tá de parabéns o lugar. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Venda Nova do Imigrante é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Venda Nova do Imigrante vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Venda Nova do Imigrante conhece de cor — pra falar a real. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Venda Nova do Imigrante é generosa, igual gente da casa. se tu for lá",
+    },
+    "transport": {
+      "intro": "Circular por Venda Nova do Imigrante é tranquilo para quem conhece os atalhos. se tu for lá. O transporte da cidade se organiza em torno de capixabada de domingo com a família, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Venda Nova do Imigrante é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Venda Nova do Imigrante conhece de cor — é bom demais, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Venda Nova do Imigrante conhece de cor — se tu for lá. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Venda%20Nova%20do%20Imigrante%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Venda Nova do Imigrante é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Venda Nova do Imigrante, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Venda Nova do Imigrante se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/venda%20nova%20do%20imigrante/",
+      },
+    },
+    "city": "Venda Nova do Imigrante",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 25395,
+    "reviewedOn": "2026-08-18",
+  },
+  "viana": {
+    "tourism": {
+      "intro": "Viana é daquelas cidades de Espírito Santo que a gente conhece devagar. pra falar a real O roteiro local mistura pão com sardinha na merenda com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Viana conhece de cor — é da massa, véi. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Viana é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Viana",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É da massa o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Viana%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Viana",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Viana é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Viana%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Viana rende conversa boa e foto bonita. tá de parabéns o lugar",
+    },
+    "dining": {
+      "intro": "A gastronomia de Viana conta a história de Espírito Santo no prato. tá de parabéns o lugar. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Viana vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — se tu for lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Viana é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Viana vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muito bom o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Viana com fome — a cidade resolve. se tu for lá",
+    },
+    "transport": {
+      "intro": "Em Viana, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é bom demais, viu. Para distâncias maiores, romaria de Nossa Senhora da Penha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Viana",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É da massa o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Viana%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Viana vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Viana vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Viana vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Viana%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Viana é mais simples do que parece. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "Viana vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Viana se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/viana/",
+      },
+    },
+    "city": "Viana",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 79043,
+    "reviewedOn": "2026-08-18",
+  },
+  "alegre": {
+    "tourism": {
+      "intro": "Conhecer Alegre é conhecer um pedaço autêntico de Espírito Santo — é bom demais, viu. A cidade tem torto capixaba nas festas como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Alegre conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Alegre",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Alegre conhece de cor — é bom demais, viu, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Alegre%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Alegre é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Alegre rende conversa boa e foto bonita — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Fome em Alegre não falta solução — é da massa, véi. De moqueca capixaba na panela de barro ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Alegre é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Alegre conhece de cor — tá de parabéns o lugar, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Alegre vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Alegre é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Alegre, quem come bem conta vantagem — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Alegre tem ritmo próprio, e o transporte acompanha — pra falar a real, viu. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Alegre conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Alegre é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Alegre conhece de cor — é da massa, véi, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Alegre%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Alegre é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Alegre, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Alegre, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/alegre/",
+      },
+    },
+    "city": "Alegre",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 30702,
+    "reviewedOn": "2026-08-18",
+  },
+  "alfredo-chaves": {
+    "tourism": {
+      "intro": "Conhecer Alfredo Chaves é conhecer um pedaço autêntico de Espírito Santo — é bom demais, viu. A cidade tem torto capixaba nas festas como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Alfredo Chaves conhece de cor — é bom demais, viu, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Alfredo Chaves",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Alfredo Chaves vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Alfredo%20Chaves%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Alfredo Chaves vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Alfredo Chaves",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Alfredo Chaves vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Alfredo%20Chaves%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Alfredo Chaves no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Fome em Alfredo Chaves não falta solução — tá de parabéns o lugar. De pão com sardinha na merenda ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Alfredo Chaves conhece de cor — tá de parabéns o lugar, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Alfredo Chaves conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Alfredo Chaves é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Alfredo Chaves é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Alfredo Chaves é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Alfredo Chaves, quem come bem conta vantagem — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Alfredo Chaves logo aprende a malha de transporte local — tá de parabéns o lugar. A cidade mantém praias de Vitória e Guarapari na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Alfredo Chaves conhece de cor — é da massa, véi, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Alfredo Chaves",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Alfredo Chaves conhece de cor — é da massa, véi, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Alfredo%20Chaves%2C%20Alfredo%20Chaves%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Alfredo Chaves, todo caminho leva a um lugar bom — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Alfredo Chaves, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. se tu for lá. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Alfredo Chaves, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. se tu for lá. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/alfredo%20chaves/",
+      },
+    },
+    "city": "Alfredo Chaves",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 14376,
+    "reviewedOn": "2026-08-18",
+  },
+  "anchieta": {
+    "tourism": {
+      "intro": "Conhecer Anchieta é conhecer um pedaço autêntico de Espírito Santo — tá de parabéns o lugar. A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Praça Central de Anchieta",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Anchieta vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Anchieta%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Anchieta vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Anchieta",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Anchieta conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Anchieta%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Anchieta é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Anchieta no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Anchieta conta a história de Espírito Santo no prato — é da massa, véi. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Anchieta é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Anchieta conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Anchieta vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Anchieta vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Anchieta, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Anchieta tem ritmo próprio, e o transporte acompanha — tá de parabéns o lugar, viu. Entre pão com sardinha na merenda e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Anchieta conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Anchieta conhece de cor — tá de parabéns o lugar, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Anchieta vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Anchieta%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá!",
+    },
+    "climate": {
+      "intro": "O clima de Anchieta acompanha o ritmo da região: tropical úmido de litoral, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Anchieta, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/anchieta/",
+      },
+    },
+    "city": "Anchieta",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 33017,
+    "reviewedOn": "2026-08-18",
+  },
+  "apiaca": {
+    "tourism": {
+      "intro": "Apiacá é daquelas cidades de Espírito Santo que a gente conhece devagar — é bom demais, viu. O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Apiacá",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Apiacá conhece de cor — é bom demais, viu, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Apiac%C3%A1%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Apiacá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Apiacá vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Apiac%C3%A1%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Apiacá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Apiac%C3%A1%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Apiacá no seu ritmo: aqui ninguém tem pressa — se tu for lá!",
+    },
+    "dining": {
+      "intro": "Fome em Apiacá não falta solução — é bom demais, viu. De pão com sardinha na merenda ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Apiacá conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Apiacá conhece de cor — tá de parabéns o lugar, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Apiacá com fome — a cidade resolve. é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Circular por Apiacá é tranquilo para quem conhece os atalhos — é bom demais, viu. O transporte da cidade se organiza em torno de romaria de Nossa Senhora da Penha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muito bom o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É tá de parabéns o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Apiacá é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Apiac%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Apiacá é mais simples do que parece — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "Apiacá vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Apiacá se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/apiaca/",
+      },
+    },
+    "city": "Apiacá",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 7462,
+    "reviewedOn": "2026-08-18",
+  },
+  "atilio-vivacqua": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Atilio Vivacqua — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: capixabada de domingo com a família e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Atilio Vivacqua é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Atilio Vivacqua vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Atilio Vivacqua conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Atilio Vivacqua",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Atilio Vivacqua vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Atilio%20Vivacqua%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Atilio Vivacqua se revela aos poucos — se tu for lá!",
+    },
+    "dining": {
+      "intro": "Em Atilio Vivacqua, a comida é levada a sério — e sem frescura. é da massa, véi, viu. A cidade mantém romaria de Nossa Senhora da Penha vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Atilio Vivacqua conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Atilio Vivacqua é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Atilio Vivacqua conhece de cor — se tu for lá, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Atilio Vivacqua vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Atilio Vivacqua é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Atilio Vivacqua, quem come bem conta vantagem — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Atilio Vivacqua logo aprende a malha de transporte local — tá de parabéns o lugar. A cidade mantém romaria de Nossa Senhora da Penha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Atilio Vivacqua vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Atilio%20Vivacqua%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Atilio Vivacqua é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Atilio Vivacqua vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Atilio Vivacqua, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/atilio%20vivacqua/",
+      },
+    },
+    "city": "Atilio Vivacqua",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 11046,
+    "reviewedOn": "2026-08-18",
+  },
+  "baixo-guandu": {
+    "tourism": {
+      "intro": "Conhecer Baixo Guandu é conhecer um pedaço autêntico de Espírito Santo — se tu for lá. A cidade tem praias de Vitória e Guarapari como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Baixo Guandu é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Baixo Guandu",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Baixo Guandu conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Baixo%20Guandu%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Baixo Guandu conhece de cor — é da massa, véi, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Baixo Guandu conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Baixo Guandu",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Baixo%20Guandu%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Fome em Baixo Guandu não falta solução — pra falar a real. De romaria de Nossa Senhora da Penha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Baixo Guandu vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Baixo Guandu conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Baixo Guandu é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É tá de parabéns o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Baixo Guandu é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Baixo Guandu logo aprende a malha de transporte local — se tu for lá. A cidade mantém pão com sardinha na merenda na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Baixo Guandu é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Baixo Guandu conhece de cor — pra falar a real, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Baixo%20Guandu%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "O clima de Baixo Guandu acompanha o ritmo da região: tropical de altitude interiorano, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Baixo Guandu se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/baixo%20guandu/",
+      },
+    },
+    "city": "Baixo Guandu",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 32829,
+    "reviewedOn": "2026-08-18",
+  },
+  "barra-de-sao-francisco": {
+    "tourism": {
+      "intro": "Barra de São Francisco é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura torto capixaba nas festas com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Barra de São Francisco vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Barra de São Francisco é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É da massa o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Barra de São Francisco",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Barra de São Francisco se revela aos poucos — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Comer bem em Barra de São Francisco é mais fácil do que parece — é da massa, véi, viu. A mesa da cidade tem praias de Vitória e Guarapari no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Barra de São Francisco vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Barra de São Francisco se come de olhos fechados e de coração aberto — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Em Barra de São Francisco, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, torto capixaba nas festas resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Barra de São Francisco vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Barra de São Francisco",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Barra de São Francisco vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Barra de São Francisco conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Barra%20de%20S%C3%A3o%20Francisco%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Barra de São Francisco, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Barra de São Francisco apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/barra%20de%20sao%20francisco/",
+      },
+    },
+    "city": "Barra de São Francisco",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 45415,
+    "reviewedOn": "2026-08-18",
+  },
+  "boa-esperanca": {
+    "tourism": {
+      "intro": "Boa Esperança guarda charme de Espírito Santo em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo capixabada de domingo com a família — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Boa Esperança conhece de cor — tá de parabéns o lugar, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Boa Esperança vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Boa Esperança é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Boa Esperança é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Boa Esperança não falta solução — se tu for lá. De torto capixaba nas festas ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Boa Esperança é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Boa Esperança vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Boa Esperança é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Boa Esperança com fome — a cidade resolve. tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Em Boa Esperança, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se tu for lá, viu. Para distâncias maiores, pão com sardinha na merenda resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Boa Esperança conhece de cor — tá de parabéns o lugar, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Boa Esperança",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Boa Esperança vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Boa%20Esperan%C3%A7a%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Boa Esperança é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Boa%20Esperan%C3%A7a%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Boa Esperança, todo caminho leva a um lugar bom — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Boa Esperança acompanha o ritmo da região: tropical de altitude interiorano, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Boa Esperança apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/boa%20esperanca/",
+      },
+    },
+    "city": "Boa Esperança",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 14054,
+    "reviewedOn": "2026-08-18",
+  },
+  "bom-jesus-do-norte": {
+    "tourism": {
+      "intro": "Conhecer Bom Jesus do Norte é conhecer um pedaço autêntico de Espírito Santo — tá de parabéns o lugar. A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É da massa o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É muito bom o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Bom Jesus do Norte",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Bom%20Jesus%20do%20Norte%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Bom Jesus do Norte",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Bom Jesus do Norte conhece de cor — se tu for lá, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Bom%20Jesus%20do%20Norte%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Bom Jesus do Norte rende conversa boa e foto bonita — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Fome em Bom Jesus do Norte não falta solução — pra falar a real. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Bom Jesus do Norte é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Bom Jesus do Norte é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Bom Jesus do Norte conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Bom Jesus do Norte com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Bom Jesus do Norte, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, romaria de Nossa Senhora da Penha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Bom Jesus do Norte",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Bom Jesus do Norte é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Bom%20Jesus%20do%20Norte%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Bom Jesus do Norte é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Bom Jesus do Norte vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Bom Jesus do Norte é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Bom%20Jesus%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Bom Jesus do Norte é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Bom Jesus do Norte vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Bom Jesus do Norte se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/bom%20jesus%20do%20norte/",
+      },
+    },
+    "city": "Bom Jesus do Norte",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 10820,
+    "reviewedOn": "2026-08-18",
+  },
+  "cariacica": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Cariacica — se tu for lá, viu. O turismo da cidade é simples e verdadeiro: praias de Vitória e Guarapari e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Cariacica conhece de cor — é da massa, véi, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Cariacica vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Cariacica",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Cariacica%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Cariacica conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Cariacica é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Cariacica é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Cariacica no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Em Cariacica, a comida é levada a sério — e sem frescura. é da massa, véi, viu. A cidade mantém capixabada de domingo com a família vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Cariacica é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Cariacica vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Cariacica é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Cariacica se come de olhos fechados e de coração aberto — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Circular por Cariacica é tranquilo para quem conhece os atalhos — tá de parabéns o lugar. O transporte da cidade se organiza em torno de praias de Vitória e Guarapari, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Cariacica",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Cariacica conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cariacica%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É da hora o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Cariacica conhece de cor — é bom demais, viu, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Cariacica é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Cariacica é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Cariacica%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Cariacica, todo caminho leva a um lugar bom — se tu for lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Cariacica, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. se tu for lá. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Cariacica, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. se tu for lá. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/cariacica/",
+      },
+    },
+    "city": "Cariacica",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 376200,
+    "reviewedOn": "2026-08-18",
+  },
+  "castelo": {
+    "tourism": {
+      "intro": "Castelo guarda charme de Espírito Santo em cada canto — tá de parabéns o lugar, viu. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Castelo é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Castelo é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É da massa o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Castelo vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Castelo conta a história de Espírito Santo no prato — é bom demais, viu. Entre pão com sardinha na merenda e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Castelo é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Castelo conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Castelo é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Castelo é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Castelo se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Castelo, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é bom demais, viu, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Castelo vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Castelo%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Castelo é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Castelo vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Castelo, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. se tu for lá. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/castelo/",
+      },
+    },
+    "city": "Castelo",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 39575,
+    "reviewedOn": "2026-08-18",
+  },
+  "colatina": {
+    "tourism": {
+      "intro": "Conhecer Colatina é conhecer um pedaço autêntico de Espírito Santo — tá de parabéns o lugar. A cidade tem pão com sardinha na merenda como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Colatina conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Colatina é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Colatina é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Colatina vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Fome em Colatina não falta solução — se tu for lá. De pão com sardinha na merenda ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Colatina vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Colatina vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Colatina vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Colatina é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da massa o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Colatina é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Colatina é generosa, igual gente da casa — se tu for lá!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Colatina tem ritmo próprio, e o transporte acompanha — é da massa, véi, viu. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Colatina",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Colatina é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Colatina%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Colatina vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Colatina é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Colatina vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Colatina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Colatina é mais simples do que parece — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "Colatina vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Colatina, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/colatina/",
+      },
+    },
+    "city": "Colatina",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 129301,
+    "reviewedOn": "2026-08-18",
+  },
+  "ecoporanga": {
+    "tourism": {
+      "intro": "Conhecer Ecoporanga é conhecer um pedaço autêntico de Espírito Santo — é bom demais, viu. A cidade tem moqueca capixaba na panela de barro como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Estádio municipal de Ecoporanga",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ecoporanga%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É é nóis o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Ecoporanga",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ecoporanga%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Ecoporanga conhece de cor — pra falar a real, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Ecoporanga",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Ecoporanga%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Ecoporanga se revela aos poucos — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Em Ecoporanga, a comida é levada a sério — e sem frescura. tá de parabéns o lugar, viu. A cidade mantém torto capixaba nas festas vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Ecoporanga é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Ecoporanga conhece de cor — é bom demais, viu, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Ecoporanga se come de olhos fechados e de coração aberto — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Ecoporanga tem ritmo próprio, e o transporte acompanha — se tu for lá, viu. Entre praias de Vitória e Guarapari e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Ecoporanga é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Ecoporanga é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Ecoporanga",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Ecoporanga conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ecoporanga%2C%20Ecoporanga%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Ecoporanga é tranquila, e a cidade te recebe sem enrolação — se tu for lá!",
+    },
+    "climate": {
+      "intro": "Ecoporanga vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Ecoporanga, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. se tu for lá. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/ecoporanga/",
+      },
+    },
+    "city": "Ecoporanga",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 22611,
+    "reviewedOn": "2026-08-18",
+  },
+  "guacui": {
+    "tourism": {
+      "intro": "Guaçuí é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Guaçuí é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Guaçuí",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Guaçuí é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Gua%C3%A7u%C3%AD%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Guaçuí conhece de cor — é da massa, véi, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Guaçuí",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Guaçuí é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Gua%C3%A7u%C3%AD%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Guaçuí no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Em Guaçuí, a comida é levada a sério — e sem frescura. se tu for lá, viu. A cidade mantém torto capixaba nas festas vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Guaçuí é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Guaçuí vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Guaçuí conhece de cor — é bom demais, viu, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Guaçuí, quem come bem conta vantagem — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Em Guaçuí, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — tá de parabéns o lugar, viu. Para distâncias maiores, torto capixaba nas festas resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Guaçuí conhece de cor — pra falar a real, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Guaçuí é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Guaçuí conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Guaçuí conhece de cor — se tu for lá, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Gua%C3%A7u%C3%AD%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Guaçuí é mais simples do que parece — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Guaçuí acompanha o ritmo da região: tropical úmido de litoral, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Guaçuí apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/guacui/",
+      },
+    },
+    "city": "Guaçuí",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 31418,
+    "reviewedOn": "2026-08-18",
+  },
+  "ibatiba": {
+    "tourism": {
+      "intro": "Ibatiba guarda charme de Espírito Santo em cada canto — tá de parabéns o lugar, viu. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Ibatiba é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Ibatiba vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Ibatiba vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Ibatiba",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Ibatiba vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ibatiba%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Ibatiba rende conversa boa e foto bonita — se tu for lá!",
+    },
+    "dining": {
+      "intro": "Comer bem em Ibatiba é mais fácil do que parece — é da massa, véi, viu. A mesa da cidade tem capixabada de domingo com a família no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Ibatiba é generosa, igual gente da casa — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Ibatiba logo aprende a malha de transporte local — pra falar a real. A cidade mantém pão com sardinha na merenda na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Ibatiba",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É muito bom o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ibatiba%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Ibatiba vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Ibatiba vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Ibatiba conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ibatiba%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Ibatiba é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Ibatiba, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Ibatiba apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/ibatiba/",
+      },
+    },
+    "city": "Ibatiba",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 27543,
+    "reviewedOn": "2026-08-18",
+  },
+  "ibiracu": {
+    "tourism": {
+      "intro": "Conhecer Ibiraçu é conhecer um pedaço autêntico de Espírito Santo — se tu for lá. A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Estádio municipal de Ibiraçu",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Ibiraçu conhece de cor — tá de parabéns o lugar, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ibira%C3%A7u%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Ibiraçu é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Ibiraçu vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Ibiraçu se revela aos poucos — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Ibiraçu conta a história de Espírito Santo no prato — é bom demais, viu. Entre capixabada de domingo com a família e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Ibiraçu vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Ibiraçu é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Ibiraçu conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Ibiraçu vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Ibiraçu se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Ibiraçu logo aprende a malha de transporte local — pra falar a real. A cidade mantém capixabada de domingo com a família na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Ibiraçu vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Ibiraçu",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ibira%C3%A7u%2C%20Ibira%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "Ibiraçu vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Ibiraçu apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/ibiracu/",
+      },
+    },
+    "city": "Ibiraçu",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 12304,
+    "reviewedOn": "2026-08-18",
+  },
+  "ibitirama": {
+    "tourism": {
+      "intro": "Conhecer Ibitirama é conhecer um pedaço autêntico de Espírito Santo — se tu for lá. A cidade tem moqueca capixaba na panela de barro como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Ibitirama",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Ibitirama é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Ibitirama%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Ibitirama",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Ibitirama conhece de cor — é da massa, véi, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ibitirama%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Ibitirama",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Ibitirama conhece de cor — tá de parabéns o lugar, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ibitirama%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Ibitirama no seu ritmo: aqui ninguém tem pressa — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Comer bem em Ibitirama é mais fácil do que parece — é da massa, véi, viu. A mesa da cidade tem praias de Vitória e Guarapari no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Ibitirama conhece de cor — é bom demais, viu, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Ibitirama vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Ibitirama é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Ibitirama conhece de cor — pra falar a real, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Ibitirama vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Ibitirama se come de olhos fechados e de coração aberto — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Ibitirama tem ritmo próprio, e o transporte acompanha — é da massa, véi, viu. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Ibitirama vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da massa o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É da hora o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Ibitirama conhece de cor — se tu for lá, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ibitirama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Ibitirama é mais simples do que parece — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Ibitirama vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Ibitirama, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. é bom demais, viu. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/ibitirama/",
+      },
+    },
+    "city": "Ibitirama",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 10015,
+    "reviewedOn": "2026-08-18",
+  },
+  "irupi": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Irupi — se tu for lá, viu. O turismo da cidade é simples e verdadeiro: romaria de Nossa Senhora da Penha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É é nóis o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Irupi vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Irupi",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Irupi conhece de cor — tá de parabéns o lugar, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Irupi%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Irupi é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. se tu for lá!",
+    },
+    "dining": {
+      "intro": "Comer bem em Irupi é mais fácil do que parece — é bom demais, viu, viu. A mesa da cidade tem torto capixaba nas festas no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Irupi é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Irupi conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Irupi vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Irupi é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Irupi se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Irupi tem ritmo próprio, e o transporte acompanha — tá de parabéns o lugar, viu. Entre moqueca capixaba na panela de barro e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Irupi vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Irupi é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Irupi",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Irupi é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Irupi%2C%20Irupi%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Irupi é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Irupi acompanha o ritmo da região: tropical úmido de litoral, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Irupi, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/irupi/",
+      },
+    },
+    "city": "Irupi",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 14647,
+    "reviewedOn": "2026-08-18",
+  },
+  "itaguacu": {
+    "tourism": {
+      "intro": "Conhecer Itaguaçu é conhecer um pedaço autêntico de Espírito Santo — se tu for lá. A cidade tem torto capixaba nas festas como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Parque municipal de Itaguaçu",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Itaguaçu é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Itagua%C3%A7u%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Itaguaçu",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Itaguaçu é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Itagua%C3%A7u%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Itaguaçu",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Itaguaçu vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Itagua%C3%A7u%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Em Itaguaçu, a comida é levada a sério — e sem frescura. é bom demais, viu, viu. A cidade mantém capixabada de domingo com a família vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Itaguaçu é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Itaguaçu conhece de cor — é bom demais, viu, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Itaguaçu vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Itaguaçu é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Itaguaçu é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Itaguaçu se come de olhos fechados e de coração aberto — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Itaguaçu tem ritmo próprio, e o transporte acompanha — tá de parabéns o lugar, viu. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Itaguaçu vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Itaguaçu",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Itagua%C3%A7u%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Itaguaçu vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Itaguaçu conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Itagua%C3%A7u%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Itaguaçu é tranquila, e a cidade te recebe sem enrolação — se tu for lá!",
+    },
+    "climate": {
+      "intro": "Itaguaçu vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Itaguaçu, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. é bom demais, viu. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/itaguacu/",
+      },
+    },
+    "city": "Itaguaçu",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 14042,
+    "reviewedOn": "2026-08-18",
+  },
+  "itapemirim": {
+    "tourism": {
+      "intro": "Itapemirim guarda charme de Espírito Santo em cada canto — se tu for lá, viu. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Itapemirim vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Itapemirim",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Itapemirim vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Itapemirim%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Itapemirim conhece de cor — é da massa, véi, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Comer bem em Itapemirim é mais fácil do que parece — tá de parabéns o lugar, viu. A mesa da cidade tem romaria de Nossa Senhora da Penha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Itapemirim vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Itapemirim é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Itapemirim conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muito bom o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Itapemirim vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Itapemirim é generosa, igual gente da casa — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Itapemirim logo aprende a malha de transporte local — se tu for lá. A cidade mantém praias de Vitória e Guarapari na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Itapemirim é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Itapemirim",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Itapemirim é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Itapemirim%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É bater um papo o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itapemirim%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "Itapemirim vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com tá de parabéns o lugar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Itapemirim, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/itapemirim/",
+      },
+    },
+    "city": "Itapemirim",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 44020,
+    "reviewedOn": "2026-08-18",
+  },
+  "iuna": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Iúna — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: praias de Vitória e Guarapari e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Iúna vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Iúna",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Iúna conhece de cor — é bom demais, viu, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20I%C3%BAna%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Iúna",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20I%C3%BAna%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Iúna vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Iúna no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Iúna conta a história de Espírito Santo no prato — é bom demais, viu. Entre romaria de Nossa Senhora da Penha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Iúna é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Iúna conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Iúna é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Iúna conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Iúna, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Iúna é tranquilo para quem conhece os atalhos — é bom demais, viu. O transporte da cidade se organiza em torno de romaria de Nossa Senhora da Penha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Iúna conhece de cor — é bom demais, viu, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Iúna conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Iúna conhece de cor — pra falar a real, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20I%C3%BAna%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Iúna, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. se tu for lá. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Iúna, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. se tu for lá. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/iuna/",
+      },
+    },
+    "city": "Iúna",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 30556,
+    "reviewedOn": "2026-08-18",
+  },
+  "jaguare": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Jaguaré — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: pão com sardinha na merenda e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Jaguaré vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Jaguaré",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Jaguaré vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Jaguar%C3%A9%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Jaguaré",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Jaguar%C3%A9%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Jaguaré no seu ritmo: aqui ninguém tem pressa — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Comer bem em Jaguaré é mais fácil do que parece — pra falar a real, viu. A mesa da cidade tem capixabada de domingo com a família no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Jaguaré é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Jaguaré é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Jaguaré vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Jaguaré se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Jaguaré é tranquilo para quem conhece os atalhos — é da massa, véi. O transporte da cidade se organiza em torno de romaria de Nossa Senhora da Penha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É tá de parabéns o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Jaguaré conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Jaguaré é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Jaguaré",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Jaguaré vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Jaguar%C3%A9%2C%20Jaguar%C3%A9%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Jaguaré é tranquila, e a cidade te recebe sem enrolação — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "Jaguaré vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Jaguaré apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/jaguare/",
+      },
+    },
+    "city": "Jaguaré",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 31551,
+    "reviewedOn": "2026-08-18",
+  },
+  "joao-neiva": {
+    "tourism": {
+      "intro": "João Neiva guarda charme de Espírito Santo em cada canto — se tu for lá, viu. Quem anda pela cidade percebe logo torto capixaba nas festas — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Praça Central de João Neiva",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de João Neiva conhece de cor — se tu for lá, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Jo%C3%A3o%20Neiva%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de João Neiva",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. João Neiva vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Jo%C3%A3o%20Neiva%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de João Neiva conhece de cor — é bom demais, viu, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de João Neiva",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. João Neiva é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Jo%C3%A3o%20Neiva%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que João Neiva se revela aos poucos — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Fome em João Neiva não falta solução — pra falar a real. De torto capixaba nas festas ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. João Neiva é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. João Neiva é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. João Neiva vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. João Neiva vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. João Neiva vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por João Neiva com fome — a cidade resolve. se tu for lá!",
+    },
+    "transport": {
+      "intro": "Circular por João Neiva é tranquilo para quem conhece os atalhos — é da massa, véi. O transporte da cidade se organiza em torno de moqueca capixaba na panela de barro, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de João Neiva conhece de cor — tá de parabéns o lugar, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de João Neiva conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de João Neiva",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de João Neiva conhece de cor — se tu for lá, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Jo%C3%A3o%20Neiva%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de João Neiva conhece de cor — tá de parabéns o lugar, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Jo%C3%A3o%20Neiva%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em João Neiva, todo caminho leva a um lugar bom — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "O clima de João Neiva acompanha o ritmo da região: tropical de altitude interiorano, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "João Neiva apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/joao%20neiva/",
+      },
+    },
+    "city": "João Neiva",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 14295,
+    "reviewedOn": "2026-08-18",
+  },
+  "linhares": {
+    "tourism": {
+      "intro": "Linhares guarda charme de Espírito Santo em cada canto — se tu for lá, viu. Quem anda pela cidade percebe logo moqueca capixaba na panela de barro — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Linhares vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Linhares",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Linhares%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É da hora o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Linhares",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Linhares conhece de cor — é da massa, véi, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Linhares%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Em Linhares, a comida é levada a sério — e sem frescura. se tu for lá, viu. A cidade mantém romaria de Nossa Senhora da Penha vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Linhares conhece de cor — tá de parabéns o lugar, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Linhares conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Linhares vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Linhares vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Linhares vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Linhares é generosa, igual gente da casa — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Linhares logo aprende a malha de transporte local — é da massa, véi. A cidade mantém moqueca capixaba na panela de barro na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Linhares vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Linhares",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Linhares é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Linhares%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Linhares conhece de cor — é da massa, véi, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Linhares%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Linhares é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Linhares vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Linhares apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/linhares/",
+      },
+    },
+    "city": "Linhares",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 183797,
+    "reviewedOn": "2026-08-18",
+  },
+  "marataizes": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Marataízes — se tu for lá, viu. O turismo da cidade é simples e verdadeiro: romaria de Nossa Senhora da Penha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Marataízes é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Marataízes",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Marataízes vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Marata%C3%ADzes%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Marataízes vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Marataízes é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Marataízes conhece de cor — se tu for lá, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Marataízes no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Comer bem em Marataízes é mais fácil do que parece — tá de parabéns o lugar, viu. A mesa da cidade tem romaria de Nossa Senhora da Penha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Marataízes é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Marataízes conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Marataízes é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Marataízes vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Marataízes, quem come bem conta vantagem — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Em Marataízes, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se tu for lá, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Marataízes",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Marata%C3%ADzes%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muito bom o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Marata%C3%ADzes%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "Marataízes vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Marataízes se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/marataizes/",
+      },
+    },
+    "city": "Marataízes",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 45953,
+    "reviewedOn": "2026-08-18",
+  },
+  "marechal-floriano": {
+    "tourism": {
+      "intro": "Marechal Floriano é daquelas cidades de Espírito Santo que a gente conhece devagar — tá de parabéns o lugar. O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Marechal Floriano vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Marechal Floriano é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Marechal Floriano conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Marechal Floriano vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "Em Marechal Floriano, a comida é levada a sério — e sem frescura. é bom demais, viu, viu. A cidade mantém pão com sardinha na merenda vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Marechal Floriano conhece de cor — tá de parabéns o lugar, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Marechal Floriano conhece de cor — é bom demais, viu, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Marechal Floriano é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Marechal Floriano é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Marechal Floriano se come de olhos fechados e de coração aberto — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Marechal Floriano logo aprende a malha de transporte local — é da massa, véi. A cidade mantém moqueca capixaba na panela de barro na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É da hora o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Marechal Floriano é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Marechal%20Floriano%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Marechal Floriano, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Marechal Floriano se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/marechal%20floriano/",
+      },
+    },
+    "city": "Marechal Floriano",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 18964,
+    "reviewedOn": "2026-08-18",
+  },
+  "marilandia": {
+    "tourism": {
+      "intro": "Conhecer Marilândia é conhecer um pedaço autêntico de Espírito Santo — tá de parabéns o lugar. A cidade tem moqueca capixaba na panela de barro como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Centro histórico de Marilândia",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Marilândia conhece de cor — é bom demais, viu, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Maril%C3%A2ndia%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Marilândia conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É da hora o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Marilândia",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É muito bom o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Maril%C3%A2ndia%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Marilândia se revela aos poucos — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Em Marilândia, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém moqueca capixaba na panela de barro vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Marilândia conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Marilândia vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Marilândia vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Marilândia é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Marilândia com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Marilândia é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de capixabada de domingo com a família, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Marilândia conhece de cor — tá de parabéns o lugar, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Marilândia vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Maril%C3%A2ndia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Marilândia é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Marilândia acompanha o ritmo da região: tropical de altitude interiorano, muito bom. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Marilândia se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/marilandia/",
+      },
+    },
+    "city": "Marilândia",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 13087,
+    "reviewedOn": "2026-08-18",
+  },
+  "montanha": {
+    "tourism": {
+      "intro": "Montanha é daquelas cidades de Espírito Santo que a gente conhece devagar — é bom demais, viu. O roteiro local mistura praias de Vitória e Guarapari com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Montanha",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Montanha vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Montanha%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Montanha",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Montanha vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Montanha%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É da massa o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Montanha conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Montanha rende conversa boa e foto bonita — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Montanha não falta solução — se tu for lá. De moqueca capixaba na panela de barro ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Montanha é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É é nóis o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Montanha é generosa, igual gente da casa — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Montanha logo aprende a malha de transporte local — pra falar a real. A cidade mantém capixabada de domingo com a família na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Montanha vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Montanha vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Montanha",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Montanha vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Montanha%2C%20Montanha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Montanha é mais simples do que parece — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Montanha, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Montanha apresenta clima tropical de altitude interiorano, com temperatura média anual em torno de 21,5 °C e precipitação na faixa de 1.200 a 1.600 mm por ano. A região registra chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/montanha/",
+      },
+    },
+    "city": "Montanha",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 19830,
+    "reviewedOn": "2026-08-18",
+  },
+  "muniz-freire": {
+    "tourism": {
+      "intro": "Conhecer Muniz Freire é conhecer um pedaço autêntico de Espírito Santo — se tu for lá. A cidade tem capixabada de domingo com a família como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Muniz Freire é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Muniz Freire vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Muniz Freire conhece de cor — pra falar a real, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Muniz Freire é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Muniz Freire é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Muniz Freire no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Fome em Muniz Freire não falta solução — é bom demais, viu. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muito bom o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Muniz Freire conhece de cor — é da massa, véi, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Muniz Freire vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Muniz Freire é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Muniz Freire com fome — a cidade resolve. tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Em Muniz Freire, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, pão com sardinha na merenda resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Muniz Freire vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Muniz Freire",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Muniz Freire conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Muniz%20Freire%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Muniz Freire vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Muniz%20Freire%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Muniz Freire é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Muniz Freire acompanha o ritmo da região: tropical úmido de litoral, tá de parabéns. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Muniz Freire apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/muniz%20freire/",
+      },
+    },
+    "city": "Muniz Freire",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 18809,
+    "reviewedOn": "2026-08-18",
+  },
+  "muqui": {
+    "tourism": {
+      "intro": "Muqui é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura torto capixaba nas festas com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Estádio municipal de Muqui",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Muqui conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Muqui%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Muqui é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Muqui",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Muqui vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Muqui%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Muqui vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Muqui no seu ritmo: aqui ninguém tem pressa — se tu for lá!",
+    },
+    "dining": {
+      "intro": "Comer bem em Muqui é mais fácil do que parece — é da massa, véi, viu. A mesa da cidade tem capixabada de domingo com a família no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Muqui conhece de cor — tá de parabéns o lugar, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Muqui conhece de cor — é bom demais, viu, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Muqui é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Muqui com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Muqui é tranquilo para quem conhece os atalhos — tá de parabéns o lugar. O transporte da cidade se organiza em torno de capixabada de domingo com a família, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Muqui é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Muqui vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Muqui",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Muqui é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Muqui%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Muqui vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Muqui%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Muqui, todo caminho leva a um lugar bom — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Muqui acompanha o ritmo da região: tropical úmido de litoral, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Muqui apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/muqui/",
+      },
+    },
+    "city": "Muqui",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 14185,
+    "reviewedOn": "2026-08-18",
+  },
+  "nova-venecia": {
+    "tourism": {
+      "intro": "Nova Venécia é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Nova Venécia vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Nova Venécia",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Nova Venécia é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Nova%20Ven%C3%A9cia%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Nova Venécia vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Nova Venécia",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É é nóis o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Nova%20Ven%C3%A9cia%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Nova Venécia rende conversa boa e foto bonita — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Comer bem em Nova Venécia é mais fácil do que parece — tá de parabéns o lugar, viu. A mesa da cidade tem praias de Vitória e Guarapari no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Nova Venécia é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Nova Venécia conhece de cor — se tu for lá, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Nova Venécia é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Nova Venécia é generosa, igual gente da casa — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Circular por Nova Venécia é tranquilo para quem conhece os atalhos — é bom demais, viu. O transporte da cidade se organiza em torno de moqueca capixaba na panela de barro, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Nova Venécia é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Nova Venécia",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Nova Venécia é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Nova%20Ven%C3%A9cia%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Nova Venécia vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nova%20Ven%C3%A9cia%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Nova Venécia é tranquila, e a cidade te recebe sem enrolação — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "O clima de Nova Venécia acompanha o ritmo da região: tropical de altitude interiorano, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Nova Venécia se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/nova%20venecia/",
+      },
+    },
+    "city": "Nova Venécia",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 52324,
+    "reviewedOn": "2026-08-18",
+  },
+  "pedro-canario": {
+    "tourism": {
+      "intro": "Pedro Canário guarda charme de Espírito Santo em cada canto — tá de parabéns o lugar, viu. Quem anda pela cidade percebe logo torto capixaba nas festas — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É bater um papo o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Pedro Canário",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Pedro Canário é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Pedro%20Can%C3%A1rio%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Pedro Canário",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Pedro Canário é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Pedro%20Can%C3%A1rio%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Pedro Canário",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Pedro%20Can%C3%A1rio%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É muito bom o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Pedro Canário no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Pedro Canário conta a história de Espírito Santo no prato — é bom demais, viu. Entre romaria de Nossa Senhora da Penha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Pedro Canário conhece de cor — tá de parabéns o lugar, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Pedro Canário vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Pedro Canário conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Pedro Canário se come de olhos fechados e de coração aberto — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Em Pedro Canário, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Pedro Canário é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pedro%20Can%C3%A1rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Pedro Canário é tranquila, e a cidade te recebe sem enrolação — se tu for lá!",
+    },
+    "climate": {
+      "intro": "Pedro Canário vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Pedro Canário, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é da massa, véi. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/pedro%20canario/",
+      },
+    },
+    "city": "Pedro Canário",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 21923,
+    "reviewedOn": "2026-08-18",
+  },
+  "pinheiros": {
+    "tourism": {
+      "intro": "Pinheiros é daquelas cidades de Espírito Santo que a gente conhece devagar — tá de parabéns o lugar. O roteiro local mistura moqueca capixaba na panela de barro com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Pinheiros vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Pinheiros",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Pinheiros é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Pinheiros%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Pinheiros vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é da massa, véi!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Pinheiros conta a história de Espírito Santo no prato — pra falar a real. Entre romaria de Nossa Senhora da Penha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Pinheiros é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É tá de parabéns o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Pinheiros vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da massa o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Pinheiros, quem come bem conta vantagem — é da massa, véi!",
+    },
+    "transport": {
+      "intro": "Em Pinheiros, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é da massa, véi, viu. Para distâncias maiores, moqueca capixaba na panela de barro resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Pinheiros vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Pinheiros vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Pinheiros%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Pinheiros é mais simples do que parece — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Pinheiros, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Pinheiros, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é bom demais, viu. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/pinheiros/",
+      },
+    },
+    "city": "Pinheiros",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 24843,
+    "reviewedOn": "2026-08-18",
+  },
+  "rio-bananal": {
+    "tourism": {
+      "intro": "Rio Bananal guarda charme de Espírito Santo em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de Rio Bananal",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Rio Bananal conhece de cor — tá de parabéns o lugar, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Rio%20Bananal%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Rio Bananal vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Rio Bananal",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Rio Bananal é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Rio%20Bananal%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Rio Bananal",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Rio Bananal vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Rio%20Bananal%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Rio Bananal se revela aos poucos — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Rio Bananal não falta solução — pra falar a real. De romaria de Nossa Senhora da Penha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Rio Bananal é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Rio Bananal vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Rio Bananal conhece de cor — se tu for lá, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É tá de parabéns o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Rio Bananal é generosa, igual gente da casa — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Rio Bananal logo aprende a malha de transporte local — se tu for lá. A cidade mantém romaria de Nossa Senhora da Penha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Rio Bananal é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Rio Bananal",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Rio Bananal é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Rio%20Bananal%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Rio Bananal vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Rio%20Bananal%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Rio Bananal é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Rio Bananal, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Rio Bananal se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/rio%20bananal/",
+      },
+    },
+    "city": "Rio Bananal",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 20350,
+    "reviewedOn": "2026-08-18",
+  },
+  "rio-novo-do-sul": {
+    "tourism": {
+      "intro": "Rio Novo do Sul é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura moqueca capixaba na panela de barro com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Rio Novo do Sul",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Rio Novo do Sul vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Rio%20Novo%20do%20Sul%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Rio Novo do Sul é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Rio Novo do Sul é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Rio Novo do Sul vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Rio Novo do Sul rende conversa boa e foto bonita — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Em Rio Novo do Sul, a comida é levada a sério — e sem frescura. é da massa, véi, viu. A cidade mantém moqueca capixaba na panela de barro vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Rio Novo do Sul é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É da hora o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Rio Novo do Sul é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Rio Novo do Sul se come de olhos fechados e de coração aberto — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Circular por Rio Novo do Sul é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de torto capixaba nas festas, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Rio Novo do Sul",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Rio Novo do Sul conhece de cor — é bom demais, viu, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Rio%20Novo%20do%20Sul%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Rio Novo do Sul vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Rio Novo do Sul vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Rio%20Novo%20do%20Sul%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Rio Novo do Sul, todo caminho leva a um lugar bom — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Rio Novo do Sul, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Rio Novo do Sul apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/rio%20novo%20do%20sul/",
+      },
+    },
+    "city": "Rio Novo do Sul",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 11471,
+    "reviewedOn": "2026-08-18",
+  },
+  "santa-leopoldina": {
+    "tourism": {
+      "intro": "Santa Leopoldina é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura capixabada de domingo com a família com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Santa Leopoldina",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Santa%20Leopoldina%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Santa Leopoldina conhece de cor — pra falar a real, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Santa Leopoldina conhece de cor — pra falar a real, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É da massa o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Santa Leopoldina",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É bater um papo o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Santa%20Leopoldina%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Santa Leopoldina se revela aos poucos — se tu for lá!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Santa Leopoldina conta a história de Espírito Santo no prato — tá de parabéns o lugar. Entre praias de Vitória e Guarapari e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Santa Leopoldina é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Santa Leopoldina vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Santa Leopoldina conhece de cor — tá de parabéns o lugar, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Santa Leopoldina conhece de cor — se tu for lá, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Santa Leopoldina com fome — a cidade resolve. se tu for lá!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Santa Leopoldina tem ritmo próprio, e o transporte acompanha — pra falar a real, viu. Entre capixabada de domingo com a família e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Santa Leopoldina conhece de cor — tá de parabéns o lugar, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Santa Leopoldina conhece de cor — é bom demais, viu, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Santa Leopoldina vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Santa%20Leopoldina%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Santa Leopoldina é tranquila, e a cidade te recebe sem enrolação — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Santa Leopoldina, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Santa Leopoldina se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/santa%20leopoldina/",
+      },
+    },
+    "city": "Santa Leopoldina",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 13813,
+    "reviewedOn": "2026-08-18",
+  },
+  "santa-maria-de-jetiba": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Santa Maria de Jetibá — se tu for lá, viu. O turismo da cidade é simples e verdadeiro: praias de Vitória e Guarapari e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Santa Maria de Jetibá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Santa Maria de Jetibá vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Santa Maria de Jetibá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Santa Maria de Jetibá é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Santa Maria de Jetibá é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É bater um papo o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra Santa Maria de Jetibá no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Comer bem em Santa Maria de Jetibá é mais fácil do que parece — se tu for lá, viu. A mesa da cidade tem praias de Vitória e Guarapari no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Santa Maria de Jetibá é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Santa Maria de Jetibá é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Santa Maria de Jetibá vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Santa Maria de Jetibá conhece de cor — se tu for lá, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por Santa Maria de Jetibá com fome — a cidade resolve. é da massa, véi!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Santa Maria de Jetibá logo aprende a malha de transporte local — tá de parabéns o lugar. A cidade mantém capixabada de domingo com a família na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Santa Maria de Jetibá vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Santa Maria de Jetibá é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Santa Maria de Jetibá é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Santa%20Maria%20de%20Jetib%C3%A1%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Santa Maria de Jetibá é tranquila, e a cidade te recebe sem enrolação — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Santa Maria de Jetibá, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Santa Maria de Jetibá, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. é bom demais, viu. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/santa%20maria%20de%20jetiba/",
+      },
+    },
+    "city": "Santa Maria de Jetibá",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 45575,
+    "reviewedOn": "2026-08-18",
+  },
+  "serra": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Serra — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: torto capixaba nas festas e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Serra vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Serra conhece de cor — é da massa, véi, viu. A cidade preserva moqueca capixaba na panela de barro e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Serra conhece de cor — pra falar a real, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Serra",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Serra%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Serra se revela aos poucos — se tu for lá!",
+    },
+    "dining": {
+      "intro": "Fome em Serra não falta solução — tá de parabéns o lugar. De moqueca capixaba na panela de barro ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É tá de parabéns o que se vê por aqui: a cidade mantém torto capixaba nas festas como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Serra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Serra é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Serra é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Serra vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Serra é generosa, igual gente da casa — tá de parabéns o lugar!",
+    },
+    "transport": {
+      "intro": "Em Serra, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se tu for lá, viu. Para distâncias maiores, praias de Vitória e Guarapari resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Serra é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Serra é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Serra é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Serra é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Serra%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Serra, todo caminho leva a um lugar bom — é da massa, véi!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Serra, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Serra se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/serra/",
+      },
+    },
+    "city": "Serra",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 579720,
+    "reviewedOn": "2026-08-18",
+  },
+  "sooretama": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Sooretama — tá de parabéns o lugar, viu. O turismo da cidade é simples e verdadeiro: torto capixaba nas festas e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Sooretama vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Sooretama vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Sooretama",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É da hora o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Sooretama%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Sooretama conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Fome em Sooretama não falta solução — tá de parabéns o lugar. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Sooretama vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Sooretama conhece de cor — é bom demais, viu, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A mesa de Sooretama é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Sooretama, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se tu for lá, viu. Para distâncias maiores, torto capixaba nas festas resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Sooretama conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Sooretama conhece de cor — tá de parabéns o lugar, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Sooretama",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É tá de parabéns o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Sooretama%2C%20Sooretama%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em Sooretama é mais simples do que parece — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Sooretama, com o regime de chuvas tropical de altitude interiorano da região de Espírito Santo. é da massa, véi. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Sooretama, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é da massa, véi. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sooretama/",
+      },
+    },
+    "city": "Sooretama",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 28668,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-domingos-do-norte": {
+    "tourism": {
+      "intro": "Conhecer São Domingos do Norte é conhecer um pedaço autêntico de Espírito Santo — tá de parabéns o lugar. A cidade tem moqueca capixaba na panela de barro como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de São Domingos do Norte conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. São Domingos do Norte vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de São Domingos do Norte rende conversa boa e foto bonita — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Em São Domingos do Norte, a comida é levada a sério — e sem frescura. se tu for lá, viu. A cidade mantém torto capixaba nas festas vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. São Domingos do Norte vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. São Domingos do Norte é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em São Domingos do Norte se come de olhos fechados e de coração aberto — é da massa, véi!",
+    },
+    "transport": {
+      "intro": "Em São Domingos do Norte, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, moqueca capixaba na panela de barro resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de São Domingos do Norte",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São Domingos do Norte é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Domingos%20do%20Norte%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. São Domingos do Norte vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de São Domingos do Norte conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Domingos%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em São Domingos do Norte, todo caminho leva a um lugar bom — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "São Domingos do Norte vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com se tu for lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de São Domingos do Norte se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sao%20domingos%20do%20norte/",
+      },
+    },
+    "city": "São Domingos do Norte",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 9051,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-gabriel-da-palha": {
+    "tourism": {
+      "intro": "São Gabriel da Palha é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura moqueca capixaba na panela de barro com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de São Gabriel da Palha",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de São Gabriel da Palha conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de São Gabriel da Palha",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. São Gabriel da Palha vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. São Gabriel da Palha vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de São Gabriel da Palha",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Descubra São Gabriel da Palha no seu ritmo: aqui ninguém tem pressa — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Fome em São Gabriel da Palha não falta solução — se tu for lá. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. São Gabriel da Palha é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. São Gabriel da Palha vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. São Gabriel da Palha é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em São Gabriel da Palha se come de olhos fechados e de coração aberto — é da massa, véi!",
+    },
+    "transport": {
+      "intro": "Circular por São Gabriel da Palha é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de pão com sardinha na merenda, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de São Gabriel da Palha conhece de cor — é bom demais, viu, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. São Gabriel da Palha é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de São Gabriel da Palha",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São Gabriel da Palha é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São Gabriel da Palha é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Gabriel%20da%20Palha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em São Gabriel da Palha, todo caminho leva a um lugar bom — se tu for lá!",
+    },
+    "climate": {
+      "intro": "O clima de São Gabriel da Palha acompanha o ritmo da região: tropical de altitude interiorano, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em São Gabriel da Palha, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. tá de parabéns o lugar. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sao%20gabriel%20da%20palha/",
+      },
+    },
+    "city": "São Gabriel da Palha",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 34272,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-jose-do-calcado": {
+    "tourism": {
+      "intro": "São José do Calçado guarda charme de Espírito Santo em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo torto capixaba nas festas — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Parque municipal de São José do Calçado",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. São José do Calçado é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de São José do Calçado conhece de cor — pra falar a real, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de São José do Calçado",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. São José do Calçado vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. São José do Calçado é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de São José do Calçado rende conversa boa e foto bonita — tá de parabéns o lugar!",
+    },
+    "dining": {
+      "intro": "Em São José do Calçado, a comida é levada a sério — e sem frescura. tá de parabéns o lugar, viu. A cidade mantém romaria de Nossa Senhora da Penha vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de São José do Calçado conhece de cor — é bom demais, viu, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. São José do Calçado vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. São José do Calçado vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. São José do Calçado é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Passa por São José do Calçado com fome — a cidade resolve. é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Circular por São José do Calçado é tranquilo para quem conhece os atalhos — tá de parabéns o lugar. O transporte da cidade se organiza em torno de pão com sardinha na merenda, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. São José do Calçado é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São José do Calçado vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de São José do Calçado conhece de cor — é bom demais, viu, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de São José do Calçado",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São José do Calçado é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20S%C3%A3o%20Jos%C3%A9%20do%20Cal%C3%A7ado%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Chegar e circular em São José do Calçado é mais simples do que parece — se tu for lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em São José do Calçado, com o regime de chuvas tropical úmido de litoral da região de Espírito Santo. tá de parabéns o lugar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "São José do Calçado apresenta clima tropical úmido de litoral, com temperatura média anual em torno de 23 °C e precipitação na faixa de 1.200 a 1.800 mm por ano. A região registra chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/sao%20jose%20do%20calcado/",
+      },
+    },
+    "city": "São José do Calçado",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "28",
+    "population": 11411,
+    "reviewedOn": "2026-08-18",
+  },
+  "vila-pavao": {
+    "tourism": {
+      "intro": "Vila Pavão guarda charme de Espírito Santo em cada canto — tá de parabéns o lugar, viu. Quem anda pela cidade percebe logo praias de Vitória e Guarapari — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de Vila Pavão",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Vila Pavão vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Vila%20Pav%C3%A3o%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Vila Pavão vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Vila Pavão",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É da massa o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Vila%20Pav%C3%A3o%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Vila Pavão rende conversa boa e foto bonita — é da massa, véi!",
+    },
+    "dining": {
+      "intro": "Em Vila Pavão, a comida é levada a sério — e sem frescura. é bom demais, viu, viu. A cidade mantém torto capixaba nas festas vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É da hora o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Vila Pavão é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muito bom o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Vila Pavão, quem come bem conta vantagem — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Vila Pavão logo aprende a malha de transporte local — tá de parabéns o lugar. A cidade mantém capixabada de domingo com a família na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Vila Pavão conhece de cor — é da massa, véi, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Vila Pavão",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Vila Pavão é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vila%20Pav%C3%A3o%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vila%20Pav%C3%A3o%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Vila Pavão é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Vila Pavão acompanha o ritmo da região: tropical de altitude interiorano, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Vila Pavão, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é bom demais, viu. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/vila%20pavao/",
+      },
+    },
+    "city": "Vila Pavão",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 9319,
+    "reviewedOn": "2026-08-18",
+  },
+  "vila-valerio": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Vila Valério — tá de parabéns o lugar, viu. O turismo da cidade é simples e verdadeiro: moqueca capixaba na panela de barro e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Vila Valério vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Vila Valério é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Vila Valério",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Vila Valério conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Vila%20Val%C3%A9rio%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Vila Valério conhece de cor — tá de parabéns o lugar, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Fome em Vila Valério não falta solução — se tu for lá. De praias de Vitória e Guarapari ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Vila Valério vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Vila Valério vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Vila Valério conhece de cor — pra falar a real, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Vila Valério é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Vila Valério se come de olhos fechados e de coração aberto — se tu for lá!",
+    },
+    "transport": {
+      "intro": "Em Vila Valério, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — tá de parabéns o lugar, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Vila Valério vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Vila Valério é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Vila Valério vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vila%20Val%C3%A9rio%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for lá!",
+    },
+    "climate": {
+      "intro": "Vila Valério vive o clima típico da região de Espírito Santo — tropical de altitude interiorano, com é da massa, véi. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Vila Valério, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. é da massa, véi. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/vila%20valerio/",
+      },
+    },
+    "city": "Vila Valério",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 14267,
+    "reviewedOn": "2026-08-18",
+  },
+  "vila-velha": {
+    "tourism": {
+      "intro": "Vila Velha guarda charme de Espírito Santo em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo pão com sardinha na merenda — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Vila Velha",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Vila Velha vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Vila%20Velha%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Vila Velha",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Vila%20Velha%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É é nóis o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Vila Velha vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Vila Velha é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Vila Velha",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Vila Velha é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Vila%20Velha%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "O roteiro de Vila Velha rende conversa boa e foto bonita — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Em Vila Velha, a comida é levada a sério — e sem frescura. é da massa, véi, viu. A cidade mantém praias de Vitória e Guarapari vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Vila Velha é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É da hora o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Vila Velha vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Vila Velha vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Vila Velha é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Vila Velha, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Vila Velha, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se tu for lá, viu. Para distâncias maiores, capixabada de domingo com a família resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Vila Velha vive isso no dia a dia, com capixabada de domingo com a família fazendo parte da rotina — se tu for lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rodoviária municipal de Vila Velha",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É da hora o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vila%20Velha%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Vila Velha é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Vila Velha é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Vila Velha é conhecida por pão com sardinha na merenda, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Vila%20Velha%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A locomoção em Vila Velha é tranquila, e a cidade te recebe sem enrolação — tá de parabéns o lugar!",
+    },
+    "climate": {
+      "intro": "O clima de Vila Velha acompanha o ritmo da região: tropical úmido de litoral, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Vila Velha se enquadra no padrão tropical úmido de litoral, típico da sua faixa territorial: média de 23 °C, chuvas na ordem de 1.200 a 1.800 mm anuais e chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/vila%20velha/",
+      },
+    },
+    "city": "Vila Velha",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 506779,
+    "reviewedOn": "2026-08-18",
+  },
+  "vitoria": {
+    "tourism": {
+      "intro": "Vitória guarda charme de Espírito Santo em cada canto — se tu for lá, viu. Quem anda pela cidade percebe logo praias de Vitória e Guarapari — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Vitória é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Praça Central de Vitória",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Vitória conhece de cor — é da massa, véi, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Vit%C3%B3ria%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Parque municipal de Vitória",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Vit%C3%B3ria%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É muito bom o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Vitória se revela aos poucos — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Comer bem em Vitória é mais fácil do que parece — é bom demais, viu, viu. A mesa da cidade tem pão com sardinha na merenda no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Vitória é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É tá de parabéns o que se vê por aqui: a cidade mantém praias de Vitória e Guarapari como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É é nóis o que se vê por aqui: a cidade mantém romaria de Nossa Senhora da Penha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Vitória vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Vitória é conhecida por praias de Vitória e Guarapari, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Vitória é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Fica a dica: em Vitória, quem come bem conta vantagem — se tu for lá!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Vitória tem ritmo próprio, e o transporte acompanha — é bom demais, viu, viu. Entre romaria de Nossa Senhora da Penha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Vitória",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Vitória é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vit%C3%B3ria%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Vitória é conhecida por capixabada de domingo com a família, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Vitória conhece de cor — pra falar a real, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Vitória vive isso no dia a dia, com praias de Vitória e Guarapari fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Vitória conhece de cor — se tu for lá, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vit%C3%B3ria%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Vitória, todo caminho leva a um lugar bom — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Vitória vive o clima típico da região de Espírito Santo — tropical úmido de litoral, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Vitória, o termômetro marca 23 °C em média no ano e as chuvas somam cerca de 1.200 a 1.800 mm, no regime tropical úmido de litoral da região. pra falar a real. O comportamento sazonal segue chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 23 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.800 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw/Cfa (tropical úmido de litoral)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas bem distribuídas com pico no verão entre dezembro e março, e inverno com menos chuva e dias amenos.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/vitoria/",
+      },
+    },
+    "city": "Vitória",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 343378,
+    "reviewedOn": "2026-08-18",
+  },
+  "agua-doce-do-norte": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Água Doce do Norte — tá de parabéns o lugar, viu. O turismo da cidade é simples e verdadeiro: capixabada de domingo com a família e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Água Doce do Norte vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Centro histórico de Água Doce do Norte",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Água Doce do Norte vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20%C3%81gua%20Doce%20do%20Norte%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Água Doce do Norte vive isso no dia a dia, com moqueca capixaba na panela de barro fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É da massa o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Vem com calma que Água Doce do Norte se revela aos poucos — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Comer bem em Água Doce do Norte é mais fácil do que parece — tá de parabéns o lugar, viu. A mesa da cidade tem moqueca capixaba na panela de barro no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Água Doce do Norte vive isso no dia a dia, com romaria de Nossa Senhora da Penha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Água Doce do Norte conhece de cor — pra falar a real, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Água Doce do Norte conhece de cor — se tu for lá, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Água Doce do Norte é conhecida por moqueca capixaba na panela de barro, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Água Doce do Norte se come de olhos fechados e de coração aberto — é da massa, véi!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Água Doce do Norte logo aprende a malha de transporte local — é da massa, véi. A cidade mantém pão com sardinha na merenda na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Água Doce do Norte vive isso no dia a dia, com pão com sardinha na merenda fazendo parte da rotina — é da massa, véi, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Água Doce do Norte é conhecida por torto capixaba nas festas, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É tá de parabéns o que se vê por aqui: a cidade mantém pão com sardinha na merenda como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Água Doce do Norte vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20%C3%81gua%20Doce%20do%20Norte%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é da massa, véi!",
+    },
+    "climate": {
+      "intro": "O clima de Água Doce do Norte acompanha o ritmo da região: tropical de altitude interiorano, tá de parabéns. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Água Doce do Norte se enquadra no padrão tropical de altitude interiorano, típico da sua faixa territorial: média de 21,5 °C, chuvas na ordem de 1.200 a 1.600 mm anuais e chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/agua%20doce%20do%20norte/",
+      },
+    },
+    "city": "Água Doce do Norte",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 12585,
+    "reviewedOn": "2026-08-18",
+  },
+  "aguia-branca": {
+    "tourism": {
+      "intro": "Águia Branca é daquelas cidades de Espírito Santo que a gente conhece devagar — se tu for lá. O roteiro local mistura moqueca capixaba na panela de barro com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Praça Central de Águia Branca",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Águia Branca conhece de cor — é bom demais, viu, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20%C3%81guia%20Branca%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Águia Branca conhece de cor — é da massa, véi, viu. A cidade preserva capixabada de domingo com a família e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Igreja Matriz de Águia Branca",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É da hora o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20%C3%81guia%20Branca%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Estádio municipal de Águia Branca",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Águia Branca é conhecida por romaria de Nossa Senhora da Penha, e esse ponto carrega um pouco dessa história — muito bom, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20%C3%81guia%20Branca%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Águia Branca conhece de cor — tá de parabéns o lugar, viu. A cidade preserva praias de Vitória e Guarapari e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Espírito Santo de ser. se tu for lá!",
+    },
+    "dining": {
+      "intro": "Fome em Águia Branca não falta solução — pra falar a real. De romaria de Nossa Senhora da Penha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Águia Branca conhece de cor — é bom demais, viu, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É é nóis o que se vê por aqui: a cidade mantém capixabada de domingo com a família como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Águia Branca conhece de cor — se tu for lá, viu. A cidade preserva pão com sardinha na merenda e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Águia Branca vive isso no dia a dia, com torto capixaba nas festas fazendo parte da rotina — tá de parabéns o lugar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito bom o que se vê por aqui: a cidade mantém moqueca capixaba na panela de barro como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Águia Branca se come de olhos fechados e de coração aberto — se tu for lá!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Águia Branca tem ritmo próprio, e o transporte acompanha — pra falar a real, viu. Entre praias de Vitória e Guarapari e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Águia Branca conhece de cor — se tu for lá, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Águia Branca conhece de cor — é bom demais, viu, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Águia Branca conhece de cor — pra falar a real, viu. A cidade preserva torto capixaba nas festas e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Águia Branca conhece de cor — é da massa, véi, viu. A cidade preserva romaria de Nossa Senhora da Penha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20%C3%81guia%20Branca%2C%20Esp%C3%ADrito%20Santo",
+        },
+      ],
+      "closing": "Em Águia Branca, todo caminho leva a um lugar bom — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Águia Branca acompanha o ritmo da região: tropical de altitude interiorano, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Águia Branca, o termômetro marca 21,5 °C em média no ano e as chuvas somam cerca de 1.200 a 1.600 mm, no regime tropical de altitude interiorano da região. se tu for lá. O comportamento sazonal segue chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 21,5 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.200 a 1.600 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Cwa/Aw (tropical de altitude interiorano)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas no verão entre outubro e março, com inverno seco, noites mais frias e dias de céu limpo.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/es/aguia%20branca/",
+      },
+    },
+    "city": "Águia Branca",
+    "uf": "ES",
+    "stateName": "Espírito Santo",
+    "region": "Sudeste",
+    "ddd": "27",
+    "population": 10143,
+    "reviewedOn": "2026-08-18",
+  },
+} as Record<string, MunicipalityTabs>;

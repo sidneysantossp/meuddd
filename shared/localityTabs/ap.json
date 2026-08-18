@@ -1,0 +1,1820 @@
+{
+  "calcoene": {
+    "tourism": {
+      "intro": "Conhecer Calçoene é conhecer um pedaço autêntico de Amapá. é de chorar de tão bonito A cidade tem pescarias nos rios amazônicos como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Calçoene é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É muito da hora o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Calçoene é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Praça Central de Calçoene",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Calçoene vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Cal%C3%A7oene%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Calçoene se revela aos poucos. se liga nessa"
+    },
+    "dining": {
+      "intro": "A gastronomia de Calçoene conta a história de Amapá no prato. é de chorar de tão bonito. Entre festival do açaí de Macapá e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Calçoene vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É tá de parabéns o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Calçoene vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Calçoene conhece de cor — pode apostar. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Calçoene vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Calçoene é generosa, igual gente da casa. pode apostar"
+    },
+    "transport": {
+      "intro": "Quem se muda para Calçoene logo aprende a malha de transporte local. tu não imagina. A cidade mantém pescarias nos rios amazônicos na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Calçoene é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Calçoene é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É rolê o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cal%C3%A7oene%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tu não imagina"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Calçoene, com o regime de chuvas equatorial chuvoso da região de Amapá. se liga nessa. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Calçoene apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/calcoene/"
+      }
+    },
+    "city": "Calçoene",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 11461,
+    "reviewedOn": "2026-08-18"
+  },
+  "ferreira-gomes": {
+    "tourism": {
+      "intro": "Ferreira Gomes é daquelas cidades de Amapá que a gente conhece devagar. é de chorar de tão bonito O roteiro local mistura feiras de peixe à madrugada com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Praça Central de Ferreira Gomes",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Ferreira Gomes vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Ferreira%20Gomes%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É se liga o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Ferreira Gomes vive isso no dia a dia, com feiras de peixe à madrugada fazendo parte da rotina — bixo, é demais. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Ferreira Gomes vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amapá de ser. se liga nessa"
+    },
+    "dining": {
+      "intro": "Fome em Ferreira Gomes não falta solução. é de chorar de tão bonito. De festival do açaí de Macapá ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É tá de parabéns o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Ferreira Gomes vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Ferreira Gomes conhece de cor — se liga nessa. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Ferreira Gomes vive isso no dia a dia, com feiras de peixe à madrugada fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Fica a dica: em Ferreira Gomes, quem come bem conta vantagem. pode apostar"
+    },
+    "transport": {
+      "intro": "Quem se muda para Ferreira Gomes logo aprende a malha de transporte local. se liga nessa. A cidade mantém festival do açaí de Macapá na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Ferreira Gomes é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Ferreira Gomes conhece de cor — bixo, é demais. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Ferreira Gomes vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ferreira%20Gomes%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Em Ferreira Gomes, todo caminho leva a um lugar bom. bixo, é demais"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Ferreira Gomes, com o regime de chuvas equatorial chuvoso da região de Amapá. se liga nessa. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Ferreira Gomes se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/ferreira%20gomes/"
+      }
+    },
+    "city": "Ferreira Gomes",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 7184,
+    "reviewedOn": "2026-08-18"
+  },
+  "itaubal": {
+    "tourism": {
+      "intro": "Itaubal é daquelas cidades de Amapá que a gente conhece devagar. bixo, é demais O roteiro local mistura cultura de fronteira com o Caribe com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Itaubal é conhecida por tucupi e jambu na cozinha, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Centro histórico de Itaubal",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Itaubal conhece de cor — pode apostar. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Itaubal%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Itaubal é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É rolê o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Itaubal%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "O roteiro de Itaubal rende conversa boa e foto bonita. se liga nessa"
+    },
+    "dining": {
+      "intro": "A gastronomia de Itaubal conta a história de Amapá no prato. tu não imagina. Entre cultura de fronteira com o Caribe e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Itaubal conhece de cor — se liga nessa. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Itaubal é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É se liga o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito da hora o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Itaubal%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Fica a dica: em Itaubal, quem come bem conta vantagem. pode apostar"
+    },
+    "transport": {
+      "intro": "O dia a dia de Itaubal tem ritmo próprio, e o transporte acompanha. se liga nessa. Entre marabaixo e cultura afroramazônica e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Itaubal vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É se liga o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Itaubal%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Itaubal",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Itaubal vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Itaubal%2C%20Itaubal%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Itaubal é mais simples do que parece. bixo, é demais"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Itaubal, com o regime de chuvas equatorial chuvoso da região de Amapá. tu não imagina. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Itaubal, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não imagina. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/itaubal/"
+      }
+    },
+    "city": "Itaubal",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 6097,
+    "reviewedOn": "2026-08-18"
+  },
+  "laranjal-do-jari": {
+    "tourism": {
+      "intro": "Laranjal do Jari guarda charme de Amapá em cada canto. é de chorar de tão bonito. Quem anda pela cidade percebe logo tucupi e jambu na cozinha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Laranjal do Jari vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Laranjal do Jari é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Laranjal do Jari vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Praça Central de Laranjal do Jari",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Laranjal do Jari vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Laranjal%20do%20Jari%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É rolê o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Laranjal do Jari se revela aos poucos. tu não imagina"
+    },
+    "dining": {
+      "intro": "Fome em Laranjal do Jari não falta solução. é de chorar de tão bonito. De pescarias nos rios amazônicos ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É rolê o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Laranjal do Jari conhece de cor — pode apostar. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É rolê o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Laranjal do Jari é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Em Laranjal do Jari se come de olhos fechados e de coração aberto. pode apostar"
+    },
+    "transport": {
+      "intro": "O dia a dia de Laranjal do Jari tem ritmo próprio, e o transporte acompanha. é de chorar de tão bonito. Entre festival do açaí de Macapá e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Laranjal do Jari conhece de cor — bixo, é demais. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Laranjal do Jari",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É se liga o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Laranjal%20do%20Jari%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É muito da hora o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Laranjal%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Em Laranjal do Jari, todo caminho leva a um lugar bom. bixo, é demais"
+    },
+    "climate": {
+      "intro": "Laranjal do Jari vive o clima típico da região de Amapá — equatorial chuvoso, com é de chorar de tão bonito. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Laranjal do Jari se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/laranjal%20do%20jari/"
+      }
+    },
+    "city": "Laranjal do Jari",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 37872,
+    "reviewedOn": "2026-08-18"
+  },
+  "porto-grande": {
+    "tourism": {
+      "intro": "Porto Grande é daquelas cidades de Amapá que a gente conhece devagar. é de chorar de tão bonito O roteiro local mistura feiras de peixe à madrugada com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Porto Grande é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Porto Grande vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Estádio municipal de Porto Grande",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Porto Grande conhece de cor — tu não imagina. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Porto%20Grande%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É muito da hora o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "O roteiro de Porto Grande rende conversa boa e foto bonita. é de chorar de tão bonito"
+    },
+    "dining": {
+      "intro": "Fome em Porto Grande não falta solução. é de chorar de tão bonito. De festival do açaí de Macapá ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Porto Grande é conhecida por cultura de fronteira com o Caribe, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É tá de parabéns o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Porto Grande conhece de cor — se liga nessa. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Porto Grande vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Porto Grande é generosa, igual gente da casa. bixo, é demais"
+    },
+    "transport": {
+      "intro": "Quem se muda para Porto Grande logo aprende a malha de transporte local. tu não imagina. A cidade mantém tucupi e jambu na cozinha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É bixo o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Porto Grande",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Porto Grande conhece de cor — é de chorar de tão bonito. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Porto%20Grande%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Porto Grande é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Porto Grande conhece de cor — tu não imagina. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Porto%20Grande%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Porto Grande é mais simples do que parece. pode apostar"
+    },
+    "climate": {
+      "intro": "O clima de Porto Grande acompanha o ritmo da região: equatorial chuvoso, se liga. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Porto Grande, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não imagina. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/porto%20grande/"
+      }
+    },
+    "city": "Porto Grande",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 19048,
+    "reviewedOn": "2026-08-18"
+  },
+  "pracuuba": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Pracuúba. é de chorar de tão bonito. O turismo da cidade é simples e verdadeiro: feiras de peixe à madrugada e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Pracuúba",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Pracuúba é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Pracu%C3%BAba%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Parque municipal de Pracuúba",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Pracuúba vive isso no dia a dia, com feiras de peixe à madrugada fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Pracu%C3%BAba%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Pracuúba é conhecida por cultura de fronteira com o Caribe, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Pracuúba se revela aos poucos. se liga nessa"
+    },
+    "dining": {
+      "intro": "Comer bem em Pracuúba é mais fácil do que parece. se liga nessa. A mesa da cidade tem cultura de fronteira com o Caribe no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É bixo o que se vê por aqui: a cidade mantém pescarias nos rios amazônicos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito da hora o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Pracuúba vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — se liga nessa. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Pracuúba é generosa, igual gente da casa. se liga nessa"
+    },
+    "transport": {
+      "intro": "Em Pracuúba, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. tu não imagina. Para distâncias maiores, feiras de peixe à madrugada resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É se liga o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Pracuúba",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Pracuúba é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Pracu%C3%BAba%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Pracuúba conhece de cor — bixo, é demais. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Pracu%C3%BAba%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A locomoção em Pracuúba é tranquila, e a cidade te recebe sem enrolação. bixo, é demais"
+    },
+    "climate": {
+      "intro": "O clima de Pracuúba acompanha o ritmo da região: equatorial chuvoso, se liga. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Pracuúba apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/pracuuba/"
+      }
+    },
+    "city": "Pracuúba",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 4048,
+    "reviewedOn": "2026-08-18"
+  },
+  "santana": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Santana. é de chorar de tão bonito. O turismo da cidade é simples e verdadeiro: marabaixo e cultura afroramazônica e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Santana conhece de cor — tu não imagina. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Santana vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Praça Central de Santana",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Santana conhece de cor — é de chorar de tão bonito. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Santana%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Santana",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Santana é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Santana%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Santana conhece de cor — bixo, é demais. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Centro histórico de Santana",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Santana é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Santana%2C%20Santana%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Descubra Santana no seu ritmo: aqui ninguém tem pressa. se liga nessa"
+    },
+    "dining": {
+      "intro": "Em Santana, a comida é levada a sério — e sem frescura. tu não imagina. A cidade mantém festival do açaí de Macapá vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Santana conhece de cor — é de chorar de tão bonito. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da massa o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Santana conhece de cor — tu não imagina. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Santana vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — é de chorar de tão bonito. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Santana vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Santana%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Santana é generosa, igual gente da casa. se liga nessa"
+    },
+    "transport": {
+      "intro": "Circular por Santana é tranquilo para quem conhece os atalhos. é de chorar de tão bonito. O transporte da cidade se organiza em torno de pescarias nos rios amazônicos, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Santana conhece de cor — é de chorar de tão bonito. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Santana vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — bixo, é demais. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Santana é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Santana%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É rolê o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Santana%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A locomoção em Santana é tranquila, e a cidade te recebe sem enrolação. tu não imagina"
+    },
+    "climate": {
+      "intro": "O clima de Santana acompanha o ritmo da região: equatorial chuvoso, se liga. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Santana apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/santana/"
+      }
+    },
+    "city": "Santana",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 118803,
+    "reviewedOn": "2026-08-18"
+  },
+  "serra-do-navio": {
+    "tourism": {
+      "intro": "Conhecer Serra do Navio é conhecer um pedaço autêntico de Amapá. é de chorar de tão bonito A cidade tem cultura de fronteira com o Caribe como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Parque municipal de Serra do Navio",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É tá de parabéns o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Serra%20do%20Navio%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Serra do Navio é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Estádio municipal de Serra do Navio",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Serra do Navio é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Serra%20do%20Navio%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Serra do Navio conhece de cor — tu não imagina. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "O roteiro de Serra do Navio rende conversa boa e foto bonita. tu não imagina"
+    },
+    "dining": {
+      "intro": "Comer bem em Serra do Navio é mais fácil do que parece. é de chorar de tão bonito. A mesa da cidade tem feiras de peixe à madrugada no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Serra do Navio vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Serra do Navio vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Serra do Navio vive isso no dia a dia, com feiras de peixe à madrugada fazendo parte da rotina — tu não imagina. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Serra do Navio é generosa, igual gente da casa. bixo, é demais"
+    },
+    "transport": {
+      "intro": "Quem se muda para Serra do Navio logo aprende a malha de transporte local. se liga nessa. A cidade mantém festival do açaí de Macapá na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da massa o que se vê por aqui: a cidade mantém pescarias nos rios amazônicos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Serra do Navio é conhecida por tucupi e jambu na cozinha, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muito da hora o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Serra%20do%20Navio%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Serra do Navio é mais simples do que parece. tu não imagina"
+    },
+    "climate": {
+      "intro": "O clima de Serra do Navio acompanha o ritmo da região: equatorial chuvoso, tá de parabéns. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Serra do Navio apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/serra%20do%20navio/"
+      }
+    },
+    "city": "Serra do Navio",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 5003,
+    "reviewedOn": "2026-08-18"
+  },
+  "vitoria-do-jari": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Vitória do Jari. é de chorar de tão bonito. O turismo da cidade é simples e verdadeiro: festival do açaí de Macapá e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É rolê o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Vitória do Jari",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Vitória do Jari conhece de cor — se liga nessa. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Vit%C3%B3ria%20do%20Jari%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Parque municipal de Vitória do Jari",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Vitória do Jari vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — bixo, é demais. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Vit%C3%B3ria%20do%20Jari%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Vitória do Jari conhece de cor — tu não imagina. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Vitória do Jari vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — pode apostar. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Descubra Vitória do Jari no seu ritmo: aqui ninguém tem pressa. pode apostar"
+    },
+    "dining": {
+      "intro": "Em Vitória do Jari, a comida é levada a sério — e sem frescura. tu não imagina. A cidade mantém feiras de peixe à madrugada vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Vitória do Jari vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — bixo, é demais. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Vitória do Jari conhece de cor — pode apostar. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Vitória do Jari conhece de cor — se liga nessa. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Vitória do Jari é conhecida por tucupi e jambu na cozinha, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É rolê o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Em Vitória do Jari se come de olhos fechados e de coração aberto. se liga nessa"
+    },
+    "transport": {
+      "intro": "Em Vitória do Jari, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é de chorar de tão bonito. Para distâncias maiores, feiras de peixe à madrugada resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Vitória do Jari é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Vitória do Jari conhece de cor — é de chorar de tão bonito. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Vitória do Jari é conhecida por cultura de fronteira com o Caribe, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Vitória do Jari",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É muito da hora o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vit%C3%B3ria%20do%20Jari%2C%20Vit%C3%B3ria%20do%20Jari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pode apostar"
+    },
+    "climate": {
+      "intro": "Vitória do Jari vive o clima típico da região de Amapá — equatorial chuvoso, com tu não imagina. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Vitória do Jari se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/vitoria%20do%20jari/"
+      }
+    },
+    "city": "Vitória do Jari",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 11899,
+    "reviewedOn": "2026-08-18"
+  },
+  "amapa": {
+    "tourism": {
+      "intro": "Conhecer Amapá é conhecer um pedaço autêntico de Amapá — pode apostar. A cidade tem pescarias nos rios amazônicos como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Amapá conhece de cor — bixo, é demais, viu. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É muito da hora o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Amapá",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Amapá é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Amap%C3%A1%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Estádio municipal de Amapá",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Amapá é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Amap%C3%A1%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Descubra Amapá no seu ritmo: aqui ninguém tem pressa — se liga nessa!"
+    },
+    "dining": {
+      "intro": "Fome em Amapá não falta solução — pode apostar. De pescarias nos rios amazônicos ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Amapá vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Amapá vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — tu não imagina, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito da hora o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Em Amapá se come de olhos fechados e de coração aberto — bixo, é demais!"
+    },
+    "transport": {
+      "intro": "Quem se muda para Amapá logo aprende a malha de transporte local — é de chorar de tão bonito. A cidade mantém festival do açaí de Macapá na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Amapá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Amapá conhece de cor — bixo, é demais, viu. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Amap%C3%A1%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Amapá é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Amapá conhece de cor — é de chorar de tão bonito, viu. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Amap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Amapá é mais simples do que parece — bixo, é demais!"
+    },
+    "climate": {
+      "intro": "O clima de Amapá acompanha o ritmo da região: equatorial chuvoso, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Amapá, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é de chorar de tão bonito. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/amapa/"
+      }
+    },
+    "city": "Amapá",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 8440,
+    "reviewedOn": "2026-08-18"
+  },
+  "cutias": {
+    "tourism": {
+      "intro": "Conhecer Cutias é conhecer um pedaço autêntico de Amapá — tu não imagina. A cidade tem pescarias nos rios amazônicos como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Centro histórico de Cutias",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Cutias vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — tu não imagina, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Cutias%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Cutias",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Cutias é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Cutias%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Praça Central de Cutias",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Cutias vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Cutias%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É bixo o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Cutias%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amapá de ser. é de chorar de tão bonito!"
+    },
+    "dining": {
+      "intro": "Em Cutias, a comida é levada a sério — e sem frescura. bixo, é demais, viu. A cidade mantém feiras de peixe à madrugada vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Cutias conhece de cor — é de chorar de tão bonito, viu. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Cutias vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — pode apostar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Cutias é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Cutias%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Cutias é generosa, igual gente da casa — se liga nessa!"
+    },
+    "transport": {
+      "intro": "Quem se muda para Cutias logo aprende a malha de transporte local — é de chorar de tão bonito. A cidade mantém marabaixo e cultura afroramazônica na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Cutias",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É tá de parabéns o que se vê por aqui: a cidade mantém marabaixo e cultura afroramazônica como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cutias%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bixo o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Cutias conhece de cor — é de chorar de tão bonito, viu. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cutias%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Cutias conhece de cor — bixo, é demais, viu. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cutias%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. bixo, é demais!"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Cutias, com o regime de chuvas equatorial chuvoso da região de Amapá. é de chorar de tão bonito. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Cutias apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/cutias/"
+      }
+    },
+    "city": "Cutias",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 4723,
+    "reviewedOn": "2026-08-18"
+  },
+  "macapa": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Macapá — se liga nessa, viu. O turismo da cidade é simples e verdadeiro: pescarias nos rios amazônicos e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Macapá é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Parque municipal de Macapá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Macapá vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — tu não imagina, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Macap%C3%A1%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Macapá vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — pode apostar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Macapá vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — se liga nessa, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Macapá",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Macapá é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Macap%C3%A1%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Macapá se revela aos poucos — se liga nessa!"
+    },
+    "dining": {
+      "intro": "Comer bem em Macapá é mais fácil do que parece — é de chorar de tão bonito, viu. A mesa da cidade tem feiras de peixe à madrugada no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Macapá vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — se liga nessa, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Macapá conhece de cor — tu não imagina, viu. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Macapá vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Macapá conhece de cor — bixo, é demais, viu. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Macapá vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Macapá é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A mesa de Macapá é generosa, igual gente da casa — bixo, é demais!"
+    },
+    "transport": {
+      "intro": "Quem se muda para Macapá logo aprende a malha de transporte local — se liga nessa. A cidade mantém tucupi e jambu na cozinha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Macapá é conhecida por tucupi e jambu na cozinha, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Macapá é conhecida por tucupi e jambu na cozinha, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rodoviária municipal de Macapá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Macapá vive isso no dia a dia, com marabaixo e cultura afroramazônica fazendo parte da rotina — pode apostar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Macap%C3%A1%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É tá de parabéns o que se vê por aqui: a cidade mantém pescarias nos rios amazônicos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Macapá é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Macap%C3%A1%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Macapá é mais simples do que parece — é de chorar de tão bonito!"
+    },
+    "climate": {
+      "intro": "O clima de Macapá acompanha o ritmo da região: equatorial chuvoso, da massa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Macapá, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é de chorar de tão bonito. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/macapa/"
+      }
+    },
+    "city": "Macapá",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 489676,
+    "reviewedOn": "2026-08-18"
+  },
+  "mazagao": {
+    "tourism": {
+      "intro": "Mazagão é daquelas cidades de Amapá que a gente conhece devagar — se liga nessa. O roteiro local mistura cultura de fronteira com o Caribe com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Mazagão conhece de cor — tu não imagina, viu. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Parque municipal de Mazagão",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Mazagão conhece de cor — é de chorar de tão bonito, viu. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Mazag%C3%A3o%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Estádio municipal de Mazagão",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Mazagão conhece de cor — pode apostar, viu. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Mazag%C3%A3o%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Mazagão vive isso no dia a dia, com festival do açaí de Macapá fazendo parte da rotina — se liga nessa, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Mazagão é conhecida por festival do açaí de Macapá, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Descubra Mazagão no seu ritmo: aqui ninguém tem pressa — pode apostar!"
+    },
+    "dining": {
+      "intro": "Comer bem em Mazagão é mais fácil do que parece — é de chorar de tão bonito, viu. A mesa da cidade tem tucupi e jambu na cozinha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Mazagão é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Mazagão conhece de cor — é de chorar de tão bonito, viu. A cidade preserva feiras de peixe à madrugada e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Mazagão conhece de cor — se liga nessa, viu. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É bixo o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Mazagão conhece de cor — se liga nessa, viu. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Fica a dica: em Mazagão, quem come bem conta vantagem — bixo, é demais!"
+    },
+    "transport": {
+      "intro": "Em Mazagão, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pode apostar, viu. Para distâncias maiores, cultura de fronteira com o Caribe resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Mazagão vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — se liga nessa, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Mazagão é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Mazagão é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É rolê o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Mazag%C3%A3o%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tu não imagina!"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Mazagão, com o regime de chuvas equatorial chuvoso da região de Amapá. se liga nessa. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Mazagão, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. se liga nessa. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/mazagao/"
+      }
+    },
+    "city": "Mazagão",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 23773,
+    "reviewedOn": "2026-08-18"
+  },
+  "oiapoque": {
+    "tourism": {
+      "intro": "Oiapoque guarda charme de Amapá em cada canto — tu não imagina, viu. Quem anda pela cidade percebe logo feiras de peixe à madrugada — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Centro histórico de Oiapoque",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muito da hora o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Oiapoque%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Oiapoque vive isso no dia a dia, com feiras de peixe à madrugada fazendo parte da rotina — tu não imagina, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É rolê o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Oiapoque vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Oiapoque%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Oiapoque se revela aos poucos — pode apostar!"
+    },
+    "dining": {
+      "intro": "Em Oiapoque, a comida é levada a sério — e sem frescura. tu não imagina, viu. A cidade mantém feiras de peixe à madrugada vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito da hora o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Oiapoque vive isso no dia a dia, com tucupi e jambu na cozinha fazendo parte da rotina — se liga nessa, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Oiapoque vive isso no dia a dia, com cultura de fronteira com o Caribe fazendo parte da rotina — bixo, é demais, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Oiapoque conhece de cor — bixo, é demais, viu. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Oiapoque conhece de cor — se liga nessa, viu. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Oiapoque%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Passa por Oiapoque com fome — a cidade resolve. é de chorar de tão bonito!"
+    },
+    "transport": {
+      "intro": "Quem se muda para Oiapoque logo aprende a malha de transporte local — é de chorar de tão bonito. A cidade mantém tucupi e jambu na cozinha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Oiapoque é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — rolê, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Oiapoque conhece de cor — tu não imagina, viu. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Oiapoque é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Oiapoque%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muito da hora o que se vê por aqui: a cidade mantém tucupi e jambu na cozinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Oiapoque%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A locomoção em Oiapoque é tranquila, e a cidade te recebe sem enrolação — é de chorar de tão bonito!"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Oiapoque, com o regime de chuvas equatorial chuvoso da região de Amapá. pode apostar. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Oiapoque apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/oiapoque/"
+      }
+    },
+    "city": "Oiapoque",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 30786,
+    "reviewedOn": "2026-08-18"
+  },
+  "pedra-branca-do-amapari": {
+    "tourism": {
+      "intro": "Pedra Branca do Amapari guarda charme de Amapá em cada canto — se liga nessa, viu. Quem anda pela cidade percebe logo feiras de peixe à madrugada — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Pedra Branca do Amapari conhece de cor — tu não imagina, viu. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Pedra Branca do Amapari é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — se liga, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Pedra Branca do Amapari é conhecida por cultura de fronteira com o Caribe, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Pedra Branca do Amapari conhece de cor — é de chorar de tão bonito, viu. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Igreja Matriz de Pedra Branca do Amapari",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Pedra Branca do Amapari conhece de cor — tu não imagina, viu. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Pedra%20Branca%20do%20Amapari%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Vem com calma que Pedra Branca do Amapari se revela aos poucos — tu não imagina!"
+    },
+    "dining": {
+      "intro": "A gastronomia de Pedra Branca do Amapari conta a história de Amapá no prato — se liga nessa. Entre pescarias nos rios amazônicos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Pedra Branca do Amapari é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — da massa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Pedra Branca do Amapari conhece de cor — tu não imagina, viu. A cidade preserva cultura de fronteira com o Caribe e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Pedra Branca do Amapari é conhecida por feiras de peixe à madrugada, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Pedra Branca do Amapari conhece de cor — se liga nessa, viu. A cidade preserva tucupi e jambu na cozinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Passa por Pedra Branca do Amapari com fome — a cidade resolve. se liga nessa!"
+    },
+    "transport": {
+      "intro": "Em Pedra Branca do Amapari, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — tu não imagina, viu. Para distâncias maiores, tucupi e jambu na cozinha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Pedra Branca do Amapari vive isso no dia a dia, com pescarias nos rios amazônicos fazendo parte da rotina — pode apostar, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É bixo o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É muito da hora o que se vê por aqui: a cidade mantém pescarias nos rios amazônicos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pedra%20Branca%20do%20Amapari%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Chegar e circular em Pedra Branca do Amapari é mais simples do que parece — se liga nessa!"
+    },
+    "climate": {
+      "intro": "Pedra Branca do Amapari vive o clima típico da região de Amapá — equatorial chuvoso, com pode apostar. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Pedra Branca do Amapari apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/pedra%20branca%20do%20amapari/"
+      }
+    },
+    "city": "Pedra Branca do Amapari",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 13888,
+    "reviewedOn": "2026-08-18"
+  },
+  "tartarugalzinho": {
+    "tourism": {
+      "intro": "Tartarugalzinho guarda charme de Amapá em cada canto — tu não imagina, viu. Quem anda pela cidade percebe logo marabaixo e cultura afroramazônica — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Praça Central de Tartarugalzinho",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Tartarugalzinho é conhecida por marabaixo e cultura afroramazônica, e esse ponto carrega um pouco dessa história — bixo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Tartarugalzinho%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É tá de parabéns o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É se liga o que se vê por aqui: a cidade mantém pescarias nos rios amazônicos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Parque municipal de Tartarugalzinho",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da massa o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Tartarugalzinho%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amapá de ser. é de chorar de tão bonito!"
+    },
+    "dining": {
+      "intro": "Comer bem em Tartarugalzinho é mais fácil do que parece — é de chorar de tão bonito, viu. A mesa da cidade tem pescarias nos rios amazônicos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É se liga o que se vê por aqui: a cidade mantém festival do açaí de Macapá como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Tartarugalzinho conhece de cor — tu não imagina, viu. A cidade preserva marabaixo e cultura afroramazônica e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É da massa o que se vê por aqui: a cidade mantém feiras de peixe à madrugada como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Tartarugalzinho é conhecida por cultura de fronteira com o Caribe, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "Passa por Tartarugalzinho com fome — a cidade resolve. é de chorar de tão bonito!"
+    },
+    "transport": {
+      "intro": "Circular por Tartarugalzinho é tranquilo para quem conhece os atalhos — bixo, é demais. O transporte da cidade se organiza em torno de tucupi e jambu na cozinha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Tartarugalzinho",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É bixo o que se vê por aqui: a cidade mantém cultura de fronteira com o Caribe como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Tartarugalzinho%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Tartarugalzinho conhece de cor — é de chorar de tão bonito, viu. A cidade preserva pescarias nos rios amazônicos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Tartarugalzinho é conhecida por pescarias nos rios amazônicos, e esse ponto carrega um pouco dessa história — tá de parabéns, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Tartarugalzinho conhece de cor — é de chorar de tão bonito, viu. A cidade preserva festival do açaí de Macapá e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Tartarugalzinho%2C%20Amap%C3%A1"
+        }
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é de chorar de tão bonito!"
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Tartarugalzinho, com o regime de chuvas equatorial chuvoso da região de Amapá. tu não imagina. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Tartarugalzinho se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C"
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm"
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)"
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro."
+        }
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ap/tartarugalzinho/"
+      }
+    },
+    "city": "Tartarugalzinho",
+    "uf": "AP",
+    "stateName": "Amapá",
+    "region": "Norte",
+    "ddd": "96",
+    "population": 13816,
+    "reviewedOn": "2026-08-18"
+  }
+}

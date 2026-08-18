@@ -3,188 +3,7185 @@
 // @ts-nocheck
 import type { MunicipalityTabs } from "./types";
 export const catalog: Record<string, MunicipalityTabs> = {
-  iranduba: {
-    climate: {
-      body: "Iranduba está situada na Região Norte do Brasil, numa área de floresta amazônica que, em termos climáticos, apresenta um regime típico de clima tropical de floresta úmida (Af). Os dias costumam ser quentes e úmidos, com temperaturas altas ao longo do ano e variação diurna moderada, mantendo médias próximas de 26 a 28°C. A precipitação é elevada e relativamente distribuída ao longo de todo o ano, favorecendo a vegetação densa da Amazônia. A umidade tende a permanecer alta, o que influencia o dia a dia, especialmente atividades ao ar livre, agricultura familiar e turismo de natureza. Não há seca definida; os períodos de chuva podem ocorrer em boa parte do calendário anual, reforçando o ambiente de floresta tropical úmida.",
-      details: [
+  "iranduba": {
+    "climate": {
+      "body": "Iranduba está situada na Região Norte do Brasil, numa área de floresta amazônica que, em termos climáticos, apresenta um regime típico de clima tropical de floresta úmida (Af). Os dias costumam ser quentes e úmidos, com temperaturas altas ao longo do ano e variação diurna moderada, mantendo médias próximas de 26 a 28°C. A precipitação é elevada e relativamente distribuída ao longo de todo o ano, favorecendo a vegetação densa da Amazônia. A umidade tende a permanecer alta, o que influencia o dia a dia, especialmente atividades ao ar livre, agricultura familiar e turismo de natureza. Não há seca definida; os períodos de chuva podem ocorrer em boa parte do calendário anual, reforçando o ambiente de floresta tropical úmida.",
+      "details": [
         {
-          label: "Clima Köppen",
-          value:
-            "Af (tropical de floresta) — clima úmido durante o ano, com chuvas abundantes.",
+          "label": "Clima Köppen",
+          "value": "Af (tropical de floresta) — clima úmido durante o ano, com chuvas abundantes.",
         },
         {
-          label: "Temperatura média anual",
-          value: "Geralmente entre 26 e 28 °C.",
+          "label": "Temperatura média anual",
+          "value": "Geralmente entre 26 e 28 °C.",
         },
         {
-          label: "Precipitação anual",
-          value: "Acima de 3.000 mm por ano, com diários de chuva frequentes.",
+          "label": "Precipitação anual",
+          "value": "Acima de 3.000 mm por ano, com diários de chuva frequentes.",
         },
         {
-          label: "Características sazonais",
-          value:
-            "Ausência de estação seca marcada; chuva presente ao longo do ano, com picos de precipitação em vários meses.",
+          "label": "Características sazonais",
+          "value": "Ausência de estação seca marcada; chuva presente ao longo do ano, com picos de precipitação em vários meses.",
         },
       ],
-      intro:
-        "O clima de Iranduba está inserido na Amazônia, com regime equatorial caracterizado por calor e alta umidade ao longo do ano. A cidade apresenta temperatura estável (em torno de 26 a 28 °C) e precipitação elevada, típica de floresta tropical úmida. A vegetação e o modo de vida local são fortemente influenciados por esse regime climático, que não apresenta seca pronunciada, o que exige planejamento para atividades ao ar livre e agricultura.",
-      source: {
-        label: "Climate-Data.org",
-        href: "https://pt.climate-data.org/america-do-sul/brasil/am/iranduba/",
+      "intro": "O clima de Iranduba está inserido na Amazônia, com regime equatorial caracterizado por calor e alta umidade ao longo do ano. A cidade apresenta temperatura estável (em torno de 26 a 28 °C) e precipitação elevada, típica de floresta tropical úmida. A vegetação e o modo de vida local são fortemente influenciados por esse regime climático, que não apresenta seca pronunciada, o que exige planejamento para atividades ao ar livre e agricultura.",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/iranduba/",
       },
     },
-    dining: {
-      closing:
-        "A experiência gastronômica em Iranduba está vinculada à rica tradição da Amazônia, com foco em pescados de rio, mandioca, frutos da floresta e pratos compartilhados em feiras regionais.",
-      intro:
-        "A gastronomia de Iranduba faz parte da identidade da região amazônica, baseada no uso de peixes de rio, farinha de mandioca, mandioca brava, frutas da floresta e ervas locais. Pratos emblemáticos, como tacacá e maniçoba, ilustram a riqueza culinária da Amazônia, enquanto atividades como feiras regionais aproximam moradores e visitantes dos produtores locais. A culinária é fortemente influenciada pela vida ribeirinha e pelos recursos disponíveis nos rios Negro e Solimões, bem como pela produção agrícola local. Feiras públicas e mercados regionais costumam oferecer peças de peixe, hortaliças, frutas como açaí e itens artesanais, contribuindo para uma experiência autêntica e sustentável.",
-      items: [
+    "dining": {
+      "closing": "A experiência gastronômica em Iranduba está vinculada à rica tradição da Amazônia, com foco em pescados de rio, mandioca, frutos da floresta e pratos compartilhados em feiras regionais.",
+      "intro": "A gastronomia de Iranduba faz parte da identidade da região amazônica, baseada no uso de peixes de rio, farinha de mandioca, mandioca brava, frutas da floresta e ervas locais. Pratos emblemáticos, como tacacá e maniçoba, ilustram a riqueza culinária da Amazônia, enquanto atividades como feiras regionais aproximam moradores e visitantes dos produtores locais. A culinária é fortemente influenciada pela vida ribeirinha e pelos recursos disponíveis nos rios Negro e Solimões, bem como pela produção agrícola local. Feiras públicas e mercados regionais costumam oferecer peças de peixe, hortaliças, frutas como açaí e itens artesanais, contribuindo para uma experiência autêntica e sustentável.",
+      "items": [
         {
-          description:
-            "Tacacá — sopa servida em cuias, com base de tucupi, goma de tapioca, jambu e camarão seco.",
-          kind: "Prato t\u0000edpico",
-          name: "Tacacá",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Tacac%C3%A1%2C%20Iranduba%2C%20AM",
+          "description": "Tacacá — sopa servida em cuias, com base de tucupi, goma de tapioca, jambu e camarão seco.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Tacacá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Tacac%C3%A1%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Maniçoba — cozido feito com folhas de mandioca (maniva) e carnes, tradicional em celebrações.",
-          kind: "Prato t\u0000edpico",
-          name: "Mani\u0011boca",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Mani%11boca%2C%20Iranduba%2C%20AM",
+          "description": "Maniçoba — cozido feito com folhas de mandioca (maniva) e carnes, tradicional em celebrações.",
+          "kind": "Prato t\u0000edpico",
+          "name": "Mani\u0011boca",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mani%11boca%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Feira de Produtos Regionais em Lago do Limão (ADS) — feira itinerante que oferece frutas, legumes, peixe, açaí, artesanato e plantas ornamentais a produtores locais.",
-          kind: "Mercado/Feira regional",
-          name: "Feira Regional Lago do Lim\u0000e3o",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Feira%20Regional%20Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
+          "description": "Feira de Produtos Regionais em Lago do Limão (ADS) — feira itinerante que oferece frutas, legumes, peixe, açaí, artesanato e plantas ornamentais a produtores locais.",
+          "kind": "Mercado/Feira regional",
+          "name": "Feira Regional Lago do Lim\u0000e3o",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Regional%20Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Lago do Limão (destino de natureza e cultura) com comuni-dades ribeirinhas, onde o visitante pode observar a vida local, comer peixe fresco e experimentar ingredientes amazônicos.",
-          kind: "Atração natural/cultural",
-          name: "Lago do Lim\u0000e3o",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
+          "description": "Lago do Limão (destino de natureza e cultura) com comuni-dades ribeirinhas, onde o visitante pode observar a vida local, comer peixe fresco e experimentar ingredientes amazônicos.",
+          "kind": "Atração natural/cultural",
+          "name": "Lago do Lim\u0000e3o",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Tacacá, pirarucu, tambaqui e outros pescados de rio aparecem entre os pratos típicos da região, conforme referências da culinária amazônica.",
-          kind: "Contexto gastron\u0000f3mico",
-          name: "Culin\u0000e1ria Amaz\u0000f4nica",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Culin%00e1ria%20Amaz%00f4nica%2C%20Iranduba%2C%20AM",
+          "description": "Tacacá, pirarucu, tambaqui e outros pescados de rio aparecem entre os pratos típicos da região, conforme referências da culinária amazônica.",
+          "kind": "Contexto gastron\u0000f3mico",
+          "name": "Culin\u0000e1ria Amaz\u0000f4nica",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Culin%00e1ria%20Amaz%00f4nica%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Mercado Municipal (em projeto/atual sob licita\u0000e7\u0000e3o) para oferecer produtos locais de forma permanente na sede de Iranduba.",
-          kind: "Mercado municipal",
-          name: "Mercado Municipal de Iranduba",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20de%20Iranduba%2C%20Iranduba%2C%20AM",
+          "description": "Mercado Municipal (em projeto/atual sob licita\u0000e7\u0000e3o) para oferecer produtos locais de forma permanente na sede de Iranduba.",
+          "kind": "Mercado municipal",
+          "name": "Mercado Municipal de Iranduba",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20de%20Iranduba%2C%20Iranduba%2C%20AM",
         },
       ],
     },
-    tourism: {
-      closing:
-        "Visitar Iranduba pode incluir passeios a áreas ribeirinhas, visitas a feiras regionais e deslocamentos por estradas e vias de Manaus, sempre com atenção ao clima e às marés dos rios.",
-      intro:
-        "Iranduba, cidade da Região Metropolitana de Manaus, está banhada pelos rios Negro e Solimões, o que confere vocação turística a partir de paisagens amazônicas, comunidades ribeirinhas e vilas ao longo de suas margens. O município está conectado a Manaus por vias duplicadas, com acesso facilitado pela Ponte Rio Negro. A ocupação humana se dá nos distritos de Janauari, Paricatuba, Lago do Limão, Açutuba, Acajatuba e Ariaú, além de áreas rurais como o Lago do Limão, que atraem visitantes interessados em natureza, pesca, artesanato e cultura local. O turismo comunitário e o turismo de natureza são frentes ativas na região.",
-      items: [
+    "tourism": {
+      "closing": "Visitar Iranduba pode incluir passeios a áreas ribeirinhas, visitas a feiras regionais e deslocamentos por estradas e vias de Manaus, sempre com atenção ao clima e às marés dos rios.",
+      "intro": "Iranduba, cidade da Região Metropolitana de Manaus, está banhada pelos rios Negro e Solimões, o que confere vocação turística a partir de paisagens amazônicas, comunidades ribeirinhas e vilas ao longo de suas margens. O município está conectado a Manaus por vias duplicadas, com acesso facilitado pela Ponte Rio Negro. A ocupação humana se dá nos distritos de Janauari, Paricatuba, Lago do Limão, Açutuba, Acajatuba e Ariaú, além de áreas rurais como o Lago do Limão, que atraem visitantes interessados em natureza, pesca, artesanato e cultura local. O turismo comunitário e o turismo de natureza são frentes ativas na região.",
+      "items": [
         {
-          description:
-            "Praça dos Três Poderes: espaço público na sede municipal, palco de festas cívicas e eventos culturais.",
-          name: "Praça dos Três Poderes",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20dos%20Tr%C3%AAs%20Poderes%2C%20Iranduba%2C%20AM",
+          "description": "Praça dos Três Poderes: espaço público na sede municipal, palco de festas cívicas e eventos culturais.",
+          "name": "Praça dos Três Poderes",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20dos%20Tr%C3%AAs%20Poderes%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Lago do Limão: área rural com mata nativa, igarapés, praias de várzea e atividades de turismo de natureza e gastronomia local.",
-          name: "Lago do Lim\u0000e3o",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
+          "description": "Lago do Limão: área rural com mata nativa, igarapés, praias de várzea e atividades de turismo de natureza e gastronomia local.",
+          "name": "Lago do Lim\u0000e3o",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lago%20do%20Lim%00e3o%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Distritos ribeirinhos: Janauari, Paricatuba, Açutuba, Acajatuba e Ariaú, com comunidades que preservam tradições e formas de vida locais.",
-          name: "Distritos e comunidades ribeirinhas",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Distritos%20e%20comunidades%20ribeirinhas%2C%20Iranduba%2C%20AM",
+          "description": "Distritos ribeirinhos: Janauari, Paricatuba, Açutuba, Acajatuba e Ariaú, com comunidades que preservam tradições e formas de vida locais.",
+          "name": "Distritos e comunidades ribeirinhas",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Distritos%20e%20comunidades%20ribeirinhas%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Ponte Rio Negro: ligação viária entre Manaus e Iranduba que facilita o fluxo de pessoas e bens entre a capital e o interior.",
-          name: "Ponte Rio Negro",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Ponte%20Rio%20Negro%2C%20Iranduba%2C%20AM",
+          "description": "Ponte Rio Negro: ligação viária entre Manaus e Iranduba que facilita o fluxo de pessoas e bens entre a capital e o interior.",
+          "name": "Ponte Rio Negro",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ponte%20Rio%20Negro%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Sítios arqueológicos e áreas de interesse natural ao redor de Iranduba, que atraem pesquisadores e visitantes interessados na história regional e na biodiversidade.",
-          name: "S\u0000edtios arqueol\u0000f3gicos",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=S%00edtios%20arqueol%00f3gicos%2C%20Iranduba%2C%20AM",
+          "description": "Sítios arqueológicos e áreas de interesse natural ao redor de Iranduba, que atraem pesquisadores e visitantes interessados na história regional e na biodiversidade.",
+          "name": "S\u0000edtios arqueol\u0000f3gicos",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=S%00edtios%20arqueol%00f3gicos%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Feiras regionais promovidas pela ADS (Ag\u0000eancia de Desenvolvimento Sustent\u0000e1vel do Amazonas) com venda de produtos regionais, hortali\u0000e7as, peixes e artesanato.",
-          name: "Feiras regionais",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Feiras%20regionais%2C%20Iranduba%2C%20AM",
+          "description": "Feiras regionais promovidas pela ADS (Ag\u0000eancia de Desenvolvimento Sustent\u0000e1vel do Amazonas) com venda de produtos regionais, hortali\u0000e7as, peixes e artesanato.",
+          "name": "Feiras regionais",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feiras%20regionais%2C%20Iranduba%2C%20AM",
         },
       ],
     },
-    transport: {
-      closing:
-        "Para deslocamentos, considere as opções disponíveis: rodovi\u0000e1ria local, sistema de \u001fibus municipais (quando houver), aeroporto de Manaus para voos nacionais/internacionais e, na aus\u000eancia de ferrovias, priorize rotas rodovi\u0000e1rias.",
-      intro:
-        "O acesso a Iranduba ocorre principalmente por via terrestre a partir de Manaus. A cidade fica ligada pela ponte Rio Negro e por vias duplicadas que conectam o município à capital. A rodoviária municipal atende as necessidades de deslocamento local e regional, com oferta de empresas de ônibus que ligam Iranduba a Manaus e outras comunidades. O aeroporto mais próximo é o de Manaus (MAO), a cerca de 30 a 40 minutos de carro dependendo do trajeto. Não há ferrovias de uso público ativas na região para transporte de passageiros; propostas existem, mas não constituem infraestrutura operante no momento.",
-      items: [
+    "transport": {
+      "closing": "Para deslocamentos, considere as opções disponíveis: rodovi\u0000e1ria local, sistema de \u001fibus municipais (quando houver), aeroporto de Manaus para voos nacionais/internacionais e, na aus\u000eancia de ferrovias, priorize rotas rodovi\u0000e1rias.",
+      "intro": "O acesso a Iranduba ocorre principalmente por via terrestre a partir de Manaus. A cidade fica ligada pela ponte Rio Negro e por vias duplicadas que conectam o município à capital. A rodoviária municipal atende as necessidades de deslocamento local e regional, com oferta de empresas de ônibus que ligam Iranduba a Manaus e outras comunidades. O aeroporto mais próximo é o de Manaus (MAO), a cerca de 30 a 40 minutos de carro dependendo do trajeto. Não há ferrovias de uso público ativas na região para transporte de passageiros; propostas existem, mas não constituem infraestrutura operante no momento.",
+      "items": [
         {
-          description:
-            "Rodoviária municipal de Iranduba: ponto de embarque e desembarque de ônibus intermunicipais e regionais.",
-          kind: "Rodoviária",
-          name: "Terminal Rodovi\u0000e1rio de Iranduba (municipal)",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Terminal%20Rodovi%00e1rio%20de%20Iranduba%20(municipal)%2C%20Iranduba%2C%20AM",
+          "description": "Rodoviária municipal de Iranduba: ponto de embarque e desembarque de ônibus intermunicipais e regionais.",
+          "kind": "Rodoviária",
+          "name": "Terminal Rodovi\u0000e1rio de Iranduba (municipal)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminal%20Rodovi%00e1rio%20de%20Iranduba%20(municipal)%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Sistema de ônibus: redes de transporte conectam Iranduba a Manaus e a comunidades ribeirinhas, com serviços de empresas locais.",
-          kind: "Transporte coletivo",
-          name: "Sistema de \u001fibus de Iranduba",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%1Fibus%20de%20Iranduba%2C%20Iranduba%2C%20AM",
+          "description": "Sistema de ônibus: redes de transporte conectam Iranduba a Manaus e a comunidades ribeirinhas, com serviços de empresas locais.",
+          "kind": "Transporte coletivo",
+          "name": "Sistema de \u001fibus de Iranduba",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sistema%20de%20%1Fibus%20de%20Iranduba%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Aeroporto mais pr\u0000f3ximo: Manaus (MAO) - Aeroporto Internacional Eduardo Gomes, localizado na cidade de Manaus, a cerca de 30 a 40 minutos de Iranduba por via terrestre, dependendo das condições de tráfego.",
-          kind: "Aeroporto",
-          name: "MaO (Manaus)",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=MaO%20(Manaus)%2C%20Iranduba%2C%20AM",
+          "description": "Aeroporto mais pr\u0000f3ximo: Manaus (MAO) - Aeroporto Internacional Eduardo Gomes, localizado na cidade de Manaus, a cerca de 30 a 40 minutos de Iranduba por via terrestre, dependendo das condições de tráfego.",
+          "kind": "Aeroporto",
+          "name": "MaO (Manaus)",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=MaO%20(Manaus)%2C%20Iranduba%2C%20AM",
         },
         {
-          description:
-            "Ferrovias: atualmente n\u0000e3o h\u0000e1 ferrovias de passageiros operando na regi\u0000e3o; h\u0000e1 discuss\u0000f5es sobre ferrovias, mas nenhuma linha em atividade para transporte de pessoas.",
-          kind: "Ferrovias",
-          name: "Aus\u0000eancia de via férrea de passageiros",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Aus%00eancia%20de%20via%20f%C3%A9rrea%20de%20passageiros%2C%20Iranduba%2C%20AM",
+          "description": "Ferrovias: atualmente n\u0000e3o h\u0000e1 ferrovias de passageiros operando na regi\u0000e3o; h\u0000e1 discuss\u0000f5es sobre ferrovias, mas nenhuma linha em atividade para transporte de pessoas.",
+          "kind": "Ferrovias",
+          "name": "Aus\u0000eancia de via férrea de passageiros",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aus%00eancia%20de%20via%20f%C3%A9rrea%20de%20passageiros%2C%20Iranduba%2C%20AM",
         },
       ],
     },
-    city: "Iranduba",
-    uf: "AM",
-    stateName: "Amazonas",
-    region: "Norte",
-    ddd: "92",
-    population: 68862,
-    reviewedOn: "13 de agosto de 2026",
+    "city": "Iranduba",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 68862,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+  "amatura": {
+    "tourism": {
+      "intro": "Amaturá guarda charme de Amazonas em cada canto. é de doido. Quem anda pela cidade percebe logo açaí de todos os jeitos — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Amaturá conhece de cor — se liga, é muito bom. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Amaturá",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Amaturá conhece de cor — pra falar a real. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Amatur%C3%A1%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Amaturá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Amaturá conhece de cor — se liga, é muito bom. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Amatur%C3%A1%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Amaturá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Amaturá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Amatur%C3%A1%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Amaturá é mais fácil do que parece. se liga, é muito bom. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Amaturá vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Amaturá conhece de cor — é de doido. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Amaturá conhece de cor — é de doido. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Amaturá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Amaturá se come de olhos fechados e de coração aberto. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Circular por Amaturá é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de Boi Garantido e Caprichoso em Parintins, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Amaturá conhece de cor — tu não conhece é nada. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Amaturá conhece de cor — pra falar a real. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É é nóis o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Amatur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é de doido",
+    },
+    "climate": {
+      "intro": "Amaturá vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Amaturá, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. pra falar a real. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/amatura/",
+      },
+    },
+    "city": "Amaturá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 11533,
+    "reviewedOn": "2026-08-18",
+  },
+  "benjamin-constant": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Benjamin Constant. pra falar a real. O turismo da cidade é simples e verdadeiro: Boi Garantido e Caprichoso em Parintins e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Estádio municipal de Benjamin Constant",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Benjamin Constant conhece de cor — se liga, é muito bom. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Benjamin%20Constant%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Benjamin Constant",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Benjamin Constant conhece de cor — tu não conhece é nada. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Benjamin%20Constant%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Benjamin Constant",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Benjamin Constant conhece de cor — tu não conhece é nada. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Benjamin%20Constant%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Benjamin Constant conhece de cor — tu não conhece é nada. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Benjamin Constant é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Benjamin Constant rende conversa boa e foto bonita. é de doido",
+    },
+    "dining": {
+      "intro": "Fome em Benjamin Constant não falta solução. é nóis mesmo. De cultura ribeirinha e dos povos da floresta ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Benjamin Constant vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Benjamin Constant conhece de cor — é de doido. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Benjamin Constant vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Benjamin Constant é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Benjamin Constant é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "Circular por Benjamin Constant é tranquilo para quem conhece os atalhos. se liga, é muito bom. O transporte da cidade se organiza em torno de mercado municipal de manhãzinha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Benjamin Constant é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Benjamin Constant conhece de cor — tu não conhece é nada. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Benjamin%20Constant%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Benjamin Constant é tranquila, e a cidade te recebe sem enrolação. é de doido",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Benjamin Constant, com o regime de chuvas equatorial chuvoso da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Benjamin Constant apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/benjamin%20constant/",
+      },
+    },
+    "city": "Benjamin Constant",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 40908,
+    "reviewedOn": "2026-08-18",
+  },
+  "canutama": {
+    "tourism": {
+      "intro": "Conhecer Canutama é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem mercado municipal de manhãzinha como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Canutama conhece de cor — tu não conhece é nada. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Canutama",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Canutama é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Canutama%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Canutama",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Canutama vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Canutama%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Canutama conhece de cor — pra falar a real. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Canutama%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Canutama rende conversa boa e foto bonita. tu não conhece é nada",
+    },
+    "dining": {
+      "intro": "Em Canutama, a comida é levada a sério — e sem frescura. é de doido. A cidade mantém encontro das águas do Negro com o Solimões vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Canutama vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Canutama conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Canutama vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Canutama é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Canutama%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Canutama com fome — a cidade resolve. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Quem se muda para Canutama logo aprende a malha de transporte local. tu não conhece é nada. A cidade mantém cultura ribeirinha e dos povos da floresta na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bater um papo o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Canutama",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Canutama vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Canutama%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Canutama conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Canutama%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Canutama conhece de cor — se liga, é muito bom. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Canutama%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Canutama é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Canutama acompanha o ritmo da região: equatorial chuvoso, oxente. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Canutama, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não conhece é nada. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/canutama/",
+      },
+    },
+    "city": "Canutama",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 18109,
+    "reviewedOn": "2026-08-18",
+  },
+  "careiro": {
+    "tourism": {
+      "intro": "Careiro guarda charme de Amazonas em cada canto. é de doido. Quem anda pela cidade percebe logo tucupi com jambu e maniçoba — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Careiro é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Careiro",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Careiro vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Careiro%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Careiro",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Careiro%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Careiro vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Careiro vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Careiro%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Careiro rende conversa boa e foto bonita. pra falar a real",
+    },
+    "dining": {
+      "intro": "Em Careiro, a comida é levada a sério — e sem frescura. tu não conhece é nada. A cidade mantém encontro das águas do Negro com o Solimões vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Careiro é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Careiro vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Careiro vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Careiro conhece de cor — se liga, é muito bom. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Careiro%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Careiro é generosa, igual gente da casa. é nóis mesmo",
+    },
+    "transport": {
+      "intro": "Circular por Careiro é tranquilo para quem conhece os atalhos. se liga, é muito bom. O transporte da cidade se organiza em torno de cultura ribeirinha e dos povos da floresta, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Careiro é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Careiro é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Careiro%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Careiro vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Careiro%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Careiro é tranquila, e a cidade te recebe sem enrolação. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "Careiro vive o clima típico da região de Amazonas — equatorial chuvoso, com tu não conhece é nada. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Careiro se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/careiro/",
+      },
+    },
+    "city": "Careiro",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 32336,
+    "reviewedOn": "2026-08-18",
+  },
+  "careiro-da-varzea": {
+    "tourism": {
+      "intro": "Careiro da Várzea guarda charme de Amazonas em cada canto. é de doido. Quem anda pela cidade percebe logo tucupi com jambu e maniçoba — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Centro histórico de Careiro da Várzea",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Careiro da Várzea conhece de cor — é nóis mesmo. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Careiro%20da%20V%C3%A1rzea%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Careiro da Várzea vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Careiro da Várzea",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Careiro da Várzea é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Careiro%20da%20V%C3%A1rzea%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É arretado o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Careiro da Várzea vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Careiro da Várzea no seu ritmo: aqui ninguém tem pressa. tu não conhece é nada",
+    },
+    "dining": {
+      "intro": "Fome em Careiro da Várzea não falta solução. pra falar a real. De tucupi com jambu e maniçoba ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Careiro da Várzea conhece de cor — tu não conhece é nada. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Careiro da Várzea é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Careiro da Várzea conhece de cor — é nóis mesmo. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Careiro da Várzea é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Careiro da Várzea é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "Quem se muda para Careiro da Várzea logo aprende a malha de transporte local. é de doido. A cidade mantém cultura ribeirinha e dos povos da floresta na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Careiro da Várzea",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Careiro da Várzea é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Careiro%20da%20V%C3%A1rzea%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Careiro da Várzea é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Careiro da Várzea conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Careiro%20da%20V%C3%A1rzea%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Careiro da Várzea, com o regime de chuvas equatorial chuvoso da região de Amazonas. é nóis mesmo. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Careiro da Várzea se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/careiro%20da%20varzea/",
+      },
+    },
+    "city": "Careiro da Várzea",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 20324,
+    "reviewedOn": "2026-08-18",
+  },
+  "codajas": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Codajás. é de doido. O turismo da cidade é simples e verdadeiro: encontro das águas do Negro com o Solimões e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Codajás",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Codaj%C3%A1s%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Codajás",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Codajás conhece de cor — pra falar a real. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Codaj%C3%A1s%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Codajás vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Codajás é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "Em Codajás, a comida é levada a sério — e sem frescura. pra falar a real. A cidade mantém mercado municipal de manhãzinha vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Codajás vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Codajás vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Codajás é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Codajás com fome — a cidade resolve. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Quem se muda para Codajás logo aprende a malha de transporte local. é de doido. A cidade mantém Boi Garantido e Caprichoso em Parintins na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Codajás é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Codajás conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Codajás",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Codajás conhece de cor — é nóis mesmo. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Codaj%C3%A1s%2C%20Codaj%C3%A1s%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Codajás é mais simples do que parece. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Codajás, com o regime de chuvas equatorial chuvoso da região de Amazonas. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Codajás apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/codajas/",
+      },
+    },
+    "city": "Codajás",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 24572,
+    "reviewedOn": "2026-08-18",
+  },
+  "eirunepe": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Eirunepé. é de doido. O turismo da cidade é simples e verdadeiro: mercado municipal de manhãzinha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Eirunepé é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Eirunepé",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É da hora o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Eirunep%C3%A9%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Eirunepé",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Eirunepé é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Eirunep%C3%A9%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Eirunepé rende conversa boa e foto bonita. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "A gastronomia de Eirunepé conta a história de Amazonas no prato. tu não conhece é nada. Entre Boi Garantido e Caprichoso em Parintins e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Eirunepé conhece de cor — se liga, é muito bom. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Eirunepé é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Eirunepé conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Eirunepé, quem come bem conta vantagem. é de doido",
+    },
+    "transport": {
+      "intro": "O dia a dia de Eirunepé tem ritmo próprio, e o transporte acompanha. é nóis mesmo. Entre encontro das águas do Negro com o Solimões e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Eirunepé conhece de cor — pra falar a real. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Eirunepé conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Eirunepé é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Eirunep%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Eirunepé é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Eirunepé acompanha o ritmo da região: equatorial chuvoso, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Eirunepé, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. pra falar a real. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/eirunepe/",
+      },
+    },
+    "city": "Eirunepé",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 35793,
+    "reviewedOn": "2026-08-18",
+  },
+  "envira": {
+    "tourism": {
+      "intro": "Envira é daquelas cidades de Amazonas que a gente conhece devagar. pra falar a real O roteiro local mistura tucupi com jambu e maniçoba com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Envira vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Envira é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Envira",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Envira é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Envira%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Envira conhece de cor — tu não conhece é nada. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Envira%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Envira no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "Em Envira, a comida é levada a sério — e sem frescura. é de doido. A cidade mantém açaí de todos os jeitos vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Envira conhece de cor — pra falar a real. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Envira conhece de cor — é de doido. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Envira é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Envira é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Envira%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Envira é generosa, igual gente da casa. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Quem se muda para Envira logo aprende a malha de transporte local. é de doido. A cidade mantém mercado municipal de manhãzinha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Envira vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Envira conhece de cor — pra falar a real. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Envira%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Envira",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É oxente o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Envira%2C%20Envira%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Envira é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Envira acompanha o ritmo da região: equatorial chuvoso, oxente. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Envira, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não conhece é nada. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/envira/",
+      },
+    },
+    "city": "Envira",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 17985,
+    "reviewedOn": "2026-08-18",
+  },
+  "fonte-boa": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Fonte Boa. pra falar a real. O turismo da cidade é simples e verdadeiro: açaí de todos os jeitos e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Fonte Boa conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Fonte Boa",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Fonte Boa vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Fonte%20Boa%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Fonte Boa",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Fonte Boa conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Fonte%20Boa%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Fonte Boa conhece de cor — tu não conhece é nada. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Fonte Boa rende conversa boa e foto bonita. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "Fome em Fonte Boa não falta solução. é de doido. De mercado municipal de manhãzinha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Fonte Boa é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Fonte Boa é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Fonte Boa vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Fonte Boa é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Fonte Boa com fome — a cidade resolve. se liga, é muito bom",
+    },
+    "transport": {
+      "intro": "Quem se muda para Fonte Boa logo aprende a malha de transporte local. é de doido. A cidade mantém Boi Garantido e Caprichoso em Parintins na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Fonte Boa é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Fonte Boa conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Fonte Boa conhece de cor — pra falar a real. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Fonte Boa",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Fonte Boa vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Fonte%20Boa%2C%20Fonte%20Boa%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Fonte Boa é mais simples do que parece. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "O clima de Fonte Boa acompanha o ritmo da região: equatorial chuvoso, arretado. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Fonte Boa se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/fonte%20boa/",
+      },
+    },
+    "city": "Fonte Boa",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 28227,
+    "reviewedOn": "2026-08-18",
+  },
+  "itamarati": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Itamarati. é de doido. O turismo da cidade é simples e verdadeiro: açaí de todos os jeitos e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Estádio municipal de Itamarati",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Itamarati%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Itamarati conhece de cor — pra falar a real. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Itamarati é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Itamarati%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Itamarati se revela aos poucos. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Em Itamarati, a comida é levada a sério — e sem frescura. é nóis mesmo. A cidade mantém Boi Garantido e Caprichoso em Parintins vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Itamarati conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Itamarati vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Itamarati conhece de cor — se liga, é muito bom. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Itamarati vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Itamarati%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Itamarati, quem come bem conta vantagem. se liga, é muito bom",
+    },
+    "transport": {
+      "intro": "O dia a dia de Itamarati tem ritmo próprio, e o transporte acompanha. é nóis mesmo. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Itamarati conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Itamarati vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itamarati%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Itamarati conhece de cor — tu não conhece é nada. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Itamarati%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Itamarati, todo caminho leva a um lugar bom. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "Itamarati vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Itamarati, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. pra falar a real. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/itamarati/",
+      },
+    },
+    "city": "Itamarati",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 11956,
+    "reviewedOn": "2026-08-18",
+  },
+  "japura": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Japurá. é de doido. O turismo da cidade é simples e verdadeiro: tucupi com jambu e maniçoba e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Japurá é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Japurá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Japur%C3%A1%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Japurá conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Japurá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Japur%C3%A1%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. pra falar a real",
+    },
+    "dining": {
+      "intro": "Fome em Japurá não falta solução. pra falar a real. De açaí de todos os jeitos ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Japurá conhece de cor — tu não conhece é nada. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Japurá vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Japurá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Japurá se come de olhos fechados e de coração aberto. pra falar a real",
+    },
+    "transport": {
+      "intro": "O dia a dia de Japurá tem ritmo próprio, e o transporte acompanha. se liga, é muito bom. Entre açaí de todos os jeitos e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Japurá é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Japurá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Japurá conhece de cor — pra falar a real. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Japur%C3%A1%2C%20Japur%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Japurá é tranquila, e a cidade te recebe sem enrolação. se liga, é muito bom",
+    },
+    "climate": {
+      "intro": "O clima de Japurá acompanha o ritmo da região: equatorial chuvoso, arretado. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Japurá se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/japura/",
+      },
+    },
+    "city": "Japurá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 9420,
+    "reviewedOn": "2026-08-18",
+  },
+  "jurua": {
+    "tourism": {
+      "intro": "Conhecer Juruá é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem tucupi com jambu e maniçoba como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Parque municipal de Juruá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Juru%C3%A1%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Juruá",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Juruá vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Juru%C3%A1%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Juruá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Juru%C3%A1%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Juruá conhece de cor — tu não conhece é nada. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Juruá rende conversa boa e foto bonita. é de doido",
+    },
+    "dining": {
+      "intro": "Em Juruá, a comida é levada a sério — e sem frescura. é nóis mesmo. A cidade mantém mercado municipal de manhãzinha vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Juruá conhece de cor — tu não conhece é nada. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Juruá é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É bater um papo o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Juruá é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Juruá, quem come bem conta vantagem. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Quem se muda para Juruá logo aprende a malha de transporte local. é de doido. A cidade mantém encontro das águas do Negro com o Solimões na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Juruá vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Juruá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Juruá vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Juru%C3%A1%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Juru%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Juruá é tranquila, e a cidade te recebe sem enrolação. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Juruá vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Juruá apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/jurua/",
+      },
+    },
+    "city": "Juruá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 11093,
+    "reviewedOn": "2026-08-18",
+  },
+  "labrea": {
+    "tourism": {
+      "intro": "Lábrea guarda charme de Amazonas em cada canto. pra falar a real. Quem anda pela cidade percebe logo açaí de todos os jeitos — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Praça Central de Lábrea",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20L%C3%A1brea%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Lábrea vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Lábrea é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Lábrea é mais fácil do que parece. pra falar a real. A mesa da cidade tem açaí de todos os jeitos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Lábrea é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Lábrea conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Lábrea é generosa, igual gente da casa. se liga, é muito bom",
+    },
+    "transport": {
+      "intro": "O dia a dia de Lábrea tem ritmo próprio, e o transporte acompanha. pra falar a real. Entre encontro das águas do Negro com o Solimões e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É bater um papo o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Lábrea é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Lábrea vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20L%C3%A1brea%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Lábrea é tranquila, e a cidade te recebe sem enrolação. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Lábrea vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Lábrea se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/labrea/",
+      },
+    },
+    "city": "Lábrea",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 49469,
+    "reviewedOn": "2026-08-18",
+  },
+  "manicore": {
+    "tourism": {
+      "intro": "Manicoré é daquelas cidades de Amazonas que a gente conhece devagar. é de doido O roteiro local mistura tucupi com jambu e maniçoba com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Manicoré",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Manicoré é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Manicor%C3%A9%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Manicoré",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Manicor%C3%A9%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Manicoré é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Manicoré conhece de cor — pra falar a real. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. tu não conhece é nada",
+    },
+    "dining": {
+      "intro": "Fome em Manicoré não falta solução. é nóis mesmo. De mercado municipal de manhãzinha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Manicoré é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Manicoré conhece de cor — é nóis mesmo. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Manicoré vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Manicoré, quem come bem conta vantagem. é nóis mesmo",
+    },
+    "transport": {
+      "intro": "Circular por Manicoré é tranquilo para quem conhece os atalhos. é nóis mesmo. O transporte da cidade se organiza em torno de açaí de todos os jeitos, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Manicoré é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Manicoré vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Manicoré é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Manicor%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Manicoré é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Manicoré, com o regime de chuvas equatorial chuvoso da região de Amazonas. é nóis mesmo. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Manicoré, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é nóis mesmo. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/manicore/",
+      },
+    },
+    "city": "Manicoré",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 58018,
+    "reviewedOn": "2026-08-18",
+  },
+  "maraa": {
+    "tourism": {
+      "intro": "Maraã é daquelas cidades de Amazonas que a gente conhece devagar. é de doido O roteiro local mistura tucupi com jambu e maniçoba com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Maraã",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Maraã é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Mara%C3%A3%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Maraã conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Maraã vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Maraã vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Maraã rende conversa boa e foto bonita. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "A gastronomia de Maraã conta a história de Amazonas no prato. é de doido. Entre mercado municipal de manhãzinha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Maraã conhece de cor — é nóis mesmo. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É oxente o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Maraã conhece de cor — pra falar a real. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Maraã é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Maraã, quem come bem conta vantagem. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Circular por Maraã é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de açaí de todos os jeitos, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Maraã é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Maraã conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Maraã",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É oxente o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Mara%C3%A3%2C%20Mara%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Maraã é tranquila, e a cidade te recebe sem enrolação. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Maraã, com o regime de chuvas equatorial chuvoso da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Maraã se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/maraa/",
+      },
+    },
+    "city": "Maraã",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 15815,
+    "reviewedOn": "2026-08-18",
+  },
+  "maues": {
+    "tourism": {
+      "intro": "Conhecer Maués é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem cultura ribeirinha e dos povos da floresta como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Maués conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Maués",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Maués vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Mau%C3%A9s%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Maués conhece de cor — tu não conhece é nada. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Maués",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Maués vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Mau%C3%A9s%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Maués no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "A gastronomia de Maués conta a história de Amazonas no prato. é nóis mesmo. Entre encontro das águas do Negro com o Solimões e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Maués vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Maués vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Maués conhece de cor — é de doido. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Maués vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É da hora o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Maués se come de olhos fechados e de coração aberto. é de doido",
+    },
+    "transport": {
+      "intro": "Em Maués, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é nóis mesmo. Para distâncias maiores, mercado municipal de manhãzinha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Maués conhece de cor — é de doido. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Maués vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Maués conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Maués",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Maués é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Mau%C3%A9s%2C%20Mau%C3%A9s%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Maués é tranquila, e a cidade te recebe sem enrolação. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "Maués vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Maués se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/maues/",
+      },
+    },
+    "city": "Maués",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 66336,
+    "reviewedOn": "2026-08-18",
+  },
+  "nova-olinda-do-norte": {
+    "tourism": {
+      "intro": "Nova Olinda do Norte é daquelas cidades de Amazonas que a gente conhece devagar. pra falar a real O roteiro local mistura açaí de todos os jeitos com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Nova Olinda do Norte",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Nova Olinda do Norte vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Nova%20Olinda%20do%20Norte%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Nova Olinda do Norte",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Nova Olinda do Norte conhece de cor — é nóis mesmo. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Nova%20Olinda%20do%20Norte%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Nova Olinda do Norte",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Nova Olinda do Norte vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Nova%20Olinda%20do%20Norte%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "A gastronomia de Nova Olinda do Norte conta a história de Amazonas no prato. pra falar a real. Entre Boi Garantido e Caprichoso em Parintins e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Nova Olinda do Norte conhece de cor — é nóis mesmo. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Nova Olinda do Norte vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É arretado o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É arretado o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Nova Olinda do Norte é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "O dia a dia de Nova Olinda do Norte tem ritmo próprio, e o transporte acompanha. é nóis mesmo. Entre mercado municipal de manhãzinha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Nova Olinda do Norte vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Nova Olinda do Norte vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Nova Olinda do Norte vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nova%20Olinda%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Nova Olinda do Norte, todo caminho leva a um lugar bom. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Nova Olinda do Norte acompanha o ritmo da região: equatorial chuvoso, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Nova Olinda do Norte apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/nova%20olinda%20do%20norte/",
+      },
+    },
+    "city": "Nova Olinda do Norte",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 28123,
+    "reviewedOn": "2026-08-18",
+  },
+  "novo-airao": {
+    "tourism": {
+      "intro": "Novo Airão guarda charme de Amazonas em cada canto. é de doido. Quem anda pela cidade percebe logo encontro das águas do Negro com o Solimões — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de Novo Airão",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Novo Airão é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Novo%20Air%C3%A3o%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Novo Airão vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Novo Airão",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Novo Airão é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Novo%20Air%C3%A3o%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Novo Airão",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Novo Airão conhece de cor — se liga, é muito bom. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Novo%20Air%C3%A3o%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É é nóis o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Novo Airão se revela aos poucos. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "Comer bem em Novo Airão é mais fácil do que parece. é nóis mesmo. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Novo Airão conhece de cor — é nóis mesmo. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Novo Airão conhece de cor — é nóis mesmo. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Novo Airão vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Novo Airão conhece de cor — tu não conhece é nada. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Novo Airão se come de olhos fechados e de coração aberto. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "O dia a dia de Novo Airão tem ritmo próprio, e o transporte acompanha. tu não conhece é nada. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Novo Airão vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Novo Airão",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Novo Airão é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Novo%20Air%C3%A3o%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Novo Airão é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Novo%20Air%C3%A3o%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Novo Airão é tranquila, e a cidade te recebe sem enrolação. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Novo Airão vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Novo Airão se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/novo%20airao/",
+      },
+    },
+    "city": "Novo Airão",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 16562,
+    "reviewedOn": "2026-08-18",
+  },
+  "novo-aripuana": {
+    "tourism": {
+      "intro": "Conhecer Novo Aripuanã é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem açaí de todos os jeitos como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Novo Aripuanã vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Novo Aripuanã",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Novo Aripuanã é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Novo%20Aripuan%C3%A3%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Novo Aripuanã é mais fácil do que parece. tu não conhece é nada. A mesa da cidade tem açaí de todos os jeitos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Novo Aripuanã conhece de cor — se liga, é muito bom. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Novo Aripuanã é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Novo Aripuanã conhece de cor — tu não conhece é nada. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Novo Aripuanã conhece de cor — é de doido. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Novo Aripuanã com fome — a cidade resolve. é de doido",
+    },
+    "transport": {
+      "intro": "Em Novo Aripuanã, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. pra falar a real. Para distâncias maiores, mercado municipal de manhãzinha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Novo Aripuanã conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Novo Aripuanã conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Novo Aripuanã",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É bater um papo o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Novo%20Aripuan%C3%A3%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Novo Aripuanã vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Novo%20Aripuan%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Novo Aripuanã é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Novo Aripuanã, com o regime de chuvas equatorial chuvoso da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Novo Aripuanã se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/novo%20aripuana/",
+      },
+    },
+    "city": "Novo Aripuanã",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 25325,
+    "reviewedOn": "2026-08-18",
+  },
+  "parintins": {
+    "tourism": {
+      "intro": "Conhecer Parintins é conhecer um pedaço autêntico de Amazonas. pra falar a real A cidade tem encontro das águas do Negro com o Solimões como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É é nóis o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Parintins",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Parintins%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Parintins",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Parintins vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Parintins%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Parintins",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Parintins vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Parintins%2C%20Parintins%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Parintins no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "Comer bem em Parintins é mais fácil do que parece. é de doido. A mesa da cidade tem mercado municipal de manhãzinha no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Parintins vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Parintins vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Parintins é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Parintins%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Parintins é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "Circular por Parintins é tranquilo para quem conhece os atalhos. se liga, é muito bom. O transporte da cidade se organiza em torno de tucupi com jambu e maniçoba, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É oxente o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Parintins",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Parintins conhece de cor — tu não conhece é nada. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Parintins%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Parintins conhece de cor — é nóis mesmo. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Parintins%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Parintins vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Parintins%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Parintins é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "Parintins vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Parintins se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/parintins/",
+      },
+    },
+    "city": "Parintins",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 101855,
+    "reviewedOn": "2026-08-18",
+  },
+  "pauini": {
+    "tourism": {
+      "intro": "Conhecer Pauini é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem tucupi com jambu e maniçoba como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Pauini",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Pauini%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Pauini",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Pauini conhece de cor — é nóis mesmo. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Pauini%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Pauini conhece de cor — é de doido. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Pauini",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Pauini conhece de cor — é nóis mesmo. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Pauini%2C%20Pauini%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Pauini se revela aos poucos. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Pauini é mais fácil do que parece. se liga, é muito bom. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Pauini vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É arretado o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Pauini vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Pauini conhece de cor — tu não conhece é nada. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Pauini%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Pauini com fome — a cidade resolve. se liga, é muito bom",
+    },
+    "transport": {
+      "intro": "Em Pauini, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. se liga, é muito bom. Para distâncias maiores, açaí de todos os jeitos resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Pauini é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Pauini vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Pauini vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Pauini%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Pauini é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pauini%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Pauini, todo caminho leva a um lugar bom. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Pauini, com o regime de chuvas equatorial chuvoso da região de Amazonas. é nóis mesmo. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Pauini se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/pauini/",
+      },
+    },
+    "city": "Pauini",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 20229,
+    "reviewedOn": "2026-08-18",
+  },
+  "presidente-figueiredo": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Presidente Figueiredo. pra falar a real. O turismo da cidade é simples e verdadeiro: Boi Garantido e Caprichoso em Parintins e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Presidente Figueiredo vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Presidente Figueiredo",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Presidente Figueiredo é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Presidente%20Figueiredo%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Presidente Figueiredo vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Presidente Figueiredo vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Presidente Figueiredo se revela aos poucos. pra falar a real",
+    },
+    "dining": {
+      "intro": "A gastronomia de Presidente Figueiredo conta a história de Amazonas no prato. tu não conhece é nada. Entre tucupi com jambu e maniçoba e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Presidente Figueiredo conhece de cor — pra falar a real. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Presidente Figueiredo é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Presidente Figueiredo conhece de cor — pra falar a real. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Presidente Figueiredo conhece de cor — pra falar a real. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Presidente Figueiredo, quem come bem conta vantagem. pra falar a real",
+    },
+    "transport": {
+      "intro": "Quem se muda para Presidente Figueiredo logo aprende a malha de transporte local. é de doido. A cidade mantém Boi Garantido e Caprichoso em Parintins na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Presidente Figueiredo conhece de cor — é de doido. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Presidente Figueiredo conhece de cor — pra falar a real. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Presidente%20Figueiredo%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Presidente Figueiredo, todo caminho leva a um lugar bom. pra falar a real",
+    },
+    "climate": {
+      "intro": "Presidente Figueiredo vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Presidente Figueiredo, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é nóis mesmo. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/presidente%20figueiredo/",
+      },
+    },
+    "city": "Presidente Figueiredo",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 33291,
+    "reviewedOn": "2026-08-18",
+  },
+  "rio-preto-da-eva": {
+    "tourism": {
+      "intro": "Rio Preto da Eva é daquelas cidades de Amazonas que a gente conhece devagar. pra falar a real O roteiro local mistura açaí de todos os jeitos com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Praça Central de Rio Preto da Eva",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Rio Preto da Eva vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Rio%20Preto%20da%20Eva%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Rio Preto da Eva conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Rio Preto da Eva",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Rio%20Preto%20da%20Eva%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Rio Preto da Eva é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Rio Preto da Eva vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Rio Preto da Eva se revela aos poucos. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Em Rio Preto da Eva, a comida é levada a sério — e sem frescura. pra falar a real. A cidade mantém tucupi com jambu e maniçoba vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Rio Preto da Eva vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Rio Preto da Eva vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Rio Preto da Eva conhece de cor — é de doido. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Rio Preto da Eva com fome — a cidade resolve. é nóis mesmo",
+    },
+    "transport": {
+      "intro": "Em Rio Preto da Eva, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. pra falar a real. Para distâncias maiores, tucupi com jambu e maniçoba resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Rio Preto da Eva vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Rio Preto da Eva conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Rio%20Preto%20da%20Eva%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é nóis mesmo",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Rio Preto da Eva, com o regime de chuvas equatorial chuvoso da região de Amazonas. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Rio Preto da Eva, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é de doido. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/rio%20preto%20da%20eva/",
+      },
+    },
+    "city": "Rio Preto da Eva",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 25364,
+    "reviewedOn": "2026-08-18",
+  },
+  "santa-isabel-do-rio-negro": {
+    "tourism": {
+      "intro": "Santa Isabel do Rio Negro é daquelas cidades de Amazonas que a gente conhece devagar. é de doido O roteiro local mistura açaí de todos os jeitos com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É oxente o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Santa Isabel do Rio Negro vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Santa Isabel do Rio Negro conhece de cor — se liga, é muito bom. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Santa Isabel do Rio Negro",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Santa Isabel do Rio Negro vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Santa Isabel do Rio Negro se revela aos poucos. é de doido",
+    },
+    "dining": {
+      "intro": "Em Santa Isabel do Rio Negro, a comida é levada a sério — e sem frescura. pra falar a real. A cidade mantém cultura ribeirinha e dos povos da floresta vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Santa Isabel do Rio Negro é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Santa Isabel do Rio Negro é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Santa Isabel do Rio Negro conhece de cor — pra falar a real. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Santa Isabel do Rio Negro, quem come bem conta vantagem. pra falar a real",
+    },
+    "transport": {
+      "intro": "Em Santa Isabel do Rio Negro, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. tu não conhece é nada. Para distâncias maiores, Boi Garantido e Caprichoso em Parintins resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Santa Isabel do Rio Negro é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Santa Isabel do Rio Negro é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Santa Isabel do Rio Negro vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Santa%20Isabel%20do%20Rio%20Negro%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Santa Isabel do Rio Negro é mais simples do que parece. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "O clima de Santa Isabel do Rio Negro acompanha o ritmo da região: equatorial chuvoso, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Santa Isabel do Rio Negro apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/santa%20isabel%20do%20rio%20negro/",
+      },
+    },
+    "city": "Santa Isabel do Rio Negro",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 13947,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-paulo-de-olivenca": {
+    "tourism": {
+      "intro": "São Paulo de Olivença guarda charme de Amazonas em cada canto. pra falar a real. Quem anda pela cidade percebe logo tucupi com jambu e maniçoba — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Parque municipal de São Paulo de Olivença",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. São Paulo de Olivença vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. São Paulo de Olivença vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. São Paulo de Olivença vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É muita coisa boa o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de São Paulo de Olivença conhece de cor — se liga, é muito bom. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. é de doido",
+    },
+    "dining": {
+      "intro": "A gastronomia de São Paulo de Olivença conta a história de Amazonas no prato. é nóis mesmo. Entre Boi Garantido e Caprichoso em Parintins e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. São Paulo de Olivença vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. São Paulo de Olivença vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. São Paulo de Olivença vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É bater um papo o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por São Paulo de Olivença com fome — a cidade resolve. pra falar a real",
+    },
+    "transport": {
+      "intro": "O dia a dia de São Paulo de Olivença tem ritmo próprio, e o transporte acompanha. pra falar a real. Entre encontro das águas do Negro com o Solimões e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São Paulo de Olivença vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de São Paulo de Olivença",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de São Paulo de Olivença conhece de cor — pra falar a real. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de São Paulo de Olivença conhece de cor — pra falar a real. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Paulo%20de%20Oliven%C3%A7a%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em São Paulo de Olivença, todo caminho leva a um lugar bom. é de doido",
+    },
+    "climate": {
+      "intro": "São Paulo de Olivença vive o clima típico da região de Amazonas — equatorial chuvoso, com se liga, é muito bom. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "São Paulo de Olivença apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/sao%20paulo%20de%20olivenca/",
+      },
+    },
+    "city": "São Paulo de Olivença",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 35442,
+    "reviewedOn": "2026-08-18",
+  },
+  "tapaua": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Tapauá. pra falar a real. O turismo da cidade é simples e verdadeiro: encontro das águas do Negro com o Solimões e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Tapauá é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Tapauá conhece de cor — é de doido. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Tapauá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Tapauá vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Tapau%C3%A1%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Tapauá",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É bater um papo o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Tapau%C3%A1%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Tapauá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Tapauá é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Tapau%C3%A1%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "A gastronomia de Tapauá conta a história de Amazonas no prato. pra falar a real. Entre açaí de todos os jeitos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Tapauá é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Tapauá vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É oxente o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É é nóis o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Tapauá conhece de cor — se liga, é muito bom. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Tapauá é generosa, igual gente da casa. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Quem se muda para Tapauá logo aprende a malha de transporte local. tu não conhece é nada. A cidade mantém mercado municipal de manhãzinha na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Tapauá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Tapauá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Tapau%C3%A1%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Tapauá vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Tapauá vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Tapau%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Tapauá, todo caminho leva a um lugar bom. tu não conhece é nada",
+    },
+    "climate": {
+      "intro": "O clima de Tapauá acompanha o ritmo da região: equatorial chuvoso, arretado. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Tapauá, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. pra falar a real. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/tapaua/",
+      },
+    },
+    "city": "Tapauá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 20728,
+    "reviewedOn": "2026-08-18",
+  },
+  "tefe": {
+    "tourism": {
+      "intro": "Tefé é daquelas cidades de Amazonas que a gente conhece devagar. pra falar a real O roteiro local mistura cultura ribeirinha e dos povos da floresta com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Tefé vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Tefé",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Tefé vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Tef%C3%A9%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Tefé",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Tef%C3%A9%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Tefé no seu ritmo: aqui ninguém tem pressa. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Tefé é mais fácil do que parece. tu não conhece é nada. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Tefé vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Tefé é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "Quem se muda para Tefé logo aprende a malha de transporte local. é nóis mesmo. A cidade mantém tucupi com jambu e maniçoba na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Tefé conhece de cor — é nóis mesmo. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Tefé",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Tefé vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Tef%C3%A9%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Tefé vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Tefé conhece de cor — se liga, é muito bom. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Tef%C3%A9%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Tefé, todo caminho leva a um lugar bom. é de doido",
+    },
+    "climate": {
+      "intro": "Tefé vive o clima típico da região de Amazonas — equatorial chuvoso, com tu não conhece é nada. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Tefé, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não conhece é nada. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/tefe/",
+      },
+    },
+    "city": "Tefé",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 80137,
+    "reviewedOn": "2026-08-18",
+  },
+  "tonantins": {
+    "tourism": {
+      "intro": "Conhecer Tonantins é conhecer um pedaço autêntico de Amazonas. pra falar a real A cidade tem Boi Garantido e Caprichoso em Parintins como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Tonantins",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Tonantins conhece de cor — é de doido. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Tonantins%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Tonantins é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É muita coisa boa o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Tonantins",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Tonantins é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Tonantins%2C%20Tonantins%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Tonantins rende conversa boa e foto bonita. é nóis mesmo",
+    },
+    "dining": {
+      "intro": "Em Tonantins, a comida é levada a sério — e sem frescura. é nóis mesmo. A cidade mantém tucupi com jambu e maniçoba vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Tonantins vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Tonantins conhece de cor — se liga, é muito bom. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Tonantins conhece de cor — se liga, é muito bom. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Tonantins%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Tonantins com fome — a cidade resolve. é nóis mesmo",
+    },
+    "transport": {
+      "intro": "Em Tonantins, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. se liga, é muito bom. Para distâncias maiores, cultura ribeirinha e dos povos da floresta resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Tonantins",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Tonantins conhece de cor — se liga, é muito bom. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Tonantins%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Tonantins vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Tonantins%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Tonantins conhece de cor — tu não conhece é nada. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Tonantins%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Tonantins é mais simples do que parece. é de doido",
+    },
+    "climate": {
+      "intro": "Tonantins vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Tonantins apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/tonantins/",
+      },
+    },
+    "city": "Tonantins",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 20257,
+    "reviewedOn": "2026-08-18",
+  },
+  "uarini": {
+    "tourism": {
+      "intro": "Conhecer Uarini é conhecer um pedaço autêntico de Amazonas. é de doido A cidade tem cultura ribeirinha e dos povos da floresta como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Parque municipal de Uarini",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Uarini vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Uarini%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Uarini",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Uarini%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É bater um papo o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Uarini%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Fome em Uarini não falta solução. se liga, é muito bom. De encontro das águas do Negro com o Solimões ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É bater um papo o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Uarini conhece de cor — se liga, é muito bom. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Uarini conhece de cor — é nóis mesmo. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Uarini%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Uarini é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "O dia a dia de Uarini tem ritmo próprio, e o transporte acompanha. se liga, é muito bom. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Uarini conhece de cor — tu não conhece é nada. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Uarini é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Uarini%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Uarini conhece de cor — se liga, é muito bom. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Uarini%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Uarini é mais simples do que parece. é de doido",
+    },
+    "climate": {
+      "intro": "Uarini vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Uarini se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/uarini/",
+      },
+    },
+    "city": "Uarini",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 15640,
+    "reviewedOn": "2026-08-18",
+  },
+  "urucara": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Urucará. é de doido. O turismo da cidade é simples e verdadeiro: mercado municipal de manhãzinha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Urucará conhece de cor — se liga, é muito bom. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Urucará",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Urucará é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Urucar%C3%A1%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Urucará",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Urucará é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Urucar%C3%A1%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Urucará conhece de cor — é nóis mesmo. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Urucará",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Urucar%C3%A1%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Urucará se revela aos poucos. é de doido",
+    },
+    "dining": {
+      "intro": "A gastronomia de Urucará conta a história de Amazonas no prato. tu não conhece é nada. Entre mercado municipal de manhãzinha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Urucará é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É arretado o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Urucará conhece de cor — se liga, é muito bom. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Urucará conhece de cor — é de doido. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Urucará com fome — a cidade resolve. é nóis mesmo",
+    },
+    "transport": {
+      "intro": "Circular por Urucará é tranquilo para quem conhece os atalhos. é de doido. O transporte da cidade se organiza em torno de tucupi com jambu e maniçoba, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Urucará conhece de cor — é nóis mesmo. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Urucará vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Urucará é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Urucará vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Urucar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Urucará é mais simples do que parece. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Urucará, com o regime de chuvas equatorial chuvoso da região de Amazonas. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Urucará, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é de doido. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/urucara/",
+      },
+    },
+    "city": "Urucará",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 19617,
+    "reviewedOn": "2026-08-18",
+  },
+  "urucurituba": {
+    "tourism": {
+      "intro": "Conhecer Urucurituba é conhecer um pedaço autêntico de Amazonas. pra falar a real A cidade tem mercado municipal de manhãzinha como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Urucurituba vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Urucurituba",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Urucurituba conhece de cor — se liga, é muito bom. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Urucurituba%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Urucurituba conhece de cor — se liga, é muito bom. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Urucurituba",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É arretado o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Urucurituba%2C%20Urucurituba%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Urucurituba rende conversa boa e foto bonita. se liga, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Urucurituba é mais fácil do que parece. pra falar a real. A mesa da cidade tem açaí de todos os jeitos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Urucurituba conhece de cor — pra falar a real. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Urucurituba conhece de cor — é de doido. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É é nóis o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Urucurituba%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Urucurituba, quem come bem conta vantagem. tu não conhece é nada",
+    },
+    "transport": {
+      "intro": "Em Urucurituba, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. se liga, é muito bom. Para distâncias maiores, tucupi com jambu e maniçoba resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Urucurituba é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Urucurituba vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Urucurituba vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Urucurituba%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Urucurituba",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Urucurituba é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Urucurituba%2C%20Urucurituba%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Urucurituba, todo caminho leva a um lugar bom. é de doido",
+    },
+    "climate": {
+      "intro": "O clima de Urucurituba acompanha o ritmo da região: equatorial chuvoso, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Urucurituba apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/urucurituba/",
+      },
+    },
+    "city": "Urucurituba",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 25965,
+    "reviewedOn": "2026-08-18",
+  },
+  "alvaraes": {
+    "tourism": {
+      "intro": "Alvarães guarda charme de Amazonas em cada canto — se liga, é muito bom, viu. Quem anda pela cidade percebe logo Boi Garantido e Caprichoso em Parintins — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de Alvarães",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Alvarães conhece de cor — pra falar a real, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Alvar%C3%A3es%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Alvarães",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Alvar%C3%A3es%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Alvarães",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Alvarães vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Alvar%C3%A3es%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Alvarães no seu ritmo: aqui ninguém tem pressa — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Alvarães não falta solução — tu não conhece é nada. De encontro das águas do Negro com o Solimões ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Alvarães vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Alvarães conhece de cor — se liga, é muito bom, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Alvarães vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Alvarães se come de olhos fechados e de coração aberto — é nóis mesmo!",
+    },
+    "transport": {
+      "intro": "Circular por Alvarães é tranquilo para quem conhece os atalhos — é de doido. O transporte da cidade se organiza em torno de açaí de todos os jeitos, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Alvarães é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Alvarães é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Alvarães conhece de cor — se liga, é muito bom, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Alvar%C3%A3es%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Alvarães é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Alvarães vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Alvarães apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/alvaraes/",
+      },
+    },
+    "city": "Alvarães",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 16806,
+    "reviewedOn": "2026-08-18",
+  },
+  "anama": {
+    "tourism": {
+      "intro": "Anamã é daquelas cidades de Amazonas que a gente conhece devagar — se liga, é muito bom. O roteiro local mistura cultura ribeirinha e dos povos da floresta com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Anamã é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É muita coisa boa o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Anamã",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É oxente o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Anam%C3%A3%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Anamã é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Anamã conta a história de Amazonas no prato — é nóis mesmo. Entre açaí de todos os jeitos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Anamã vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É é nóis o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Anamã é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Anamã se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Anamã é tranquilo para quem conhece os atalhos — tu não conhece é nada. O transporte da cidade se organiza em torno de mercado municipal de manhãzinha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Anamã é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Anamã",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Anamã vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Anam%C3%A3%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Anamã vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Anam%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Anamã é tranquila, e a cidade te recebe sem enrolação — é nóis mesmo!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Anamã, com o regime de chuvas equatorial chuvoso da região de Amazonas. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Anamã se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/anama/",
+      },
+    },
+    "city": "Anamã",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 9981,
+    "reviewedOn": "2026-08-18",
+  },
+  "anori": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Anori — tu não conhece é nada, viu. O turismo da cidade é simples e verdadeiro: açaí de todos os jeitos e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Anori vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Anori",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Anori é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Anori%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Anori conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Anori",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Anori vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Anori%2C%20Anori%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Anori se revela aos poucos — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Anori conta a história de Amazonas no prato — pra falar a real. Entre açaí de todos os jeitos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Anori vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Anori conhece de cor — se liga, é muito bom, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Anori vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Anori vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Anori%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Anori com fome — a cidade resolve. é de doido!",
+    },
+    "transport": {
+      "intro": "Circular por Anori é tranquilo para quem conhece os atalhos — é nóis mesmo. O transporte da cidade se organiza em torno de tucupi com jambu e maniçoba, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Anori vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Anori%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Anori vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Anori%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Anori, todo caminho leva a um lugar bom — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "O clima de Anori acompanha o ritmo da região: equatorial chuvoso, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Anori apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/anori/",
+      },
+    },
+    "city": "Anori",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 18056,
+    "reviewedOn": "2026-08-18",
+  },
+  "apui": {
+    "tourism": {
+      "intro": "Apuí guarda charme de Amazonas em cada canto — é nóis mesmo, viu. Quem anda pela cidade percebe logo açaí de todos os jeitos — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É arretado o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Apuí",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Apu%C3%AD%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Apuí",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Apu%C3%AD%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Apuí",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Apuí vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Apu%C3%AD%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Apuí é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Apuí no seu ritmo: aqui ninguém tem pressa — se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Apuí, a comida é levada a sério — e sem frescura. tu não conhece é nada, viu. A cidade mantém tucupi com jambu e maniçoba vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Apuí conhece de cor — é de doido, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Apuí conhece de cor — se liga, é muito bom, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Apuí é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Apuí vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Apuí, quem come bem conta vantagem — tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Apuí tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Apuí conhece de cor — é nóis mesmo, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Apu%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Apuí é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Apuí vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Apuí apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/apui/",
+      },
+    },
+    "city": "Apuí",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 21781,
+    "reviewedOn": "2026-08-18",
+  },
+  "atalaia-do-norte": {
+    "tourism": {
+      "intro": "Atalaia do Norte guarda charme de Amazonas em cada canto — é nóis mesmo, viu. Quem anda pela cidade percebe logo mercado municipal de manhãzinha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Parque municipal de Atalaia do Norte",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Atalaia do Norte vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Atalaia%20do%20Norte%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Atalaia do Norte vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Atalaia do Norte",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Atalaia do Norte é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Atalaia%20do%20Norte%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Atalaia do Norte é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Atalaia do Norte",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Atalaia do Norte conhece de cor — se liga, é muito bom, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Atalaia%20do%20Norte%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Atalaia do Norte no seu ritmo: aqui ninguém tem pressa — é de doido!",
+    },
+    "dining": {
+      "intro": "Fome em Atalaia do Norte não falta solução — é nóis mesmo. De encontro das águas do Negro com o Solimões ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Atalaia do Norte conhece de cor — se liga, é muito bom, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Atalaia do Norte é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Atalaia do Norte vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Atalaia do Norte é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Atalaia do Norte com fome — a cidade resolve. é nóis mesmo!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Atalaia do Norte tem ritmo próprio, e o transporte acompanha — tu não conhece é nada, viu. Entre mercado municipal de manhãzinha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Atalaia do Norte é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Atalaia do Norte é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Atalaia do Norte é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Atalaia%20do%20Norte%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Atalaia do Norte é mais simples do que parece — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Atalaia do Norte, com o regime de chuvas equatorial chuvoso da região de Amazonas. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Atalaia do Norte apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/atalaia%20do%20norte/",
+      },
+    },
+    "city": "Atalaia do Norte",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 15889,
+    "reviewedOn": "2026-08-18",
+  },
+  "autazes": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Autazes — se liga, é muito bom, viu. O turismo da cidade é simples e verdadeiro: encontro das águas do Negro com o Solimões e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É oxente o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Autazes",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Autazes é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Autazes%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Autazes conhece de cor — se liga, é muito bom, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Autazes vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Autazes conhece de cor — se liga, é muito bom, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Autazes%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Autazes se revela aos poucos — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Em Autazes, a comida é levada a sério — e sem frescura. tu não conhece é nada, viu. A cidade mantém cultura ribeirinha e dos povos da floresta vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Autazes é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Autazes vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Autazes vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Autazes é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Autazes%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Autazes se come de olhos fechados e de coração aberto — é nóis mesmo!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Autazes tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre mercado municipal de manhãzinha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Autazes vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Autazes é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Autazes%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Autazes vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Autazes%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Autazes é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Autazes vive o clima típico da região de Amazonas — equatorial chuvoso, com tu não conhece é nada. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Autazes apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/autazes/",
+      },
+    },
+    "city": "Autazes",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 45960,
+    "reviewedOn": "2026-08-18",
+  },
+  "barcelos": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Barcelos — se liga, é muito bom, viu. O turismo da cidade é simples e verdadeiro: encontro das águas do Negro com o Solimões e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Barcelos é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Barcelos é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Barcelos",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Barcelos conhece de cor — é de doido, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Barcelos%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Barcelos é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Barcelos é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Barcelos%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. é de doido!",
+    },
+    "dining": {
+      "intro": "Fome em Barcelos não falta solução — tu não conhece é nada. De mercado municipal de manhãzinha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É oxente o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É arretado o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muita coisa boa o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Barcelos conhece de cor — se liga, é muito bom, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Barcelos%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Barcelos com fome — a cidade resolve. tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Barcelos logo aprende a malha de transporte local — se liga, é muito bom. A cidade mantém açaí de todos os jeitos na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Barcelos é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Barcelos conhece de cor — tu não conhece é nada, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Barcelos%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Barcelos vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Barcelos%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Barcelos é tranquila, e a cidade te recebe sem enrolação — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "O clima de Barcelos acompanha o ritmo da região: equatorial chuvoso, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Barcelos, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não conhece é nada. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/barcelos/",
+      },
+    },
+    "city": "Barcelos",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 18210,
+    "reviewedOn": "2026-08-18",
+  },
+  "barreirinha": {
+    "tourism": {
+      "intro": "Barreirinha é daquelas cidades de Amazonas que a gente conhece devagar — tu não conhece é nada. O roteiro local mistura Boi Garantido e Caprichoso em Parintins com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Barreirinha conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Barreirinha conhece de cor — tu não conhece é nada, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Barreirinha conhece de cor — se liga, é muito bom, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Barreirinha",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É arretado o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Barreirinha%2C%20Barreirinha%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Barreirinha rende conversa boa e foto bonita — é de doido!",
+    },
+    "dining": {
+      "intro": "Comer bem em Barreirinha é mais fácil do que parece — pra falar a real, viu. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Barreirinha é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Barreirinha conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Barreirinha conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Barreirinha vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Barreirinha vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Barreirinha%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Barreirinha, quem come bem conta vantagem — é de doido!",
+    },
+    "transport": {
+      "intro": "Circular por Barreirinha é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de encontro das águas do Negro com o Solimões, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Barreirinha vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Barreirinha vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Barreirinha%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Barreirinha",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Barreirinha conhece de cor — é nóis mesmo, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Barreirinha%2C%20Barreirinha%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Barreirinha é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Barreirinha vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Barreirinha apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/barreirinha/",
+      },
+    },
+    "city": "Barreirinha",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 33722,
+    "reviewedOn": "2026-08-18",
+  },
+  "beruri": {
+    "tourism": {
+      "intro": "Conhecer Beruri é conhecer um pedaço autêntico de Amazonas — é nóis mesmo. A cidade tem encontro das águas do Negro com o Solimões como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É é nóis o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Beruri vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Beruri vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Beruri vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Beruri%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "Comer bem em Beruri é mais fácil do que parece — pra falar a real, viu. A mesa da cidade tem açaí de todos os jeitos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É oxente o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Beruri vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Beruri vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Beruri%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Beruri se come de olhos fechados e de coração aberto — é de doido!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Beruri tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Beruri conhece de cor — é de doido, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Beruri é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Beruri%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Beruri",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Beruri%2C%20Beruri%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Beruri é tranquila, e a cidade te recebe sem enrolação — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "O clima de Beruri acompanha o ritmo da região: equatorial chuvoso, oxente. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Beruri apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/beruri/",
+      },
+    },
+    "city": "Beruri",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 22495,
+    "reviewedOn": "2026-08-18",
+  },
+  "boa-vista-do-ramos": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Boa Vista do Ramos — é nóis mesmo, viu. O turismo da cidade é simples e verdadeiro: tucupi com jambu e maniçoba e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Boa Vista do Ramos é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Boa Vista do Ramos vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Boa Vista do Ramos",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Boa Vista do Ramos conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Boa%20Vista%20do%20Ramos%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Boa Vista do Ramos",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Boa%20Vista%20do%20Ramos%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Boa Vista do Ramos",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Boa Vista do Ramos conhece de cor — é de doido, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Boa%20Vista%20do%20Ramos%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Boa Vista do Ramos conta a história de Amazonas no prato — é nóis mesmo. Entre açaí de todos os jeitos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Boa Vista do Ramos conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Boa Vista do Ramos conhece de cor — é nóis mesmo, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Boa Vista do Ramos conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Boa Vista do Ramos, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Boa Vista do Ramos é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de encontro das águas do Negro com o Solimões, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Boa Vista do Ramos conhece de cor — pra falar a real, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Boa Vista do Ramos conhece de cor — tu não conhece é nada, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Boa%20Vista%20do%20Ramos%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Boa Vista do Ramos é mais simples do que parece — é nóis mesmo!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Boa Vista do Ramos, com o regime de chuvas equatorial chuvoso da região de Amazonas. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Boa Vista do Ramos apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/boa%20vista%20do%20ramos/",
+      },
+    },
+    "city": "Boa Vista do Ramos",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 26479,
+    "reviewedOn": "2026-08-18",
+  },
+  "boca-do-acre": {
+    "tourism": {
+      "intro": "Boca do Acre é daquelas cidades de Amazonas que a gente conhece devagar — tu não conhece é nada. O roteiro local mistura cultura ribeirinha e dos povos da floresta com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Boca do Acre é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Boca do Acre",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Boca do Acre vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Boca%20do%20Acre%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Boca do Acre",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Boca%20do%20Acre%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Boca do Acre no seu ritmo: aqui ninguém tem pressa — é de doido!",
+    },
+    "dining": {
+      "intro": "Comer bem em Boca do Acre é mais fácil do que parece — é de doido, viu. A mesa da cidade tem açaí de todos os jeitos no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Boca do Acre é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Boca do Acre conhece de cor — é de doido, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Boca do Acre é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Boca do Acre é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Boca do Acre com fome — a cidade resolve. é de doido!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Boca do Acre tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre tucupi com jambu e maniçoba e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Boca do Acre",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Boca do Acre é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Boca%20do%20Acre%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Boca do Acre conhece de cor — é de doido, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Boca do Acre conhece de cor — é de doido, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Boca do Acre é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Boca%20do%20Acre%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Boca do Acre, com o regime de chuvas tropical com estação seca da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Boca do Acre, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se liga, é muito bom. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/boca%20do%20acre/",
+      },
+    },
+    "city": "Boca do Acre",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 38792,
+    "reviewedOn": "2026-08-18",
+  },
+  "borba": {
+    "tourism": {
+      "intro": "Borba guarda charme de Amazonas em cada canto — tu não conhece é nada, viu. Quem anda pela cidade percebe logo encontro das águas do Negro com o Solimões — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Borba é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Borba",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É oxente o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Borba%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Borba vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Borba",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Borba é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Borba%2C%20Borba%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Borba se revela aos poucos — é nóis mesmo!",
+    },
+    "dining": {
+      "intro": "Em Borba, a comida é levada a sério — e sem frescura. é de doido, viu. A cidade mantém Boi Garantido e Caprichoso em Parintins vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Borba é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Borba vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Borba vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Borba é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Borba%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Borba se come de olhos fechados e de coração aberto — tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Borba tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre açaí de todos os jeitos e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Borba conhece de cor — pra falar a real, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Borba vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Borba%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Borba conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Borba%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Borba é mais simples do que parece — se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Borba acompanha o ritmo da região: equatorial chuvoso, muita coisa boa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Borba, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. tu não conhece é nada. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/borba/",
+      },
+    },
+    "city": "Borba",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 34869,
+    "reviewedOn": "2026-08-18",
+  },
+  "caapiranga": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Caapiranga — é nóis mesmo, viu. O turismo da cidade é simples e verdadeiro: mercado municipal de manhãzinha e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Caapiranga conhece de cor — se liga, é muito bom, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Caapiranga é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Caapiranga",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Caapiranga vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Caapiranga%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Caapiranga",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Caapiranga é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Caapiranga%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Caapiranga",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Caapiranga é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Caapiranga%2C%20Caapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Caapiranga rende conversa boa e foto bonita — se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Caapiranga conta a história de Amazonas no prato — tu não conhece é nada. Entre Boi Garantido e Caprichoso em Parintins e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Caapiranga é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É arretado o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Caapiranga vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Caapiranga vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Caapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Caapiranga se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Caapiranga, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — tu não conhece é nada, viu. Para distâncias maiores, encontro das águas do Negro com o Solimões resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muita coisa boa o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Caapiranga vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Caapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Caapiranga conhece de cor — tu não conhece é nada, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Caapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Caapiranga é mais simples do que parece — se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Caapiranga, com o regime de chuvas equatorial chuvoso da região de Amazonas. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Caapiranga se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/caapiranga/",
+      },
+    },
+    "city": "Caapiranga",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 14806,
+    "reviewedOn": "2026-08-18",
+  },
+  "carauari": {
+    "tourism": {
+      "intro": "Conhecer Carauari é conhecer um pedaço autêntico de Amazonas — tu não conhece é nada. A cidade tem mercado municipal de manhãzinha como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Estádio municipal de Carauari",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Carauari vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Carauari%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Carauari",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Carauari é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Carauari%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Carauari conhece de cor — tu não conhece é nada, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Carauari conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Carauari%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Carauari rende conversa boa e foto bonita — é de doido!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Carauari conta a história de Amazonas no prato — se liga, é muito bom. Entre tucupi com jambu e maniçoba e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Carauari conhece de cor — tu não conhece é nada, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Carauari vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Carauari vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Carauari vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Carauari vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Carauari%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Carauari é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Carauari tem ritmo próprio, e o transporte acompanha — é nóis mesmo, viu. Entre tucupi com jambu e maniçoba e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Carauari conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Carauari conhece de cor — tu não conhece é nada, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Carauari vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Carauari%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Carauari conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Carauari%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Carauari é mais simples do que parece — é de doido!",
+    },
+    "climate": {
+      "intro": "Carauari vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Carauari se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/carauari/",
+      },
+    },
+    "city": "Carauari",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 31130,
+    "reviewedOn": "2026-08-18",
+  },
+  "coari": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Coari — é nóis mesmo, viu. O turismo da cidade é simples e verdadeiro: tucupi com jambu e maniçoba e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Coari",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Coari vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Coari%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Coari",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Coari vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Coari%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Coari é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Coari conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Coari%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Coari conta a história de Amazonas no prato — pra falar a real. Entre mercado municipal de manhãzinha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Coari vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Coari conhece de cor — pra falar a real, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Coari vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Coari%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Coari é generosa, igual gente da casa — é nóis mesmo!",
+    },
+    "transport": {
+      "intro": "Circular por Coari é tranquilo para quem conhece os atalhos — é de doido. O transporte da cidade se organiza em torno de cultura ribeirinha e dos povos da floresta, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Coari vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Coari vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Coari é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Coari%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Coari",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Coari é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Coari%2C%20Coari%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "Coari vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Coari se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/coari/",
+      },
+    },
+    "city": "Coari",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 73576,
+    "reviewedOn": "2026-08-18",
+  },
+  "guajara": {
+    "tourism": {
+      "intro": "Conhecer Guajará é conhecer um pedaço autêntico de Amazonas — é nóis mesmo. A cidade tem cultura ribeirinha e dos povos da floresta como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Estádio municipal de Guajará",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Guajará é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Guajar%C3%A1%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É bater um papo o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Guajará",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Guajará conhece de cor — tu não conhece é nada, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Guajar%C3%A1%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Guajará vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Guajará",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Guajará vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Guajar%C3%A1%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Guajará rende conversa boa e foto bonita — se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Guajará, a comida é levada a sério — e sem frescura. é nóis mesmo, viu. A cidade mantém cultura ribeirinha e dos povos da floresta vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Guajará conhece de cor — pra falar a real, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Guajará conhece de cor — pra falar a real, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Guajará é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Guajará conhece de cor — se liga, é muito bom, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Guajará conhece de cor — pra falar a real, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Guajará é generosa, igual gente da casa — tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Guajará tem ritmo próprio, e o transporte acompanha — pra falar a real, viu. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Guajará vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Guajará conhece de cor — tu não conhece é nada, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Guajar%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Guajará é tranquila, e a cidade te recebe sem enrolação — é nóis mesmo!",
+    },
+    "climate": {
+      "intro": "Guajará vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Guajará apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/guajara/",
+      },
+    },
+    "city": "Guajará",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 14344,
+    "reviewedOn": "2026-08-18",
+  },
+  "humaita": {
+    "tourism": {
+      "intro": "Conhecer Humaitá é conhecer um pedaço autêntico de Amazonas — tu não conhece é nada. A cidade tem Boi Garantido e Caprichoso em Parintins como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Parque municipal de Humaitá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Humait%C3%A1%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de Humaitá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Humait%C3%A1%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Humaitá",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Humait%C3%A1%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Humaitá vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Humaitá se revela aos poucos — é nóis mesmo!",
+    },
+    "dining": {
+      "intro": "Comer bem em Humaitá é mais fácil do que parece — tu não conhece é nada, viu. A mesa da cidade tem tucupi com jambu e maniçoba no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Humaitá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Humaitá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Humaitá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Humaitá se come de olhos fechados e de coração aberto — se liga, é muito bom!",
+    },
+    "transport": {
+      "intro": "Em Humaitá, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é nóis mesmo, viu. Para distâncias maiores, tucupi com jambu e maniçoba resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Humaitá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Humaitá vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Humait%C3%A1%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Humaitá é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Humaitá vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Humaitá conhece de cor — tu não conhece é nada, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Humait%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Humaitá é tranquila, e a cidade te recebe sem enrolação — é de doido!",
+    },
+    "climate": {
+      "intro": "Humaitá vive o clima típico da região de Amazonas — equatorial chuvoso, com tu não conhece é nada. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Humaitá se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/humaita/",
+      },
+    },
+    "city": "Humaitá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 63454,
+    "reviewedOn": "2026-08-18",
+  },
+  "ipixuna": {
+    "tourism": {
+      "intro": "Ipixuna é daquelas cidades de Amazonas que a gente conhece devagar — tu não conhece é nada. O roteiro local mistura cultura ribeirinha e dos povos da floresta com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Estádio municipal de Ipixuna",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Ipixuna conhece de cor — se liga, é muito bom, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ipixuna%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Ipixuna é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Ipixuna",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Ipixuna é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ipixuna%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É oxente o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Ipixuna%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Amazonas de ser. tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "Em Ipixuna, a comida é levada a sério — e sem frescura. tu não conhece é nada, viu. A cidade mantém Boi Garantido e Caprichoso em Parintins vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Ipixuna vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Ipixuna vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Ipixuna é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Ipixuna vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ipixuna%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Ipixuna com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Ipixuna, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é de doido, viu. Para distâncias maiores, açaí de todos os jeitos resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Ipixuna conhece de cor — pra falar a real, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Ipixuna",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Ipixuna conhece de cor — se liga, é muito bom, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ipixuna%2C%20Ipixuna%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Ipixuna vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ipixuna%2C%20Amazonas",
+        },
+      ],
+      "closing": "A locomoção em Ipixuna é tranquila, e a cidade te recebe sem enrolação — é de doido!",
+    },
+    "climate": {
+      "intro": "O clima de Ipixuna acompanha o ritmo da região: equatorial chuvoso, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Ipixuna se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/ipixuna/",
+      },
+    },
+    "city": "Ipixuna",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 25629,
+    "reviewedOn": "2026-08-18",
+  },
+  "itacoatiara": {
+    "tourism": {
+      "intro": "Itacoatiara guarda charme de Amazonas em cada canto — é nóis mesmo, viu. Quem anda pela cidade percebe logo mercado municipal de manhãzinha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Itacoatiara vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Itacoatiara",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Itacoatiara vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Itacoatiara%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Itacoatiara",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Itacoatiara é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Itacoatiara%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Itacoatiara vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Itacoatiara conhece de cor — pra falar a real, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Itacoatiara%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Itacoatiara se revela aos poucos — é nóis mesmo!",
+    },
+    "dining": {
+      "intro": "Fome em Itacoatiara não falta solução — tu não conhece é nada. De cultura ribeirinha e dos povos da floresta ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Itacoatiara vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Itacoatiara vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Itacoatiara é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Itacoatiara é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Itacoatiara conhece de cor — é de doido, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Itacoatiara%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Itacoatiara com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Itacoatiara, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, encontro das águas do Negro com o Solimões resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Itacoatiara vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Itacoatiara vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Itacoatiara vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Itacoatiara%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Itacoatiara vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itacoatiara%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Itacoatiara, todo caminho leva a um lugar bom — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Itacoatiara acompanha o ritmo da região: equatorial chuvoso, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Itacoatiara se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/itacoatiara/",
+      },
+    },
+    "city": "Itacoatiara",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 113917,
+    "reviewedOn": "2026-08-18",
+  },
+  "itapiranga": {
+    "tourism": {
+      "intro": "Conhecer Itapiranga é conhecer um pedaço autêntico de Amazonas — é nóis mesmo. A cidade tem mercado municipal de manhãzinha como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Itapiranga vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Itapiranga vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Itapiranga",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Itapiranga é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Itapiranga%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Itapiranga",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Itapiranga vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Itapiranga%2C%20Itapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Itapiranga se revela aos poucos — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Itapiranga conta a história de Amazonas no prato — se liga, é muito bom. Entre cultura ribeirinha e dos povos da floresta e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Itapiranga vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Itapiranga conhece de cor — é nóis mesmo, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Itapiranga vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Itapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Itapiranga é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Itapiranga tem ritmo próprio, e o transporte acompanha — tu não conhece é nada, viu. Entre encontro das águas do Negro com o Solimões e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É oxente o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Itapiranga",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Itapiranga vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Itapiranga%2C%20Itapiranga%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itapiranga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Itapiranga é mais simples do que parece — se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Itapiranga acompanha o ritmo da região: equatorial chuvoso, oxente. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Itapiranga, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é nóis mesmo. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/itapiranga/",
+      },
+    },
+    "city": "Itapiranga",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 10955,
+    "reviewedOn": "2026-08-18",
+  },
+  "jutai": {
+    "tourism": {
+      "intro": "Jutaí é daquelas cidades de Amazonas que a gente conhece devagar — é nóis mesmo. O roteiro local mistura encontro das águas do Negro com o Solimões com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Jutaí vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Jutaí",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Juta%C3%AD%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Jutaí",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Jutaí é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Juta%C3%AD%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Jutaí se revela aos poucos — pra falar a real!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Jutaí conta a história de Amazonas no prato — se liga, é muito bom. Entre açaí de todos os jeitos e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É é nóis o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É oxente o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Jutaí vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Jutaí é generosa, igual gente da casa — se liga, é muito bom!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Jutaí logo aprende a malha de transporte local — é de doido. A cidade mantém tucupi com jambu e maniçoba na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Jutaí",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Jutaí conhece de cor — é de doido, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Juta%C3%AD%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Jutaí conhece de cor — pra falar a real, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É arretado o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Jutaí vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Juta%C3%AD%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Jutaí é mais simples do que parece — se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Jutaí acompanha o ritmo da região: equatorial chuvoso, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Jutaí se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/jutai/",
+      },
+    },
+    "city": "Jutaí",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 28202,
+    "reviewedOn": "2026-08-18",
+  },
+  "manacapuru": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Manacapuru — se liga, é muito bom, viu. O turismo da cidade é simples e verdadeiro: Boi Garantido e Caprichoso em Parintins e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Manacapuru",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Manacapuru%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Manacapuru",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Manacapuru vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Manacapuru%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É oxente o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Manacapuru",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Manacapuru conhece de cor — pra falar a real, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Manacapuru%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Manacapuru",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Manacapuru é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Manacapuru%2C%20Manacapuru%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Manacapuru se revela aos poucos — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "Em Manacapuru, a comida é levada a sério — e sem frescura. se liga, é muito bom, viu. A cidade mantém cultura ribeirinha e dos povos da floresta vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Manacapuru conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Manacapuru vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Manacapuru conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É oxente o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Manacapuru%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Manacapuru é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Manacapuru tem ritmo próprio, e o transporte acompanha — se liga, é muito bom, viu. Entre Boi Garantido e Caprichoso em Parintins e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Manacapuru conhece de cor — é nóis mesmo, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Manacapuru",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Manacapuru vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Manacapuru%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Manacapuru é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Manacapuru%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Manacapuru é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Manacapuru%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Manacapuru é mais simples do que parece — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Manacapuru, com o regime de chuvas equatorial chuvoso da região de Amazonas. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Manacapuru, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. pra falar a real. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/manacapuru/",
+      },
+    },
+    "city": "Manacapuru",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 111751,
+    "reviewedOn": "2026-08-18",
+  },
+  "manaquiri": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Manaquiri — tu não conhece é nada, viu. O turismo da cidade é simples e verdadeiro: cultura ribeirinha e dos povos da floresta e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Estádio municipal de Manaquiri",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Manaquiri vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Manaquiri%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Manaquiri é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Manaquiri",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Manaquiri conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Manaquiri%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Manaquiri conhece de cor — é nóis mesmo, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Manaquiri%2C%20Amazonas",
+        },
+      ],
+      "closing": "Descubra Manaquiri no seu ritmo: aqui ninguém tem pressa — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "Fome em Manaquiri não falta solução — tu não conhece é nada. De mercado municipal de manhãzinha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Manaquiri vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Manaquiri vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muita coisa boa o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Manaquiri é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Manaquiri conhece de cor — pra falar a real, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Manaquiri%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Manaquiri se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Manaquiri tem ritmo próprio, e o transporte acompanha — tu não conhece é nada, viu. Entre mercado municipal de manhãzinha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da hora o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Manaquiri conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Manaquiri%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Manaquiri vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Manaquiri%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Manaquiri é mais simples do que parece — tu não conhece é nada!",
+    },
+    "climate": {
+      "intro": "Manaquiri vive o clima típico da região de Amazonas — equatorial chuvoso, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Manaquiri, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é de doido. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/manaquiri/",
+      },
+    },
+    "city": "Manaquiri",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 16211,
+    "reviewedOn": "2026-08-18",
+  },
+  "manaus": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Manaus — é nóis mesmo, viu. O turismo da cidade é simples e verdadeiro: tucupi com jambu e maniçoba e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Manaus",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Manaus vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Manaus%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Manaus é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Manaus",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Manaus é conhecida por Boi Garantido e Caprichoso em Parintins, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Manaus%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Manaus é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Manaus",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É oxente o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Manaus%2C%20Manaus%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Manaus se revela aos poucos — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Manaus conta a história de Amazonas no prato — é de doido. Entre mercado municipal de manhãzinha e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Manaus vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Manaus é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Manaus conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É bater um papo o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Manaus%2C%20Amazonas",
+        },
+      ],
+      "closing": "A mesa de Manaus é generosa, igual gente da casa — tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "Circular por Manaus é tranquilo para quem conhece os atalhos — se liga, é muito bom. O transporte da cidade se organiza em torno de Boi Garantido e Caprichoso em Parintins, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Manaus conhece de cor — pra falar a real, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Manaus vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Manaus",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É arretado o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Manaus%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Manaus conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Manaus%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Manaus%2C%20Amazonas",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Manaus, com o regime de chuvas equatorial chuvoso da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Manaus se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/manaus/",
+      },
+    },
+    "city": "Manaus",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 2303732,
+    "reviewedOn": "2026-08-18",
+  },
+  "nhamunda": {
+    "tourism": {
+      "intro": "Nhamundá guarda charme de Amazonas em cada canto — se liga, é muito bom, viu. Quem anda pela cidade percebe logo açaí de todos os jeitos — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Nhamundá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Nhamundá é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Nhamundá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muita coisa boa o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Nhamund%C3%A1%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de Nhamundá",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Nhamundá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Nhamund%C3%A1%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Nhamundá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém açaí de todos os jeitos como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Nhamund%C3%A1%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Nhamundá se revela aos poucos — tu não conhece é nada!",
+    },
+    "dining": {
+      "intro": "Fome em Nhamundá não falta solução — é de doido. De tucupi com jambu e maniçoba ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Nhamundá conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Nhamundá vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Nhamundá conhece de cor — é nóis mesmo, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Nhamundá é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em Nhamundá, quem come bem conta vantagem — é nóis mesmo!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Nhamundá tem ritmo próprio, e o transporte acompanha — é de doido, viu. Entre açaí de todos os jeitos e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Nhamundá",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Nhamundá conhece de cor — é nóis mesmo, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Nhamund%C3%A1%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Nhamundá é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Nhamundá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nhamund%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Nhamundá, todo caminho leva a um lugar bom — é nóis mesmo!",
+    },
+    "climate": {
+      "intro": "O clima de Nhamundá acompanha o ritmo da região: equatorial chuvoso, muita coisa boa. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Nhamundá apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/nhamunda/",
+      },
+    },
+    "city": "Nhamundá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 21251,
+    "reviewedOn": "2026-08-18",
+  },
+  "santo-antonio-do-ica": {
+    "tourism": {
+      "intro": "Santo Antônio do Içá é daquelas cidades de Amazonas que a gente conhece devagar — tu não conhece é nada. O roteiro local mistura Boi Garantido e Caprichoso em Parintins com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Praça Central de Santo Antônio do Içá",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Santo Antônio do Içá vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de Santo Antônio do Içá",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Santo Antônio do Içá conhece de cor — se liga, é muito bom, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Santo Antônio do Içá conhece de cor — tu não conhece é nada, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Santo Antônio do Içá",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Santo Antônio do Içá conhece de cor — tu não conhece é nada, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Santo Antônio do Içá se revela aos poucos — é de doido!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Santo Antônio do Içá conta a história de Amazonas no prato — é nóis mesmo. Entre tucupi com jambu e maniçoba e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Santo Antônio do Içá conhece de cor — se liga, é muito bom, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É arretado o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Santo Antônio do Içá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Santo Antônio do Içá se come de olhos fechados e de coração aberto — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Santo Antônio do Içá é tranquilo para quem conhece os atalhos — se liga, é muito bom. O transporte da cidade se organiza em torno de Boi Garantido e Caprichoso em Parintins, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Santo Antônio do Içá vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Santo Antônio do Içá vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Santo Antônio do Içá é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Santo%20Ant%C3%B4nio%20do%20I%C3%A7%C3%A1%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Santo Antônio do Içá, todo caminho leva a um lugar bom — se liga, é muito bom!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Santo Antônio do Içá, com o regime de chuvas equatorial chuvoso da região de Amazonas. é nóis mesmo. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Santo Antônio do Içá apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/santo%20antonio%20do%20ica/",
+      },
+    },
+    "city": "Santo Antônio do Içá",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 30679,
+    "reviewedOn": "2026-08-18",
+  },
+  "silves": {
+    "tourism": {
+      "intro": "Silves guarda charme de Amazonas em cada canto — se liga, é muito bom, viu. Quem anda pela cidade percebe logo mercado municipal de manhãzinha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Praça Central de Silves",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Silves%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Silves conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Silves vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Parque municipal de Silves",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Silves conhece de cor — é nóis mesmo, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Silves%2C%20Silves%2C%20Amazonas",
+        },
+      ],
+      "closing": "Vem com calma que Silves se revela aos poucos — é nóis mesmo!",
+    },
+    "dining": {
+      "intro": "Fome em Silves não falta solução — é nóis mesmo. De mercado municipal de manhãzinha ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Silves é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É oxente o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Silves conhece de cor — é de doido, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Silves vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Silves%2C%20Amazonas",
+        },
+      ],
+      "closing": "Passa por Silves com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Silves, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — se liga, é muito bom, viu. Para distâncias maiores, mercado municipal de manhãzinha resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha e dos povos da floresta como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Silves é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — arretado, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Silves%2C%20Amazonas",
+        },
+        {
+          "name": "Rodoviária municipal de Silves",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É oxente o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Silves%2C%20Silves%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Silves, todo caminho leva a um lugar bom — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Silves, com o regime de chuvas equatorial chuvoso da região de Amazonas. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Silves apresenta clima equatorial chuvoso, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.800 a 2.500 mm por ano. A região registra chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/silves/",
+      },
+    },
+    "city": "Silves",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 12619,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-gabriel-da-cachoeira": {
+    "tourism": {
+      "intro": "São Gabriel da Cachoeira guarda charme de Amazonas em cada canto — é nóis mesmo, viu. Quem anda pela cidade percebe logo mercado municipal de manhãzinha — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de São Gabriel da Cachoeira conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha e dos povos da floresta e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Centro histórico de São Gabriel da Cachoeira",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É arretado o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Estádio municipal de São Gabriel da Cachoeira",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É muita coisa boa o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de São Gabriel da Cachoeira",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de São Gabriel da Cachoeira conhece de cor — tu não conhece é nada, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de São Gabriel da Cachoeira rende conversa boa e foto bonita — se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "A gastronomia de São Gabriel da Cachoeira conta a história de Amazonas no prato — se liga, é muito bom. Entre encontro das águas do Negro com o Solimões e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. São Gabriel da Cachoeira é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. São Gabriel da Cachoeira vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. São Gabriel da Cachoeira vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É oxente o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+      ],
+      "closing": "Fica a dica: em São Gabriel da Cachoeira, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em São Gabriel da Cachoeira, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é nóis mesmo, viu. Para distâncias maiores, tucupi com jambu e maniçoba resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de São Gabriel da Cachoeira",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São Gabriel da Cachoeira é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. São Gabriel da Cachoeira vive isso no dia a dia, com tucupi com jambu e maniçoba fazendo parte da rotina — se liga, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É muita coisa boa o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de São Gabriel da Cachoeira conhece de cor — pra falar a real, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20S%C3%A3o%20Gabriel%20da%20Cachoeira%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em São Gabriel da Cachoeira, todo caminho leva a um lugar bom — é de doido!",
+    },
+    "climate": {
+      "intro": "São Gabriel da Cachoeira vive o clima típico da região de Amazonas — equatorial chuvoso, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de São Gabriel da Cachoeira se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/sao%20gabriel%20da%20cachoeira/",
+      },
+    },
+    "city": "São Gabriel da Cachoeira",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 57396,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-sebastiao-do-uatuma": {
+    "tourism": {
+      "intro": "São Sebastião do Uatumã guarda charme de Amazonas em cada canto — é nóis mesmo, viu. Quem anda pela cidade percebe logo encontro das águas do Negro com o Solimões — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Igreja Matriz de São Sebastião do Uatumã",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. São Sebastião do Uatumã é conhecida por tucupi com jambu e maniçoba, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de São Sebastião do Uatumã conhece de cor — tu não conhece é nada, viu. A cidade preserva encontro das águas do Negro com o Solimões e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Praça Central de São Sebastião do Uatumã",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. São Sebastião do Uatumã vive isso no dia a dia, com açaí de todos os jeitos fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de São Sebastião do Uatumã rende conversa boa e foto bonita — se liga, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em São Sebastião do Uatumã, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém tucupi com jambu e maniçoba vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É arretado o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. São Sebastião do Uatumã é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. São Sebastião do Uatumã é conhecida por mercado municipal de manhãzinha, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de São Sebastião do Uatumã conhece de cor — é de doido, viu. A cidade preserva açaí de todos os jeitos e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em São Sebastião do Uatumã se come de olhos fechados e de coração aberto — se liga, é muito bom!",
+    },
+    "transport": {
+      "intro": "O dia a dia de São Sebastião do Uatumã tem ritmo próprio, e o transporte acompanha — é de doido, viu. Entre mercado municipal de manhãzinha e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. São Sebastião do Uatumã vive isso no dia a dia, com mercado municipal de manhãzinha fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São Sebastião do Uatumã é conhecida por encontro das águas do Negro com o Solimões, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. São Sebastião do Uatumã vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — tu não conhece é nada, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É arretado o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Sebasti%C3%A3o%20do%20Uatum%C3%A3%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em São Sebastião do Uatumã, todo caminho leva a um lugar bom — é de doido!",
+    },
+    "climate": {
+      "intro": "São Sebastião do Uatumã vive o clima típico da região de Amazonas — equatorial chuvoso, com é nóis mesmo. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em São Sebastião do Uatumã, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.800 a 2.500 mm, no regime equatorial chuvoso da região. é nóis mesmo. O comportamento sazonal segue chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/sao%20sebastiao%20do%20uatuma/",
+      },
+    },
+    "city": "São Sebastião do Uatumã",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "92",
+    "population": 12338,
+    "reviewedOn": "2026-08-18",
+  },
+  "tabatinga": {
+    "tourism": {
+      "intro": "Tabatinga é daquelas cidades de Amazonas que a gente conhece devagar — tu não conhece é nada. O roteiro local mistura encontro das águas do Negro com o Solimões com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Parque municipal de Tabatinga",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém tucupi com jambu e maniçoba como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Tabatinga%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É é nóis o que se vê por aqui: a cidade mantém mercado municipal de manhãzinha como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Igreja Matriz de Tabatinga",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É da hora o que se vê por aqui: a cidade mantém encontro das águas do Negro com o Solimões como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Tabatinga%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Tabatinga conhece de cor — tu não conhece é nada, viu. A cidade preserva tucupi com jambu e maniçoba e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Tabatinga%2C%20Amazonas",
+        },
+      ],
+      "closing": "O roteiro de Tabatinga rende conversa boa e foto bonita — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Em Tabatinga, a comida é levada a sério — e sem frescura. tu não conhece é nada, viu. A cidade mantém Boi Garantido e Caprichoso em Parintins vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Tabatinga vive isso no dia a dia, com Boi Garantido e Caprichoso em Parintins fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Tabatinga é conhecida por cultura ribeirinha e dos povos da floresta, e esse ponto carrega um pouco dessa história — muita coisa boa, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Tabatinga conhece de cor — tu não conhece é nada, viu. A cidade preserva mercado municipal de manhãzinha e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da hora o que se vê por aqui: a cidade mantém Boi Garantido e Caprichoso em Parintins como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Tabatinga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Em Tabatinga se come de olhos fechados e de coração aberto — tu não conhece é nada!",
+    },
+    "transport": {
+      "intro": "Circular por Tabatinga é tranquilo para quem conhece os atalhos — é de doido. O transporte da cidade se organiza em torno de mercado municipal de manhãzinha, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Tabatinga vive isso no dia a dia, com encontro das águas do Negro com o Solimões fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Tabatinga conhece de cor — é de doido, viu. A cidade preserva Boi Garantido e Caprichoso em Parintins e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Tabatinga é conhecida por açaí de todos os jeitos, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Tabatinga%2C%20Amazonas",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Tabatinga vive isso no dia a dia, com cultura ribeirinha e dos povos da floresta fazendo parte da rotina — é nóis mesmo, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Tabatinga%2C%20Amazonas",
+        },
+      ],
+      "closing": "Chegar e circular em Tabatinga é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Tabatinga, com o regime de chuvas equatorial chuvoso da região de Amazonas. se liga, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Tabatinga se enquadra no padrão equatorial chuvoso, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.800 a 2.500 mm anuais e chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.800 a 2.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Af/Am (equatorial chuvoso)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas o ano inteiro, com um período de chuva mais forte entre dezembro e maio e um relativo afrouxamento entre julho e outubro.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/am/tabatinga/",
+      },
+    },
+    "city": "Tabatinga",
+    "uf": "AM",
+    "stateName": "Amazonas",
+    "region": "Norte",
+    "ddd": "97",
+    "population": 73348,
+    "reviewedOn": "2026-08-18",
   },
 } as Record<string, MunicipalityTabs>;

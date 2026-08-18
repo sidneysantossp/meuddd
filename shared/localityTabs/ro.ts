@@ -4,177 +4,5788 @@
 import type { MunicipalityTabs } from "./types";
 export const catalog: Record<string, MunicipalityTabs> = {
   "porto-velho": {
-    climate: {
-      body: "Porto Velho, capital de Rondônia, está situada na Amazônia Legal, na porção norte do estado. O clima é quente e úmido, com elevada umidade ao longo de todo o ano e chuvas frequentes. A classificação Köppen mais citada para a cidade é Am (tropical de monções), com precipitação anual elevada e temperaturas estáveis em torno de 25–27 °C, variando pouco ao longo do ano. Algumas fontes mencionam Af (equatorial) para a região amazônica, mas a referência mais comum para Porto Velho é Am, o que implica chuvas distribuídas ao longo de todas as estações. Em média, a cidade recebe volumes pluviométricos consideráveis, contribuindo para a cobertura de mata ao redor. Observa-se pouca variação térmica diária, com calor intenso em boa parte do ano. ([en.climate-data.org](https://en.climate-data.org/south-america/brazil/rondonia/porto-velho-3120/))",
-      details: [
+    "climate": {
+      "body": "Porto Velho, capital de Rondônia, está situada na Amazônia Legal, na porção norte do estado. O clima é quente e úmido, com elevada umidade ao longo de todo o ano e chuvas frequentes. A classificação Köppen mais citada para a cidade é Am (tropical de monções), com precipitação anual elevada e temperaturas estáveis em torno de 25–27 °C, variando pouco ao longo do ano. Algumas fontes mencionam Af (equatorial) para a região amazônica, mas a referência mais comum para Porto Velho é Am, o que implica chuvas distribuídas ao longo de todas as estações. Em média, a cidade recebe volumes pluviométricos consideráveis, contribuindo para a cobertura de mata ao redor. Observa-se pouca variação térmica diária, com calor intenso em boa parte do ano. ([en.climate-data.org](https://en.climate-data.org/south-america/brazil/rondonia/porto-velho-3120/))",
+      "details": [
         {
-          label: "Classificação Köppen",
-          value:
-            "Am (tropical de monções) — chuvas ao longo do ano; temperatura média anual alta.",
+          "label": "Classificação Köppen",
+          "value": "Am (tropical de monções) — chuvas ao longo do ano; temperatura média anual alta.",
         },
         {
-          label: "Notas sobre classificação",
-          value:
-            "Algumas fontes citam Af (equatorial). A classificação amplamente utilizada para Porto Velho é Am.",
+          "label": "Notas sobre classificação",
+          "value": "Algumas fontes citam Af (equatorial). A classificação amplamente utilizada para Porto Velho é Am.",
         },
         {
-          label: "Temperatura média anual (aprox.)",
-          value:
-            "Em torno de 26 °C, com variação diária típica entre aproximadamente 23 °C e 33 °C.",
+          "label": "Temperatura média anual (aprox.)",
+          "value": "Em torno de 26 °C, com variação diária típica entre aproximadamente 23 °C e 33 °C.",
         },
         {
-          label: "",
-          value: "",
+          "label": "",
+          "value": "",
         },
       ],
-      intro:
-        "Porto Velho é a capital do estado de Rondônia, situada às margens do Rio Madeira, na região Norte do Brasil. O clima da cidade é característico da Amazônia: quente, úmido e com precipitação significativa ao longo de todo o ano. O regime de chuvas e as altas temperaturas influenciam a demanda por espaços abertos, áreas verdes e atividades ao ar livre. A cidade apresenta um microclima típico de áreas de floresta tropical, com variações sazonais moderadas que não definem uma estação seca bem marcada. ",
-      source: {
-        label: "Climate-Data.org",
-        href: "https://pt.climate-data.org/america-do-sul/brasil/ro/porto%20velho/",
+      "intro": "Porto Velho é a capital do estado de Rondônia, situada às margens do Rio Madeira, na região Norte do Brasil. O clima da cidade é característico da Amazônia: quente, úmido e com precipitação significativa ao longo de todo o ano. O regime de chuvas e as altas temperaturas influenciam a demanda por espaços abertos, áreas verdes e atividades ao ar livre. A cidade apresenta um microclima típico de áreas de floresta tropical, com variações sazonais moderadas que não definem uma estação seca bem marcada. ",
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/porto%20velho/",
       },
     },
-    dining: {
-      closing:
-        "Para conhecer a gastronomia local, visite o Mercado Cultural de Porto Velho, onde é possível experimentar pratos regionais em contexto de atividades culturais.",
-      intro:
-        "A culinária de Porto Velho reflete a experiência de um território da Amazônia com influências indígenas, ribeirinhas e migrantes. Pratos à base de tucupi, jambu e mandioca são comuns, com o tacacá figurando entre as iguarias mais associadas à região Norte. A cidade também celebra a sazonalidade de ingredientes com espaços públicos que agregam cultura e alimentação. As opções variam entre preparos simples de peixe fresco, iguarias de origem amazônica e receitas que incorporam a mandioca em diferentes formas. ",
-      items: [
+    "dining": {
+      "closing": "Para conhecer a gastronomia local, visite o Mercado Cultural de Porto Velho, onde é possível experimentar pratos regionais em contexto de atividades culturais.",
+      "intro": "A culinária de Porto Velho reflete a experiência de um território da Amazônia com influências indígenas, ribeirinhas e migrantes. Pratos à base de tucupi, jambu e mandioca são comuns, com o tacacá figurando entre as iguarias mais associadas à região Norte. A cidade também celebra a sazonalidade de ingredientes com espaços públicos que agregam cultura e alimentação. As opções variam entre preparos simples de peixe fresco, iguarias de origem amazônica e receitas que incorporam a mandioca em diferentes formas. ",
+      "items": [
         {
-          description:
-            "Tacacá é uma sopa quente à base de tucupi, goma de tapioca, jambu e peixe seco, servida com pimenta-de-cheiro. Um prato tradicional da região Norte que pode ser encontrado em feiras, mercados e estabelecimentos locais.",
-          kind: "Prato típico",
-          name: "Tacacá",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Tacac%C3%A1%2C%20Porto%20Velho%2C%20RO",
+          "description": "Tacacá é uma sopa quente à base de tucupi, goma de tapioca, jambu e peixe seco, servida com pimenta-de-cheiro. Um prato tradicional da região Norte que pode ser encontrado em feiras, mercados e estabelecimentos locais.",
+          "kind": "Prato típico",
+          "name": "Tacacá",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Tacac%C3%A1%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Pato no tucupi é um prato típico da região Norte, feito com pato cozido em tucupi, acompanhado de jambu e arroz. É comum em restaurantes e eventos que valorizam a gastronomia regional.",
-          kind: "Prato típico",
-          name: "Pato no tucupi",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Pato%20no%20tucupi%2C%20Porto%20Velho%2C%20RO",
+          "description": "Pato no tucupi é um prato típico da região Norte, feito com pato cozido em tucupi, acompanhado de jambu e arroz. É comum em restaurantes e eventos que valorizam a gastronomia regional.",
+          "kind": "Prato típico",
+          "name": "Pato no tucupi",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pato%20no%20tucupi%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Mercado Cultural de Porto Velho é um espaço público no centro histórico que agrega artesanato, programação cultural e opções gastronômicas locais.",
-          kind: "Mercado público",
-          name: "Mercado Cultural de Porto Velho",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+          "description": "Mercado Cultural de Porto Velho é um espaço público no centro histórico que agrega artesanato, programação cultural e opções gastronômicas locais.",
+          "kind": "Mercado público",
+          "name": "Mercado Cultural de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description: "",
-          kind: "",
-          name: "",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+          "description": "",
+          "kind": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description: "",
-          kind: "",
-          name: "",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+          "description": "",
+          "kind": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
         },
       ],
     },
-    tourism: {
-      closing:
-        "Para imergir na história e na natureza locais, priorize o Museu da Estrada de Ferro Madeira-Mamoré, o Parque Natural Raimundo Paraguassu de Oliveira e os espaços históricos reformulados no Centro de Porto Velho.",
-      intro:
-        "Porto Velho, capital de Rondônia, está localizada às margens do Madeira e representa um ponto de encontro entre história, cultura e natureza da Amazônia. O município desenvolve atrações voltadas à memória da região, como o complexo da Estrada de Ferro Madeira-Mamoré, que rememora um capítulo importante da formação histórica do estado. Além disso, áreas verdes como o Parque Natural Raimundo Paraguassu de Oliveira oferecem trilhas, museu da fauna amazônica e preservação de eco sistemas nativos. Ao redor do centro, museus e palácios conservam memória regional, enquanto mercados locais preservam tradições culinárias e artesanato. ",
-      items: [
+    "tourism": {
+      "closing": "Para imergir na história e na natureza locais, priorize o Museu da Estrada de Ferro Madeira-Mamoré, o Parque Natural Raimundo Paraguassu de Oliveira e os espaços históricos reformulados no Centro de Porto Velho.",
+      "intro": "Porto Velho, capital de Rondônia, está localizada às margens do Madeira e representa um ponto de encontro entre história, cultura e natureza da Amazônia. O município desenvolve atrações voltadas à memória da região, como o complexo da Estrada de Ferro Madeira-Mamoré, que rememora um capítulo importante da formação histórica do estado. Além disso, áreas verdes como o Parque Natural Raimundo Paraguassu de Oliveira oferecem trilhas, museu da fauna amazônica e preservação de eco sistemas nativos. Ao redor do centro, museus e palácios conservam memória regional, enquanto mercados locais preservam tradições culinárias e artesanato. ",
+      "items": [
         {
-          description:
-            "Museu da Estrada de Ferro Madeira-Mamoré (EFMM) funciona no Complexo EFMM e preserva peças e relatos da histórica ferrovia que contribuiu para a formação de Porto Velho e de Rondônia.",
-          name: "Museu da Estrada de Ferro Madeira-Mamoré",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Museu%20da%20Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%2C%20Porto%20Velho%2C%20RO",
+          "description": "Museu da Estrada de Ferro Madeira-Mamoré (EFMM) funciona no Complexo EFMM e preserva peças e relatos da histórica ferrovia que contribuiu para a formação de Porto Velho e de Rondônia.",
+          "name": "Museu da Estrada de Ferro Madeira-Mamoré",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Museu%20da%20Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Parque Natural Raimundo Paraguassu de Oliveira (Parque Natural de Porto Velho) ocupa cerca de 390 hectares de mata preservada, com trilhas ecológicas, museu da fauna amazônica e distribuição de mudas.",
-          name: "Parque Natural Raimundo Paraguassu de Oliveira",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Parque%20Natural%20Raimundo%20Paraguassu%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
+          "description": "Parque Natural Raimundo Paraguassu de Oliveira (Parque Natural de Porto Velho) ocupa cerca de 390 hectares de mata preservada, com trilhas ecológicas, museu da fauna amazônica e distribuição de mudas.",
+          "name": "Parque Natural Raimundo Paraguassu de Oliveira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20Natural%20Raimundo%20Paraguassu%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Palácio Getúlio Vargas, atual Museu da Memória Rondoniense, é referência histórica e arquitetônica no Centro de Porto Velho, com acervo que aborda a história do estado.",
-          name: "Palácio Getúlio Vargas / Museu da Memória Rondoniense",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio%20Get%C3%BAlio%20Vargas%20%2F%20Museu%20da%20Mem%C3%B3ria%20Rondoniense%2C%20Porto%20Velho%2C%20RO",
+          "description": "Palácio Getúlio Vargas, atual Museu da Memória Rondoniense, é referência histórica e arquitetônica no Centro de Porto Velho, com acervo que aborda a história do estado.",
+          "name": "Palácio Getúlio Vargas / Museu da Memória Rondoniense",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio%20Get%C3%BAlio%20Vargas%20%2F%20Museu%20da%20Mem%C3%B3ria%20Rondoniense%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Mercado Cultural de Porto Velho, espaço público administrado pela Fundação Cultural, reúne cultura, gastronomia e atividades ao vivo no centro histórico.",
-          name: "Mercado Cultural de Porto Velho",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+          "description": "Mercado Cultural de Porto Velho, espaço público administrado pela Fundação Cultural, reúne cultura, gastronomia e atividades ao vivo no centro histórico.",
+          "name": "Mercado Cultural de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Cultural%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Mercado Municipal KM 1, um exemplo de mercado histórico na cidade, ligado à vida cotidiana e à memória urbana.",
-          name: "Mercado Municipal KM 1",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20KM%201%2C%20Porto%20Velho%2C%20RO",
+          "description": "Mercado Municipal KM 1, um exemplo de mercado histórico na cidade, ligado à vida cotidiana e à memória urbana.",
+          "name": "Mercado Municipal KM 1",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20KM%201%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description: "",
-          name: "",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
+          "description": "",
+          "name": "",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%2C%20Porto%20Velho%2C%20RO",
         },
       ],
     },
-    transport: {
-      closing:
-        "Para deslocamento, utilize a rodoviária para viagens intermunicipais, o sistema de ônibus da cidade ou o aeroporto local para voos domésticos; o histórico ferroviário hoje é preservado como patrimônio museal.",
-      intro:
-        "Acesso e mobilidade em Porto Velho contam com rodoviária municipal, rede de ônibus urbana e o Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH). A Estrada de Ferro Madeira-Mamoré não opera como trem de passageiros, mas o patrimônio ferroviário é preservado pelo Museu da EFMM. O código DDD da cidade é 69. O fluxo de transporte público local é monitorado pela Semtran e pelo aplicativo Cittamobi para consulta de horários e itinerários.",
-      items: [
+    "transport": {
+      "closing": "Para deslocamento, utilize a rodoviária para viagens intermunicipais, o sistema de ônibus da cidade ou o aeroporto local para voos domésticos; o histórico ferroviário hoje é preservado como patrimônio museal.",
+      "intro": "Acesso e mobilidade em Porto Velho contam com rodoviária municipal, rede de ônibus urbana e o Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH). A Estrada de Ferro Madeira-Mamoré não opera como trem de passageiros, mas o patrimônio ferroviário é preservado pelo Museu da EFMM. O código DDD da cidade é 69. O fluxo de transporte público local é monitorado pela Semtran e pelo aplicativo Cittamobi para consulta de horários e itinerários.",
+      "items": [
         {
-          description:
-            "Rodoviária de Porto Velho é o terminal de ônibus que conecta a cidade a diversas rotas interestaduais e intermunicipais dentro de Rondônia e região.",
-          kind: "Rodoviária",
-          name: "Rodoviária de Porto Velho",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+          "description": "Rodoviária de Porto Velho é o terminal de ônibus que conecta a cidade a diversas rotas interestaduais e intermunicipais dentro de Rondônia e região.",
+          "kind": "Rodoviária",
+          "name": "Rodoviária de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Sistema de ônibus urbano com várias linhas; a cidade oferece monitoramento de rotas online em tempo real via Semtran e aplicativos de trajetos.",
-          kind: "Transporte público",
-          name: "Ônibus urbano de Porto Velho",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=%C3%94nibus%20urbano%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
+          "description": "Sistema de ônibus urbano com várias linhas; a cidade oferece monitoramento de rotas online em tempo real via Semtran e aplicativos de trajetos.",
+          "kind": "Transporte público",
+          "name": "Ônibus urbano de Porto Velho",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=%C3%94nibus%20urbano%20de%20Porto%20Velho%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH) recebe voos nacionais e opera sob gestão da concessionária Vinci Airports.",
-          kind: "Aeroporto",
-          name: "Aeroporto PVH (Porto Velho) — Governador Jorge Teixeira de Oliveira",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Aeroporto%20PVH%20(Porto%20Velho)%20%E2%80%94%20Governador%20Jorge%20Teixeira%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
+          "description": "Aeroporto Internacional Governador Jorge Teixeira de Oliveira (PVH) recebe voos nacionais e opera sob gestão da concessionária Vinci Airports.",
+          "kind": "Aeroporto",
+          "name": "Aeroporto PVH (Porto Velho) — Governador Jorge Teixeira de Oliveira",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Aeroporto%20PVH%20(Porto%20Velho)%20%E2%80%94%20Governador%20Jorge%20Teixeira%20de%20Oliveira%2C%20Porto%20Velho%2C%20RO",
         },
         {
-          description:
-            "Ferrovia Madeira-Mamoré preservada como patrimônio museal; não há serviço de trem de passageiros ativo na cidade.",
-          kind: "Ferrovia histórica",
-          name: "Estrada de Ferro Madeira-Mamoré (EFMM) – museu",
-          mapHref:
-            "https://www.google.com/maps/search/?api=1&query=Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%20(EFMM)%20%E2%80%93%20museu%2C%20Porto%20Velho%2C%20RO",
+          "description": "Ferrovia Madeira-Mamoré preservada como patrimônio museal; não há serviço de trem de passageiros ativo na cidade.",
+          "kind": "Ferrovia histórica",
+          "name": "Estrada de Ferro Madeira-Mamoré (EFMM) – museu",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Estrada%20de%20Ferro%20Madeira-Mamor%C3%A9%20(EFMM)%20%E2%80%93%20museu%2C%20Porto%20Velho%2C%20RO",
         },
       ],
     },
-    city: "Porto Velho",
-    uf: "RO",
-    stateName: "Rondônia",
-    region: "Norte",
-    ddd: "69",
-    population: 517709,
-    reviewedOn: "13 de agosto de 2026",
+    "city": "Porto Velho",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 517709,
+    "reviewedOn": "13 de agosto de 2026",
+  },
+  "cabixi": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Cabixi. é de doido. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Cabixi",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Cabixi vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Cabixi%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Cabixi",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Cabixi é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Cabixi%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Cabixi",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Cabixi é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Cabixi%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Cabixi se revela aos poucos. oxente, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Cabixi é mais fácil do que parece. é bom demais, viu. A mesa da cidade tem cultura ribeirinha do Madeira no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Cabixi vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Cabixi vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Cabixi é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Cabixi se come de olhos fechados e de coração aberto. se tu for por lá",
+    },
+    "transport": {
+      "intro": "Circular por Cabixi é tranquilo para quem conhece os atalhos. pra falar a real. O transporte da cidade se organiza em torno de cultura ribeirinha do Madeira, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Cabixi é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É muito da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Cabixi é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Cabixi%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Cabixi é mais simples do que parece. é de doido",
+    },
+    "climate": {
+      "intro": "Cabixi vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Cabixi se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/cabixi/",
+      },
+    },
+    "city": "Cabixi",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 5664,
+    "reviewedOn": "2026-08-18",
+  },
+  "cacaulandia": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Cacaulândia. pra falar a real. O turismo da cidade é simples e verdadeiro: igreja de madeira e festas de arraial e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Parque municipal de Cacaulândia",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Cacaulândia conhece de cor — é de doido. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Cacaul%C3%A2ndia%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Cacaulândia vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É dar um role o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Cacaulândia vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Cacaulândia se revela aos poucos. se tu for por lá",
+    },
+    "dining": {
+      "intro": "A gastronomia de Cacaulândia conta a história de Rondônia no prato. é bom demais, viu. Entre tradição da colonização de toda parte do Brasil e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Cacaulândia vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Cacaulândia vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Cacaulândia é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Cacaulândia é generosa, igual gente da casa. se tu for por lá",
+    },
+    "transport": {
+      "intro": "Circular por Cacaulândia é tranquilo para quem conhece os atalhos. oxente, é muito bom. O transporte da cidade se organiza em torno de festivais de inverno de Porto Velho, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Cacaulândia vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Cacaulândia vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Cacaulândia",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Cacaulândia conhece de cor — é bom demais, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cacaul%C3%A2ndia%2C%20Cacaul%C3%A2ndia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Cacaulândia, todo caminho leva a um lugar bom. se tu for por lá",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Cacaulândia, com o regime de chuvas tropical com estação seca da região de Rondônia. oxente, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Cacaulândia apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/cacaulandia/",
+      },
+    },
+    "city": "Cacaulândia",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 4292,
+    "reviewedOn": "2026-08-18",
+  },
+  "campo-novo-de-rondonia": {
+    "tourism": {
+      "intro": "Campo Novo de Rondônia é daquelas cidades de Rondônia que a gente conhece devagar. pra falar a real O roteiro local mistura café de Rondônia, dos mais premiados do país com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Parque municipal de Campo Novo de Rondônia",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Campo Novo de Rondônia é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Campo Novo de Rondônia conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Campo Novo de Rondônia vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Campo Novo de Rondônia rende conversa boa e foto bonita. se tu for por lá",
+    },
+    "dining": {
+      "intro": "Em Campo Novo de Rondônia, a comida é levada a sério — e sem frescura. é bom demais, viu. A cidade mantém tradição da colonização de toda parte do Brasil vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Campo Novo de Rondônia vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É bater um papo o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Campo Novo de Rondônia vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Campo Novo de Rondônia é generosa, igual gente da casa. se tu for por lá",
+    },
+    "transport": {
+      "intro": "O dia a dia de Campo Novo de Rondônia tem ritmo próprio, e o transporte acompanha. pra falar a real. Entre igreja de madeira e festas de arraial e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Campo Novo de Rondônia é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Campo Novo de Rondônia conhece de cor — se tu for por lá. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Campo Novo de Rondônia",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Campo Novo de Rondônia é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Campo%20Novo%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Campo Novo de Rondônia, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Campo Novo de Rondônia apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/campo%20novo%20de%20rondonia/",
+      },
+    },
+    "city": "Campo Novo de Rondônia",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 9095,
+    "reviewedOn": "2026-08-18",
+  },
+  "castanheiras": {
+    "tourism": {
+      "intro": "Castanheiras guarda charme de Rondônia em cada canto. é de doido. Quem anda pela cidade percebe logo tradição da colonização de toda parte do Brasil — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Castanheiras conhece de cor — é de doido. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Castanheiras é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Castanheiras é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Castanheiras rende conversa boa e foto bonita. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "Comer bem em Castanheiras é mais fácil do que parece. é de doido. A mesa da cidade tem tradição da colonização de toda parte do Brasil no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Castanheiras é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Castanheiras vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Castanheiras se come de olhos fechados e de coração aberto. se tu for por lá",
+    },
+    "transport": {
+      "intro": "Quem se muda para Castanheiras logo aprende a malha de transporte local. oxente, é muito bom. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Castanheiras é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Castanheiras vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Castanheiras",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Castanheiras é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Castanheiras%2C%20Castanheiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Castanheiras, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Castanheiras se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/castanheiras/",
+      },
+    },
+    "city": "Castanheiras",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 3450,
+    "reviewedOn": "2026-08-18",
+  },
+  "cerejeiras": {
+    "tourism": {
+      "intro": "Cerejeiras é daquelas cidades de Rondônia que a gente conhece devagar. é de doido O roteiro local mistura café de Rondônia, dos mais premiados do país com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Cerejeiras vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Cerejeiras conhece de cor — pra falar a real. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Cerejeiras",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Cerejeiras vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Cerejeiras%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Cerejeiras é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Cerejeiras se revela aos poucos. oxente, é muito bom",
+    },
+    "dining": {
+      "intro": "Comer bem em Cerejeiras é mais fácil do que parece. é bom demais, viu. A mesa da cidade tem igreja de madeira e festas de arraial no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É dar um role o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Cerejeiras é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Cerejeiras vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Cerejeiras vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Cerejeiras, quem come bem conta vantagem. se tu for por lá",
+    },
+    "transport": {
+      "intro": "Circular por Cerejeiras é tranquilo para quem conhece os atalhos. oxente, é muito bom. O transporte da cidade se organiza em torno de tradição da colonização de toda parte do Brasil, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Cerejeiras",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Cerejeiras conhece de cor — se tu for por lá. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cerejeiras%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Cerejeiras é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Cerejeiras é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cerejeiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Cerejeiras é mais simples do que parece. é de doido",
+    },
+    "climate": {
+      "intro": "O clima de Cerejeiras acompanha o ritmo da região: tropical com estação seca, dar um role. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Cerejeiras apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/cerejeiras/",
+      },
+    },
+    "city": "Cerejeiras",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 16966,
+    "reviewedOn": "2026-08-18",
+  },
+  "chupinguaia": {
+    "tourism": {
+      "intro": "Conhecer Chupinguaia é conhecer um pedaço autêntico de Rondônia. é de doido A cidade tem tradição da colonização de toda parte do Brasil como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Praça Central de Chupinguaia",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Chupinguaia vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Chupinguaia%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Chupinguaia é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Chupinguaia",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Chupinguaia conhece de cor — pra falar a real. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Chupinguaia%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Chupinguaia é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Chupinguaia se revela aos poucos. se tu for por lá",
+    },
+    "dining": {
+      "intro": "Fome em Chupinguaia não falta solução. é de doido. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Chupinguaia conhece de cor — é de doido. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Chupinguaia conhece de cor — oxente, é muito bom. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Chupinguaia vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É muito da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É dar um role o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Chupinguaia é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "Em Chupinguaia, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é bom demais, viu. Para distâncias maiores, igreja de madeira e festas de arraial resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É dar um role o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Chupinguaia é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Chupinguaia",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Chupinguaia vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Chupinguaia%2C%20Chupinguaia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Chupinguaia é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Chupinguaia, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Chupinguaia se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/chupinguaia/",
+      },
+    },
+    "city": "Chupinguaia",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 10191,
+    "reviewedOn": "2026-08-18",
+  },
+  "cujubim": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Cujubim. é de doido. O turismo da cidade é simples e verdadeiro: café de Rondônia, dos mais premiados do país e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Parque municipal de Cujubim",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Cujubim conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Cujubim%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Cujubim conhece de cor — se tu for por lá. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Cujubim conhece de cor — é bom demais, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Cujubim conhece de cor — é bom demais, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Cujubim",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Cujubim vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Cujubim%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Cujubim no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "Comer bem em Cujubim é mais fácil do que parece. é bom demais, viu. A mesa da cidade tem peixada e tambaqui assado no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É bater um papo o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Cujubim, quem come bem conta vantagem. é de doido",
+    },
+    "transport": {
+      "intro": "Em Cujubim, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. oxente, é muito bom. Para distâncias maiores, café de Rondônia, dos mais premiados do país resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Cujubim",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Cujubim conhece de cor — oxente, é muito bom. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Cujubim%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Cujubim é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Cujubim vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cujubim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Cujubim é mais simples do que parece. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "Cujubim vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Cujubim apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/cujubim/",
+      },
+    },
+    "city": "Cujubim",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 15877,
+    "reviewedOn": "2026-08-18",
+  },
+  "espigao-d-oeste": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Espigão D'Oeste. é de doido. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Parque municipal de Espigão D'Oeste",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Espigão D'Oeste vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Espig%C3%A3o%20D%27Oeste%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Espigão D'Oeste",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Espigão D'Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Espig%C3%A3o%20D%27Oeste%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Espigão D'Oeste",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Espigão D'Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Espig%C3%A3o%20D%27Oeste%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de Espigão D'Oeste conhece de cor — oxente, é muito bom. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Espigão D'Oeste rende conversa boa e foto bonita. pra falar a real",
+    },
+    "dining": {
+      "intro": "Fome em Espigão D'Oeste não falta solução. é bom demais, viu. De café de Rondônia, dos mais premiados do país ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Espigão D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É bater um papo o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Espigão D'Oeste conhece de cor — se tu for por lá. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Espigão D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Espigão D'Oeste é generosa, igual gente da casa. oxente, é muito bom",
+    },
+    "transport": {
+      "intro": "Quem se muda para Espigão D'Oeste logo aprende a malha de transporte local. é bom demais, viu. A cidade mantém cultura ribeirinha do Madeira na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Espigão D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Espigão D'Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Espigão D'Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Espigão D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Espig%C3%A3o%20D%27Oeste%2C%20Espig%C3%A3o%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Espigão D'Oeste, todo caminho leva a um lugar bom. é bom demais, viu",
+    },
+    "climate": {
+      "intro": "O clima de Espigão D'Oeste acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Espigão D'Oeste se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/espigao%20d%20oeste/",
+      },
+    },
+    "city": "Espigão D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 32842,
+    "reviewedOn": "2026-08-18",
+  },
+  "governador-jorge-teixeira": {
+    "tourism": {
+      "intro": "Governador Jorge Teixeira é daquelas cidades de Rondônia que a gente conhece devagar. pra falar a real O roteiro local mistura cultura ribeirinha do Madeira com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Governador Jorge Teixeira vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Governador Jorge Teixeira conhece de cor — pra falar a real. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Governador Jorge Teixeira",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Governador Jorge Teixeira conhece de cor — se tu for por lá. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Governador%20Jorge%20Teixeira%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "Fome em Governador Jorge Teixeira não falta solução. se tu for por lá. De peixada e tambaqui assado ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Governador Jorge Teixeira conhece de cor — é de doido. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Governador Jorge Teixeira é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Governador Jorge Teixeira é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Governador Jorge Teixeira, quem come bem conta vantagem. oxente, é muito bom",
+    },
+    "transport": {
+      "intro": "O dia a dia de Governador Jorge Teixeira tem ritmo próprio, e o transporte acompanha. se tu for por lá. Entre peixada e tambaqui assado e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Governador Jorge Teixeira conhece de cor — é bom demais, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Governador Jorge Teixeira conhece de cor — oxente, é muito bom. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Governador%20Jorge%20Teixeira%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Governador Jorge Teixeira é mais simples do que parece. é de doido",
+    },
+    "climate": {
+      "intro": "O clima de Governador Jorge Teixeira acompanha o ritmo da região: tropical com estação seca, dar um role. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Governador Jorge Teixeira se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/governador%20jorge%20teixeira/",
+      },
+    },
+    "city": "Governador Jorge Teixeira",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 8340,
+    "reviewedOn": "2026-08-18",
+  },
+  "itapua-do-oeste": {
+    "tourism": {
+      "intro": "Itapuã do Oeste guarda charme de Rondônia em cada canto. pra falar a real. Quem anda pela cidade percebe logo peixada e tambaqui assado — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Itapuã do Oeste",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Itapuã do Oeste é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Itapu%C3%A3%20do%20Oeste%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. pra falar a real",
+    },
+    "dining": {
+      "intro": "Fome em Itapuã do Oeste não falta solução. é de doido. De cultura ribeirinha do Madeira ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Itapuã do Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Itapuã do Oeste é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Itapuã do Oeste conhece de cor — pra falar a real. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Itapuã do Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Itapuã do Oeste é generosa, igual gente da casa. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "Circular por Itapuã do Oeste é tranquilo para quem conhece os atalhos. oxente, é muito bom. O transporte da cidade se organiza em torno de peixada e tambaqui assado, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Itapuã do Oeste conhece de cor — pra falar a real. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É muito da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Itapu%C3%A3%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Itapuã do Oeste é tranquila, e a cidade te recebe sem enrolação. é de doido",
+    },
+    "climate": {
+      "intro": "O clima de Itapuã do Oeste acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Itapuã do Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/itapua%20do%20oeste/",
+      },
+    },
+    "city": "Itapuã do Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 9228,
+    "reviewedOn": "2026-08-18",
+  },
+  "mirante-da-serra": {
+    "tourism": {
+      "intro": "Mirante da Serra guarda charme de Rondônia em cada canto. é de doido. Quem anda pela cidade percebe logo peixada e tambaqui assado — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Mirante da Serra",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Mirante da Serra conhece de cor — é bom demais, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Mirante%20da%20Serra%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É oxente o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Mirante da Serra",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Mirante%20da%20Serra%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Mirante da Serra é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Mirante da Serra se revela aos poucos. oxente, é muito bom",
+    },
+    "dining": {
+      "intro": "Fome em Mirante da Serra não falta solução. é de doido. De tradição da colonização de toda parte do Brasil ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Mirante da Serra vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É bater um papo o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Mirante da Serra é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Mirante da Serra conhece de cor — é de doido. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Mirante da Serra é generosa, igual gente da casa. é de doido",
+    },
+    "transport": {
+      "intro": "Quem se muda para Mirante da Serra logo aprende a malha de transporte local. pra falar a real. A cidade mantém igreja de madeira e festas de arraial na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Mirante da Serra",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É bater um papo o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Mirante%20da%20Serra%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Mirante da Serra é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Mirante da Serra conhece de cor — é bom demais, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Mirante da Serra conhece de cor — oxente, é muito bom. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Mirante%20da%20Serra%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Mirante da Serra, todo caminho leva a um lugar bom. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Mirante da Serra vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Mirante da Serra se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/mirante%20da%20serra/",
+      },
+    },
+    "city": "Mirante da Serra",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 9657,
+    "reviewedOn": "2026-08-18",
+  },
+  "monte-negro": {
+    "tourism": {
+      "intro": "Monte Negro é daquelas cidades de Rondônia que a gente conhece devagar. é de doido O roteiro local mistura igreja de madeira e festas de arraial com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Monte Negro",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Monte Negro vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Monte%20Negro%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Monte Negro",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É oxente o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Monte%20Negro%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Monte Negro é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Monte Negro vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. oxente, é muito bom",
+    },
+    "dining": {
+      "intro": "A gastronomia de Monte Negro conta a história de Rondônia no prato. é bom demais, viu. Entre café de Rondônia, dos mais premiados do país e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Monte Negro vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É é nóis o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Monte Negro é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muito da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Monte Negro, quem come bem conta vantagem. se tu for por lá",
+    },
+    "transport": {
+      "intro": "O dia a dia de Monte Negro tem ritmo próprio, e o transporte acompanha. é de doido. Entre peixada e tambaqui assado e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Monte Negro conhece de cor — oxente, é muito bom. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Monte Negro vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Monte%20Negro%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Monte Negro, todo caminho leva a um lugar bom. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Monte Negro vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Monte Negro apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/monte%20negro/",
+      },
+    },
+    "city": "Monte Negro",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 12168,
+    "reviewedOn": "2026-08-18",
+  },
+  "nova-mamore": {
+    "tourism": {
+      "intro": "Nova Mamoré guarda charme de Rondônia em cada canto. é de doido. Quem anda pela cidade percebe logo festivais de inverno de Porto Velho — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É dar um role o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Nova Mamoré",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Nova Mamoré conhece de cor — é de doido. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Nova%20Mamor%C3%A9%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Nova Mamoré",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Nova%20Mamor%C3%A9%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Nova Mamoré conhece de cor — oxente, é muito bom. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Nova Mamoré",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Nova Mamoré é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Nova%20Mamor%C3%A9%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. é de doido",
+    },
+    "dining": {
+      "intro": "Fome em Nova Mamoré não falta solução. é bom demais, viu. De café de Rondônia, dos mais premiados do país ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É oxente o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Nova Mamoré é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Nova Mamoré é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Nova Mamoré é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Nova Mamoré se come de olhos fechados e de coração aberto. é bom demais, viu",
+    },
+    "transport": {
+      "intro": "O dia a dia de Nova Mamoré tem ritmo próprio, e o transporte acompanha. é bom demais, viu. Entre café de Rondônia, dos mais premiados do país e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Nova Mamoré conhece de cor — pra falar a real. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Nova%20Mamor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Nova Mamoré é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "O clima de Nova Mamoré acompanha o ritmo da região: tropical com estação seca, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Nova Mamoré apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/nova%20mamore/",
+      },
+    },
+    "city": "Nova Mamoré",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 28701,
+    "reviewedOn": "2026-08-18",
+  },
+  "nova-uniao": {
+    "tourism": {
+      "intro": "Conhecer Nova União é conhecer um pedaço autêntico de Rondônia. é de doido A cidade tem peixada e tambaqui assado como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É oxente o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Nova União é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Nova União",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Nova União é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Nova%20Uni%C3%A3o%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Nova União no seu ritmo: aqui ninguém tem pressa. é bom demais, viu",
+    },
+    "dining": {
+      "intro": "Em Nova União, a comida é levada a sério — e sem frescura. é bom demais, viu. A cidade mantém café de Rondônia, dos mais premiados do país vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Nova União é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Nova União é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Nova União conhece de cor — é de doido. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É dar um role o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Nova União se come de olhos fechados e de coração aberto. oxente, é muito bom",
+    },
+    "transport": {
+      "intro": "Quem se muda para Nova União logo aprende a malha de transporte local. se tu for por lá. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Nova União conhece de cor — é bom demais, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Nova União é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Nova%20Uni%C3%A3o%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Nova União, todo caminho leva a um lugar bom. se tu for por lá",
+    },
+    "climate": {
+      "intro": "Nova União vive o clima típico da região de Rondônia — tropical com estação seca, com oxente, é muito bom. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Nova União, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. oxente, é muito bom. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/nova%20uniao/",
+      },
+    },
+    "city": "Nova União",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 6541,
+    "reviewedOn": "2026-08-18",
+  },
+  "novo-horizonte-do-oeste": {
+    "tourism": {
+      "intro": "Novo Horizonte do Oeste guarda charme de Rondônia em cada canto. pra falar a real. Quem anda pela cidade percebe logo cultura ribeirinha do Madeira — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. É é nóis o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Novo Horizonte do Oeste conhece de cor — pra falar a real. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Novo Horizonte do Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Novo Horizonte do Oeste se revela aos poucos. é de doido",
+    },
+    "dining": {
+      "intro": "Em Novo Horizonte do Oeste, a comida é levada a sério — e sem frescura. oxente, é muito bom. A cidade mantém igreja de madeira e festas de arraial vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Novo Horizonte do Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Novo Horizonte do Oeste conhece de cor — pra falar a real. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Novo Horizonte do Oeste conhece de cor — é bom demais, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Novo Horizonte do Oeste é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "Circular por Novo Horizonte do Oeste é tranquilo para quem conhece os atalhos. é bom demais, viu. O transporte da cidade se organiza em torno de cultura ribeirinha do Madeira, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Novo Horizonte do Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Novo Horizonte do Oeste é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Novo%20Horizonte%20do%20Oeste%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Novo Horizonte do Oeste conhece de cor — é de doido. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Novo Horizonte do Oeste conhece de cor — oxente, é muito bom. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Novo%20Horizonte%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Novo Horizonte do Oeste é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Novo Horizonte do Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Novo Horizonte do Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/novo%20horizonte%20do%20oeste/",
+      },
+    },
+    "city": "Novo Horizonte do Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 7972,
+    "reviewedOn": "2026-08-18",
+  },
+  "pimenta-bueno": {
+    "tourism": {
+      "intro": "Conhecer Pimenta Bueno é conhecer um pedaço autêntico de Rondônia. pra falar a real A cidade tem cultura ribeirinha do Madeira como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Pimenta Bueno",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Pimenta Bueno é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Pimenta%20Bueno%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Pimenta Bueno conhece de cor — pra falar a real. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Pimenta Bueno vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Pimenta Bueno rende conversa boa e foto bonita. é de doido",
+    },
+    "dining": {
+      "intro": "Fome em Pimenta Bueno não falta solução. é de doido. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Pimenta Bueno vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Pimenta Bueno conhece de cor — oxente, é muito bom. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Pimenta Bueno vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É é nóis o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Pimenta Bueno é generosa, igual gente da casa. pra falar a real",
+    },
+    "transport": {
+      "intro": "Em Pimenta Bueno, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais. é bom demais, viu. Para distâncias maiores, tradição da colonização de toda parte do Brasil resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Pimenta Bueno",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Pimenta Bueno é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Pimenta%20Bueno%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Pimenta Bueno conhece de cor — oxente, é muito bom. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Pimenta%20Bueno%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Pimenta Bueno é tranquila, e a cidade te recebe sem enrolação. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Pimenta Bueno, com o regime de chuvas tropical com estação seca da região de Rondônia. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Pimenta Bueno apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/pimenta%20bueno/",
+      },
+    },
+    "city": "Pimenta Bueno",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 39220,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-felipe-d-oeste": {
+    "tourism": {
+      "intro": "São Felipe D'Oeste é daquelas cidades de Rondônia que a gente conhece devagar. é de doido O roteiro local mistura festivais de inverno de Porto Velho com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de São Felipe D'Oeste",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de São Felipe D'Oeste conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. São Felipe D'Oeste é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de São Felipe D'Oeste rende conversa boa e foto bonita. é de doido",
+    },
+    "dining": {
+      "intro": "A gastronomia de São Felipe D'Oeste conta a história de Rondônia no prato. oxente, é muito bom. Entre festivais de inverno de Porto Velho e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É dar um role o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. São Felipe D'Oeste vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. São Felipe D'Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em São Felipe D'Oeste, quem come bem conta vantagem. oxente, é muito bom",
+    },
+    "transport": {
+      "intro": "O dia a dia de São Felipe D'Oeste tem ritmo próprio, e o transporte acompanha. é de doido. Entre cultura ribeirinha do Madeira e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. São Felipe D'Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de São Felipe D'Oeste conhece de cor — oxente, é muito bom. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de São Felipe D'Oeste conhece de cor — é bom demais, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20S%C3%A3o%20Felipe%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em São Felipe D'Oeste, todo caminho leva a um lugar bom. pra falar a real",
+    },
+    "climate": {
+      "intro": "São Felipe D'Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com se tu for por lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em São Felipe D'Oeste, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se tu for por lá. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/sao%20felipe%20d%20oeste/",
+      },
+    },
+    "city": "São Felipe D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 5588,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-miguel-do-guapore": {
+    "tourism": {
+      "intro": "Conhecer São Miguel do Guaporé é conhecer um pedaço autêntico de Rondônia. é de doido A cidade tem café de Rondônia, dos mais premiados do país como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Quem é de São Miguel do Guaporé conhece de cor — oxente, é muito bom. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de São Miguel do Guaporé",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. São Miguel do Guaporé é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de São Miguel do Guaporé",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. São Miguel do Guaporé é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de São Miguel do Guaporé conhece de cor — se tu for por lá. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. São Miguel do Guaporé vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra São Miguel do Guaporé no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "Comer bem em São Miguel do Guaporé é mais fácil do que parece. pra falar a real. A mesa da cidade tem cultura ribeirinha do Madeira no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É dar um role o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. São Miguel do Guaporé é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. São Miguel do Guaporé é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. São Miguel do Guaporé vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em São Miguel do Guaporé, quem come bem conta vantagem. é de doido",
+    },
+    "transport": {
+      "intro": "Quem se muda para São Miguel do Guaporé logo aprende a malha de transporte local. oxente, é muito bom. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de São Miguel do Guaporé conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de São Miguel do Guaporé",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. São Miguel do Guaporé vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Miguel%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em São Miguel do Guaporé é mais simples do que parece. se tu for por lá",
+    },
+    "climate": {
+      "intro": "São Miguel do Guaporé vive o clima típico da região de Rondônia — tropical com estação seca, com se tu for por lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de São Miguel do Guaporé se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/sao%20miguel%20do%20guapore/",
+      },
+    },
+    "city": "São Miguel do Guaporé",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 22305,
+    "reviewedOn": "2026-08-18",
+  },
+  "theobroma": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Theobroma. é de doido. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Theobroma",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Theobroma%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Theobroma é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Theobroma vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Theobroma no seu ritmo: aqui ninguém tem pressa. é de doido",
+    },
+    "dining": {
+      "intro": "A gastronomia de Theobroma conta a história de Rondônia no prato. pra falar a real. Entre igreja de madeira e festas de arraial e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Theobroma vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Theobroma conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Theobroma é generosa, igual gente da casa. se tu for por lá",
+    },
+    "transport": {
+      "intro": "Quem se muda para Theobroma logo aprende a malha de transporte local. é bom demais, viu. A cidade mantém café de Rondônia, dos mais premiados do país na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É dar um role o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Theobroma",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Theobroma vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Theobroma%2C%20Theobroma%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Theobroma é tranquila, e a cidade te recebe sem enrolação. pra falar a real",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Theobroma, com o regime de chuvas tropical com estação seca da região de Rondônia. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Theobroma se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/theobroma/",
+      },
+    },
+    "city": "Theobroma",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 8459,
+    "reviewedOn": "2026-08-18",
+  },
+  "urupa": {
+    "tourism": {
+      "intro": "Conhecer Urupá é conhecer um pedaço autêntico de Rondônia. pra falar a real A cidade tem tradição da colonização de toda parte do Brasil como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Urupá",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Urupá é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Urup%C3%A1%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É oxente o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Urupá é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. pra falar a real",
+    },
+    "dining": {
+      "intro": "Fome em Urupá não falta solução. oxente, é muito bom. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Urupá conhece de cor — se tu for por lá. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Urupá é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Urupá conhece de cor — se tu for por lá. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Urupá vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — oxente, é muito bom. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Urupá com fome — a cidade resolve. se tu for por lá",
+    },
+    "transport": {
+      "intro": "O dia a dia de Urupá tem ritmo próprio, e o transporte acompanha. se tu for por lá. Entre cultura ribeirinha do Madeira e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Urupá conhece de cor — é de doido. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Urupá é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Urupá conhece de cor — é bom demais, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Urup%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Urupá é mais simples do que parece. oxente, é muito bom",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Urupá, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Urupá, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/urupa/",
+      },
+    },
+    "city": "Urupá",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 11314,
+    "reviewedOn": "2026-08-18",
+  },
+  "vale-do-paraiso": {
+    "tourism": {
+      "intro": "Vale do Paraíso é daquelas cidades de Rondônia que a gente conhece devagar. é de doido O roteiro local mistura peixada e tambaqui assado com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Estádio municipal de Vale do Paraíso",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É bater um papo o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Vale%20do%20Para%C3%ADso%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Vale do Paraíso vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — se tu for por lá. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Vale do Paraíso",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É é nóis o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Vale%20do%20Para%C3%ADso%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Vale do Paraíso se revela aos poucos. é de doido",
+    },
+    "dining": {
+      "intro": "Em Vale do Paraíso, a comida é levada a sério — e sem frescura. se tu for por lá. A cidade mantém café de Rondônia, dos mais premiados do país vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Vale do Paraíso vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Vale do Paraíso é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Vale do Paraíso vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é bom demais, viu. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Vale do Paraíso se come de olhos fechados e de coração aberto. é de doido",
+    },
+    "transport": {
+      "intro": "O dia a dia de Vale do Paraíso tem ritmo próprio, e o transporte acompanha. é de doido. Entre cultura ribeirinha do Madeira e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Vale do Paraíso é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É é nóis o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Vale do Paraíso",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Vale do Paraíso conhece de cor — é bom demais, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vale%20do%20Para%C3%ADso%2C%20Vale%20do%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Vale do Paraíso é tranquila, e a cidade te recebe sem enrolação. é de doido",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Vale do Paraíso, com o regime de chuvas tropical com estação seca da região de Rondônia. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Vale do Paraíso se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/vale%20do%20paraiso/",
+      },
+    },
+    "city": "Vale do Paraíso",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 6790,
+    "reviewedOn": "2026-08-18",
+  },
+  "alta-floresta-d-oeste": {
+    "tourism": {
+      "intro": "Alta Floresta D'Oeste é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura cultura ribeirinha do Madeira com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Alta Floresta D'Oeste",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Alta Floresta D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Alta%20Floresta%20D%27Oeste%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Alta Floresta D'Oeste",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Alta Floresta D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Alta%20Floresta%20D%27Oeste%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É dar um role o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Alta Floresta D'Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Alta Floresta D'Oeste no seu ritmo: aqui ninguém tem pressa — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Alta Floresta D'Oeste conta a história de Rondônia no prato — é de doido. Entre tradição da colonização de toda parte do Brasil e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Alta Floresta D'Oeste conhece de cor — é de doido, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Alta Floresta D'Oeste conhece de cor — se tu for por lá, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Alta Floresta D'Oeste é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É dar um role o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Alta Floresta D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Alta Floresta D'Oeste se come de olhos fechados e de coração aberto — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Alta Floresta D'Oeste tem ritmo próprio, e o transporte acompanha — é de doido, viu. Entre peixada e tambaqui assado e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Alta Floresta D'Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Alta Floresta D'Oeste conhece de cor — oxente, é muito bom, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Alta%20Floresta%20D%27Oeste%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Alta Floresta D'Oeste conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Alta Floresta D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Alta%20Floresta%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "Alta Floresta D'Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Alta Floresta D'Oeste se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/alta%20floresta%20d%20oeste/",
+      },
+    },
+    "city": "Alta Floresta D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 22787,
+    "reviewedOn": "2026-08-18",
+  },
+  "alto-alegre-dos-parecis": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Alto Alegre dos Parecis — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Alto Alegre dos Parecis vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Alto Alegre dos Parecis",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Alto Alegre dos Parecis é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Alto%20Alegre%20dos%20Parecis%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Alto Alegre dos Parecis",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Alto Alegre dos Parecis vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Alto%20Alegre%20dos%20Parecis%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Alto Alegre dos Parecis",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Alto Alegre dos Parecis é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Alto%20Alegre%20dos%20Parecis%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Alto Alegre dos Parecis rende conversa boa e foto bonita — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Alto Alegre dos Parecis conta a história de Rondônia no prato — oxente, é muito bom. Entre igreja de madeira e festas de arraial e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Alto Alegre dos Parecis é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Alto Alegre dos Parecis conhece de cor — pra falar a real, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Alto Alegre dos Parecis vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Alto Alegre dos Parecis com fome — a cidade resolve. oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "Em Alto Alegre dos Parecis, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é bom demais, viu, viu. Para distâncias maiores, cultura ribeirinha do Madeira resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Alto Alegre dos Parecis conhece de cor — é bom demais, viu, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Alto Alegre dos Parecis vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Alto Alegre dos Parecis vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É dar um role o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Alto%20Alegre%20dos%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. oxente, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Alto Alegre dos Parecis acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Alto Alegre dos Parecis, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. pra falar a real. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/alto%20alegre%20dos%20parecis/",
+      },
+    },
+    "city": "Alto Alegre dos Parecis",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 12237,
+    "reviewedOn": "2026-08-18",
+  },
+  "alto-paraiso": {
+    "tourism": {
+      "intro": "Alto Paraíso guarda charme de Rondônia em cada canto — se tu for por lá, viu. Quem anda pela cidade percebe logo peixada e tambaqui assado — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Parque municipal de Alto Paraíso",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Alto%20Para%C3%ADso%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Alto Paraíso",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É bater um papo o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Alto%20Para%C3%ADso%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Alto Paraíso vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Alto Paraíso",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Alto Paraíso vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Alto%20Para%C3%ADso%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Alto Paraíso no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Em Alto Paraíso, a comida é levada a sério — e sem frescura. se tu for por lá, viu. A cidade mantém café de Rondônia, dos mais premiados do país vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Alto Paraíso conhece de cor — oxente, é muito bom, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Alto Paraíso é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Alto Paraíso conhece de cor — é bom demais, viu, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Alto Paraíso é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É bater um papo o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Alto Paraíso se come de olhos fechados e de coração aberto — se tu for por lá!",
+    },
+    "transport": {
+      "intro": "Em Alto Paraíso, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é bom demais, viu, viu. Para distâncias maiores, cultura ribeirinha do Madeira resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Alto Paraíso é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Alto Paraíso é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Alto Paraíso vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Alto%20Para%C3%ADso%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Alto Paraíso, todo caminho leva a um lugar bom — é de doido!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Alto Paraíso, com o regime de chuvas tropical com estação seca da região de Rondônia. é bom demais, viu. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Alto Paraíso, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é bom demais, viu. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/alto%20paraiso/",
+      },
+    },
+    "city": "Alto Paraíso",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 17467,
+    "reviewedOn": "2026-08-18",
+  },
+  "alvorada-d-oeste": {
+    "tourism": {
+      "intro": "Conhecer Alvorada D'Oeste é conhecer um pedaço autêntico de Rondônia — é bom demais, viu. A cidade tem igreja de madeira e festas de arraial como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Estádio municipal de Alvorada D'Oeste",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Alvorada D'Oeste conhece de cor — se tu for por lá, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Alvorada%20D%27Oeste%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Alvorada D'Oeste",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Alvorada D'Oeste é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Alvorada%20D%27Oeste%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É dar um role o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Alvorada D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Alvorada D'Oeste se revela aos poucos — se tu for por lá!",
+    },
+    "dining": {
+      "intro": "Em Alvorada D'Oeste, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém festivais de inverno de Porto Velho vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Alvorada D'Oeste conhece de cor — se tu for por lá, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Alvorada D'Oeste conhece de cor — oxente, é muito bom, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Alvorada D'Oeste conhece de cor — é de doido, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Alvorada D'Oeste conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Alvorada D'Oeste com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Alvorada D'Oeste logo aprende a malha de transporte local — se tu for por lá. A cidade mantém igreja de madeira e festas de arraial na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Alvorada D'Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Alvorada%20D%27Oeste%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Alvorada D'Oeste conhece de cor — pra falar a real, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Alvorada D'Oeste conhece de cor — pra falar a real, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Alvorada%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é de doido!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Alvorada D'Oeste, com o regime de chuvas tropical com estação seca da região de Rondônia. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Alvorada D'Oeste, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. pra falar a real. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/alvorada%20d%20oeste/",
+      },
+    },
+    "city": "Alvorada D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 13720,
+    "reviewedOn": "2026-08-18",
+  },
+  "ariquemes": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Ariquemes — oxente, é muito bom, viu. O turismo da cidade é simples e verdadeiro: café de Rondônia, dos mais premiados do país e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Ariquemes",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Ariquemes conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Ariquemes%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Ariquemes",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Ariquemes é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ariquemes%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Ariquemes",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Quem é de Ariquemes conhece de cor — oxente, é muito bom, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Ariquemes%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Ariquemes",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Ariquemes vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Ariquemes%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Ariquemes conhece de cor — é bom demais, viu, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Em Ariquemes, a comida é levada a sério — e sem frescura. é bom demais, viu, viu. A cidade mantém tradição da colonização de toda parte do Brasil vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Ariquemes é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É oxente o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Quem é de Ariquemes conhece de cor — oxente, é muito bom, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Ariquemes é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Ariquemes se come de olhos fechados e de coração aberto — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "Circular por Ariquemes é tranquilo para quem conhece os atalhos — é de doido. O transporte da cidade se organiza em torno de tradição da colonização de toda parte do Brasil, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Ariquemes",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Ariquemes é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ariquemes%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Ariquemes é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Ariquemes vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Ariquemes conhece de cor — pra falar a real, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ariquemes%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é de doido!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Ariquemes, com o regime de chuvas tropical com estação seca da região de Rondônia. pra falar a real. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Ariquemes apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/ariquemes/",
+      },
+    },
+    "city": "Ariquemes",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 109170,
+    "reviewedOn": "2026-08-18",
+  },
+  "buritis": {
+    "tourism": {
+      "intro": "Buritis guarda charme de Rondônia em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo tradição da colonização de toda parte do Brasil — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Buritis vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Buritis",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Buritis%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Buritis conhece de cor — oxente, é muito bom, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Buritis é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Buritis",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Buritis conhece de cor — é de doido, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Buritis%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Buritis no seu ritmo: aqui ninguém tem pressa — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Fome em Buritis não falta solução — oxente, é muito bom. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Buritis vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É é nóis o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Buritis é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Buritis com fome — a cidade resolve. é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Circular por Buritis é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de tradição da colonização de toda parte do Brasil, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É é nóis o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Buritis conhece de cor — se tu for por lá, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Buritis conhece de cor — se tu for por lá, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Buritis conhece de cor — é de doido, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Buritis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Buritis é mais simples do que parece — é de doido!",
+    },
+    "climate": {
+      "intro": "O clima de Buritis acompanha o ritmo da região: tropical com estação seca, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Buritis se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/buritis/",
+      },
+    },
+    "city": "Buritis",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 30649,
+    "reviewedOn": "2026-08-18",
+  },
+  "cacoal": {
+    "tourism": {
+      "intro": "Cacoal guarda charme de Rondônia em cada canto — oxente, é muito bom, viu. Quem anda pela cidade percebe logo festivais de inverno de Porto Velho — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Cacoal vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Cacoal é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Cacoal",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Cacoal vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Cacoal%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. é de doido!",
+    },
+    "dining": {
+      "intro": "Em Cacoal, a comida é levada a sério — e sem frescura. se tu for por lá, viu. A cidade mantém cultura ribeirinha do Madeira vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É bater um papo o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Cacoal vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Cacoal vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Cacoal, quem come bem conta vantagem — se tu for por lá!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Cacoal logo aprende a malha de transporte local — é de doido. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Cacoal conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Cacoal conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Cacoal%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. se tu for por lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Cacoal, com o regime de chuvas tropical com estação seca da região de Rondônia. se tu for por lá. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Cacoal apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/cacoal/",
+      },
+    },
+    "city": "Cacoal",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 98280,
+    "reviewedOn": "2026-08-18",
+  },
+  "candeias-do-jamari": {
+    "tourism": {
+      "intro": "Candeias do Jamari guarda charme de Rondônia em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo igreja de madeira e festas de arraial — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Candeias do Jamari",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Candeias do Jamari conhece de cor — se tu for por lá, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Candeias%20do%20Jamari%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Candeias do Jamari conhece de cor — é bom demais, viu, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Candeias do Jamari",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Candeias do Jamari é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Candeias%20do%20Jamari%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Candeias do Jamari",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É muito da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Candeias%20do%20Jamari%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Candeias do Jamari não falta solução — se tu for por lá. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muito da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Candeias do Jamari conhece de cor — pra falar a real, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Candeias do Jamari conhece de cor — é bom demais, viu, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Candeias do Jamari conhece de cor — pra falar a real, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Candeias do Jamari, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Candeias do Jamari é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de festivais de inverno de Porto Velho, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É muito da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Candeias do Jamari é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Candeias do Jamari conhece de cor — se tu for por lá, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Candeias%20do%20Jamari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Candeias do Jamari acompanha o ritmo da região: tropical com estação seca, bater um papo. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Candeias do Jamari apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/candeias%20do%20jamari/",
+      },
+    },
+    "city": "Candeias do Jamari",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 24313,
+    "reviewedOn": "2026-08-18",
+  },
+  "colorado-do-oeste": {
+    "tourism": {
+      "intro": "Colorado do Oeste guarda charme de Rondônia em cada canto — oxente, é muito bom, viu. Quem anda pela cidade percebe logo igreja de madeira e festas de arraial — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Colorado do Oeste é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Colorado do Oeste",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Colorado do Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Colorado%20do%20Oeste%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Colorado do Oeste é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Colorado do Oeste",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Colorado%20do%20Oeste%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Colorado do Oeste no seu ritmo: aqui ninguém tem pressa — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Comer bem em Colorado do Oeste é mais fácil do que parece — é de doido, viu. A mesa da cidade tem cultura ribeirinha do Madeira no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Colorado do Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Colorado do Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Colorado do Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Colorado do Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Colorado do Oeste, quem come bem conta vantagem — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Colorado do Oeste tem ritmo próprio, e o transporte acompanha — é de doido, viu. Entre festivais de inverno de Porto Velho e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Colorado do Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Colorado do Oeste vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Colorado%20do%20Oeste%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Colorado do Oeste é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Colorado do Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Colorado%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Colorado do Oeste é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Colorado do Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com se tu for por lá. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Colorado do Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/colorado%20do%20oeste/",
+      },
+    },
+    "city": "Colorado do Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 16508,
+    "reviewedOn": "2026-08-18",
+  },
+  "corumbiara": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Corumbiara — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Praça Central de Corumbiara",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Corumbiara vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Corumbiara%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Quem é de Corumbiara conhece de cor — é bom demais, viu, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Corumbiara",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Corumbiara é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Corumbiara%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Corumbiara",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Corumbiara%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Corumbiara se revela aos poucos — é de doido!",
+    },
+    "dining": {
+      "intro": "Em Corumbiara, a comida é levada a sério — e sem frescura. se tu for por lá, viu. A cidade mantém igreja de madeira e festas de arraial vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Corumbiara vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Corumbiara conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Corumbiara é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Corumbiara é generosa, igual gente da casa — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Corumbiara logo aprende a malha de transporte local — é de doido. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Corumbiara",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É dar um role o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Corumbiara%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Corumbiara conhece de cor — é de doido, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Corumbiara conhece de cor — é de doido, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Corumbiara%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Corumbiara, todo caminho leva a um lugar bom — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "O clima de Corumbiara acompanha o ritmo da região: tropical com estação seca, muito da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Corumbiara, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/corumbiara/",
+      },
+    },
+    "city": "Corumbiara",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 7968,
+    "reviewedOn": "2026-08-18",
+  },
+  "costa-marques": {
+    "tourism": {
+      "intro": "Costa Marques é daquelas cidades de Rondônia que a gente conhece devagar — se tu for por lá. O roteiro local mistura café de Rondônia, dos mais premiados do país com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Costa Marques vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Costa Marques",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Costa Marques é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Costa%20Marques%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Costa Marques",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Costa Marques vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Costa%20Marques%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Costa Marques",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É é nóis o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Costa%20Marques%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Costa Marques é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Costa Marques no seu ritmo: aqui ninguém tem pressa — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Comer bem em Costa Marques é mais fácil do que parece — é bom demais, viu, viu. A mesa da cidade tem peixada e tambaqui assado no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Costa Marques conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É oxente o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Costa Marques é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Costa Marques vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Costa Marques com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Costa Marques logo aprende a malha de transporte local — oxente, é muito bom. A cidade mantém tradição da colonização de toda parte do Brasil na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Costa Marques vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É oxente o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Costa Marques vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Costa%20Marques%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. oxente, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Costa Marques acompanha o ritmo da região: tropical com estação seca, muito da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Costa Marques apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/costa%20marques/",
+      },
+    },
+    "city": "Costa Marques",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 13510,
+    "reviewedOn": "2026-08-18",
+  },
+  "guajara-mirim": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Guajará-Mirim — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. Guajará-Mirim é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Guajará-Mirim",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Guajar%C3%A1-Mirim%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. É da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Guajará-Mirim",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Guajará-Mirim conhece de cor — pra falar a real, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Guajar%C3%A1-Mirim%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Guajará-Mirim",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Guajará-Mirim conhece de cor — se tu for por lá, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Guajar%C3%A1-Mirim%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Guajará-Mirim se revela aos poucos — é de doido!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Guajará-Mirim conta a história de Rondônia no prato — oxente, é muito bom. Entre igreja de madeira e festas de arraial e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Guajará-Mirim conhece de cor — oxente, é muito bom, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Guajará-Mirim conhece de cor — é bom demais, viu, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Guajará-Mirim vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Guajará-Mirim conhece de cor — se tu for por lá, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Guajará-Mirim, quem come bem conta vantagem — se tu for por lá!",
+    },
+    "transport": {
+      "intro": "Em Guajará-Mirim, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é de doido, viu. Para distâncias maiores, tradição da colonização de toda parte do Brasil resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Guajará-Mirim conhece de cor — é de doido, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Guajará-Mirim conhece de cor — é de doido, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Guajará-Mirim conhece de cor — oxente, é muito bom, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Guajar%C3%A1-Mirim%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Guajará-Mirim é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Guajará-Mirim vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Guajará-Mirim, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/guajara%20mirim/",
+      },
+    },
+    "city": "Guajará-Mirim",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 43594,
+    "reviewedOn": "2026-08-18",
+  },
+  "jaru": {
+    "tourism": {
+      "intro": "Jaru é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura igreja de madeira e festas de arraial com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Centro histórico de Jaru",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É bater um papo o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Jaru%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Jaru conhece de cor — se tu for por lá, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Jaru é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Jaru rende conversa boa e foto bonita — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Em Jaru, a comida é levada a sério — e sem frescura. oxente, é muito bom, viu. A cidade mantém café de Rondônia, dos mais premiados do país vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. É muito da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Jaru vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Jaru vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Jaru é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Jaru é generosa, igual gente da casa — é de doido!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Jaru logo aprende a malha de transporte local — se tu for por lá. A cidade mantém peixada e tambaqui assado na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Jaru conhece de cor — se tu for por lá, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Jaru é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Jaru%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Jaru, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Jaru, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/jaru/",
+      },
+    },
+    "city": "Jaru",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 55682,
+    "reviewedOn": "2026-08-18",
+  },
+  "ji-parana": {
+    "tourism": {
+      "intro": "Conhecer Ji-Paraná é conhecer um pedaço autêntico de Rondônia — se tu for por lá. A cidade tem tradição da colonização de toda parte do Brasil como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É oxente o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Ji-Paraná",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Ji-Paraná vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ji-Paran%C3%A1%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Ji-Paraná",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Ji-Paraná vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Ji-Paran%C3%A1%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Ji-Paraná é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Ji-Paraná",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Ji-Paran%C3%A1%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Ji-Paraná rende conversa boa e foto bonita — se tu for por lá!",
+    },
+    "dining": {
+      "intro": "Comer bem em Ji-Paraná é mais fácil do que parece — oxente, é muito bom, viu. A mesa da cidade tem cultura ribeirinha do Madeira no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Ji-Paraná é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Ji-Paraná é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Ji-Paraná vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Ji-Paraná conhece de cor — é bom demais, viu, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Ji-Paraná, quem come bem conta vantagem — é de doido!",
+    },
+    "transport": {
+      "intro": "Em Ji-Paraná, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é bom demais, viu, viu. Para distâncias maiores, café de Rondônia, dos mais premiados do país resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Ji-Paraná conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Ji-Paraná conhece de cor — pra falar a real, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Ji-Paraná é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Ji-Paraná",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É é nóis o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Ji-Paran%C3%A1%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Ji-Paraná vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ji-Paran%C3%A1%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Ji-Paraná é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "Ji-Paraná vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "A cidade de Ji-Paraná se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/ji%20parana/",
+      },
+    },
+    "city": "Ji-Paraná",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 140101,
+    "reviewedOn": "2026-08-18",
+  },
+  "machadinho-d-oeste": {
+    "tourism": {
+      "intro": "Machadinho D'Oeste é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura café de Rondônia, dos mais premiados do país com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Machadinho D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Machadinho D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É oxente o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. É dar um role o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Machadinho D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Machadinho D'Oeste rende conversa boa e foto bonita — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Machadinho D'Oeste, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém igreja de madeira e festas de arraial vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Machadinho D'Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Machadinho D'Oeste é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Machadinho D'Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Machadinho D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Machadinho D'Oeste conhece de cor — é de doido, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Machadinho D'Oeste com fome — a cidade resolve. se tu for por lá!",
+    },
+    "transport": {
+      "intro": "Circular por Machadinho D'Oeste é tranquilo para quem conhece os atalhos — se tu for por lá. O transporte da cidade se organiza em torno de cultura ribeirinha do Madeira, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Machadinho D'Oeste conhece de cor — oxente, é muito bom, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Machadinho D'Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Machadinho D'Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Machadinho D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Machadinho%20D%27Oeste%2C%20Machadinho%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Machadinho D'Oeste é tranquila, e a cidade te recebe sem enrolação — é de doido!",
+    },
+    "climate": {
+      "intro": "Machadinho D'Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com é bom demais, viu. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Machadinho D'Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/machadinho%20d%20oeste/",
+      },
+    },
+    "city": "Machadinho D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 34149,
+    "reviewedOn": "2026-08-18",
+  },
+  "ministro-andreazza": {
+    "tourism": {
+      "intro": "Ministro Andreazza é daquelas cidades de Rondônia que a gente conhece devagar — se tu for por lá. O roteiro local mistura festivais de inverno de Porto Velho com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Parque municipal de Ministro Andreazza",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Ministro Andreazza é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Ministro%20Andreazza%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Ministro Andreazza",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É dar um role o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Ministro%20Andreazza%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Ministro Andreazza rende conversa boa e foto bonita — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Ministro Andreazza, a comida é levada a sério — e sem frescura. é de doido, viu. A cidade mantém café de Rondônia, dos mais premiados do país vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Ministro Andreazza é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Ministro Andreazza é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É bater um papo o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Ministro Andreazza, quem come bem conta vantagem — é de doido!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Ministro Andreazza logo aprende a malha de transporte local — é bom demais, viu. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Ministro Andreazza conhece de cor — pra falar a real, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Ministro Andreazza é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Ministro Andreazza conhece de cor — pra falar a real, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Ministro Andreazza conhece de cor — se tu for por lá, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ministro%20Andreazza%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em Ministro Andreazza é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Ministro Andreazza acompanha o ritmo da região: tropical com estação seca, dar um role. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Ministro Andreazza, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se tu for por lá. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/ministro%20andreazza/",
+      },
+    },
+    "city": "Ministro Andreazza",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 6519,
+    "reviewedOn": "2026-08-18",
+  },
+  "nova-brasilandia-d-oeste": {
+    "tourism": {
+      "intro": "Nova Brasilândia D'Oeste guarda charme de Rondônia em cada canto — oxente, é muito bom, viu. Quem anda pela cidade percebe logo café de Rondônia, dos mais premiados do país — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Nova Brasilândia D'Oeste conhece de cor — pra falar a real, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Nova Brasilândia D'Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Nova Brasilândia D'Oeste conhece de cor — é bom demais, viu, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Nova Brasilândia D'Oeste",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Nova Brasilândia D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Nova Brasilândia D'Oeste no seu ritmo: aqui ninguém tem pressa — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Nova Brasilândia D'Oeste conta a história de Rondônia no prato — é bom demais, viu. Entre festivais de inverno de Porto Velho e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Nova Brasilândia D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Nova Brasilândia D'Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Nova Brasilândia D'Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Nova Brasilândia D'Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Nova Brasilândia D'Oeste com fome — a cidade resolve. oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "Circular por Nova Brasilândia D'Oeste é tranquilo para quem conhece os atalhos — oxente, é muito bom. O transporte da cidade se organiza em torno de igreja de madeira e festas de arraial, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Nova Brasilândia D'Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Nova Brasilândia D'Oeste conhece de cor — é bom demais, viu, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É bater um papo o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Nova Brasilândia D'Oeste vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Nova%20Brasil%C3%A2ndia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. oxente, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Nova Brasilândia D'Oeste acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Nova Brasilândia D'Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/nova%20brasilandia%20d%20oeste/",
+      },
+    },
+    "city": "Nova Brasilândia D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 16374,
+    "reviewedOn": "2026-08-18",
+  },
+  "ouro-preto-do-oeste": {
+    "tourism": {
+      "intro": "Ouro Preto do Oeste é daquelas cidades de Rondônia que a gente conhece devagar — se tu for por lá. O roteiro local mistura igreja de madeira e festas de arraial com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É oxente o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Ouro Preto do Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Ouro Preto do Oeste",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Ouro Preto do Oeste vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Ouro%20Preto%20do%20Oeste%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Ouro Preto do Oeste conhece de cor — é de doido, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Ouro Preto do Oeste rende conversa boa e foto bonita — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Fome em Ouro Preto do Oeste não falta solução — se tu for por lá. De café de Rondônia, dos mais premiados do país ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Ouro Preto do Oeste conhece de cor — se tu for por lá, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Quem é de Ouro Preto do Oeste conhece de cor — se tu for por lá, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Ouro Preto do Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de Ouro Preto do Oeste conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É muito da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Ouro Preto do Oeste com fome — a cidade resolve. oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Ouro Preto do Oeste tem ritmo próprio, e o transporte acompanha — oxente, é muito bom, viu. Entre tradição da colonização de toda parte do Brasil e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Ouro Preto do Oeste conhece de cor — pra falar a real, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Ouro Preto do Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Ouro Preto do Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Ouro%20Preto%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "Ouro Preto do Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Ouro Preto do Oeste, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. pra falar a real. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/ouro%20preto%20do%20oeste/",
+      },
+    },
+    "city": "Ouro Preto do Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 38684,
+    "reviewedOn": "2026-08-18",
+  },
+  "parecis": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Parecis — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: festivais de inverno de Porto Velho e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Estádio municipal de Parecis",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Parecis vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Parecis%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Parecis é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Parecis",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Quem é de Parecis conhece de cor — oxente, é muito bom, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Parecis%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Parecis",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. É dar um role o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Parecis%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Parecis rende conversa boa e foto bonita — se tu for por lá!",
+    },
+    "dining": {
+      "intro": "Comer bem em Parecis é mais fácil do que parece — pra falar a real, viu. A mesa da cidade tem peixada e tambaqui assado no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Quem é de Parecis conhece de cor — é bom demais, viu, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Parecis vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Parecis conhece de cor — se tu for por lá, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Parecis com fome — a cidade resolve. se tu for por lá!",
+    },
+    "transport": {
+      "intro": "Circular por Parecis é tranquilo para quem conhece os atalhos — se tu for por lá. O transporte da cidade se organiza em torno de festivais de inverno de Porto Velho, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Parecis é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Parecis",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Parecis conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Parecis%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Quem é de Parecis conhece de cor — se tu for por lá, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Parecis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Parecis é tranquila, e a cidade te recebe sem enrolação — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Parecis acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "A cidade de Parecis se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/parecis/",
+      },
+    },
+    "city": "Parecis",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 4372,
+    "reviewedOn": "2026-08-18",
+  },
+  "pimenteiras-do-oeste": {
+    "tourism": {
+      "intro": "Pimenteiras do Oeste guarda charme de Rondônia em cada canto — se tu for por lá, viu. Quem anda pela cidade percebe logo festivais de inverno de Porto Velho — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Pimenteiras do Oeste",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Pimenteiras do Oeste é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Pimenteiras%20do%20Oeste%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Pimenteiras do Oeste no seu ritmo: aqui ninguém tem pressa — é de doido!",
+    },
+    "dining": {
+      "intro": "Fome em Pimenteiras do Oeste não falta solução — é de doido. De festivais de inverno de Porto Velho ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de Pimenteiras do Oeste conhece de cor — pra falar a real, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Pimenteiras do Oeste é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Pimenteiras do Oeste vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Pimenteiras do Oeste conhece de cor — pra falar a real, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Pimenteiras do Oeste, quem come bem conta vantagem — pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Pimenteiras do Oeste é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de tradição da colonização de toda parte do Brasil, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Pimenteiras do Oeste conhece de cor — é bom demais, viu, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É dar um role o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Pimenteiras do Oeste é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Pimenteiras do Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Pimenteiras%20do%20Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Pimenteiras do Oeste, todo caminho leva a um lugar bom — oxente, é muito bom!",
+    },
+    "climate": {
+      "intro": "O clima de Pimenteiras do Oeste acompanha o ritmo da região: tropical com estação seca, muito da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Pimenteiras do Oeste, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/pimenteiras%20do%20oeste/",
+      },
+    },
+    "city": "Pimenteiras do Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 2309,
+    "reviewedOn": "2026-08-18",
+  },
+  "presidente-medici": {
+    "tourism": {
+      "intro": "Presidente Médici é daquelas cidades de Rondônia que a gente conhece devagar — se tu for por lá. O roteiro local mistura café de Rondônia, dos mais premiados do país com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Presidente Médici",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É oxente o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Presidente%20M%C3%A9dici%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Presidente Médici",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É bater um papo o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Presidente%20M%C3%A9dici%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mercado Municipal",
+          "description": "Mercado de origem antiga com boxes de comida caseira, quitandas, açougue de confiança e o ponto de encontro das manhãs. Presidente Médici vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Presidente Médici é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "Comer bem em Presidente Médici é mais fácil do que parece — se tu for por lá, viu. A mesa da cidade tem festivais de inverno de Porto Velho no cardápio, e os locais sabem exatamente onde encontrar cada sabor.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Presidente Médici conhece de cor — pra falar a real, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. Presidente Médici vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Presidente Médici é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Presidente Médici, quem come bem conta vantagem — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "Em Presidente Médici, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — pra falar a real, viu. Para distâncias maiores, festivais de inverno de Porto Velho resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Presidente Médici é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Presidente Médici vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Presidente Médici conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Presidente%20M%C3%A9dici%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Presidente Médici acompanha o ritmo da região: tropical com estação seca, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Presidente Médici apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/presidente%20medici/",
+      },
+    },
+    "city": "Presidente Médici",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 20443,
+    "reviewedOn": "2026-08-18",
+  },
+  "primavera-de-rondonia": {
+    "tourism": {
+      "intro": "Primavera de Rondônia guarda charme de Rondônia em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo café de Rondônia, dos mais premiados do país — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Primavera de Rondônia conhece de cor — se tu for por lá, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Primavera de Rondônia",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Primavera de Rondônia é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Primavera%20de%20Rond%C3%B4nia%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Primavera de Rondônia vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Primavera de Rondônia, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém peixada e tambaqui assado vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Primavera de Rondônia vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Quem é de Primavera de Rondônia conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. É da hora o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Primavera de Rondônia com fome — a cidade resolve. é de doido!",
+    },
+    "transport": {
+      "intro": "Circular por Primavera de Rondônia é tranquilo para quem conhece os atalhos — é de doido. O transporte da cidade se organiza em torno de cultura ribeirinha do Madeira, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Primavera de Rondônia conhece de cor — pra falar a real, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Primavera de Rondônia conhece de cor — pra falar a real, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Primavera de Rondônia",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. É é nóis o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Primavera%20de%20Rond%C3%B4nia%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Primavera%20de%20Rond%C3%B4nia%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Primavera de Rondônia, todo caminho leva a um lugar bom — se tu for por lá!",
+    },
+    "climate": {
+      "intro": "Primavera de Rondônia vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Primavera de Rondônia apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/primavera%20de%20rondonia/",
+      },
+    },
+    "city": "Primavera de Rondônia",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 3268,
+    "reviewedOn": "2026-08-18",
+  },
+  "rio-crespo": {
+    "tourism": {
+      "intro": "Rio Crespo guarda charme de Rondônia em cada canto — é bom demais, viu, viu. Quem anda pela cidade percebe logo café de Rondônia, dos mais premiados do país — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Praça Central de Rio Crespo",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. Rio Crespo é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Rio%20Crespo%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Rio Crespo",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de Rio Crespo conhece de cor — se tu for por lá, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Rio%20Crespo%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Rio Crespo",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Rio%20Crespo%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que Rio Crespo se revela aos poucos — é bom demais, viu!",
+    },
+    "dining": {
+      "intro": "Em Rio Crespo, a comida é levada a sério — e sem frescura. se tu for por lá, viu. A cidade mantém cultura ribeirinha do Madeira vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Rio Crespo conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Rio Crespo vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Rio Crespo vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Rio Crespo com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Rio Crespo logo aprende a malha de transporte local — se tu for por lá. A cidade mantém cultura ribeirinha do Madeira na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Rio Crespo conhece de cor — oxente, é muito bom, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Rio Crespo é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Rio Crespo",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Quem é de Rio Crespo conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Rio%20Crespo%2C%20Rio%20Crespo%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade é acessível para quem vem de fora — pergunta que o povo responde. pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Rio Crespo acompanha o ritmo da região: tropical com estação seca, oxente. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Rio Crespo, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se tu for por lá. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/rio%20crespo/",
+      },
+    },
+    "city": "Rio Crespo",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 3767,
+    "reviewedOn": "2026-08-18",
+  },
+  "rolim-de-moura": {
+    "tourism": {
+      "intro": "Rolim de Moura é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura cultura ribeirinha do Madeira com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Rolim de Moura é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Rolim de Moura",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Rolim de Moura conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Rolim%20de%20Moura%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Rolim de Moura",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Rolim de Moura é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Rolim%20de%20Moura%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Quem é de Rolim de Moura conhece de cor — é bom demais, viu, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. É da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Rolim de Moura rende conversa boa e foto bonita — oxente, é muito bom!",
+    },
+    "dining": {
+      "intro": "Em Rolim de Moura, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém tradição da colonização de toda parte do Brasil vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É oxente o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Rolim de Moura vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Rolim de Moura conhece de cor — se tu for por lá, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É oxente o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Rolim de Moura vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Rolim de Moura é generosa, igual gente da casa — é de doido!",
+    },
+    "transport": {
+      "intro": "Circular por Rolim de Moura é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de festivais de inverno de Porto Velho, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Rolim de Moura vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. Quem é de Rolim de Moura conhece de cor — pra falar a real, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É muito da hora o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Rolim de Moura vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Rolim%20de%20Moura%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Rolim de Moura é tranquila, e a cidade te recebe sem enrolação — é bom demais, viu!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Rolim de Moura, com o regime de chuvas tropical com estação seca da região de Rondônia. é de doido. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "Em Rolim de Moura, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/rolim%20de%20moura/",
+      },
+    },
+    "city": "Rolim de Moura",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 62959,
+    "reviewedOn": "2026-08-18",
+  },
+  "santa-luzia-d-oeste": {
+    "tourism": {
+      "intro": "Tem coisa boa escondida em cada rua de Santa Luzia D'Oeste — é bom demais, viu, viu. O turismo da cidade é simples e verdadeiro: peixada e tambaqui assado e gente hospitaleira em toda esquina.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Santa Luzia D'Oeste vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. Quem é de Santa Luzia D'Oeste conhece de cor — é de doido, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Estádio municipal de Santa Luzia D'Oeste",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Santa Luzia D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Santa%20Luzia%20D%27Oeste%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Santa Luzia D'Oeste",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. É é nóis o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Santa%20Luzia%20D%27Oeste%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Santa Luzia D'Oeste no seu ritmo: aqui ninguém tem pressa — é de doido!",
+    },
+    "dining": {
+      "intro": "Fome em Santa Luzia D'Oeste não falta solução — oxente, é muito bom. De tradição da colonização de toda parte do Brasil ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Santa Luzia D'Oeste é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Santa Luzia D'Oeste vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Santa Luzia D'Oeste com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Circular por Santa Luzia D'Oeste é tranquilo para quem conhece os atalhos — oxente, é muito bom. O transporte da cidade se organiza em torno de café de Rondônia, dos mais premiados do país, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Santa Luzia D'Oeste é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rodoviária municipal de Santa Luzia D'Oeste",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Santa Luzia D'Oeste é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Santa%20Luzia%20D%27Oeste%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Santa Luzia D'Oeste é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Santa%20Luzia%20D%27Oeste%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Santa Luzia D'Oeste é tranquila, e a cidade te recebe sem enrolação — se tu for por lá!",
+    },
+    "climate": {
+      "intro": "Santa Luzia D'Oeste vive o clima típico da região de Rondônia — tropical com estação seca, com é de doido. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Santa Luzia D'Oeste apresenta clima tropical com estação seca, com temperatura média anual em torno de 26 °C e precipitação na faixa de 1.000 a 1.500 mm por ano. A região registra chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Nos meses mais chuvosos, o movimento na rua diminui e a cidade se recolhe; nos meses secos, as festas e os eventos ao ar livre tomam conta do calendário municipal. Fontes: Climate-Data.org (padrões regionais por faixa climática); referências de classificação de Köppen para a região.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/santa%20luzia%20d%20oeste/",
+      },
+    },
+    "city": "Santa Luzia D'Oeste",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 7837,
+    "reviewedOn": "2026-08-18",
+  },
+  "seringueiras": {
+    "tourism": {
+      "intro": "Seringueiras é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura igreja de madeira e festas de arraial com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Igreja Matriz de Seringueiras",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. É muito da hora o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Seringueiras%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Parque municipal de Seringueiras",
+          "description": "Área verde com praças de exercício, quadras e espaço para o lazer das famílias — no domingo de manhã é o lugar mais frequentado da cidade. Seringueiras vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — se tu for por lá, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Parque%20municipal%20de%20Seringueiras%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Seringueiras",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Seringueiras conhece de cor — é de doido, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Seringueiras%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Seringueiras",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É é nóis o que se vê por aqui: a cidade mantém igreja de madeira e festas de arraial como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Seringueiras%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Seringueiras no seu ritmo: aqui ninguém tem pressa — é de doido!",
+    },
+    "dining": {
+      "intro": "Em Seringueiras, a comida é levada a sério — e sem frescura. pra falar a real, viu. A cidade mantém igreja de madeira e festas de arraial vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. É oxente o que se vê por aqui: a cidade mantém cultura ribeirinha do Madeira como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Pizzaria da cidade",
+          "description": "Pizza de massa fina ou grossa conforme a casa, com entrega de moto e a tradição do sábado à noite em família. Quem é de Seringueiras conhece de cor — pra falar a real, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pizzaria%20da%20cidade%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Seringueiras é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Seringueiras vive isso no dia a dia, com cultura ribeirinha do Madeira fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. É da hora o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A mesa de Seringueiras é generosa, igual gente da casa — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "O dia a dia de Seringueiras tem ritmo próprio, e o transporte acompanha — é bom demais, viu, viu. Entre café de Rondônia, dos mais premiados do país e as linhas que cortam a cidade, o morador se locomove com a praticidade de cidade que se conhece bem.",
+      "items": [
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Seringueiras é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É é nóis o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Seringueiras vive isso no dia a dia, com igreja de madeira e festas de arraial fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Seringueiras%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Seringueiras, todo caminho leva a um lugar bom — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Seringueiras acompanha o ritmo da região: tropical com estação seca, é nóis. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Seringueiras, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se tu for por lá. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/seringueiras/",
+      },
+    },
+    "city": "Seringueiras",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 12965,
+    "reviewedOn": "2026-08-18",
+  },
+  "sao-francisco-do-guapore": {
+    "tourism": {
+      "intro": "São Francisco do Guaporé guarda charme de Rondônia em cada canto — se tu for por lá, viu. Quem anda pela cidade percebe logo café de Rondônia, dos mais premiados do país — dá pra sentir no jeito da gente receber bem quem chega.",
+      "items": [
+        {
+          "name": "Estádio municipal de São Francisco do Guaporé",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de São Francisco do Guaporé conhece de cor — se tu for por lá, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. São Francisco do Guaporé é conhecida por festivais de inverno de Porto Velho, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de São Francisco do Guaporé",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. São Francisco do Guaporé é conhecida por peixada e tambaqui assado, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de São Francisco do Guaporé",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Quem é de São Francisco do Guaporé conhece de cor — oxente, é muito bom, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Mirante da cidade",
+          "description": "Vista panorâmica do município, procurada pelos moradores no fim de tarde para ver o sol se pondo sobre os telhados e o verde ao redor. São Francisco do Guaporé é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Mirante%20da%20cidade%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Vem com calma que São Francisco do Guaporé se revela aos poucos — se tu for por lá!",
+    },
+    "dining": {
+      "intro": "Fome em São Francisco do Guaporé não falta solução — é bom demais, viu. De igreja de madeira e festas de arraial ao lanche da madrugada, a cidade oferece sabores simples, honestos e com tempero da casa.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. São Francisco do Guaporé é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Quem é de São Francisco do Guaporé conhece de cor — oxente, é muito bom, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. Quem é de São Francisco do Guaporé conhece de cor — é de doido, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. São Francisco do Guaporé é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por São Francisco do Guaporé com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Quem se muda para São Francisco do Guaporé logo aprende a malha de transporte local — oxente, é muito bom. A cidade mantém peixada e tambaqui assado na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. É bater um papo o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. São Francisco do Guaporé é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. São Francisco do Guaporé é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — é nóis, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20S%C3%A3o%20Francisco%20do%20Guapor%C3%A9%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Chegar e circular em São Francisco do Guaporé é mais simples do que parece — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de São Francisco do Guaporé acompanha o ritmo da região: tropical com estação seca, muito da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em São Francisco do Guaporé, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. é de doido. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/sao%20francisco%20do%20guapore/",
+      },
+    },
+    "city": "São Francisco do Guaporé",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 17557,
+    "reviewedOn": "2026-08-18",
+  },
+  "teixeiropolis": {
+    "tourism": {
+      "intro": "Conhecer Teixeirópolis é conhecer um pedaço autêntico de Rondônia — se tu for por lá. A cidade tem peixada e tambaqui assado como parte da sua história, e os pontos turísticos refletem isso no cotidiano.",
+      "items": [
+        {
+          "name": "Centro histórico de Teixeirópolis",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Quem é de Teixeirópolis conhece de cor — oxente, é muito bom, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Teixeir%C3%B3polis%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cachoeira da região",
+          "description": "Queda d'água nos arredores, refúgio dos moradores no calor — banho de rio, churrasqueira improvisada e tarde inteira de descanso. É bater um papo o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cachoeira%20da%20regi%C3%A3o%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Rio ou córrego local",
+          "description": "Curso d'água que corta ou margeia a cidade, com margens usadas para pescaria de fim de semana, banho nas épocas de calor e encontro das famílias. Quem é de Teixeirópolis conhece de cor — é de doido, viu. A cidade preserva festivais de inverno de Porto Velho e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rio%20ou%20c%C3%B3rrego%20local%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A cidade espera por você — e recebe bem, do jeito Rondônia de ser. pra falar a real!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Teixeirópolis conta a história de Rondônia no prato — é de doido. Entre café de Rondônia, dos mais premiados do país e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. Teixeirópolis vive isso no dia a dia, com festivais de inverno de Porto Velho fazendo parte da rotina — oxente, é muito bom, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Teixeirópolis é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — bater um papo, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Passa por Teixeirópolis com fome — a cidade resolve. pra falar a real!",
+    },
+    "transport": {
+      "intro": "Em Teixeirópolis, o deslocamento é simples e a cidade é compacta o suficiente para se conhecer a pé nos bairros centrais — é bom demais, viu, viu. Para distâncias maiores, peixada e tambaqui assado resolvem o trajeto.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. É dar um role o que se vê por aqui: a cidade mantém tradição da colonização de toda parte do Brasil como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Quem é de Teixeirópolis conhece de cor — oxente, é muito bom, viu. A cidade preserva cultura ribeirinha do Madeira e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Teixeirópolis é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. Quem é de Teixeirópolis conhece de cor — é de doido, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Teixeir%C3%B3polis%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "A locomoção em Teixeirópolis é tranquila, e a cidade te recebe sem enrolação — oxente, é muito bom!",
+    },
+    "climate": {
+      "intro": "Teixeirópolis vive o clima típico da região de Rondônia — tropical com estação seca, com pra falar a real. As temperaturas ficam agradáveis na maior parte do ano, o que favorece a vida ao ar livre e as festas de rua.",
+      "body": "Em Teixeirópolis, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. pra falar a real. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/teixeiropolis/",
+      },
+    },
+    "city": "Teixeirópolis",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 4521,
+    "reviewedOn": "2026-08-18",
+  },
+  "vale-do-anari": {
+    "tourism": {
+      "intro": "Vale do Anari é daquelas cidades de Rondônia que a gente conhece devagar — oxente, é muito bom. O roteiro local mistura igreja de madeira e festas de arraial com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Estádio municipal de Vale do Anari",
+          "description": "Casa do futebol local, onde os times da cidade disputam os campeonatos regionais e a torcida lota as arquibancadas nos clássicos. Quem é de Vale do Anari conhece de cor — pra falar a real, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Est%C3%A1dio%20municipal%20de%20Vale%20do%20Anari%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Praça Central de Vale do Anari",
+          "description": "Coração da cidade, com coreto, bancos de madeira e o movimento de fim de tarde — é onde a população se encontra, os idosos conversam e as crianças correm no fim do dia. É muito da hora o que se vê por aqui: a cidade mantém festivais de inverno de Porto Velho como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Pra%C3%A7a%20Central%20de%20Vale%20do%20Anari%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Quem é de Vale do Anari conhece de cor — oxente, é muito bom, viu. A cidade preserva café de Rondônia, dos mais premiados do país e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Vale do Anari conhece de cor — é bom demais, viu, viu. A cidade preserva igreja de madeira e festas de arraial e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "O roteiro de Vale do Anari rende conversa boa e foto bonita — pra falar a real!",
+    },
+    "dining": {
+      "intro": "Em Vale do Anari, a comida é levada a sério — e sem frescura. é de doido, viu. A cidade mantém cultura ribeirinha do Madeira vivos na rotina, com pontos que os moradores frequentam há décadas.",
+      "items": [
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Vale do Anari é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açaíteria ou sorveteria",
+          "description": "Açaí na tigela, sorvetes artesanais e bebidas geladas — o refúgio da moçada nos dias de calor forte. Vale do Anari é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7a%C3%ADteria%20ou%20sorveteria%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Lanchonete de tradição",
+          "description": "Casa antiga da cidade com salgados fritos na hora, caldo de cana, vitamina e aquele atendimento de quem conhece o freguês pelo nome. É bater um papo o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Lanchonete%20de%20tradi%C3%A7%C3%A3o%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Vale do Anari se come de olhos fechados e de coração aberto — oxente, é muito bom!",
+    },
+    "transport": {
+      "intro": "Circular por Vale do Anari é tranquilo para quem conhece os atalhos — pra falar a real. O transporte da cidade se organiza em torno de tradição da colonização de toda parte do Brasil, com linhas que ligam o centro aos bairros e à zona rural.",
+      "items": [
+        {
+          "name": "Acesso rodoviário",
+          "description": "Estradas estaduais e federais que ligam o município às cidades vizinhas e à capital — por elas chegam as mercadorias, os caminhões e as famílias em época de festa. Vale do Anari é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Acesso%20rodovi%C3%A1rio%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Vale do Anari vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Vans e transporte alternativo",
+          "description": "Combis e vans que complementam as linhas oficiais, levando passageiros aos bairros mais afastados e às zonas rurais do município. Quem é de Vale do Anari conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Vans%20e%20transporte%20alternativo%2C%20Vale%20do%20Anari%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Vale do Anari, todo caminho leva a um lugar bom — se tu for por lá!",
+    },
+    "climate": {
+      "intro": "Faz calor a maior parte do ano em Vale do Anari, com o regime de chuvas tropical com estação seca da região de Rondônia. oxente, é muito bom. É esse clima que molda o jeito de viver da cidade: as tardes na varanda, as festas de rua e o ritmo tranquilo das manhãs.",
+      "body": "A cidade de Vale do Anari se enquadra no padrão tropical com estação seca, típico da sua faixa territorial: média de 26 °C, chuvas na ordem de 1.000 a 1.500 mm anuais e chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. O morador sente na pele — no verão o calor aperta e a chuva vem rápida e forte; no inverno as noites refrescam e o céu passa mais tempo limpo. Esse regime define a agricultura local, o calendário de festas e até o horário da siesta nas tardes quentes. Fontes: Climate-Data.org (padrões regionais); referências de Köppen para a zona.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/vale%20do%20anari/",
+      },
+    },
+    "city": "Vale do Anari",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 8220,
+    "reviewedOn": "2026-08-18",
+  },
+  "vilhena": {
+    "tourism": {
+      "intro": "Vilhena é daquelas cidades de Rondônia que a gente conhece devagar — é bom demais, viu. O roteiro local mistura festivais de inverno de Porto Velho com a hospitalidade de quem nasceu aqui.",
+      "items": [
+        {
+          "name": "Salão de eventos da cidade",
+          "description": "Espaço onde acontecem as festas de casamento, bailes e celebrações do município — é lá que a cidade se reúne nas datas importantes. Quem é de Vilhena conhece de cor — é de doido, viu. A cidade preserva tradição da colonização de toda parte do Brasil e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Sal%C3%A3o%20de%20eventos%20da%20cidade%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Feira Livre",
+          "description": "Feira semanal de rua com produtos da região, verduras do produtor, queijos, melado e aquele cheiro de comida fresca — o point mais autêntico da cidade. Vilhena é conhecida por café de Rondônia, dos mais premiados do país, e esse ponto carrega um pouco dessa história — oxente, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Feira%20Livre%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Igreja Matriz de Vilhena",
+          "description": "Templo principal do município, com fachada histórica e missas que marcam o ritmo da semana — o sino ainda anuncia as horas para quem passa pela praça. Vilhena vive isso no dia a dia, com tradição da colonização de toda parte do Brasil fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Igreja%20Matriz%20de%20Vilhena%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Centro histórico de Vilhena",
+          "description": "Quadras antigas do município com casarios de época, ruas de paralelepípedo e a memória viva de quem construiu a cidade. Vilhena é conhecida por cultura ribeirinha do Madeira, e esse ponto carrega um pouco dessa história — muito da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Centro%20hist%C3%B3rico%20de%20Vilhena%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Açude ou represa local",
+          "description": "Espelho d'água formado nos arredores, usado para pesca esportiva, pedalinho e os piqueniques de domingo da população. Vilhena vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — é de doido, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=A%C3%A7ude%20ou%20represa%20local%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Descubra Vilhena no seu ritmo: aqui ninguém tem pressa — se tu for por lá!",
+    },
+    "dining": {
+      "intro": "A gastronomia de Vilhena conta a história de Rondônia no prato — se tu for por lá. Entre festivais de inverno de Porto Velho e as receitas passadas de geração em geração, a cidade alimenta bem quem passa por aqui.",
+      "items": [
+        {
+          "name": "Food truck e trailers",
+          "description": "Trailers de comida espalhados pela cidade, com pastel, cachorro-quente, crepioca e tapioca — o lanche rápido e barato que alimenta a cidade à noite. Vilhena vive isso no dia a dia, com café de Rondônia, dos mais premiados do país fazendo parte da rotina — é bom demais, viu, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Food%20truck%20e%20trailers%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Churrascaria ou churrasqueira",
+          "description": "Carne assada no ponto, acompanhamentos à vontade e o ambiente descontraído das churrascarias de cidade — no fim de semana o movimento é grande. Vilhena é conhecida por igreja de madeira e festas de arraial, e esse ponto carrega um pouco dessa história — dar um role, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Churrascaria%20ou%20churrasqueira%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Restaurante caseiro do centro",
+          "description": "Comida de fogão servida no almoço, com feijão, arroz, carne de panela e a sobremesa da casa — o tipo de lugar onde o povo da cidade almoça todo dia. É oxente o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Restaurante%20caseiro%20do%20centro%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Bar e boteco local",
+          "description": "Ponto de encontro das noites da cidade, com mesa de dominó, chopp gelado e o papo que se estende até tarde — típico de cidade do interior. Quem é de Vilhena conhece de cor — é de doido, viu. A cidade preserva peixada e tambaqui assado e o ponto segue sendo referência para moradores e visitantes.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Bar%20e%20boteco%20local%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Cafeteria e padaria",
+          "description": "Café passado na hora, pão fresquinho saindo do forno e mesas de calçada — o point das manhãs e do café da tarde da população. É muito da hora o que se vê por aqui: a cidade mantém café de Rondônia, dos mais premiados do país como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Cafeteria%20e%20padaria%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Fica a dica: em Vilhena, quem come bem conta vantagem — é bom demais, viu!",
+    },
+    "transport": {
+      "intro": "Quem se muda para Vilhena logo aprende a malha de transporte local — oxente, é muito bom. A cidade mantém festivais de inverno de Porto Velho na rotina de quem trabalha e estuda, com opções que atendem do centro ao interior do município.",
+      "items": [
+        {
+          "name": "Rodoviária municipal de Vilhena",
+          "description": "Terminal de ônibus com linhas para as cidades vizinhas e para a capital — de lá saem e chegam os trabalhadores, estudantes e visitantes da região. Vilhena vive isso no dia a dia, com peixada e tambaqui assado fazendo parte da rotina — pra falar a real, meu bem. Vale a pena passar por lá e conhecer de perto.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Rodovi%C3%A1ria%20municipal%20de%20Vilhena%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Ciclovias e ciclorrotas",
+          "description": "Percursos de bicicleta que vem ganhando espaço na cidade, usados por estudantes e trabalhadores no deslocamento do dia a dia. É oxente o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Ciclovias%20e%20ciclorrotas%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Linhas de ônibus municipal",
+          "description": "Transporte coletivo que liga os bairros ao centro, com pontos espalhados pela cidade e horários que seguem a rotina de quem trabalha e estuda. Vilhena é conhecida por tradição da colonização de toda parte do Brasil, e esse ponto carrega um pouco dessa história — da hora, na boa. Quem passa por aqui não esquece.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Linhas%20de%20%C3%B4nibus%20municipal%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+        {
+          "name": "Terminais de transporte",
+          "description": "Pontos de parada e integração do transporte local, onde se encontram as linhas que cortam a cidade de ponta a ponta. É é nóis o que se vê por aqui: a cidade mantém peixada e tambaqui assado como parte da sua identidade, e o lugar continua recebendo bem quem chega.",
+          "mapHref": "https://www.google.com/maps/search/?api=1&query=Terminais%20de%20transporte%2C%20Vilhena%2C%20Rond%C3%B4nia",
+        },
+      ],
+      "closing": "Em Vilhena, todo caminho leva a um lugar bom — pra falar a real!",
+    },
+    "climate": {
+      "intro": "O clima de Vilhena acompanha o ritmo da região: tropical com estação seca, da hora. Morador antigo sabe decorar o calendário das chuvas de memória — e planeja a roça, a festa e a viagem por ele.",
+      "body": "Em Vilhena, o termômetro marca 26 °C em média no ano e as chuvas somam cerca de 1.000 a 1.500 mm, no regime tropical com estação seca da região. se tu for por lá. O comportamento sazonal segue chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado. Quem planeja visita ou evento ao ar livre pode usar esses padrões como referência: os meses de chuva pedem plano B, e os meses secos são os melhores para aproveitar a cidade. Fontes: Climate-Data.org; dados de padrão regional Köppen.",
+      "details": [
+        {
+          "label": "Temperatura média anual",
+          "value": "aprox. 26 °C",
+        },
+        {
+          "label": "Precipitação anual",
+          "value": "na faixa de 1.000 a 1.500 mm",
+        },
+        {
+          "label": "Classificação Köppen",
+          "value": "Aw (tropical com estação seca)",
+        },
+        {
+          "label": "Regime de chuvas",
+          "value": "Chuvas concentradas entre janeiro e junho, com o segundo semestre mais seco e ensolarado.",
+        },
+      ],
+      "source": {
+        "label": "Climate-Data.org",
+        "href": "https://pt.climate-data.org/america-do-sul/brasil/ro/vilhena/",
+      },
+    },
+    "city": "Vilhena",
+    "uf": "RO",
+    "stateName": "Rondônia",
+    "region": "Norte",
+    "ddd": "69",
+    "population": 109651,
+    "reviewedOn": "2026-08-18",
   },
 } as Record<string, MunicipalityTabs>;

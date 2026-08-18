@@ -361,3 +361,12 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [ ] Investigar recusa de indexação em tempo real (live test no GSC após propagação dos redirects)
 - [x] Validar sitemap.xml e robots.txt em produção (meuddd.com.br) — sitemaps dinâmicos com lastmod/changefreq/priority implementados; robots.txt aponta /sitemap.xml
 - [x] Publicar correções, commitar e informar utilizador
+
+## Geração regionalizada das 5.570 fichas (opção B humanizada, sem LLM — 18/08)
+- [ ] Criar biblioteca de vozes regionais: perfis linguísticos por estado/região (gírias, expressões, costumes, marcas de oralidade)
+- [ ] Implementar motor editorial determinístico com variação estrutural anti-padrão (rotações de abertura, transições, fechos; nunca repetir estrutura)
+- [ ] Dados reais por município: clima Köppen por zona lat/lng, população, DDD, pontos turísticos/gastronomia/transporte parametrizados + links Google Maps
+- [ ] Gerar fichas em massa para as 27 UFs (dedup: manter as 111 fichas LLM já geradas)
+- [ ] Validar amostras: variação regional, densidade de texto, ausência de padrão IA detectável
+- [ ] Integrar com scripts/integrateTabs.mts, testar (SSR, 99+ testes, TypeScript, build) e publicar
+- [ ] Report de cobertura ao utilizador
