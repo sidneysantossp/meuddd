@@ -368,3 +368,8 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Validar amostras: variação regional, densidade de texto, ausência de padrão IA detectável
 - [x] Integrar com scripts/integrateTabs.mts, testar (SSR, 99+ testes, TypeScript, build) e publicar
 - [x] Report de cobertura ao utilizador
+
+## Correção de memória em produção (18/08 — deploy falhou: 528 MiB > limite 512 MiB)
+- [x] Diagnosticar consumo: bundle Express (dist/index.js) inline com os 27 módulos UF (53 MB TS) + 27 cópias .json redundantes (53 MB) em shared/localityTabs — esbuild resolveu o glob import dynamic em localityTabs/index.ts
+- [x] Reduzir memória: removidos os .json redundantes; scripts/tabsExternalPlugin.mjs + scripts/buildServer.mjs externalizam os UF modules do bundle Express (lazy load dos dist/server/tabs/*.cjs via createRequire); lookup.ts reescrito com createRequire(import.meta.url). Bundle 94→58 MB, RSS produção 467→232 MB (nota: --minify foi testado e revertido — piorou para 760 MB)
+- [ ] Validar deploy em produção (health check TCP OK, /cidade/:uf/:slug com tabs) e checkpoint

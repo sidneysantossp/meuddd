@@ -32,10 +32,12 @@ describe("configuração de publicação Vercel", () => {
     expect(config.framework).toBe("express");
     expect(config.buildCommand).toBe("pnpm run build:vercel");
     expect(packageJson.scripts.build).toContain("--outDir ../dist/server");
-    expect(packageJson.scripts.build).toContain(
-      "esbuild server/vercel.handler.ts"
+    expect(packageJson.scripts.build).toContain("node scripts/buildServer.mjs");
+    const buildServer = fs.readFileSync(
+      path.join(projectRoot, "scripts/buildServer.mjs"),
+      "utf8"
     );
-    expect(packageJson.scripts.build).toContain("dist/vercel/handler.js");
+    expect(buildServer).toContain("dist/vercel/handler.js");
     expect(config.functions["server.ts"].includeFiles).toBe("dist/**");
     expect(serverEntry).toContain('import express from "express"');
     expect(serverEntry).toContain(
