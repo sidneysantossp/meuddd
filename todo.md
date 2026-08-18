@@ -353,3 +353,11 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Criar dashboard /admin com KPIs: pesquisas sem resultados por período/UF, volume de sugestões pendentes/aprovadas/rejeitadas, cobertura de fichas editoriais (111/5571), top termos, tendências
 - [x] Proteger /admin por papel admin e validar testes + build
 - [x] Agendar verificação diária de quota LLM com retoma automática (generateTabsNative.py --all)
+
+## Diagnóstico Search Console 404/indexação (pedido do utilizador, 17/08)
+- [ ] Analisar Consultas.csv e Páginas.csv do GSC enviados pelo utilizador
+- [ ] Reproduzir o 404 em /cidade/goias/goias e identificar padrão de URLs com erro
+- [ ] Corrigir causas de 404 (rotas, slugs, redirecionamentos)
+- [ ] Investigar recusa de indexação em tempo real (live test)
+- [ ] Validar sitemap.xml e robots.txt em produção (meuddd.com.br)
+- [ ] Publicar correções, commitar e informar utilizador
