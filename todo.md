@@ -355,9 +355,9 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Agendar verificação diária de quota LLM com retoma automática (generateTabsNative.py --all)
 
 ## Diagnóstico Search Console 404/indexação (pedido do utilizador, 17/08)
-- [ ] Analisar Consultas.csv e Páginas.csv do GSC enviados pelo utilizador
-- [ ] Reproduzir o 404 em /cidade/goias/goias e identificar padrão de URLs com erro
-- [ ] Corrigir causas de 404 (rotas, slugs, redirecionamentos)
-- [ ] Investigar recusa de indexação em tempo real (live test)
-- [ ] Validar sitemap.xml e robots.txt em produção (meuddd.com.br)
-- [ ] Publicar correções, commitar e informar utilizador
+- [x] Analisar Consultas.csv e Páginas.csv do GSC enviados pelo utilizador
+- [x] Reproduzir o 404 em /cidade/goias/goias e identificar padrões reais de URLs com erro (/index.html, /blog/*, /cidade/{nome-estado}/{cidade}, UF no fim, /ddd duplicado, query +UF, parasite SEO em /blog)
+- [x] Corrigir causas de 404: middleware server/_core/seoRedirects.ts com 301s cobrindo todos os padrões observados; suíte de 13 testes novos; 99 testes verdes; publicado no checkpoint 82d948f8
+- [ ] Investigar recusa de indexação em tempo real (live test no GSC após propagação dos redirects)
+- [x] Validar sitemap.xml e robots.txt em produção (meuddd.com.br) — sitemaps dinâmicos com lastmod/changefreq/priority implementados; robots.txt aponta /sitemap.xml
+- [x] Publicar correções, commitar e informar utilizador
