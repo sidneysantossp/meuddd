@@ -396,8 +396,8 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ### Fase 3 — Oportunidades estratégicas
 - [x] API pública de consulta DDD (server/publicApi.ts: /api/public/{ddds, ddds/:code, estados, estados/:uf, cidade/:uf/:slug, regioes}, rate limit 60/min por IP, CORS; registada no createApp; 5 rotas testadas 200 no dev)
-- [ ] Service Worker PWA offline (cache de páginas consultadas)
-- [ ] Estruturação para busca por voz (fala natural, Speakable/FAQ reforçado)
+- [x] Service Worker PWA offline (client/public/sw.js: network-first com cache das páginas consultadas; exclui /api/, /admin, /__manus__; CACHE_NAME versionado; registo apenas em produção HTTPS; sw.js com no-store HTTP em server/index.ts; 10 testes verdes)
+- [x] Estruturação para busca por voz: SpeakableSpecification (cssSelector da secção FAQ) nas páginas /ddd/:code, /estado/:uf e /cidade/:uf/:slug em client/src/ssr/prefetch.ts; FaqSection com respostas sempre no DOM (aria-hidden quando fechadas) para leitura por assistentes de voz; Speakable validado no HTML SSR das 3 rotas tipo
 
 ### Fase 4 — Publicação
-- [ ] Testes completos, build, checkpoint e commit GitHub
+- [x] Testes completos, build, checkpoint e commit GitHub (120 testes verdes, tsc OK, build OK; checkpoints daef281/cfdb97c publicados em dddbrazil-jbfgdfkn.manus.space; push ao GitHub sidneysantossp/meuddd disparou redeploy da Vercel — www.meuddd.com.br agora serve /api/public/*, /sw.js e todas as rotas com 200; 9 rotas validadas em produção em 19/08 11:30 UTC)
