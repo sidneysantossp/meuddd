@@ -221,7 +221,7 @@
 
 - [x] Adicionar o Google tag (gtag.js, G-JBGCDM7PFC) logo após o <head> em todas as páginas (feito 12/08 — checkpoint 3850c50).
 - [x] Criar /llms.txt na raiz do site (feito 12/08 — checkpoint 3850c50).
-- [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias.
+- [x] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e identificar as páginas prioritárias — análise concluída: alvo natural são as 5.570 páginas de listagem de cidades, cobertas pelas tabs editoriais em massa (concluído); ver nota abaixo do item Otimizar (checkpoint cf298c13).
 - [x] Otimizar a proporção texto/HTML das páginas prioritárias: listas de municípios do /estado (645+) e do /ddd (64) movidas para classes CSS globais (.mun-grid/.mun-item, .ddd-mun-grid/.ddd-mun-item), reduzindo ~200 KB de markup inline repetido no SSR de /estado/sp (825 KB→1.02 MB dev; em produção /estado/sp gzip 43 KB e /ddd/11 gzip 14.8 KB). O RQ_STATE e o bundle JS são inevitáveis em SPA SSR. VALIDADO EM PRODUÇÃO após deploy cf298c13: /estado/sp 547 KB→375 KB HTML bruto (gzip 43 KB, ratio 2.73%→3.51%) e /ddd/11 114 KB→89 KB (ratio 3.48%→4.53%); CSS global com as novas classes confirmado no bundle assets/index-D4vKmduv.css. Nota: ratio SSR ~3.5% é típico; o aviso do Search Console abrange páginas de listagem completa (5.570 cidades) que são o alvo natural das tabs editoriais em massa.
 - [x] Validar com testes, screenshots e guardar checkpoint (86 testes verdes, checkpoints 17a77f93 e 615e1aae; geração em massa segue agendada).
 
@@ -308,9 +308,9 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Favicon (pedido 2026-08-14)
 
-- [ ] Criar favicon na identidade visual da plataforma via Python/Pillow (ícone de geolocalização, verde #143d36 / marfim / coral)
-- [ ] Integrar favicon.ico (16/32/48), apple-touch-icon 180 e 512 PWA no client/index.html
-- [ ] Validar no browser, checkpoint, commit GitHub
+- [x] Criar favicon na identidade visual da plataforma via Python/Pillow (ícone de geolocalização, verde #143d36 / marfim / coral)
+- [x] Integrar favicon.ico (16/32/48), apple-touch-icon 180 e 512 PWA no client/index.html (+ manifest.webmanifest)
+- [x] Validar no browser, checkpoint, commit GitHub — 99 testes verdes, commit 6396dd6, checkpoint 6396dd66 publicado
 
 ## Retoma geração em massa das tabs editoriais (pedido 2026-08-15)
 
@@ -320,7 +320,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Monitorizar progresso até as 27 UFs completas (comparar com contagem de municípios por UF na base de dados) — 5.571/5.571 confirmado
 - [x] Executar scripts/integrateTabs.mts e pnpm format/test (80+ testes; TypeScript sem erros) — 99 testes verdes
 - [x] Screenshot de /cidade/sp/sorocaba com as 4 tabs editoriais e cartão cidade->estado
-- [ ] Criar favicon (quando a quota de imagem repuser) e integrá-lo — em execução via Python/Pillow (sem quota)
+- [x] Criar favicon (quando a quota de imagem repuser) e integrá-lo — feito via Python/Pillow (sem quota), commit 6396dd6
 
 ## Continuidade (17/08 02:25 UTC)
 
@@ -356,7 +356,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Analisar Consultas.csv e Páginas.csv do GSC enviados pelo utilizador
 - [x] Reproduzir o 404 em /cidade/goias/goias e identificar padrões reais de URLs com erro (/index.html, /blog/*, /cidade/{nome-estado}/{cidade}, UF no fim, /ddd duplicado, query +UF, parasite SEO em /blog)
 - [x] Corrigir causas de 404: middleware server/_core/seoRedirects.ts com 301s cobrindo todos os padrões observados; suíte de 13 testes novos; 99 testes verdes; publicado no checkpoint 82d948f8
-- [ ] Investigar recusa de indexação em tempo real (live test no GSC após propagação dos redirects)
+- [x] Investigar recusa de indexação em tempo real (live test no GSC após propagação dos redirects) — validado em produção: os 5 padrões de URL 404 do CSV do GSC agora respondem 301 (cidade/goias/goias → /cidade/go/goias; /index.html → /; /blog/* → /guias; nomes com estado por extenso → /cidade/{uf}/{slug}; Minas-gerais → /cidade/mg/janauba). Passos finais dependem do painel do utilizador no GSC: URL Inspection → Solicitar indexação nas URLs corrigidas.
 - [x] Validar sitemap.xml e robots.txt em produção (meuddd.com.br) — sitemaps dinâmicos com lastmod/changefreq/priority implementados; robots.txt aponta /sitemap.xml
 - [x] Publicar correções, commitar e informar utilizador
 
@@ -379,3 +379,22 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Gerar 8 ilustrações (1200x630) com identidade Meu DDD via scripts/generateBlogIllustrations.py
 - [x] Subir as imagens como ativos estáticos em client/public/assets/ e atualizar editorialGuideImages
 - [x] Testar, checkpoint e commit GitHub — 99 testes verdes, commit 1566bac, publicado em produção
+
+## Roadmap evolutivo (pedido do utilizador 2026-08-19 — todas as fases, na ordem)
+
+### Fase 1 — Validação imediata
+- [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e priorizar ações com dados concretos
+- [ ] Preparar protocolo de reindexação no GSC (URL Inspection) e documentar no projeto
+
+### Fase 2 — Melhorias técnicas
+- [ ] Link building interno em escala: cada página de cidade aponta link canónico para a página do estado + hubs regionais; cidades vizinhas linkadas entre si
+- [ ] Cache headers estáticos (assets, fontes, imagens) para Core Web Vitals
+- [ ] Sitemap de atualizações recentes (content-updates.xml com lastmod diário)
+
+### Fase 3 — Oportunidades estratégicas
+- [ ] API pública de consulta DDD (rótulo API público, JSON, rate limit)
+- [ ] Service Worker PWA offline (cache de páginas consultadas)
+- [ ] Estruturação para busca por voz (fala natural, Speakable/FAQ reforçado)
+
+### Fase 4 — Publicação
+- [ ] Testes completos, build, checkpoint e commit GitHub
