@@ -27,4 +27,4 @@ export function getUfCatalog() {
   if (cached) return cached;
   cached = loadCatalog();
   return cached;
-}
+};

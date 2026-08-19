@@ -401,3 +401,9 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ### Fase 4 — Publicação
 - [x] Testes completos, build, checkpoint e commit GitHub (120 testes verdes, tsc OK, build OK; checkpoints daef281/cfdb97c publicados em dddbrazil-jbfgdfkn.manus.space; push ao GitHub sidneysantossp/meuddd disparou redeploy da Vercel — www.meuddd.com.br agora serve /api/public/*, /sw.js e todas as rotas com 200; 9 rotas validadas em produção em 19/08 11:30 UTC)
+
+### Fase 5 — Correção em massa de URLs problemáticas do GSC
+- [ ] Analisar todas as URLs do mega export (Páginas.csv) e mapear padrões que caem em 404/soft404 no site atual
+- [ ] Revalidar essas URLs com a estrutura atual SEM adicionar redirects (o user quer páginas vivas 200, não redirects)
+- [ ] Corrigir no SSR/rotas o que ainda devolve 404 para URLs com equivalente real na base (ex.: /cidade/{nome}/{cidade} com estado por extenso)
+- [ ] Testar em produção, checkpoint, commit GitHub e reportar

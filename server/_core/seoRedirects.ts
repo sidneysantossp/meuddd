@@ -133,8 +133,17 @@ export function registerSeoRedirects(app: Express): void {
     const first = req.params.a;
     const slug = req.params.b;
     if (!first || !slug) return next();
-    if (slug === "undefined" || first === "undefined")
+    /* /cidade/undefined/<slug>: bug client antigo — redirecionar 301 para a
+       página canónica /cidade/<UF>/<slug> (resolvendo a UF pelo slug). */
+    if (first === "undefined") {
+      const resolved = findMunicipalityBySlug(slug);
+      if (resolved) {
+        const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+        return res.redirect(301, `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}${query}`);
+      }
       return res.status(404).type("text/plain").send("Not found");
+    }
+    if (slug === "undefined") return res.status(404).type("text/plain").send("Not found");
     /* Se o primeiro segmento é um nome de estado, usar a UF correspondente. */
     const ufFromName = STATE_NAME_TO_UF[normalizeKey(first)];
     if (ufFromName && !isLikelyUf(first)) {

@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "node scripts/generateUfWrappers.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir ../dist/server && node scripts/buildTabsModules.mjs && node scripts/buildServer.mjs",
+    "build": "vite build && NODE_ENV=production vite build --ssr src/entry-server.tsx --outDir ../dist/server && node scripts/buildTabsModules.mjs && node scripts/buildServer.mjs && node scripts/generateUfWrappers.mjs --out-dir=$INIT_CWD",
     "build:vercel": "pnpm run build && rm -rf public && mkdir -p public && cp -R dist/public/. public/",
     "verify:vercel-runtime": "VERCEL=1 node --import tsx scripts/verify-vercel-runtime.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
