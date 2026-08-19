@@ -39,6 +39,12 @@ describe("guias editoriais relacionados", () => {
           "/assets/guia-numeros-de-emergencia.jpg",
           "/assets/guia-numero-fixo-tem-quantos-digitos.jpg",
           "/assets/guia-numero-de-celular-tem-quantos-digitos.jpg",
+          "/assets/guia-como-bloquear-chamadas-indesejadas.jpg",
+          "/assets/guia-como-ligar-a-cobrar.jpg",
+          "/assets/guia-ddd-de-capitais-do-brasil.jpg",
+          "/assets/guia-como-telefonar-para-sao-paulo.jpg",
+          "/assets/guia-como-telefonar-para-rio-de-janeiro.jpg",
+          "/assets/guia-como-telefonar-para-brasilia.jpg",
         ].includes(image)
       ).toBe(true);
     }

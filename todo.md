@@ -372,4 +372,10 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 ## Correção de memória em produção (18/08 — deploy falhou: 528 MiB > limite 512 MiB)
 - [x] Diagnosticar consumo: bundle Express (dist/index.js) inline com os 27 módulos UF (53 MB TS) + 27 cópias .json redundantes (53 MB) em shared/localityTabs — esbuild resolveu o glob import dynamic em localityTabs/index.ts
 - [x] Reduzir memória: removidos os .json redundantes; scripts/tabsExternalPlugin.mjs + scripts/buildServer.mjs externalizam os UF modules do bundle Express (lazy load dos dist/server/tabs/*.cjs via createRequire); lookup.ts reescrito com createRequire(import.meta.url). Bundle 94→58 MB, RSS produção 467→232 MB (nota: --minify foi testado e revertido — piorou para 760 MB)
-- [ ] Validar deploy em produção (health check TCP OK, /cidade/:uf/:slug com tabs) e checkpoint
+- [x] Validar deploy em produção (health check TCP OK, /cidade/:uf/:slug com tabs) e checkpoint — produção validada: root 200, /cidade/sp/sao-paulo 200 com conteúdo editorial completo no HTML SSR; checkpoint 41c2e438 publicado
+
+## Ilustrações do blog via Python (PIL/Pillow, 18/08 — substitui quota de IA)
+- [ ] Identificar os artigos com imagens reutilizadas/quebradas e listar os 8 slugs a substituir
+- [ ] Gerar 8 ilustrações (1200x630 OG/blog) com identidade Meu DDD (verde #143d36, marfim #faf3e5, coral)
+- [ ] Subir as imagens como ativos estáticos (manus-upload-file --webdev) e atualizar referências nos artigos
+- [ ] Testar, checkpoint e commit GitHub

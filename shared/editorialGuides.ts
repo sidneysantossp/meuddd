@@ -101,9 +101,9 @@ export const editorialGuideImages: Record<
       "Ilustração editorial de um telefone de emergência com radar de atenção.",
   },
   "como-bloquear-chamadas-indesejadas": {
-    image: "/assets/guia-numeros-de-emergencia.jpg",
+    image: "/assets/guia-como-bloquear-chamadas-indesejadas.jpg",
     imageAlt:
-      "Ilustração editorial de um telefone com sinal de bloqueio sobre chamadas.",
+      "Ilustração editorial de um mapa do Brasil com sinal de bloqueio sobre chamadas indesejadas.",
   },
   "numero-fixo-tem-quantos-digitos": {
     image: "/assets/guia-numero-fixo-tem-quantos-digitos.jpg",
@@ -116,31 +116,31 @@ export const editorialGuideImages: Record<
       "Ilustração editorial de um smartphone com sequência de nove dígitos.",
   },
   "o-que-e-codigo-nacional": {
-    image: "/assets/guia-codigo-de-operadora-csp.jpg",
+    image: "/assets/guia-como-ligar-para-outro-pais-ddi.jpg",
     imageAlt:
-      "Ilustração editorial de uma estrutura de código nacional na telefonia.",
+      "Ilustração editorial de dígitos a percorrer um arco internacional sobre o mapa.",
   },
   "como-ligar-a-cobrar": {
-    image: "/assets/guia-como-ligar-para-outro-estado.jpg",
-    imageAlt: "Ilustração editorial de dois telefones unidos por uma chamada.",
+    image: "/assets/guia-como-ligar-a-cobrar.jpg",
+    imageAlt: "Ilustração editorial de dois telefones unidos por uma chamada a cobrar.",
   },
   "ddd-de-capitais-do-brasil": {
-    image: "/assets/guia-o-que-e-ddd.jpg",
+    image: "/assets/guia-ddd-de-capitais-do-brasil.jpg",
     imageAlt:
       "Ilustração editorial de capitais brasileiras marcadas num mapa do Brasil.",
   },
   "como-telefonar-para-sao-paulo": {
-    image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg",
-    imageAlt: "Ilustração editorial de um mapa urbano representando São Paulo.",
+    image: "/assets/guia-como-telefonar-para-sao-paulo.jpg",
+    imageAlt: "Ilustração editorial de um smartphone a contactar São Paulo.",
   },
   "como-telefonar-para-rio-de-janeiro": {
-    image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg",
+    image: "/assets/guia-como-telefonar-para-rio-de-janeiro.jpg",
     imageAlt:
-      "Ilustração editorial de um mapa urbano representando o Rio de Janeiro.",
+      "Ilustração editorial de um smartphone a contactar o Rio de Janeiro.",
   },
   "como-telefonar-para-brasilia": {
-    image: "/assets/guia-como-descobrir-ddd-de-uma-cidade.jpg",
-    imageAlt: "Ilustração editorial de um mapa urbano representando Brasília.",
+    image: "/assets/guia-como-telefonar-para-brasilia.jpg",
+    imageAlt: "Ilustração editorial de um smartphone a contactar Brasília.",
   },
 };
 const commonTerritoryLinks = [
