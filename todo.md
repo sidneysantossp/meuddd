@@ -415,14 +415,9 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] FAQPage JSON-LD com 10 perguntas/respostas nas páginas DDD, estado e cidade; FaqSection com respostas sempre no DOM (aria-hidden quando fechadas) para leitura por assistentes de voz
 - [x] Validação final: 120 testes vitest, tsc OK, build produção OK; /ddd/11, /estado/sp, /cidade/sp/sao-paulo com Speakable em ambos domínios; /sw.js com no-store; API pública 200; checkpoint 80beed4c publicado
 
-### Fase 7 — Correção do erro 4xx em massa (23 mil páginas no GSC)
-- [ ] Analisar o Páginas.csv para identificar os padrões exatos das URLs com erro 4xx
-- [ ] Diagnosticar a causa raiz no servidor (SSR/headers/redirects)
-- [ ] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200
-- [ ] Validar em produção nos dois domínios, checkpoint e commit GitHub
 
 ### Fase 7 — Correção do erro 4xx em massa (23 mil páginas no GSC)
 - [x] Analisar o Páginas.csv para identificar os padrões exatos das URLs com erro 4xx
 - [x] Diagnosticar a causa raiz no servidor (SSR/headers/redirects)
-- [x] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200 (737/738 ok, 1 caso DF resolvido com redirect)
-- [ ] Validar em produção nos dois domínios, checkpoint e commit GitHub
+- [x] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200 (737/738 ok via 200/301→200; 1 caso DF: redirect 301 → /estado/df)
+- [x] Validar em produção nos dois domínios: www.meuddd.com.br (redirect 301 DF confirmado) e dddbrazil-jbfgdfkn.manus.space (301 confirmado). Commit GitHub sidneysantossp/meuddd@4498505 (disparou redeploy Vercel — validado em produção).
