@@ -308,7 +308,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 
 ## Favicon (pedido 2026-08-14)
 
-- [ ] Criar favicon na identidade visual da plataforma (ícone de geolocalização, verde #143d36 / marfim / coral)
+- [ ] Criar favicon na identidade visual da plataforma via Python/Pillow (ícone de geolocalização, verde #143d36 / marfim / coral)
 - [ ] Integrar favicon.ico (16/32/48), apple-touch-icon 180 e 512 PWA no client/index.html
 - [ ] Validar no browser, checkpoint, commit GitHub
 
@@ -320,7 +320,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Monitorizar progresso até as 27 UFs completas (comparar com contagem de municípios por UF na base de dados) — 5.571/5.571 confirmado
 - [x] Executar scripts/integrateTabs.mts e pnpm format/test (80+ testes; TypeScript sem erros) — 99 testes verdes
 - [x] Screenshot de /cidade/sp/sorocaba com as 4 tabs editoriais e cartão cidade->estado
-- [ ] Criar favicon (quando a quota de imagem repuser) e integrá-lo (bloqueado por quota paga)
+- [ ] Criar favicon (quando a quota de imagem repuser) e integrá-lo — em execução via Python/Pillow (sem quota)
 
 ## Continuidade (17/08 02:25 UTC)
 
