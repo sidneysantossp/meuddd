@@ -500,6 +500,16 @@ export async function prefetchForPath(
           },
         },
         faqPageJsonLd(dddFaqs),
+        {
+          // Speakable (CSS seletor): a secção de FAQ visível é lida por
+          // assistentes de voz (Google Home, Alexa) e por buscas generativas.
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${path}#webpage`,
+          url: path,
+          name: dddTitle,
+          speakable: { "@type": "SpeakableSpecification", cssSelector: `#faq-ddd-${code}` },
+        },
       ],
     };
   }
@@ -536,6 +546,17 @@ export async function prefetchForPath(
           { name: site, item: "/" },
           { name: data.state.name, item: path },
         ]),
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": `${path}#webpage`,
+          url: path,
+          name: `DDD de ${data.state.name}: cidades e códigos`,
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: `#faq-estado-${uf.toLowerCase()}`,
+          },
+        },
         {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
@@ -624,6 +645,10 @@ export async function prefetchForPath(
           "@id": path,
           url: path,
           name: `DDD de ${data.municipality.name}`,
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: `#faq-cidade-${uf.toLowerCase()}-${slug}`,
+          },
           about: {
             "@type": "City",
             name: data.municipality.name,

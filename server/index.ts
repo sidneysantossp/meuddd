@@ -25,6 +25,10 @@ async function startServer() {
         const relative = filePath.replace(staticPath, "");
         if (hashedAssetRegex.test(relative)) {
           res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        } else if (relative === "/sw.js") {
+          // O Service Worker nunca deve ficar em cache HTTP — cada pedido deve
+          // trazer a versão mais recente para atualização correcta do cache.
+          res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
         } else if (
           /\.(woff2?|ttf|otf)$/.test(relative) ||
           /\.(png|jpe?g|webp|gif|svg|ico|webmanifest)$/.test(relative)

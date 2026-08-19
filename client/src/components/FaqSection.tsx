@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import type { TerritorialFaq } from "@shared/territorialFaq";
@@ -95,24 +95,25 @@ export function FaqSection({
                     />
                   </span>
                 </button>
-                <AnimatePresence initial={false}>
-                  {isOpen ? (
-                    <motion.div
-                      id={`faq-answer-${index}`}
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
-                      className="overflow-hidden"
-                    >
-                      <p
-                        className={`px-5 pb-4 text-sm leading-6 ${palette.answerText}`}
-                      >
-                        {faq.answer}
-                      </p>
-                    </motion.div>
-                  ) : null}
-                </AnimatePresence>
+                {/* A resposta permanece sempre no DOM (altura 0 quando fechada) para que
+                    o SpeakableSpecification consiga selecionar todo o texto do FAQ —
+                    incluindo as respostas recolhidas — para leitura por voz. */}
+                <motion.div
+                  id={`faq-answer-${index}`}
+                  animate={{
+                    height: isOpen ? "auto" : 0,
+                    opacity: isOpen ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.22, ease: [0.23, 1, 0.32, 1] }}
+                  className="overflow-hidden"
+                  aria-hidden={!isOpen}
+                >
+                  <p
+                    className={`px-5 pb-4 text-sm leading-6 ${palette.answerText}`}
+                  >
+                    {faq.answer}
+                  </p>
+                </motion.div>
               </div>
             );
           })}

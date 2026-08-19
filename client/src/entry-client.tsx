@@ -90,4 +90,26 @@ const hydrateApplication = () => {
   else window.setTimeout(install, 1_200);
 };
 
+// Regista o Service Worker apenas em produção (HTTPS) para cache offline das páginas consultadas.
 void preloadRouteForPath(window.location.pathname).finally(hydrateApplication);
+const registerServiceWorker = () => {
+  if (typeof window === "undefined" || !("serviceWorker" in navigator)) return;
+  // O registo ocorre só em contexto seguro (HTTPS/localhost) e fora do ambiente de dev do Vite.
+  const isDev = import.meta.env.DEV === true;
+  const isSecure =
+    window.isSecureContext || /^https?:\/\/localhost/.test(window.location.origin);
+  if (isDev || !isSecure) return;
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "/" })
+    .then(registration => {
+      // Garante que uma nova versão do SW assume o controlo imediatamente.
+      registration.addEventListener("updatefound", () => {
+        const worker = registration.installing;
+        if (worker) worker.addEventListener("statechange", () => {});
+      });
+    })
+    .catch(() => {
+      // Falha no registo não deve degradar a experiência principal.
+    });
+};
+registerServiceWorker();
