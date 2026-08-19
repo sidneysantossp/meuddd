@@ -421,3 +421,16 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Diagnosticar a causa raiz no servidor (SSR/headers/redirects)
 - [x] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200 (737/738 ok via 200/301→200; 1 caso DF: redirect 301 → /estado/df)
 - [x] Validar em produção nos dois domínios: www.meuddd.com.br (redirect 301 DF confirmado) e dddbrazil-jbfgdfkn.manus.space (301 confirmado). Commit GitHub sidneysantossp/meuddd@4498505 (disparou redeploy Vercel — validado em produção).
+
+### Fase 8 — Auditoria GSC Coverage (19/08/2026)
+- [x] Analisar Coverage.xlsx: 30.368 páginas com problemas — 75.7% bloqueadas 4xx (22.980), 15.2% detectadas mas não indexadas (4.621), 8.7% rastreadas mas não indexadas (2.648), 0.3% 404 (88), 0.1% noindex (22), 7 soft 404, 2 sem canónica, 0 5xx
+- [x] Meta robots explícito (index,follow,max-image-preview:large) nas páginas públicas — server/_core/ssrHtml.ts
+- [x] Submissão IndexNow de 112 URLs prioritárias (Bing/Yandex) — scripts/submitIndexNow.mjs (aceite com 200)
+- [x] Endpoint tRPC admin seo.indexNow para submissão manual de URLs ao IndexNow
+- [x] Build produção OK (meta robots em dist/index.js e dist/vercel/handler.js), tsc limpo, 124 testes verdes
+
+### Fase 9 — Próximos passos pós-auditoria GSC (19/08/2026)
+- [x] Botão IndexNow no painel admin (disparo manual com 1 clique)
+- [x] Página de documentação pública da API REST (/api-docs)
+- [x] Widget embed para sites externos (script JS)
+- [x] Testar, build, checkpoint, commit GitHub
