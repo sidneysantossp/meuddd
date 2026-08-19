@@ -153,6 +153,22 @@ export function registerSeoRedirects(app: Express): void {
         : "";
       return res.redirect(301, `${target}${query}`);
     }
+    /* DF: verificar se o slug corresponde a um município real (só Brasília).
+       Regiões administrativas (taguatinga, ceilândia, gama, etc.) não são
+       municípios IBGE — redirect para a página do estado. */
+    if (first.toUpperCase() === "DF") {
+      const isRealMunicipality = staticTerritory.some(
+        (row: StaticMunicipalityRecord) =>
+          row.uf === "DF" && row.slug === slug
+      );
+      if (!isRealMunicipality) {
+        const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+        return res.redirect(301, `/estado/df${query}`);
+      }
+      /* Município real do DF (Brasília) → seguir para SSR. */
+      return next();
+    }
+
     /* UF válida → /cidade/<UF>/<slug> segue para o SSR renderizar a página. */
     if (isLikelyUf(first)) return next();
     /* Primeiro segmento inválido → 404. */

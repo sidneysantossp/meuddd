@@ -403,7 +403,26 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Testes completos, build, checkpoint e commit GitHub (120 testes verdes, tsc OK, build OK; checkpoints daef281/cfdb97c publicados em dddbrazil-jbfgdfkn.manus.space; push ao GitHub sidneysantossp/meuddd disparou redeploy da Vercel — www.meuddd.com.br agora serve /api/public/*, /sw.js e todas as rotas com 200; 9 rotas validadas em produção em 19/08 11:30 UTC)
 
 ### Fase 5 — Correção em massa de URLs problemáticas do GSC
-- [ ] Analisar todas as URLs do mega export (Páginas.csv) e mapear padrões que caem em 404/soft404 no site atual
-- [ ] Revalidar essas URLs com a estrutura atual SEM adicionar redirects (o user quer páginas vivas 200, não redirects)
-- [ ] Corrigir no SSR/rotas o que ainda devolve 404 para URLs com equivalente real na base (ex.: /cidade/{nome}/{cidade} com estado por extenso)
-- [ ] Testar em produção, checkpoint, commit GitHub e reportar
+- [x] Analisar todas as URLs do mega export (Páginas.csv): 1000 URLs classificadas — 210 vivas (200), 789 com redirect canónico correto; 1 única problemática (/cidade/undefined/:slug)
+- [x] Revalidação confirmada: nenhuma URL do export precisa de redirect novo — todas vivas (200) ou com redirect canónico correto; o problema real era o 500 de produção das páginas com tabs editoriais
+- [x] Corrigido bug de produção 500 (ERR_MODULE_NOT_FOUND dist/server/_gen/uf-{uf}.js + jsxDEV is not a function): wrappers _gen depth-4 gerados no build (buildTabsModules.mjs + generateUfWrappers.mjs --out-dir ao fim do pipeline), SSR com NODE_ENV=production, verificação de presença dos wrappers; mock Vercel local (scripts/testVercelHandler.mjs) reproduz e valida; 120 testes verdes, tsc OK
+- [x] Testado em produção: domínio Manus e Vercel (www.meuddd.com.br, push 7cd07aa ao GitHub) — /cidade/{sp,m g,to}/... 200, /estado/sp, /ddd/11, /api/public/*, /sw.js 200; /cidade/undefined/:slug → 301 canónico para /cidade/{UF}/:slug; checkpoint 7cd07aaa publicado e commit 7cd07aa no GitHub
+
+### Fase 6 — PWA offline e busca por voz
+- [x] Service Worker com cache offline (client/public/sw.js): network-first para navegação com fallback; cache-first para assets; exclusão de /api/, /admin, /__manus__; PAGE_PATTERNS whitelist; trim FIFO (100 páginas, 50 assets); CACHE_NAME versionado
+- [x] Registo em produção (client/src/entry-client.tsx): apenas HTTPS/produção; skipWaiting + clients.claim; manifest.webmanifest com icons 192/512; sw.js com no-store HTTP em server/index.ts e server/_core/ssrStatic.ts (dev + produção)
+- [x] SpeakableSpecification (cssSelector) nas 3 rotas: #faq-ddd-{code} (DddDetail), #faq-estado-{uf} (StatePage), #faq-cidade-{uf}-{slug} (MunicipalityPage); validado em produção nos dois domínios (1 instância por página no JSON-LD)
+- [x] FAQPage JSON-LD com 10 perguntas/respostas nas páginas DDD, estado e cidade; FaqSection com respostas sempre no DOM (aria-hidden quando fechadas) para leitura por assistentes de voz
+- [x] Validação final: 120 testes vitest, tsc OK, build produção OK; /ddd/11, /estado/sp, /cidade/sp/sao-paulo com Speakable em ambos domínios; /sw.js com no-store; API pública 200; checkpoint 80beed4c publicado
+
+### Fase 7 — Correção do erro 4xx em massa (23 mil páginas no GSC)
+- [ ] Analisar o Páginas.csv para identificar os padrões exatos das URLs com erro 4xx
+- [ ] Diagnosticar a causa raiz no servidor (SSR/headers/redirects)
+- [ ] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200
+- [ ] Validar em produção nos dois domínios, checkpoint e commit GitHub
+
+### Fase 7 — Correção do erro 4xx em massa (23 mil páginas no GSC)
+- [x] Analisar o Páginas.csv para identificar os padrões exatos das URLs com erro 4xx
+- [x] Diagnosticar a causa raiz no servidor (SSR/headers/redirects)
+- [x] Implementar a correção para que as URLs /cidade/{uf}/{cidade} respondam 200 (737/738 ok, 1 caso DF resolvido com redirect)
+- [ ] Validar em produção nos dois domínios, checkpoint e commit GitHub

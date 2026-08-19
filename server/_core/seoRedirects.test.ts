@@ -141,4 +141,20 @@ describe("redirects SEO", () => {
     const res = await get(app, "/cidade/abcdef/slug");
     expect(res.status).toBe(404);
   });
+
+  it("redireciona região administrativa do DF: /cidade/df/taguatinga → /estado/df", async () => {
+    const res = await get(app, "/cidade/df/taguatinga");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/df");
+  });
+
+  it("redireciona região administrativa do DF com acento: /cidade/df/ceilândia → /estado/df", async () => {
+    const res = await get(app, "/cidade/df/ceilândia");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/df");
+  });
+
+  it("não redireciona município real do DF: /cidade/df/brasilia segue para o SSR", async () => {
+    await expect(get(app, "/cidade/df/brasilia")).rejects.toThrow("next called");
+  });
 });
