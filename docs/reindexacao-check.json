@@ -1,0 +1,506 @@
+[
+  {
+    "url": "https://www.meuddd.com.br/",
+    "imp": 799,
+    "cli": 4,
+    "posicao": 17.43,
+    "status_http": "200",
+    "status": "viva",
+    "redirect": ""
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/janauba",
+    "imp": 164,
+    "cli": 0,
+    "posicao": 8.21,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/janauba"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/goias/itumbiara",
+    "imp": 137,
+    "cli": 0,
+    "posicao": 10.11,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/itumbiara"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/uruguaiana",
+    "imp": 116,
+    "cli": 0,
+    "posicao": 9.53,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/uruguaiana"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/sao-joao-del-rei",
+    "imp": 116,
+    "cli": 0,
+    "posicao": 9.87,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/sao-joao-del-rei"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/goias/goias",
+    "imp": 104,
+    "cli": 0,
+    "posicao": 11.67,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/goias"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/goias/anapolis",
+    "imp": 100,
+    "cli": 0,
+    "posicao": 9.16,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/anapolis"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/araraquara",
+    "imp": 98,
+    "cli": 0,
+    "posicao": 10.6,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/sp/araraquara"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/bage",
+    "imp": 92,
+    "cli": 0,
+    "posicao": 9.03,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/bage"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/santa-rosa",
+    "imp": 89,
+    "cli": 0,
+    "posicao": 8.7,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/santa-rosa"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/anapolis",
+    "imp": 87,
+    "cli": 0,
+    "posicao": 7.57,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/anapolis"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/sao-paulo/olimpia",
+    "imp": 73,
+    "cli": 0,
+    "posicao": 9.77,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/sp/olimpia"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/goias/trindade",
+    "imp": 68,
+    "cli": 0,
+    "posicao": 10.37,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/trindade"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/santa-luzia",
+    "imp": 64,
+    "cli": 0,
+    "posicao": 9.36,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/santa-luzia"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-norte/mossoro",
+    "imp": 62,
+    "cli": 1,
+    "posicao": 9.94,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rn/mossoro"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/corumba",
+    "imp": 61,
+    "cli": 1,
+    "posicao": 9.03,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ms/corumba"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/taquara",
+    "imp": 60,
+    "cli": 0,
+    "posicao": 8.03,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/taquara"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/santa-catarina/campos-novos",
+    "imp": 58,
+    "cli": 0,
+    "posicao": 9.07,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/sc/campos-novos"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/pelotas",
+    "imp": 58,
+    "cli": 0,
+    "posicao": 9.6,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/pelotas"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/parana/sarandi",
+    "imp": 57,
+    "cli": 0,
+    "posicao": 8.53,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pr/sarandi"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/jaiba",
+    "imp": 57,
+    "cli": 0,
+    "posicao": 8.88,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/jaiba"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/bahia/feira-de-santana",
+    "imp": 57,
+    "cli": 0,
+    "posicao": 9.98,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ba/feira-de-santana"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/mato-grosso/campo-verde",
+    "imp": 53,
+    "cli": 0,
+    "posicao": 9.75,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mt/campo-verde"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/ceara/tiangua",
+    "imp": 52,
+    "cli": 0,
+    "posicao": 8.42,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ce/tiangua"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/cachoeirinha",
+    "imp": 47,
+    "cli": 0,
+    "posicao": 9.68,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/cachoeirinha"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/paraiba/passagem",
+    "imp": 47,
+    "cli": 0,
+    "posicao": 37.45,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pb/passagem"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/sao-paulo/praia-grande",
+    "imp": 46,
+    "cli": 0,
+    "posicao": 9.67,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/sp/praia-grande"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/goias/aguas-lindas-de-goias",
+    "imp": 46,
+    "cli": 0,
+    "posicao": 10.04,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/go/aguas-lindas-de-goias"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/claudio",
+    "imp": 45,
+    "cli": 0,
+    "posicao": 8.93,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/claudio"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/pernambuco/caruaru",
+    "imp": 45,
+    "cli": 0,
+    "posicao": 12.27,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pe/caruaru"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/pernambuco/igarassu",
+    "imp": 42,
+    "cli": 0,
+    "posicao": 8.67,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pe/igarassu"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/roraima/pacaraima",
+    "imp": 42,
+    "cli": 0,
+    "posicao": 8.95,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rr/pacaraima"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/santo-angelo",
+    "imp": 41,
+    "cli": 0,
+    "posicao": 9.44,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/santo-angelo"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/tocantins/araguaina",
+    "imp": 41,
+    "cli": 0,
+    "posicao": 9.85,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/to/araguaina"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/para/xinguara",
+    "imp": 40,
+    "cli": 0,
+    "posicao": 9.28,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pa/xinguara"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/ijui",
+    "imp": 40,
+    "cli": 0,
+    "posicao": 9.28,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rs/ijui"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/bahia/camacari",
+    "imp": 40,
+    "cli": 0,
+    "posicao": 9.32,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ba/camacari"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/santa-catarina/chapeco",
+    "imp": 40,
+    "cli": 0,
+    "posicao": 10.15,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/sc/chapeco"
+  },
+  {
+    "url": "https://www.meuddd.com.br/index.html",
+    "imp": 40,
+    "cli": 0,
+    "posicao": 43.92,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-de-janeiro/sao-goncalo",
+    "imp": 39,
+    "cli": 0,
+    "posicao": 8.85,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rj/sao-goncalo"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/campina-verde",
+    "imp": 38,
+    "cli": 0,
+    "posicao": 8.92,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/campina-verde"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/ilheus",
+    "imp": 38,
+    "cli": 0,
+    "posicao": 9.0,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ba/ilheus"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-de-janeiro/nova-friburgo",
+    "imp": 38,
+    "cli": 0,
+    "posicao": 9.5,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rj/nova-friburgo"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/pocos-de-caldas",
+    "imp": 38,
+    "cli": 0,
+    "posicao": 9.66,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/pocos-de-caldas"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/armacao-dos-buzios",
+    "imp": 36,
+    "cli": 0,
+    "posicao": 9.28,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rj/armacao-dos-buzios"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/andradas",
+    "imp": 35,
+    "cli": 0,
+    "posicao": 8.14,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/andradas"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/parana/francisco-alves",
+    "imp": 33,
+    "cli": 0,
+    "posicao": 3.3,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pr/francisco-alves"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/minas-gerais/uberlandia",
+    "imp": 33,
+    "cli": 0,
+    "posicao": 10.27,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mg/uberlandia"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/bahia/remanso",
+    "imp": 32,
+    "cli": 0,
+    "posicao": 9.28,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ba/remanso"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/mato-grosso/gaucha-do-norte",
+    "imp": 32,
+    "cli": 0,
+    "posicao": 11.12,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/mt/gaucha-do-norte"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/maranhao/alto-parnaiba",
+    "imp": 31,
+    "cli": 0,
+    "posicao": 10.42,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/ma/alto-parnaiba"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/alagoas/arapiraca",
+    "imp": 30,
+    "cli": 1,
+    "posicao": 10.37,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/al/arapiraca"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/rio-de-janeiro/armacao-dos-buzios",
+    "imp": 30,
+    "cli": 0,
+    "posicao": 7.2,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rj/armacao-dos-buzios"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/parana/quedas-do-iguacu",
+    "imp": 30,
+    "cli": 0,
+    "posicao": 8.07,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pr/quedas-do-iguacu"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/para/jacunda",
+    "imp": 30,
+    "cli": 0,
+    "posicao": 8.27,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/pa/jacunda"
+  },
+  {
+    "url": "https://www.meuddd.com.br/cidade/arraial-do-cabo",
+    "imp": 30,
+    "cli": 0,
+    "posicao": 8.97,
+    "status_http": "301",
+    "status": "301→",
+    "redirect": "https://www.meuddd.com.br/cidade/rj/arraial-do-cabo"
+  }
+]

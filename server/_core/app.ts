@@ -3,6 +3,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerSeoRedirects } from "./seoRedirects";
 import { registerStorageProxy } from "./storageProxy";
+import { registerPublicApi } from "../publicApi";
 import { appRouter } from "../routers";
 import { listSitemapInventory } from "../db";
 import { createContext } from "./context";
@@ -133,6 +134,7 @@ export function createApp() {
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
   registerSeoRedirects(app);
   registerStorageProxy(app);
+  registerPublicApi(app);
   registerOAuthRoutes(app);
   app.use(
     "/api/trpc",
@@ -145,7 +147,9 @@ export function createApp() {
     const origin = requestOrigin(req);
     res
       .type("text/plain")
-      .send(`User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
+      .send(
+        `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\nSitemap: ${origin}/sitemap-updates.xml\n`,
+      );
   });
   app.get("/sitemap.xml", async (req, res) => {
     const origin = requestOrigin(req);
@@ -175,6 +179,54 @@ export function createApp() {
   app.get("/feed.xml", (req, res) =>
     res.type("application/rss+xml").send(rssXml(requestOrigin(req)))
   );
+  /** Páginas mais recentemente publicadas/atualizadas — sinaliza ao Google o
+   *  conteúdo novo (guias, pilares e amostra nacional de cidades) sem esperar
+   *  pelo crawl completo do sitemap index. */
+  app.get("/sitemap-updates.xml", async (req, res) => {
+    const origin = requestOrigin(req);
+    const inventory = await cachedInventory();
+    const today = new Date().toISOString().slice(0, 10);
+    const blocks: string[] = [];
+    if (inventory) {
+      blocks.push(
+        ...(inventory.guides ?? [])
+          .slice(0, 40)
+          .map(
+            path =>
+              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>`,
+          ),
+        ...(inventory.states ?? [])
+          .slice(0, 27)
+          .map(
+            path =>
+              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>`,
+          ),
+        ...(inventory.ddds ?? [])
+          .slice(0, 30)
+          .map(
+            path =>
+              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>`,
+          ),
+      );
+      // Amostra nacional equilibrada das cidades: as primeiras de cada UF.
+      const ufs = Object.keys(inventory.citiesByUf).sort();
+      for (const uf of ufs) {
+        blocks.push(
+          ...(inventory.citiesByUf[uf] ?? [])
+            .slice(0, 4)
+            .map(
+              path =>
+                `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>`,
+            ),
+        );
+      }
+    }
+    res
+      .type("application/xml")
+      .send(
+        `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${blocks.join("")}</urlset>`,
+      );
+  });
   app.get("/sitemaps/:kind.xml", async (req, res, next) => {
     try {
       const origin = requestOrigin(req);

@@ -301,7 +301,7 @@ export function findNearestTerritory(
   };
 }
 
-function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
+export function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
   const groups = new Map<string, MunicipalityRecord[]>();
   for (const row of rows)
     groups.set(row.ddd, [...(groups.get(row.ddd) ?? []), row]);
@@ -326,7 +326,7 @@ function groupDddRows(rows: MunicipalityRecord[]): DddSummary[] {
     .sort((left, right) => Number(left.code) - Number(right.code));
 }
 
-async function selectMunicipalities({
+export async function selectMunicipalities({
   query,
   uf,
   ddd,

@@ -1,0 +1,507 @@
+{
+  "n_paginas": 1000,
+  "n_consultas": 483,
+  "top_paginas": [
+    {
+      "url": "https://www.meuddd.com.br/",
+      "imp": 799,
+      "clicks": 4,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/minas-gerais/janauba",
+      "imp": 164,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/goias/itumbiara",
+      "imp": 137,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/uruguaiana",
+      "imp": 116,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/minas-gerais/sao-joao-del-rei",
+      "imp": 116,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/goias/goias",
+      "imp": 104,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/goias/anapolis",
+      "imp": 100,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/araraquara",
+      "imp": 98,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/bage",
+      "imp": 92,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/santa-rosa",
+      "imp": 89,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/anapolis",
+      "imp": 87,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/sao-paulo/olimpia",
+      "imp": 73,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/goias/trindade",
+      "imp": 68,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/minas-gerais/santa-luzia",
+      "imp": 64,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-norte/mossoro",
+      "imp": 62,
+      "clicks": 1,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/corumba",
+      "imp": 61,
+      "clicks": 1,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/taquara",
+      "imp": 60,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/santa-catarina/campos-novos",
+      "imp": 58,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/pelotas",
+      "imp": 58,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/parana/sarandi",
+      "imp": 57,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/minas-gerais/jaiba",
+      "imp": 57,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/bahia/feira-de-santana",
+      "imp": 57,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/mato-grosso/campo-verde",
+      "imp": 53,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/ceara/tiangua",
+      "imp": 52,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/cachoeirinha",
+      "imp": 47,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/paraiba/passagem",
+      "imp": 47,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/sao-paulo/praia-grande",
+      "imp": 46,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/goias/aguas-lindas-de-goias",
+      "imp": 46,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/minas-gerais/claudio",
+      "imp": 45,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/pernambuco/caruaru",
+      "imp": 45,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/pernambuco/igarassu",
+      "imp": 42,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/roraima/pacaraima",
+      "imp": 42,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/santo-angelo",
+      "imp": 41,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/tocantins/araguaina",
+      "imp": 41,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/para/xinguara",
+      "imp": 40,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-grande-do-sul/ijui",
+      "imp": 40,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/bahia/camacari",
+      "imp": 40,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/santa-catarina/chapeco",
+      "imp": 40,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/index.html",
+      "imp": 40,
+      "clicks": 0,
+      "ctr": 0.0
+    },
+    {
+      "url": "https://www.meuddd.com.br/cidade/rio-de-janeiro/sao-goncalo",
+      "imp": 39,
+      "clicks": 0,
+      "ctr": 0.0
+    }
+  ],
+  "secoes": {
+    "/cidade": 6619,
+    "/": 799,
+    "/blog": 595,
+    "/ddd": 41,
+    "/index.html": 40,
+    "/estado": 36,
+    "/guia": 9
+  },
+  "top_consultas": [
+    {
+      "q": "janaúba ddd 38",
+      "imp": 77,
+      "clicks": 0
+    },
+    {
+      "q": "meu ddd",
+      "imp": 34,
+      "clicks": 0
+    },
+    {
+      "q": "como saber meu ddd",
+      "imp": 29,
+      "clicks": 1
+    },
+    {
+      "q": "qual meu ddd",
+      "imp": 21,
+      "clicks": 1
+    },
+    {
+      "q": "qual é meu ddd",
+      "imp": 18,
+      "clicks": 0
+    },
+    {
+      "q": "qual o meu ddd",
+      "imp": 14,
+      "clicks": 0
+    },
+    {
+      "q": "internet carius",
+      "imp": 12,
+      "clicks": 0
+    },
+    {
+      "q": "qual é o meu ddd",
+      "imp": 11,
+      "clicks": 0
+    },
+    {
+      "q": "sao goncalo prefixo",
+      "imp": 11,
+      "clicks": 0
+    },
+    {
+      "q": "como saber o meu ddd",
+      "imp": 10,
+      "clicks": 0
+    },
+    {
+      "q": "ddd",
+      "imp": 8,
+      "clicks": 0
+    },
+    {
+      "q": "qual e o meu ddd",
+      "imp": 7,
+      "clicks": 0
+    },
+    {
+      "q": "de que cidade é",
+      "imp": 6,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 099 estado",
+      "imp": 6,
+      "clicks": 0
+    },
+    {
+      "q": "meu dd",
+      "imp": 5,
+      "clicks": 0
+    },
+    {
+      "q": "como saber o ddd do meu número",
+      "imp": 5,
+      "clicks": 0
+    },
+    {
+      "q": "prefixo 87 estado",
+      "imp": 5,
+      "clicks": 0
+    },
+    {
+      "q": "ddd da minha localização",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "qual e meu ddd",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "como descobrir de qual estado é o número",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "como saber o ddd",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 06",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 03",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "internet fibra óptica novo hmaburgo",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "ddd do brasil",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 45",
+      "imp": 4,
+      "clicks": 0
+    },
+    {
+      "q": "qual o meu ddd?",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "de qual estado é esse número",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "esse número é de qual estado",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 04",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "codigo de area ddd 62",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 50",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 23",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd pelotas",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "prefixo dos estados brasileiros",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd da paraiba",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "qual o ddd",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 42",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 83 qual estado",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 24",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 62 trote",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 83",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd 42 é de qual estado",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "código de area",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd das cidades",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd porto alegre rs",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "ddd maranhão são luís",
+      "imp": 3,
+      "clicks": 0
+    },
+    {
+      "q": "de onde é esse ddd",
+      "imp": 2,
+      "clicks": 0
+    },
+    {
+      "q": "ddd mariana",
+      "imp": 2,
+      "clicks": 0
+    },
+    {
+      "q": "qual é o meu ddd do brasil",
+      "imp": 2,
+      "clicks": 0
+    }
+  ]
+}

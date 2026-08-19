@@ -16,6 +16,7 @@ import { TerritoryTrustPanel } from "@/components/TerritoryTrustPanel";
 import { IntentCluster } from "@/components/IntentCluster";
 import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
 import { buildMunicipalityFaq } from "@shared/territorialFaq";
+import { regionSlug } from "@shared/territorialSeo";
 import { FaqSection } from "@/components/FaqSection";
 
 const formatPopulation = (value: number | null) =>
@@ -155,6 +156,13 @@ export default function MunicipalityPage() {
                 className="underline decoration-[#f06a4d]/60 underline-offset-4 font-semibold text-[#143d36] hover:text-[#f06a4d]"
               >
                 região {state.region}
+              </Link>
+              . A localidade integra o hub regional{" "}
+              <Link
+                href={`/regiao/${regionSlug(state.region)}`}
+                className="underline decoration-[#f06a4d]/60 underline-offset-4 font-semibold text-[#143d36] hover:text-[#f06a4d]"
+              >
+                {state.region}
               </Link>
               . O código de área associado à localidade é o{" "}
               <Link

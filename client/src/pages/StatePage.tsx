@@ -9,6 +9,7 @@ import { TerritoryQuickAnswer } from "@/components/TerritoryQuickAnswer";
 import { buildStateFaq } from "@shared/territorialFaq";
 import { FaqSection } from "@/components/FaqSection";
 import { OFFICIAL_URLS } from "@shared/externalLinks";
+import { regionSlug } from "@shared/territorialSeo";
 
 const formatPopulation = (value: number | null) =>
   value ? new Intl.NumberFormat("pt-BR").format(value) : "Dado não disponível";
@@ -78,7 +79,15 @@ export default function StatePage() {
               >
                 ANATEL
               </a>
-              , no âmbito do Plano de Numeração Brasileiro.
+              , no âmbito do Plano de Numeração Brasileiro. {state.name} integra
+              o hub regional{" "}
+              <Link
+                href={`/regiao/${regionSlug(state.region)}`}
+                className="underline decoration-[#f06a4d]/60 underline-offset-4 font-semibold text-[#143d36] hover:text-[#f06a4d]"
+              >
+                {state.region}
+              </Link>
+              , que agrupa os estados da mesma malha territorial.
             </p>
             <div className="mt-8 grid grid-cols-2 gap-3">
               <div className="rounded-2xl bg-[#e9deca] p-4">

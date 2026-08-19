@@ -383,16 +383,19 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 ## Roadmap evolutivo (pedido do utilizador 2026-08-19 — todas as fases, na ordem)
 
 ### Fase 1 — Validação imediata
-- [ ] Analisar o mega export do Search Console (5.238 páginas com baixa proporção texto/HTML) e priorizar ações com dados concretos
-- [ ] Preparar protocolo de reindexação no GSC (URL Inspection) e documentar no projeto
+- [x] Analisar o mega export do Search Console (Páginas.csv 1.000 págs / 8.139 imp + Consultas.csv 483 queries) — scripts/analyzeGscExport.py; /cidade concentra 6.619 imp; top queries: "janaúba ddd 38" (77 imp), "meu ddd" (34), "como saber meu ddd" (29)
+- [x] Preparar protocolo de reindexação no GSC — scripts/priorizarReindexacao.py: 56 URLs prioritárias verificadas HTTP, 55 com 301 correto e nenhuma 404 (autoridade preservada); docs/prioridade-reindexacao.md com procedimento passo a passo no GSC
 
 ### Fase 2 — Melhorias técnicas
-- [ ] Link building interno em escala: cada página de cidade aponta link canónico para a página do estado + hubs regionais; cidades vizinhas linkadas entre si
-- [ ] Cache headers estáticos (assets, fontes, imagens) para Core Web Vitals
-- [ ] Sitemap de atualizações recentes (content-updates.xml com lastmod diário)
+- [x] Link building estado→cidade: StatePage mun-grid liga TODAS as cidades do estado (/cidade/{uf}/{slug}) + cartão DDD→página do DDD
+- [x] Link building cidade→estado: MunicípioPage parágrafo de abertura liga /estado/{uf} e /ddd/{ddd}
+- [x] Link building cidade/estado→hub regional: MunicípioPage e StatePage ligam /regiao/{regionSlug(state.region)}; RegionPage já liga /estado/{uf} dos estados da região (parágrafo + cards)
+- [x] Cidades vizinhas linkadas entre si nas páginas de município — secção existente no MunicípioPage: parágrafo editorial com até 6 cidades do mesmo DDD ligadas (/cidade/{uf}/{slug}) + grid de relatedMunicipalities com links
+- [x] Cache headers estáticos (assets, fontes, imagens) para Core Web Vitals — server/index.ts: hashed assets 1 ano immutable; imagens/fontes/ícones 30 dias stale-while-revalidate; HTML max-age=0 must-revalidate + swr 300 (recrawl rápido)
+- [x] Sitemap de atualizações recentes — nova rota /sitemap-updates.xml (server/_core/app.ts): 40 guias + 27 estados + 30 DDDs + 4 cidades por UF (amostra nacional equilibrada) com lastmod do dia; robots.txt agora referencia também /sitemap-updates.xml
 
 ### Fase 3 — Oportunidades estratégicas
-- [ ] API pública de consulta DDD (rótulo API público, JSON, rate limit)
+- [x] API pública de consulta DDD (server/publicApi.ts: /api/public/{ddds, ddds/:code, estados, estados/:uf, cidade/:uf/:slug, regioes}, rate limit 60/min por IP, CORS; registada no createApp; 5 rotas testadas 200 no dev)
 - [ ] Service Worker PWA offline (cache de páginas consultadas)
 - [ ] Estruturação para busca por voz (fala natural, Speakable/FAQ reforçado)
 

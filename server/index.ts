@@ -10,13 +10,43 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
-  // Serve static files from dist/public in production
+    // Serve static files from dist/public in production
   const staticPath =
     process.env.NODE_ENV === "production"
       ? path.resolve(__dirname, "public")
       : path.resolve(__dirname, "..", "dist", "public");
-
-  app.use(express.static(staticPath));
+  // Long-lived cache for hashed assets (JS/CSS with content hash in filename,
+  // fonts, images, SVG map and favicons) — improves Core Web Vitals (LCP) by
+  // letting browsers/CDN keep a cached copy for a year.
+  const hashedAssetRegex = /\/[\w-]+\.[\w]{8,}\.([a-zA-Z]|ico|svg)$/;
+  app.use(
+    express.static(staticPath, {
+      setHeaders(res, filePath) {
+        const relative = filePath.replace(staticPath, "");
+        if (hashedAssetRegex.test(relative)) {
+          res.setHeader("Cache-Control", "public, max-age=31536000, immutable");
+        } else if (
+          /\.(woff2?|ttf|otf)$/.test(relative) ||
+          /\.(png|jpe?g|webp|gif|svg|ico|webmanifest)$/.test(relative)
+        ) {
+          res.setHeader("Cache-Control", "public, max-age=2592000, stale-while-revalidate=604800");
+        }
+      },
+    })
+  );
+  // HTML documents are never aggressively cached — content updates must be
+  // visible quickly for SEO recrawl.
+  app.use(
+    express.static(staticPath, {
+      extensions: ["html"],
+      setHeaders(res) {
+        res.setHeader(
+          "Cache-Control",
+          "public, max-age=0, must-revalidate, stale-while-revalidate=300",
+        );
+      },
+    }),
+  );
 
   // Handle client-side routing - serve index.html for all routes
   app.get("*", (_req, res) => {
