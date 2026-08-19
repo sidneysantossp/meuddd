@@ -215,7 +215,7 @@
 - [x] Corrigir a imagem do NotFound (meu-ddd-mark.svg), o GeoJSON do mapa (brazil-states.geojson simplificado) e o kit de imprensa (/assets/kit-marca-meu-ddd.zip) para ativos estáticos.
 - [x] Adicionar regressões de teste bloqueando chaves manus-storage de ativos de conteúdo (BlogHighlights, InstitutionalPage, editorialGuides).
 - [x] Validar visualmente a home, /guias, /guia/o-que-e-ddd e /guia/numeros-de-emergencia; suíte com 82 testes e TypeScript aprovados.
-- [ ] Gerar e integrar as 7 ilustrações em falta (capitais: ddd-de-capitais-do-brasil, sao-paulo, rio-de-janeiro, brasilia, belo-horizonte, fortaleza, como-ligar-a-cobrar e como-bloquear-chamadas-indesejadas) quando a quota de geração repor, substituindo as reutilizadas de temática genérica. (Nota: quota de imagem paga — adiar até reposição)
+- [x] Gerar e integrar as 7 ilustrações em falta via Python/Pillow (sem quota): ddd-de-capitais-do-brasil, como-telefonar-para-sao-paulo/rio-de-janeiro/brasilia, como-ligar-a-cobrar, como-bloquear-chamadas-indesejadas, numero-fixo/de-celular-tem-quantos-digitos (2 que quebravam 404). Commit 1566bac.
 
 ## Google Analytics, llms.txt e proporção texto/HTML
 
@@ -375,7 +375,7 @@ Screenshot full-page da home confirmado: badges de UF SEM numeração na "Seleç
 - [x] Validar deploy em produção (health check TCP OK, /cidade/:uf/:slug com tabs) e checkpoint — produção validada: root 200, /cidade/sp/sao-paulo 200 com conteúdo editorial completo no HTML SSR; checkpoint 41c2e438 publicado
 
 ## Ilustrações do blog via Python (PIL/Pillow, 18/08 — substitui quota de IA)
-- [ ] Identificar os artigos com imagens reutilizadas/quebradas e listar os 8 slugs a substituir
-- [ ] Gerar 8 ilustrações (1200x630 OG/blog) com identidade Meu DDD (verde #143d36, marfim #faf3e5, coral)
-- [ ] Subir as imagens como ativos estáticos (manus-upload-file --webdev) e atualizar referências nos artigos
-- [ ] Testar, checkpoint e commit GitHub
+- [x] Identificar os artigos com imagens reutilizadas/quebradas (8 slugs)
+- [x] Gerar 8 ilustrações (1200x630) com identidade Meu DDD via scripts/generateBlogIllustrations.py
+- [x] Subir as imagens como ativos estáticos em client/public/assets/ e atualizar editorialGuideImages
+- [x] Testar, checkpoint e commit GitHub — 99 testes verdes, commit 1566bac, publicado em produção
