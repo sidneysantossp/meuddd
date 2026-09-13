@@ -143,6 +143,12 @@ export function registerSeoRedirects(app: Express): void {
     res.redirect(301, `/gerador${requestQuerySuffix(req.url)}`);
   });
 
+  /* As antigas rotas de validação eram usadas por buscas de consulta de DDD.
+     A funcionalidade equivalente hoje vive na busca principal da home. */
+  app.get(["/validar", "/validar-ddd"], (req, res) => {
+    res.redirect(301, `/${requestQuerySuffix(req.url)}`);
+  });
+
   /* A arquitetura antiga usava o nome completo do estado na URL
      (/estado/sao-paulo, /estado/tocantins...). A atual usa a UF. */
   app.get("/estado/:state", (req, res, next) => {
