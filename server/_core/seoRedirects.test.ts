@@ -20,6 +20,7 @@ async function get(
     const req = {
       method: "GET",
       url: path,
+      path: path.split("?")[0],
       headers: { host: "localhost" },
       originalUrl: path,
       params: {},
@@ -71,19 +72,59 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/");
   });
 
+  it("recupera /gerador-numeros para /gerador com 301", async () => {
+    const res = await get(app, "/gerador-numeros");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/gerador");
+  });
+
+  it("preserva query string no redirect do gerador legado", async () => {
+    const res = await get(app, "/gerador-numeros?utm_source=google");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/gerador?utm_source=google");
+  });
+
+  it("redireciona nome antigo de estado para UF: São Paulo", async () => {
+    const res = await get(app, "/estado/sao-paulo");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/sp");
+  });
+
+  it("redireciona nome antigo de estado para UF: Tocantins", async () => {
+    const res = await get(app, "/estado/tocantins");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/to");
+  });
+
+  it("preserva query string no redirect de estado legado", async () => {
+    const res = await get(app, "/estado/minas-gerais?x=1");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/mg?x=1");
+  });
+
+  it("não interfere na rota canónica atual de estado por UF", async () => {
+    await expect(get(app, "/estado/sp")).rejects.toThrow("next called");
+  });
+
   it("redireciona /blog para /guias com 301", async () => {
     const res = await get(app, "/blog");
     expect(res.status).toBe(301);
     expect(res.location).toBe("/guias");
   });
 
-  it("redireciona qualquer /blog/* para /guias com 301", async () => {
+  it("redireciona artigo editorial legado /blog/<slug> para /guia/<slug>", async () => {
+    const res = await get(app, "/blog/o-que-e-ddd");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/guia/o-que-e-ddd");
+  });
+
+  it("devolve 410 para páginas programáticas antigas sem equivalente semântico", async () => {
     const res = await get(
       app,
       "/blog/bahia/iuiu/melhor-internet-fibra-iuiu"
     );
-    expect(res.status).toBe(301);
-    expect(res.location).toBe("/guias");
+    expect(res.status).toBe(410);
+    expect(res.location).toBeUndefined();
   });
 
   it("redireciona formato antigo sem UF para /cidade/<uf>/<slug>", async () => {
