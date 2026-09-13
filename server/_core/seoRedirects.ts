@@ -83,10 +83,18 @@ const EDITORIAL_GUIDE_SLUGS = new Set(editorialGuides.map(guide => guide.slug));
    inequivocamente qual entidade a URL antiga representava. Sem evidência,
    um slug duplicado não deve ser 301 para a primeira ocorrência do dataset. */
 const LEGACY_CITY_SLUG_OVERRIDES: Record<string, string> = {
+  "boa-esperanca": "ES",
   "bom-jesus": "PB",
+  candeias: "BA",
+  capanema: "PA",
   cascavel: "CE",
   "campo-grande": "MS",
+  redencao: "CE",
   santana: "AP",
+  "santa-ines": "BA",
+  "santa-luzia": "BA",
+  "santa-maria": "RS",
+  "sao-goncalo-do-amarante": "CE",
   valenca: "BA",
 };
 
