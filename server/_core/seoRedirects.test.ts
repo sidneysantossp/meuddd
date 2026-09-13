@@ -217,6 +217,18 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/cidade/mg/janauba");
   });
 
+  it("não cria 301 para município inexistente no estado legado informado", async () => {
+    const res = await get(app, "/cidade/goias/cidade-inexistente-xyz");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
+  it("não transfere autoridade para a UF errada quando o slug existe em outro estado", async () => {
+    const res = await get(app, "/cidade/goias/corumba");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
   it("redireciona nome acentuado: /cidade/são-paulo/campinas → /cidade/sp/campinas", async () => {
     const res = await get(app, "/cidade/são-paulo/campinas");
     expect(res.status).toBe(301);
