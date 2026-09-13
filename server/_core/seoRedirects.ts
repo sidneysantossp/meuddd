@@ -78,6 +78,16 @@ const STATE_NAME_TO_UF: Record<string, string> = {
 const VALID_UFS = new Set(Object.values(STATE_NAME_TO_UF));
 const EDITORIAL_GUIDE_SLUGS = new Set(editorialGuides.map(guide => guide.slug));
 
+/* O formato histórico /cidade/<slug> perde a UF. Alguns nomes existem em
+   mais de um estado. Só mantemos override quando o GSC histórico identifica
+   inequivocamente qual entidade a URL antiga representava. Sem evidência,
+   um slug duplicado não deve ser 301 para a primeira ocorrência do dataset. */
+const LEGACY_CITY_SLUG_OVERRIDES: Record<string, string> = {
+  cascavel: "CE",
+  "campo-grande": "MS",
+  valenca: "BA",
+};
+
 function isLikelyUf(segment: string): boolean {
   return VALID_UFS.has(segment.toUpperCase()) && segment.length === 2;
 }
@@ -94,17 +104,31 @@ function requestQuerySuffix(url: string): string {
   return url.includes("?") ? url.slice(url.indexOf("?")) : "";
 }
 
-/* Lookup offline por slug de município (fallback quando a DB não está
-   disponível; usado pelos redirects sem depender de runtime async). */
+/* Lookup offline por slug de município. Slugs nacionais únicos são seguros.
+   Slugs duplicados só são resolvidos quando há override histórico validado;
+   caso contrário devolvemos null para impedir consolidação de autoridade na
+   cidade errada. */
 function findMunicipalityBySlug(slug: string): {
   uf: string;
   slug: string;
 } | null {
-  const found = staticTerritory.find(
+  const matches = staticTerritory.filter(
     (row: StaticMunicipalityRecord) => row.slug === slug
   );
-  if (!found) return null;
-  return { uf: found.uf, slug: found.slug! };
+  if (matches.length === 0) return null;
+
+  const historicalUf = LEGACY_CITY_SLUG_OVERRIDES[slug];
+  if (historicalUf) {
+    const historicalMatch = matches.find(row => row.uf === historicalUf);
+    if (historicalMatch?.slug) {
+      return { uf: historicalMatch.uf, slug: historicalMatch.slug };
+    }
+  }
+
+  if (matches.length !== 1) return null;
+  const [found] = matches;
+  if (!found.slug) return null;
+  return { uf: found.uf, slug: found.slug };
 }
 
 export function registerSeoRedirects(app: Express): void {
@@ -152,7 +176,7 @@ export function registerSeoRedirects(app: Express): void {
   });
 
   /* /cidade/<segmento-1> e /cidade/<segmento-1>/<segmento-2> */
-  app.get("/cidade/:a", (req, res, next) => {
+  app.get("/cidade/:a", (req, res) => {
     const segment = req.params.a;
     if (!segment) return res.status(404).type("text/plain").send("Not found");
     /* URL literal /cidade/undefined vinda de bug client antigo → 404 normal. */
@@ -162,25 +186,29 @@ export function registerSeoRedirects(app: Express): void {
     if (!resolved)
       return res.status(404).type("text/plain").send("Not found");
     const target = `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}`;
-    const query = requestQuerySuffix(req.url);
-    res.redirect(301, `${target}${query}`);
+    return res.redirect(301, `${target}${requestQuerySuffix(req.url)}`);
   });
 
   app.get("/cidade/:a/:b", (req, res, next) => {
     const first = req.params.a;
     const slug = req.params.b;
     if (!first || !slug) return next();
-    /* /cidade/undefined/<slug>: bug client antigo — redirecionar 301 para a
-       página canónica /cidade/<UF>/<slug> (resolvendo a UF pelo slug). */
+    /* /cidade/undefined/<slug>: bug client antigo. Só redirecionamos quando
+       o slug resolve de modo seguro; ambiguidades não podem herdar a primeira
+       cidade encontrada no catálogo. */
     if (first === "undefined") {
       const resolved = findMunicipalityBySlug(slug);
       if (resolved) {
         const query = requestQuerySuffix(req.url);
-        return res.redirect(301, `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}${query}`);
+        return res.redirect(
+          301,
+          `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}${query}`
+        );
       }
       return res.status(404).type("text/plain").send("Not found");
     }
-    if (slug === "undefined") return res.status(404).type("text/plain").send("Not found");
+    if (slug === "undefined")
+      return res.status(404).type("text/plain").send("Not found");
     /* Se o primeiro segmento é um nome de estado, usar a UF correspondente. */
     const ufFromName = STATE_NAME_TO_UF[normalizeKey(first)];
     if (ufFromName && !isLikelyUf(first)) {
@@ -207,6 +235,6 @@ export function registerSeoRedirects(app: Express): void {
     /* UF válida → /cidade/<UF>/<slug> segue para o SSR renderizar a página. */
     if (isLikelyUf(first)) return next();
     /* Primeiro segmento inválido → 404. */
-    res.status(404).type("text/plain").send("Not found");
+    return res.status(404).type("text/plain").send("Not found");
   });
 }
