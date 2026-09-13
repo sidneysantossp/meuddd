@@ -86,6 +86,7 @@ const LEGACY_CITY_SLUG_OVERRIDES: Record<string, string> = {
   "bom-jesus": "PB",
   cascavel: "CE",
   "campo-grande": "MS",
+  santana: "AP",
   valenca: "BA",
 };
 
