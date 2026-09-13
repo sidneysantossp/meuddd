@@ -105,6 +105,12 @@ function requestQuerySuffix(url: string): string {
   return url.includes("?") ? url.slice(url.indexOf("?")) : "";
 }
 
+function municipalityExists(uf: string, slug: string): boolean {
+  return staticTerritory.some(
+    (row: StaticMunicipalityRecord) => row.uf === uf && row.slug === slug
+  );
+}
+
 /* Lookup offline por slug de município. Slugs nacionais únicos são seguros.
    Slugs duplicados só são resolvidos quando há override histórico validado;
    caso contrário devolvemos null para impedir consolidação de autoridade na
@@ -216,9 +222,13 @@ export function registerSeoRedirects(app: Express): void {
     }
     if (slug === "undefined")
       return res.status(404).type("text/plain").send("Not found");
-    /* Se o primeiro segmento é um nome de estado, usar a UF correspondente. */
+    /* Se o primeiro segmento é um nome de estado, só transferir autoridade
+       quando o município realmente existe naquela UF. Isso evita 301 de uma
+       URL histórica malformada para uma página atual inexistente. */
     const ufFromName = STATE_NAME_TO_UF[normalizeKey(first)];
     if (ufFromName && !isLikelyUf(first)) {
+      if (!municipalityExists(ufFromName, slug))
+        return res.status(404).type("text/plain").send("Not found");
       const target = `/cidade/${ufFromName.toLowerCase()}/${slug}`;
       const query = requestQuerySuffix(req.url);
       return res.redirect(301, `${target}${query}`);
@@ -227,10 +237,7 @@ export function registerSeoRedirects(app: Express): void {
        Regiões administrativas (taguatinga, ceilândia, gama, etc.) não são
        municípios IBGE — redirect para a página do estado. */
     if (first.toUpperCase() === "DF") {
-      const isRealMunicipality = staticTerritory.some(
-        (row: StaticMunicipalityRecord) =>
-          row.uf === "DF" && row.slug === slug
-      );
+      const isRealMunicipality = municipalityExists("DF", slug);
       if (!isRealMunicipality) {
         const query = requestQuerySuffix(req.url);
         return res.redirect(301, `/estado/df${query}`);
