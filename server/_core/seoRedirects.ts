@@ -1,7 +1,9 @@
 /* Redirects permanentes (301) para preservar autoridade de SEO de URLs
    herdadas do Google: formato antigo sem UF, nome de estado no lugar da
-   sigla, /index.html e /blog/* (conteúdo real vive em /guia e /guias). */
+   sigla, /index.html, rotas antigas do gerador e conteúdos editoriais
+   migrados de /blog para /guia. */
 import type { Express } from "express";
+import { editorialGuides } from "../../shared/editorialGuides";
 import type { StaticMunicipalityRecord } from "../territoryFallback";
 import { staticTerritory } from "../territoryFallback";
 
@@ -74,6 +76,7 @@ const STATE_NAME_TO_UF: Record<string, string> = {
 };
 
 const VALID_UFS = new Set(Object.values(STATE_NAME_TO_UF));
+const EDITORIAL_GUIDE_SLUGS = new Set(editorialGuides.map(guide => guide.slug));
 
 function isLikelyUf(segment: string): boolean {
   return VALID_UFS.has(segment.toUpperCase()) && segment.length === 2;
@@ -85,6 +88,10 @@ function normalizeKey(value: string): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/[-\s_]+/g, " ");
+}
+
+function requestQuerySuffix(url: string): string {
+  return url.includes("?") ? url.slice(url.indexOf("?")) : "";
 }
 
 /* Lookup offline por slug de município (fallback quando a DB não está
@@ -105,13 +112,43 @@ export function registerSeoRedirects(app: Express): void {
     res.redirect(301, "/");
   });
 
+  /* URL que concentrou tráfego orgânico antes da migração. A ferramenta
+     equivalente continua publicada em /gerador, portanto a transferência de
+     sinais deve ser permanente e 1:1. */
+  app.get("/gerador-numeros", (req, res) => {
+    res.redirect(301, `/gerador${requestQuerySuffix(req.url)}`);
+  });
+
+  /* A arquitetura antiga usava o nome completo do estado na URL
+     (/estado/sao-paulo, /estado/tocantins...). A atual usa a UF. */
+  app.get("/estado/:state", (req, res, next) => {
+    const segment = req.params.state;
+    if (!segment || isLikelyUf(segment)) return next();
+    const uf = STATE_NAME_TO_UF[normalizeKey(segment)];
+    if (!uf) return next();
+    return res.redirect(
+      301,
+      `/estado/${uf.toLowerCase()}${requestQuerySuffix(req.url)}`
+    );
+  });
+
   app.get("/blog", (req, res) => {
-    const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
-    res.redirect(301, `/guias${query}`);
+    res.redirect(301, `/guias${requestQuerySuffix(req.url)}`);
   });
 
   app.get("/blog/*", (req, res) => {
-    res.redirect(301, "/guias");
+    const legacyPath = req.path.replace(/^\/blog\/+/, "");
+    /* Conteúdo editorial real que mudou apenas de estrutura mantém 301 1:1. */
+    if (!legacyPath.includes("/") && EDITORIAL_GUIDE_SLUGS.has(legacyPath)) {
+      return res.redirect(
+        301,
+        `/guia/${legacyPath}${requestQuerySuffix(req.url)}`
+      );
+    }
+    /* Milhares de URLs programáticas antigas de internet/fibra não possuem
+       equivalente semântico na plataforma atual. Redirecioná-las em massa
+       para /guias cria soft-404 e mistura sinais. 410 explicita a remoção. */
+    return res.status(410).type("text/plain").send("Gone");
   });
 
   /* /cidade/<segmento-1> e /cidade/<segmento-1>/<segmento-2> */
@@ -125,7 +162,7 @@ export function registerSeoRedirects(app: Express): void {
     if (!resolved)
       return res.status(404).type("text/plain").send("Not found");
     const target = `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}`;
-    const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+    const query = requestQuerySuffix(req.url);
     res.redirect(301, `${target}${query}`);
   });
 
@@ -138,7 +175,7 @@ export function registerSeoRedirects(app: Express): void {
     if (first === "undefined") {
       const resolved = findMunicipalityBySlug(slug);
       if (resolved) {
-        const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+        const query = requestQuerySuffix(req.url);
         return res.redirect(301, `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}${query}`);
       }
       return res.status(404).type("text/plain").send("Not found");
@@ -148,9 +185,7 @@ export function registerSeoRedirects(app: Express): void {
     const ufFromName = STATE_NAME_TO_UF[normalizeKey(first)];
     if (ufFromName && !isLikelyUf(first)) {
       const target = `/cidade/${ufFromName.toLowerCase()}/${slug}`;
-      const query = req.url.includes("?")
-        ? req.url.slice(req.url.indexOf("?"))
-        : "";
+      const query = requestQuerySuffix(req.url);
       return res.redirect(301, `${target}${query}`);
     }
     /* DF: verificar se o slug corresponde a um município real (só Brasília).
@@ -162,7 +197,7 @@ export function registerSeoRedirects(app: Express): void {
           row.uf === "DF" && row.slug === slug
       );
       if (!isRealMunicipality) {
-        const query = req.url.includes("?") ? req.url.slice(req.url.indexOf("?")) : "";
+        const query = requestQuerySuffix(req.url);
         return res.redirect(301, `/estado/df${query}`);
       }
       /* Município real do DF (Brasília) → seguir para SSR. */
