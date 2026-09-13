@@ -135,6 +135,25 @@ describe("recuperação prioritária de URLs com histórico no GSC", () => {
     }
   });
 
+  it("usa a intenção histórica do GSC para homônimos que perderam a UF", async () => {
+    const cases = [
+      ["/cidade/boa-esperanca", "/cidade/es/boa-esperanca"],
+      ["/cidade/candeias", "/cidade/ba/candeias"],
+      ["/cidade/capanema", "/cidade/pa/capanema"],
+      ["/cidade/redencao", "/cidade/ce/redencao"],
+      ["/cidade/santa-ines", "/cidade/ba/santa-ines"],
+      ["/cidade/santa-luzia", "/cidade/ba/santa-luzia"],
+      ["/cidade/santa-maria", "/cidade/rs/santa-maria"],
+      ["/cidade/sao-goncalo-do-amarante", "/cidade/ce/sao-goncalo-do-amarante"],
+    ] as const;
+
+    for (const [legacy, canonical] of cases) {
+      const res = await get(app, legacy);
+      expect(res.status, legacy).toBe(301);
+      expect(res.location, legacy).toBe(canonical);
+    }
+  });
+
   it("não força 301 para Bocaina porque a URL histórica é ambígua e os sinais antigos não identificam uma entidade atual segura", async () => {
     const res = await get(app, "/cidade/bocaina");
     expect(res.status).toBe(404);
