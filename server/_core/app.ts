@@ -49,8 +49,10 @@ function requestOrigin(req: express.Request) {
     : `${req.protocol}://${host}`;
 }
 
-const LASTMOD = "2026-08-13";
-
+/* lastmod é opcional no protocolo de sitemaps e só deve ser publicado quando
+   representa uma alteração significativa e verificável do conteúdo. O
+   inventário atual fornece apenas paths; portanto omitimos lastmod em vez de
+   inventar uma data global ou marcar todas as URLs como alteradas diariamente. */
 function sitemapXml(
   entries: { path: string; priority?: string; changefreq?: string }[],
   origin: string
@@ -58,7 +60,7 @@ function sitemapXml(
   const blocks = entries
     .map(
       ({ path, priority = "0.8", changefreq = "weekly" }) =>
-        `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${LASTMOD}</lastmod><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
+        `<url><loc>${new URL(path, origin).toString()}</loc><changefreq>${changefreq}</changefreq><priority>${priority}</priority></url>`
     )
     .join("");
   return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${blocks}</urlset>`;
@@ -66,10 +68,7 @@ function sitemapXml(
 
 function sitemapIndexXml(paths: string[], origin: string) {
   const entries = paths
-    .map(
-      path =>
-        `<sitemap><loc>${new URL(path, origin).toString()}</loc><lastmod>${LASTMOD}</lastmod></sitemap>`
-    )
+    .map(path => `<sitemap><loc>${new URL(path, origin).toString()}</loc></sitemap>`)
     .join("");
   return `<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries}</sitemapindex>`;
 }
@@ -147,9 +146,7 @@ export function createApp() {
     const origin = requestOrigin(req);
     res
       .type("text/plain")
-      .send(
-        `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\nSitemap: ${origin}/sitemap-updates.xml\n`,
-      );
+      .send(`User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
   });
   app.get("/sitemap.xml", async (req, res) => {
     const origin = requestOrigin(req);
@@ -179,53 +176,11 @@ export function createApp() {
   app.get("/feed.xml", (req, res) =>
     res.type("application/rss+xml").send(rssXml(requestOrigin(req)))
   );
-  /** Páginas mais recentemente publicadas/atualizadas — sinaliza ao Google o
-   *  conteúdo novo (guias, pilares e amostra nacional de cidades) sem esperar
-   *  pelo crawl completo do sitemap index. */
-  app.get("/sitemap-updates.xml", async (req, res) => {
-    const origin = requestOrigin(req);
-    const inventory = await cachedInventory();
-    const today = new Date().toISOString().slice(0, 10);
-    const blocks: string[] = [];
-    if (inventory) {
-      blocks.push(
-        ...(inventory.guides ?? [])
-          .slice(0, 40)
-          .map(
-            path =>
-              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>`,
-          ),
-        ...(inventory.states ?? [])
-          .slice(0, 27)
-          .map(
-            path =>
-              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>`,
-          ),
-        ...(inventory.ddds ?? [])
-          .slice(0, 30)
-          .map(
-            path =>
-              `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.9</priority><changefreq>weekly</changefreq></url>`,
-          ),
-      );
-      // Amostra nacional equilibrada das cidades: as primeiras de cada UF.
-      const ufs = Object.keys(inventory.citiesByUf).sort();
-      for (const uf of ufs) {
-        blocks.push(
-          ...(inventory.citiesByUf[uf] ?? [])
-            .slice(0, 4)
-            .map(
-              path =>
-                `<url><loc>${new URL(path, origin).toString()}</loc><lastmod>${today}</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>`,
-            ),
-        );
-      }
-    }
-    res
-      .type("application/xml")
-      .send(
-        `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${blocks.join("")}</urlset>`,
-      );
+  /* O antigo sitemap-updates marcava a mesma amostra como "alterada hoje" em
+     toda requisição. Mantemos a URL histórica apenas para consolidar bots no
+     sitemap index canónico, sem fabricar sinais de freshness. */
+  app.get("/sitemap-updates.xml", (_req, res) => {
+    res.redirect(301, "/sitemap.xml");
   });
   app.get("/sitemaps/:kind.xml", async (req, res, next) => {
     try {
