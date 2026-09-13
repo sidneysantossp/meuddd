@@ -90,14 +90,37 @@ describe("recuperação prioritária de URLs com histórico no GSC", () => {
     }
   });
 
-  it("mantém 301 para cidades antigas que concentravam milhares de impressões", async () => {
+  it("mantém 301 para cidades antigas de maior visibilidade histórica", async () => {
     const cases = [
       ["/cidade/teresina", "/cidade/pi/teresina"],
       ["/cidade/macapa", "/cidade/ap/macapa"],
+      ["/cidade/santos", "/cidade/sp/santos"],
+      ["/cidade/valparaiso-de-goias", "/cidade/go/valparaiso-de-goias"],
+      ["/cidade/maceio", "/cidade/al/maceio"],
+      ["/cidade/paraiso-do-tocantins", "/cidade/to/paraiso-do-tocantins"],
+      ["/cidade/maraba", "/cidade/pa/maraba"],
+      ["/cidade/serra", "/cidade/es/serra"],
+      ["/cidade/londrina", "/cidade/pr/londrina"],
+      ["/cidade/santana", "/cidade/ap/santana"],
+      ["/cidade/picos", "/cidade/pi/picos"],
+      ["/cidade/rio-verde", "/cidade/go/rio-verde"],
+      ["/cidade/aracruz", "/cidade/es/aracruz"],
+      ["/cidade/manaus", "/cidade/am/manaus"],
+      ["/cidade/curitiba", "/cidade/pr/curitiba"],
+      ["/cidade/amapa", "/cidade/ap/amapa"],
+      ["/cidade/joao-pessoa", "/cidade/pb/joao-pessoa"],
+      ["/cidade/cacapava-do-sul", "/cidade/rs/cacapava-do-sul"],
+      ["/cidade/florianopolis", "/cidade/sc/florianopolis"],
+      ["/cidade/chapeco", "/cidade/sc/chapeco"],
+      ["/cidade/jundiai", "/cidade/sp/jundiai"],
       ["/cidade/ribeirao-preto", "/cidade/sp/ribeirao-preto"],
+      ["/cidade/breves", "/cidade/pa/breves"],
+      ["/cidade/agua-azul-do-norte", "/cidade/pa/agua-azul-do-norte"],
+      ["/cidade/joinville", "/cidade/sc/joinville"],
       ["/cidade/porto-velho", "/cidade/ro/porto-velho"],
       ["/cidade/uberlandia", "/cidade/mg/uberlandia"],
       ["/cidade/uberaba", "/cidade/mg/uberaba"],
+      ["/cidade/sao-luiz", "/cidade/rr/sao-luiz"],
       ["/cidade/piraquara", "/cidade/pr/piraquara"],
       ["/cidade/santarem", "/cidade/pa/santarem"],
       ["/cidade/jequie", "/cidade/ba/jequie"],
