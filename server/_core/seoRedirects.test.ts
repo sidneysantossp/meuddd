@@ -85,6 +85,18 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/gerador?utm_source=google");
   });
 
+  it("recupera /validar para a busca principal da home", async () => {
+    const res = await get(app, "/validar");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/");
+  });
+
+  it("recupera /validar-ddd e preserva parâmetros de busca", async () => {
+    const res = await get(app, "/validar-ddd?q=63&uf=TO");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/?q=63&uf=TO");
+  });
+
   it("redireciona nome antigo de estado para UF: São Paulo", async () => {
     const res = await get(app, "/estado/sao-paulo");
     expect(res.status).toBe(301);
