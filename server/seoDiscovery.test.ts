@@ -20,10 +20,8 @@ describe("artefactos de descoberta SEO/GEO", () => {
     expect(appSource).toContain('"/sitemaps/guias.xml"');
     expect(appSource).toContain('"/sitemaps/imagens.xml"');
     expect(appSource).toContain('"/sitemaps/cidades.xml"');
-    expect(appSource).toContain("const LASTMOD");
     expect(appSource).toContain("cachedInventory");
     expect(appSource).toContain('kind === "paginas"');
-    expect(appSource).toContain("<lastmod>");
     expect(appSource).toContain("<changefreq>");
     expect(appSource).toContain("<priority>");
     expect(appSource).toContain(
@@ -34,6 +32,22 @@ describe("artefactos de descoberta SEO/GEO", () => {
       "regionHubs.map(region => ({ path: `/regiao/${region.slug}`"
     );
     expect(appSource).toContain('"/capitais"');
+  });
+
+  it("não fabrica lastmod global nem freshness diária para URLs inalteradas", () => {
+    const appSource = fs.readFileSync(
+      path.join(projectRoot, "server/_core/app.ts"),
+      "utf8"
+    );
+    const appSourceWs = appSource.replace(/\s+/g, " ");
+
+    expect(appSource).not.toContain('const LASTMOD = "2026-08-13"');
+    expect(appSource).not.toContain("<lastmod>${today}</lastmod>");
+    expect(appSource).toContain('app.get("/sitemap-updates.xml"');
+    expect(appSourceWs).toContain('res.redirect(301, "/sitemap.xml")');
+    expect(appSource).not.toContain(
+      `Sitemap: ${"${origin}"}/sitemap-updates.xml`
+    );
   });
 
   it("publica Organization, WebSite e SearchAction em todas as respostas SSR", () => {
