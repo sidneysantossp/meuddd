@@ -39,7 +39,8 @@ async function get(
       },
       redirect(statusOrUrl: number | string, maybeUrl?: string) {
         const status = typeof statusOrUrl === "number" ? statusOrUrl : 302;
-        const url = typeof statusOrUrl === "string" ? statusOrUrl : (maybeUrl ?? "");
+        const url =
+          typeof statusOrUrl === "string" ? statusOrUrl : (maybeUrl ?? "");
         res.statusCode = status;
         headers["location"] = url;
         res.end();
@@ -127,7 +128,7 @@ describe("redirects SEO", () => {
     expect(res.location).toBeUndefined();
   });
 
-  it("redireciona formato antigo sem UF para /cidade/<uf>/<slug>", async () => {
+  it("redireciona formato antigo sem UF quando o slug é nacionalmente único", async () => {
     const res = await get(app, "/cidade/corumba");
     expect(res.status).toBe(301);
     expect(res.location).toBe("/cidade/ms/corumba");
@@ -139,14 +140,51 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/cidade/sp/araraquara");
   });
 
+  it("usa evidência histórica do GSC para o slug ambíguo cascavel", async () => {
+    const res = await get(app, "/cidade/cascavel");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ce/cascavel");
+  });
+
+  it("usa evidência histórica do GSC para o slug ambíguo campo-grande", async () => {
+    const res = await get(app, "/cidade/campo-grande");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ms/campo-grande");
+  });
+
+  it("usa evidência histórica do GSC para o slug ambíguo valenca", async () => {
+    const res = await get(app, "/cidade/valenca");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ba/valenca");
+  });
+
+  it("não atribui slug ambíguo sem evidência a uma UF arbitrária", async () => {
+    const res = await get(app, "/cidade/bom-jesus");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
   it("devolve 404 para /cidade/undefined", async () => {
     const res = await get(app, "/cidade/undefined");
     expect(res.status).toBe(404);
   });
 
-  it("não redireciona slug inexistente sem UF (segue para o SSR, que devolve 404 noindex)", async () => {
+  it("não redireciona slug inexistente sem UF", async () => {
     const res = await get(app, "/cidade/cidade-inexistente-xyz");
+    expect(res.status).toBe(404);
     expect(res.location).toBeUndefined();
+  });
+
+  it("não atribui /cidade/undefined/<slug> ambíguo a uma UF arbitrária", async () => {
+    const res = await get(app, "/cidade/undefined/bom-jesus");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
+  it("redireciona /cidade/undefined/<slug> quando há resolução segura", async () => {
+    const res = await get(app, "/cidade/undefined/corumba");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ms/corumba");
   });
 
   it("redireciona nome de estado no lugar da UF: /cidade/goias/goias → /cidade/go/goias", async () => {
