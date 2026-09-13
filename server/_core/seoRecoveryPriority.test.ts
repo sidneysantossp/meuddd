@@ -135,6 +135,12 @@ describe("recuperação prioritária de URLs com histórico no GSC", () => {
     }
   });
 
+  it("não força 301 para Bocaina porque a URL histórica é ambígua e os sinais antigos não identificam uma entidade atual segura", async () => {
+    const res = await get(app, "/cidade/bocaina");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
   it("mantém a principal ferramenta histórica ligada à equivalente atual", async () => {
     const res = await get(app, "/gerador-numeros");
     expect(res.status).toBe(301);
