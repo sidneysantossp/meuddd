@@ -170,8 +170,14 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/cidade/ba/valenca");
   });
 
-  it("não atribui slug ambíguo sem evidência a uma UF arbitrária", async () => {
+  it("usa evidência histórica do GSC para o slug ambíguo bom-jesus", async () => {
     const res = await get(app, "/cidade/bom-jesus");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/pb/bom-jesus");
+  });
+
+  it("não atribui slug ambíguo sem evidência a uma UF arbitrária", async () => {
+    const res = await get(app, "/cidade/boa-vista");
     expect(res.status).toBe(404);
     expect(res.location).toBeUndefined();
   });
@@ -188,7 +194,7 @@ describe("redirects SEO", () => {
   });
 
   it("não atribui /cidade/undefined/<slug> ambíguo a uma UF arbitrária", async () => {
-    const res = await get(app, "/cidade/undefined/bom-jesus");
+    const res = await get(app, "/cidade/undefined/boa-vista");
     expect(res.status).toBe(404);
     expect(res.location).toBeUndefined();
   });
