@@ -17,6 +17,25 @@ const productLinks = [
   { href: "/imprensa", label: "Imprensa" },
 ] as const;
 
+/**
+ * Destinos canônicos que concentraram procura histórica no Search Console.
+ * Mantê-los como links HTML reais no rodapé reduz a profundidade de crawl e
+ * ajuda buscadores a redescobrir a arquitetura atual após a migração de URLs.
+ */
+export const SEO_PRIORITY_LINKS = [
+  { href: "/estado/to", label: "Tocantins" },
+  { href: "/estado/al", label: "Alagoas" },
+  { href: "/estado/df", label: "Distrito Federal" },
+  { href: "/estado/ac", label: "Acre" },
+  { href: "/estado/ap", label: "Amapá" },
+  { href: "/estado/sp", label: "São Paulo" },
+  { href: "/ddd/63", label: "DDD 63 · Tocantins" },
+  { href: "/ddd/82", label: "DDD 82 · Alagoas" },
+  { href: "/ddd/61", label: "DDD 61 · DF e entorno" },
+  { href: "/ddd/68", label: "DDD 68 · Acre" },
+  { href: "/ddd/96", label: "DDD 96 · Amapá" },
+] as const;
+
 const institutionalLinks = [
   { href: "/sobre", label: "Sobre a plataforma" },
   { href: "/contato", label: "Contato" },
@@ -114,8 +133,9 @@ export function PublicFooter() {
             </Link>
           </section>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-8 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-4">
             <FooterLinkList title="Explorar" links={productLinks} />
+            <FooterLinkList title="DDDs e estados" links={SEO_PRIORITY_LINKS} />
             <FooterLinkList title="Plataforma" links={institutionalLinks} />
             <FooterLinkList title="Legal" links={legalLinks} />
           </div>
