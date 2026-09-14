@@ -20,6 +20,7 @@ async function get(
     const req = {
       method: "GET",
       url: path,
+      path: path.split("?")[0],
       headers: { host: "localhost" },
       originalUrl: path,
       params: {},
@@ -38,7 +39,8 @@ async function get(
       },
       redirect(statusOrUrl: number | string, maybeUrl?: string) {
         const status = typeof statusOrUrl === "number" ? statusOrUrl : 302;
-        const url = typeof statusOrUrl === "string" ? statusOrUrl : (maybeUrl ?? "");
+        const url =
+          typeof statusOrUrl === "string" ? statusOrUrl : (maybeUrl ?? "");
         res.statusCode = status;
         headers["location"] = url;
         res.end();
@@ -71,22 +73,74 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/");
   });
 
+  it("recupera /gerador-numeros para /gerador com 301", async () => {
+    const res = await get(app, "/gerador-numeros");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/gerador");
+  });
+
+  it("preserva query string no redirect do gerador legado", async () => {
+    const res = await get(app, "/gerador-numeros?utm_source=google");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/gerador?utm_source=google");
+  });
+
+  it("recupera /validar para a busca principal da home", async () => {
+    const res = await get(app, "/validar");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/");
+  });
+
+  it("recupera /validar-ddd e preserva parâmetros de busca", async () => {
+    const res = await get(app, "/validar-ddd?q=63&uf=TO");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/?q=63&uf=TO");
+  });
+
+  it("redireciona nome antigo de estado para UF: São Paulo", async () => {
+    const res = await get(app, "/estado/sao-paulo");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/sp");
+  });
+
+  it("redireciona nome antigo de estado para UF: Tocantins", async () => {
+    const res = await get(app, "/estado/tocantins");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/to");
+  });
+
+  it("preserva query string no redirect de estado legado", async () => {
+    const res = await get(app, "/estado/minas-gerais?x=1");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/estado/mg?x=1");
+  });
+
+  it("não interfere na rota canónica atual de estado por UF", async () => {
+    await expect(get(app, "/estado/sp")).rejects.toThrow("next called");
+  });
+
   it("redireciona /blog para /guias com 301", async () => {
     const res = await get(app, "/blog");
     expect(res.status).toBe(301);
     expect(res.location).toBe("/guias");
   });
 
-  it("redireciona qualquer /blog/* para /guias com 301", async () => {
+  it("redireciona artigo editorial legado /blog/<slug> para /guia/<slug>", async () => {
+    const res = await get(app, "/blog/o-que-e-ddd");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/guia/o-que-e-ddd");
+  });
+
+  it("devolve 410 para páginas programáticas antigas sem equivalente semântico", async () => {
     const res = await get(
       app,
       "/blog/bahia/iuiu/melhor-internet-fibra-iuiu"
     );
-    expect(res.status).toBe(301);
-    expect(res.location).toBe("/guias");
+    expect(res.status).toBe(410);
+    expect(res.location).toBeUndefined();
   });
 
-  it("redireciona formato antigo sem UF para /cidade/<uf>/<slug>", async () => {
+  it("redireciona formato antigo sem UF quando o slug é nacionalmente único", async () => {
     const res = await get(app, "/cidade/corumba");
     expect(res.status).toBe(301);
     expect(res.location).toBe("/cidade/ms/corumba");
@@ -98,14 +152,57 @@ describe("redirects SEO", () => {
     expect(res.location).toBe("/cidade/sp/araraquara");
   });
 
+  it("usa evidência histórica do GSC para o slug ambíguo cascavel", async () => {
+    const res = await get(app, "/cidade/cascavel");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ce/cascavel");
+  });
+
+  it("usa evidência histórica do GSC para o slug ambíguo campo-grande", async () => {
+    const res = await get(app, "/cidade/campo-grande");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ms/campo-grande");
+  });
+
+  it("usa evidência histórica do GSC para o slug ambíguo valenca", async () => {
+    const res = await get(app, "/cidade/valenca");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ba/valenca");
+  });
+
+  it("usa evidência histórica do GSC para o slug ambíguo bom-jesus", async () => {
+    const res = await get(app, "/cidade/bom-jesus");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/pb/bom-jesus");
+  });
+
+  it("não atribui slug ambíguo sem evidência a uma UF arbitrária", async () => {
+    const res = await get(app, "/cidade/boa-vista");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
   it("devolve 404 para /cidade/undefined", async () => {
     const res = await get(app, "/cidade/undefined");
     expect(res.status).toBe(404);
   });
 
-  it("não redireciona slug inexistente sem UF (segue para o SSR, que devolve 404 noindex)", async () => {
+  it("não redireciona slug inexistente sem UF", async () => {
     const res = await get(app, "/cidade/cidade-inexistente-xyz");
+    expect(res.status).toBe(404);
     expect(res.location).toBeUndefined();
+  });
+
+  it("não atribui /cidade/undefined/<slug> ambíguo a uma UF arbitrária", async () => {
+    const res = await get(app, "/cidade/undefined/boa-vista");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
+  it("redireciona /cidade/undefined/<slug> quando há resolução segura", async () => {
+    const res = await get(app, "/cidade/undefined/corumba");
+    expect(res.status).toBe(301);
+    expect(res.location).toBe("/cidade/ms/corumba");
   });
 
   it("redireciona nome de estado no lugar da UF: /cidade/goias/goias → /cidade/go/goias", async () => {
@@ -118,6 +215,18 @@ describe("redirects SEO", () => {
     const res = await get(app, "/cidade/minas-gerais/janauba");
     expect(res.status).toBe(301);
     expect(res.location).toBe("/cidade/mg/janauba");
+  });
+
+  it("não cria 301 para município inexistente no estado legado informado", async () => {
+    const res = await get(app, "/cidade/goias/cidade-inexistente-xyz");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
+  });
+
+  it("não transfere autoridade para a UF errada quando o slug existe em outro estado", async () => {
+    const res = await get(app, "/cidade/goias/corumba");
+    expect(res.status).toBe(404);
+    expect(res.location).toBeUndefined();
   });
 
   it("redireciona nome acentuado: /cidade/são-paulo/campinas → /cidade/sp/campinas", async () => {
