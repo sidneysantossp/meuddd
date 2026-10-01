@@ -200,7 +200,7 @@ try {
   if (
     !pressPage?.html.includes("Kit de marca") ||
     !pressPage.html.includes("Em números") ||
-    !pressPage.html.includes("meu-ddd-kit-de-marca-2026")
+    !pressPage.html.includes('href="/assets/kit-marca-meu-ddd.zip"')
   ) {
     throw new Error(
       `A página de imprensa não renderizou kit de marca e estatísticas via SSR: ${pressPage?.html.slice(0, 600)}`
@@ -245,6 +245,54 @@ try {
     throw new Error(
       `A chave pública IndexNow não foi publicada corretamente (HTTP ${indexNowKeyResponse.status}).`
     );
+  }
+
+  // Exercita o catálogo real no bundle, não apenas um HTTP 200 de fallback.
+  for (const [uf, slug] of [
+    ["sp", "sao-paulo"],
+    ["to", "palmas"],
+    ["mg", "belo-horizonte"],
+  ]) {
+    const response = await fetch(
+      `http://127.0.0.1:${address.port}/cidade/${uf}/${slug}`
+    );
+    const html = await response.text();
+    if (!response.ok || !html.includes('id="tabpanel-tourism"'))
+      throw new Error(`Abas editoriais ausentes no SSR de ${uf}/${slug}`);
+    const state = JSON.parse(
+      html.match(/window\.__RQ_STATE__=(.*?)<\/script>/s)?.[1] ?? "null"
+    );
+    const tabsQueries = state?.queries.filter(
+      query => query.queryKey[0]?.[0] === "localityTabs"
+    );
+    if (tabsQueries?.length !== 1 || !tabsQueries[0].state.data.tabs?.tourism)
+      throw new Error(`Hidratação municipal ausente em ${uf}/${slug}`);
+    if (state.queries.some(query => query.queryKey[0] === "localityTabs"))
+      throw new Error(`Catálogo estadual inteiro serializado em ${uf}/${slug}`);
+    if (Buffer.byteLength(html) > 350_000)
+      throw new Error(`HTML municipal excessivo em ${uf}/${slug}`);
+    const input = encodeURIComponent(
+      JSON.stringify({ json: { uf: uf.toUpperCase(), slug } })
+    );
+    const api = await fetch(
+      `http://127.0.0.1:${address.port}/api/trpc/localityTabs.byMunicipality?input=${input}`
+    );
+    const payload = await api.json();
+    if (!api.ok || !payload.result?.data?.json?.tabs?.tourism)
+      throw new Error(`Catálogo ausente na API em ${uf}/${slug}`);
+    console.log(
+      `SEO município ${uf}/${slug}: abas SSR + API, ${Buffer.byteLength(html)} bytes`
+    );
+  }
+  for (const target of [
+    "/ddd/63",
+    "/ddd/96",
+    "/estado/sp",
+    "/estado/to",
+    "/capitais",
+  ]) {
+    if (!homeHtml.includes(`href="${target}"`))
+      throw new Error(`Link HTML ausente na home: ${target}`);
   }
 
   console.log(

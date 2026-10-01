@@ -538,13 +538,9 @@ export default function Home() {
             </div>
             <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {popularDdds.map((item, index) => (
-                <button
-                  type="button"
+                <Link
+                  href={`/ddd/${item.code}`}
                   key={item.code}
-                  onClick={() => {
-                    updateQuery(item.code);
-                    revealResults();
-                  }}
                   className="pressable group flex items-center justify-between rounded-2xl border border-[#d9d1bf] bg-[#fffaf1] px-5 py-4 text-left hover:border-[#f06a4d] hover:shadow-[0_12px_28px_rgba(20,61,54,0.09)]"
                 >
                   <span>
@@ -562,9 +558,29 @@ export default function Home() {
                     className="text-[#143d36] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
                     size={18}
                   />
-                </button>
+                </Link>
               ))}
             </div>
+            <nav
+              aria-label="DDDs por estado"
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              {(states.data ?? []).map(state => (
+                <Link
+                  key={state.uf}
+                  href={`/estado/${state.uf.toLowerCase()}`}
+                  className="text-sm underline underline-offset-4"
+                >
+                  DDD de {state.name}
+                </Link>
+              ))}
+              <Link
+                href="/capitais"
+                className="text-sm underline underline-offset-4"
+              >
+                DDDs das capitais
+              </Link>
+            </nav>
           </div>
         </section>
 

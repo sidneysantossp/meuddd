@@ -5,12 +5,6 @@ import { trpc } from "@/lib/trpc";
 import { ShareActions } from "@/components/ShareActions";
 import { LocalityContext } from "@/components/LocalityContext";
 import { PublicNavbar } from "@/components/PublicNavbar";
-import {
-  getMunicipalityTabsKey,
-  getMunicipalityTabsSync,
-} from "@shared/localityTabs";
-import type { LocalityTabsCatalog } from "@shared/localityTabs/types";
-import { useQueryClient } from "@tanstack/react-query";
 import { MunicipalityTabs } from "@/components/MunicipalityTabs";
 import { TerritoryTrustPanel } from "@/components/TerritoryTrustPanel";
 import { IntentCluster } from "@/components/IntentCluster";
@@ -23,36 +17,20 @@ const formatPopulation = (value: number | null) =>
   value ? new Intl.NumberFormat("pt-BR").format(value) : "Dado não disponível";
 
 // Subcomponente com ordem de hooks estável: a query dos tabs editoriais é
-// sempre chamada (nunca dentro de IIFE nem depois de early returns), e o
-// initialData mantém a identidade com o seed SSR para hidratação correta.
+// sempre chamada; o SSR preenche a mesma query municipal usada no cliente.
 function MunicipalityTabsSection({
   municipality,
   state,
   slug,
-  queryClient,
 }: {
   municipality: { name: string; ibgeCode: number };
   state: { uf: string; name: string };
   slug: string;
-  queryClient: ReturnType<typeof useQueryClient>;
 }) {
-  const tabsKey = getMunicipalityTabsKey(state.uf, slug);
   const tabsQuery = trpc.localityTabs.byMunicipality.useQuery(
     { uf: state.uf, slug },
     {
       enabled: Boolean(slug),
-      // Dados iniciais do SSR: o prefetch semeia as tabs da UF no queryClient
-      // (chave ["localityTabs", uf]), garantindo que o primeiro render do
-      // client é idêntico ao HTML hidratado e sem mismatch de hidratação.
-      initialData: () => {
-        const catalog = queryClient.getQueryData<LocalityTabsCatalog>([
-          "localityTabs",
-          state.uf.toLowerCase(),
-        ]);
-        const tabs =
-          catalog?.[tabsKey] ?? getMunicipalityTabsSync(state.uf, slug);
-        return tabs ? { tabs } : undefined;
-      },
     }
   );
   const tabs = tabsQuery.data?.tabs;
@@ -76,7 +54,7 @@ function MunicipalityTabsSection({
   );
 }
 
-// Nota crítica: TODOS os hooks (useQueryClient etc.) devem ser declarados antes
+// Nota crítica: TODOS os hooks devem ser declarados antes
 // de qualquer early return. Hooks condicionais entre renders (primeiro render
 // loading → segundo render com hooks extras) causam o erro React #310
 // ("hooks can only be called inside a function component") em produção.
@@ -85,7 +63,6 @@ export default function MunicipalityPage() {
   const [, setLocation] = useLocation();
   const uf = (params?.uf ?? "").toUpperCase();
   const slug = params?.slug ?? "";
-  const queryClient = useQueryClient();
   const detail = trpc.ddd.byMunicipality.useQuery(
     { uf, slug },
     { enabled: /^[A-Z]{2}$/.test(uf) && Boolean(slug) }
@@ -232,7 +209,6 @@ export default function MunicipalityPage() {
         municipality={municipality}
         state={state}
         slug={slug}
-        queryClient={queryClient}
       />
       <section className="container py-2 lg:py-6">
         <TerritoryTrustPanel

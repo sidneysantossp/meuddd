@@ -25,8 +25,7 @@ async function get(
       originalUrl: path,
       params: {},
       query: {},
-      get: (header: string) =>
-        header === "host" ? "localhost" : undefined,
+      get: (header: string) => (header === "host" ? "localhost" : undefined),
     } as unknown as express.Request;
     const headers = {} as Record<string, string | string[] | undefined>;
     const res = {
@@ -132,10 +131,7 @@ describe("redirects SEO", () => {
   });
 
   it("devolve 410 para páginas programáticas antigas sem equivalente semântico", async () => {
-    const res = await get(
-      app,
-      "/blog/bahia/iuiu/melhor-internet-fibra-iuiu"
-    );
+    const res = await get(app, "/blog/bahia/iuiu/melhor-internet-fibra-iuiu");
     expect(res.status).toBe(410);
     expect(res.location).toBeUndefined();
   });
@@ -264,6 +260,22 @@ describe("redirects SEO", () => {
   });
 
   it("não redireciona município real do DF: /cidade/df/brasilia segue para o SSR", async () => {
-    await expect(get(app, "/cidade/df/brasilia")).rejects.toThrow("next called");
+    await expect(get(app, "/cidade/df/brasilia")).rejects.toThrow(
+      "next called"
+    );
+  });
+  it.each([
+    ["/estado/TO", "/estado/to"],
+    ["/cidade/SP/SAO-PAULO/", "/cidade/sp/sao-paulo"],
+    ["/ddd/63/?utm_source=Google", "/ddd/63?utm_source=Google"],
+  ])("normaliza %s preservando parâmetros", async (url, target) => {
+    expect(await get(app, url)).toEqual({ status: 301, location: target });
+  });
+
+  it("retorna 404 para slug arbitrário no DF", async () => {
+    expect(await get(app, "/cidade/df/nao-existe-auditoria")).toEqual({
+      status: 404,
+      location: undefined,
+    });
   });
 });

@@ -19,7 +19,7 @@ describe("footer público", () => {
     container.remove();
   });
 
-  it("expõe navegação institucional, legal, utilitária e social sem repetir o diretório de UFs", () => {
+  it("expõe navegação institucional, legal, utilitária, social e links de recuperação SEO", () => {
     expect(container.textContent).toContain("© 2026 Meu DDD");
     expect(
       Array.from(container.querySelectorAll("a"))
@@ -36,7 +36,16 @@ describe("footer público", () => {
         .find(link => link.textContent === "LGPD")
         ?.getAttribute("href")
     ).toBe("/lgpd");
+    expect(
+      Array.from(container.querySelectorAll("a"))
+        .find(link => link.textContent === "Acre")
+        ?.getAttribute("href")
+    ).toBe("/estado/ac");
+    expect(
+      Array.from(container.querySelectorAll("a"))
+        .find(link => link.textContent === "DDD 68 · Acre")
+        ?.getAttribute("href")
+    ).toBe("/ddd/68");
     expect(container.querySelectorAll('a[target="_blank"]').length).toBe(3);
-    expect(container.textContent).not.toContain("Acre");
   });
 });

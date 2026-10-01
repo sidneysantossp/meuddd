@@ -5,8 +5,8 @@
    - Em Node (SSR em produção ou dev tsx), o wrapper carrega os módulos
      compilados `dist/server/tabs/*.cjs` (ou `shared/localityTabs/{uf}.ts`
      como reserva em desenvolvimento) via `createRequire(import.meta.url)`.
-   - No browser, o wrapper delega ao dynamic import do módulo TS
-     (`shared/localityTabs/{uf}.ts`) — o vite code-splits por UF.
+   - No browser, as páginas recebem apenas o município via hidratação/tRPC;
+     os catálogos estaduais são carregados exclusivamente no servidor.
 
    Como os wrappers não contêm texto editorial, o bundler (esbuild do bundle
    Express e vite build --ssr) nunca inline os 51 MB do catálogo — sem isso
@@ -16,9 +16,33 @@ import type { LocalityTabsCatalog, MunicipalityTabs } from "./types";
 const cache = new Map<string, LocalityTabsCatalog>();
 
 const UF_LIST = [
-  "ac", "al", "am", "ap", "ba", "ce", "df", "es", "go", "ma", "mg", "ms",
-  "mt", "pa", "pb", "pe", "pi", "pr", "rj", "rn", "ro", "rr", "rs", "sc",
-  "se", "sp", "to",
+  "ac",
+  "al",
+  "am",
+  "ap",
+  "ba",
+  "ce",
+  "df",
+  "es",
+  "go",
+  "ma",
+  "mg",
+  "ms",
+  "mt",
+  "pa",
+  "pb",
+  "pe",
+  "pi",
+  "pr",
+  "rj",
+  "rn",
+  "ro",
+  "rr",
+  "rs",
+  "sc",
+  "se",
+  "sp",
+  "to",
 ] as const;
 
 /** Obter as tabs editoriais de um município (SSR-safe; síncrono quando já em cache). */
@@ -54,21 +78,22 @@ export async function getMunicipalityTabs(
   slug: string
 ): Promise<MunicipalityTabs | undefined> {
   const catalog = await loadMunicipalityTabs(uf);
-  return catalog[getMunicipalityTabsKey(uf, slug)];
+  return catalog[slug.toLowerCase()];
 }
 
 /* Loaders por UF: cada wrapper é um módulo de ~1 KB importado dinamicamente.
    O specifier literal por UF permite ao bundler code-split por estado sem
    analisar o conteúdo editorial dos módulos originais. */
-const loaders: Record<string, () => Promise<LocalityTabsCatalog>> = Object.fromEntries(
-  UF_LIST.map((uf) => [
-    uf,
-    () =>
-      import(/* @vite-ignore */ `./_gen/uf-${uf}.js` as string).then(
-        (m: { getUfCatalog: () => LocalityTabsCatalog }) => m.getUfCatalog()
-      ),
-  ])
-);
+const loaders: Record<string, () => Promise<LocalityTabsCatalog>> =
+  Object.fromEntries(
+    UF_LIST.map(uf => [
+      uf,
+      () =>
+        import(/* @vite-ignore */ `./_gen/uf-${uf}.js` as string).then(
+          (m: { getUfCatalog: () => LocalityTabsCatalog }) => m.getUfCatalog()
+        ),
+    ])
+  );
 
 /** Link de pesquisa direta no Google Maps com coordenadas reais do ponto. */
 export function mapPointUrl(
