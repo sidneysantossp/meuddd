@@ -20,7 +20,7 @@ const STATE_NAME_TO_UF: Record<string, string> = {
   bahia: "BA",
   ba: "BA",
   ceara: "CE",
-  "ceará": "CE",
+  ceará: "CE",
   ce: "CE",
   "distrito federal": "DF",
   df: "DF",
@@ -74,6 +74,46 @@ const STATE_NAME_TO_UF: Record<string, string> = {
   tocantins: "TO",
   to: "TO",
 };
+
+// Preserva os aliases de regiões administrativas conhecidas; slugs arbitrários
+// não devem consolidar URLs inexistentes na página do Distrito Federal.
+const DF_LEGACY_REGIONS = new Set([
+  "taguatinga",
+  "ceilandia",
+  "gama",
+  "guara",
+  "sobradinho",
+  "planaltina",
+  "brazlandia",
+  "nucleo-bandeirante",
+  "cruzeiro",
+  "samambaia",
+  "santa-maria",
+  "sao-sebastiao",
+  "recanto-das-emas",
+  "lago-sul",
+  "lago-norte",
+  "riacho-fundo",
+  "riacho-fundo-ii",
+  "candangolandia",
+  "aguas-claras",
+  "vicente-pires",
+  "itapoa",
+  "paranoa",
+  "sudoeste",
+  "sudoeste-octogonal",
+  "varjao",
+  "park-way",
+  "scia",
+  "estrutural",
+  "sia",
+  "jardim-botanico",
+  "sobradinho-ii",
+  "fercal",
+  "sol-nascente",
+  "por-do-sol",
+  "arniqueira",
+]);
 
 const VALID_UFS = new Set(Object.values(STATE_NAME_TO_UF));
 const EDITORIAL_GUIDE_SLUGS = new Set(editorialGuides.map(guide => guide.slug));
@@ -148,6 +188,21 @@ function findMunicipalityBySlug(slug: string): {
 }
 
 export function registerSeoRedirects(app: Express): void {
+  // Normaliza apenas famílias públicas, preservando query strings e APIs.
+  app.use((req, res, next) => {
+    if (req.method !== "GET" && req.method !== "HEAD") return next();
+    const pathname = req.path;
+    if (!/^\/(?:estado|cidade|ddd|regiao|guia)(?:\/|$)/i.test(pathname))
+      return next();
+    const canonicalPath = pathname.toLowerCase().replace(/\/+$/, "");
+    if (canonicalPath !== pathname)
+      return res.redirect(
+        301,
+        `${canonicalPath}${requestQuerySuffix(req.originalUrl)}`
+      );
+    return next();
+  });
+
   app.get(["/index.html", "/index.htm"], (req, res) => {
     res.redirect(301, "/");
   });
@@ -205,8 +260,7 @@ export function registerSeoRedirects(app: Express): void {
     if (segment === "undefined")
       return res.status(404).type("text/plain").send("Not found");
     const resolved = findMunicipalityBySlug(segment);
-    if (!resolved)
-      return res.status(404).type("text/plain").send("Not found");
+    if (!resolved) return res.status(404).type("text/plain").send("Not found");
     const target = `/cidade/${resolved.uf.toLowerCase()}/${resolved.slug}`;
     return res.redirect(301, `${target}${requestQuerySuffix(req.url)}`);
   });
@@ -248,6 +302,9 @@ export function registerSeoRedirects(app: Express): void {
     if (first.toUpperCase() === "DF") {
       const isRealMunicipality = municipalityExists("DF", slug);
       if (!isRealMunicipality) {
+        const normalizedSlug = normalizeKey(slug).replace(/ /g, "-");
+        if (!DF_LEGACY_REGIONS.has(normalizedSlug))
+          return res.status(404).type("text/plain").send("Not found");
         const query = requestQuerySuffix(req.url);
         return res.redirect(301, `/estado/df${query}`);
       }

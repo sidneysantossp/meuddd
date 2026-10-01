@@ -21,22 +21,47 @@ const genDir = path.join(projectRoot, "shared", "localityTabs", "_gen");
 /* --out-dir=<raiz>: escreve também uma variante do wrapper cujo
    import.meta.dirname aponta para <raiz>/dist/server/_gen, ajustando
    o número de níveis ".." para resolver a raiz do projeto. */
-const outArg = process.argv.find((a) => a.startsWith("--out-dir="));
+const outArg = process.argv.find(a => a.startsWith("--out-dir="));
 const outRoot = outArg ? outArg.split("=")[1] : null;
 const extraDirs = [];
 if (outRoot) {
   const outGenDir = path.join(outRoot, "dist", "server", "_gen");
   fs.mkdirSync(outGenDir, { recursive: true });
   if (fs.existsSync(outGenDir)) {
-    for (const f of fs.readdirSync(outGenDir)) fs.unlinkSync(path.join(outGenDir, f));
+    for (const f of fs.readdirSync(outGenDir))
+      fs.unlinkSync(path.join(outGenDir, f));
   }
-  extraDirs.push({ dir: outGenDir, depth: 4 });
+  extraDirs.push({ dir: outGenDir, depth: 3 });
 }
 
 const UF_LIST = [
-  "ac", "al", "am", "ap", "ba", "ce", "df", "es", "go", "ma", "mg", "ms",
-  "mt", "pa", "pb", "pe", "pi", "pr", "rj", "rn", "ro", "rr", "rs", "sc",
-  "se", "sp", "to",
+  "ac",
+  "al",
+  "am",
+  "ap",
+  "ba",
+  "ce",
+  "df",
+  "es",
+  "go",
+  "ma",
+  "mg",
+  "ms",
+  "mt",
+  "pa",
+  "pb",
+  "pe",
+  "pi",
+  "pr",
+  "rj",
+  "rn",
+  "ro",
+  "rr",
+  "rs",
+  "sc",
+  "se",
+  "sp",
+  "to",
 ];
 
 if (fs.existsSync(genDir)) {
@@ -45,7 +70,7 @@ if (fs.existsSync(genDir)) {
   fs.mkdirSync(genDir, { recursive: true });
 }
 function wrapperContents(uf, depth) {
-  const ups = Array.from({ length: depth }, () => "\"..\"").join(", ");
+  const ups = Array.from({ length: depth }, () => '".."').join(", ");
   return `// Wrapper gerado por scripts/generateUfWrappers.mjs — não editar à mão.
 import { createRequire } from "node:module";
 import path from "node:path";
@@ -67,7 +92,7 @@ function loadCatalog() {
       if (catalog) return catalog;
     } catch { /* tentar próximo candidato */ }
   }
-  return {};
+  throw new Error("Catálogo editorial indisponível: ${uf}");
 }
 
 let cached = null;
@@ -80,14 +105,16 @@ export function getUfCatalog() {
 }
 
 for (const uf of UF_LIST) {
-  fs.writeFileSync(path.join(genDir, `uf-${uf}.js`), wrapperContents(uf, 2));
+  fs.writeFileSync(path.join(genDir, `uf-${uf}.js`), wrapperContents(uf, 3));
   for (const { dir, depth } of extraDirs) {
     fs.writeFileSync(path.join(dir, `uf-${uf}.js`), wrapperContents(uf, depth));
   }
 }
 
 const indexContents = (rel, depth) => {
-  const imports = UF_LIST.map(uf => `import * as uf_${uf} from "${rel}/uf-${uf}.js";`).join("\n");
+  const imports = UF_LIST.map(
+    uf => `import * as uf_${uf} from "${rel}/uf-${uf}.js";`
+  ).join("\n");
   return `// Wrapper index gerado por scripts/generateUfWrappers.mjs — não editar à mão.
 ${imports}
 
@@ -99,15 +126,17 @@ export default ufModules;
 };
 
 // index.js reexporta o mapa de wrappers (usado pelo loader do browser/SSR)
-fs.writeFileSync(
-  path.join(genDir, "index.js"),
-  indexContents(".", 2)
-);
+fs.writeFileSync(path.join(genDir, "index.js"), indexContents(".", 2));
 for (const { dir } of extraDirs) {
   fs.writeFileSync(path.join(dir, "index.js"), indexContents(".", 4));
 }
 
 console.log(
-  "Wrappers gerados: " + (UF_LIST.length + 1) + " ficheiros em " + genDir +
-  (outRoot ? " (e cópia de produção em " + outRoot + "/dist/server/_gen)" : "")
+  "Wrappers gerados: " +
+    (UF_LIST.length + 1) +
+    " ficheiros em " +
+    genDir +
+    (outRoot
+      ? " (e cópia de produção em " + outRoot + "/dist/server/_gen)"
+      : "")
 );

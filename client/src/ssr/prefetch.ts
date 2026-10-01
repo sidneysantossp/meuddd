@@ -15,11 +15,7 @@ import {
   buildStateFaq,
   faqPageJsonLd,
 } from "@shared/territorialFaq";
-import {
-  getMunicipalityTabsKey,
-  loadMunicipalityTabs,
-  mapPointUrl,
-} from "@shared/localityTabs";
+import { getMunicipalityTabs, mapPointUrl } from "@shared/localityTabs";
 
 type Outputs = inferRouterOutputs<AppRouter>;
 export type HeadMeta = {
@@ -472,8 +468,6 @@ export async function prefetchForPath(
           description: dddDesc,
           inLanguage: "pt-BR",
           mainEntityOfPage: path,
-          datePublished: "2026-08-01",
-          dateModified: "2026-08-01",
           author: { "@type": "Organization", name: site },
           publisher: { "@type": "Organization", name: site },
           about: {
@@ -508,7 +502,10 @@ export async function prefetchForPath(
           "@id": `${path}#webpage`,
           url: path,
           name: dddTitle,
-          speakable: { "@type": "SpeakableSpecification", cssSelector: `#faq-ddd-${code}` },
+          speakable: {
+            "@type": "SpeakableSpecification",
+            cssSelector: `#faq-ddd-${code}`,
+          },
         },
       ],
     };
@@ -581,8 +578,6 @@ export async function prefetchForPath(
           description: `Consulte os DDDs e os ${data.cityCount} municípios de ${data.state.name}, na região ${data.state.region}.`,
           inLanguage: "pt-BR",
           mainEntityOfPage: path,
-          datePublished: "2026-08-01",
-          dateModified: "2026-08-01",
           author: { "@type": "Organization", name: site },
           publisher: { "@type": "Organization", name: site },
           about: {
@@ -605,12 +600,6 @@ export async function prefetchForPath(
       getQueryKey(trpc.ddd.byMunicipality, { uf, slug }, "query"),
       data
     );
-    // Conteúdo editorial em tabs do município: pré-carrega o catálogo da UF e
-    // seedeia no React Query para que a hidratação do cliente encontre os dados.
-    const tabsCatalog = await loadMunicipalityTabs(uf);
-    if (Object.keys(tabsCatalog).length > 0) {
-      await seed(queryClient, ["localityTabs", uf.toLowerCase()], tabsCatalog);
-    }
     if (!data)
       return {
         title: "Município não encontrado | Meu DDD",
@@ -619,6 +608,12 @@ export async function prefetchForPath(
         notFound: true,
         noindex: true,
       };
+    const tabs = await getMunicipalityTabs(uf, slug);
+    await seed(
+      queryClient,
+      getQueryKey(trpc.localityTabs.byMunicipality, { uf, slug }, "query"),
+      { tabs }
+    );
     const faqs = buildMunicipalityFaq({
       municipalityName: data.municipality.name,
       stateName: data.state.name,
@@ -675,8 +670,6 @@ export async function prefetchForPath(
           description: `Confira o DDD de ${data.municipality.name}, em ${data.state.name}, e navegue por municípios relacionados.`,
           inLanguage: "pt-BR",
           mainEntityOfPage: path,
-          datePublished: "2026-08-01",
-          dateModified: "2026-08-01",
           author: { "@type": "Organization", name: site },
           publisher: { "@type": "Organization", name: site },
           about: {
@@ -691,7 +684,7 @@ export async function prefetchForPath(
         },
       ] as Record<string, unknown>[],
     };
-    const tabsAvailable = Boolean(getMunicipalityTabsKey(uf, slug));
+    const tabsAvailable = Boolean(tabs);
     if (tabsAvailable) {
       meta.jsonLd.push({
         "@context": "https://schema.org",

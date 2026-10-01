@@ -4,7 +4,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const requireUf = createRequire(import.meta.url);
-const base = path.resolve(import.meta.dirname, "..", "..");
+const base = path.resolve(import.meta.dirname, "..", "..", "..");
 const candidates = [
   path.resolve(base, "dist", "server", "tabs", "mt.cjs"),
   path.resolve(base, "dist", "server", "tabs", "mt.js"),
@@ -19,7 +19,7 @@ function loadCatalog() {
       if (catalog) return catalog;
     } catch { /* tentar próximo candidato */ }
   }
-  return {};
+  throw new Error("Catálogo editorial indisponível: mt");
 }
 
 let cached = null;

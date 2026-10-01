@@ -15,9 +15,33 @@ import type { LocalityTabsCatalog, MunicipalityTabs } from "./types";
 const ufRequire = createRequire(import.meta.url);
 
 const UF_LIST = [
-  "ac", "al", "am", "ap", "ba", "ce", "df", "es", "go", "ma", "mg", "ms",
-  "mt", "pa", "pb", "pe", "pi", "pr", "rj", "rn", "ro", "rr", "rs", "sc",
-  "se", "sp", "to",
+  "ac",
+  "al",
+  "am",
+  "ap",
+  "ba",
+  "ce",
+  "df",
+  "es",
+  "go",
+  "ma",
+  "mg",
+  "ms",
+  "mt",
+  "pa",
+  "pb",
+  "pe",
+  "pi",
+  "pr",
+  "rj",
+  "rn",
+  "ro",
+  "rr",
+  "rs",
+  "sc",
+  "se",
+  "sp",
+  "to",
 ] as const;
 
 type UfKey = (typeof UF_LIST)[number];
@@ -26,7 +50,7 @@ const ufs: Record<string, LocalityTabsCatalog | undefined> = {};
 
 /** Carrega em node os módulos UF compilados (CommonJS) via createRequire. */
 function loadNodeCatalog(uf: UfKey): LocalityTabsCatalog | undefined {
-  const tabsDir = path.resolve(import.meta.dirname, "..", "dist", "server", "tabs");
+  const tabsDir = path.resolve(process.cwd(), "dist", "server", "tabs");
   const candidates = [
     path.join(tabsDir, `${uf}.cjs`),
     path.join(tabsDir, `${uf}.js`),
@@ -40,15 +64,18 @@ function loadNodeCatalog(uf: UfKey): LocalityTabsCatalog | undefined {
       };
       const catalog = maybe?.catalog ?? maybe?.default;
       const resolved =
-        catalog && typeof catalog === "object" && !(catalog as { catalog?: unknown }).catalog
+        catalog &&
+        typeof catalog === "object" &&
+        !(catalog as { catalog?: unknown }).catalog
           ? (catalog as LocalityTabsCatalog)
-          : ((catalog as { catalog?: LocalityTabsCatalog })?.catalog ?? undefined);
+          : ((catalog as { catalog?: LocalityTabsCatalog })?.catalog ??
+            undefined);
       if (resolved) return resolved;
     } catch {
       continue;
     }
   }
-  return undefined;
+  throw new Error(`Catálogo editorial indisponível: ${uf}`);
 }
 
 // Cache de promises de dynamic import no browser (evita re-fetch).
@@ -70,6 +97,7 @@ export function getMunicipalityTabsByUf(
   slug: string
 ): MunicipalityTabs | undefined {
   const key = uf.toLowerCase();
+  if (!(UF_LIST as readonly string[]).includes(key)) return undefined;
   if (!ufs[key] && typeof process !== "undefined" && process.versions?.node) {
     ufs[key] = loadNodeCatalog(key as UfKey);
   }
